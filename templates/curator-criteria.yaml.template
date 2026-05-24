@@ -1,0 +1,45 @@
+# curator-criteria.yaml -- per collection, configurable
+# Copy to collections/<slug>/v<N>/curator-criteria.yaml and fill in values.
+# See section 9.5 of ASB-Skills Release Design Doc v2 for field definitions.
+
+domain_concepts:
+  primary:
+    # OpenAlex concept IDs for the primary domain.
+    # Find IDs at https://api.openalex.org/concepts?search=<domain>
+    - C42822068      # Example: Metabolomics
+  related:
+    # Related concepts accepted for domain expertise check.
+    - C2776195111    # Example: Mass spectrometry
+    - C42909066      # Example: Lipidomics
+
+venue_quality:
+  # Source for venue quality assessment.
+  # Options: openalex_sjr | scimago | doaj | lab_whitelist
+  source: openalex_sjr
+  min_quartile: Q2
+  open_access_bonus: true
+  # Optional override: explicit list of accepted venue ISSNs.
+  lab_whitelist: []
+
+thresholds:
+  reviewer:
+    min_reviews: 1
+    identity_layers: [L1]
+  domain_contributor:
+    min_reviews: 5
+    min_pubs: 10
+    identity_layers: [L1, L2]
+  curator:
+    min_reviews: 10
+    min_pubs: 5
+    identity_layers: [L1, L2]
+  lead_curator:
+    min_reviews: 30
+    min_external_reviews: 20
+    min_pubs: 10
+    min_h_index: 5
+    identity_layers: [L1, L2, L3]
+    requires_maintainer_approval: true
+
+# If true, first-time reviewers must be paired with a mentor.
+mentor_required_for_first_review: true

@@ -1,0 +1,53 @@
+# attestation.yaml -- per paper review attestation
+# Copy to collections/<slug>/v<N>/reviews/<paper-doi-slug>.yaml and fill in values.
+# See COI_POLICY.md for COI handling rules.
+# See section 9.3 of ASB-Skills Release Design Doc v2.
+
+# -- Reviewer identity -------------------------------------------------------
+reviewer:
+  orcid: "0000-0000-0000-0000"          # Required. Must be L1-verified in contributors.jsonld.
+  github: your-github-handle             # Required.
+  tier: reviewer                         # reviewer | domain_contributor | curator | lead_curator
+
+# -- Paper under review ------------------------------------------------------
+paper:
+  doi: "10.xxxx/your-paper-doi"          # Required.
+  title: "Title of the paper"            # Optional but recommended.
+  openalex_id: "W0000000000"             # Optional; populated by CI if absent.
+
+# -- Review content ----------------------------------------------------------
+review_date: "YYYY-MM-DD"               # ISO date. Required.
+
+# Summary of what you reviewed (free text).
+# Describe: which skills/claims you checked, which evidence spans you verified.
+summary: |
+  Reviewed the feature detection skills derived from this paper.
+  Verified evidence spans against section 2.1 and section 3.2 of the main text.
+
+# Quality assessment of the derived skills (1-5 scale).
+skill_quality: 4                        # 1=poor, 3=acceptable, 5=excellent
+
+# Did the evidence spans (verbatim quotes) accurately represent the paper's claims?
+evidence_spans_accurate: true           # true | false | partial
+
+# List claim IDs you manually verified (gold-tier ground truth for benchmark).
+# These claims are marked as verified in benchmark/claims/ ground truth.
+# Leave empty if you did not verify claims to ground-truth level.
+verified_claim_ids: []                  # e.g., ["urn:asb:claim:abc123", ...]
+
+# -- COI declaration ---------------------------------------------------------
+# is_coauthor is auto-populated by verify-coi.yml -- but you MUST declare it here
+# too. CI will fail if your declared value contradicts the auto-detected value.
+is_coauthor: false                      # true | false. Required.
+author_position: null                   # Auto-populated by CI. Integer or null.
+is_corresponding: false                 # Auto-populated by CI. true | false.
+
+# Required ONLY when is_coauthor: true (see COI_POLICY.md Safeguard 3).
+# co_reviewer:
+#   orcid: "0000-0000-0000-0000"
+#   github: co-reviewer-github-handle
+#   tier: reviewer
+#   sign_off_pr: 123                    # PR number where co-reviewer posted approval
+
+# -- Optional notes ----------------------------------------------------------
+notes: ""                               # Any additional free-text comments.

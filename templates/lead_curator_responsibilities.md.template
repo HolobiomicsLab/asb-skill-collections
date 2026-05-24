@@ -1,0 +1,49 @@
+# Lead Curator Responsibilities -- {{COLLECTION_TITLE}} v{{VERSION}}
+
+**Lead Curator:** {{CURATOR_NAME}}
+**ORCID:** [{{ORCID}}](https://orcid.org/{{ORCID}})
+**Collection:** `{{COLLECTION_SLUG}}/v{{VERSION}}`
+**Appointed:** {{DATE}}
+
+---
+
+## Role
+
+As Lead Curator, you are the corresponding author for this collection release.
+You are listed first on the Zenodo DOI and marked with (*) as corresponding author.
+
+## Responsibilities
+
+### Scientific quality
+- [ ] Verify thematic coherence of all included skills (all skills address {{DOMAIN}})
+- [ ] Confirm that >=80% of benchmark tasks have `tier: full` workflows
+- [ ] Spot-check >=10% of evidence_spans against source papers
+
+### Attribution and provenance
+- [ ] Ensure all `derived_from` DOIs resolve
+- [ ] Confirm all `tools` IRIs resolve to correct tool records in `tools/`
+- [ ] Review `curator-criteria.yaml` thresholds for appropriateness to {{DOMAIN}}
+
+### Community oversight
+- [ ] Complete >=30 reviews for this collection (>=20 non-self-authored)
+- [ ] Pair first-time reviewers with mentors
+- [ ] Resolve any COI override appeals within 14 days
+
+### Release lifecycle
+- [ ] Veto power: approve before maintainer merges release tag
+- [ ] Remain reachable as the collection's public contact for >=2 years
+- [ ] Support annual handover if stepping down (successor must meet Lead Curator criteria)
+
+## Credit
+
+- Zenodo (co-)corresponding author
+- Listed in `CITATION.cff` as first author with `role: lead_curator`
+- Permanent credit on v{{VERSION}} even if stepping down for v{{VERSION_NEXT}}
+
+## Handover
+
+If you step down as Lead Curator for v{{VERSION_NEXT}}, open an issue with:
+- Successor nominee (must meet lead_curator thresholds in `curator-criteria.yaml`)
+- Handover summary (open issues, domain developments since last release)
+
+Your credit on v{{VERSION}} is permanent and unaffected by handover.
