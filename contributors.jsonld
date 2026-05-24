@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "asb": "https://w3id.org/holobiomicslab/asb-skill/",
+    "orcid": "https://orcid.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "asb:tier": {"@id": "asb:curatorTier"},
+    "asb:collections": {"@id": "asb:collectionContributions"},
+    "asb:total_reviews": {"@id": "asb:totalReviews", "@type": "xsd:integer"},
+    "asb:external_reviews": {"@id": "asb:externalReviews", "@type": "xsd:integer"},
+    "asb:self_authored_reviews": {"@id": "asb:selfAuthoredReviews", "@type": "xsd:integer"},
+    "asb:identity_verified_layers": {"@id": "asb:identityVerifiedLayers"},
+    "asb:tier_since": {"@id": "asb:tierSince"}
+  },
+  "@type": "Dataset",
+  "@id": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/contributors.jsonld",
+  "name": "ASB-Skill-Collections Contributor Registry",
+  "description": "ORCID-keyed registry of verified curators, their tiers, and contribution stats.",
+  "version": "0.1.0",
+  "dateModified": "2026-05-25",
+  "contributors": []
+}
