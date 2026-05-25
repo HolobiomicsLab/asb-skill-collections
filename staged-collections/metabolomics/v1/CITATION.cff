@@ -1,8 +1,13 @@
 cff-version: 1.2.0
+message: "If you use this collection, please cite as follows."
 title: "Metabolomics v1"
 version: 1
 date-released: 2026-05-25
-doi: TBD
 abstract: "ASB curated skill + benchmark collection: Metabolomics"
 repository-code: https://github.com/HolobiomicsLab/asb-skill-collections
 license: Apache-2.0
+authors:
+  - family-names: Holobiomics Lab
+    given-names: ""
+    affiliation: CNRS / Université Côte d'Azur
+    # role: placeholder — replace with Lead Curator + Curators after candidacy review
