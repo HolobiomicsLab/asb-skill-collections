@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "asb": "https://w3id.org/holobiomicslab/asb-skill/",
+    "orcid": "https://orcid.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "asb:tier": {"@id": "asb:curatorTier"},
+    "asb:collections": {"@id": "asb:collectionContributions"},
+    "asb:total_reviews": {"@id": "asb:totalReviews", "@type": "xsd:integer"},
+    "asb:external_reviews": {"@id": "asb:externalReviews", "@type": "xsd:integer"},
+    "asb:self_authored_reviews": {"@id": "asb:selfAuthoredReviews", "@type": "xsd:integer"},
+    "asb:identity_verified_layers": {"@id": "asb:identityVerifiedLayers"},
+    "asb:tier_since": {"@id": "asb:tierSince"}
+  },
+  "@type": "Dataset",
+  "@id": "https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/contributors.jsonld",
+  "name": "ASB-Skill-Collections Contributor Registry",
+  "version": "0.1.0",
+  "dateModified": "2026-05-25",
+  "contributors": [
+    {
+      "orcid": "0000-0001-0000-0001",
+      "github": "alice",
+      "name": "Alice Smith",
+      "asb:tier": "curator",
+      "asb:total_reviews": 12,
+      "asb:external_reviews": 10,
+      "asb:self_authored_reviews": 2,
+      "asb:identity_verified_layers": ["L1", "L2"],
+      "asb:tier_since": "2026-05-01",
+      "asb:collections": ["metabolomics"]
+    },
+    {
+      "orcid": "0000-0001-0000-0002",
+      "github": "bob",
+      "name": "Bob Jones",
+      "asb:tier": "reviewer",
+      "asb:total_reviews": 3,
+      "asb:external_reviews": 3,
+      "asb:self_authored_reviews": 0,
+      "asb:identity_verified_layers": ["L1"],
+      "asb:tier_since": "2026-05-10",
+      "asb:collections": ["metabolomics"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+reviewer:
+  orcid: "0000-0001-0000-0001"
+  github: alice
+  tier: curator
+paper:
+  doi: "10.1234/test-paper"
+  title: "Test Paper"
+review_date: "2026-05-15"
+summary: "Reviewed feature detection skills."
+skill_quality: 4
+evidence_spans_accurate: true
+verified_claim_ids: ["urn:asb:claim:abc123"]
+is_coauthor: false
+author_position: null
+is_corresponding: false
+notes: ""
