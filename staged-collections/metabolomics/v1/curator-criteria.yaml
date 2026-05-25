@@ -1,0 +1,25 @@
+# Curator candidacy criteria (spec §9.5)
+# Edit primary/related concepts to match this collection's domain;
+# OpenAlex concept IDs are preferred for automated matching.
+domain_concepts:
+  primary:
+    - http://edamontology.org/topic_3172
+    - http://edamontology.org/topic_3520
+  related: []
+venue_quality:
+  source: openalex_sjr
+  min_quartile: Q2
+  open_access_bonus: true
+  lab_whitelist: []
+thresholds:
+  reviewer:           { min_reviews: 1, identity_layers: [L1] }
+  domain_contributor: { min_reviews: 5, min_pubs: 10, identity_layers: [L1, L2] }
+  curator:            { min_reviews: 10, min_pubs: 5, identity_layers: [L1, L2] }
+  lead_curator:
+    min_reviews: 30
+    min_external_reviews: 20
+    min_pubs: 10
+    min_h_index: 5
+    identity_layers: [L1, L2, L3]
+    requires_maintainer_approval: true
+mentor_required_for_first_review: true

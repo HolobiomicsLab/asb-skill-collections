@@ -2,7 +2,7 @@
 name: metabolomics-router
 description: |
   Use FIRST for any metabolomics question. Routes to the most
-  relevant specialized skill in the Metabolomics collection (210 skills,
+  relevant specialized skill in the Metabolomics collection (105 skills,
   derived from 5 papers).
 allowed-tools: [mcp__perspicacite__search_skill_kb, mcp__perspicacite__search_knowledge_base, Read]
 license: Apache-2.0
@@ -18,7 +18,7 @@ metadata:
 
 ## When to use this skill
 Whenever the user mentions metabolomics, LC-MS, GC-MS, untargeted, lipidomics or asks about Metabolomics-related tasks.
-This router covers 210 specialized skills derived from 5 papers.
+This router covers 105 specialized skills derived from 5 papers.
 
 ## How to route
 1. Call `mcp__perspicacite__search_skill_kb(query=<user-question>, edam_topics=['http://edamontology.org/topic_3172', 'http://edamontology.org/topic_3520'])`.

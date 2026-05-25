@@ -1,0 +1,433 @@
+{
+  "name": "metabolomics-v1",
+  "version": "1.0.0",
+  "description": "ASB curated skill + benchmark collection: Metabolomics",
+  "author": {
+    "name": "Holobiomics Lab",
+    "url": "https://github.com/HolobiomicsLab"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/HolobiomicsLab/asb-skill-collections",
+  "skills": [
+    {
+      "name": "metabolite-annotation-consistency-checking",
+      "path": "skills/metabolite-annotation-consistency-checking/SKILL.md"
+    },
+    {
+      "name": "smiles-inchi-chemical-identifier-repair",
+      "path": "skills/smiles-inchi-chemical-identifier-repair/SKILL.md"
+    },
+    {
+      "name": "spectral-metadata-annotation-mismatch-detection",
+      "path": "skills/spectral-metadata-annotation-mismatch-detection/SKILL.md"
+    },
+    {
+      "name": "adduct-ion-classification-accuracy-assessment",
+      "path": "skills/adduct-ion-classification-accuracy-assessment/SKILL.md"
+    },
+    {
+      "name": "annotation-error-rate-calculation",
+      "path": "skills/annotation-error-rate-calculation/SKILL.md"
+    },
+    {
+      "name": "smiles-structure-canonicalization",
+      "path": "skills/smiles-structure-canonicalization/SKILL.md"
+    },
+    {
+      "name": "spectral-metadata-harmonization",
+      "path": "skills/spectral-metadata-harmonization/SKILL.md"
+    },
+    {
+      "name": "metadata-field-validation",
+      "path": "skills/metadata-field-validation/SKILL.md"
+    },
+    {
+      "name": "mass-spectrometry-library-curation",
+      "path": "skills/mass-spectrometry-library-curation/SKILL.md"
+    },
+    {
+      "name": "rdkit-smiles-inchi-cross-validation",
+      "path": "skills/rdkit-smiles-inchi-cross-validation/SKILL.md"
+    },
+    {
+      "name": "monoisotopic-mass-calculation-from-smiles",
+      "path": "skills/monoisotopic-mass-calculation-from-smiles/SKILL.md"
+    },
+    {
+      "name": "spectral-count-quality-assessment",
+      "path": "skills/spectral-count-quality-assessment/SKILL.md"
+    },
+    {
+      "name": "chemical-structure-smiles-validation",
+      "path": "skills/chemical-structure-smiles-validation/SKILL.md"
+    },
+    {
+      "name": "pubchem-structure-lookup-and-retrieval",
+      "path": "skills/pubchem-structure-lookup-and-retrieval/SKILL.md"
+    },
+    {
+      "name": "chemical-structure-parsing-and-normalization",
+      "path": "skills/chemical-structure-parsing-and-normalization/SKILL.md"
+    },
+    {
+      "name": "precursor-adduct-mass-reconciliation",
+      "path": "skills/precursor-adduct-mass-reconciliation/SKILL.md"
+    },
+    {
+      "name": "spectral-annotation-validation",
+      "path": "skills/spectral-annotation-validation/SKILL.md"
+    },
+    {
+      "name": "numeric-value-comparison-across-sources",
+      "path": "skills/numeric-value-comparison-across-sources/SKILL.md"
+    },
+    {
+      "name": "chemical-structure-consistency-checking",
+      "path": "skills/chemical-structure-consistency-checking/SKILL.md"
+    },
+    {
+      "name": "structure-annotation-validation",
+      "path": "skills/structure-annotation-validation/SKILL.md"
+    },
+    {
+      "name": "tabular-data-parsing-and-structure-verification",
+      "path": "skills/tabular-data-parsing-and-structure-verification/SKILL.md"
+    },
+    {
+      "name": "ms-spectra-library-parsing",
+      "path": "skills/ms-spectra-library-parsing/SKILL.md"
+    },
+    {
+      "name": "metadata-harmonization-cleaning",
+      "path": "skills/metadata-harmonization-cleaning/SKILL.md"
+    },
+    {
+      "name": "chemical-structure-derivation-from-compound-names",
+      "path": "skills/chemical-structure-derivation-from-compound-names/SKILL.md"
+    },
+    {
+      "name": "mass-spectral-library-quality-assessment",
+      "path": "skills/mass-spectral-library-quality-assessment/SKILL.md"
+    },
+    {
+      "name": "mass-spectrometry-metadata-harmonization",
+      "path": "skills/mass-spectrometry-metadata-harmonization/SKILL.md"
+    },
+    {
+      "name": "parent-mass-correction-from-molar-mass",
+      "path": "skills/parent-mass-correction-from-molar-mass/SKILL.md"
+    },
+    {
+      "name": "metadata-completeness-evaluation",
+      "path": "skills/metadata-completeness-evaluation/SKILL.md"
+    },
+    {
+      "name": "artifact-provenance-tracing-to-repository",
+      "path": "skills/artifact-provenance-tracing-to-repository/SKILL.md"
+    },
+    {
+      "name": "smiles-inchi-inchikey-comparison-and-validation",
+      "path": "skills/smiles-inchi-inchikey-comparison-and-validation/SKILL.md"
+    },
+    {
+      "name": "metadata-validation-cross-check",
+      "path": "skills/metadata-validation-cross-check/SKILL.md"
+    },
+    {
+      "name": "spectral-library-adduct-repair-validation",
+      "path": "skills/spectral-library-adduct-repair-validation/SKILL.md"
+    },
+    {
+      "name": "smiles-salt-notation-repair",
+      "path": "skills/smiles-salt-notation-repair/SKILL.md"
+    },
+    {
+      "name": "metabolite-feature-filtering-by-peak-count",
+      "path": "skills/metabolite-feature-filtering-by-peak-count/SKILL.md"
+    },
+    {
+      "name": "metabolite-importance-ranking",
+      "path": "skills/metabolite-importance-ranking/SKILL.md"
+    },
+    {
+      "name": "threshold-based-feature-filtering",
+      "path": "skills/threshold-based-feature-filtering/SKILL.md"
+    },
+    {
+      "name": "metabolite-feature-table-distance-metric-computation",
+      "path": "skills/metabolite-feature-table-distance-metric-computation/SKILL.md"
+    },
+    {
+      "name": "population-level-feature-presence-filtering",
+      "path": "skills/population-level-feature-presence-filtering/SKILL.md"
+    },
+    {
+      "name": "non-gap-filled-data-processing",
+      "path": "skills/non-gap-filled-data-processing/SKILL.md"
+    },
+    {
+      "name": "metabolite-feature-table-subsetting",
+      "path": "skills/metabolite-feature-table-subsetting/SKILL.md"
+    },
+    {
+      "name": "random-forest-model-training",
+      "path": "skills/random-forest-model-training/SKILL.md"
+    },
+    {
+      "name": "machine-learning-feature-selection",
+      "path": "skills/machine-learning-feature-selection/SKILL.md"
+    },
+    {
+      "name": "permanova-beta-diversity-testing",
+      "path": "skills/permanova-beta-diversity-testing/SKILL.md"
+    },
+    {
+      "name": "feature-table-reproducibility-validation",
+      "path": "skills/feature-table-reproducibility-validation/SKILL.md"
+    },
+    {
+      "name": "pcoa-visualization-interpretation",
+      "path": "skills/pcoa-visualization-interpretation/SKILL.md"
+    },
+    {
+      "name": "differential-feature-identification",
+      "path": "skills/differential-feature-identification/SKILL.md"
+    },
+    {
+      "name": "industrial-gradient-metadata-categorization",
+      "path": "skills/industrial-gradient-metadata-categorization/SKILL.md"
+    },
+    {
+      "name": "microbe-metabolite-conditional-probability-filtering",
+      "path": "skills/microbe-metabolite-conditional-probability-filtering/SKILL.md"
+    },
+    {
+      "name": "microbial-taxa-rank-selection-by-predictive-strength",
+      "path": "skills/microbial-taxa-rank-selection-by-predictive-strength/SKILL.md"
+    },
+    {
+      "name": "conditional-probability-matrix-manipulation",
+      "path": "skills/conditional-probability-matrix-manipulation/SKILL.md"
+    },
+    {
+      "name": "multivariate-microbiome-analysis",
+      "path": "skills/multivariate-microbiome-analysis/SKILL.md"
+    },
+    {
+      "name": "rna-seq-read-alignment-splice-aware-mapping",
+      "path": "skills/rna-seq-read-alignment-splice-aware-mapping/SKILL.md"
+    },
+    {
+      "name": "molecular-network-node-annotation-via-library-matching",
+      "path": "skills/molecular-network-node-annotation-via-library-matching/SKILL.md"
+    },
+    {
+      "name": "gene-expression-quantification-rpkm-calculation",
+      "path": "skills/gene-expression-quantification-rpkm-calculation/SKILL.md"
+    },
+    {
+      "name": "count-data-normalization-library-size-correction",
+      "path": "skills/count-data-normalization-library-size-correction/SKILL.md"
+    },
+    {
+      "name": "massql-query-formulation-for-mass-difference-screening",
+      "path": "skills/massql-query-formulation-for-mass-difference-screening/SKILL.md"
+    },
+    {
+      "name": "fungal-genome-sequence-retrieval-and-processing",
+      "path": "skills/fungal-genome-sequence-retrieval-and-processing/SKILL.md"
+    },
+    {
+      "name": "cross-reference-spectral-clusters-to-chemical-standards",
+      "path": "skills/cross-reference-spectral-clusters-to-chemical-standards/SKILL.md"
+    },
+    {
+      "name": "neutral-loss-filtering-for-glycoside-annotation",
+      "path": "skills/neutral-loss-filtering-for-glycoside-annotation/SKILL.md"
+    },
+    {
+      "name": "ugt-sequence-curation-and-filtering",
+      "path": "skills/ugt-sequence-curation-and-filtering/SKILL.md"
+    },
+    {
+      "name": "multiple-sequence-alignment-optimization",
+      "path": "skills/multiple-sequence-alignment-optimization/SKILL.md"
+    },
+    {
+      "name": "transcript-abundance-estimation-counting",
+      "path": "skills/transcript-abundance-estimation-counting/SKILL.md"
+    },
+    {
+      "name": "protein-sequence-domain-scanning",
+      "path": "skills/protein-sequence-domain-scanning/SKILL.md"
+    },
+    {
+      "name": "differential-expression-validation-fold-change-verification",
+      "path": "skills/differential-expression-validation-fold-change-verification/SKILL.md"
+    },
+    {
+      "name": "spectral-similarity-network-construction",
+      "path": "skills/spectral-similarity-network-construction/SKILL.md"
+    },
+    {
+      "name": "phylogenetic-tree-construction-and-interpretation",
+      "path": "skills/phylogenetic-tree-construction-and-interpretation/SKILL.md"
+    },
+    {
+      "name": "mgf-format-handling",
+      "path": "skills/mgf-format-handling/SKILL.md"
+    },
+    {
+      "name": "organophosphate-ester-compound-class-recognition",
+      "path": "skills/organophosphate-ester-compound-class-recognition/SKILL.md"
+    },
+    {
+      "name": "spectral-redundancy-clustering",
+      "path": "skills/spectral-redundancy-clustering/SKILL.md"
+    },
+    {
+      "name": "product-ion-fragment-filtering",
+      "path": "skills/product-ion-fragment-filtering/SKILL.md"
+    },
+    {
+      "name": "mass-spectrometry-isotope-pattern-recognition",
+      "path": "skills/mass-spectrometry-isotope-pattern-recognition/SKILL.md"
+    },
+    {
+      "name": "relative-intensity-threshold-filtering",
+      "path": "skills/relative-intensity-threshold-filtering/SKILL.md"
+    },
+    {
+      "name": "massql-query-syntax-and-parameter-optimization",
+      "path": "skills/massql-query-syntax-and-parameter-optimization/SKILL.md"
+    },
+    {
+      "name": "repository-scale-spectral-processing",
+      "path": "skills/repository-scale-spectral-processing/SKILL.md"
+    },
+    {
+      "name": "mzml-mzxml-file-parsing",
+      "path": "skills/mzml-mzxml-file-parsing/SKILL.md"
+    },
+    {
+      "name": "mass-spectrometry-query-language-syntax",
+      "path": "skills/mass-spectrometry-query-language-syntax/SKILL.md"
+    },
+    {
+      "name": "ppm-tolerance-filtering-and-calibration",
+      "path": "skills/ppm-tolerance-filtering-and-calibration/SKILL.md"
+    },
+    {
+      "name": "consensus-spectrum-generation",
+      "path": "skills/consensus-spectrum-generation/SKILL.md"
+    },
+    {
+      "name": "iron-binding-compound-detection-by-isotope-ratio",
+      "path": "skills/iron-binding-compound-detection-by-isotope-ratio/SKILL.md"
+    },
+    {
+      "name": "ms1-precursor-ion-filtering",
+      "path": "skills/ms1-precursor-ion-filtering/SKILL.md"
+    },
+    {
+      "name": "ms-data-export-and-format-conversion",
+      "path": "skills/ms-data-export-and-format-conversion/SKILL.md"
+    },
+    {
+      "name": "ms-ms-spectral-data-retrieval",
+      "path": "skills/ms-ms-spectral-data-retrieval/SKILL.md"
+    },
+    {
+      "name": "high-resolution-mass-accuracy-analysis",
+      "path": "skills/high-resolution-mass-accuracy-analysis/SKILL.md"
+    },
+    {
+      "name": "phase-i-transformation-biotransformation-pathways",
+      "path": "skills/phase-i-transformation-biotransformation-pathways/SKILL.md"
+    },
+    {
+      "name": "metabolite-feature-prioritization",
+      "path": "skills/metabolite-feature-prioritization/SKILL.md"
+    },
+    {
+      "name": "metabolite-structure-prediction-biotransformer",
+      "path": "skills/metabolite-structure-prediction-biotransformer/SKILL.md"
+    },
+    {
+      "name": "feature-mass-difference-filtering",
+      "path": "skills/feature-mass-difference-filtering/SKILL.md"
+    },
+    {
+      "name": "molecular-formula-comparison-overlap-analysis",
+      "path": "skills/molecular-formula-comparison-overlap-analysis/SKILL.md"
+    },
+    {
+      "name": "spectral-similarity-scoring-and-validation",
+      "path": "skills/spectral-similarity-scoring-and-validation/SKILL.md"
+    },
+    {
+      "name": "xcms-parameter-optimization",
+      "path": "skills/xcms-parameter-optimization/SKILL.md"
+    },
+    {
+      "name": "control-group-selection-for-metabolite-screening",
+      "path": "skills/control-group-selection-for-metabolite-screening/SKILL.md"
+    },
+    {
+      "name": "ms2-spectral-fragmentation-interpretation",
+      "path": "skills/ms2-spectral-fragmentation-interpretation/SKILL.md"
+    },
+    {
+      "name": "venn-diagram-set-visualization-multiway-comparison",
+      "path": "skills/venn-diagram-set-visualization-multiway-comparison/SKILL.md"
+    },
+    {
+      "name": "mass-spectrometry-data-preprocessing",
+      "path": "skills/mass-spectrometry-data-preprocessing/SKILL.md"
+    },
+    {
+      "name": "in-silico-fragmentation-tree-analysis",
+      "path": "skills/in-silico-fragmentation-tree-analysis/SKILL.md"
+    },
+    {
+      "name": "phase-i-biotransformation-constraint-application",
+      "path": "skills/phase-i-biotransformation-constraint-application/SKILL.md"
+    },
+    {
+      "name": "pesticide-metabolite-structure-elucidation",
+      "path": "skills/pesticide-metabolite-structure-elucidation/SKILL.md"
+    },
+    {
+      "name": "feature-abundance-filtering-with-statistical-thresholds",
+      "path": "skills/feature-abundance-filtering-with-statistical-thresholds/SKILL.md"
+    },
+    {
+      "name": "lc-ms-feature-detection-and-alignment",
+      "path": "skills/lc-ms-feature-detection-and-alignment/SKILL.md"
+    },
+    {
+      "name": "cyp450-enzyme-metabolization-rules",
+      "path": "skills/cyp450-enzyme-metabolization-rules/SKILL.md"
+    },
+    {
+      "name": "mass-spectrometry-molecular-formula-assignment",
+      "path": "skills/mass-spectrometry-molecular-formula-assignment/SKILL.md"
+    },
+    {
+      "name": "retention-time-correction",
+      "path": "skills/retention-time-correction/SKILL.md"
+    },
+    {
+      "name": "replicate-detection-consistency-filtering",
+      "path": "skills/replicate-detection-consistency-filtering/SKILL.md"
+    },
+    {
+      "name": "feature-table-reduction-and-quality-control",
+      "path": "skills/feature-table-reduction-and-quality-control/SKILL.md"
+    },
+    {
+      "name": "fold-change-calculation-from-replicate-intensities",
+      "path": "skills/fold-change-calculation-from-replicate-intensities/SKILL.md"
+    }
+  ]
+}
