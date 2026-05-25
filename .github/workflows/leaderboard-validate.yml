@@ -1,0 +1,99 @@
+# leaderboard-validate.yml — validates leaderboard.jsonld on PRs that touch it.
+# Posts a PR comment with the validation report (pass or fail with error list).
+name: Leaderboard Validate
+
+on:
+  pull_request:
+    paths:
+      - "collections/**/benchmark/leaderboard.jsonld"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e ".[test]"
+
+      - name: Find changed leaderboard files
+        id: changed
+        run: |
+          # List leaderboard.jsonld files changed in this PR
+          git fetch origin ${{ github.base_ref }} --depth=1
+          FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD \
+            | grep 'benchmark/leaderboard.jsonld' || true)
+          echo "files=${FILES}" >> "$GITHUB_OUTPUT"
+          echo "Changed leaderboard files: ${FILES}"
+
+      - name: Validate each leaderboard file
+        id: validate
+        run: |
+          ERRORS=""
+          REPORT=""
+          FILES="${{ steps.changed.outputs.files }}"
+
+          if [ -z "$FILES" ]; then
+            echo "No leaderboard files changed — nothing to validate"
+            echo "report=No leaderboard.jsonld files changed." >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          for FILE in $FILES; do
+            if [ ! -f "$FILE" ]; then
+              continue
+            fi
+            echo "Validating: $FILE"
+            OUTPUT=$(python scripts/validate_leaderboard.py "$FILE" 2>&1)
+            EXIT_CODE=$?
+            REPORT="${REPORT}\n### \`${FILE}\`\n\`\`\`\n${OUTPUT}\n\`\`\`\n"
+            if [ $EXIT_CODE -ne 0 ]; then
+              ERRORS="${ERRORS} ${FILE}"
+            fi
+          done
+
+          # Use heredoc for multi-line output
+          {
+            echo "report<<EOF"
+            printf '%b' "$REPORT"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          if [ -n "$ERRORS" ]; then
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "failed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post PR comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const failed = '${{ steps.validate.outputs.failed }}' === 'true';
+            const report = `${{ steps.validate.outputs.report }}`;
+            const header = failed
+              ? '## Leaderboard Validation FAILED'
+              : '## Leaderboard Validation PASSED';
+            const body = `${header}\n\n${report}`;
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+      - name: Fail job if validation errors
+        if: steps.validate.outputs.failed == 'true'
+        run: |
+          echo "Leaderboard validation failed — see PR comment for details"
+          exit 1
