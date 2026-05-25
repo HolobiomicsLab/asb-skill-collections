@@ -36,9 +36,15 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/fungal-genome-sequence-retrieval-and-processing/SKILL.md
     - outputs/audit_jeong_full/skills/fungal-genome-sequence-retrieval-and-processing/skill.md
-    merged_at: '2026-05-25T06:57:01.529705+00:00'
+    merged_at: '2026-05-25T07:04:57.513111+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:90f44da076ae58dc8acb5b08e0f2a78ad4ea035c934bd47fef11fdd84c30e895
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1073/pnas
 ---

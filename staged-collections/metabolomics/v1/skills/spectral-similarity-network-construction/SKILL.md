@@ -29,9 +29,15 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/spectral-similarity-network-construction/SKILL.md
     - outputs/audit_jeong_full/skills/spectral-similarity-network-construction/skill.md
-    merged_at: '2026-05-25T06:57:01.546513+00:00'
+    merged_at: '2026-05-25T07:04:57.529509+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-network-construction@sha256:d31f4718adb1b0d1fb3b44cd285e235197dd90c59e88643335745dac11bf311e
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1073/pnas
 ---

@@ -29,9 +29,15 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/ugt-sequence-curation-and-filtering/SKILL.md
     - outputs/audit_jeong_full/skills/ugt-sequence-curation-and-filtering/skill.md
-    merged_at: '2026-05-25T06:57:01.536531+00:00'
+    merged_at: '2026-05-25T07:04:57.519621+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ugt-sequence-curation-and-filtering@sha256:912c230db7a2308608040c8a3e711215e030d62b72416c2468e255d904d59678
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1073/pnas
 ---

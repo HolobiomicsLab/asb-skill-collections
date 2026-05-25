@@ -33,9 +33,15 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/cross-reference-spectral-clusters-to-chemical-standards/SKILL.md
     - outputs/audit_jeong_full/skills/cross-reference-spectral-clusters-to-chemical-standards/skill.md
-    merged_at: '2026-05-25T06:57:01.532029+00:00'
+    merged_at: '2026-05-25T07:04:57.515383+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:9c4a255f87cba9fde503c0300cc06cdd5dccb231a8d15d3f776679c35b6481fe
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1073/pnas
 ---

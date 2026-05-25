@@ -30,9 +30,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-structure-canonicalization/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-structure-canonicalization/skill.md
-    merged_at: '2026-05-25T06:57:01.419149+00:00'
+    merged_at: '2026-05-25T07:04:57.408285+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/smiles-structure-canonicalization@sha256:12c9e046c28e4733b21866514d95dc17459c40314a3766c5ed0f189132491509
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

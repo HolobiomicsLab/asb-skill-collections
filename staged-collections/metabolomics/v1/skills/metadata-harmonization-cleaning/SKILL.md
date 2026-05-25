@@ -32,9 +32,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/metadata-harmonization-cleaning/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/metadata-harmonization-cleaning/skill.md
-    merged_at: '2026-05-25T06:57:01.455400+00:00'
+    merged_at: '2026-05-25T07:04:57.444146+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metadata-harmonization-cleaning@sha256:a53214b50a28c5d7c90d11d5c69c0067f422c1a78147aba44aa09ceacf55256d
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

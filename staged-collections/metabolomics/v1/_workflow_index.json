@@ -1,0 +1,1014 @@
+{
+  "by_paper": {
+    "article_878_full_2026-05-10_v5": "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+    "audit_haffner_v2": "benchmark/tasks/audit_haffner_v2/workflow.smk",
+    "audit_jeong_full": "benchmark/tasks/audit_jeong_full/workflow.smk",
+    "audit_s41592_full": "benchmark/tasks/audit_s41592_full/workflow.smk",
+    "pesticide_full_2026-05-10_v2": "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk"
+  },
+  "by_skill": {
+    "adduct-ion-classification-accuracy-assessment": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "annotation-error-rate-calculation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "artifact-provenance-tracing-to-repository": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "chemical-structure-consistency-checking": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "chemical-structure-derivation-from-compound-names": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "chemical-structure-parsing-and-normalization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "chemical-structure-smiles-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "conditional-probability-matrix-manipulation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "consensus-spectrum-generation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "control-group-selection-for-metabolite-screening": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "count-data-normalization-library-size-correction": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "cross-reference-spectral-clusters-to-chemical-standards": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "cyp450-enzyme-metabolization-rules": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "differential-expression-validation-fold-change-verification": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "differential-feature-identification": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "feature-abundance-filtering-with-statistical-thresholds": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "feature-mass-difference-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "feature-table-reduction-and-quality-control": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "feature-table-reproducibility-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "fold-change-calculation-from-replicate-intensities": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "fungal-genome-sequence-retrieval-and-processing": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "gene-expression-quantification-rpkm-calculation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "high-resolution-mass-accuracy-analysis": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "in-silico-fragmentation-tree-analysis": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "industrial-gradient-metadata-categorization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "iron-binding-compound-detection-by-isotope-ratio": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "lc-ms-feature-detection-and-alignment": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "machine-learning-feature-selection": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mass-spectral-library-quality-assessment": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mass-spectrometry-data-preprocessing": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mass-spectrometry-isotope-pattern-recognition": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mass-spectrometry-library-curation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mass-spectrometry-metadata-harmonization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mass-spectrometry-molecular-formula-assignment": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mass-spectrometry-query-language-syntax": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "massql-query-formulation-for-mass-difference-screening": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "massql-query-syntax-and-parameter-optimization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metabolite-annotation-consistency-checking": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metabolite-feature-filtering-by-peak-count": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metabolite-feature-prioritization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metabolite-feature-table-distance-metric-computation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metabolite-feature-table-subsetting": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metabolite-importance-ranking": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metabolite-structure-prediction-biotransformer": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metadata-completeness-evaluation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metadata-field-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metadata-harmonization-cleaning": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "metadata-validation-cross-check": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mgf-format-handling": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "microbe-metabolite-conditional-probability-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "microbial-taxa-rank-selection-by-predictive-strength": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "molecular-formula-comparison-overlap-analysis": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "molecular-network-node-annotation-via-library-matching": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "monoisotopic-mass-calculation-from-smiles": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ms-data-export-and-format-conversion": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ms-ms-spectral-data-retrieval": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ms-spectra-library-parsing": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ms1-precursor-ion-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ms2-spectral-fragmentation-interpretation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "multiple-sequence-alignment-optimization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "multivariate-microbiome-analysis": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mzml-mzxml-file-parsing": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "neutral-loss-filtering-for-glycoside-annotation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "non-gap-filled-data-processing": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "numeric-value-comparison-across-sources": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "organophosphate-ester-compound-class-recognition": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "parent-mass-correction-from-molar-mass": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "pcoa-visualization-interpretation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "permanova-beta-diversity-testing": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "pesticide-metabolite-structure-elucidation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "phase-i-biotransformation-constraint-application": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "phase-i-transformation-biotransformation-pathways": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "phylogenetic-tree-construction-and-interpretation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "population-level-feature-presence-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ppm-tolerance-filtering-and-calibration": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "precursor-adduct-mass-reconciliation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "product-ion-fragment-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "protein-sequence-domain-scanning": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "pubchem-structure-lookup-and-retrieval": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "random-forest-model-training": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "rdkit-smiles-inchi-cross-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "relative-intensity-threshold-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "replicate-detection-consistency-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "repository-scale-spectral-processing": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "retention-time-correction": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "rna-seq-read-alignment-splice-aware-mapping": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "smiles-inchi-chemical-identifier-repair": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "smiles-inchi-inchikey-comparison-and-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "smiles-salt-notation-repair": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "smiles-structure-canonicalization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "spectral-annotation-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "spectral-count-quality-assessment": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "spectral-library-adduct-repair-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "spectral-metadata-annotation-mismatch-detection": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "spectral-metadata-harmonization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "spectral-redundancy-clustering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "spectral-similarity-network-construction": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "spectral-similarity-scoring-and-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "structure-annotation-validation": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "tabular-data-parsing-and-structure-verification": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "threshold-based-feature-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "transcript-abundance-estimation-counting": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ugt-sequence-curation-and-filtering": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "venn-diagram-set-visualization-multiway-comparison": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "xcms-parameter-optimization": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ]
+  },
+  "by_tool": {
+    "biotransformer": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "edger": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "emperor": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "genform": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "gnps": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "hisat2": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "htseq": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "incubator-workflow-github-chufz-incubator": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ipo": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "jupyter-notebook": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "lark-parser": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "lark-parser-library": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "lc-ms-ms": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "massql": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "matchms": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "matchms-0-26-4": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mmvec": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "ms-cluster": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mzmine": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "mzr": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "orgmassspecr": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "pandas": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "permanova": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "pfam": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "principal-coordinate-analysis-pcoa": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "proteowizard-v3-0-18265": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "pubchem": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "pyteomics": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "python": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "qiime2": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "r": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "r-programming-language": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "r-v-3-6-1": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "random-forest": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "rdkit": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "sirius-version-4-4-27": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "sra-toolkit": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ],
+    "xcms-version-3-8": [
+      "benchmark/tasks/audit_haffner_v2/workflow.smk",
+      "benchmark/tasks/audit_jeong_full/workflow.smk",
+      "benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk",
+      "benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk",
+      "benchmark/tasks/audit_s41592_full/workflow.smk"
+    ]
+  }
+}

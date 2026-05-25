@@ -30,9 +30,15 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/industrial-gradient-metadata-categorization/SKILL.md
     - outputs/audit_haffner_v2/skills/industrial-gradient-metadata-categorization/skill.md
-    merged_at: '2026-05-25T06:57:01.507298+00:00'
+    merged_at: '2026-05-25T07:04:57.492706+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/industrial-gradient-metadata-categorization@sha256:bd6a3a51aac238a5512a6bfa5cd3c21fb61fe86e14057f12351efdc1350dcb45
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1128/msystems.00710-22
 ---

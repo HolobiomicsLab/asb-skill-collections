@@ -34,9 +34,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-count-quality-assessment/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-count-quality-assessment/skill.md
-    merged_at: '2026-05-25T06:57:01.432923+00:00'
+    merged_at: '2026-05-25T07:04:57.421471+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-count-quality-assessment@sha256:a6d95d1e93bc0084c4b81162e3fdf9db210dec9e630df63ce81cedc3602a2f91
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

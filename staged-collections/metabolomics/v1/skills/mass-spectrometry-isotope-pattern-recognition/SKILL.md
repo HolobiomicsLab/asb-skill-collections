@@ -42,9 +42,15 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/mass-spectrometry-isotope-pattern-recognition/SKILL.md
     - outputs/audit_s41592_full/skills/mass-spectrometry-isotope-pattern-recognition/skill.md
-    merged_at: '2026-05-25T06:57:01.560804+00:00'
+    merged_at: '2026-05-25T07:04:57.543928+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-isotope-pattern-recognition@sha256:384b6ea059a09edd1221b35d9e8d7adee2c5b956e6bc9ff4fbe80e22a0eb7137
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
 ---

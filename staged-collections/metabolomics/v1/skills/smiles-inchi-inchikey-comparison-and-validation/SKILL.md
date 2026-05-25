@@ -30,9 +30,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-inchi-inchikey-comparison-and-validation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-inchi-inchikey-comparison-and-validation/skill.md
-    merged_at: '2026-05-25T06:57:01.470855+00:00'
+    merged_at: '2026-05-25T07:04:57.459328+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-inchikey-comparison-and-validation@sha256:6950a04502a7b45a42a767d67a7ab3f7b7e8bb58b46421fb101dd6697d9a1f23
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

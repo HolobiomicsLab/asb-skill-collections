@@ -31,9 +31,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/metadata-completeness-evaluation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/metadata-completeness-evaluation/skill.md
-    merged_at: '2026-05-25T06:57:01.466762+00:00'
+    merged_at: '2026-05-25T07:04:57.455356+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metadata-completeness-evaluation@sha256:63346a0e73861953a8a6e6c63c7c88719408d47852ecd03111aea7b034c22f2e
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

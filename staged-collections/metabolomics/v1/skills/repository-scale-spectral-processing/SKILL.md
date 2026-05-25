@@ -34,9 +34,15 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/repository-scale-spectral-processing/SKILL.md
     - outputs/audit_s41592_full/skills/repository-scale-spectral-processing/skill.md
-    merged_at: '2026-05-25T06:57:01.568416+00:00'
+    merged_at: '2026-05-25T07:04:57.551151+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/repository-scale-spectral-processing@sha256:a02ca468322fdcfde554cdbff3f444683f07f6ad07d51e6c22f46a2aa9e3a42a
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
 ---

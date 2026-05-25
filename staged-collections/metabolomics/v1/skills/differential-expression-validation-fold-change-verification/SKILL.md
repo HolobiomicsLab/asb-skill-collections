@@ -31,9 +31,15 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/differential-expression-validation-fold-change-verification/SKILL.md
     - outputs/audit_jeong_full/skills/differential-expression-validation-fold-change-verification/skill.md
-    merged_at: '2026-05-25T06:57:01.544181+00:00'
+    merged_at: '2026-05-25T07:04:57.527259+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:068aa34e78e72ab42cabb57fc02604e0ca7d37e79b5e4c06f9127dc26999862d
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1073/pnas
 ---

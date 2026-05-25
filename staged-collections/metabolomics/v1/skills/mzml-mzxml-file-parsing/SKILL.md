@@ -35,9 +35,15 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/mzml-mzxml-file-parsing/SKILL.md
     - outputs/audit_s41592_full/skills/mzml-mzxml-file-parsing/skill.md
-    merged_at: '2026-05-25T06:57:01.570487+00:00'
+    merged_at: '2026-05-25T07:04:57.553267+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mzml-mzxml-file-parsing@sha256:a95235cf9686fe6c8bd0f41f394b2dc9dd496fe245f493bcb7856066c44637e6
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
 ---

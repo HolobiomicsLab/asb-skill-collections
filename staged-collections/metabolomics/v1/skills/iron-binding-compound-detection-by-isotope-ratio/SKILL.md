@@ -40,9 +40,15 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/iron-binding-compound-detection-by-isotope-ratio/SKILL.md
     - outputs/audit_s41592_full/skills/iron-binding-compound-detection-by-isotope-ratio/skill.md
-    merged_at: '2026-05-25T06:57:01.581047+00:00'
+    merged_at: '2026-05-25T07:04:57.562408+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:be2f9e9d143389202bc25ad142ade9256d2978f1a6b69986fed30d4b63d5a436
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
 ---

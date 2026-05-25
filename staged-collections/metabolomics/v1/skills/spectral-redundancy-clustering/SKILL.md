@@ -34,9 +34,15 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/spectral-redundancy-clustering/SKILL.md
     - outputs/audit_s41592_full/skills/spectral-redundancy-clustering/skill.md
-    merged_at: '2026-05-25T06:57:01.556298+00:00'
+    merged_at: '2026-05-25T07:04:57.539375+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:431f4f9692b5895ab5760ee9a270aec07691ab7dd39380b62bcd52a3809f44bb
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
 ---

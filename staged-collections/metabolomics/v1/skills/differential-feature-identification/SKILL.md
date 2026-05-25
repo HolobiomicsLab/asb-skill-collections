@@ -32,9 +32,15 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/differential-feature-identification/SKILL.md
     - outputs/audit_haffner_v2/skills/differential-feature-identification/skill.md
-    merged_at: '2026-05-25T06:57:01.504842+00:00'
+    merged_at: '2026-05-25T07:04:57.490413+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:0ed164b7bc7b5dfbb0b49792ccdbece1e29c2c83a7ea5cd1e0e17f9545ff82b0
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1128/msystems.00710-22
 ---

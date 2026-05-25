@@ -32,9 +32,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-metadata-annotation-mismatch-detection/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-metadata-annotation-mismatch-detection/skill.md
-    merged_at: '2026-05-25T06:57:01.412262+00:00'
+    merged_at: '2026-05-25T07:04:57.401880+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-metadata-annotation-mismatch-detection@sha256:81ca04d1d4e97615b1ba2adf49978f5a0bf65d898845104b63bfaeef19de57aa
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

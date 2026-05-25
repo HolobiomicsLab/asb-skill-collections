@@ -37,9 +37,15 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/cyp450-enzyme-metabolization-rules/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/cyp450-enzyme-metabolization-rules/skill.md
-    merged_at: '2026-05-25T06:57:01.631431+00:00'
+    merged_at: '2026-05-25T07:04:57.611293+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/cyp450-enzyme-metabolization-rules@sha256:507def0dc7fae4c16a3e48f54f25bd7d7c617843830f5874cff4c6e50eee4fd3
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
 ---

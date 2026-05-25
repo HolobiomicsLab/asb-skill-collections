@@ -34,9 +34,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/ms-spectra-library-parsing/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/ms-spectra-library-parsing/skill.md
-    merged_at: '2026-05-25T06:57:01.453306+00:00'
+    merged_at: '2026-05-25T07:04:57.442175+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ms-spectra-library-parsing@sha256:c10420e6eaef45b18fbb4d8f0aad240f6da9cae459e99785f7241b9bd4768016
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

@@ -28,9 +28,15 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/feature-mass-difference-filtering/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/feature-mass-difference-filtering/skill.md
-    merged_at: '2026-05-25T06:57:01.601488+00:00'
+    merged_at: '2026-05-25T07:04:57.581827+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/feature-mass-difference-filtering@sha256:d6335957f4759baed8514b62a96b86089a71c66ca379caca6455700ddf86d225
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
 ---

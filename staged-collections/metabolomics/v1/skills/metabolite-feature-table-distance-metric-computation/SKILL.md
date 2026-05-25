@@ -28,9 +28,15 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/metabolite-feature-table-distance-metric-computation/SKILL.md
     - outputs/audit_haffner_v2/skills/metabolite-feature-table-distance-metric-computation/skill.md
-    merged_at: '2026-05-25T06:57:01.485353+00:00'
+    merged_at: '2026-05-25T07:04:57.473077+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-table-distance-metric-computation@sha256:beda4f1f86123bd66f9d54e5d2af3265de3168d37023fd51fbadff2176f9f56f
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1128/msystems.00710-22
 ---

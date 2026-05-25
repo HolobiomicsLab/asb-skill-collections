@@ -34,9 +34,15 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-structure-prediction-biotransformer/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-structure-prediction-biotransformer/skill.md
-    merged_at: '2026-05-25T06:57:01.599003+00:00'
+    merged_at: '2026-05-25T07:04:57.579360+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-structure-prediction-biotransformer@sha256:1ee8500ee859f7a8b172fb71c455ac871d8fec0585e53fba0e5323b09595eefb
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
 ---

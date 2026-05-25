@@ -32,9 +32,15 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/phase-i-biotransformation-constraint-application/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/phase-i-biotransformation-constraint-application/skill.md
-    merged_at: '2026-05-25T06:57:01.622286+00:00'
+    merged_at: '2026-05-25T07:04:57.602204+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/phase-i-biotransformation-constraint-application@sha256:75f94f4c8dffc210e6d6d6d2c0485093cbd39c3a79bcd1ad7caf8a5503c56717
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
 ---

@@ -33,9 +33,15 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/neutral-loss-filtering-for-glycoside-annotation/SKILL.md
     - outputs/audit_jeong_full/skills/neutral-loss-filtering-for-glycoside-annotation/skill.md
-    merged_at: '2026-05-25T06:57:01.534375+00:00'
+    merged_at: '2026-05-25T07:04:57.517497+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:4c9129983817ca59d431f4921241e93a006924a94c0c5ace87e62db640ecb9d6
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1073/pnas
 ---

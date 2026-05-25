@@ -30,9 +30,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/tabular-data-parsing-and-structure-verification/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/tabular-data-parsing-and-structure-verification/skill.md
-    merged_at: '2026-05-25T06:57:01.451475+00:00'
+    merged_at: '2026-05-25T07:04:57.440275+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/tabular-data-parsing-and-structure-verification@sha256:00c8bba8ceb4f7e80b099912a9e9419c72eeb998b6c8cb38f07fd2216e7a1d90
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

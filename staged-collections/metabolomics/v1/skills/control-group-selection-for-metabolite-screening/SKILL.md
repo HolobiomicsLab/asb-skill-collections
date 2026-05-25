@@ -33,9 +33,15 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/control-group-selection-for-metabolite-screening/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/control-group-selection-for-metabolite-screening/skill.md
-    merged_at: '2026-05-25T06:57:01.610658+00:00'
+    merged_at: '2026-05-25T07:04:57.590800+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/control-group-selection-for-metabolite-screening@sha256:0069c3b7ded2ffdf9a8bed0152225305c54add67475846af6099c8edc5c76db3
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
 ---

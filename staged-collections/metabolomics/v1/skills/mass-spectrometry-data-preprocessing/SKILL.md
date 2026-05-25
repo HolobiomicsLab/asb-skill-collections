@@ -34,9 +34,15 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-data-preprocessing/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-data-preprocessing/skill.md
-    merged_at: '2026-05-25T06:57:01.617756+00:00'
+    merged_at: '2026-05-25T07:04:57.597646+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-data-preprocessing@sha256:3e34c7ce5f4eeeb510d2a9fff1c516e95dff2429e2b513f58e5c947efee0c25a
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
 ---

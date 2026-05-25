@@ -31,9 +31,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-salt-notation-repair/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-salt-notation-repair/skill.md
-    merged_at: '2026-05-25T06:57:01.476847+00:00'
+    merged_at: '2026-05-25T07:04:57.465181+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/smiles-salt-notation-repair@sha256:51f1b86acfc822c7f33e72f4c73da859a6979f46758ae14621571f0e83cafebd
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

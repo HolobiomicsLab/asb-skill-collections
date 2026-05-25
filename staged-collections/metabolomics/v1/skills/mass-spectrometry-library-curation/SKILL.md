@@ -35,9 +35,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-library-curation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-library-curation/skill.md
-    merged_at: '2026-05-25T06:57:01.425796+00:00'
+    merged_at: '2026-05-25T07:04:57.414778+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:0b99cf307b34e82fd17554469f9bab9696eba3c76e282df8c84e169e1a874c3f
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

@@ -32,9 +32,15 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/annotation-error-rate-calculation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/annotation-error-rate-calculation/skill.md
-    merged_at: '2026-05-25T06:57:01.416818+00:00'
+    merged_at: '2026-05-25T07:04:57.406170+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:5ffb67ca31a67d4fa87b700b525758cd4bd4bdb9b7e95c2405ef9d0224bdd961
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
 ---

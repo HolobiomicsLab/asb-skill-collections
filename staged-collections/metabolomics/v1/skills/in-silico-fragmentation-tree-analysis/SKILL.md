@@ -34,9 +34,15 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/in-silico-fragmentation-tree-analysis/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/in-silico-fragmentation-tree-analysis/skill.md
-    merged_at: '2026-05-25T06:57:01.619978+00:00'
+    merged_at: '2026-05-25T07:04:57.599850+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/in-silico-fragmentation-tree-analysis@sha256:de1f47a3ec423e6865d2b0ae81b9f149acd2c5da724f91c6d2ee675994f611ca
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
 ---

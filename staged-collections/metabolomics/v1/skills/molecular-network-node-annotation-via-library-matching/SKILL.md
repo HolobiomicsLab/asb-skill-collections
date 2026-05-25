@@ -30,9 +30,15 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/molecular-network-node-annotation-via-library-matching/SKILL.md
     - outputs/audit_jeong_full/skills/molecular-network-node-annotation-via-library-matching/skill.md
-    merged_at: '2026-05-25T06:57:01.521454+00:00'
+    merged_at: '2026-05-25T07:04:57.505247+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:0df80f06f53be883ea74dea46f247959d6faa416ecef6772acbca0e17a88d855
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1073/pnas
 ---

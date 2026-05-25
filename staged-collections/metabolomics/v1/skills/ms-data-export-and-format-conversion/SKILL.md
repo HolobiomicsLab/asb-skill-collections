@@ -45,9 +45,15 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/ms-data-export-and-format-conversion/SKILL.md
     - outputs/audit_s41592_full/skills/ms-data-export-and-format-conversion/skill.md
-    merged_at: '2026-05-25T06:57:01.585845+00:00'
+    merged_at: '2026-05-25T07:04:57.567005+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ms-data-export-and-format-conversion@sha256:3f1111d546b0f308bbad53f6499e64fdc0f0189aa54bdb39326ced6d820d2a4f
+  related_workflows:
+  - benchmark/tasks/audit_haffner_v2/workflow.smk
+  - benchmark/tasks/audit_jeong_full/workflow.smk
+  - benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+  - benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+  - benchmark/tasks/audit_s41592_full/workflow.smk
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
 ---
