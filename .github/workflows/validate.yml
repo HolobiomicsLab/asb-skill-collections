@@ -334,3 +334,30 @@ jobs:
           print(f"PASS: structural validation OK ({len(collection_files)} files)")
           print("INFO: Full LinkML conformance deferred until asb-schema ships to PyPI (v1.1).")
           EOF
+
+      # -- Gate 12: HF Dataset card structural check (committed previews) ----
+      # The mirror-to-hf workflow validates AT tag time; this gate enforces
+      # the card stays well-formed during ongoing development so a curator
+      # never lands a regression that only surfaces at release.
+      - name: Validate committed HF Dataset card previews
+        run: |
+          set -e
+          # Walk both collections/** and staged-collections/** for README_HF.md
+          # files. If a collection has one, it must validate.
+          found_any=0
+          for card in $(find collections staged-collections -name "README_HF.md" 2>/dev/null); do
+              found_any=1
+              echo "Checking $card"
+              python scripts/validate_hf_card.py --card "$card" || rc=$?
+              rc=${rc:-0}
+              if [ "$rc" = "1" ]; then
+                  echo "::error file=$card::HF card validation failed"
+                  exit 1
+              fi
+              if [ "$rc" = "2" ]; then
+                  echo "::warning file=$card::HF card has best-practice warnings (non-blocking)"
+              fi
+          done
+          if [ "$found_any" = "0" ]; then
+              echo "INFO: no committed README_HF.md previews found — nothing to validate."
+          fi

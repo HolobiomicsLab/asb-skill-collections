@@ -21,8 +21,23 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://holobiomicslab.github.io/asb-skill-collections/paper.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://holobiomicslab.github.io/asb-skill-collections/paper.html?doi=10.1021%2Facs.analchem.1c00972&amp;collection=metabolomics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://holobiomicslab.github.io/asb-skill-collections/paper.html?doi=10.1038%2Fs41592-025-02660-z&amp;collection=metabolomics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://holobiomicslab.github.io/asb-skill-collections/paper.html?doi=10.1128%2Fmsystems.00710-22&amp;collection=metabolomics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://holobiomicslab.github.io/asb-skill-collections/paper.html?doi=10.1186%2Fs13321-024-00878-1&amp;collection=metabolomics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

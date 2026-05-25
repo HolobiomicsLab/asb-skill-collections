@@ -33,12 +33,27 @@
       "@id": "asb:releasedAt",
       "@type": "xsd:dateTime"
     },
-    "slug": "asb:slug"
+    "slug": "asb:slug",
+    "status": "asb:status",
+    "repo_path": "asb:repoPath"
   },
   "@type": "asb:SkillCollectionRegistry",
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
   "description": "Auto-generated registry of all released ASB Skill Collections.",
-  "generated_at": "2026-05-25T10:23:25Z",
-  "collections": []
+  "generated_at": "2026-05-25T11:14:34Z",
+  "collections": [
+    {
+      "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1",
+      "title": "Metabolomics",
+      "version": "1",
+      "slug": "metabolomics",
+      "skills_count": 0,
+      "tools_count": 0,
+      "domain_topics": [],
+      "lead_curators": [],
+      "status": "staged",
+      "repo_path": "staged-collections/metabolomics/v1"
+    }
+  ]
 }

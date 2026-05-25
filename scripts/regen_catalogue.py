@@ -35,6 +35,8 @@ CATALOGUE_CONTEXT = {
     "generated_at": {"@id": "asb:generatedAt", "@type": "xsd:dateTime"},
     "released_at": {"@id": "asb:releasedAt", "@type": "xsd:dateTime"},
     "slug": "asb:slug",
+    "status": "asb:status",
+    "repo_path": "asb:repoPath",
 }
 
 REGISTRY_ID = "https://w3id.org/holobiomicslab/asb-skill/registry"
@@ -86,25 +88,39 @@ def _collection_entry(col_yaml: dict) -> dict:
     return entry
 
 
-def build_catalogue(repo_root: pathlib.Path) -> dict:
+def build_catalogue(
+    repo_root: pathlib.Path, *, include_staged: bool = True
+) -> dict:
     """
-    Walk repo_root/collections/ and build a catalogue dict.
+    Walk repo_root/collections/ (and optionally staged-collections/) and build
+    a catalogue dict.
+
+    Each entry carries an additional ``status`` field — ``"released"`` for
+    collections under ``collections/`` and ``"staged"`` for those under
+    ``staged-collections/``. Downstream consumers (catalogue UI, plugin
+    marketplace) can filter on it. Also adds ``repo_path`` so the static UI
+    can deep-link to the artifact location.
 
     Args:
         repo_root: Path to the repository root.
+        include_staged: When True (default), also walk staged-collections/.
 
     Returns:
         A dict suitable for serialisation as JSON-LD.
     """
-    collections_dir = repo_root / "collections"
     entries: list[dict] = []
 
-    if collections_dir.exists():
-        # Walk all collection.yaml files: collections/<slug>/v<N>/collection.yaml
-        for col_yaml_path in sorted(collections_dir.glob("**/collection.yaml")):
+    def _walk(dir_path: pathlib.Path, status: str) -> None:
+        if not dir_path.exists():
+            return
+        for col_yaml_path in sorted(dir_path.glob("**/collection.yaml")):
             try:
                 col_data = _load_collection_yaml(col_yaml_path)
                 entry = _collection_entry(col_data)
+                entry["status"] = status
+                entry["repo_path"] = str(
+                    col_yaml_path.parent.relative_to(repo_root)
+                )
                 entries.append(entry)
             except Exception as exc:
                 print(
@@ -112,8 +128,16 @@ def build_catalogue(repo_root: pathlib.Path) -> dict:
                     file=sys.stderr,
                 )
 
-    # Sort deterministically by slug
-    entries.sort(key=lambda e: (e.get("slug", ""), e.get("version", "")))
+    _walk(repo_root / "collections", "released")
+    if include_staged:
+        _walk(repo_root / "staged-collections", "staged")
+
+    # Sort deterministically: released first, then by slug + version
+    entries.sort(key=lambda e: (
+        0 if e.get("status") == "released" else 1,
+        e.get("slug", ""),
+        e.get("version", ""),
+    ))
 
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -152,6 +176,11 @@ def main() -> None:
         default="catalogue.jsonld",
         help="Output path for catalogue.jsonld (default: catalogue.jsonld)",
     )
+    parser.add_argument(
+        "--no-staged",
+        action="store_true",
+        help="Skip staged-collections/ (release-time catalogue, released only)",
+    )
     args = parser.parse_args()
 
     repo_root = pathlib.Path(args.repo_root).resolve()
@@ -159,13 +188,16 @@ def main() -> None:
     if not output_path.is_absolute():
         output_path = repo_root / output_path
 
-    catalogue = build_catalogue(repo_root)
+    catalogue = build_catalogue(repo_root, include_staged=not args.no_staged)
     write_catalogue(catalogue, output_path)
 
-    count = len(catalogue["collections"])
+    n_total = len(catalogue["collections"])
+    n_released = sum(1 for c in catalogue["collections"] if c.get("status") == "released")
+    n_staged = sum(1 for c in catalogue["collections"] if c.get("status") == "staged")
     print(
         f"catalogue.jsonld written to {output_path} "
-        f"({count} collection{'s' if count != 1 else ''})"
+        f"({n_total} collection{'s' if n_total != 1 else ''}; "
+        f"{n_released} released, {n_staged} staged)"
     )
 
 

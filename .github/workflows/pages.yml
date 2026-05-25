@@ -54,6 +54,16 @@ jobs:
           test -s docs-site/search_index.json
           ls -lh docs-site/search_index.json
 
+      - name: Regenerate catalogue.jsonld + dynamic sitemap
+        run: |
+          # Catalogue: includes both released + staged collections so the
+          # static UI can show in-progress work alongside tagged releases.
+          python scripts/regen_catalogue.py
+          # Sitemap: expand sitemap.xml with one entry per paper in corpus.yaml.
+          # Keeps the static base entries and appends paper-deep-link URLs.
+          python scripts/build_dynamic_sitemap.py
+          ls -lh catalogue.jsonld docs-site/sitemap.xml
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
