@@ -1,35 +1,35 @@
 ---
 name: spectral-count-quality-assessment
-description: "Quantitatively assess the quality and completeness of a mass spectral library by executing a reproducible cleaning pipeline that tracks spectrum counts through retention, removal, and repair stages. This skill measures data curation effectiveness by comparing input vs. retained vs. removed vs. repaired spectrum counts and reporting metadata repair success rates for each filter applied."
-when_to_use_negative: |
-  - "Input library is already curated by hand or has been previously cleaned by this same pipeline with identical settings and snapshot date (rerunning adds no new signal)."
-  - "Spectra are from proprietary or small in-house datasets (<1000 spectra) where library-wide statistics are not meaningful."
-  - "Your goal is to identify individual miscurated spectra, not to measure aggregate curation quality—this skill is aggregate-focused and will not flag which specific spectrum entry is wrong."
-edam_operation: "http://edamontology.org/operation_3802"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0091"
-tools: |
-  - name: "matchms"
-  role: "Core library-cleaning framework that executes the filter chain, repair functions, and tracks spectrum counts through each stage"
-  repo: "https://github.com/matchms/matchms"
-  - name: "matchms 0.26.4"
-  role: "Specific version used in the published pipeline; includes newly introduced repair functions (repair SMILES of salts, repair parent mass, repair adduct and parent mass based on SMILES, repair not-matching annotation)"
-  - name: "RDKit"
-  role: "Used by matchms filters to parse and validate SMILES, InChI, and InChIKey during structure annotation repair and comparison"
-  - name: "PubChem"
-  role: "Reference database queried by 'derive annotation from compound name' filter to look up canonical SMILES, InChI, and InChIKey"
-  - name: "Python"
-  role: "Execution environment for matchms pipelines and custom counting/reporting scripts"
-provenance: |
+description: Quantitatively assess the quality and completeness of a mass spectral library by executing a reproducible cleaning pipeline that tracks spectrum counts through retention, removal, and repair stages. This skill measures data curation effectiveness by comparing input vs. retained vs. removed vs. repaired spectrum counts and reporting metadata repair success rates for each filter applied.
+when_to_use_negative:
+- Input library is already curated by hand or has been previously cleaned by this same pipeline with identical settings and snapshot date (rerunning adds no new signal).
+- Spectra are from proprietary or small in-house datasets (<1000 spectra) where library-wide statistics are not meaningful.
+- Your goal is to identify individual miscurated spectra, not to measure aggregate curation quality—this skill is aggregate-focused and will not flag which specific spectrum entry is wrong.
+edam_operation: http://edamontology.org/operation_3802
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0091
+tools:
+- name: matchms
+  role: Core library-cleaning framework that executes the filter chain, repair functions, and tracks spectrum counts through each stage
+  repo: https://github.com/matchms/matchms
+- name: matchms 0.26.4
+  role: Specific version used in the published pipeline; includes newly introduced repair functions (repair SMILES of salts, repair parent mass, repair adduct and parent mass based on SMILES, repair not-matching annotation)
+- name: RDKit
+  role: Used by matchms filters to parse and validate SMILES, InChI, and InChIKey during structure annotation repair and comparison
+- name: PubChem
+  role: Reference database queried by 'derive annotation from compound name' filter to look up canonical SMILES, InChI, and InChIKey
+- name: Python
+  role: Execution environment for matchms pipelines and custom counting/reporting scripts
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-count-quality-assessment@sha256:993e955e21762c446a792a9de2ef02938d153281ffe15fbf2ee5749b7863844d
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-count-quality-assessment@sha256:4510f102e482997402b6a0bd2f08692885104b1e68424e52f88b5f92bd9d103a
 ---
 
 # spectral-count-quality-assessment

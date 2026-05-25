@@ -1,39 +1,39 @@
 ---
 name: pesticide-metabolite-structure-elucidation
-description: "Structural elucidation of pesticide metabolites by combining high-resolution MS/MS fragmentation analysis, molecular formula assignment, and in silico fragmentation prediction to annotate detected metabolite features to unambiguous molecular structures or formulas. This skill assigns chemical identities to pesticide biotransformation products detected in LC–HRMS metabolomics data."
-when_to_use_negative: |
-  - "Input features have not been filtered for mass defect (±100 mmu lower / +50 mmu upper cutoff) and abundance (fold change >4, detected in ≥2 replicates); run filtering steps first."
-  - "No MS2 spectra are available for the feature; GenForm and Sirius require MS2 fragmentation data for formula and structure elucidation."
-  - "The parent pesticide formula or elemental constraints are unknown or ill-defined; GenForm requires a well-specified fuzzy formula for correct molecular formula assignment."
-edam_operation: "http://edamontology.org/operation_3632"
-edam_topics: |
-  - "http://edamontology.org/topic_0153"
-  - "http://edamontology.org/topic_3375"
-  - "http://edamontology.org/topic_0943"
-tools: |
-  - name: "GenForm"
-  role: "Command-line tool for molecular formula calculation from MS1 m/z and MS2 fragmentation spectra, with elemental composition constraints based on parent pesticide formula"
-  - name: "Sirius version 4.4.27"
-  role: "In silico fragmentation and molecular fingerprint prediction for structure elucidation of ambiguous metabolites; generates fragmentation trees and functional group assignments"
-  - name: "OrgMassSpecR"
-  role: "R package providing SpectrumSimilarity function to calculate dot-product similarity scores between experimental and reference MS2 spectra for confidence assessment"
-  - name: "mzR"
-  role: "R package for extraction of MS2 spectra corresponding to prioritized metabolite features from data-dependent MS2 acquisition files"
-  - name: "MassBank"
-  role: "Public spectral library providing reference MS2 spectra for dot-product similarity comparison and spectral quality validation"
-  repo: "https://massbank.eu/MassBank"
-  - name: "incubatoR"
-  role: "Complete R/bash workflow orchestrating XCMS, CAMERA, statistical filtering, metabolite prioritization, EIC extraction, MS/MS extraction, and GenForm molecular formula annotation"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Structural elucidation of pesticide metabolites by combining high-resolution MS/MS fragmentation analysis, molecular formula assignment, and in silico fragmentation prediction to annotate detected metabolite features to unambiguous molecular structures or formulas. This skill assigns chemical identities to pesticide biotransformation products detected in LC–HRMS metabolomics data.
+when_to_use_negative:
+- Input features have not been filtered for mass defect (±100 mmu lower / +50 mmu upper cutoff) and abundance (fold change >4, detected in ≥2 replicates); run filtering steps first.
+- No MS2 spectra are available for the feature; GenForm and Sirius require MS2 fragmentation data for formula and structure elucidation.
+- The parent pesticide formula or elemental constraints are unknown or ill-defined; GenForm requires a well-specified fuzzy formula for correct molecular formula assignment.
+edam_operation: http://edamontology.org/operation_3632
+edam_topics:
+- http://edamontology.org/topic_0153
+- http://edamontology.org/topic_3375
+- http://edamontology.org/topic_0943
+tools:
+- name: GenForm
+  role: Command-line tool for molecular formula calculation from MS1 m/z and MS2 fragmentation spectra, with elemental composition constraints based on parent pesticide formula
+- name: Sirius version 4.4.27
+  role: In silico fragmentation and molecular fingerprint prediction for structure elucidation of ambiguous metabolites; generates fragmentation trees and functional group assignments
+- name: OrgMassSpecR
+  role: R package providing SpectrumSimilarity function to calculate dot-product similarity scores between experimental and reference MS2 spectra for confidence assessment
+- name: mzR
+  role: R package for extraction of MS2 spectra corresponding to prioritized metabolite features from data-dependent MS2 acquisition files
+- name: MassBank
+  role: Public spectral library providing reference MS2 spectra for dot-product similarity comparison and spectral quality validation
+  repo: https://massbank.eu/MassBank
+- name: incubatoR
+  role: Complete R/bash workflow orchestrating XCMS, CAMERA, statistical filtering, metabolite prioritization, EIC extraction, MS/MS extraction, and GenForm molecular formula annotation
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/pesticide-metabolite-structure-elucidation@sha256:7797912e016b77ad6120e5d237a09cb0d4c16f11d619bc5a6c1b0720e0c442fc
+  iri: https://w3id.org/holobiomicslab/asb-skill/pesticide-metabolite-structure-elucidation@sha256:fc9a115540f0987499c1543a7178e291e17691b13d51b85cef4b4df12a96a75e
 ---
 
 # pesticide-metabolite-structure-elucidation

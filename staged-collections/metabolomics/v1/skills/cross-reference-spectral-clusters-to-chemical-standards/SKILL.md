@@ -1,34 +1,34 @@
 ---
 name: cross-reference-spectral-clusters-to-chemical-standards
-description: "Match molecular network spectral nodes to known chemical standards and reference libraries by comparing MS/MS fragmentation patterns and neutral loss signatures. This skill bridges untargeted spectral clustering with targeted compound identification, enabling annotation of metabolite structures and enzymatic products in complex biotransformation datasets."
-when_to_use_negative: |
-  - "Input is already a fully annotated feature table (e.g., from targeted metabolomics with internal standards) — skip clustering and reference matching."
-  - "Reference library coverage is <50% for your compound class — annotation confidence will be too low without supplementary NMR or MS/MS fragmentation validation."
-  - "Spectral quality is poor (low S/N ratio, fragmented peaks, <10 significant MS/MS peaks per spectrum) — cosine similarity matching will be unreliable."
-edam_operation: "http://edamontology.org/operation_3860"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3375"
-  - "http://edamontology.org/topic_0602"
-tools: |
-  - name: "GNPS (Global Natural Products Social Molecular Networking)"
-  role: "Generates feature-based molecular networks, provides MS/MS reference library, hosts MassQL query engine for spectral filtering"
-  repo: "https://gnps.ucsd.edu/"
-  - name: "MassQL"
-  role: "Queries MS/MS spectra for diagnostic neutral losses (132.0423 Da pentose, 162.0528 Da hexose) to filter nodes prior to reference matching"
-  - name: "LC-MS/MS instrumentation"
-  role: "Generates raw fragmentation spectra for molecular network and library reference comparison"
-  - name: "NMR (Nuclear Magnetic Resonance)"
-  role: "Orthogonal validation of chemical structure and regioselectivity for selected annotated nodes (e.g., O-β-D-xylosylation vs. O-glucuronidation)"
-provenance: |
+description: Match molecular network spectral nodes to known chemical standards and reference libraries by comparing MS/MS fragmentation patterns and neutral loss signatures. This skill bridges untargeted spectral clustering with targeted compound identification, enabling annotation of metabolite structures and enzymatic products in complex biotransformation datasets.
+when_to_use_negative:
+- Input is already a fully annotated feature table (e.g., from targeted metabolomics with internal standards) — skip clustering and reference matching.
+- Reference library coverage is <50% for your compound class — annotation confidence will be too low without supplementary NMR or MS/MS fragmentation validation.
+- Spectral quality is poor (low S/N ratio, fragmented peaks, <10 significant MS/MS peaks per spectrum) — cosine similarity matching will be unreliable.
+edam_operation: http://edamontology.org/operation_3860
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3375
+- http://edamontology.org/topic_0602
+tools:
+- name: GNPS (Global Natural Products Social Molecular Networking)
+  role: Generates feature-based molecular networks, provides MS/MS reference library, hosts MassQL query engine for spectral filtering
+  repo: https://gnps.ucsd.edu/
+- name: MassQL
+  role: Queries MS/MS spectra for diagnostic neutral losses (132.0423 Da pentose, 162.0528 Da hexose) to filter nodes prior to reference matching
+- name: LC-MS/MS instrumentation
+  role: Generates raw fragmentation spectra for molecular network and library reference comparison
+- name: NMR (Nuclear Magnetic Resonance)
+  role: Orthogonal validation of chemical structure and regioselectivity for selected annotated nodes (e.g., O-β-D-xylosylation vs. O-glucuronidation)
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:1907eaaaf7847c1369aeb5423e45094aeb7803bc60039512289385fa32704b2b
+  iri: https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:1395ad7e5df1dae1409e544bfb0588311b084a2b87a3236764b36ed7622a45ab
 ---
 
 # cross-reference-spectral-clusters-to-chemical-standards

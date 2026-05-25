@@ -1,31 +1,31 @@
 ---
 name: smiles-inchi-inchikey-comparison-and-validation
-description: "Derives canonical SMILES, InChI, and InChIKey from compound names via PubChem lookup, then compares these chemical structure representations against existing annotations to detect unannotated spectra and structural mismatches. This skill validates chemical structure metadata consistency and identifies annotation errors in mass spectral libraries."
-when_to_use_negative: |
-  - "Input spectra lack valid compound name metadata; PubChem lookup requires unambiguous chemical names."
-  - "Chemical structure metadata is already complete, validated, and trusted; this skill is redundant for pre-curated libraries."
-  - "Spectra originate from synthetic or novel compounds not indexed in PubChem; derivation will fail for unknown compounds."
-edam_operation: "http://edamontology.org/operation_3346"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3375"
-tools: |
-  - name: "matchms"
-  role: "Framework for executing the 'derive_annotation_from_compound_name' filter to query PubChem and compare chemical structures"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Parses SMILES, InChI, and InChIKey representations and performs structural comparison to identify 2D structure mismatches"
-  - name: "PubChem"
-  role: "Remote database queried to retrieve canonical SMILES, InChI, and InChIKey for compound names"
-provenance: |
+description: Derives canonical SMILES, InChI, and InChIKey from compound names via PubChem lookup, then compares these chemical structure representations against existing annotations to detect unannotated spectra and structural mismatches. This skill validates chemical structure metadata consistency and identifies annotation errors in mass spectral libraries.
+when_to_use_negative:
+- Input spectra lack valid compound name metadata; PubChem lookup requires unambiguous chemical names.
+- Chemical structure metadata is already complete, validated, and trusted; this skill is redundant for pre-curated libraries.
+- Spectra originate from synthetic or novel compounds not indexed in PubChem; derivation will fail for unknown compounds.
+edam_operation: http://edamontology.org/operation_3346
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3375
+tools:
+- name: matchms
+  role: Framework for executing the 'derive_annotation_from_compound_name' filter to query PubChem and compare chemical structures
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Parses SMILES, InChI, and InChIKey representations and performs structural comparison to identify 2D structure mismatches
+- name: PubChem
+  role: Remote database queried to retrieve canonical SMILES, InChI, and InChIKey for compound names
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-inchikey-comparison-and-validation@sha256:f3a2e52af64ceeaab37b4293af44236b3dfbec37db3490737a014b35467d7a36
+  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-inchikey-comparison-and-validation@sha256:150dc2f9c59f6eab1ecc597367d23d16442bb365439f85635dbe30d2bdd911bc
 ---
 
 # SMILES/InChI/InChIKey Comparison and Validation

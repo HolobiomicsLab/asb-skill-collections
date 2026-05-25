@@ -1,47 +1,47 @@
 ---
 name: organophosphate-ester-compound-class-recognition
-description: "Recognize organophosphate ester (OPE) compounds in high-resolution LC-MS/MS data by querying for a diagnostic phosphate product ion (H₄PO₄⁺, m/z 98.9847) using MassQL, enabling discovery of known and novel OPE structures across large public repositories. This skill leverages a class-selective fragmentation pattern rather than precursor m/z to identify compounds with diverse molecular weights and structures that share a common metabolic or synthetic route."
-when_to_use_negative: |
-  - "Input is already a curated feature table or consensus spectrum library; use this skill on raw or minimally processed MS/MS data, not post-feature-detection outputs."
-  - "Your analytical goal is quantitative OPE measurement or pharmacokinetics; this skill performs untargeted class discovery and produces primarily qualitative/putative identifications."
-  - "MS data is from low-resolution instruments (e.g., nominal-mass quadrupole) where 50 ppm tolerance and intensity ratios cannot be reliably resolved."
-  - "You require detection of OPE metabolites or degradation products that have lost the phosphate fragment; this query is specific to intact OPEs with H₄PO₄⁺ as a major product ion."
-edam_operation: "http://edamontology.org/operation_3632"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "MassQL"
-  role: "Core query language and execution engine for MS/MS pattern matching; parses OPE phosphate fragment query and filters spectra by product ion m/z and intensity."
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark parser"
-  role: "Parses MassQL query string into abstract syntax tree for downstream filtering logic."
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Reads raw MS data from mzML, mzXML, and MGF formats into Python data structures for query processing."
-  - name: "pandas"
-  role: "Provides DataFrame-based filtering and data manipulation for MS/MS spectra by product ion m/z and intensity constraints."
-  - name: "Apache Feather"
-  role: "Optional caching format for rapid re-querying of large MS datasets across multiple refinements."
-  - name: "GNPS/MassIVE"
-  role: "Public repository of >230 million MS/MS spectra for large-scale OPE class discovery; also hosts spectral libraries for putative annotation."
-  repo: "https://gnps.ucsd.edu"
-  - name: "MS-Cluster"
-  role: "Collapses redundant MS/MS spectra from query results into consensus spectra for downstream molecular networking."
-  - name: "Falcon-MS"
-  role: "Alternative tool for consensus spectrum generation from redundant OPE query hits."
-  - name: "MZmine"
-  role: "Open-source MS analysis platform with native MassQL support for integrated query execution and visualization."
-  repo: "https://github.com/mzmine/mzmine"
-provenance: |
+description: Recognize organophosphate ester (OPE) compounds in high-resolution LC-MS/MS data by querying for a diagnostic phosphate product ion (H₄PO₄⁺, m/z 98.9847) using MassQL, enabling discovery of known and novel OPE structures across large public repositories. This skill leverages a class-selective fragmentation pattern rather than precursor m/z to identify compounds with diverse molecular weights and structures that share a common metabolic or synthetic route.
+when_to_use_negative:
+- Input is already a curated feature table or consensus spectrum library; use this skill on raw or minimally processed MS/MS data, not post-feature-detection outputs.
+- Your analytical goal is quantitative OPE measurement or pharmacokinetics; this skill performs untargeted class discovery and produces primarily qualitative/putative identifications.
+- MS data is from low-resolution instruments (e.g., nominal-mass quadrupole) where 50 ppm tolerance and intensity ratios cannot be reliably resolved.
+- You require detection of OPE metabolites or degradation products that have lost the phosphate fragment; this query is specific to intact OPEs with H₄PO₄⁺ as a major product ion.
+edam_operation: http://edamontology.org/operation_3632
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+tools:
+- name: MassQL
+  role: Core query language and execution engine for MS/MS pattern matching; parses OPE phosphate fragment query and filters spectra by product ion m/z and intensity.
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark parser
+  role: Parses MassQL query string into abstract syntax tree for downstream filtering logic.
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Reads raw MS data from mzML, mzXML, and MGF formats into Python data structures for query processing.
+- name: pandas
+  role: Provides DataFrame-based filtering and data manipulation for MS/MS spectra by product ion m/z and intensity constraints.
+- name: Apache Feather
+  role: Optional caching format for rapid re-querying of large MS datasets across multiple refinements.
+- name: GNPS/MassIVE
+  role: Public repository of >230 million MS/MS spectra for large-scale OPE class discovery; also hosts spectral libraries for putative annotation.
+  repo: https://gnps.ucsd.edu
+- name: MS-Cluster
+  role: Collapses redundant MS/MS spectra from query results into consensus spectra for downstream molecular networking.
+- name: Falcon-MS
+  role: Alternative tool for consensus spectrum generation from redundant OPE query hits.
+- name: MZmine
+  role: Open-source MS analysis platform with native MassQL support for integrated query execution and visualization.
+  repo: https://github.com/mzmine/mzmine
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/organophosphate-ester-compound-class-recognition@sha256:ddb2f669e14a4a0cb686f52401ca34dc178c60c9a173327cb0ee1ba2f5e5a509
+  iri: https://w3id.org/holobiomicslab/asb-skill/organophosphate-ester-compound-class-recognition@sha256:51bfe6beaeea8edb6c85232f25ae30b4155cf197f65caf11d720c328a5e62d2d
 ---
 
 # organophosphate-ester-compound-class-recognition

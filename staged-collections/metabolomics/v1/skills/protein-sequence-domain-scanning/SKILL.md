@@ -1,37 +1,37 @@
 ---
 name: protein-sequence-domain-scanning
-description: "Systematic scanning of deduced protein sequences against curated domain databases (e.g., Pfam) to identify and quantify conserved functional domains across a species set, enabling candidate prioritization and phylogenetic placement. Essential for high-throughput annotation of enzyme families when experimental characterization is infeasible."
-when_to_use_negative: |
-  - "Input sequences are already functionally annotated or experimentally characterized; domain scanning is redundant."
-  - "Your target protein family has no curated domain signature in your chosen database; use sequence homology search instead."
-  - "You need to resolve isoform-specific or splice-variant differences; domain scanning operates on deduced consensus sequences and will not distinguish them."
-edam_operation: "http://edamontology.org/operation_0361"
-edam_topics: |
-  - "http://edamontology.org/topic_0078"
-  - "http://edamontology.org/topic_0080"
-  - "http://edamontology.org/topic_3393"
-tools: |
-  - name: "hmmscan"
-  role: "HMM-based domain scanner; queries sequences against Pfam using profile hidden Markov models to assign domains and compute E-values"
-  - name: "Pfam"
-  role: "Curated database of protein family domains; provides versioned domain profiles (e.g., v34) and functional annotation"
-  - name: "JGI MycoCosm"
-  role: "Genome portal for fungal sequences; source of deduced amino acid sequences for wood-decaying fungi and other species"
-  - name: "MAFFT"
-  role: "Multiple sequence alignment of domain-filtered candidate sequences to prepare for phylogenetic analysis"
-  - name: "TrimAl"
-  role: "Alignment trimming and gap removal to remove low-information columns before tree construction"
-  - name: "FastTree / RAxML"
-  role: "Phylogenetic tree construction from trimmed alignments to resolve placement of candidates among characterized references"
-provenance: |
+description: Systematic scanning of deduced protein sequences against curated domain databases (e.g., Pfam) to identify and quantify conserved functional domains across a species set, enabling candidate prioritization and phylogenetic placement. Essential for high-throughput annotation of enzyme families when experimental characterization is infeasible.
+when_to_use_negative:
+- Input sequences are already functionally annotated or experimentally characterized; domain scanning is redundant.
+- Your target protein family has no curated domain signature in your chosen database; use sequence homology search instead.
+- You need to resolve isoform-specific or splice-variant differences; domain scanning operates on deduced consensus sequences and will not distinguish them.
+edam_operation: http://edamontology.org/operation_0361
+edam_topics:
+- http://edamontology.org/topic_0078
+- http://edamontology.org/topic_0080
+- http://edamontology.org/topic_3393
+tools:
+- name: hmmscan
+  role: HMM-based domain scanner; queries sequences against Pfam using profile hidden Markov models to assign domains and compute E-values
+- name: Pfam
+  role: Curated database of protein family domains; provides versioned domain profiles (e.g., v34) and functional annotation
+- name: JGI MycoCosm
+  role: Genome portal for fungal sequences; source of deduced amino acid sequences for wood-decaying fungi and other species
+- name: MAFFT
+  role: Multiple sequence alignment of domain-filtered candidate sequences to prepare for phylogenetic analysis
+- name: TrimAl
+  role: Alignment trimming and gap removal to remove low-information columns before tree construction
+- name: FastTree / RAxML
+  role: Phylogenetic tree construction from trimmed alignments to resolve placement of candidates among characterized references
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/protein-sequence-domain-scanning@sha256:976269c08c827017a16c42e56925339f4813916c5921b161099592f3c6b8b5c4
+  iri: https://w3id.org/holobiomicslab/asb-skill/protein-sequence-domain-scanning@sha256:ee4d6dde5ac225b179678203b32a5a73f965951f92480f91bc6a21464cdbf6be
 ---
 
 # protein-sequence-domain-scanning

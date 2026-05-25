@@ -1,37 +1,37 @@
 ---
 name: relative-intensity-threshold-filtering
-description: "Filter MS/MS spectra by requiring product ions to meet a minimum intensity threshold relative to the base peak (most intense ion) in each scan. This skill is essential for reducing false positives when querying large repositories for characteristic fragmentation patterns, such as phosphate product ions from organophosphate esters or isotope patterns from metal-binding compounds."
-when_to_use_negative: |
-  - "The input spectra are from targeted analysis (e.g., SRM/MRM) where all relevant ions are already separated and abundant—intensity thresholding is redundant."
-  - "The diagnostic ion is known to be very weak or variable in true positives (e.g., rare isotope patterns with <10% base peak intensity); a low threshold may be missed entirely."
-  - "Analysis goal is discovery of new structural variants where minor fragments may carry diagnostic information; strict intensity thresholds may exclude novel chemistry."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "MassQL"
-  role: "Query language and execution engine that parses INTENSITYPERCENT directives and applies relative intensity filtering during MS/MS scan traversal"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark parser"
-  role: "Parses the MassQL query string into an internal data structure; transforms 'INTENSITYPERCENT=<value>' tokens into filter conditions"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Reads MS data files (mzML, mzXML, MGF) and extracts MS/MS scan spectra with intensity values required for relative intensity calculation"
-  - name: "pandas"
-  role: "Performs data frame filtering and manipulation to apply the INTENSITYPERCENT condition across all scans in vectorized form"
-  - name: "MZmine"
-  role: "Open-source MS analysis tool with native MassQL support, allowing users to apply relative intensity thresholds in a graphical workflow"
-  repo: "https://github.com/mzmine/mzmine"
-provenance: |
+description: Filter MS/MS spectra by requiring product ions to meet a minimum intensity threshold relative to the base peak (most intense ion) in each scan. This skill is essential for reducing false positives when querying large repositories for characteristic fragmentation patterns, such as phosphate product ions from organophosphate esters or isotope patterns from metal-binding compounds.
+when_to_use_negative:
+- The input spectra are from targeted analysis (e.g., SRM/MRM) where all relevant ions are already separated and abundant—intensity thresholding is redundant.
+- The diagnostic ion is known to be very weak or variable in true positives (e.g., rare isotope patterns with <10% base peak intensity); a low threshold may be missed entirely.
+- Analysis goal is discovery of new structural variants where minor fragments may carry diagnostic information; strict intensity thresholds may exclude novel chemistry.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0121
+tools:
+- name: MassQL
+  role: Query language and execution engine that parses INTENSITYPERCENT directives and applies relative intensity filtering during MS/MS scan traversal
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark parser
+  role: Parses the MassQL query string into an internal data structure; transforms 'INTENSITYPERCENT=<value>' tokens into filter conditions
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Reads MS data files (mzML, mzXML, MGF) and extracts MS/MS scan spectra with intensity values required for relative intensity calculation
+- name: pandas
+  role: Performs data frame filtering and manipulation to apply the INTENSITYPERCENT condition across all scans in vectorized form
+- name: MZmine
+  role: Open-source MS analysis tool with native MassQL support, allowing users to apply relative intensity thresholds in a graphical workflow
+  repo: https://github.com/mzmine/mzmine
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:0f6060ac64cf496064b8b6091556257a4dff4c7b25621934b8ae5fb48ce3ab05
+  iri: https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:777ae9464df62d25dcb11bc128c7fce096d2f497af59bdf38e1d49f950f77405
 ---
 
 # Relative Intensity Threshold Filtering

@@ -1,33 +1,33 @@
 ---
 name: differential-feature-identification
-description: "Identify metabolite features most strongly associated with a categorical experimental variable (e.g., industrialization group) by training a random-forest classifier on high-abundance features and filtering results by variable-importance score. This skill ranks features by their predictive power and retains only those exceeding a statistical threshold, yielding a curated set of candidate differential features for downstream annotation and validation."
-when_to_use_negative: |
-  - "Input feature table is already heavily pre-filtered to a small set (e.g., <100 features); random-forest variable importance may be unstable or overfitting due to small feature count relative to sample count."
-  - "Categorical grouping variable has very imbalanced class sizes (e.g., 95% samples in one group, 5% in another); random-forest importance can be biased toward the majority class, and the selected features may not generalize to minority populations."
-  - "You require per-feature p-values, confidence intervals, or effect sizes; random-forest variable importance is a relative ranking without formal statistical inference—use univariate tests (e.g., Kruskal-Wallis, ANOVA) if statistical significance and direction are critical."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0625"
-tools: |
-  - name: "RandomForest R package"
-  role: "Train random-forest classifier on top abundant features to compute variable-importance scores for feature ranking and selection."
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "R programming language"
-  role: "Environment for random-forest model training, feature filtering by population presence, and threshold application."
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "Jupyter Notebook"
-  role: "Interactive interface for executing and documenting the random-forest feature selection workflow in R and Python."
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Identify metabolite features most strongly associated with a categorical experimental variable (e.g., industrialization group) by training a random-forest classifier on high-abundance features and filtering results by variable-importance score. This skill ranks features by their predictive power and retains only those exceeding a statistical threshold, yielding a curated set of candidate differential features for downstream annotation and validation.
+when_to_use_negative:
+- Input feature table is already heavily pre-filtered to a small set (e.g., <100 features); random-forest variable importance may be unstable or overfitting due to small feature count relative to sample count.
+- Categorical grouping variable has very imbalanced class sizes (e.g., 95% samples in one group, 5% in another); random-forest importance can be biased toward the majority class, and the selected features may not generalize to minority populations.
+- You require per-feature p-values, confidence intervals, or effect sizes; random-forest variable importance is a relative ranking without formal statistical inference—use univariate tests (e.g., Kruskal-Wallis, ANOVA) if statistical significance and direction are critical.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0625
+tools:
+- name: RandomForest R package
+  role: Train random-forest classifier on top abundant features to compute variable-importance scores for feature ranking and selection.
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: R programming language
+  role: Environment for random-forest model training, feature filtering by population presence, and threshold application.
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: Jupyter Notebook
+  role: Interactive interface for executing and documenting the random-forest feature selection workflow in R and Python.
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:dc85c0258bed3195eb7f895b4a87c40813bd3064f85207221c9da1454996bc31
+  iri: https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:8da47ac0cae03088a6410a175d36396879a693f9ec26ba2b5fb3f36ad9ddd9a9
 ---
 
 # differential-feature-identification

@@ -1,31 +1,31 @@
 ---
 name: tabular-data-parsing-and-structure-verification
-description: "Parse and validate the structure of tabular processing reports (e.g., Supplementary Table S1 from matchms library cleaning pipelines) by extracting numeric fields, verifying data types and field presence, and comparing extracted values against published statistics to confirm pipeline execution fidelity."
-when_to_use_negative: |
-  - "The input is already a validated schema or has been previously verified by the data producer."
-  - "The table documents intermediate filtering steps rather than aggregate final counts (use this skill only when validating summary statistics, not per-spectrum metadata)."
-  - "Reference statistics are unavailable or the article does not report concrete numeric counts for comparison."
-edam_operation: "http://edamontology.org/operation_2409"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "metadata cleaning and library filtering pipeline that produces the processing report to be parsed and verified"
-  repo: "https://github.com/matchms/matchms"
-  - name: "Python (pandas)"
-  role: "tabular data parsing and numeric extraction from CSV/Excel processing reports"
-  - name: "RDKit"
-  role: "structure comparison and validation (referenced for resolving SMILES/InChI/InChIKey conflicts in repair operations)"
-provenance: |
+description: Parse and validate the structure of tabular processing reports (e.g., Supplementary Table S1 from matchms library cleaning pipelines) by extracting numeric fields, verifying data types and field presence, and comparing extracted values against published statistics to confirm pipeline execution fidelity.
+when_to_use_negative:
+- The input is already a validated schema or has been previously verified by the data producer.
+- The table documents intermediate filtering steps rather than aggregate final counts (use this skill only when validating summary statistics, not per-spectrum metadata).
+- Reference statistics are unavailable or the article does not report concrete numeric counts for comparison.
+edam_operation: http://edamontology.org/operation_2409
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: metadata cleaning and library filtering pipeline that produces the processing report to be parsed and verified
+  repo: https://github.com/matchms/matchms
+- name: Python (pandas)
+  role: tabular data parsing and numeric extraction from CSV/Excel processing reports
+- name: RDKit
+  role: structure comparison and validation (referenced for resolving SMILES/InChI/InChIKey conflicts in repair operations)
+provenance:
   source_task_ids:
   - task_007
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/tabular-data-parsing-and-structure-verification@sha256:ae2cacd15491b8514bc8f869304fe3d6f854be344d21c31b7caa47cff66b0a0e
+  iri: https://w3id.org/holobiomicslab/asb-skill/tabular-data-parsing-and-structure-verification@sha256:444e77e645e65cbba0e4461c1f3e27a39ba8e7d7505bfdf7fab92797ee781467
 ---
 
 # tabular-data-parsing-and-structure-verification

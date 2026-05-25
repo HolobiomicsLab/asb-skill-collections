@@ -1,34 +1,34 @@
 ---
 name: chemical-structure-derivation-from-compound-names
-description: "Derives canonical SMILES, InChI, and InChIKey structures from compound names by querying PubChem, enabling structural validation and error detection in mass spectral library annotations. This skill is essential for identifying unannotated spectra and detecting structural mismatches between derived and existing annotations."
-when_to_use_negative: |
-  - "Input spectra lack compound names or have blank/invalid compound name fields; PubChem lookup will fail for unmapped names."
-  - "Spectra already have validated, manually curated SMILES and InChI annotations from primary literature or high-confidence reference standards; re-derivation from PubChem may overwrite accurate manual curation."
-  - "Compound names are non-standard, proprietary, or internal identifiers not recognized by PubChem (e.g., lab-specific codes or natural product common names); derivation will fail for ~27% of names even in well-curated datasets."
-edam_operation: "http://edamontology.org/operation_3762"
-edam_topics: |
-  - "http://edamontology.org/topic_0154"
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3407"
-tools: |
-  - name: "matchms"
-  role: "Framework for applying the 'derive_annotation_from_compound_name' filter to query PubChem and derive canonical SMILES, InChI, and InChIKey from compound names"
-  repo: "https://github.com/matchms/matchms"
-  - name: "PubChem"
-  role: "Public chemical database queried via API by matchms to retrieve canonical chemical structures for given compound names"
-  - name: "RDKit"
-  role: "Parses and canonicalizes SMILES, InChI, and InChIKey retrieved from PubChem; enables structural comparison and equivalence checks"
-  - name: "Python"
-  role: "Programming language used for scripting the matchms pipeline and post-processing results"
-provenance: |
+description: Derives canonical SMILES, InChI, and InChIKey structures from compound names by querying PubChem, enabling structural validation and error detection in mass spectral library annotations. This skill is essential for identifying unannotated spectra and detecting structural mismatches between derived and existing annotations.
+when_to_use_negative:
+- Input spectra lack compound names or have blank/invalid compound name fields; PubChem lookup will fail for unmapped names.
+- Spectra already have validated, manually curated SMILES and InChI annotations from primary literature or high-confidence reference standards; re-derivation from PubChem may overwrite accurate manual curation.
+- Compound names are non-standard, proprietary, or internal identifiers not recognized by PubChem (e.g., lab-specific codes or natural product common names); derivation will fail for ~27% of names even in well-curated datasets.
+edam_operation: http://edamontology.org/operation_3762
+edam_topics:
+- http://edamontology.org/topic_0154
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3407
+tools:
+- name: matchms
+  role: Framework for applying the 'derive_annotation_from_compound_name' filter to query PubChem and derive canonical SMILES, InChI, and InChIKey from compound names
+  repo: https://github.com/matchms/matchms
+- name: PubChem
+  role: Public chemical database queried via API by matchms to retrieve canonical chemical structures for given compound names
+- name: RDKit
+  role: Parses and canonicalizes SMILES, InChI, and InChIKey retrieved from PubChem; enables structural comparison and equivalence checks
+- name: Python
+  role: Programming language used for scripting the matchms pipeline and post-processing results
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-derivation-from-compound-names@sha256:645a1254f40148667256ecad5c04a76674ff9cd01a073b12ee0d4b711a2279ea
+  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-derivation-from-compound-names@sha256:f0c46b859ccccba769669e82b28e21a30eedb9ebcdf77e686f2a89975cbf28fc
 ---
 
 # chemical-structure-derivation-from-compound-names

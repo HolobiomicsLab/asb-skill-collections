@@ -1,45 +1,45 @@
 ---
 name: ms-ms-spectral-data-retrieval
-description: "Retrieve MS/MS spectra matching compound-class-specific fragment ion signatures from large public repositories (GNPS/MassIVE, Metabolomics Workbench, MetaboLights) using declarative MassQL queries. This skill enables discovery of known and novel compounds by translating chemical knowledge (e.g., phosphate fragment m/z 98.9847 ± 50 ppm, iron isotope ratios) into queryable patterns across hundreds of millions of spectra."
-when_to_use_negative: |
-  - "Your target compounds are already well-represented in commercial spectral libraries or your dataset is small (<10 million spectra); traditional library matching will be faster and more cost-effective."
-  - "You lack a biochemically motivated hypothesis about a characteristic fragment or neutral loss; exploratory untargeted MS/MS analysis or networking without pre-query feature definition is more appropriate."
-  - "You need to track consecutive MS spectra from a single chromatographic feature (e.g., extracted ion chromatogram elution profile); MassQL has limited capability to leverage sequential spectra and isotope intensity distributions beyond a handful of features."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "MassQL"
-  role: "Declarative query language and reference engine for parsing and executing fragment ion and neutral loss filters on MS data"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark parser"
-  role: "Parses MassQL query strings into an internal data structure using context-free grammar"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Reads MS data files in mzML, mzXML, and MGF formats and constructs pandas DataFrames for querying"
-  - name: "pandas"
-  role: "Performs efficient DataFrame filtering and data manipulations to execute MassQL filter logic"
-  - name: "Apache feather"
-  role: "Optional caching format for serialized MS data frames to enable repeated queries without re-parsing raw files"
-  - name: "MS-Cluster"
-  role: "Collapses redundant MS/MS spectra from query results into consensus spectra"
-  - name: "Falcon-MS"
-  role: "Alternative tool for generating consensus MS/MS spectra from redundant observations"
-  - name: "GNPS"
-  role: "Public repository hosting >230 million MS/MS spectra and spectral libraries for query refinement and result networking"
-  - name: "MZmine"
-  role: "Open-source MS data processing platform with native MassQL support for integration into full workflows"
-  repo: "https://github.com/mzmine/mzmine"
-provenance: |
+description: Retrieve MS/MS spectra matching compound-class-specific fragment ion signatures from large public repositories (GNPS/MassIVE, Metabolomics Workbench, MetaboLights) using declarative MassQL queries. This skill enables discovery of known and novel compounds by translating chemical knowledge (e.g., phosphate fragment m/z 98.9847 ± 50 ppm, iron isotope ratios) into queryable patterns across hundreds of millions of spectra.
+when_to_use_negative:
+- Your target compounds are already well-represented in commercial spectral libraries or your dataset is small (<10 million spectra); traditional library matching will be faster and more cost-effective.
+- You lack a biochemically motivated hypothesis about a characteristic fragment or neutral loss; exploratory untargeted MS/MS analysis or networking without pre-query feature definition is more appropriate.
+- You need to track consecutive MS spectra from a single chromatographic feature (e.g., extracted ion chromatogram elution profile); MassQL has limited capability to leverage sequential spectra and isotope intensity distributions beyond a handful of features.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+tools:
+- name: MassQL
+  role: Declarative query language and reference engine for parsing and executing fragment ion and neutral loss filters on MS data
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark parser
+  role: Parses MassQL query strings into an internal data structure using context-free grammar
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Reads MS data files in mzML, mzXML, and MGF formats and constructs pandas DataFrames for querying
+- name: pandas
+  role: Performs efficient DataFrame filtering and data manipulations to execute MassQL filter logic
+- name: Apache feather
+  role: Optional caching format for serialized MS data frames to enable repeated queries without re-parsing raw files
+- name: MS-Cluster
+  role: Collapses redundant MS/MS spectra from query results into consensus spectra
+- name: Falcon-MS
+  role: Alternative tool for generating consensus MS/MS spectra from redundant observations
+- name: GNPS
+  role: Public repository hosting >230 million MS/MS spectra and spectral libraries for query refinement and result networking
+- name: MZmine
+  role: Open-source MS data processing platform with native MassQL support for integration into full workflows
+  repo: https://github.com/mzmine/mzmine
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms-ms-spectral-data-retrieval@sha256:60f868fbee2012f734c3c96182c7d3bd61d52283866025f937bd2d551bd81e57
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms-ms-spectral-data-retrieval@sha256:376515d8689726a98dd024f3d48f6ca0bbe034110a4cd443a41bdc66d55e4c1f
 ---
 
 # MS/MS Spectral Data Retrieval

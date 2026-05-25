@@ -1,31 +1,31 @@
 ---
 name: machine-learning-feature-selection
-description: "Use random-forest variable importance scoring to identify and rank the most discriminative metabolite features from a preprocessed feature table, then apply a quantitative threshold to subset a tractable set of differential features for downstream annotation and validation. This approach reduces dimensionality while preserving biological signal by letting the ensemble model weight features by their predictive power."
-when_to_use_negative: |
-  - "Input feature table is already a curated, low-dimensional feature set (e.g., <50 features); random-forest selection adds unnecessary complexity."
-  - "Outcome variable is continuous (e.g., age, metabolite concentration); use regression-based feature selection (e.g., elastic net, recursive feature elimination) instead."
-  - "You need global feature rankings across multiple studies or platforms without retraining; random-forest importance is specific to your training set and outcome."
-edam_operation: "http://edamontology.org/operation_2409"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "RandomForest (R package)"
-  role: "Train ensemble classifier to compute variable importance scores for metabolite feature ranking and selection"
-  - name: "R programming language"
-  role: "Environment for implementing random-forest training, threshold filtering, and feature table manipulation"
-  - name: "Jupyter Notebook"
-  role: "Reproducible notebook environment for documenting and executing the feature selection workflow"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Use random-forest variable importance scoring to identify and rank the most discriminative metabolite features from a preprocessed feature table, then apply a quantitative threshold to subset a tractable set of differential features for downstream annotation and validation. This approach reduces dimensionality while preserving biological signal by letting the ensemble model weight features by their predictive power.
+when_to_use_negative:
+- Input feature table is already a curated, low-dimensional feature set (e.g., <50 features); random-forest selection adds unnecessary complexity.
+- Outcome variable is continuous (e.g., age, metabolite concentration); use regression-based feature selection (e.g., elastic net, recursive feature elimination) instead.
+- You need global feature rankings across multiple studies or platforms without retraining; random-forest importance is specific to your training set and outcome.
+edam_operation: http://edamontology.org/operation_2409
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
+tools:
+- name: RandomForest (R package)
+  role: Train ensemble classifier to compute variable importance scores for metabolite feature ranking and selection
+- name: R programming language
+  role: Environment for implementing random-forest training, threshold filtering, and feature table manipulation
+- name: Jupyter Notebook
+  role: Reproducible notebook environment for documenting and executing the feature selection workflow
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/machine-learning-feature-selection@sha256:be8301a4d77af25d44510eccf5385e84705c16ea465f882fb81f16596bb919bc
+  iri: https://w3id.org/holobiomicslab/asb-skill/machine-learning-feature-selection@sha256:dafa3403027c6ff99994433ea506997a67efaa9748542fdf5c9ad59d80b0b201
 ---
 
 # machine-learning-feature-selection

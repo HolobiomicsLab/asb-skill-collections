@@ -1,34 +1,34 @@
 ---
 name: microbe-metabolite-conditional-probability-filtering
-description: "Filter mmvec neural-network conditional probability outputs to retain only the highest-confidence microbe–metabolite co-occurrence predictions by subsetting to annotated metabolites and the most predictive microbial taxa. This reduces noise and identifies the strongest probable interactions for downstream interpretation."
-when_to_use_negative: |
-  - "Input mmvec output has not been generated or is missing; run mmvec first on your 16S ASVs and metabolite features."
-  - "Metabolites are not yet annotated at compound level; filtering by annotation requires prior MS/MS spectral matching and chemical database searches (e.g., MASST, GNPS, HFMDB)."
-  - "Goal is exploratory and you wish to retain all possible taxa–metabolite associations; this filtering technique is selective and will discard low-probability interactions."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_0602"
-  - "http://edamontology.org/topic_3391"
-  - "http://edamontology.org/topic_0637"
-tools: |
-  - name: "mmvec"
-  role: "neural network platform that generates conditional probability estimates of metabolite co-occurrence given microbial taxa; output is filtered by this skill"
-  - name: "QIIME2"
-  role: "framework for exporting mmvec conditional probability results and managing microbiome-metabolome data"
-  - name: "R"
-  role: "used for scripting the subsetting, filtering, and ranking operations on conditional probability matrices"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "MASST / GNPS"
-  role: "upstream tools for MS/MS spectral matching and metabolite annotation, needed to generate the list of annotated metabolites used in filtering"
-provenance: |
+description: Filter mmvec neural-network conditional probability outputs to retain only the highest-confidence microbe–metabolite co-occurrence predictions by subsetting to annotated metabolites and the most predictive microbial taxa. This reduces noise and identifies the strongest probable interactions for downstream interpretation.
+when_to_use_negative:
+- Input mmvec output has not been generated or is missing; run mmvec first on your 16S ASVs and metabolite features.
+- Metabolites are not yet annotated at compound level; filtering by annotation requires prior MS/MS spectral matching and chemical database searches (e.g., MASST, GNPS, HFMDB).
+- Goal is exploratory and you wish to retain all possible taxa–metabolite associations; this filtering technique is selective and will discard low-probability interactions.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3391
+- http://edamontology.org/topic_0637
+tools:
+- name: mmvec
+  role: neural network platform that generates conditional probability estimates of metabolite co-occurrence given microbial taxa; output is filtered by this skill
+- name: QIIME2
+  role: framework for exporting mmvec conditional probability results and managing microbiome-metabolome data
+- name: R
+  role: used for scripting the subsetting, filtering, and ranking operations on conditional probability matrices
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: MASST / GNPS
+  role: upstream tools for MS/MS spectral matching and metabolite annotation, needed to generate the list of annotated metabolites used in filtering
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:b4f76ccc47c61316036e1cc82f3420b15a01f4e67231f11537833418f39cc32c
+  iri: https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:dc1fb13b36f396a311ffdee44bf8e43c4c7e4107409146d204099cd75a3d6a0b
 ---
 
 # microbe-metabolite-conditional-probability-filtering

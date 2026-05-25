@@ -1,29 +1,29 @@
 ---
 name: threshold-based-feature-filtering
-description: "Filter a ranked feature list (e.g., random-forest variable importance scores) by applying a quantitative threshold to retain only features meeting a statistical or importance cutoff. This skill is used to reduce high-dimensional metabolomic data to a smaller, interpretable set of differential features suitable for downstream annotation and biological interpretation."
-when_to_use_negative: |
-  - "Input feature list is already below ~500 features and does not require further reduction for annotation"
-  - "No ranking metric or statistical score has been computed; threshold-based filtering requires a quantitative score per feature"
-  - "Threshold value is arbitrary or chosen post-hoc from the data distribution (i.e., chosen after inspecting the data); use a pre-specified or cross-validated threshold instead"
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0091"
-tools: |
-  - name: "random forest"
-  role: "generates variable importance scores for each metabolite feature; thresholds are then applied to these importance values to identify differential features"
-  - name: "R programming language"
-  role: "used for applying the variable importance threshold and subsetting the feature table in the analysis workflow"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Filter a ranked feature list (e.g., random-forest variable importance scores) by applying a quantitative threshold to retain only features meeting a statistical or importance cutoff. This skill is used to reduce high-dimensional metabolomic data to a smaller, interpretable set of differential features suitable for downstream annotation and biological interpretation.
+when_to_use_negative:
+- Input feature list is already below ~500 features and does not require further reduction for annotation
+- No ranking metric or statistical score has been computed; threshold-based filtering requires a quantitative score per feature
+- Threshold value is arbitrary or chosen post-hoc from the data distribution (i.e., chosen after inspecting the data); use a pre-specified or cross-validated threshold instead
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0091
+tools:
+- name: random forest
+  role: generates variable importance scores for each metabolite feature; thresholds are then applied to these importance values to identify differential features
+- name: R programming language
+  role: used for applying the variable importance threshold and subsetting the feature table in the analysis workflow
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/threshold-based-feature-filtering@sha256:366c547122eeae6bb5b3b2c5a2c3cb3695b7503454864a04f4fc0ae4fec1008e
+  iri: https://w3id.org/holobiomicslab/asb-skill/threshold-based-feature-filtering@sha256:9bd6ad02995124b2430c2666f6aadbdf7a8ece20f87be88561ccb174cdcbf9c7
 ---
 
 # threshold-based-feature-filtering

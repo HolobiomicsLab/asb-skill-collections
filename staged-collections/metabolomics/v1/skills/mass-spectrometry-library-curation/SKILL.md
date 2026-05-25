@@ -1,36 +1,36 @@
 ---
 name: mass-spectrometry-library-curation
-description: "Systematic cleaning and validation of mass spectrometry spectral library metadata and annotations using the matchms framework, including repair of structural notations (salts, adducts), harmonization of precursor masses, and removal of spectra with unrecoverable or inconsistent annotations."
-when_to_use_negative: |
-  - "Input library is already manually curated and has passed institutional QC (e.g., NIST private library); re-curation may introduce unnecessary changes."
-  - "Analysis requires retention of all spectral observations regardless of metadata quality (e.g., exploratory analysis of instrument artifacts or rare ionization modes not yet documented in standards)."
-  - "Metadata fields critical to your analysis (e.g., collision energy, instrument type) are not yet supported by matchms filters, as the current pipeline does not harmonize these fields."
-edam_operation: "http://edamontology.org/operation_3435"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0601"
-  - "http://edamontology.org/topic_3391"
-tools: |
-  - name: "matchms"
-  role: "Core framework for applying tiered filter pipelines (basic, default, library cleaning) to harmonize metadata, repair structural annotations, and validate spectral libraries"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Parses SMILES strings (including repaired salt-notation SMILES), computes monoisotopic masses, and derives canonical SMILES/InChI/InChIKey for structure validation"
-  repo: "https://www.rdkit.org"
-  - name: "PubChem"
-  role: "External chemical database queried by 'derive_annotation_from_compound_name' filter to fetch canonical SMILES, InChI, and InChIKey when compound names are available"
-  repo: "https://pubchem.ncbi.nlm.nih.gov"
-  - name: "Python"
-  role: "Scripting language for automation, orchestration of filter chains, and custom post-processing or validation logic"
-provenance: |
+description: Systematic cleaning and validation of mass spectrometry spectral library metadata and annotations using the matchms framework, including repair of structural notations (salts, adducts), harmonization of precursor masses, and removal of spectra with unrecoverable or inconsistent annotations.
+when_to_use_negative:
+- Input library is already manually curated and has passed institutional QC (e.g., NIST private library); re-curation may introduce unnecessary changes.
+- Analysis requires retention of all spectral observations regardless of metadata quality (e.g., exploratory analysis of instrument artifacts or rare ionization modes not yet documented in standards).
+- Metadata fields critical to your analysis (e.g., collision energy, instrument type) are not yet supported by matchms filters, as the current pipeline does not harmonize these fields.
+edam_operation: http://edamontology.org/operation_3435
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0601
+- http://edamontology.org/topic_3391
+tools:
+- name: matchms
+  role: Core framework for applying tiered filter pipelines (basic, default, library cleaning) to harmonize metadata, repair structural annotations, and validate spectral libraries
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Parses SMILES strings (including repaired salt-notation SMILES), computes monoisotopic masses, and derives canonical SMILES/InChI/InChIKey for structure validation
+  repo: https://www.rdkit.org
+- name: PubChem
+  role: External chemical database queried by 'derive_annotation_from_compound_name' filter to fetch canonical SMILES, InChI, and InChIKey when compound names are available
+  repo: https://pubchem.ncbi.nlm.nih.gov
+- name: Python
+  role: Scripting language for automation, orchestration of filter chains, and custom post-processing or validation logic
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:74250eb43d661f50517c4fa04b8b8c321f46365ebe556ec4ff07fb73b70061b7
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:3eb33fd865ac9e5fef24216bca1dd2311406e438d1ed2c5eddcc42571a4c9f38
 ---
 
 # mass-spectrometry-library-curation

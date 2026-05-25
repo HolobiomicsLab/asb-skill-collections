@@ -1,42 +1,42 @@
 ---
 name: ppm-tolerance-filtering-and-calibration
-description: "Apply mass accuracy filtering using parts-per-million (ppm) tolerance windows to match observed m/z values against expected fragment ions or precursors in high-resolution mass spectrometry datasets. This skill is essential for reducing false positives when querying large repositories of LC-MS/MS data, particularly when searching for specific molecular signatures across heterogeneous instrument types and ionization sources."
-when_to_use_negative: |
-  - "Your instrument has not been recently mass-calibrated and you do not know its actual mass error profile; applying an arbitrary ppm window could yield spurious matches or miss true features."
-  - "You are filtering data that has already been deconvoluted or centroided by vendor software into discrete peaks; applying ppm tolerance to pre-processed peak lists requires verification that m/z values are still in the original instrument's mass space."
-  - "The query targets low-abundance isotope peaks (e.g., ⁵⁴Fe with <25% expected intensity relative to ⁵⁶Fe) in samples with high chemical noise; a single fixed ppm and intensity threshold may miss these due to random fluctuations or miss-calibration, as documented for the IIMN method."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3375"
-tools: |
-  - name: "MassQL"
-  role: "Query language and reference engine for specifying and executing m/z filtering with ppm tolerance across MS/MS repositories"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark"
-  role: "Parser library for translating MassQL query strings (with TOLERANCEPPM parameters) into executable parse trees"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Python library for reading MS data files (mzML, mzXML, MGF) and extracting m/z and intensity arrays for tolerance-based filtering"
-  - name: "pandas"
-  role: "DataFrame library for vectorized m/z filtering and intensity thresholding operations on MS/MS spectra"
-  - name: "MZmine"
-  role: "Open-source desktop software with native MassQL integration for interactive query design and ppm tolerance tuning on reference datasets before scaling"
-  repo: "https://github.com/mzmine/mzmine"
-  - name: "MS-DIAL"
-  role: "Open-source MS/MS analysis platform supporting MassQL queries with configurable ppm tolerance windows"
-  - name: "GNPS/MassIVE"
-  role: "Public MS/MS repository hosting 230+ million spectra; provides both a repository for scaling ppm-tolerance queries and spectral libraries for reference-based query refinement"
-provenance: |
+description: Apply mass accuracy filtering using parts-per-million (ppm) tolerance windows to match observed m/z values against expected fragment ions or precursors in high-resolution mass spectrometry datasets. This skill is essential for reducing false positives when querying large repositories of LC-MS/MS data, particularly when searching for specific molecular signatures across heterogeneous instrument types and ionization sources.
+when_to_use_negative:
+- Your instrument has not been recently mass-calibrated and you do not know its actual mass error profile; applying an arbitrary ppm window could yield spurious matches or miss true features.
+- You are filtering data that has already been deconvoluted or centroided by vendor software into discrete peaks; applying ppm tolerance to pre-processed peak lists requires verification that m/z values are still in the original instrument's mass space.
+- The query targets low-abundance isotope peaks (e.g., ⁵⁴Fe with <25% expected intensity relative to ⁵⁶Fe) in samples with high chemical noise; a single fixed ppm and intensity threshold may miss these due to random fluctuations or miss-calibration, as documented for the IIMN method.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3375
+tools:
+- name: MassQL
+  role: Query language and reference engine for specifying and executing m/z filtering with ppm tolerance across MS/MS repositories
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark
+  role: Parser library for translating MassQL query strings (with TOLERANCEPPM parameters) into executable parse trees
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Python library for reading MS data files (mzML, mzXML, MGF) and extracting m/z and intensity arrays for tolerance-based filtering
+- name: pandas
+  role: DataFrame library for vectorized m/z filtering and intensity thresholding operations on MS/MS spectra
+- name: MZmine
+  role: Open-source desktop software with native MassQL integration for interactive query design and ppm tolerance tuning on reference datasets before scaling
+  repo: https://github.com/mzmine/mzmine
+- name: MS-DIAL
+  role: Open-source MS/MS analysis platform supporting MassQL queries with configurable ppm tolerance windows
+- name: GNPS/MassIVE
+  role: Public MS/MS repository hosting 230+ million spectra; provides both a repository for scaling ppm-tolerance queries and spectral libraries for reference-based query refinement
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:f4ea7d44e8e1856e88f5febe20ee7c04182c94cc7051bd8486d06e3a61e3f66e
+  iri: https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:6b2f5eae097eb162e4f5fe083bd8c93d6cb7c6ac6806a84921eb1f9830716c8c
 ---
 
 # ppm-tolerance-filtering-and-calibration

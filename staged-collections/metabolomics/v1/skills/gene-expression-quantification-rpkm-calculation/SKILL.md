@@ -1,32 +1,32 @@
 ---
 name: gene-expression-quantification-rpkm-calculation
-description: "Quantifies gene expression levels by normalizing RNA-seq read counts to RPKM (reads per kilobase per million mapped reads), accounting for library size and composition bias through TMM normalization. This skill bridges raw read-count matrices to interpretable expression fold-changes across experimental conditions."
-when_to_use_negative: |
-  - "Input count matrix is already log2-transformed or normalized to counts per million (CPM); re-normalizing will compound bias."
-  - "Only single replicate per condition; statistical power is lost and fold-change estimates become unreliable."
-  - "Gene length annotations are unavailable; RPKM requires exact per-gene length to normalize for transcript size."
-edam_operation: "http://edamontology.org/operation_3565"
-edam_topics: |
-  - "http://edamontology.org/topic_3170"
-  - "http://edamontology.org/topic_0769"
-tools: |
-  - name: "HTSeq"
-  role: "counts aligned reads mapping to annotated genes in union mode (stranded=reverse) to produce raw count matrices that serve as input to RPKM normalization"
-  - name: "edgeR"
-  role: "applies TMM normalization via calcNormFactors() to account for library composition bias, then computes RPKM values via rpkm() function"
-  - name: "R"
-  role: "executes edgeR normalization and RPKM calculation workflows, loads count data, and tabulates normalized expression tables"
-  - name: "HISAT2"
-  role: "generates aligned BAM files that are subsequently counted by HTSeq; output files determine total mapped reads used in RPKM denominator"
-provenance: |
+description: Quantifies gene expression levels by normalizing RNA-seq read counts to RPKM (reads per kilobase per million mapped reads), accounting for library size and composition bias through TMM normalization. This skill bridges raw read-count matrices to interpretable expression fold-changes across experimental conditions.
+when_to_use_negative:
+- Input count matrix is already log2-transformed or normalized to counts per million (CPM); re-normalizing will compound bias.
+- Only single replicate per condition; statistical power is lost and fold-change estimates become unreliable.
+- Gene length annotations are unavailable; RPKM requires exact per-gene length to normalize for transcript size.
+edam_operation: http://edamontology.org/operation_3565
+edam_topics:
+- http://edamontology.org/topic_3170
+- http://edamontology.org/topic_0769
+tools:
+- name: HTSeq
+  role: counts aligned reads mapping to annotated genes in union mode (stranded=reverse) to produce raw count matrices that serve as input to RPKM normalization
+- name: edgeR
+  role: applies TMM normalization via calcNormFactors() to account for library composition bias, then computes RPKM values via rpkm() function
+- name: R
+  role: executes edgeR normalization and RPKM calculation workflows, loads count data, and tabulates normalized expression tables
+- name: HISAT2
+  role: generates aligned BAM files that are subsequently counted by HTSeq; output files determine total mapped reads used in RPKM denominator
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:16bb88f515468e9ee8efab376590efb189849b989127e848fad691767c35eda8
+  iri: https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:c5014d12c0c43d8821dc4beca1fd28f6271828bdf48664831d2c554ebae26bbc
 ---
 
 # gene-expression-quantification-rpkm-calculation

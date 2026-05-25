@@ -1,33 +1,33 @@
 ---
 name: metabolite-importance-ranking
-description: "Rank metabolite features by variable importance scores from a random-forest classifier trained on industrialization group membership, then apply a quantitative threshold to identify differential metabolites for downstream annotation. This skill distills high-dimensional untargeted metabolomic data into a curated set of features most predictive of the experimental condition."
-when_to_use_negative: |
-  - "Input is already a curated, annotated feature list (e.g., from targeted metabolomics or pre-filtered databases) — ranking is designed for discovery in untargeted, high-dimensional data."
-  - "Experimental variable is continuous (e.g., age, BMI) rather than categorical — random-forest variable importance is most interpretable for classification; regression importance may differ."
-  - "Sample size is very small (<20 samples per group) — random-forest estimates of importance become unstable and out-of-bag error plateau may not be reliable."
-edam_operation: "http://edamontology.org/operation_2238"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3407"
-tools: |
-  - name: "RandomForest (R package)"
-  role: "Train random-forest classifier on top 1,000 most abundant features, with tree count incremented from 5 to 200 until out-of-bag error plateaus; extract variable importance scores for each feature."
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "R programming language"
-  role: "Environment for running random-forest model training, importance extraction, and threshold filtering."
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "Jupyter Notebook"
-  role: "Interactive code documentation and reproducible workflow execution for the ranking and filtering pipeline."
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Rank metabolite features by variable importance scores from a random-forest classifier trained on industrialization group membership, then apply a quantitative threshold to identify differential metabolites for downstream annotation. This skill distills high-dimensional untargeted metabolomic data into a curated set of features most predictive of the experimental condition.
+when_to_use_negative:
+- Input is already a curated, annotated feature list (e.g., from targeted metabolomics or pre-filtered databases) — ranking is designed for discovery in untargeted, high-dimensional data.
+- Experimental variable is continuous (e.g., age, BMI) rather than categorical — random-forest variable importance is most interpretable for classification; regression importance may differ.
+- Sample size is very small (<20 samples per group) — random-forest estimates of importance become unstable and out-of-bag error plateau may not be reliable.
+edam_operation: http://edamontology.org/operation_2238
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3407
+tools:
+- name: RandomForest (R package)
+  role: Train random-forest classifier on top 1,000 most abundant features, with tree count incremented from 5 to 200 until out-of-bag error plateaus; extract variable importance scores for each feature.
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: R programming language
+  role: Environment for running random-forest model training, importance extraction, and threshold filtering.
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: Jupyter Notebook
+  role: Interactive code documentation and reproducible workflow execution for the ranking and filtering pipeline.
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-importance-ranking@sha256:b279e9a037ac7097c34a9345953259d4a4574b5789f13776a88c0ae7a7e1de39
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-importance-ranking@sha256:c1539852ecf7234a950d8f5f701d69b6eac176adf5d617e169f7aa65f7fdecb6
 ---
 
 # metabolite-importance-ranking

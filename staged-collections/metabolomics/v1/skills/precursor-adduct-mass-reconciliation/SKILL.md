@@ -1,31 +1,31 @@
 ---
 name: precursor-adduct-mass-reconciliation
-description: "Reconcile precursor m/z and adduct ion assignments in MS/MS spectral libraries by deriving chemical structure from SMILES and comparing calculated vs. recorded masses. This skill repairs incorrect or missing adduct annotations that would otherwise cause spectra to be removed during library curation."
-when_to_use_negative: |
-  - "Spectra without valid SMILES annotation or molecular structure information cannot be reconciled via this method."
-  - "Spectra with ambiguous or multiple possible SMILES representations where RDKit cannot compute a unique monoisotopic mass."
-  - "Precursor m/z values that fall outside the range of any chemically plausible adduct (e.g. where calculated mass + all common adducts cannot account for the recorded m/z)."
-edam_operation: "http://edamontology.org/operation_3800"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3370"
-tools: |
-  - name: "matchms"
-  role: "Orchestrates the library cleaning pipeline and wraps the 'Repair adduct and parent mass based on SMILES' filter as part of the structure annotation validation workflow"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Computes monoisotopic mass and chemical properties from SMILES strings to derive expected precursor m/z for each adduct type"
-  - name: "PubChem"
-  role: "Source of canonical SMILES and InChI when annotations are derived from compound names prior to adduct reconciliation"
-provenance: |
+description: Reconcile precursor m/z and adduct ion assignments in MS/MS spectral libraries by deriving chemical structure from SMILES and comparing calculated vs. recorded masses. This skill repairs incorrect or missing adduct annotations that would otherwise cause spectra to be removed during library curation.
+when_to_use_negative:
+- Spectra without valid SMILES annotation or molecular structure information cannot be reconciled via this method.
+- Spectra with ambiguous or multiple possible SMILES representations where RDKit cannot compute a unique monoisotopic mass.
+- Precursor m/z values that fall outside the range of any chemically plausible adduct (e.g. where calculated mass + all common adducts cannot account for the recorded m/z).
+edam_operation: http://edamontology.org/operation_3800
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3370
+tools:
+- name: matchms
+  role: Orchestrates the library cleaning pipeline and wraps the 'Repair adduct and parent mass based on SMILES' filter as part of the structure annotation validation workflow
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Computes monoisotopic mass and chemical properties from SMILES strings to derive expected precursor m/z for each adduct type
+- name: PubChem
+  role: Source of canonical SMILES and InChI when annotations are derived from compound names prior to adduct reconciliation
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/precursor-adduct-mass-reconciliation@sha256:66d9459c76c10ec116408689067a5a3805c7a078e5a1ada909a65d08a0872efc
+  iri: https://w3id.org/holobiomicslab/asb-skill/precursor-adduct-mass-reconciliation@sha256:cf8275e8fd8f3d48cdfbebf3b8fee9aeb17ff1bec859b815180ab09b9bafecc9
 ---
 
 # precursor-adduct-mass-reconciliation

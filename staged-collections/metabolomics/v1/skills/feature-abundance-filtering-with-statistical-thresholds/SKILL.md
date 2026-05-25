@@ -1,34 +1,34 @@
 ---
 name: feature-abundance-filtering-with-statistical-thresholds
-description: "Filter LC–HRMS metabolomics feature tables by applying fold-change thresholds and replication criteria to remove background noise and prioritize genuine metabolite features. This skill combines abundance-based statistical filtering with biological replication requirements to reduce false positives in untargeted screening of pesticide metabolites."
-when_to_use_negative: |
-  - "Input feature table already contains only manually curated or literature-validated metabolites; statistical filtering is redundant."
-  - "Sample set lacks ≥2 biological replicates per treatment group; the replication criterion cannot be applied and false-positive rate will increase."
-  - "Target analytes are suspected to be low-abundance biomarkers with expected FC < 4; this threshold will exclude true signals."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_0625"
-  - "http://edamontology.org/topic_3370"
-tools: |
-  - name: "XCMS"
-  role: "Feature detection, alignment, and retention time correction upstream of abundance filtering; outputs peaklist and metadata tables consumed by statistical filtering"
-  - name: "CAMERA"
-  role: "Componentization and annotation of isotopic and adduct peaks before abundance filtering; removes redundant features"
-  - name: "R (v3.6.1)"
-  role: "Statistical computing environment for calculating fold-change, applying cutoff thresholds, and generating diagnostic plots"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "incubatoR"
-  role: "Automated R workflow implementing abundance filtering (Rscripts/statistics.R and Rscripts/metabolites.R) with fold-change and replication cutoffs on XCMS/CAMERA outputs"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Filter LC–HRMS metabolomics feature tables by applying fold-change thresholds and replication criteria to remove background noise and prioritize genuine metabolite features. This skill combines abundance-based statistical filtering with biological replication requirements to reduce false positives in untargeted screening of pesticide metabolites.
+when_to_use_negative:
+- Input feature table already contains only manually curated or literature-validated metabolites; statistical filtering is redundant.
+- Sample set lacks ≥2 biological replicates per treatment group; the replication criterion cannot be applied and false-positive rate will increase.
+- Target analytes are suspected to be low-abundance biomarkers with expected FC < 4; this threshold will exclude true signals.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3370
+tools:
+- name: XCMS
+  role: Feature detection, alignment, and retention time correction upstream of abundance filtering; outputs peaklist and metadata tables consumed by statistical filtering
+- name: CAMERA
+  role: Componentization and annotation of isotopic and adduct peaks before abundance filtering; removes redundant features
+- name: R (v3.6.1)
+  role: Statistical computing environment for calculating fold-change, applying cutoff thresholds, and generating diagnostic plots
+  repo: https://github.com/chufz/incubatoR
+- name: incubatoR
+  role: Automated R workflow implementing abundance filtering (Rscripts/statistics.R and Rscripts/metabolites.R) with fold-change and replication cutoffs on XCMS/CAMERA outputs
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/feature-abundance-filtering-with-statistical-thresholds@sha256:517362f96111f17096fd56738eec4290b1b454abfdd6dbe52efd368d32a20e55
+  iri: https://w3id.org/holobiomicslab/asb-skill/feature-abundance-filtering-with-statistical-thresholds@sha256:e7213c9e79d001ab0744c2c2db56239a190cf40ed780dea3077837d01f2eaa2a
 ---
 
 # feature-abundance-filtering-with-statistical-thresholds

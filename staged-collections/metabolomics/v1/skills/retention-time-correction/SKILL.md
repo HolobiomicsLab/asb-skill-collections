@@ -1,31 +1,31 @@
 ---
 name: retention-time-correction
-description: "Align and correct retention times across LC–HRMS runs using XCMS's orbiwarp algorithm with IPO-optimized parameters to ensure consistent feature matching and metabolite identification across multiple samples and replicates."
-when_to_use_negative: |
-  - "Input xcmsSet already contains grouped features; retention time correction must occur before grouping, not after."
-  - "Single run or single-replicate analysis where no cross-run drift exists; correction is redundant and may introduce noise."
-  - "Data from instruments with very high retention time stability (±0.1 min or better); the correction gain may not justify computational cost."
-edam_operation: "http://edamontology.org/operation_3629"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3370"
-tools: |
-  - name: "XCMS"
-  role: "Applies orbiwarp retention time correction method with IPO-optimized parameters (distFunc, profStep, gapInit, factorDiag, factorGap) to align peaks across replicates before grouping"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "IPO"
-  role: "Optimizes XCMS parameters including retention time correction settings (orbiwarp configuration) to maximize feature detection and alignment for the specific dataset"
-  - name: "ProteoWizard"
-  role: "Converts raw vendor mass spectrometry data to centroided mzML format prior to XCMS retention time correction"
-provenance: |
+description: Align and correct retention times across LC–HRMS runs using XCMS's orbiwarp algorithm with IPO-optimized parameters to ensure consistent feature matching and metabolite identification across multiple samples and replicates.
+when_to_use_negative:
+- Input xcmsSet already contains grouped features; retention time correction must occur before grouping, not after.
+- Single run or single-replicate analysis where no cross-run drift exists; correction is redundant and may introduce noise.
+- Data from instruments with very high retention time stability (±0.1 min or better); the correction gain may not justify computational cost.
+edam_operation: http://edamontology.org/operation_3629
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3370
+tools:
+- name: XCMS
+  role: Applies orbiwarp retention time correction method with IPO-optimized parameters (distFunc, profStep, gapInit, factorDiag, factorGap) to align peaks across replicates before grouping
+  repo: https://github.com/chufz/incubatoR
+- name: IPO
+  role: Optimizes XCMS parameters including retention time correction settings (orbiwarp configuration) to maximize feature detection and alignment for the specific dataset
+- name: ProteoWizard
+  role: Converts raw vendor mass spectrometry data to centroided mzML format prior to XCMS retention time correction
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/retention-time-correction@sha256:637e8f156fa60046e2102f7b492cd32fb13ee7467e92cddcb74c205adedf6edd
+  iri: https://w3id.org/holobiomicslab/asb-skill/retention-time-correction@sha256:3166bf12ae5306300d0f90d7fc875df1ee23709de188a56271dbd1b5b33988ed
 ---
 
 # retention-time-correction

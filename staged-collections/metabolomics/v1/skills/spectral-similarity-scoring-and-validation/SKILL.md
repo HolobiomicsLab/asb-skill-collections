@@ -1,35 +1,35 @@
 ---
 name: spectral-similarity-scoring-and-validation
-description: "This skill calculates dot-product similarity scores between experimental MS2 spectra and reference spectra to assess spectral quality, confidence, and library utility for metabolite identification. It is essential for validating that detected metabolite spectra are sufficiently similar to reference standards or literature spectra to support confident metabolite annotation."
-when_to_use_negative: |
-  - "Do not use if no suitable reference spectrum exists (neither MassBank, nor reference standard, nor predicted library available); in such cases, rely on molecular formula consistency and fragmentation logic instead."
-  - "Do not use if the experimental spectrum is severely contaminated or exhibits poor signal-to-noise; clean or filter the spectrum first before scoring."
-  - "Do not use to assess spectral purity or precursor isolation quality; for that, employ dedicated MSpurity or related tools to measure spectral contamination independently."
-edam_operation: "http://edamontology.org/operation_3632"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "OrgMassSpecR"
-  role: "Calculates dot-product similarity scores between experimental and reference MS2 spectra using the SpectrumSimilarity function with configurable threshold and binning parameters"
-  - name: "GenForm"
-  role: "Produces cleaned MS2 spectra retaining only fragments that can be explained by the assigned molecular formula, enabling comparison of processed vs. unprocessed spectral similarity scores to assess formula quality"
-  - name: "MassBank"
-  role: "Provides reference MS2 spectra for similarity comparison against detected metabolites"
-  - name: "mzR"
-  role: "Extracts MS2 spectra corresponding to metabolite features from data-dependent LC–HRMS acquisition files"
-  - name: "incubatoR"
-  role: "Automated workflow for metabolite identification including spectral extraction and comparative library generation; code available for reproducible similarity scoring"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: This skill calculates dot-product similarity scores between experimental MS2 spectra and reference spectra to assess spectral quality, confidence, and library utility for metabolite identification. It is essential for validating that detected metabolite spectra are sufficiently similar to reference standards or literature spectra to support confident metabolite annotation.
+when_to_use_negative:
+- Do not use if no suitable reference spectrum exists (neither MassBank, nor reference standard, nor predicted library available); in such cases, rely on molecular formula consistency and fragmentation logic instead.
+- Do not use if the experimental spectrum is severely contaminated or exhibits poor signal-to-noise; clean or filter the spectrum first before scoring.
+- Do not use to assess spectral purity or precursor isolation quality; for that, employ dedicated MSpurity or related tools to measure spectral contamination independently.
+edam_operation: http://edamontology.org/operation_3632
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
+tools:
+- name: OrgMassSpecR
+  role: Calculates dot-product similarity scores between experimental and reference MS2 spectra using the SpectrumSimilarity function with configurable threshold and binning parameters
+- name: GenForm
+  role: Produces cleaned MS2 spectra retaining only fragments that can be explained by the assigned molecular formula, enabling comparison of processed vs. unprocessed spectral similarity scores to assess formula quality
+- name: MassBank
+  role: Provides reference MS2 spectra for similarity comparison against detected metabolites
+- name: mzR
+  role: Extracts MS2 spectra corresponding to metabolite features from data-dependent LC–HRMS acquisition files
+- name: incubatoR
+  role: Automated workflow for metabolite identification including spectral extraction and comparative library generation; code available for reproducible similarity scoring
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-scoring-and-validation@sha256:e1549736e92b1cb8d7e32c67eb2d2c9b482ea792d7f650a69a59341639e03819
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-scoring-and-validation@sha256:748df290558a01e4fa4ed5ec9a5fdccc0f0f9f34d835486ddac2c6d8b3020adf
 ---
 
 # Spectral Similarity Scoring and Validation

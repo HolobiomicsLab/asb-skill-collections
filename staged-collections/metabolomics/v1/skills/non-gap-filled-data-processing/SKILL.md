@@ -1,31 +1,31 @@
 ---
 name: non-gap-filled-data-processing
-description: "Process untargeted LC-MS/MS metabolomic data without gap-filling to preserve the integrity of detection patterns across samples. This approach is critical when analyzing shared metabolites across populations where missing-value imputation could mask genuine absence or alter inter-sample comparison validity."
-when_to_use_negative: |
-  - "Input is already gap-filled or imputed; re-filtering will propagate artifacts."
-  - "Downstream analysis requires complete feature matrices with no missing values (e.g., certain multivariate methods that cannot tolerate NAs)."
-  - "Study design focuses on within-sample feature intensity relationships rather than cross-sample presence/absence patterns."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "MZmine"
-  role: "Peak detection and feature table generation; applies minimum-peaks-in-a-row filtering in the absence of gap-filling"
-  - name: "R"
-  role: "Population-level presence filtering; removes features not meeting per-population minimum sample thresholds"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "MSConvert"
-  role: "Raw data conversion to mzXML format prior to MZmine processing"
-provenance: |
+description: Process untargeted LC-MS/MS metabolomic data without gap-filling to preserve the integrity of detection patterns across samples. This approach is critical when analyzing shared metabolites across populations where missing-value imputation could mask genuine absence or alter inter-sample comparison validity.
+when_to_use_negative:
+- Input is already gap-filled or imputed; re-filtering will propagate artifacts.
+- Downstream analysis requires complete feature matrices with no missing values (e.g., certain multivariate methods that cannot tolerate NAs).
+- Study design focuses on within-sample feature intensity relationships rather than cross-sample presence/absence patterns.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0121
+tools:
+- name: MZmine
+  role: Peak detection and feature table generation; applies minimum-peaks-in-a-row filtering in the absence of gap-filling
+- name: R
+  role: Population-level presence filtering; removes features not meeting per-population minimum sample thresholds
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: MSConvert
+  role: Raw data conversion to mzXML format prior to MZmine processing
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/non-gap-filled-data-processing@sha256:4633f3630ecc142208e46cde7a438884b691f4416a39aa3ba037c704166630a6
+  iri: https://w3id.org/holobiomicslab/asb-skill/non-gap-filled-data-processing@sha256:8961630cb21f91c561fb78290e933df2af1321a08b29d06334146c6a288c49d2
 ---
 
 # non-gap-filled-data-processing

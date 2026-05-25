@@ -1,35 +1,35 @@
 ---
 name: adduct-ion-classification-accuracy-assessment
-description: "Evaluate the correctness of adduct ion assignments derived from chemical structure (SMILES) by comparing repair outcomes against reference data, measuring both derivation failure rate and misassignment rate. This skill quantifies the reliability of automated adduct correction in mass spectral library cleaning pipelines."
-when_to_use_negative: |
-  - "Input spectra lack valid SMILES, InChI, or compound name annotations; the repair filter cannot derive an adduct without chemical structure."
-  - "Reference adduct assignments are themselves unreliable or missing; accuracy assessment requires ground-truth labels."
-  - "Spectra come from unannotated experimental data (e.g., raw MS/MS acquisitions without library curation); this skill validates library-level metadata, not experimental peak picking."
-edam_operation: "http://edamontology.org/operation_3632"
-edam_topics: |
-  - "http://edamontology.org/topic_0593"
-  - "http://edamontology.org/topic_3370"
-tools: |
-  - name: "matchms"
-  role: "Provides the 'repair_adduct_based_on_smiles' filter to derive canonical SMILES and predict adduct assignments from chemical structure; orchestrates the library cleaning workflow."
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Converts compound names and SMILES to canonical SMILES, InChI, and InChIKey representations used for PubChem comparison and adduct derivation."
-  repo: "https://www.rdkit.org/"
-  - name: "PubChem"
-  role: "Provides reference compound data (canonical SMILES, InChI, InChIKey, molecular weight) against which derived adducts and structures are validated."
-  repo: "https://pubchem.ncbi.nlm.nih.gov/"
-  - name: "Python"
-  role: "Scripting language for orchestrating the matchms pipeline, counting outcomes, and generating summary statistics."
-provenance: |
+description: Evaluate the correctness of adduct ion assignments derived from chemical structure (SMILES) by comparing repair outcomes against reference data, measuring both derivation failure rate and misassignment rate. This skill quantifies the reliability of automated adduct correction in mass spectral library cleaning pipelines.
+when_to_use_negative:
+- Input spectra lack valid SMILES, InChI, or compound name annotations; the repair filter cannot derive an adduct without chemical structure.
+- Reference adduct assignments are themselves unreliable or missing; accuracy assessment requires ground-truth labels.
+- Spectra come from unannotated experimental data (e.g., raw MS/MS acquisitions without library curation); this skill validates library-level metadata, not experimental peak picking.
+edam_operation: http://edamontology.org/operation_3632
+edam_topics:
+- http://edamontology.org/topic_0593
+- http://edamontology.org/topic_3370
+tools:
+- name: matchms
+  role: Provides the 'repair_adduct_based_on_smiles' filter to derive canonical SMILES and predict adduct assignments from chemical structure; orchestrates the library cleaning workflow.
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Converts compound names and SMILES to canonical SMILES, InChI, and InChIKey representations used for PubChem comparison and adduct derivation.
+  repo: https://www.rdkit.org/
+- name: PubChem
+  role: Provides reference compound data (canonical SMILES, InChI, InChIKey, molecular weight) against which derived adducts and structures are validated.
+  repo: https://pubchem.ncbi.nlm.nih.gov/
+- name: Python
+  role: Scripting language for orchestrating the matchms pipeline, counting outcomes, and generating summary statistics.
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/adduct-ion-classification-accuracy-assessment@sha256:20b74e2d91d0a74d28ea2d4094661de659af248efeacd5b6593be30c63cdc7b1
+  iri: https://w3id.org/holobiomicslab/asb-skill/adduct-ion-classification-accuracy-assessment@sha256:5dfc742e42842b5a6ef7c476633ffd9902e58b5290e14b79353e0fe376d415ab
 ---
 
 # Adduct-Ion Classification Accuracy Assessment

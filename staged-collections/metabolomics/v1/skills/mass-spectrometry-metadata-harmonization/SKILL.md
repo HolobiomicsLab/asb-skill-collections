@@ -1,35 +1,35 @@
 ---
 name: mass-spectrometry-metadata-harmonization
-description: "Systematically repair and validate MS/MS spectral metadata—including adducts, precursor m/z, SMILES, and compound annotations—using chemical structure validation against reference databases and cross-field consistency checks. This skill ensures that library spectra meet plausibility thresholds before downstream analysis or publication."
-when_to_use_negative: |
-  - "Input spectra already have complete, manually curated, and structurally validated metadata (e.g., NIST or internal curated standards); harmonization would be redundant."
-  - "The analysis goal requires preservation of original (even if incorrect) metadata for historical comparison or error auditing; repair operations are destructive."
-  - "Spectra lack compound name, SMILES, or InChI fields entirely and no reference database is available to derive them; the pipeline will reject these as 'incomplete annotation'."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_3071"
-tools: |
-  - name: "matchms"
-  role: "Core library cleaning and metadata harmonization framework; provides filter classes (Basic, Default, Library Cleaning) and repair functions (repair_adduct_based_on_smiles, repair_parent_mass, repair_smiles_of_salts, derive_annotation_from_compound_name)"
-  - name: "RDKit"
-  role: "Canonicalizes SMILES, InChI, and InChIKey; compares chemical structures for validation; used within repair_adduct_based_on_smiles to derive canonical forms and detect structural discrepancies"
-  - name: "PubChem"
-  role: "Reference chemical structure database; provides canonical SMILES, InChI, and InChIKey lookups; used to validate and derive missing compound metadata and expected adduct masses"
-  - name: "Python"
-  role: "Scripting and automation language for orchestrating matchms filter pipelines and generating batch processing workflows"
-  - name: "Git"
-  role: "Version control for matchms codebase and reproducibility; ensures filter code and pipeline configuration are tracked and retrievable"
-provenance: |
+description: Systematically repair and validate MS/MS spectral metadata—including adducts, precursor m/z, SMILES, and compound annotations—using chemical structure validation against reference databases and cross-field consistency checks. This skill ensures that library spectra meet plausibility thresholds before downstream analysis or publication.
+when_to_use_negative:
+- Input spectra already have complete, manually curated, and structurally validated metadata (e.g., NIST or internal curated standards); harmonization would be redundant.
+- The analysis goal requires preservation of original (even if incorrect) metadata for historical comparison or error auditing; repair operations are destructive.
+- Spectra lack compound name, SMILES, or InChI fields entirely and no reference database is available to derive them; the pipeline will reject these as 'incomplete annotation'.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_3071
+tools:
+- name: matchms
+  role: Core library cleaning and metadata harmonization framework; provides filter classes (Basic, Default, Library Cleaning) and repair functions (repair_adduct_based_on_smiles, repair_parent_mass, repair_smiles_of_salts, derive_annotation_from_compound_name)
+- name: RDKit
+  role: Canonicalizes SMILES, InChI, and InChIKey; compares chemical structures for validation; used within repair_adduct_based_on_smiles to derive canonical forms and detect structural discrepancies
+- name: PubChem
+  role: Reference chemical structure database; provides canonical SMILES, InChI, and InChIKey lookups; used to validate and derive missing compound metadata and expected adduct masses
+- name: Python
+  role: Scripting and automation language for orchestrating matchms filter pipelines and generating batch processing workflows
+- name: Git
+  role: Version control for matchms codebase and reproducibility; ensures filter code and pipeline configuration are tracked and retrievable
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-metadata-harmonization@sha256:7a129757236c1db15d176c294146ab85f8d162a4524176529aea1870c31e6417
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-metadata-harmonization@sha256:ff26e1f213bfcd8365cd635a833f1027be052ab3d9f6080ce4cd3f72ef5797e5
 ---
 
 # mass-spectrometry-metadata-harmonization

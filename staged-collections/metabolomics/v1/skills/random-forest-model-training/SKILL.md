@@ -1,34 +1,34 @@
 ---
 name: random-forest-model-training
-description: "Train a random-forest classifier on metabolomic feature data to identify features predictive of categorical phenotypes (e.g., industrialization group), with tree count iteratively increased until out-of-bag error stabilizes. This skill surfaces variable-importance scores for subsequent feature selection and filtering."
-when_to_use_negative: |
-  - "Input feature table has already been dimensionally reduced to a small, curated set; random forests perform best with hundreds of candidate features, not dozens."
-  - "Your outcome is continuous (e.g., abundance value, metabolite concentration); use random-forest regression instead of classification."
-  - "You have only a handful of samples (<20); random-forest models require sufficient samples to estimate stable feature importances and OOB error."
-edam_operation: "http://edamontology.org/operation_2426"
-edam_topics: |
-  - "http://edamontology.org/topic_0602"
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3673"
-tools: |
-  - name: "RandomForest"
-  role: "R package used to train the random-forest classifier on the top 1,000 metabolite features, iterating tree count until OOB error plateaus"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "R programming language"
-  role: "Environment for loading feature tables, training random-forest models, extracting importance scores, and filtering features by threshold"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "Jupyter Notebook"
-  role: "Interactive notebook interface documenting the random-forest workflow and variable-importance filtering steps"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Train a random-forest classifier on metabolomic feature data to identify features predictive of categorical phenotypes (e.g., industrialization group), with tree count iteratively increased until out-of-bag error stabilizes. This skill surfaces variable-importance scores for subsequent feature selection and filtering.
+when_to_use_negative:
+- Input feature table has already been dimensionally reduced to a small, curated set; random forests perform best with hundreds of candidate features, not dozens.
+- Your outcome is continuous (e.g., abundance value, metabolite concentration); use random-forest regression instead of classification.
+- You have only a handful of samples (<20); random-forest models require sufficient samples to estimate stable feature importances and OOB error.
+edam_operation: http://edamontology.org/operation_2426
+edam_topics:
+- http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3673
+tools:
+- name: RandomForest
+  role: R package used to train the random-forest classifier on the top 1,000 metabolite features, iterating tree count until OOB error plateaus
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: R programming language
+  role: Environment for loading feature tables, training random-forest models, extracting importance scores, and filtering features by threshold
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: Jupyter Notebook
+  role: Interactive notebook interface documenting the random-forest workflow and variable-importance filtering steps
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/random-forest-model-training@sha256:7667cbd2a6af01a562ce30192195065aa3b72e608b3e251504d8ad0a1cea65af
+  iri: https://w3id.org/holobiomicslab/asb-skill/random-forest-model-training@sha256:91835b06128e9f3793cda519d84f3761f76cca8a4a4581347cbf376968504dac
 ---
 
 # random-forest-model-training

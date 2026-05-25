@@ -1,40 +1,40 @@
 ---
 name: phase-i-transformation-biotransformation-pathways
-description: "Predict and validate phase I metabolite structures and molecular formulas for xenobiotic compounds (pesticides) using rule-based and machine-learning biotransformation prediction, then compare predictions against experimentally detected metabolites from LC–HRMS analysis of in vitro S9 liver microsome incubations. This skill bridges computational metabolite prediction with high-throughput experimental screening to identify which phase I transformations are physiologically relevant."
-when_to_use_negative: |
-  - "Input features already labeled with phase II or conjugation modifications (e.g., glucuronides, sulfates); phase I prediction is orthogonal to these."
-  - "Parent compounds are already Phase I metabolites (secondary substrates); prediction is most reliable for intact parent structures."
-  - "Experimental dataset lacks sufficient molecular formula assignments or has >20% ambiguous features; low-confidence formula sets will inflat false-negative and false-positive rates."
-edam_operation: "http://edamontology.org/operation_3802"
-edam_topics: |
-  - "http://edamontology.org/topic_0602"
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3375"
-tools: |
-  - name: "BioTransformer"
-  role: "Predict phase I metabolite structures and molecular formulas from parent xenobiotic structures using rule-based and machine-learning biotransformation rules"
-  - name: "XCMS version 3.8"
-  role: "Feature detection, alignment, and retention time correction on raw LC–HRMS data prior to formula assignment"
-  - name: "CAMERA"
-  role: "Componentize detected features to group isotopes and adducts, improving feature-level annotation accuracy"
-  - name: "GenForm"
-  role: "Calculate molecular formulas from MS1 and MS2 spectra for experimental features"
-  - name: "ProteoWizard v3.0.18265"
-  role: "Convert raw vendor mass spectra to mzML format and centroid; prerequisite for XCMS feature detection"
-  - name: "Sirius version 4.4.27"
-  role: "Structure elucidation via in silico fragmentation and molecular fingerprint prediction for confirmed metabolites (post-overlap analysis)"
-  - name: "R v 3.6.1 (incubatoR package)"
-  role: "Automated workflow orchestration for feature filtering, statistical comparison, mass defect filtering, EIC extraction, MSMS processing, and overlap analysis"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Predict and validate phase I metabolite structures and molecular formulas for xenobiotic compounds (pesticides) using rule-based and machine-learning biotransformation prediction, then compare predictions against experimentally detected metabolites from LC–HRMS analysis of in vitro S9 liver microsome incubations. This skill bridges computational metabolite prediction with high-throughput experimental screening to identify which phase I transformations are physiologically relevant.
+when_to_use_negative:
+- Input features already labeled with phase II or conjugation modifications (e.g., glucuronides, sulfates); phase I prediction is orthogonal to these.
+- Parent compounds are already Phase I metabolites (secondary substrates); prediction is most reliable for intact parent structures.
+- Experimental dataset lacks sufficient molecular formula assignments or has >20% ambiguous features; low-confidence formula sets will inflat false-negative and false-positive rates.
+edam_operation: http://edamontology.org/operation_3802
+edam_topics:
+- http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3375
+tools:
+- name: BioTransformer
+  role: Predict phase I metabolite structures and molecular formulas from parent xenobiotic structures using rule-based and machine-learning biotransformation rules
+- name: XCMS version 3.8
+  role: Feature detection, alignment, and retention time correction on raw LC–HRMS data prior to formula assignment
+- name: CAMERA
+  role: Componentize detected features to group isotopes and adducts, improving feature-level annotation accuracy
+- name: GenForm
+  role: Calculate molecular formulas from MS1 and MS2 spectra for experimental features
+- name: ProteoWizard v3.0.18265
+  role: Convert raw vendor mass spectra to mzML format and centroid; prerequisite for XCMS feature detection
+- name: Sirius version 4.4.27
+  role: Structure elucidation via in silico fragmentation and molecular fingerprint prediction for confirmed metabolites (post-overlap analysis)
+- name: R v 3.6.1 (incubatoR package)
+  role: Automated workflow orchestration for feature filtering, statistical comparison, mass defect filtering, EIC extraction, MSMS processing, and overlap analysis
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_005
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/phase-i-transformation-biotransformation-pathways@sha256:58b13e2c6e9728ade1f22d406faa887492668583e5394066c3c7cda21ed9f5d0
+  iri: https://w3id.org/holobiomicslab/asb-skill/phase-i-transformation-biotransformation-pathways@sha256:b67455bfec254430a664e41dd9b54181cb6736170d026b9b9264ac41b3cc7436
 ---
 
 # phase-i-transformation-biotransformation-pathways

@@ -1,31 +1,31 @@
 ---
 name: industrial-gradient-metadata-categorization
-description: "Stratifies fecal samples into four discrete industrialization categories (urban industrialized, rural industrialized, rural traditional, isolated traditional) and uses these assignments as the primary grouping variable for downstream metabolomic and microbiomic analyses. This skill is foundational for detecting and quantifying the impact of industrialization on metabolome composition and microbiome-metabolome interactions."
-when_to_use_negative: |
-  - "Samples lack geographic or contextual information to justify industrialization assignment"
-  - "Your research focuses on within-population heterogeneity rather than between-population comparisons"
-  - "Industrialization is already coded as a continuous variable (e.g., urbanization index) rather than discrete categories"
-edam_operation: "http://edamontology.org/operation_3435"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3697"
-tools: |
-  - name: "QIIME2"
-  role: "Load metadata and assign industrialization groups to samples; enable stratified PERMANOVA and PCoA by group"
-  - name: "R"
-  role: "Create, validate, and manipulate sample metadata tables; assign and verify industrialization category assignments"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-  - name: "PERMANOVA"
-  role: "Test statistical significance of industrialization group on metabolome variance (downstream use of metadata)"
-provenance: |
+description: Stratifies fecal samples into four discrete industrialization categories (urban industrialized, rural industrialized, rural traditional, isolated traditional) and uses these assignments as the primary grouping variable for downstream metabolomic and microbiomic analyses. This skill is foundational for detecting and quantifying the impact of industrialization on metabolome composition and microbiome-metabolome interactions.
+when_to_use_negative:
+- Samples lack geographic or contextual information to justify industrialization assignment
+- Your research focuses on within-population heterogeneity rather than between-population comparisons
+- Industrialization is already coded as a continuous variable (e.g., urbanization index) rather than discrete categories
+edam_operation: http://edamontology.org/operation_3435
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3697
+tools:
+- name: QIIME2
+  role: Load metadata and assign industrialization groups to samples; enable stratified PERMANOVA and PCoA by group
+- name: R
+  role: Create, validate, and manipulate sample metadata tables; assign and verify industrialization category assignments
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+- name: PERMANOVA
+  role: Test statistical significance of industrialization group on metabolome variance (downstream use of metadata)
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/industrial-gradient-metadata-categorization@sha256:8e6ede44c31668d04c29176f0996f8fcbed9aa43eb21927d863f81701f2e5160
+  iri: https://w3id.org/holobiomicslab/asb-skill/industrial-gradient-metadata-categorization@sha256:771d98b39805e6811ac60f1a5578df98a0e6743aa9b457c84cdbaa95c3345fe3
 ---
 
 # industrial-gradient-metadata-categorization

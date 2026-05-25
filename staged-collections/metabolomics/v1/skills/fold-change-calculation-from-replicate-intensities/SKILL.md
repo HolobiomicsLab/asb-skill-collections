@@ -1,34 +1,34 @@
 ---
 name: fold-change-calculation-from-replicate-intensities
-description: "Calculate fold-change (FC) values by dividing mean intensity of pesticide-incubated replicate groups by mean intensity of negative control samples (S9 + NADPH only), then apply FC > 4 threshold combined with presence in ≥2 of 3 replicates to filter features in LC–HRMS metabolite screening. This abundance filter reduces false positives and prioritizes reproducible metabolic signals."
-when_to_use_negative: |
-  - "Input feature table lacks biological replicates (n < 2) or has no negative control group (e.g., S9 + NADPH only samples)."
-  - "Feature intensities have not been blank-subtracted or isotope/adduct-annotated; applying FC filter to raw data will inflate false positives."
-  - "Study design does not include in vitro incubation or metabolite discovery; FC filtering is optimized for xenobiotic biotransformation assays, not general metabolomics screening."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0625"
-tools: |
-  - name: "R v 3.6.1"
-  role: "Statistical computation and fold-change arithmetic; used in the automated incubatoR workflow to calculate mean intensities, FC values, and replicate-based filtering"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "Rvolcano v 1.0"
-  role: "Robust visualization of log2 fold-change against p-value; detects outliers and produces volcano plots for manual evaluation of FC thresholds"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "XCMS v 3.8"
-  role: "Upstream feature detection, alignment, and retention time correction that produces the intensity matrix required as input for FC calculation"
-  - name: "CAMERA v 1.40"
-  role: "Upstream feature componentization and grouping (isotopes, adducts) that precedes blank subtraction and FC filtering"
-provenance: |
+description: Calculate fold-change (FC) values by dividing mean intensity of pesticide-incubated replicate groups by mean intensity of negative control samples (S9 + NADPH only), then apply FC > 4 threshold combined with presence in ≥2 of 3 replicates to filter features in LC–HRMS metabolite screening. This abundance filter reduces false positives and prioritizes reproducible metabolic signals.
+when_to_use_negative:
+- Input feature table lacks biological replicates (n < 2) or has no negative control group (e.g., S9 + NADPH only samples).
+- Feature intensities have not been blank-subtracted or isotope/adduct-annotated; applying FC filter to raw data will inflate false positives.
+- Study design does not include in vitro incubation or metabolite discovery; FC filtering is optimized for xenobiotic biotransformation assays, not general metabolomics screening.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0625
+tools:
+- name: R v 3.6.1
+  role: Statistical computation and fold-change arithmetic; used in the automated incubatoR workflow to calculate mean intensities, FC values, and replicate-based filtering
+  repo: https://github.com/chufz/incubatoR
+- name: Rvolcano v 1.0
+  role: Robust visualization of log2 fold-change against p-value; detects outliers and produces volcano plots for manual evaluation of FC thresholds
+  repo: https://github.com/chufz/incubatoR
+- name: XCMS v 3.8
+  role: Upstream feature detection, alignment, and retention time correction that produces the intensity matrix required as input for FC calculation
+- name: CAMERA v 1.40
+  role: Upstream feature componentization and grouping (isotopes, adducts) that precedes blank subtraction and FC filtering
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:88acbc8d459564eff9d582c3ba464824c4b2f2730932e92b5b02da59d2eebd79
+  iri: https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:0719fd2ff34680fddd40d42f2355ae861bfccce66fbde9940c474651728ddb6b
 ---
 
 # fold-change-calculation-from-replicate-intensities

@@ -1,36 +1,36 @@
 ---
 name: metabolite-feature-prioritization
-description: "Prioritize pesticide metabolite features detected in LC–HRMS data by applying sequential statistical and chemical filters (abundance fold-change, mass defect, mass difference, blank subtraction) to eliminate artifacts and non-metabolic peaks, reducing feature complexity while retaining true Phase I transformation products."
-when_to_use_negative: |
-  - "Input is already a confirmed molecular structure or validated spectral library; this skill operates on unidentified features requiring prioritization."
-  - "Studying conjugation metabolites or Phase II transformations where mass differences >+50 u are expected and legitimate (e.g., glucuronide, sulfate adducts)."
-  - "Working with direct biomonitoring samples without parallel in vitro incubation controls; blank and replicate structure are fundamental to the approach."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3407"
-tools: |
-  - name: "XCMS"
-  role: "Feature detection, alignment, and retention time correction upstream of prioritization"
-  - name: "CAMERA"
-  role: "Componentization of isotope and adduct peaks prior to filtering"
-  - name: "incubatoR"
-  role: "Integrated R workflow implementing all prioritization filters (abundance, mass defect, mass difference, blank subtraction) in sequence"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "R"
-  role: "Statistical comparison and filtering step execution (v3.6.1 in this implementation)"
-  - name: "ProteoWizard"
-  role: "Upstream raw mass spectrum conversion to mzML and centroiding (v3.0.18265)"
-provenance: |
+description: Prioritize pesticide metabolite features detected in LC–HRMS data by applying sequential statistical and chemical filters (abundance fold-change, mass defect, mass difference, blank subtraction) to eliminate artifacts and non-metabolic peaks, reducing feature complexity while retaining true Phase I transformation products.
+when_to_use_negative:
+- Input is already a confirmed molecular structure or validated spectral library; this skill operates on unidentified features requiring prioritization.
+- Studying conjugation metabolites or Phase II transformations where mass differences >+50 u are expected and legitimate (e.g., glucuronide, sulfate adducts).
+- Working with direct biomonitoring samples without parallel in vitro incubation controls; blank and replicate structure are fundamental to the approach.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3407
+tools:
+- name: XCMS
+  role: Feature detection, alignment, and retention time correction upstream of prioritization
+- name: CAMERA
+  role: Componentization of isotope and adduct peaks prior to filtering
+- name: incubatoR
+  role: Integrated R workflow implementing all prioritization filters (abundance, mass defect, mass difference, blank subtraction) in sequence
+  repo: https://github.com/chufz/incubatoR
+- name: R
+  role: Statistical comparison and filtering step execution (v3.6.1 in this implementation)
+- name: ProteoWizard
+  role: Upstream raw mass spectrum conversion to mzML and centroiding (v3.0.18265)
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-prioritization@sha256:0a8f3cf145768c338cbc3db3f42860b82abc7b9057cdb46c95173bd0f87dffd8
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-prioritization@sha256:e17cec4be7e01684134f0c94faddba7b294fd6b29a8b5e678d593c440891c9a2
 ---
 
 # metabolite-feature-prioritization

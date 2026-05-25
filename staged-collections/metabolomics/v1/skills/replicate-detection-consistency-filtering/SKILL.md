@@ -1,34 +1,34 @@
 ---
 name: replicate-detection-consistency-filtering
-description: "Filter LC–HRMS metabolite features by requiring consistent detection across biological replicates (≥2 of 3) combined with fold-change thresholding (FC > 4) to remove noise and false positives introduced by blank subtraction and adduct/isotope removal steps. This skill reduces feature table size by ~60% while retaining biologically relevant metabolite signals."
-when_to_use_negative: |
-  - "Input already has <2 biological replicates per compound (replication filter has no effect and may remove valid features arbitrarily)."
-  - "Feature table has not undergone blank subtraction and isotope/adduct removal; fold-change and replication thresholds are calibrated post-cleanup and may be miscalibrated on uncleaned data."
-  - "Negative controls are missing or poorly matched in intensity distribution to the incubation groups (fold-change calculation will be unstable)."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0625"
-tools: |
-  - name: "R v 3.6.1"
-  role: "Host language for fold-change calculation, replication counting, and feature filtering logic"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "XCMS version 3.8"
-  role: "Upstream peakpicking and feature detection; output feature table is input to this filtering skill"
-  - name: "CAMERA"
-  role: "Upstream isotope and adduct annotation; output used to identify and remove isotopes/adducts before replication filtering"
-  - name: "incubatoR"
-  role: "Automated workflow implementing replicate-detection consistency filtering as step 3 (Rscripts/metabolites.R)"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Filter LC–HRMS metabolite features by requiring consistent detection across biological replicates (≥2 of 3) combined with fold-change thresholding (FC > 4) to remove noise and false positives introduced by blank subtraction and adduct/isotope removal steps. This skill reduces feature table size by ~60% while retaining biologically relevant metabolite signals.
+when_to_use_negative:
+- Input already has <2 biological replicates per compound (replication filter has no effect and may remove valid features arbitrarily).
+- Feature table has not undergone blank subtraction and isotope/adduct removal; fold-change and replication thresholds are calibrated post-cleanup and may be miscalibrated on uncleaned data.
+- Negative controls are missing or poorly matched in intensity distribution to the incubation groups (fold-change calculation will be unstable).
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0625
+tools:
+- name: R v 3.6.1
+  role: Host language for fold-change calculation, replication counting, and feature filtering logic
+  repo: https://github.com/chufz/incubatoR
+- name: XCMS version 3.8
+  role: Upstream peakpicking and feature detection; output feature table is input to this filtering skill
+- name: CAMERA
+  role: Upstream isotope and adduct annotation; output used to identify and remove isotopes/adducts before replication filtering
+- name: incubatoR
+  role: Automated workflow implementing replicate-detection consistency filtering as step 3 (Rscripts/metabolites.R)
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/replicate-detection-consistency-filtering@sha256:a3d63b1f65aeb54dea83598746340d76d95d24bc10c7c489df5de94e7acbd8c6
+  iri: https://w3id.org/holobiomicslab/asb-skill/replicate-detection-consistency-filtering@sha256:41dd189bf98f1af4823299601eccb8f011bca1a07116d9a968b05b45f1853105
 ---
 
 # replicate-detection-consistency-filtering

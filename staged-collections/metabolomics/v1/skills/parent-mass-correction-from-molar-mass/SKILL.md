@@ -1,31 +1,31 @@
 ---
 name: parent-mass-correction-from-molar-mass
-description: "This skill detects and corrects spectra where the parent mass field has been incorrectly populated with the molar mass instead of the monoisotopic mass—a common annotation error in mass spectral libraries. It uses chemical structure information (SMILES) to calculate the correct monoisotopic mass and repairs the metadata before downstream analysis."
-when_to_use_negative: |
-  - "Input spectra already have verified monoisotopic masses or have been validated against reference standards—applying this filter again risks unnecessary modification."
-  - "No SMILES, InChI, or other chemical structure annotation is available; the filter requires structural data to calculate the correct monoisotopic mass."
-  - "Working with experimental (unannotated) spectral data without compound identities; this repair is designed for library curation with known annotations."
-edam_operation: "http://edamontology.org/operation_3436"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "Core library cleaning framework; provides Spectrum objects and the repair_parent_mass_is_molar_mass filter implementation"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Parses SMILES strings and calculates theoretical monoisotopic mass for comparison and correction"
-  - name: "PubChem"
-  role: "Source for canonical SMILES derivation when compound name is available, used upstream to ensure correct structure annotations"
-provenance: |
+description: This skill detects and corrects spectra where the parent mass field has been incorrectly populated with the molar mass instead of the monoisotopic mass—a common annotation error in mass spectral libraries. It uses chemical structure information (SMILES) to calculate the correct monoisotopic mass and repairs the metadata before downstream analysis.
+when_to_use_negative:
+- Input spectra already have verified monoisotopic masses or have been validated against reference standards—applying this filter again risks unnecessary modification.
+- No SMILES, InChI, or other chemical structure annotation is available; the filter requires structural data to calculate the correct monoisotopic mass.
+- Working with experimental (unannotated) spectral data without compound identities; this repair is designed for library curation with known annotations.
+edam_operation: http://edamontology.org/operation_3436
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: Core library cleaning framework; provides Spectrum objects and the repair_parent_mass_is_molar_mass filter implementation
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Parses SMILES strings and calculates theoretical monoisotopic mass for comparison and correction
+- name: PubChem
+  role: Source for canonical SMILES derivation when compound name is available, used upstream to ensure correct structure annotations
+provenance:
   source_task_ids:
   - task_005
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/parent-mass-correction-from-molar-mass@sha256:2d5a4dec5b61ff7214422a1214e55621b4b22448dd7aae14064dfd68fc3b95f2
+  iri: https://w3id.org/holobiomicslab/asb-skill/parent-mass-correction-from-molar-mass@sha256:ea5f4d9bb97faf2a06cce90ec0ad20665757eaeb105408fc9169e5c397104093
 ---
 
 # parent-mass-correction-from-molar-mass

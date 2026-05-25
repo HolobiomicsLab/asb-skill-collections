@@ -1,35 +1,35 @@
 ---
 name: ms-spectra-library-parsing
-description: "Parse and load mass spectrometry spectral libraries in MGF format into a Python-based spectral object framework, extracting spectrum metadata, precursor m/z, fragment peaks, and chemical annotations for downstream cleaning and validation. This is the essential first step in any reproducible MS/MS library curation pipeline."
-when_to_use_negative: |
-  - "Input is already a SpectrumList or deserialized Python object — skip directly to cleaning pipeline."
-  - "Input is in a non-MGF format (e.g., mzML, NetCDF, JSON) without a format conversion step beforehand."
-  - "Library has already been filtered or curated and you are resuming from an intermediate checkpoint — load from the serialized checkpoint instead of re-parsing the original MGF."
-edam_operation: "http://edamontology.org/operation_3436"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0625"
-tools: |
-  - name: "matchms"
-  role: "Core library for parsing MGF spectral files and instantiating Spectrum objects with metadata"
-  repo: "https://github.com/matchms/matchms"
-  - name: "matchms 0.26.4"
-  role: "Specific version used in reproducible GNPS library cleaning pipeline"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Validates and normalizes SMILES, InChI, and InChIKey metadata fields during and after parsing"
-  repo: "https://github.com/rdkit/rdkit"
-  - name: "PubChem"
-  role: "External reference database used to derive missing chemical structure annotations from compound names"
-provenance: |
+description: Parse and load mass spectrometry spectral libraries in MGF format into a Python-based spectral object framework, extracting spectrum metadata, precursor m/z, fragment peaks, and chemical annotations for downstream cleaning and validation. This is the essential first step in any reproducible MS/MS library curation pipeline.
+when_to_use_negative:
+- Input is already a SpectrumList or deserialized Python object — skip directly to cleaning pipeline.
+- Input is in a non-MGF format (e.g., mzML, NetCDF, JSON) without a format conversion step beforehand.
+- Library has already been filtered or curated and you are resuming from an intermediate checkpoint — load from the serialized checkpoint instead of re-parsing the original MGF.
+edam_operation: http://edamontology.org/operation_3436
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0625
+tools:
+- name: matchms
+  role: Core library for parsing MGF spectral files and instantiating Spectrum objects with metadata
+  repo: https://github.com/matchms/matchms
+- name: matchms 0.26.4
+  role: Specific version used in reproducible GNPS library cleaning pipeline
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Validates and normalizes SMILES, InChI, and InChIKey metadata fields during and after parsing
+  repo: https://github.com/rdkit/rdkit
+- name: PubChem
+  role: External reference database used to derive missing chemical structure annotations from compound names
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms-spectra-library-parsing@sha256:6e1831369cc4d08060e361c099b35d581d0623181797d2674560033cb24d651b
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms-spectra-library-parsing@sha256:926d52ddd075fc4bbeb438faca19f0e0de2fe9ec5f5319923cc0fe791c1fd6ec
 ---
 
 # MS/MS Spectra Library Parsing

@@ -1,34 +1,34 @@
 ---
 name: chemical-structure-smiles-validation
-description: "Validates and repairs chemical structure annotations (SMILES, InChI, InChIKey) by deriving canonical forms from compound names or PubChem, comparing structural representations for consistency, and detecting mismatches between annotation and measured precursor mass or adduct state. This skill is essential for ensuring that MS/MS spectral libraries contain chemically plausible and internally consistent structural metadata."
-when_to_use_negative: |
-  - "Spectra already contain validated, canonicalized SMILES and verified parent masses—skip this step to avoid redundant computation."
-  - "Library does not include compound name or structure information—structural validation cannot proceed without a reference annotation."
-  - "The analysis goal is MS/MS fragment matching or library search—prioritize spectral comparison over annotation repair; only validate structures if annotation errors would bias search scores."
-edam_operation: "http://edamontology.org/operation_3674"
-edam_topics: |
-  - "http://edamontology.org/topic_0153"
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "matchms"
-  role: "Core framework for loading, filtering, and repairing spectral metadata and annotations; orchestrates the entire cleaning pipeline"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Canonicalizes and parses SMILES, InChI, and InChIKey; calculates monoisotopic mass from chemical structures; detects structural mismatches"
-  - name: "PubChem"
-  role: "Source of canonical SMILES, InChI, and InChIKey for compound names; enables automatic structure annotation derivation"
-  - name: "Python"
-  role: "Programming environment for orchestrating matchms filters and RDKit operations"
-provenance: |
+description: Validates and repairs chemical structure annotations (SMILES, InChI, InChIKey) by deriving canonical forms from compound names or PubChem, comparing structural representations for consistency, and detecting mismatches between annotation and measured precursor mass or adduct state. This skill is essential for ensuring that MS/MS spectral libraries contain chemically plausible and internally consistent structural metadata.
+when_to_use_negative:
+- Spectra already contain validated, canonicalized SMILES and verified parent masses—skip this step to avoid redundant computation.
+- Library does not include compound name or structure information—structural validation cannot proceed without a reference annotation.
+- The analysis goal is MS/MS fragment matching or library search—prioritize spectral comparison over annotation repair; only validate structures if annotation errors would bias search scores.
+edam_operation: http://edamontology.org/operation_3674
+edam_topics:
+- http://edamontology.org/topic_0153
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3520
+tools:
+- name: matchms
+  role: Core framework for loading, filtering, and repairing spectral metadata and annotations; orchestrates the entire cleaning pipeline
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Canonicalizes and parses SMILES, InChI, and InChIKey; calculates monoisotopic mass from chemical structures; detects structural mismatches
+- name: PubChem
+  role: Source of canonical SMILES, InChI, and InChIKey for compound names; enables automatic structure annotation derivation
+- name: Python
+  role: Programming environment for orchestrating matchms filters and RDKit operations
+provenance:
   source_task_ids:
   - task_005
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-smiles-validation@sha256:11362b89ad9a6ef992b34862b6116376e7a5e3d1692f5f8eaa66e72c4b46d617
+  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-smiles-validation@sha256:22cb729f524e9cfb721e04de44c81ee382169df91ceccfd3389ac2776c3ba563
 ---
 
 # Chemical Structure SMILES Validation

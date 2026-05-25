@@ -1,34 +1,34 @@
 ---
 name: structure-annotation-validation
-description: "Validate and repair structural annotations (SMILES, InChI, InChIKey) in mass spectral library entries by comparing derived and recorded chemical identifiers, checking adduct–precursor m/z consistency, and flagging or correcting mismatches. This skill ensures annotations are chemically plausible and internally consistent before downstream analysis."
-when_to_use_negative: |
-  - "Input library contains only unannotated spectra or lacks compound name, SMILES, InChI, or InChIKey fields; no structural annotation to validate."
-  - "Annotations have already undergone expert manual curation and are known to be correct; re-validation wastes computation and may introduce false positives."
-  - "Mass accuracy of the instrument is unknown or non-standard (e.g., <1 ppm or >10 ppm tolerance); adduct–m/z validation thresholds cannot be reliably set."
-edam_operation: "http://edamontology.org/operation_3802"
-edam_topics: |
-  - "http://edamontology.org/topic_0218"
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3391"
-tools: |
-  - name: "matchms"
-  role: "Framework for loading, filtering, and validating mass spectral library metadata; applies cascade of repair and validation filters on SMILES, InChI, InChIKey, adduct, and precursor m/z."
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Parses SMILES and InChI, derives canonical SMILES from compound names, calculates neutral mass from structure, infers adducts, detects salts."
-  repo: "https://www.rdkit.org"
-  - name: "PubChem"
-  role: "External database queried to derive canonical SMILES, InChI, and InChIKey from compound name; provides reference structures for annotation validation."
-  repo: "https://pubchem.ncbi.nlm.nih.gov"
-provenance: |
+description: Validate and repair structural annotations (SMILES, InChI, InChIKey) in mass spectral library entries by comparing derived and recorded chemical identifiers, checking adduct–precursor m/z consistency, and flagging or correcting mismatches. This skill ensures annotations are chemically plausible and internally consistent before downstream analysis.
+when_to_use_negative:
+- Input library contains only unannotated spectra or lacks compound name, SMILES, InChI, or InChIKey fields; no structural annotation to validate.
+- Annotations have already undergone expert manual curation and are known to be correct; re-validation wastes computation and may introduce false positives.
+- Mass accuracy of the instrument is unknown or non-standard (e.g., <1 ppm or >10 ppm tolerance); adduct–m/z validation thresholds cannot be reliably set.
+edam_operation: http://edamontology.org/operation_3802
+edam_topics:
+- http://edamontology.org/topic_0218
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3391
+tools:
+- name: matchms
+  role: Framework for loading, filtering, and validating mass spectral library metadata; applies cascade of repair and validation filters on SMILES, InChI, InChIKey, adduct, and precursor m/z.
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Parses SMILES and InChI, derives canonical SMILES from compound names, calculates neutral mass from structure, infers adducts, detects salts.
+  repo: https://www.rdkit.org
+- name: PubChem
+  role: External database queried to derive canonical SMILES, InChI, and InChIKey from compound name; provides reference structures for annotation validation.
+  repo: https://pubchem.ncbi.nlm.nih.gov
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/structure-annotation-validation@sha256:71c67e5e28431f469cb7fb43e753350de57c7689d4cbcc6e1436aa84f63dae4d
+  iri: https://w3id.org/holobiomicslab/asb-skill/structure-annotation-validation@sha256:2c3b7a5ef011ff5b42bc1f8f19ec435138f546ca5c67a427111e0cc56c8e4007
 ---
 
 # structure-annotation-validation

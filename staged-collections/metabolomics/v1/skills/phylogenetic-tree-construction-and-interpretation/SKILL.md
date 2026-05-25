@@ -1,39 +1,39 @@
 ---
 name: phylogenetic-tree-construction-and-interpretation
-description: "Construct maximum-likelihood phylogenetic trees from aligned protein sequences to resolve evolutionary relationships and identify functional divergence among homologous enzymes. This skill disambiguates the placement of newly characterized sequences within established protein families and informs functional predictions through phylogenetic clustering."
-when_to_use_negative: |
-  - "Input sequences have not been filtered for spurious domains or low-complexity regions; alignment quality is not assured, risking misleading topology."
-  - "The set of reference sequences does not include experimentally characterized family members; phylogenetic position alone cannot then inform functional prediction."
-  - "Sequence divergence is very high or the alignment has excessive gaps (>50% missing data per column); homology assumptions break down and tree topology becomes unreliable."
-edam_operation: "http://edamontology.org/operation_0323"
-edam_topics: |
-  - "http://edamontology.org/topic_3293"
-  - "http://edamontology.org/topic_0080"
-  - "http://edamontology.org/topic_0623"
-tools: |
-  - name: "MAFFT"
-  role: "Multiple sequence alignment of candidate UGT sequences to establish positional homology; used with default parameters prior to tree inference"
-  - name: "TrimAl"
-  role: "Automated gap-removal and low-information column trimming to reduce phylogenetic noise in the alignment before tree-building"
-  - name: "FastTree"
-  role: "Fast maximum-likelihood tree construction from aligned sequences; suitable for moderate-scale phylogenies (>100 sequences)"
-  - name: "RAxML"
-  role: "Rigorous maximum-likelihood tree construction with support estimation; more computationally intensive but higher accuracy than FastTree"
-  - name: "Pfam database"
-  role: "Prior filtering step to identify sequences containing target domain (e.g., PF00201) before phylogenetic analysis"
-  repo: "http://pfam.xfam.org"
-  - name: "UGT Nomenclature Committee"
-  role: "Reference repository of experimentally characterized UGTs used as anchors for functional annotation of phylogenetic clusters"
-  repo: "https://labs.wsu.edu/ugt/"
-provenance: |
+description: Construct maximum-likelihood phylogenetic trees from aligned protein sequences to resolve evolutionary relationships and identify functional divergence among homologous enzymes. This skill disambiguates the placement of newly characterized sequences within established protein families and informs functional predictions through phylogenetic clustering.
+when_to_use_negative:
+- Input sequences have not been filtered for spurious domains or low-complexity regions; alignment quality is not assured, risking misleading topology.
+- The set of reference sequences does not include experimentally characterized family members; phylogenetic position alone cannot then inform functional prediction.
+- Sequence divergence is very high or the alignment has excessive gaps (>50% missing data per column); homology assumptions break down and tree topology becomes unreliable.
+edam_operation: http://edamontology.org/operation_0323
+edam_topics:
+- http://edamontology.org/topic_3293
+- http://edamontology.org/topic_0080
+- http://edamontology.org/topic_0623
+tools:
+- name: MAFFT
+  role: Multiple sequence alignment of candidate UGT sequences to establish positional homology; used with default parameters prior to tree inference
+- name: TrimAl
+  role: Automated gap-removal and low-information column trimming to reduce phylogenetic noise in the alignment before tree-building
+- name: FastTree
+  role: Fast maximum-likelihood tree construction from aligned sequences; suitable for moderate-scale phylogenies (>100 sequences)
+- name: RAxML
+  role: Rigorous maximum-likelihood tree construction with support estimation; more computationally intensive but higher accuracy than FastTree
+- name: Pfam database
+  role: Prior filtering step to identify sequences containing target domain (e.g., PF00201) before phylogenetic analysis
+  repo: http://pfam.xfam.org
+- name: UGT Nomenclature Committee
+  role: Reference repository of experimentally characterized UGTs used as anchors for functional annotation of phylogenetic clusters
+  repo: https://labs.wsu.edu/ugt/
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/phylogenetic-tree-construction-and-interpretation@sha256:e91b46af72ed0509fafd88f01f00f46aa9d5dea1b91dbadd9be83b48982b5284
+  iri: https://w3id.org/holobiomicslab/asb-skill/phylogenetic-tree-construction-and-interpretation@sha256:2466bb295032a32f8a5f62544db662fe2eb4b7cec46ebb44f4ad46b336d412e9
 ---
 
 # phylogenetic-tree-construction-and-interpretation

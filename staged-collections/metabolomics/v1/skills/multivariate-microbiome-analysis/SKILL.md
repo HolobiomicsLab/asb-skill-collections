@@ -1,34 +1,34 @@
 ---
 name: multivariate-microbiome-analysis
-description: "Multivariate analysis of microbiome and metabolomic data using ordination (PCoA), permutation testing (PERMANOVA), and machine learning to identify population-level differences in microbial and metabolite composition. This skill tests whether categorical factors (e.g., industrialization group, geographic origin) explain significant variance in community structure."
-when_to_use_negative: |
-  - "Feature table is already filtered to a small set of pre-identified discriminant features; use univariate testing instead."
-  - "Samples lack clear categorical grouping metadata or the grouping variable has too few replicates per group (typically <3 samples per group will yield unreliable permutation tests)."
-  - "Data are compositional with extreme sparsity (>99% zeros); consider rarefaction, centered log-ratio transformation, or compositional distance metrics before ordination."
-edam_operation: "http://edamontology.org/operation_3697"
-edam_topics: |
-  - "http://edamontology.org/topic_3174"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "QIIME2"
-  role: "Construct Canberra distance matrix from metabolite feature table and perform PERMANOVA on distance matrix with grouping variable"
-  - name: "EMPeror"
-  role: "Visualize PCoA ordination plot from distance matrix, colored and faceted by categorical metadata"
-  - name: "PERMANOVA"
-  role: "Test null hypothesis that industrialization group (or other categorical factor) explains no variance in metabolite or ASV composition; report R² and P-value"
-  - name: "random forest"
-  role: "Identify differential features by ranking variable importance on top 1,000 most abundant features; apply importance cutoff (>1.3) to subset discriminant features"
-  - name: "mmvec (microbe-metabolite vectors)"
-  role: "Learn neural network embeddings of co-occurrence between microbial ASVs and metabolite features; subset results to shared annotated metabolites and major predictive taxa"
-provenance: |
+description: Multivariate analysis of microbiome and metabolomic data using ordination (PCoA), permutation testing (PERMANOVA), and machine learning to identify population-level differences in microbial and metabolite composition. This skill tests whether categorical factors (e.g., industrialization group, geographic origin) explain significant variance in community structure.
+when_to_use_negative:
+- Feature table is already filtered to a small set of pre-identified discriminant features; use univariate testing instead.
+- Samples lack clear categorical grouping metadata or the grouping variable has too few replicates per group (typically <3 samples per group will yield unreliable permutation tests).
+- Data are compositional with extreme sparsity (>99% zeros); consider rarefaction, centered log-ratio transformation, or compositional distance metrics before ordination.
+edam_operation: http://edamontology.org/operation_3697
+edam_topics:
+- http://edamontology.org/topic_3174
+- http://edamontology.org/topic_3172
+tools:
+- name: QIIME2
+  role: Construct Canberra distance matrix from metabolite feature table and perform PERMANOVA on distance matrix with grouping variable
+- name: EMPeror
+  role: Visualize PCoA ordination plot from distance matrix, colored and faceted by categorical metadata
+- name: PERMANOVA
+  role: Test null hypothesis that industrialization group (or other categorical factor) explains no variance in metabolite or ASV composition; report R² and P-value
+- name: random forest
+  role: Identify differential features by ranking variable importance on top 1,000 most abundant features; apply importance cutoff (>1.3) to subset discriminant features
+- name: mmvec (microbe-metabolite vectors)
+  role: Learn neural network embeddings of co-occurrence between microbial ASVs and metabolite features; subset results to shared annotated metabolites and major predictive taxa
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/multivariate-microbiome-analysis@sha256:59a4063d1f1a626620fe77fe3432f9ce19ff45374df01118371cccfff8577e5c
+  iri: https://w3id.org/holobiomicslab/asb-skill/multivariate-microbiome-analysis@sha256:30ae84023bf635cdbe8fb9a6f059d76e846cec97e6325fb2edb1ba67ce729d39
 ---
 
 # multivariate-microbiome-analysis

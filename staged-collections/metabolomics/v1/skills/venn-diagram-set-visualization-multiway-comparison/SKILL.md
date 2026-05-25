@@ -1,32 +1,32 @@
 ---
 name: venn-diagram-set-visualization-multiway-comparison
-description: "Venn diagram visualization for three-way set comparison showing overlap and exclusive membership among in vitro S9-incubated metabolites, BioTransformer in silico predictions, and literature-reported metabolites. This skill evaluates metabolite discovery completeness and prediction algorithm performance."
-when_to_use_negative: |
-  - "Input metabolites are not yet standardized to a common identifier (molecular formula, InChI, SMILES) — first normalize the representation across sources."
-  - "You have fewer than two reference knowledge sources (e.g., only in vitro and literature, no predictions, or only predictions) — use pairwise or single-source visualizations instead."
-  - "The three sets originate from different chemical spaces or parent compounds — ensure all three are derived from the same set of parent compounds (22 pesticides in this study)."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3370"
-  - "http://edamontology.org/topic_0154"
-  - "http://edamontology.org/topic_2269"
-tools: |
-  - name: "BioTransformer"
-  role: "In silico prediction of phase I metabolite structures and molecular formulas using rule-based and machine-learning approaches with CYP450 transformation type selection"
-  - name: "R v 3.6.1"
-  role: "Data analysis and set comparison operations for Venn diagram generation and overlap calculation"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "GenForm"
-  role: "Molecular formula calculation from MS1 and MS2 spectra to standardize experimental metabolite representation for set matching"
-provenance: |
+description: Venn diagram visualization for three-way set comparison showing overlap and exclusive membership among in vitro S9-incubated metabolites, BioTransformer in silico predictions, and literature-reported metabolites. This skill evaluates metabolite discovery completeness and prediction algorithm performance.
+when_to_use_negative:
+- Input metabolites are not yet standardized to a common identifier (molecular formula, InChI, SMILES) — first normalize the representation across sources.
+- You have fewer than two reference knowledge sources (e.g., only in vitro and literature, no predictions, or only predictions) — use pairwise or single-source visualizations instead.
+- The three sets originate from different chemical spaces or parent compounds — ensure all three are derived from the same set of parent compounds (22 pesticides in this study).
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3370
+- http://edamontology.org/topic_0154
+- http://edamontology.org/topic_2269
+tools:
+- name: BioTransformer
+  role: In silico prediction of phase I metabolite structures and molecular formulas using rule-based and machine-learning approaches with CYP450 transformation type selection
+- name: R v 3.6.1
+  role: Data analysis and set comparison operations for Venn diagram generation and overlap calculation
+  repo: https://github.com/chufz/incubatoR
+- name: GenForm
+  role: Molecular formula calculation from MS1 and MS2 spectra to standardize experimental metabolite representation for set matching
+provenance:
   source_task_ids:
   - task_005
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/venn-diagram-set-visualization-multiway-comparison@sha256:7a5ef7444939920cb317c081557a4547438f9dc9f2b9a607f40a5947456c46fd
+  iri: https://w3id.org/holobiomicslab/asb-skill/venn-diagram-set-visualization-multiway-comparison@sha256:b0fc97b9c9e0f3d3c50551e5dcc129f647ccb0178bc0982e8e331cd1e681b774
 ---
 
 # venn-diagram-set-visualization-multiway-comparison

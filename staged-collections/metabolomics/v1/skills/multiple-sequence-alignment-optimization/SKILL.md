@@ -1,32 +1,32 @@
 ---
 name: multiple-sequence-alignment-optimization
-description: "Optimize a multiple sequence alignment by trimming low-information columns and removing gap-rich regions to improve phylogenetic signal before tree construction. This skill is essential when building phylogenetic trees from domain-filtered protein sequences to ensure that only informative sites contribute to evolutionary inference."
-when_to_use_negative: |
-  - "Input alignment is already curated, published, or hand-trimmed for a specific analysis—re-trimming may discard biologically informative positions."
-  - "Sequences are too divergent or too short (< 50 amino acids) to tolerate aggressive gap removal without losing critical information."
-  - "Analysis goal is to preserve gap patterns themselves (e.g., indel-based phylogenetics or structural alignment annotation)."
-edam_operation: "http://edamontology.org/operation_0564"
-edam_topics: |
-  - "http://edamontology.org/topic_3293"
-  - "http://edamontology.org/topic_0084"
-tools: |
-  - name: "MAFFT"
-  role: "Initial multiple sequence alignment of candidate domain-containing protein sequences using default parameters to generate unambiguous MSA"
-  - name: "TrimAl"
-  role: "Automated gap-removal and column trimming to eliminate low-information sites and gap-rich regions that introduce phylogenetic noise"
-  - name: "FastTree"
-  role: "Maximum-likelihood phylogenetic tree construction from the trimmed alignment to infer sequence placement and relationships"
-  - name: "RAxML"
-  role: "Alternative maximum-likelihood tree-building engine from trimmed alignment when more rigorous branch support is required"
-provenance: |
+description: Optimize a multiple sequence alignment by trimming low-information columns and removing gap-rich regions to improve phylogenetic signal before tree construction. This skill is essential when building phylogenetic trees from domain-filtered protein sequences to ensure that only informative sites contribute to evolutionary inference.
+when_to_use_negative:
+- Input alignment is already curated, published, or hand-trimmed for a specific analysis—re-trimming may discard biologically informative positions.
+- Sequences are too divergent or too short (< 50 amino acids) to tolerate aggressive gap removal without losing critical information.
+- Analysis goal is to preserve gap patterns themselves (e.g., indel-based phylogenetics or structural alignment annotation).
+edam_operation: http://edamontology.org/operation_0564
+edam_topics:
+- http://edamontology.org/topic_3293
+- http://edamontology.org/topic_0084
+tools:
+- name: MAFFT
+  role: Initial multiple sequence alignment of candidate domain-containing protein sequences using default parameters to generate unambiguous MSA
+- name: TrimAl
+  role: Automated gap-removal and column trimming to eliminate low-information sites and gap-rich regions that introduce phylogenetic noise
+- name: FastTree
+  role: Maximum-likelihood phylogenetic tree construction from the trimmed alignment to infer sequence placement and relationships
+- name: RAxML
+  role: Alternative maximum-likelihood tree-building engine from trimmed alignment when more rigorous branch support is required
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/multiple-sequence-alignment-optimization@sha256:8bfee93d2f7024225f24889a53d37f2d188235c04d823aee704560ad7a2578af
+  iri: https://w3id.org/holobiomicslab/asb-skill/multiple-sequence-alignment-optimization@sha256:fbba11419e22a121b51dfe90df01dfbdd17abc2db0b9190719fa3b2771c0f74b
 ---
 
 # multiple-sequence-alignment-optimization

@@ -1,30 +1,30 @@
 ---
 name: transcript-abundance-estimation-counting
-description: "Quantify mRNA abundance from RNA-seq read alignments by counting reads per annotated gene and normalizing for library composition bias. This skill bridges alignment and differential expression analysis, producing normalized expression matrices suitable for statistical testing."
-when_to_use_negative: |
-  - "Input reads are unaligned or from unstranded libraries where strand information is unavailable — HTSeq mode=union with stranded=reverse will produce biased counts"
-  - "Gene annotations are incomplete or highly fragmented — HTSeq union mode will misassign reads to wrong features, inflating noise"
-  - "Sample sizes are very small (n < 2 per group) — TMM normalization requires sufficient library diversity to estimate composition bias reliably"
-edam_operation: "http://edamontology.org/operation_3680"
-edam_topics: |
-  - "http://edamontology.org/topic_3170"
-  - "http://edamontology.org/topic_0203"
-tools: |
-  - name: "HTSeq"
-  role: "Count reads overlapping annotated genes from BAM files in union mode with reverse strand orientation"
-  - name: "edgeR"
-  role: "Apply TMM normalization via calcNormFactors() and calculate RPKM values via rpkm() function"
-  - name: "R"
-  role: "Load count matrix and execute edgeR normalization and RPKM calculation"
-provenance: |
+description: Quantify mRNA abundance from RNA-seq read alignments by counting reads per annotated gene and normalizing for library composition bias. This skill bridges alignment and differential expression analysis, producing normalized expression matrices suitable for statistical testing.
+when_to_use_negative:
+- Input reads are unaligned or from unstranded libraries where strand information is unavailable — HTSeq mode=union with stranded=reverse will produce biased counts
+- Gene annotations are incomplete or highly fragmented — HTSeq union mode will misassign reads to wrong features, inflating noise
+- Sample sizes are very small (n < 2 per group) — TMM normalization requires sufficient library diversity to estimate composition bias reliably
+edam_operation: http://edamontology.org/operation_3680
+edam_topics:
+- http://edamontology.org/topic_3170
+- http://edamontology.org/topic_0203
+tools:
+- name: HTSeq
+  role: Count reads overlapping annotated genes from BAM files in union mode with reverse strand orientation
+- name: edgeR
+  role: Apply TMM normalization via calcNormFactors() and calculate RPKM values via rpkm() function
+- name: R
+  role: Load count matrix and execute edgeR normalization and RPKM calculation
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:79233587f16f076874d8dcd2d19d21050b6e8e8f04f9095c228b00ebab27a706
+  iri: https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:1da0e6c3e23226a8156a6a4b129c3ea2cb8c865fa46b6b19af744e8070eab33f
 ---
 
 # transcript-abundance-estimation-counting

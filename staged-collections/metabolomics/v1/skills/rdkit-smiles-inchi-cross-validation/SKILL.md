@@ -1,32 +1,32 @@
 ---
 name: rdkit-smiles-inchi-cross-validation
-description: "This skill validates the internal consistency of chemical structure annotations (SMILES, InChI, and InChIKey) in mass spectral library records using RDKit, identifying and removing spectra with missing or mutually inconsistent annotation fields. It is essential for ensuring that curated MS/MS libraries contain chemically coherent metadata that can reliably support downstream compound identification and structure analysis."
-when_to_use_negative: |
-  - "Input library contains only a single chemical structure representation (e.g., SMILES alone) — this skill requires at least two independent representations to cross-validate."
-  - "Spectra are already known to have been validated by a prior RDKit consistency check or by manual curation with identical stringency."
-  - "The analysis goal is to repair broken annotations rather than identify and remove them — use repair functions ('Repair SMILES of salts', 'Repair adduct and parent mass based on SMILES') first, then apply this validation as a final gate."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_0602"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "Framework that wraps RDKit validation into the 'require_valid_annotation' filter and applies it to mass spectral libraries; provides the Spectrum object model and I/O for MS/MS data."
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Molecular toolkit that loads and parses SMILES, InChI, and InChIKey; generates canonical molecular graphs to check structural consistency across representations."
-  repo: "https://github.com/rdkit/rdkit"
-  - name: "PubChem"
-  role: "Reference source for canonical SMILES, InChI, and InChIKey used to derive and validate annotations."
-provenance: |
+description: This skill validates the internal consistency of chemical structure annotations (SMILES, InChI, and InChIKey) in mass spectral library records using RDKit, identifying and removing spectra with missing or mutually inconsistent annotation fields. It is essential for ensuring that curated MS/MS libraries contain chemically coherent metadata that can reliably support downstream compound identification and structure analysis.
+when_to_use_negative:
+- Input library contains only a single chemical structure representation (e.g., SMILES alone) — this skill requires at least two independent representations to cross-validate.
+- Spectra are already known to have been validated by a prior RDKit consistency check or by manual curation with identical stringency.
+- The analysis goal is to repair broken annotations rather than identify and remove them — use repair functions ('Repair SMILES of salts', 'Repair adduct and parent mass based on SMILES') first, then apply this validation as a final gate.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: Framework that wraps RDKit validation into the 'require_valid_annotation' filter and applies it to mass spectral libraries; provides the Spectrum object model and I/O for MS/MS data.
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Molecular toolkit that loads and parses SMILES, InChI, and InChIKey; generates canonical molecular graphs to check structural consistency across representations.
+  repo: https://github.com/rdkit/rdkit
+- name: PubChem
+  role: Reference source for canonical SMILES, InChI, and InChIKey used to derive and validate annotations.
+provenance:
   source_task_ids:
   - task_006
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/rdkit-smiles-inchi-cross-validation@sha256:60313061f0a8065cc7da78a2a4abc22dbdb00aea52084f8ddbb2299b321922e8
+  iri: https://w3id.org/holobiomicslab/asb-skill/rdkit-smiles-inchi-cross-validation@sha256:c2d769979e20968bde7976ee1f6d326818dc56f079af31baf4447776cc712128
 ---
 
 # RDKit SMILES/InChI/InChIKey Cross-Validation

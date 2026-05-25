@@ -1,35 +1,35 @@
 ---
 name: spectral-redundancy-clustering
-description: "Collapse redundant MS/MS spectra from large-scale repository queries into consensus spectra using MS-Cluster or Falcon-MS, reducing dataset size by 70–80% while preserving representative fragmentation patterns for downstream molecular networking and library annotation."
-when_to_use_negative: |
-  - "Input spectrum set is already small (< 100 unique spectra) or has been manually curated; clustering overhead is unnecessary."
-  - "Spectral redundancy is intentional (e.g., studying instrument or ionization variability); collapsing removes that signal."
-  - "You require preservation of individual scan metadata (retention time, instrument configuration, sample provenance) for post-hoc filtering; consensus spectra lose this granularity."
-edam_operation: "http://edamontology.org/operation_3933"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0654"
-tools: |
-  - name: "MS-Cluster"
-  role: "Primary clustering engine: merges redundant MS/MS spectra and outputs consensus peaks"
-  - name: "Falcon-MS"
-  role: "Alternative clustering tool for consensus spectrum generation from large result sets"
-  - name: "GNPS"
-  role: "Hosts public MS/MS repository (MassIVE) from which spectra are retrieved; also performs molecular networking and spectral library matching on consensus spectra"
-  repo: "https://gnps.ucsd.edu"
-  - name: "MassQL"
-  role: "Upstream query engine used to retrieve the raw spectrum set before clustering"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-provenance: |
+description: Collapse redundant MS/MS spectra from large-scale repository queries into consensus spectra using MS-Cluster or Falcon-MS, reducing dataset size by 70–80% while preserving representative fragmentation patterns for downstream molecular networking and library annotation.
+when_to_use_negative:
+- Input spectrum set is already small (< 100 unique spectra) or has been manually curated; clustering overhead is unnecessary.
+- Spectral redundancy is intentional (e.g., studying instrument or ionization variability); collapsing removes that signal.
+- You require preservation of individual scan metadata (retention time, instrument configuration, sample provenance) for post-hoc filtering; consensus spectra lose this granularity.
+edam_operation: http://edamontology.org/operation_3933
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0654
+tools:
+- name: MS-Cluster
+  role: 'Primary clustering engine: merges redundant MS/MS spectra and outputs consensus peaks'
+- name: Falcon-MS
+  role: Alternative clustering tool for consensus spectrum generation from large result sets
+- name: GNPS
+  role: Hosts public MS/MS repository (MassIVE) from which spectra are retrieved; also performs molecular networking and spectral library matching on consensus spectra
+  repo: https://gnps.ucsd.edu
+- name: MassQL
+  role: Upstream query engine used to retrieve the raw spectrum set before clustering
+  repo: https://github.com/mwang87/MassQueryLanguage
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:f14eb1c0b0badb70c2bf1a7d266e259f268e7953624c8ccac5105856865e9e0e
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:dd5edb3711611af5fb4ebd9e912898a2333609e1925543f486b9f12603296fca
 ---
 
 # spectral-redundancy-clustering

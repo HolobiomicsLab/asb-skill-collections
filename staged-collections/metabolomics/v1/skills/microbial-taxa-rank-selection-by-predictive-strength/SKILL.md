@@ -1,31 +1,31 @@
 ---
 name: microbial-taxa-rank-selection-by-predictive-strength
-description: "Select the most predictive microbial taxa from mmvec conditional-probability output by ranking taxa according to their conditional probability values across all metabolites. This skill identifies the subset of microbes with the strongest quantitative associations to a curated set of metabolites, reducing noise and focusing downstream interaction analysis on taxa with robust predictive power."
-when_to_use_negative: |
-  - "mmvec conditional probability output has not yet been computed—first run the mmvec neural network on your microbe and metabolite abundance tables."
-  - "You have not yet curated or filtered metabolites to a set of interest (e.g., shared annotated metabolites)—this skill is applied *after* metabolite curation, not before."
-  - "The analysis goal is to detect rare or low-abundance taxa; this skill specifically selects high-strength predictors and will discard rare taxa regardless of biological relevance."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3174"
-  - "http://edamontology.org/topic_0625"
-tools: |
-  - name: "mmvec"
-  role: "Generates conditional probability matrices encoding the likelihood of observing each metabolite given each microbial taxon; output is filtered and ranked by this skill."
-  - name: "QIIME2 microbe-metabolite vectors plugin"
-  role: "Plugin interface for running mmvec within the QIIME2 framework; exports conditional probability artifact that serves as input."
-  - name: "R"
-  role: "Used for ranking taxa by conditional probability strength and exporting filtered results to CSV."
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Select the most predictive microbial taxa from mmvec conditional-probability output by ranking taxa according to their conditional probability values across all metabolites. This skill identifies the subset of microbes with the strongest quantitative associations to a curated set of metabolites, reducing noise and focusing downstream interaction analysis on taxa with robust predictive power.
+when_to_use_negative:
+- mmvec conditional probability output has not yet been computed—first run the mmvec neural network on your microbe and metabolite abundance tables.
+- You have not yet curated or filtered metabolites to a set of interest (e.g., shared annotated metabolites)—this skill is applied *after* metabolite curation, not before.
+- The analysis goal is to detect rare or low-abundance taxa; this skill specifically selects high-strength predictors and will discard rare taxa regardless of biological relevance.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3174
+- http://edamontology.org/topic_0625
+tools:
+- name: mmvec
+  role: Generates conditional probability matrices encoding the likelihood of observing each metabolite given each microbial taxon; output is filtered and ranked by this skill.
+- name: QIIME2 microbe-metabolite vectors plugin
+  role: Plugin interface for running mmvec within the QIIME2 framework; exports conditional probability artifact that serves as input.
+- name: R
+  role: Used for ranking taxa by conditional probability strength and exporting filtered results to CSV.
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/microbial-taxa-rank-selection-by-predictive-strength@sha256:dd8733d103a0555a5e4e3958e966206d03c88506944cc1893835944679cffcb4
+  iri: https://w3id.org/holobiomicslab/asb-skill/microbial-taxa-rank-selection-by-predictive-strength@sha256:3d78b11bb1e17f26a2811489dcf36ee96d67c7e57174c248ca3898ecddfa2b75
 ---
 
 # microbial-taxa-rank-selection-by-predictive-strength

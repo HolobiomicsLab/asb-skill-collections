@@ -1,42 +1,42 @@
 ---
 name: mass-spectrometry-query-language-syntax
-description: "MassQL is a domain-specific query language for flexible, vendor-agnostic pattern matching across mass spectrometry datasets. It enables researchers to express complex MS/MS filtering criteria (precursor m/z, product ions, retention time, polarity, ion mobility) as human-readable query strings that are parsed into executable filters and applied across millions of spectra."
-when_to_use_negative: |
-  - "Do not use MassQL if you lack a well-defined fragmentation signature or product ion target. MassQL excels at hypothesis-driven filtering, not unbiased feature discovery."
-  - "Do not use MassQL if your analysis requires leveraging consecutive MS spectra (e.g., isotope envelope fitting across multiple scans); the language has limited capability to process multi-scan chromatographic features."
-  - "Do not use MassQL if your data is already annotated and you simply need to organize or cluster known compounds; it is designed for discovery and pattern matching, not for post-hoc metadata curation."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3370"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "lark"
-  role: "Parses MassQL query strings into internal parse trees and data structures for execution"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Reads open-format MS data files (mzML, mzXML, MGF) and loads spectra into memory"
-  - name: "pandas"
-  role: "Performs efficient data frame filtering and manipulation to apply query predicates"
-  - name: "Apache feather"
-  role: "Caches parsed spectra for repeated querying and improved performance"
-  - name: "MZmine"
-  role: "Open-source MS analysis software with native MassQL support for interactive querying"
-  repo: "https://github.com/mzmine/mzmine"
-  - name: "MS-DIAL"
-  role: "Open-source MS/MS data processing tool with integrated MassQL query capability"
-  - name: "MS-Cluster"
-  role: "Collapses redundant MS/MS spectra from MassQL results into consensus spectra"
-  - name: "GNPS"
-  role: "Public MS repository and molecular networking infrastructure supporting MassQL queries across millions of spectra"
-provenance: |
+description: MassQL is a domain-specific query language for flexible, vendor-agnostic pattern matching across mass spectrometry datasets. It enables researchers to express complex MS/MS filtering criteria (precursor m/z, product ions, retention time, polarity, ion mobility) as human-readable query strings that are parsed into executable filters and applied across millions of spectra.
+when_to_use_negative:
+- Do not use MassQL if you lack a well-defined fragmentation signature or product ion target. MassQL excels at hypothesis-driven filtering, not unbiased feature discovery.
+- Do not use MassQL if your analysis requires leveraging consecutive MS spectra (e.g., isotope envelope fitting across multiple scans); the language has limited capability to process multi-scan chromatographic features.
+- Do not use MassQL if your data is already annotated and you simply need to organize or cluster known compounds; it is designed for discovery and pattern matching, not for post-hoc metadata curation.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3370
+- http://edamontology.org/topic_0121
+tools:
+- name: lark
+  role: Parses MassQL query strings into internal parse trees and data structures for execution
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Reads open-format MS data files (mzML, mzXML, MGF) and loads spectra into memory
+- name: pandas
+  role: Performs efficient data frame filtering and manipulation to apply query predicates
+- name: Apache feather
+  role: Caches parsed spectra for repeated querying and improved performance
+- name: MZmine
+  role: Open-source MS analysis software with native MassQL support for interactive querying
+  repo: https://github.com/mzmine/mzmine
+- name: MS-DIAL
+  role: Open-source MS/MS data processing tool with integrated MassQL query capability
+- name: MS-Cluster
+  role: Collapses redundant MS/MS spectra from MassQL results into consensus spectra
+- name: GNPS
+  role: Public MS repository and molecular networking infrastructure supporting MassQL queries across millions of spectra
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-query-language-syntax@sha256:a7d9dd9ab2727870e049bc6739f4d3841d822736499e76b49960405cd136be90
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-query-language-syntax@sha256:a61743622fd4177637e9f65eee12e473b73febae80f222f1337026f8b3e355bc
 ---
 
 # mass-spectrometry-query-language-syntax

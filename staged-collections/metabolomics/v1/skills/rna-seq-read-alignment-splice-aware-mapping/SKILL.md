@@ -1,32 +1,32 @@
 ---
 name: rna-seq-read-alignment-splice-aware-mapping
-description: "Align paired-end RNA-seq reads to a reference genome using a splice-aware aligner (HISAT2) to generate sorted BAM files that preserve exon–intron boundaries. This is essential for accurately quantifying gene expression in organisms where spliced transcripts dominate."
-when_to_use_negative: |
-  - "Input reads are single-end or already aligned (BAM/SAM files exist)."
-  - "The organism has no introns or a very simple, unspliced transcriptome (e.g., many prokaryotes)."
-  - "You only need to quantify pre-existing features and do not need to discover novel isoforms or splice variants."
-edam_operation: "http://edamontology.org/operation_3198"
-edam_topics: |
-  - "http://edamontology.org/topic_3170"
-  - "http://edamontology.org/topic_0203"
-tools: |
-  - name: "HISAT2"
-  role: "Splice-aware short-read aligner; maps paired-end RNA-seq reads to reference genome with automatic exon–intron junction detection"
-  - name: "SRA Toolkit (fastq-dump or fasterq-dump)"
-  role: "Download raw paired-end RNA-seq reads from NCBI Sequence Read Archive (e.g., BioProject PRJNA906931)"
-  - name: "HTSeq"
-  role: "Counts reads mapping to annotated genes from BAM files; downstream step to generate raw count matrices for normalization"
-  - name: "Samtools"
-  role: "Sorting and indexing BAM files for efficient random access and quality control"
-provenance: |
+description: Align paired-end RNA-seq reads to a reference genome using a splice-aware aligner (HISAT2) to generate sorted BAM files that preserve exon–intron boundaries. This is essential for accurately quantifying gene expression in organisms where spliced transcripts dominate.
+when_to_use_negative:
+- Input reads are single-end or already aligned (BAM/SAM files exist).
+- The organism has no introns or a very simple, unspliced transcriptome (e.g., many prokaryotes).
+- You only need to quantify pre-existing features and do not need to discover novel isoforms or splice variants.
+edam_operation: http://edamontology.org/operation_3198
+edam_topics:
+- http://edamontology.org/topic_3170
+- http://edamontology.org/topic_0203
+tools:
+- name: HISAT2
+  role: Splice-aware short-read aligner; maps paired-end RNA-seq reads to reference genome with automatic exon–intron junction detection
+- name: SRA Toolkit (fastq-dump or fasterq-dump)
+  role: Download raw paired-end RNA-seq reads from NCBI Sequence Read Archive (e.g., BioProject PRJNA906931)
+- name: HTSeq
+  role: Counts reads mapping to annotated genes from BAM files; downstream step to generate raw count matrices for normalization
+- name: Samtools
+  role: Sorting and indexing BAM files for efficient random access and quality control
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:dad7cb06bba9e3114ea8416c010e856ff07a5c90189efb80bfdedcf545614a40
+  iri: https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:1cdebe42806a1a30d095a8393fc1201528aabe9061269653c91612437f390de5
 ---
 
 # RNA-seq read alignment with splice-aware mapping

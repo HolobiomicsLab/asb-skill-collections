@@ -1,31 +1,31 @@
 ---
 name: smiles-inchi-chemical-identifier-repair
-description: "Repair and validate chemical structure identifiers (SMILES, InChI, InChIKey) by comparing them against each other and canonical references, and correcting salt-form SMILES that would otherwise cause downstream failures. This skill is essential in MS/MS library cleaning to ensure annotations are chemically consistent before requiring them as mandatory metadata."
-when_to_use_negative: |
-  - "Input records lack any SMILES, InChI, or InChIKey field — use 'Derive annotation from compound name' (via PubChem) first to obtain initial structure identifiers."
-  - "The annotation is already curated and chemically validated externally — skip to 'Require valid annotation' filter instead."
-  - "Your analysis does not require structural metadata or does not perform adduct/parent mass repair — this repair is only necessary when downstream filters depend on chemically consistent SMILES."
-edam_operation: "http://edamontology.org/operation_3930"
-edam_topics: |
-  - "http://edamontology.org/topic_3407"
-  - "http://edamontology.org/topic_0154"
-tools: |
-  - name: "RDKit"
-  role: "Parse, validate, canonicalize, and interconvert SMILES, InChI, and InChIKey; remove ionic counter-ions from salt-form SMILES"
-  - name: "matchms"
-  role: "Provide spectrum object framework and filter pipeline; integrate SMILES/InChI repair as a library cleaning filter step"
-  repo: "https://github.com/matchms/matchms"
-  - name: "PubChem"
-  role: "Source of canonical SMILES, InChI, and InChIKey when deriving annotations from compound names; used for validation reference"
-provenance: |
+description: Repair and validate chemical structure identifiers (SMILES, InChI, InChIKey) by comparing them against each other and canonical references, and correcting salt-form SMILES that would otherwise cause downstream failures. This skill is essential in MS/MS library cleaning to ensure annotations are chemically consistent before requiring them as mandatory metadata.
+when_to_use_negative:
+- Input records lack any SMILES, InChI, or InChIKey field — use 'Derive annotation from compound name' (via PubChem) first to obtain initial structure identifiers.
+- The annotation is already curated and chemically validated externally — skip to 'Require valid annotation' filter instead.
+- Your analysis does not require structural metadata or does not perform adduct/parent mass repair — this repair is only necessary when downstream filters depend on chemically consistent SMILES.
+edam_operation: http://edamontology.org/operation_3930
+edam_topics:
+- http://edamontology.org/topic_3407
+- http://edamontology.org/topic_0154
+tools:
+- name: RDKit
+  role: Parse, validate, canonicalize, and interconvert SMILES, InChI, and InChIKey; remove ionic counter-ions from salt-form SMILES
+- name: matchms
+  role: Provide spectrum object framework and filter pipeline; integrate SMILES/InChI repair as a library cleaning filter step
+  repo: https://github.com/matchms/matchms
+- name: PubChem
+  role: Source of canonical SMILES, InChI, and InChIKey when deriving annotations from compound names; used for validation reference
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:3d65283f4f13f9035c65d15782c3bdd1b009164797068f6e6aab4fe05bee0f1f
+  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:95009297c7c899c79c658052f912b6553eaa3f84c845a87f673c28344b09cf49
 ---
 
 # SMILES/InChI Chemical Identifier Repair

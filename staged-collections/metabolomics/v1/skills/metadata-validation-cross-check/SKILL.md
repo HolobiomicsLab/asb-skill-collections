@@ -1,31 +1,31 @@
 ---
 name: metadata-validation-cross-check
-description: "Cross-validate computed chemical properties (monoisotopic mass, adduct, structure identifiers) derived from SMILES or compound names against their corresponding metadata fields in mass spectral library records. This skill detects inconsistencies that would silently corrupt library curation, enabling targeted repair before removal."
-when_to_use_negative: |
-  - "Spectrum records lack SMILES or compound name metadata to begin with — use basic metadata harmonization or manual curation first."
-  - "The repair filter did not run (e.g., 'repair_smiles_of_salts' was skipped) — cross-validation assumes an upstream repair step has been applied."
-  - "Input is already a curated, externally-validated library with known-good annotations — validation is redundant and adds computational cost."
-edam_operation: "http://edamontology.org/operation_3096"
-edam_topics: |
-  - "http://edamontology.org/topic_0625"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "Framework for loading, filtering, and validating mass spectral library records; provides filter objects (e.g., repair_smiles_of_salts, repair_adduct_and_parent_mass_based_on_smiles) whose outputs are cross-checked."
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Parses SMILES strings and computes monoisotopic mass for direct comparison against parent_mass metadata field."
-  - name: "PubChem"
-  role: "Source of canonical SMILES, InChI, and InChIKey used in 'derive_annotation_from_compound_name' filter; outputs are validated against spectrum metadata."
-provenance: |
+description: Cross-validate computed chemical properties (monoisotopic mass, adduct, structure identifiers) derived from SMILES or compound names against their corresponding metadata fields in mass spectral library records. This skill detects inconsistencies that would silently corrupt library curation, enabling targeted repair before removal.
+when_to_use_negative:
+- Spectrum records lack SMILES or compound name metadata to begin with — use basic metadata harmonization or manual curation first.
+- The repair filter did not run (e.g., 'repair_smiles_of_salts' was skipped) — cross-validation assumes an upstream repair step has been applied.
+- Input is already a curated, externally-validated library with known-good annotations — validation is redundant and adds computational cost.
+edam_operation: http://edamontology.org/operation_3096
+edam_topics:
+- http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: Framework for loading, filtering, and validating mass spectral library records; provides filter objects (e.g., repair_smiles_of_salts, repair_adduct_and_parent_mass_based_on_smiles) whose outputs are cross-checked.
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Parses SMILES strings and computes monoisotopic mass for direct comparison against parent_mass metadata field.
+- name: PubChem
+  role: Source of canonical SMILES, InChI, and InChIKey used in 'derive_annotation_from_compound_name' filter; outputs are validated against spectrum metadata.
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-validation-cross-check@sha256:905aa5e3095ea5bbcaedaa90591a3163327acc68514f043c97293fad11f32f3f
+  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-validation-cross-check@sha256:ac44ce04317a23a068c0f58e3247a4140a125cd1963c1da25b9eea8c8c4f0b05
 ---
 
 # metadata-validation-cross-check

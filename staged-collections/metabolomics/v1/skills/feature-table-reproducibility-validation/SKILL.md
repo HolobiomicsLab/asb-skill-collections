@@ -1,29 +1,29 @@
 ---
 name: feature-table-reproducibility-validation
-description: "Validates that a metabolomic feature table has been correctly filtered and processed by verifying it matches expected cardinality (e.g., 7,483 features) after applying sequential filtering steps (minimum-peaks-in-a-row thresholds and population-level presence filtering). This skill ensures reproducibility of feature selection decisions across non-gap-filled and gap-filled datasets."
-when_to_use_negative: |
-  - "Input data is already gap-filled; apply reproducibility validation separately to non-gap-filled data to isolate the effect of gap-filling."
-  - "Population structure differs from the six-population design; thresholds (6 peaks, 6 samples per population) must be recalibrated."
-  - "Feature table has already been subset by other criteria (e.g., variable importance cutoff > 1.3, compound-level annotation); validate at the raw-filtering stage, not post-hoc."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0091"
-tools: |
-  - name: "MZmine"
-  role: "Performs initial peak detection, alignment, and feature table construction; outputs feature table to which minimum-peaks-in-a-row filtering is applied"
-  - name: "R"
-  role: "Implements population-level feature presence filtering to remove features not found in at least N samples (e.g., 6) from each population; counts final feature cardinality"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Validates that a metabolomic feature table has been correctly filtered and processed by verifying it matches expected cardinality (e.g., 7,483 features) after applying sequential filtering steps (minimum-peaks-in-a-row thresholds and population-level presence filtering). This skill ensures reproducibility of feature selection decisions across non-gap-filled and gap-filled datasets.
+when_to_use_negative:
+- Input data is already gap-filled; apply reproducibility validation separately to non-gap-filled data to isolate the effect of gap-filling.
+- Population structure differs from the six-population design; thresholds (6 peaks, 6 samples per population) must be recalibrated.
+- Feature table has already been subset by other criteria (e.g., variable importance cutoff > 1.3, compound-level annotation); validate at the raw-filtering stage, not post-hoc.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0091
+tools:
+- name: MZmine
+  role: Performs initial peak detection, alignment, and feature table construction; outputs feature table to which minimum-peaks-in-a-row filtering is applied
+- name: R
+  role: Implements population-level feature presence filtering to remove features not found in at least N samples (e.g., 6) from each population; counts final feature cardinality
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/feature-table-reproducibility-validation@sha256:1850d86de87da53738d6261d198ec01f9f61cc03c5ec183ff3d9f713c5f9bc3b
+  iri: https://w3id.org/holobiomicslab/asb-skill/feature-table-reproducibility-validation@sha256:da5910e12a0b6f6e938c32d57f4a4fd4fea4eeefb9a5b937a7e1cf76a8e361e2
 ---
 
 # feature-table-reproducibility-validation

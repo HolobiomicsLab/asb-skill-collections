@@ -1,29 +1,29 @@
 ---
 name: population-level-feature-presence-filtering
-description: "Filter a metabolite feature table to retain only features present in a minimum number of samples within each population stratum, ensuring population-level prevalence of metabolic markers. This skill ensures that downstream comparative analyses focus on shared, robust metabolic signatures that are consistently detectable across the sampled populations."
-when_to_use_negative: |
-  - "Input data are already gap-filled or imputed; population-level filtering is most effective on raw, unimputed feature matrices to avoid inflating apparent prevalence."
-  - "Populations are severely imbalanced (e.g., one population has <6 samples); the threshold becomes meaningless or overly stringent."
-  - "Analysis goal is to detect rare, population-specific metabolites; this filter deliberately removes such features in favor of shared signatures."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_0769"
-  - "http://edamontology.org/topic_3370"
-tools: |
-  - name: "MZmine"
-  role: "Performs initial feature detection, alignment, and minimum-peaks-in-a-row filtering prior to population-level filtering"
-  - name: "R"
-  role: "Implements population-level presence filtering by subsetting the feature table to retain features meeting the per-population sample count threshold"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Filter a metabolite feature table to retain only features present in a minimum number of samples within each population stratum, ensuring population-level prevalence of metabolic markers. This skill ensures that downstream comparative analyses focus on shared, robust metabolic signatures that are consistently detectable across the sampled populations.
+when_to_use_negative:
+- Input data are already gap-filled or imputed; population-level filtering is most effective on raw, unimputed feature matrices to avoid inflating apparent prevalence.
+- Populations are severely imbalanced (e.g., one population has <6 samples); the threshold becomes meaningless or overly stringent.
+- Analysis goal is to detect rare, population-specific metabolites; this filter deliberately removes such features in favor of shared signatures.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_0769
+- http://edamontology.org/topic_3370
+tools:
+- name: MZmine
+  role: Performs initial feature detection, alignment, and minimum-peaks-in-a-row filtering prior to population-level filtering
+- name: R
+  role: Implements population-level presence filtering by subsetting the feature table to retain features meeting the per-population sample count threshold
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/population-level-feature-presence-filtering@sha256:0c7b5be5c72e922f6690cb873d6af22d9b27d3bfb3d23b714292e0b8542c81c8
+  iri: https://w3id.org/holobiomicslab/asb-skill/population-level-feature-presence-filtering@sha256:e15c0e298eb69f795869273156c336f8d832f4ecd035e1439252b16e4a4c85f4
 ---
 
 # population-level-feature-presence-filtering

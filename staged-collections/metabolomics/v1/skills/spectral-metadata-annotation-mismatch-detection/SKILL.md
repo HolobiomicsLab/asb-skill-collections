@@ -1,33 +1,33 @@
 ---
 name: spectral-metadata-annotation-mismatch-detection
-description: "Detect mismatches between derived chemical structures (SMILES, InChI, InChIKey) and existing spectrum annotations by deriving canonical structures from compound names via PubChem lookup and comparing them against recorded annotations. This skill identifies both unannotated spectra and spectra with incorrect or inconsistent 2D structural assignments that would otherwise propagate errors through downstream analysis."
-when_to_use_negative: |
-  - "Spectra lack compound names or existing structure annotations—the filter requires both to perform comparison."
-  - "Ion mode or adduct information is incomplete or missing—the workflow filters for spectra with valid, matching adduct data before annotation derivation."
-  - "You only need to repair missing annotations without validating existing ones; use simpler repair filters (e.g., 'Repair adduct and parent mass based on SMILES') instead."
-edam_operation: "http://edamontology.org/operation_3094"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "Core framework for loading spectra, applying the 'derive_annotation_from_compound_name' filter, and executing structure comparison workflows"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Canonicalizes and compares SMILES, InChI, and InChIKey structures to detect 2D structural mismatches between derived and existing annotations"
-  - name: "PubChem"
-  role: "External reference database queried by the 'derive_annotation_from_compound_name' filter to resolve compound names to canonical SMILES, InChI, and InChIKey"
-  - name: "Python"
-  role: "Scripting environment for orchestrating matchms filters, error rate calculations, and generating mismatch reports"
-provenance: |
+description: Detect mismatches between derived chemical structures (SMILES, InChI, InChIKey) and existing spectrum annotations by deriving canonical structures from compound names via PubChem lookup and comparing them against recorded annotations. This skill identifies both unannotated spectra and spectra with incorrect or inconsistent 2D structural assignments that would otherwise propagate errors through downstream analysis.
+when_to_use_negative:
+- Spectra lack compound names or existing structure annotations—the filter requires both to perform comparison.
+- Ion mode or adduct information is incomplete or missing—the workflow filters for spectra with valid, matching adduct data before annotation derivation.
+- You only need to repair missing annotations without validating existing ones; use simpler repair filters (e.g., 'Repair adduct and parent mass based on SMILES') instead.
+edam_operation: http://edamontology.org/operation_3094
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: Core framework for loading spectra, applying the 'derive_annotation_from_compound_name' filter, and executing structure comparison workflows
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Canonicalizes and compares SMILES, InChI, and InChIKey structures to detect 2D structural mismatches between derived and existing annotations
+- name: PubChem
+  role: External reference database queried by the 'derive_annotation_from_compound_name' filter to resolve compound names to canonical SMILES, InChI, and InChIKey
+- name: Python
+  role: Scripting environment for orchestrating matchms filters, error rate calculations, and generating mismatch reports
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-metadata-annotation-mismatch-detection@sha256:cab3cecb2850766ea88f067ea0ad31162d793c01205890d56e52782dfc717d15
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-metadata-annotation-mismatch-detection@sha256:25ba2dbafcb9716db17f3f7a690e14cd9657d8842be70fb0d6ac8baabc9c71f1
 ---
 
 # Spectral Metadata Annotation Mismatch Detection

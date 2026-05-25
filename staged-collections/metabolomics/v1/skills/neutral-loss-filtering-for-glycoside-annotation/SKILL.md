@@ -1,34 +1,34 @@
 ---
 name: neutral-loss-filtering-for-glycoside-annotation
-description: "Filter MS/MS spectra by characteristic neutral losses to rapidly annotate glycosylated metabolites in feature-based molecular networks. This skill uses MassQL queries targeting pentose (132.0423 Da) and hexose (162.0528 Da) neutral losses to identify and cluster glycoside variants in untargeted LC-MS/MS data without reference standards."
-when_to_use_negative: |
-  - "Input is already a fully structurally annotated feature table with confirmed metabolite identities from NMR or MS/MS library matching; neutral-loss filtering adds no value."
-  - "MS/MS spectra lack sufficient fragmentation depth or signal intensity (peaks below 10,000 amplitude threshold) to reliably detect neutral losses."
-  - "Target metabolites are aglycones or contain no glycosidic bonds; no neutral losses of 132 or 162 Da will occur."
-edam_operation: "http://edamontology.org/operation_3933"
-edam_topics: |
-  - "http://edamontology.org/topic_0625"
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "GNPS (Global Natural Products Social Molecular Networking)"
-  role: "Host platform for feature-based molecular networking (FBMN) workflow and MassQL query execution; generates spectral similarity networks and cosine similarity scoring"
-  repo: "https://gnps.ucsd.edu"
-  - name: "MassQL"
-  role: "Query engine for filtering MS/MS spectra by characteristic neutral loss patterns (132.0423 Da pentose, 162.0528 Da hexose) within GNPS spectral nodes"
-  - name: "LC-MS/MS"
-  role: "Acquisition instrument generating raw MS/MS fragmentation spectra; spectra are processed and uploaded to GNPS for FBMN and MassQL filtering"
-  - name: "Feature Detection and Alignment (FBMN preprocessing)"
-  role: "Converts raw LC-MS/MS data into aligned feature tables with MS/MS scans; peak detection set at >10,000 amplitude threshold to cutoff noise before FBMN upload"
-provenance: |
+description: Filter MS/MS spectra by characteristic neutral losses to rapidly annotate glycosylated metabolites in feature-based molecular networks. This skill uses MassQL queries targeting pentose (132.0423 Da) and hexose (162.0528 Da) neutral losses to identify and cluster glycoside variants in untargeted LC-MS/MS data without reference standards.
+when_to_use_negative:
+- Input is already a fully structurally annotated feature table with confirmed metabolite identities from NMR or MS/MS library matching; neutral-loss filtering adds no value.
+- MS/MS spectra lack sufficient fragmentation depth or signal intensity (peaks below 10,000 amplitude threshold) to reliably detect neutral losses.
+- Target metabolites are aglycones or contain no glycosidic bonds; no neutral losses of 132 or 162 Da will occur.
+edam_operation: http://edamontology.org/operation_3933
+edam_topics:
+- http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0121
+tools:
+- name: GNPS (Global Natural Products Social Molecular Networking)
+  role: Host platform for feature-based molecular networking (FBMN) workflow and MassQL query execution; generates spectral similarity networks and cosine similarity scoring
+  repo: https://gnps.ucsd.edu
+- name: MassQL
+  role: Query engine for filtering MS/MS spectra by characteristic neutral loss patterns (132.0423 Da pentose, 162.0528 Da hexose) within GNPS spectral nodes
+- name: LC-MS/MS
+  role: Acquisition instrument generating raw MS/MS fragmentation spectra; spectra are processed and uploaded to GNPS for FBMN and MassQL filtering
+- name: Feature Detection and Alignment (FBMN preprocessing)
+  role: Converts raw LC-MS/MS data into aligned feature tables with MS/MS scans; peak detection set at >10,000 amplitude threshold to cutoff noise before FBMN upload
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:9233af6fcf39a7303850497132bb64cdf6b7c3af59ebbe17cd94ae9e3e8de875
+  iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:16c3e80a9877a37678a4ae7f3a9bc9822d949be83cbc9dacfcc7ac5770605e3b
 ---
 
 # neutral-loss-filtering-for-glycoside-annotation

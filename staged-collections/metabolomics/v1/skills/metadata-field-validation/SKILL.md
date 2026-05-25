@@ -1,35 +1,35 @@
 ---
 name: metadata-field-validation
-description: "Systematic validation of metadata field presence, data types, and values in mass spectral library records against expected schemas and plausibility thresholds. This skill ensures that essential annotation fields (SMILES, InChI, InChIKey, adduct, precursor m/z, parent mass) are correctly populated and logically consistent before downstream analysis."
-when_to_use_negative: |
-  - "Input spectra lack any structural annotation (SMILES, InChI, or compound name); metadata-field-validation requires at least one annotation source to derive or repair fields."
-  - "Analysis goal is to filter unannotated experimental MS/MS data without structure assignment; use peak filtering and intensity normalization instead."
-  - "Metadata fields are already validated and locked (e.g., curated reference libraries from a downstream consumer); validation is redundant."
-edam_operation: "http://edamontology.org/operation_3436"
-edam_topics: |
-  - "http://edamontology.org/topic_0625"
-  - "http://edamontology.org/topic_3407"
-  - "http://edamontology.org/topic_3314"
-tools: |
-  - name: "matchms"
-  role: "Provides metadata filters ('Require valid annotation', 'Repair adduct and parent mass based on SMILES', 'Repair not matching annotation') that implement field validation logic and repair workflows; orchestrates the full pipeline"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Loads and compares SMILES, InChI, and InChIKey to verify structural annotation consistency; detects mismatches in 2D structure"
-  - name: "PubChem"
-  role: "Reference database from which canonical SMILES, InChI, and InChIKey are derived during metadata repair"
-  repo: "https://pubchem.ncbi.nlm.nih.gov/"
-  - name: "Python"
-  role: "Programming language for parsing spectrum records, orchestrating validation logic, and aggregating statistics"
-provenance: |
+description: Systematic validation of metadata field presence, data types, and values in mass spectral library records against expected schemas and plausibility thresholds. This skill ensures that essential annotation fields (SMILES, InChI, InChIKey, adduct, precursor m/z, parent mass) are correctly populated and logically consistent before downstream analysis.
+when_to_use_negative:
+- Input spectra lack any structural annotation (SMILES, InChI, or compound name); metadata-field-validation requires at least one annotation source to derive or repair fields.
+- Analysis goal is to filter unannotated experimental MS/MS data without structure assignment; use peak filtering and intensity normalization instead.
+- Metadata fields are already validated and locked (e.g., curated reference libraries from a downstream consumer); validation is redundant.
+edam_operation: http://edamontology.org/operation_3436
+edam_topics:
+- http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3407
+- http://edamontology.org/topic_3314
+tools:
+- name: matchms
+  role: Provides metadata filters ('Require valid annotation', 'Repair adduct and parent mass based on SMILES', 'Repair not matching annotation') that implement field validation logic and repair workflows; orchestrates the full pipeline
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Loads and compares SMILES, InChI, and InChIKey to verify structural annotation consistency; detects mismatches in 2D structure
+- name: PubChem
+  role: Reference database from which canonical SMILES, InChI, and InChIKey are derived during metadata repair
+  repo: https://pubchem.ncbi.nlm.nih.gov/
+- name: Python
+  role: Programming language for parsing spectrum records, orchestrating validation logic, and aggregating statistics
+provenance:
   source_task_ids:
   - task_007
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-field-validation@sha256:5e6dbdda524a6a57ca58ae83b6d73958be181be5bd02b8da2f9a5ba91e8c8be1
+  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-field-validation@sha256:f611450550fb9d339ee24832b80272652341749e18cf19f0268725f6dbf1bcf7
 ---
 
 # metadata-field-validation

@@ -1,32 +1,32 @@
 ---
 name: differential-expression-validation-fold-change-verification
-description: "Validates predicted fold-change in gene expression by quantifying RNA-seq read counts, applying library-size normalization, and computing RPKM values to confirm that target genes meet expected expression thresholds under specific treatment conditions. This skill bridges transcriptional hypothesis and computational quantification, ensuring fold-change claims are grounded in normalized count data."
-when_to_use_negative: |
-  - "Input is already a normalized expression matrix or TPM/FPKM values—skip to fold-change extraction rather than re-normalizing."
-  - "RNA-seq reads have not been aligned to a reference genome or BAM files are unsorted/unvalidated—perform alignment and BAM curation first."
-  - "The predicted fold-change threshold is not specified or hypothesis is exploratory (not confirmatory)—use differential expression testing (e.g., edgeR GLM, DESeq2) instead to identify significant genes without a prior fold-change target."
-edam_operation: "http://edamontology.org/operation_3565"
-edam_topics: |
-  - "http://edamontology.org/topic_3170"
-  - "http://edamontology.org/topic_0203"
-tools: |
-  - name: "HTSeq"
-  role: "Counts reads mapped to annotated genes from sorted BAM files using union overlap mode and reverse strand orientation to produce raw count matrices."
-  - name: "edgeR"
-  role: "Applies TMM normalization via calcNormFactors() and computes RPKM values using the rpkm() function to normalize for library size, composition bias, and gene length."
-  - name: "R"
-  role: "Environment for loading count data, running edgeR normalization, computing fold-change ratios, and generating summary tables."
-  - name: "HISAT2"
-  role: "Splice-aware aligner used upstream to generate sorted BAM files from paired-end RNA-seq reads; required input for this skill."
-provenance: |
+description: Validates predicted fold-change in gene expression by quantifying RNA-seq read counts, applying library-size normalization, and computing RPKM values to confirm that target genes meet expected expression thresholds under specific treatment conditions. This skill bridges transcriptional hypothesis and computational quantification, ensuring fold-change claims are grounded in normalized count data.
+when_to_use_negative:
+- Input is already a normalized expression matrix or TPM/FPKM values—skip to fold-change extraction rather than re-normalizing.
+- RNA-seq reads have not been aligned to a reference genome or BAM files are unsorted/unvalidated—perform alignment and BAM curation first.
+- The predicted fold-change threshold is not specified or hypothesis is exploratory (not confirmatory)—use differential expression testing (e.g., edgeR GLM, DESeq2) instead to identify significant genes without a prior fold-change target.
+edam_operation: http://edamontology.org/operation_3565
+edam_topics:
+- http://edamontology.org/topic_3170
+- http://edamontology.org/topic_0203
+tools:
+- name: HTSeq
+  role: Counts reads mapped to annotated genes from sorted BAM files using union overlap mode and reverse strand orientation to produce raw count matrices.
+- name: edgeR
+  role: Applies TMM normalization via calcNormFactors() and computes RPKM values using the rpkm() function to normalize for library size, composition bias, and gene length.
+- name: R
+  role: Environment for loading count data, running edgeR normalization, computing fold-change ratios, and generating summary tables.
+- name: HISAT2
+  role: Splice-aware aligner used upstream to generate sorted BAM files from paired-end RNA-seq reads; required input for this skill.
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:2b99ad890a8bbe57313834bcaa55bc94b5a5d21986b7f6fd413fa246b6190ae8
+  iri: https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:146ae04bf1974544503455722c6c0ef4c1ff6bd636b5e527e7be8146f53080ca
 ---
 
 # differential-expression-validation-fold-change-verification

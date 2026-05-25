@@ -1,34 +1,34 @@
 ---
 name: control-group-selection-for-metabolite-screening
-description: "Selection and preparation of negative control samples (S9 + NADPH without xenobiotic incubation) for use as the denominator in fold-change calculations during untargeted LC–HRMS screening of pesticide metabolites. Proper control definition ensures that true metabolite signals are distinguished from background signals and instrumental noise."
-when_to_use_negative: |
-  - "If the input data consists only of a single timepoint or single biological replicate per pesticide; the control group selection method relies on at least two replicates to assess consistency."
-  - "If negative control samples were not processed in parallel with pesticide-incubated samples in the same analytical batch; controls must be contemporaneous to account for instrumental drift and batch effects."
-  - "If the study uses a different biotransformation system (e.g., pooled human liver S9 from a single donor, or recombinant P450 enzymes) without re-optimization of the FC threshold; the absolute fold-change threshold of >4 may require adjustment based on signal-to-noise ratio specific to that system."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0602"
-tools: |
-  - name: "XCMS"
-  role: "Feature detection, alignment, and retention time correction of all LC–HRMS samples (pesticide-incubated and negative control) prior to fold-change calculation"
-  - name: "CAMERA"
-  role: "Componentization of features (isotope and adduct grouping) to reduce redundancy and improve signal clarity before control-based fold-change filtering"
-  - name: "R v3.6.1"
-  role: "Statistical computation environment for mean intensity calculation, fold-change computation, and generation of volcano and diff plots for visualization of control-based filtering thresholds"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "incubatoR"
-  role: "Automated workflow implementation that orchestrates XCMS, CAMERA, statistical comparison (fold-change calculation against negative controls), and metabolite filtering steps"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Selection and preparation of negative control samples (S9 + NADPH without xenobiotic incubation) for use as the denominator in fold-change calculations during untargeted LC–HRMS screening of pesticide metabolites. Proper control definition ensures that true metabolite signals are distinguished from background signals and instrumental noise.
+when_to_use_negative:
+- If the input data consists only of a single timepoint or single biological replicate per pesticide; the control group selection method relies on at least two replicates to assess consistency.
+- If negative control samples were not processed in parallel with pesticide-incubated samples in the same analytical batch; controls must be contemporaneous to account for instrumental drift and batch effects.
+- If the study uses a different biotransformation system (e.g., pooled human liver S9 from a single donor, or recombinant P450 enzymes) without re-optimization of the FC threshold; the absolute fold-change threshold of >4 may require adjustment based on signal-to-noise ratio specific to that system.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0602
+tools:
+- name: XCMS
+  role: Feature detection, alignment, and retention time correction of all LC–HRMS samples (pesticide-incubated and negative control) prior to fold-change calculation
+- name: CAMERA
+  role: Componentization of features (isotope and adduct grouping) to reduce redundancy and improve signal clarity before control-based fold-change filtering
+- name: R v3.6.1
+  role: Statistical computation environment for mean intensity calculation, fold-change computation, and generation of volcano and diff plots for visualization of control-based filtering thresholds
+  repo: https://github.com/chufz/incubatoR
+- name: incubatoR
+  role: Automated workflow implementation that orchestrates XCMS, CAMERA, statistical comparison (fold-change calculation against negative controls), and metabolite filtering steps
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/control-group-selection-for-metabolite-screening@sha256:b59dc94a3b39f8460f54de28ebf097c189b619dfe78a9eefba9fcc67d77ed4c0
+  iri: https://w3id.org/holobiomicslab/asb-skill/control-group-selection-for-metabolite-screening@sha256:a664df2cf6a4ec2aaefe37ee1258a1a52a42f412fae0c7aa9188f88096b95a29
 ---
 
 # control-group-selection-for-metabolite-screening

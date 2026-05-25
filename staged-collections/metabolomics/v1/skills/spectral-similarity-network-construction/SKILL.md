@@ -1,30 +1,30 @@
 ---
 name: spectral-similarity-network-construction
-description: "Construct feature-based molecular networks by computing cosine similarity scores between MS/MS fragmentation spectra and visualizing them as spectral similarity networks. This skill enables rapid, untargeted annotation of metabolite clusters and detection of related compounds in complex fungal biotransformation LC-MS/MS datasets."
-when_to_use_negative: |
-  - "Input is already a pre-curated list of known metabolites with confirmed structures — direct targeted analysis is more efficient."
-  - "MS/MS spectra lack sufficient fragmentation (e.g., only precursor ion observed) — spectral similarity scoring requires informative product ion peaks."
-  - "Sample complexity is very low (e.g., single purified compound) — network visualization adds no interpretive value."
-edam_operation: "http://edamontology.org/operation_0315"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "GNPS"
-  role: "Hosts feature-based molecular networking (FBMN) workflow and computes cosine similarity scoring between all MS/MS spectra; provides access to public MS/MS reference library for spectral node annotation"
-  - name: "LC-MS/MS"
-  role: "Generates raw MS/MS fragmentation spectra used as input for spectral similarity calculations"
-  - name: "MassQL"
-  role: "Post-hoc spectral filtering to annotate subsets of molecular network nodes by neutral loss or fragment ion patterns (e.g., pentosylation/hexosylation signatures)"
-provenance: |
+description: Construct feature-based molecular networks by computing cosine similarity scores between MS/MS fragmentation spectra and visualizing them as spectral similarity networks. This skill enables rapid, untargeted annotation of metabolite clusters and detection of related compounds in complex fungal biotransformation LC-MS/MS datasets.
+when_to_use_negative:
+- Input is already a pre-curated list of known metabolites with confirmed structures — direct targeted analysis is more efficient.
+- MS/MS spectra lack sufficient fragmentation (e.g., only precursor ion observed) — spectral similarity scoring requires informative product ion peaks.
+- Sample complexity is very low (e.g., single purified compound) — network visualization adds no interpretive value.
+edam_operation: http://edamontology.org/operation_0315
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+tools:
+- name: GNPS
+  role: Hosts feature-based molecular networking (FBMN) workflow and computes cosine similarity scoring between all MS/MS spectra; provides access to public MS/MS reference library for spectral node annotation
+- name: LC-MS/MS
+  role: Generates raw MS/MS fragmentation spectra used as input for spectral similarity calculations
+- name: MassQL
+  role: Post-hoc spectral filtering to annotate subsets of molecular network nodes by neutral loss or fragment ion patterns (e.g., pentosylation/hexosylation signatures)
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-network-construction@sha256:bb440727ce28217b60762cbb19ab58ac7f375ecd3dd0f4008441f5210a7ca077
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-network-construction@sha256:57b3839ca261bc018c04f6223dd27e5d07657a088b64076a11da7350668e1699
 ---
 
 # spectral-similarity-network-construction

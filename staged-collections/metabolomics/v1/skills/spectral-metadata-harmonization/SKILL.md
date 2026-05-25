@@ -1,34 +1,34 @@
 ---
 name: spectral-metadata-harmonization
-description: "Harmonize and repair MS/MS spectral metadata (parent mass, adducts, SMILES, compound names, ionization modes) against reference chemical structures and consistency rules to produce valid, comparable library entries. This skill detects and corrects systematic errors—such as molar mass vs. monoisotopic mass confusion, missing adduct assignments, and mismatched annotations—across large spectral libraries."
-when_to_use_negative: |
-  - "Metadata is already manually curated and validated against chemical structures; harmonization may overwrite correct custom annotations or introduce false positives."
-  - "Your goal is to annotate *unknown* experimental spectra against a library; use spectral similarity matching or MS/MS fragmentation prediction instead; metadata harmonization is for library curation, not peak matching."
-  - "Spectral library lacks precursor m/z or ionization mode; repair filters for parent_mass and adduct require these fields, and their absence will cause repairs to fail or be skipped."
-edam_operation: "http://edamontology.org/operation_3096"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "Primary framework for loading, filtering, and harmonizing MS/MS spectral metadata; implements tiered filter sets (Basic, Default, Library cleaning) and repair functions (parent_mass, adduct, SMILES, annotation validation)"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Derives canonical SMILES, InChI, and InChIKey from compound names; validates SMILES and compares structure representations; used to infer parent_mass and adduct from chemical structure"
-  repo: "https://www.rdkit.org/"
-  - name: "PubChem"
-  role: "External reference database queried to retrieve canonical SMILES, InChI, and InChIKey for a given compound name; used by the 'derive annotation from compound name' filter"
-  - name: "Python"
-  role: "Host language for matchms and RDKit; used to write and orchestrate metadata harmonization scripts and YAML configuration files"
-provenance: |
+description: Harmonize and repair MS/MS spectral metadata (parent mass, adducts, SMILES, compound names, ionization modes) against reference chemical structures and consistency rules to produce valid, comparable library entries. This skill detects and corrects systematic errors—such as molar mass vs. monoisotopic mass confusion, missing adduct assignments, and mismatched annotations—across large spectral libraries.
+when_to_use_negative:
+- Metadata is already manually curated and validated against chemical structures; harmonization may overwrite correct custom annotations or introduce false positives.
+- Your goal is to annotate *unknown* experimental spectra against a library; use spectral similarity matching or MS/MS fragmentation prediction instead; metadata harmonization is for library curation, not peak matching.
+- Spectral library lacks precursor m/z or ionization mode; repair filters for parent_mass and adduct require these fields, and their absence will cause repairs to fail or be skipped.
+edam_operation: http://edamontology.org/operation_3096
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: Primary framework for loading, filtering, and harmonizing MS/MS spectral metadata; implements tiered filter sets (Basic, Default, Library cleaning) and repair functions (parent_mass, adduct, SMILES, annotation validation)
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Derives canonical SMILES, InChI, and InChIKey from compound names; validates SMILES and compares structure representations; used to infer parent_mass and adduct from chemical structure
+  repo: https://www.rdkit.org/
+- name: PubChem
+  role: External reference database queried to retrieve canonical SMILES, InChI, and InChIKey for a given compound name; used by the 'derive annotation from compound name' filter
+- name: Python
+  role: Host language for matchms and RDKit; used to write and orchestrate metadata harmonization scripts and YAML configuration files
+provenance:
   source_task_ids:
   - task_005
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-metadata-harmonization@sha256:0bf46b0ba4422ece8d00520688e5532755304df40e490a7ce9b64c336571f7d8
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-metadata-harmonization@sha256:96a143253afcc606ec70bcdddc90857eeca8134cca8931620a5d73357b09c74d
 ---
 
 # spectral-metadata-harmonization

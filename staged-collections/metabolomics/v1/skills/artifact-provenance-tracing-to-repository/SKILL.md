@@ -1,32 +1,32 @@
 ---
 name: artifact-provenance-tracing-to-repository
-description: "Retrieve and validate processing artifacts (e.g., supplementary tables, cleaned spectral libraries, YAML configuration files) from public repositories (Zenodo, GitHub) to verify that reported statistics and processing parameters match the actual outputs claimed in a published article. This skill ensures reproducibility by grounding published findings in auditable, versioned artifacts."
-when_to_use_negative: |
-  - "The article does not cite a public repository or makes no quantitative claims about pipeline outputs that can be verified against an artifact."
-  - "The repository deposit is embargoed, access-restricted, or no longer available."
-  - "The article describes only experimental raw data (e.g., mass spectra files) without reporting processing statistics that can be cross-checked against a summary table or report."
-edam_operation: "http://edamontology.org/operation_3895"
-edam_topics: |
-  - "http://edamontology.org/topic_0081"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "produces the cleaned spectral library and processing report artifacts deposited in the repository"
-  repo: "https://github.com/matchms/matchms"
-  - name: "Zenodo"
-  role: "public repository hosting the cleaned GNPS library, processing report (Supplementary Table S1), scripts, and YAML filter configuration used in the pipeline"
-  repo: "https://zenodo.org/record/10160791"
-  - name: "Python"
-  role: "language for parsing, validating, and comparing extracted artifact fields against reported values"
-provenance: |
+description: Retrieve and validate processing artifacts (e.g., supplementary tables, cleaned spectral libraries, YAML configuration files) from public repositories (Zenodo, GitHub) to verify that reported statistics and processing parameters match the actual outputs claimed in a published article. This skill ensures reproducibility by grounding published findings in auditable, versioned artifacts.
+when_to_use_negative:
+- The article does not cite a public repository or makes no quantitative claims about pipeline outputs that can be verified against an artifact.
+- The repository deposit is embargoed, access-restricted, or no longer available.
+- The article describes only experimental raw data (e.g., mass spectra files) without reporting processing statistics that can be cross-checked against a summary table or report.
+edam_operation: http://edamontology.org/operation_3895
+edam_topics:
+- http://edamontology.org/topic_0081
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: produces the cleaned spectral library and processing report artifacts deposited in the repository
+  repo: https://github.com/matchms/matchms
+- name: Zenodo
+  role: public repository hosting the cleaned GNPS library, processing report (Supplementary Table S1), scripts, and YAML filter configuration used in the pipeline
+  repo: https://zenodo.org/record/10160791
+- name: Python
+  role: language for parsing, validating, and comparing extracted artifact fields against reported values
+provenance:
   source_task_ids:
   - task_007
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/artifact-provenance-tracing-to-repository@sha256:1d527dc07f94c51b2d861718297f89eeb7feeda2aba235631a6d87b10811c38c
+  iri: https://w3id.org/holobiomicslab/asb-skill/artifact-provenance-tracing-to-repository@sha256:c1e610f7772c4e587399e3b3128c4ab228ecb546c2ee6cd37fe2524f13cf2ac7
 ---
 
 # artifact-provenance-tracing-to-repository

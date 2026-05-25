@@ -1,32 +1,32 @@
 ---
 name: metadata-completeness-evaluation
-description: "Systematically assess the completeness and internal consistency of chemical annotation metadata (SMILES, InChI, InChIKey) in mass spectral library records using RDKit validation. This skill identifies incomplete or conflicting annotation fields and quantifies the proportion of spectra affected, enabling targeted repair or removal decisions."
-when_to_use_negative: |
-  - "Spectra that lack SMILES, InChI, or InChIKey fields entirely and no repair function has been attempted—validation will simply remove them without distinguishing repairable from irreparable gaps."
-  - "When annotation metadata is already curated and repair functions have been exhausted; further filtering may not improve quality."
-  - "Unannotated experimental mass spectral data without chemical structure metadata; this skill is designed for library cleaning, not de novo annotation discovery."
-edam_operation: "http://edamontology.org/operation_3932"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0593"
-tools: |
-  - name: "matchms"
-  role: "Framework that implements the 'require_valid_annotation' filter to load and cross-validate SMILES, InChI, and InChIKey using RDKit; orchestrates repair functions and generates validation reports."
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Chemical informatics library that loads SMILES, InChI, and InChIKey and validates their internal consistency by confirming all three encode the same molecular structure."
-  repo: "https://github.com/rdkit/rdkit"
-  - name: "PubChem"
-  role: "Chemical database used by the 'derive annotation from compound name' filter to look up and assign canonical SMILES, InChI, and InChIKey when missing or inconsistent."
-provenance: |
+description: Systematically assess the completeness and internal consistency of chemical annotation metadata (SMILES, InChI, InChIKey) in mass spectral library records using RDKit validation. This skill identifies incomplete or conflicting annotation fields and quantifies the proportion of spectra affected, enabling targeted repair or removal decisions.
+when_to_use_negative:
+- Spectra that lack SMILES, InChI, or InChIKey fields entirely and no repair function has been attempted—validation will simply remove them without distinguishing repairable from irreparable gaps.
+- When annotation metadata is already curated and repair functions have been exhausted; further filtering may not improve quality.
+- Unannotated experimental mass spectral data without chemical structure metadata; this skill is designed for library cleaning, not de novo annotation discovery.
+edam_operation: http://edamontology.org/operation_3932
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0593
+tools:
+- name: matchms
+  role: Framework that implements the 'require_valid_annotation' filter to load and cross-validate SMILES, InChI, and InChIKey using RDKit; orchestrates repair functions and generates validation reports.
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Chemical informatics library that loads SMILES, InChI, and InChIKey and validates their internal consistency by confirming all three encode the same molecular structure.
+  repo: https://github.com/rdkit/rdkit
+- name: PubChem
+  role: Chemical database used by the 'derive annotation from compound name' filter to look up and assign canonical SMILES, InChI, and InChIKey when missing or inconsistent.
+provenance:
   source_task_ids:
   - task_006
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-completeness-evaluation@sha256:d0d02d05b813a279fc6f9008d950cb2a66522d10c7140fbae910aa1e49fa36a9
+  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-completeness-evaluation@sha256:3c3aa460ff58074b6ffac1fbebb6b3121aff88a5122eb90a33c6432ec2d7b430
 ---
 
 # metadata-completeness-evaluation

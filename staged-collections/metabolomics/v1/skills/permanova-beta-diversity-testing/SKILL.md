@@ -1,30 +1,30 @@
 ---
 name: permanova-beta-diversity-testing
-description: "PERMANOVA tests whether a categorical variable (e.g., industrialization group) explains statistically significant variance in metabolome composition by permuting group assignments across a distance matrix. This skill assesses beta-diversity structure and effect size when exploring how sample metadata drives metabolite feature abundance patterns."
-when_to_use_negative: |
-  - "Distance matrix has not yet been computed from the feature table — compute distance first."
-  - "Grouping variable is continuous (e.g., age in years) rather than categorical — use Mantel test or distance-based linear regression instead."
-  - "Sample size is very small (n < 4 per group) — permutation test power is limited and results may be unreliable."
-edam_operation: "http://edamontology.org/operation_3799"
-edam_topics: |
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0091"
-tools: |
-  - name: "QIIME2"
-  role: "Computes Canberra distance matrix from feature table and executes PERMANOVA with permutation testing and effect size calculation"
-  - name: "EMPeror"
-  role: "Visualizes PCoA ordinations derived from the distance matrix to show metabolome clustering by group"
-  - name: "principal-coordinate analysis (PCoA)"
-  role: "Ordination method applied to the distance matrix to generate low-dimensional visualization prior to or alongside PERMANOVA statistical testing"
-provenance: |
+description: PERMANOVA tests whether a categorical variable (e.g., industrialization group) explains statistically significant variance in metabolome composition by permuting group assignments across a distance matrix. This skill assesses beta-diversity structure and effect size when exploring how sample metadata drives metabolite feature abundance patterns.
+when_to_use_negative:
+- Distance matrix has not yet been computed from the feature table — compute distance first.
+- Grouping variable is continuous (e.g., age in years) rather than categorical — use Mantel test or distance-based linear regression instead.
+- Sample size is very small (n < 4 per group) — permutation test power is limited and results may be unreliable.
+edam_operation: http://edamontology.org/operation_3799
+edam_topics:
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0091
+tools:
+- name: QIIME2
+  role: Computes Canberra distance matrix from feature table and executes PERMANOVA with permutation testing and effect size calculation
+- name: EMPeror
+  role: Visualizes PCoA ordinations derived from the distance matrix to show metabolome clustering by group
+- name: principal-coordinate analysis (PCoA)
+  role: Ordination method applied to the distance matrix to generate low-dimensional visualization prior to or alongside PERMANOVA statistical testing
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/permanova-beta-diversity-testing@sha256:9b138f6e0229597c014891af8fa738454c3b13ce27ea94f40b0555259aeb2823
+  iri: https://w3id.org/holobiomicslab/asb-skill/permanova-beta-diversity-testing@sha256:69cc12c6d39b0e63d0e0e510b7a6ccd717c8d54d15b146902e0881337f4f6511
 ---
 
 # permanova-beta-diversity-testing

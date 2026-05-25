@@ -1,35 +1,35 @@
 ---
 name: in-silico-fragmentation-tree-analysis
-description: "Uses computational fragmentation prediction and molecular fingerprinting (Sirius) to elucidate the structure of ambiguous metabolite features by examining in-silico fragmentation trees for diagnostic parent-like fragments and functional group assignments. This skill bridges formula assignment and structural confirmation when MS2 spectra alone are insufficient."
-when_to_use_negative: |
-  - "Input MS2 spectrum is below signal-to-noise threshold (SNR < 3:1) or contains <4 diagnostic fragments — in-silico prediction becomes unreliable without sufficient experimental fragmentation data."
-  - "Molecular formula has already been conclusively validated by high-confidence spectral matching (dot-product similarity > 0.85) to a reference standard in MassBank — further in-silico analysis adds no discriminatory value."
-  - "The feature is known to arise from an artifact (impurity, adduct, isotope, or in-source fragmentation of the parent) — fragmentation tree analysis is misaligned with the true source."
-edam_operation: "http://edamontology.org/operation_3632"
-edam_topics: |
-  - "http://edamontology.org/topic_0153"
-  - "http://edamontology.org/topic_3375"
-tools: |
-  - name: "Sirius"
-  role: "Performs in-silico fragmentation tree generation and molecular fingerprint prediction to elucidate metabolite structure from MS2 spectra and molecular formula"
-  - name: "GenForm"
-  role: "Upstream tool that assigns molecular formulas to metabolite features; output (formula string and filtered MS2 spectrum) serves as Sirius input"
-  - name: "OrgMassSpecR"
-  role: "Calculates dot-product similarity scores between experimental MS2 spectra and in-silico fragmentation spectra for confidence assessment"
-  - name: "mzR"
-  role: "Extracts experimental MS2 spectra from data-dependent LC–HRMS2 acquisition (mzML format) prior to in-silico fragmentation analysis"
-  - name: "incubatoR"
-  role: "Orchestrates the full metabolite identification workflow including in-silico fragmentation tree analysis as part of structure elucidation"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Uses computational fragmentation prediction and molecular fingerprinting (Sirius) to elucidate the structure of ambiguous metabolite features by examining in-silico fragmentation trees for diagnostic parent-like fragments and functional group assignments. This skill bridges formula assignment and structural confirmation when MS2 spectra alone are insufficient.
+when_to_use_negative:
+- Input MS2 spectrum is below signal-to-noise threshold (SNR < 3:1) or contains <4 diagnostic fragments — in-silico prediction becomes unreliable without sufficient experimental fragmentation data.
+- Molecular formula has already been conclusively validated by high-confidence spectral matching (dot-product similarity > 0.85) to a reference standard in MassBank — further in-silico analysis adds no discriminatory value.
+- The feature is known to arise from an artifact (impurity, adduct, isotope, or in-source fragmentation of the parent) — fragmentation tree analysis is misaligned with the true source.
+edam_operation: http://edamontology.org/operation_3632
+edam_topics:
+- http://edamontology.org/topic_0153
+- http://edamontology.org/topic_3375
+tools:
+- name: Sirius
+  role: Performs in-silico fragmentation tree generation and molecular fingerprint prediction to elucidate metabolite structure from MS2 spectra and molecular formula
+- name: GenForm
+  role: Upstream tool that assigns molecular formulas to metabolite features; output (formula string and filtered MS2 spectrum) serves as Sirius input
+- name: OrgMassSpecR
+  role: Calculates dot-product similarity scores between experimental MS2 spectra and in-silico fragmentation spectra for confidence assessment
+- name: mzR
+  role: Extracts experimental MS2 spectra from data-dependent LC–HRMS2 acquisition (mzML format) prior to in-silico fragmentation analysis
+- name: incubatoR
+  role: Orchestrates the full metabolite identification workflow including in-silico fragmentation tree analysis as part of structure elucidation
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/in-silico-fragmentation-tree-analysis@sha256:03e35ef7ca34935e196cc3784e65a9488ffac3ae2a6c47a4b9e923fb3a6844ec
+  iri: https://w3id.org/holobiomicslab/asb-skill/in-silico-fragmentation-tree-analysis@sha256:dde51719cdba024e9fd1123960ed5c008d9f2042f74862a24bc9e832bed10435
 ---
 
 # in-silico-fragmentation-tree-analysis

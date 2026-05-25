@@ -1,37 +1,37 @@
 ---
 name: feature-table-reduction-and-quality-control
-description: "This skill reduces the dimensionality and noise of LC–HRMS feature tables by applying sequential statistical and chemical filters (blank subtraction, isotope/adduct removal, fold-change thresholding, replication criteria, mass defect and mass difference boundaries) to prioritize putative metabolite features for downstream structure elucidation. It is essential for distinguishing true metabolic transformation products from background noise, matrix effects, and instrumental artifacts in high-throughput in vitro incubation studies."
-when_to_use_negative: |
-  - "Do not apply this skill if the input feature table is already a curated target list of known metabolites; this skill is for exploratory discovery, not targeted confirmation."
-  - "Do not use if you lack biological replicates or negative control samples; the replication and fold-change criteria require comparison groups."
-  - "Do not apply if the sample set contains structurally related compounds (e.g. atrazine, terbuthylazine, terbutryn) without first removing shared metabolites to avoid false exclusions in the control group."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_0629"
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_2258"
-tools: |
-  - name: "XCMS"
-  role: "Feature detection, alignment, and retention-time correction prior to filtering and componentization"
-  - name: "CAMERA"
-  role: "Componentization of features to identify and annotate isotope and adduct peaks for removal"
-  - name: "ProteoWizard"
-  role: "mzML format conversion and centroiding of raw mass spectra before XCMS processing"
-  - name: "R v3.6.1"
-  role: "Statistical computation environment for automated fold-change calculation, filtering, and visualization"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "incubatoR"
-  role: "Complete automated workflow pipeline implementing blank subtraction, abundance filtering, mass defect/difference filtering, and output generation"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: This skill reduces the dimensionality and noise of LC–HRMS feature tables by applying sequential statistical and chemical filters (blank subtraction, isotope/adduct removal, fold-change thresholding, replication criteria, mass defect and mass difference boundaries) to prioritize putative metabolite features for downstream structure elucidation. It is essential for distinguishing true metabolic transformation products from background noise, matrix effects, and instrumental artifacts in high-throughput in vitro incubation studies.
+when_to_use_negative:
+- Do not apply this skill if the input feature table is already a curated target list of known metabolites; this skill is for exploratory discovery, not targeted confirmation.
+- Do not use if you lack biological replicates or negative control samples; the replication and fold-change criteria require comparison groups.
+- Do not apply if the sample set contains structurally related compounds (e.g. atrazine, terbuthylazine, terbutryn) without first removing shared metabolites to avoid false exclusions in the control group.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_0629
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_2258
+tools:
+- name: XCMS
+  role: Feature detection, alignment, and retention-time correction prior to filtering and componentization
+- name: CAMERA
+  role: Componentization of features to identify and annotate isotope and adduct peaks for removal
+- name: ProteoWizard
+  role: mzML format conversion and centroiding of raw mass spectra before XCMS processing
+- name: R v3.6.1
+  role: Statistical computation environment for automated fold-change calculation, filtering, and visualization
+  repo: https://github.com/chufz/incubatoR
+- name: incubatoR
+  role: Complete automated workflow pipeline implementing blank subtraction, abundance filtering, mass defect/difference filtering, and output generation
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/feature-table-reduction-and-quality-control@sha256:016c49e2104d5317235941419e3269d3f00a85a67330fd65593d81a0a58020bb
+  iri: https://w3id.org/holobiomicslab/asb-skill/feature-table-reduction-and-quality-control@sha256:6cf83b08cd93160c824b94cf3693a166632670d0bad41fab703090f5a045d565
 ---
 
 # feature-table-reduction-and-quality-control

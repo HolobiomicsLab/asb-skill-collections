@@ -1,36 +1,42 @@
 ---
 name: monoisotopic-mass-calculation-from-smiles
-description: "Calculate the exact monoisotopic mass of a chemical structure from its SMILES representation using RDKit, enabling validation and correction of parent mass metadata in tandem mass spectrometry library records. This skill is essential for detecting and repairing metadata errors where parent mass was incorrectly derived from molar mass instead of monoisotopic mass."
-when_to_use_negative: |
-  - "SMILES is invalid, malformed, or cannot be parsed by RDKit; skip mass calculation for that spectrum and flag it for manual curation."
-  - "Parent mass metadata is missing or marked as unknown; monoisotopic mass calculation alone cannot fill the gap without external reference data."
-  - "Input is already a validated, high-confidence parent mass from direct precursor m/z measurement (e.g., from high-resolution MS1 calibration); calculation is redundant and risks overwriting trusted values."
-edam_operation: "http://edamontology.org/operation_0235"
-edam_topics: |
-  - "http://edamontology.org/topic_0218"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "RDKit"
-  role: "Parses SMILES strings and computes exact monoisotopic mass of molecular structures for validation against metadata parent_mass fields"
-  - name: "matchms"
-  role: "Provides spectrum data structure and integrates monoisotopic mass calculation into repair filters (repair_parent_mass_is_molar_mass, repair_smiles_of_salts, repair adduct and parent mass based on SMILES)"
-  repo: "https://github.com/matchms/matchms"
-  - name: "matchms 0.26.4"
-  role: "Specific version used in the library cleaning pipeline that implements salt-splitting and parent mass repair workflows relying on RDKit monoisotopic mass calculation"
-  - name: "PubChem"
-  role: "External reference source for canonical SMILES and structure data used to validate and correct annotations before monoisotopic mass calculation"
-merged_aliases: - "monoisotopic-mass-calculation-from-structure"
-merged_alias_records: - {alias: "monoisotopic-mass-calculation-from-structure", slug: "monoisotopic-mass-calculation-from-structure", jaccard_score: 0.6, method: "token-set-jaccard", decision: "needs_review"}
-provenance: |
+description: Calculate the exact monoisotopic mass of a chemical structure from its SMILES representation using RDKit, enabling validation and correction of parent mass metadata in tandem mass spectrometry library records. This skill is essential for detecting and repairing metadata errors where parent mass was incorrectly derived from molar mass instead of monoisotopic mass.
+when_to_use_negative:
+- SMILES is invalid, malformed, or cannot be parsed by RDKit; skip mass calculation for that spectrum and flag it for manual curation.
+- Parent mass metadata is missing or marked as unknown; monoisotopic mass calculation alone cannot fill the gap without external reference data.
+- Input is already a validated, high-confidence parent mass from direct precursor m/z measurement (e.g., from high-resolution MS1 calibration); calculation is redundant and risks overwriting trusted values.
+edam_operation: http://edamontology.org/operation_0235
+edam_topics:
+- http://edamontology.org/topic_0218
+- http://edamontology.org/topic_3172
+tools:
+- name: RDKit
+  role: Parses SMILES strings and computes exact monoisotopic mass of molecular structures for validation against metadata parent_mass fields
+- name: matchms
+  role: Provides spectrum data structure and integrates monoisotopic mass calculation into repair filters (repair_parent_mass_is_molar_mass, repair_smiles_of_salts, repair adduct and parent mass based on SMILES)
+  repo: https://github.com/matchms/matchms
+- name: matchms 0.26.4
+  role: Specific version used in the library cleaning pipeline that implements salt-splitting and parent mass repair workflows relying on RDKit monoisotopic mass calculation
+- name: PubChem
+  role: External reference source for canonical SMILES and structure data used to validate and correct annotations before monoisotopic mass calculation
+merged_aliases:
+- monoisotopic-mass-calculation-from-structure
+merged_alias_records:
+- alias: monoisotopic-mass-calculation-from-structure
+  slug: monoisotopic-mass-calculation-from-structure
+  jaccard_score: 0.6
+  method: token-set-jaccard
+  decision: needs_review
+provenance:
   source_task_ids:
   - task_005
   - task_004
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/monoisotopic-mass-calculation-from-smiles@sha256:07da9a64926b97b64793f866ac3260364e5a3cd188647d97f25ddce6cad093a0
+  iri: https://w3id.org/holobiomicslab/asb-skill/monoisotopic-mass-calculation-from-smiles@sha256:f4938da3ca9a597ea3aa061f6fd52f38e901c820364327d2cdc0b153ca49fc2a
 ---
 
 # Monoisotopic mass calculation from SMILES

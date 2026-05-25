@@ -1,31 +1,31 @@
 ---
 name: smiles-structure-canonicalization
-description: "Derive canonical SMILES, InChI, and InChIKey representations from compound names or existing chemical identifiers using RDKit and PubChem reference data. This skill ensures consistent, machine-readable chemical structure notation across a mass spectral library, enabling reliable downstream annotation validation and adduct repair."
-when_to_use_negative: |
-  - "Input records already contain validated canonical SMILES and matching InChIKey without ambiguities."
-  - "Compound names are trade names, metabolite identifiers, or non-IUPAC strings that do not resolve to PubChem entries."
-  - "The analysis goal does not require standardized chemical structure representation (e.g., spectral similarity matching alone)."
-edam_operation: "http://edamontology.org/operation_3346"
-edam_topics: |
-  - "http://edamontology.org/topic_0154"
-  - "http://edamontology.org/topic_3375"
-tools: |
-  - name: "RDKit"
-  role: "Parse, canonicalize, and validate SMILES and InChI representations; compare structural representations across formats"
-  - name: "PubChem"
-  role: "Reference database for retrieving canonical SMILES, InChI, and InChIKey from compound names and identifiers"
-  - name: "matchms"
-  role: "Framework for applying the 'derive annotation from compound name' filter and managing spectrum metadata; version 0.26.4 or later"
-  repo: "https://github.com/matchms/matchms"
-provenance: |
+description: Derive canonical SMILES, InChI, and InChIKey representations from compound names or existing chemical identifiers using RDKit and PubChem reference data. This skill ensures consistent, machine-readable chemical structure notation across a mass spectral library, enabling reliable downstream annotation validation and adduct repair.
+when_to_use_negative:
+- Input records already contain validated canonical SMILES and matching InChIKey without ambiguities.
+- Compound names are trade names, metabolite identifiers, or non-IUPAC strings that do not resolve to PubChem entries.
+- The analysis goal does not require standardized chemical structure representation (e.g., spectral similarity matching alone).
+edam_operation: http://edamontology.org/operation_3346
+edam_topics:
+- http://edamontology.org/topic_0154
+- http://edamontology.org/topic_3375
+tools:
+- name: RDKit
+  role: Parse, canonicalize, and validate SMILES and InChI representations; compare structural representations across formats
+- name: PubChem
+  role: Reference database for retrieving canonical SMILES, InChI, and InChIKey from compound names and identifiers
+- name: matchms
+  role: Framework for applying the 'derive annotation from compound name' filter and managing spectrum metadata; version 0.26.4 or later
+  repo: https://github.com/matchms/matchms
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-structure-canonicalization@sha256:ed6a183f1bf2e3dba9f4f3e670d170f3ef1cddd9837c2b5d2c9cf578beee57eb
+  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-structure-canonicalization@sha256:3d6081d4c7e8eb15e096cff0b3cf545a511ea35162193fe3c4a2854350ed29ba
 ---
 
 # SMILES Structure Canonicalization

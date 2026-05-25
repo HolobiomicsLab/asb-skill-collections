@@ -1,40 +1,46 @@
 ---
 name: ms-data-export-and-format-conversion
-description: "Convert mass spectrometry data between open standardized formats (mzML, mzXML, MGF) to enable interoperability across analysis software and repositories. This skill is essential for querying MS data with tools like MassQL that require specific input formats."
-when_to_use_negative: |
-  - "Your analysis tool natively supports your raw instrument format (e.g., Thermo Xcalibur software reading .raw files directly) and you do not need to share data with external repositories."
-  - "You are working exclusively with processed feature tables (m/z-by-sample matrices) rather than raw spectra; format conversion applies only to spectrum-level data."
-  - "Your workflow requires vendor-specific metadata or calibration that is lost in conversion to open formats."
-edam_operation: "http://edamontology.org/operation_3650"
-edam_topics: |
-  - "http://edamontology.org/topic_3370"
-  - "http://edamontology.org/topic_0769"
-tools: |
-  - name: "pyteomics"
-  role: "Read and parse open MS data files (mzML, mzXML, MGF) into in-memory pandas data frames for downstream filtering and export"
-  - name: "MZmine"
-  role: "Convert vendor raw formats to mzML/mzXML and perform batch format conversion with optional feature detection and noise filtering"
-  repo: "https://github.com/mzmine/mzmine"
-  - name: "Thermo RawFileReader"
-  role: "Native Windows DLL for reading and converting Thermo .raw files to open formats via command-line or Python API"
-  - name: "Waters CDCReader"
-  role: "Convert Waters .raw files to tab/space-delimited text format or mzML via command-line batch processing"
-  - name: "Apache feather"
-  role: "Cache converted MS spectra in columnar format for fast repeated querying of large datasets"
-  - name: "pandas"
-  role: "Serialize and export filtered or processed MS spectra to tabular formats (CSV/TSV) with scan identifiers, m/z, intensity, and metadata"
-merged_aliases: - "ms-data-format-conversion-and-export"
-merged_alias_records: - {alias: "ms-data-format-conversion-and-export", slug: "ms-data-format-conversion-and-export", jaccard_score: 1.0, method: "token-set-jaccard", decision: "auto"}
-provenance: |
+description: Convert mass spectrometry data between open standardized formats (mzML, mzXML, MGF) to enable interoperability across analysis software and repositories. This skill is essential for querying MS data with tools like MassQL that require specific input formats.
+when_to_use_negative:
+- Your analysis tool natively supports your raw instrument format (e.g., Thermo Xcalibur software reading .raw files directly) and you do not need to share data with external repositories.
+- You are working exclusively with processed feature tables (m/z-by-sample matrices) rather than raw spectra; format conversion applies only to spectrum-level data.
+- Your workflow requires vendor-specific metadata or calibration that is lost in conversion to open formats.
+edam_operation: http://edamontology.org/operation_3650
+edam_topics:
+- http://edamontology.org/topic_3370
+- http://edamontology.org/topic_0769
+tools:
+- name: pyteomics
+  role: Read and parse open MS data files (mzML, mzXML, MGF) into in-memory pandas data frames for downstream filtering and export
+- name: MZmine
+  role: Convert vendor raw formats to mzML/mzXML and perform batch format conversion with optional feature detection and noise filtering
+  repo: https://github.com/mzmine/mzmine
+- name: Thermo RawFileReader
+  role: Native Windows DLL for reading and converting Thermo .raw files to open formats via command-line or Python API
+- name: Waters CDCReader
+  role: Convert Waters .raw files to tab/space-delimited text format or mzML via command-line batch processing
+- name: Apache feather
+  role: Cache converted MS spectra in columnar format for fast repeated querying of large datasets
+- name: pandas
+  role: Serialize and export filtered or processed MS spectra to tabular formats (CSV/TSV) with scan identifiers, m/z, intensity, and metadata
+merged_aliases:
+- ms-data-format-conversion-and-export
+merged_alias_records:
+- alias: ms-data-format-conversion-and-export
+  slug: ms-data-format-conversion-and-export
+  jaccard_score: 1.0
+  method: token-set-jaccard
+  decision: auto
+provenance:
   source_task_ids:
   - task_001
   - task_003
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms-data-export-and-format-conversion@sha256:2bcd9e3a314a9cf422a9989802c28746bc954ce7131a1ff97a81d23bfb6b7779
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms-data-export-and-format-conversion@sha256:c9ca95f6ed2d11d03c5fbfe73a00fede6e097676dc1e55b7e32d209df09ca698
 ---
 
 # MS data export and format conversion

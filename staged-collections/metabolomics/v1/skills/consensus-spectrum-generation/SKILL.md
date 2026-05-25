@@ -1,33 +1,33 @@
 ---
 name: consensus-spectrum-generation
-description: "Collapse redundant MS/MS spectra from repository-scale queries into representative consensus spectra to reduce data dimensionality and enable downstream molecular networking and annotation. This skill is essential when large-scale mass spectrometry queries retrieve thousands of spectra with substantial redundancy across different samples or analytical runs."
-when_to_use_negative: |
-  - "Input is already a curated spectral library or manually validated dataset — consensus generation is unnecessary and may obscure individual validated differences."
-  - "Redundancy is intentionally preserved for statistical power or publication of all variant spectra — clustering removes this granularity."
-  - "Spectra are from a single instrument run or highly controlled analytical study where each spectrum is already unique — clustering gain is minimal."
-edam_operation: "http://edamontology.org/operation_3933"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "MS-Cluster"
-  role: "Clusters redundant MS/MS spectra and generates consensus spectra with representative peaks and intensities"
-  - name: "Falcon-MS"
-  role: "Alternative tool for consensus MS/MS spectrum generation from clustering results"
-  - name: "MassQL"
-  role: "Generates the large-scale query results (e.g., 26,944 spectra) that serve as input to consensus generation"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "GNPS"
-  role: "Accepts consensus spectra for molecular network construction and spectral library annotation"
-provenance: |
+description: Collapse redundant MS/MS spectra from repository-scale queries into representative consensus spectra to reduce data dimensionality and enable downstream molecular networking and annotation. This skill is essential when large-scale mass spectrometry queries retrieve thousands of spectra with substantial redundancy across different samples or analytical runs.
+when_to_use_negative:
+- Input is already a curated spectral library or manually validated dataset — consensus generation is unnecessary and may obscure individual validated differences.
+- Redundancy is intentionally preserved for statistical power or publication of all variant spectra — clustering removes this granularity.
+- Spectra are from a single instrument run or highly controlled analytical study where each spectrum is already unique — clustering gain is minimal.
+edam_operation: http://edamontology.org/operation_3933
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+tools:
+- name: MS-Cluster
+  role: Clusters redundant MS/MS spectra and generates consensus spectra with representative peaks and intensities
+- name: Falcon-MS
+  role: Alternative tool for consensus MS/MS spectrum generation from clustering results
+- name: MassQL
+  role: Generates the large-scale query results (e.g., 26,944 spectra) that serve as input to consensus generation
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: GNPS
+  role: Accepts consensus spectra for molecular network construction and spectral library annotation
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/consensus-spectrum-generation@sha256:a46daf409adbc2743959591bd5a169cfabbbcf32582b27a4b31e5ea693b34d3d
+  iri: https://w3id.org/holobiomicslab/asb-skill/consensus-spectrum-generation@sha256:d5b5fb1364f40d55f410ff1911824f68bb8939820c3c0d3e89a330ca5c61f851
 ---
 
 # consensus-spectrum-generation

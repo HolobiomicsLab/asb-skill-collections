@@ -1,38 +1,38 @@
 ---
 name: cyp450-enzyme-metabolization-rules
-description: "Apply computational prediction of Phase I CYP450-mediated metabolite structures and molecular formulas using BioTransformer, then compare predicted metabolites against experimentally detected metabolite formulas from LC–HRMS data to validate in vitro metabolic transformation coverage and identify unmapped transformation pathways."
-when_to_use_negative: |
-  - "Input parent structures are missing or incomplete—BioTransformer requires valid chemical structure input."
-  - "Experimental metabolite dataset has not been filtered for false positives (blank contamination, isotopes, adducts not removed)—apply abundance filters (>4-fold), mass defect (−100 to +50 mmu), and mass difference (<+50 u) filtering before comparison."
-  - "Study objective is to identify phase II metabolites (conjugation, glucuronidation) rather than phase I CYP450 oxidative transformations—BioTransformer CYP450 mode is not designed for conjugation prediction."
-edam_operation: "http://edamontology.org/operation_3762"
-edam_topics: |
-  - "http://edamontology.org/topic_0154"
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3407"
-tools: |
-  - name: "BioTransformer"
-  role: "Predicts phase I CYP450-mediated metabolite structures and molecular formulas from parent xenobiotic structures using combined rule-based and machine learning approaches"
-  - name: "XCMS version 3.8"
-  role: "Detects, aligns, and corrects retention time of LC–HRMS features prior to metabolite filtering and formula assignment"
-  - name: "CAMERA"
-  role: "Componentizes features to remove isotopes and adducts, reducing false positive features before metabolite prioritization"
-  - name: "GenForm"
-  role: "Calculates molecular formulas from MS1 accurate mass and MS2 fragmentation spectra for experimental metabolite annotation"
-  - name: "incubatoR"
-  role: "R-based automated LC–HRMS data processing workflow integrating XCMS, CAMERA, statistical filtering, mass defect/difference filtering, and GenForm to generate prioritized experimental metabolite list for comparison with BioTransformer predictions"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "R v 3.6.1"
-  role: "Implements set operations (intersection, union) and visualization (Venn diagram) for predicted vs. experimental metabolite comparison"
-provenance: |
+description: Apply computational prediction of Phase I CYP450-mediated metabolite structures and molecular formulas using BioTransformer, then compare predicted metabolites against experimentally detected metabolite formulas from LC–HRMS data to validate in vitro metabolic transformation coverage and identify unmapped transformation pathways.
+when_to_use_negative:
+- Input parent structures are missing or incomplete—BioTransformer requires valid chemical structure input.
+- Experimental metabolite dataset has not been filtered for false positives (blank contamination, isotopes, adducts not removed)—apply abundance filters (>4-fold), mass defect (−100 to +50 mmu), and mass difference (<+50 u) filtering before comparison.
+- Study objective is to identify phase II metabolites (conjugation, glucuronidation) rather than phase I CYP450 oxidative transformations—BioTransformer CYP450 mode is not designed for conjugation prediction.
+edam_operation: http://edamontology.org/operation_3762
+edam_topics:
+- http://edamontology.org/topic_0154
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3407
+tools:
+- name: BioTransformer
+  role: Predicts phase I CYP450-mediated metabolite structures and molecular formulas from parent xenobiotic structures using combined rule-based and machine learning approaches
+- name: XCMS version 3.8
+  role: Detects, aligns, and corrects retention time of LC–HRMS features prior to metabolite filtering and formula assignment
+- name: CAMERA
+  role: Componentizes features to remove isotopes and adducts, reducing false positive features before metabolite prioritization
+- name: GenForm
+  role: Calculates molecular formulas from MS1 accurate mass and MS2 fragmentation spectra for experimental metabolite annotation
+- name: incubatoR
+  role: R-based automated LC–HRMS data processing workflow integrating XCMS, CAMERA, statistical filtering, mass defect/difference filtering, and GenForm to generate prioritized experimental metabolite list for comparison with BioTransformer predictions
+  repo: https://github.com/chufz/incubatoR
+- name: R v 3.6.1
+  role: Implements set operations (intersection, union) and visualization (Venn diagram) for predicted vs. experimental metabolite comparison
+provenance:
   source_task_ids:
   - task_005
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/cyp450-enzyme-metabolization-rules@sha256:0dc8b94c989c15177b8312415ed92dea0723ef438cc0cb86a83a4cd24fba01f9
+  iri: https://w3id.org/holobiomicslab/asb-skill/cyp450-enzyme-metabolization-rules@sha256:999dce115060cb49e36062783f57197b28b70e09c8949d1ca64d220282c50030
 ---
 
 # cyp450-enzyme-metabolization-rules

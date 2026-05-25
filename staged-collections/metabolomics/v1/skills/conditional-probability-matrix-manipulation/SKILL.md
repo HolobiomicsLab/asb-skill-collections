@@ -1,32 +1,32 @@
 ---
 name: conditional-probability-matrix-manipulation
-description: "Extract and filter conditional probability matrices from mmvec (microbe-metabolite vectors) neural network output to identify high-confidence microbe–metabolite interaction pairs. This skill isolates the most predictive taxa–metabolite associations by retaining rows corresponding to annotated metabolites and columns corresponding to taxa with the highest conditional probabilities."
-when_to_use_negative: |
-  - "Input is already a curated set of interactions (e.g., from literature or validated databases); filtering would redundantly remove signals."
-  - "All metabolites are unannotated or lack compound-level identifications; filtering to annotated metabolites would leave an empty or uninformative result."
-  - "The goal is to identify rare or low-probability associations; this skill prioritizes high-confidence pairs and will mask weak but real interactions."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0602"
-  - "http://edamontology.org/topic_0154"
-tools: |
-  - name: "mmvec"
-  role: "generates conditional probability matrices of metabolite abundance given taxon abundance via neural network; output is the primary input to this skill"
-  - name: "QIIME2"
-  role: "wraps mmvec and exports conditional probability matrices; provides the export format and framework for this skill"
-  - name: "R"
-  role: "used for subsetting matrix rows/columns, ranking taxa by conditional probability, and exporting filtered results"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Extract and filter conditional probability matrices from mmvec (microbe-metabolite vectors) neural network output to identify high-confidence microbe–metabolite interaction pairs. This skill isolates the most predictive taxa–metabolite associations by retaining rows corresponding to annotated metabolites and columns corresponding to taxa with the highest conditional probabilities.
+when_to_use_negative:
+- Input is already a curated set of interactions (e.g., from literature or validated databases); filtering would redundantly remove signals.
+- All metabolites are unannotated or lack compound-level identifications; filtering to annotated metabolites would leave an empty or uninformative result.
+- The goal is to identify rare or low-probability associations; this skill prioritizes high-confidence pairs and will mask weak but real interactions.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0602
+- http://edamontology.org/topic_0154
+tools:
+- name: mmvec
+  role: generates conditional probability matrices of metabolite abundance given taxon abundance via neural network; output is the primary input to this skill
+- name: QIIME2
+  role: wraps mmvec and exports conditional probability matrices; provides the export format and framework for this skill
+- name: R
+  role: used for subsetting matrix rows/columns, ranking taxa by conditional probability, and exporting filtered results
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/conditional-probability-matrix-manipulation@sha256:f5353768c863e9c2591523011a9540b8c8ec4f5e6cda310f062ec44f638be305
+  iri: https://w3id.org/holobiomicslab/asb-skill/conditional-probability-matrix-manipulation@sha256:715291234b0fb35338ab0631c65a87d78205327b8179f49faec5dde385539c2d
 ---
 
 # conditional-probability-matrix-manipulation

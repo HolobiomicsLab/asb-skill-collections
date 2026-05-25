@@ -1,30 +1,30 @@
 ---
 name: ugt-sequence-curation-and-filtering
-description: "Filter and curate UDP-glycosyltransferase (UGT) sequences identified via Pfam domain scanning to retain functionally relevant single-domain candidates for downstream phylogenetic analysis. This skill removes multi-domain sequences that may conflate evolutionary relationships or functional assignments."
-when_to_use_negative: |
-  - "Input is already a curated multiple sequence alignment or a phylogenetic tree — filtering is only needed on raw Pfam scan outputs."
-  - "You intend to characterize multidomain enzymes or study domain-fusion evolution — filtering out PF03033-containing sequences would discard the biology you want to study."
-  - "The downstream goal is functional classification of all UGTs regardless of domain architecture — single-domain filtering may be overly restrictive."
-edam_operation: "http://edamontology.org/operation_0370"
-edam_topics: |
-  - "http://edamontology.org/topic_0078"
-  - "http://edamontology.org/topic_0080"
-tools: |
-  - name: "Pfam database"
-  role: "Source of domain annotations (PF00201, PF03033) used to identify and filter candidate UGT sequences"
-  - name: "hmmscan"
-  role: "Generates domain hit tables that are parsed and filtered by this skill to remove multi-domain sequences"
-  - name: "MAFFT"
-  role: "Downstream tool: receives the filtered single-domain UGT sequences as input for multiple sequence alignment"
-provenance: |
+description: Filter and curate UDP-glycosyltransferase (UGT) sequences identified via Pfam domain scanning to retain functionally relevant single-domain candidates for downstream phylogenetic analysis. This skill removes multi-domain sequences that may conflate evolutionary relationships or functional assignments.
+when_to_use_negative:
+- Input is already a curated multiple sequence alignment or a phylogenetic tree — filtering is only needed on raw Pfam scan outputs.
+- You intend to characterize multidomain enzymes or study domain-fusion evolution — filtering out PF03033-containing sequences would discard the biology you want to study.
+- The downstream goal is functional classification of all UGTs regardless of domain architecture — single-domain filtering may be overly restrictive.
+edam_operation: http://edamontology.org/operation_0370
+edam_topics:
+- http://edamontology.org/topic_0078
+- http://edamontology.org/topic_0080
+tools:
+- name: Pfam database
+  role: Source of domain annotations (PF00201, PF03033) used to identify and filter candidate UGT sequences
+- name: hmmscan
+  role: Generates domain hit tables that are parsed and filtered by this skill to remove multi-domain sequences
+- name: MAFFT
+  role: 'Downstream tool: receives the filtered single-domain UGT sequences as input for multiple sequence alignment'
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ugt-sequence-curation-and-filtering@sha256:77d2f60379c8f0246e4d13e37026ff9b60fd8809124f08b593a9ec7b941eb358
+  iri: https://w3id.org/holobiomicslab/asb-skill/ugt-sequence-curation-and-filtering@sha256:d3c5a5d912465fd910695078fb61dced90467af89b77a5ea8c9fe1fbed0c104c
 ---
 
 # UGT sequence curation and filtering

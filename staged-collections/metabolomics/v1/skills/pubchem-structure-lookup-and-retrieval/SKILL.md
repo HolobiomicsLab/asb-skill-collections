@@ -1,31 +1,31 @@
 ---
 name: pubchem-structure-lookup-and-retrieval
-description: "Query PubChem to derive canonical SMILES, InChI, and InChIKey from compound names for mass spectra annotations. This skill validates and standardizes chemical structure representations in spectral metadata, enabling detection of structural mismatches and unannotated spectra."
-when_to_use_negative: |
-  - "Spectra lack compound names or have ambiguous/multi-part compound identifiers that PubChem cannot resolve uniquely."
-  - "The analysis goal does not require standardized or canonical structure representations (e.g., only peak-level filtering or intensity normalization is needed)."
-  - "Spectra already have manually validated, institution-specific structure identifiers that supersede PubChem's canonical forms."
-edam_operation: "http://edamontology.org/operation_2421"
-edam_topics: |
-  - "http://edamontology.org/topic_0154"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "Framework for loading, filtering, and applying the 'derive_annotation_from_compound_name' filter to spectral data"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Parses and compares derived SMILES, InChI, and InChIKey to detect structural mismatches between PubChem results and existing annotations"
-  - name: "PubChem"
-  role: "External compound database queried by matchms filter to retrieve canonical SMILES, InChI, and InChIKey from compound names"
-provenance: |
+description: Query PubChem to derive canonical SMILES, InChI, and InChIKey from compound names for mass spectra annotations. This skill validates and standardizes chemical structure representations in spectral metadata, enabling detection of structural mismatches and unannotated spectra.
+when_to_use_negative:
+- Spectra lack compound names or have ambiguous/multi-part compound identifiers that PubChem cannot resolve uniquely.
+- The analysis goal does not require standardized or canonical structure representations (e.g., only peak-level filtering or intensity normalization is needed).
+- Spectra already have manually validated, institution-specific structure identifiers that supersede PubChem's canonical forms.
+edam_operation: http://edamontology.org/operation_2421
+edam_topics:
+- http://edamontology.org/topic_0154
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: Framework for loading, filtering, and applying the 'derive_annotation_from_compound_name' filter to spectral data
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Parses and compares derived SMILES, InChI, and InChIKey to detect structural mismatches between PubChem results and existing annotations
+- name: PubChem
+  role: External compound database queried by matchms filter to retrieve canonical SMILES, InChI, and InChIKey from compound names
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/pubchem-structure-lookup-and-retrieval@sha256:3b96dd9a64e42671847e168b472a13edbb40acc316c3af2b88ef25632dfea82b
+  iri: https://w3id.org/holobiomicslab/asb-skill/pubchem-structure-lookup-and-retrieval@sha256:df8dc77afced4e796bfc66c5e227aeb276cbea7cb631f055f594b6775d624042
 ---
 
 # PubChem structure lookup and retrieval

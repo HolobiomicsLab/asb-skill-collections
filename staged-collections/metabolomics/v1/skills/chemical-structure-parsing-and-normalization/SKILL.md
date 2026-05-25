@@ -1,31 +1,31 @@
 ---
 name: chemical-structure-parsing-and-normalization
-description: "Parse chemical structures from metadata (SMILES, InChI, compound names) and normalize them to canonical forms using RDKit and external chemical databases. This skill is essential for validating structure annotations in mass spectral libraries and detecting mismatches between chemical identifiers."
-when_to_use_negative: |
-  - "Input spectra lack any chemical structure metadata (SMILES, InChI, or compound name) — parsing has no source material."
-  - "Mass spectra are experimental, unannotated data without assigned chemical identities — structure parsing requires annotation."
-  - "The analysis goal is fragment-level validation (e.g., checking if measured peaks match predicted neutral losses) rather than precursor structure validation — use fragment matching filters instead."
-edam_operation: "http://edamontology.org/operation_3960"
-edam_topics: |
-  - "http://edamontology.org/topic_0154"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "RDKit"
-  role: "Parse SMILES, InChI, and InChIKey strings; compute monoisotopic mass and molecular properties from chemical structures"
-  - name: "matchms"
-  role: "Load and manage spectrum objects with chemical structure metadata; apply repair filters (repair_smiles_of_salts, repair_adduct_and_parent_mass_based_on_smiles) to normalize structures and validate annotations"
-  repo: "https://github.com/matchms/matchms"
-  - name: "PubChem"
-  role: "Derive canonical SMILES, InChI, and InChIKey from compound names via lookup; serves as reference for structure canonicalization"
-provenance: |
+description: Parse chemical structures from metadata (SMILES, InChI, compound names) and normalize them to canonical forms using RDKit and external chemical databases. This skill is essential for validating structure annotations in mass spectral libraries and detecting mismatches between chemical identifiers.
+when_to_use_negative:
+- Input spectra lack any chemical structure metadata (SMILES, InChI, or compound name) — parsing has no source material.
+- Mass spectra are experimental, unannotated data without assigned chemical identities — structure parsing requires annotation.
+- The analysis goal is fragment-level validation (e.g., checking if measured peaks match predicted neutral losses) rather than precursor structure validation — use fragment matching filters instead.
+edam_operation: http://edamontology.org/operation_3960
+edam_topics:
+- http://edamontology.org/topic_0154
+- http://edamontology.org/topic_3520
+tools:
+- name: RDKit
+  role: Parse SMILES, InChI, and InChIKey strings; compute monoisotopic mass and molecular properties from chemical structures
+- name: matchms
+  role: Load and manage spectrum objects with chemical structure metadata; apply repair filters (repair_smiles_of_salts, repair_adduct_and_parent_mass_based_on_smiles) to normalize structures and validate annotations
+  repo: https://github.com/matchms/matchms
+- name: PubChem
+  role: Derive canonical SMILES, InChI, and InChIKey from compound names via lookup; serves as reference for structure canonicalization
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-parsing-and-normalization@sha256:e6d0bab3d983c7211189d6ca80fe9795f3b00618a9e813f8b85a5c43f19bd2e2
+  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-parsing-and-normalization@sha256:c5f0e00b3e66e662e3c3d77e76452b1650a44b2c46aad340461f904b33c67b2a
 ---
 
 # chemical-structure-parsing-and-normalization

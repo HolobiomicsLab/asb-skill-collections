@@ -1,31 +1,31 @@
 ---
 name: molecular-network-node-annotation-via-library-matching
-description: "Annotate spectral nodes in feature-based molecular networks by matching MS/MS fragmentation spectra against curated reference libraries (e.g., GNPS public library), enabling rapid structural identification of metabolites with high spectral coverage. This skill is essential when a molecular network contains hundreds of spectral nodes and manual curation is infeasible."
-when_to_use_negative: |
-  - "Your metabolites are not well-represented in public reference libraries (e.g., novel synthetic compounds or rare plant species); use de novo structure elucidation or alternative annotation strategies instead."
-  - "Your MS/MS data were acquired on a non-standard instrument or under collision energies not represented in the reference library; spectral matching will fail due to fragmentation pattern mismatch."
-  - "You have already performed targeted MS/MS validation with standards and need only to confirm identities; library matching is redundant."
-edam_operation: "http://edamontology.org/operation_3631"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "GNPS (Global Natural Products Social Molecular Networking)"
-  role: "Platform hosting feature-based molecular networking workflow, cosine similarity scoring engine, and public MS/MS reference library for library matching"
-  - name: "GNPS public library"
-  role: "Curated MS/MS reference spectral database for matching experimental spectra against known metabolite standards"
-  - name: "LC-MS/MS"
-  role: "Analytical instrumentation producing high-resolution MS/MS fragmentation spectra used as input for spectral matching"
-provenance: |
+description: Annotate spectral nodes in feature-based molecular networks by matching MS/MS fragmentation spectra against curated reference libraries (e.g., GNPS public library), enabling rapid structural identification of metabolites with high spectral coverage. This skill is essential when a molecular network contains hundreds of spectral nodes and manual curation is infeasible.
+when_to_use_negative:
+- Your metabolites are not well-represented in public reference libraries (e.g., novel synthetic compounds or rare plant species); use de novo structure elucidation or alternative annotation strategies instead.
+- Your MS/MS data were acquired on a non-standard instrument or under collision energies not represented in the reference library; spectral matching will fail due to fragmentation pattern mismatch.
+- You have already performed targeted MS/MS validation with standards and need only to confirm identities; library matching is redundant.
+edam_operation: http://edamontology.org/operation_3631
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_3172
+tools:
+- name: GNPS (Global Natural Products Social Molecular Networking)
+  role: Platform hosting feature-based molecular networking workflow, cosine similarity scoring engine, and public MS/MS reference library for library matching
+- name: GNPS public library
+  role: Curated MS/MS reference spectral database for matching experimental spectra against known metabolite standards
+- name: LC-MS/MS
+  role: Analytical instrumentation producing high-resolution MS/MS fragmentation spectra used as input for spectral matching
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:97a98c8d4ce973730483e7a2d891d8cc58dc7e12c6af91259d0e0534f84a8923
+  iri: https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:877e0c9c6893042dfbc73a5074db73c454fbd75facc040cd584491b39c4ef0f3
 ---
 
 # molecular-network-node-annotation-via-library-matching

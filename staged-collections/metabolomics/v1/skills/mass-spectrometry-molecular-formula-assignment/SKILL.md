@@ -1,35 +1,35 @@
 ---
 name: mass-spectrometry-molecular-formula-assignment
-description: "Assignment of unambiguous molecular formulas to high-resolution LC–HRMS metabolite features by applying GenForm to MS1 m/z values and tandem MS2 spectra, constrained by parent pesticide elemental composition rules and validated through MS2 fragment explainability and in silico fragmentation prediction."
-when_to_use_negative: |
-  - "Input features already have validated reference spectra or confirmed structural identifications (use instead for confirmation or structure refinement)."
-  - "MS2 spectra are missing or of poor quality (low signal, sparse fragments); GenForm requires informative fragmentation patterns to constrain formula space."
-  - "Parent pesticide elemental composition is unknown or highly ambiguous; the fuzzy formula constraint is essential to avoid combinatorial explosion of candidates."
-edam_operation: "http://edamontology.org/operation_3632"
-edam_topics: |
-  - "http://edamontology.org/topic_3370"
-  - "http://edamontology.org/topic_0625"
-tools: |
-  - name: "GenForm"
-  role: "command-line tool for calculating molecular formulas from MS1 m/z and MS2 spectra, constrained by fuzzy formula; outputs scored candidate formulas and fragment explainability"
-  - name: "Sirius version 4.4.27"
-  role: "in silico fragmentation and molecular fingerprint prediction for resolving ambiguous formulas; examines fragmentation trees and functional group assignments"
-  - name: "mzR"
-  role: "extraction of cleaned MS2 spectra and associated metadata from data-dependent MS2 acquisition in mzML or vendor formats"
-  - name: "OrgMassSpecR"
-  role: "calculation of dot-product similarity scores (SpectrumSimilarity function with t=0.01, b=10) between experimental and reference MS2 spectra for confidence assessment"
-  - name: "incubatoR"
-  role: "automated R-based workflow for feature detection, filtering, statistical prioritization, and MS2 spectrum extraction upstream of molecular formula assignment"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Assignment of unambiguous molecular formulas to high-resolution LC–HRMS metabolite features by applying GenForm to MS1 m/z values and tandem MS2 spectra, constrained by parent pesticide elemental composition rules and validated through MS2 fragment explainability and in silico fragmentation prediction.
+when_to_use_negative:
+- Input features already have validated reference spectra or confirmed structural identifications (use instead for confirmation or structure refinement).
+- MS2 spectra are missing or of poor quality (low signal, sparse fragments); GenForm requires informative fragmentation patterns to constrain formula space.
+- Parent pesticide elemental composition is unknown or highly ambiguous; the fuzzy formula constraint is essential to avoid combinatorial explosion of candidates.
+edam_operation: http://edamontology.org/operation_3632
+edam_topics:
+- http://edamontology.org/topic_3370
+- http://edamontology.org/topic_0625
+tools:
+- name: GenForm
+  role: command-line tool for calculating molecular formulas from MS1 m/z and MS2 spectra, constrained by fuzzy formula; outputs scored candidate formulas and fragment explainability
+- name: Sirius version 4.4.27
+  role: in silico fragmentation and molecular fingerprint prediction for resolving ambiguous formulas; examines fragmentation trees and functional group assignments
+- name: mzR
+  role: extraction of cleaned MS2 spectra and associated metadata from data-dependent MS2 acquisition in mzML or vendor formats
+- name: OrgMassSpecR
+  role: calculation of dot-product similarity scores (SpectrumSimilarity function with t=0.01, b=10) between experimental and reference MS2 spectra for confidence assessment
+- name: incubatoR
+  role: automated R-based workflow for feature detection, filtering, statistical prioritization, and MS2 spectrum extraction upstream of molecular formula assignment
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-molecular-formula-assignment@sha256:229ef4fe053c28453d08496d269580a536bb465d3f78d3a70a6cab84be72ada6
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-molecular-formula-assignment@sha256:640b287ef9707a0b001ff92da5d5cb0fac7d05f80ff81030f2dde14837244a73
 ---
 
 # mass-spectrometry-molecular-formula-assignment

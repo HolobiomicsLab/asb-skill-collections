@@ -1,45 +1,45 @@
 ---
 name: product-ion-fragment-filtering
-description: "Filter MS/MS spectra by the presence and intensity of specific product ions (fragment m/z values) to identify compounds with characteristic fragmentation patterns. This skill uses MassQL queries to retrieve all MS/MS scans containing a target product ion within a specified m/z tolerance and minimum relative intensity threshold."
-when_to_use_negative: |
-  - "Input dataset contains only MS1 (full-scan) data without MS/MS fragmentation spectra—product-ion filtering requires tandem MS data."
-  - "Target product ion is highly abundant across unrelated compound classes (high false-positive rate due to in-source fragmentation or common neutral losses); use orthogonal filtering (e.g., precursor m/z, retention time, or ion mobility) to reduce noise."
-  - "MS/MS spectra lack sufficient intensity dynamic range or resolution to reliably detect the target product ion at the specified tolerance and intensity threshold; verify reference spectra meet quality criteria first."
-edam_operation: "http://edamontology.org/operation_3647"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "MassQL"
-  role: "Query language parser and execution engine for filtering MS/MS spectra by product ion m/z, tolerance, and intensity"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark"
-  role: "Python parsing toolkit used to parse MassQL query strings into internal data structures"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Python library for reading and parsing open MS data file formats (mzML, mzXML, MGF)"
-  - name: "pandas"
-  role: "Python DataFrame library for efficient filtering and manipulation of MS/MS spectra data"
-  - name: "Apache feather"
-  role: "Columnar file format for caching and fast retrieval of repeated MS data queries"
-  - name: "MS-Cluster"
-  role: "Clustering tool to collapse redundant MS/MS observations into consensus spectra after product-ion filtering"
-  - name: "Falcon-MS"
-  role: "Alternative tool to generate consensus MS/MS spectra from redundant observations"
-  - name: "MZmine"
-  role: "Open-source MS data analysis software with native MassQL support for product-ion filtering workflows"
-  repo: "https://github.com/mzmine/mzmine"
-  - name: "GNPS/MassIVE"
-  role: "Public MS data repository and spectral library resource for reference compounds and large-scale filtering"
-provenance: |
+description: Filter MS/MS spectra by the presence and intensity of specific product ions (fragment m/z values) to identify compounds with characteristic fragmentation patterns. This skill uses MassQL queries to retrieve all MS/MS scans containing a target product ion within a specified m/z tolerance and minimum relative intensity threshold.
+when_to_use_negative:
+- Input dataset contains only MS1 (full-scan) data without MS/MS fragmentation spectra—product-ion filtering requires tandem MS data.
+- Target product ion is highly abundant across unrelated compound classes (high false-positive rate due to in-source fragmentation or common neutral losses); use orthogonal filtering (e.g., precursor m/z, retention time, or ion mobility) to reduce noise.
+- MS/MS spectra lack sufficient intensity dynamic range or resolution to reliably detect the target product ion at the specified tolerance and intensity threshold; verify reference spectra meet quality criteria first.
+edam_operation: http://edamontology.org/operation_3647
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3172
+tools:
+- name: MassQL
+  role: Query language parser and execution engine for filtering MS/MS spectra by product ion m/z, tolerance, and intensity
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark
+  role: Python parsing toolkit used to parse MassQL query strings into internal data structures
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Python library for reading and parsing open MS data file formats (mzML, mzXML, MGF)
+- name: pandas
+  role: Python DataFrame library for efficient filtering and manipulation of MS/MS spectra data
+- name: Apache feather
+  role: Columnar file format for caching and fast retrieval of repeated MS data queries
+- name: MS-Cluster
+  role: Clustering tool to collapse redundant MS/MS observations into consensus spectra after product-ion filtering
+- name: Falcon-MS
+  role: Alternative tool to generate consensus MS/MS spectra from redundant observations
+- name: MZmine
+  role: Open-source MS data analysis software with native MassQL support for product-ion filtering workflows
+  repo: https://github.com/mzmine/mzmine
+- name: GNPS/MassIVE
+  role: Public MS data repository and spectral library resource for reference compounds and large-scale filtering
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/product-ion-fragment-filtering@sha256:0d721cd056ec3f854a4a5103ea9b0139473ba4b7d2d4c540a334eae0650d4fc4
+  iri: https://w3id.org/holobiomicslab/asb-skill/product-ion-fragment-filtering@sha256:122a8df5c1298ba4cbae11d70e7821de5e447ca44d0e9dbd470cd299d0fb3f5f
 ---
 
 # product-ion-fragment-filtering

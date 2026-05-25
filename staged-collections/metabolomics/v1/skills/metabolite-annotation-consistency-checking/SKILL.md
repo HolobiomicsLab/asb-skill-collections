@@ -1,32 +1,32 @@
 ---
 name: metabolite-annotation-consistency-checking
-description: "Validate metabolite annotations in MS/MS library spectra by comparing derived canonical chemical identifiers (SMILES, InChI, InChIKey) against reference data and checking consistency between precursor m/z, adduct assignment, and molecular weight. This skill detects mismatches that indicate incorrect or incomplete annotations before library curation."
-when_to_use_negative: |
-  - "Input spectra lack compound names, SMILES, or other chemical identifiers that can be mapped to PubChem."
-  - "The dataset contains only unannotated spectra or spectra with de novo annotations not yet validated against reference databases."
-  - "Precursor m/z or adduct information is missing from the spectrum metadata and cannot be inferred from other fields."
-edam_operation: "http://edamontology.org/operation_3282"
-edam_topics: |
-  - "http://edamontology.org/topic_0599"
-  - "http://edamontology.org/topic_3365"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "Python library that implements the repair_adduct_based_on_smiles filter and manages the full spectrum metadata harmonization pipeline"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Derives canonical SMILES, InChI, and InChIKey from compound names and existing SMILES; performs chemical structure validation and mass calculation"
-  - name: "PubChem"
-  role: "Reference database queried to obtain canonical chemical identifiers and verify chemical structures linked to compound names"
-provenance: |
+description: Validate metabolite annotations in MS/MS library spectra by comparing derived canonical chemical identifiers (SMILES, InChI, InChIKey) against reference data and checking consistency between precursor m/z, adduct assignment, and molecular weight. This skill detects mismatches that indicate incorrect or incomplete annotations before library curation.
+when_to_use_negative:
+- Input spectra lack compound names, SMILES, or other chemical identifiers that can be mapped to PubChem.
+- The dataset contains only unannotated spectra or spectra with de novo annotations not yet validated against reference databases.
+- Precursor m/z or adduct information is missing from the spectrum metadata and cannot be inferred from other fields.
+edam_operation: http://edamontology.org/operation_3282
+edam_topics:
+- http://edamontology.org/topic_0599
+- http://edamontology.org/topic_3365
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: Python library that implements the repair_adduct_based_on_smiles filter and manages the full spectrum metadata harmonization pipeline
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Derives canonical SMILES, InChI, and InChIKey from compound names and existing SMILES; performs chemical structure validation and mass calculation
+- name: PubChem
+  role: Reference database queried to obtain canonical chemical identifiers and verify chemical structures linked to compound names
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:e74ba550bff555a46782cc62499b4fe6f4cd0dd969f09111ac9f2acce2c472a6
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:3cfbc2294ca3aa7f866794ddcaf7aae8ed41ab9274894e0462e1d4a367a2623a
 ---
 
 # Metabolite annotation consistency checking

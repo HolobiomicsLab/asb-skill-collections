@@ -1,41 +1,41 @@
 ---
 name: high-resolution-mass-accuracy-analysis
-description: "High-resolution mass accuracy analysis applies sub-ppm mass tolerance thresholds and mass defect filtering to prioritize metabolite features from LC–HRMS data and constrain molecular formula assignments in xenobiotic screening. This skill combines instrumental mass accuracy monitoring, mass defect shift filtering, and formula validation to distinguish true metabolites from background noise and matrix artifacts."
-when_to_use_negative: |
-  - "Input data already contains curated, reference-matched metabolite identifications from a spectral library (skill would be redundant)"
-  - "Mass accuracy of the instrument is unknown or unstable (>5 ppm drift observed); recalibrate before applying ±8 ppm tolerance thresholds"
-  - "Parent compound structure or elemental composition is unknown or ambiguous (GenForm formula constraints cannot be properly defined)"
-edam_operation: "http://edamontology.org/operation_3632"
-edam_topics: |
-  - "http://edamontology.org/topic_0218"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "XCMS"
-  role: "Feature detection, alignment, and retention time correction prior to mass accuracy filtering"
-  - name: "CAMERA"
-  role: "Isotope, adduct, and neutral-loss annotation; componentization of features before mass defect filtering"
-  - name: "mzR"
-  role: "Extraction of MS2 spectra corresponding to prioritized metabolite features from data-dependent MS2 acquisition"
-  - name: "GenForm"
-  role: "Command-line molecular formula assignment from MS1 m/z and MS2 spectra, with elemental composition constraints derived from parent formula"
-  - name: "OrgMassSpecR"
-  role: "Calculation of dot-product similarity scores (SpectrumSimilarity function) to assess MS2 spectral quality and confidence in formula assignment"
-  - name: "Sirius"
-  role: "In silico fragmentation and molecular fingerprint prediction for structure elucidation when fragmentation patterns are complex or ambiguous"
-  - name: "ProteoWizard"
-  role: "Conversion of raw vendor mass spectra to mzML format and centroiding before feature detection"
-  - name: "incubatoR"
-  role: "R workflow wrapper implementing automated LC–HRMS data processing including mass defect filtering, feature prioritization, and GenForm integration"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: High-resolution mass accuracy analysis applies sub-ppm mass tolerance thresholds and mass defect filtering to prioritize metabolite features from LC–HRMS data and constrain molecular formula assignments in xenobiotic screening. This skill combines instrumental mass accuracy monitoring, mass defect shift filtering, and formula validation to distinguish true metabolites from background noise and matrix artifacts.
+when_to_use_negative:
+- Input data already contains curated, reference-matched metabolite identifications from a spectral library (skill would be redundant)
+- Mass accuracy of the instrument is unknown or unstable (>5 ppm drift observed); recalibrate before applying ±8 ppm tolerance thresholds
+- Parent compound structure or elemental composition is unknown or ambiguous (GenForm formula constraints cannot be properly defined)
+edam_operation: http://edamontology.org/operation_3632
+edam_topics:
+- http://edamontology.org/topic_0218
+- http://edamontology.org/topic_3520
+tools:
+- name: XCMS
+  role: Feature detection, alignment, and retention time correction prior to mass accuracy filtering
+- name: CAMERA
+  role: Isotope, adduct, and neutral-loss annotation; componentization of features before mass defect filtering
+- name: mzR
+  role: Extraction of MS2 spectra corresponding to prioritized metabolite features from data-dependent MS2 acquisition
+- name: GenForm
+  role: Command-line molecular formula assignment from MS1 m/z and MS2 spectra, with elemental composition constraints derived from parent formula
+- name: OrgMassSpecR
+  role: Calculation of dot-product similarity scores (SpectrumSimilarity function) to assess MS2 spectral quality and confidence in formula assignment
+- name: Sirius
+  role: In silico fragmentation and molecular fingerprint prediction for structure elucidation when fragmentation patterns are complex or ambiguous
+- name: ProteoWizard
+  role: Conversion of raw vendor mass spectra to mzML format and centroiding before feature detection
+- name: incubatoR
+  role: R workflow wrapper implementing automated LC–HRMS data processing including mass defect filtering, feature prioritization, and GenForm integration
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/high-resolution-mass-accuracy-analysis@sha256:fc610fed99c9b7d4dc5e0d14760ec32926d5fd3336a3ba0893b86bdcb0c11fce
+  iri: https://w3id.org/holobiomicslab/asb-skill/high-resolution-mass-accuracy-analysis@sha256:37dac6409c9b680cf6d0dd60d67352797c4303ae3ee1f436380967d5f9d9ceaa
 ---
 
 # high-resolution-mass-accuracy-analysis

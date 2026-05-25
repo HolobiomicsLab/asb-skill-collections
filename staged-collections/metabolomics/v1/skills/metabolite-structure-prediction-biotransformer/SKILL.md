@@ -1,35 +1,35 @@
 ---
 name: metabolite-structure-prediction-biotransformer
-description: "Use BioTransformer to generate predicted phase I metabolite structures and molecular formulas for parent xenobiotics, then compare predicted formulas against experimentally detected molecular formulas from LC–HRMS data to assess metabolic coverage and identify experimentally detected metabolites supported by in silico prediction."
-when_to_use_negative: |
-  - "Input experimental metabolites have not yet been assigned unambiguous molecular formulas (e.g., formulas are ambiguous or missing); formula assignment must precede prediction comparison."
-  - "Parent compound structures are unavailable or poorly defined; BioTransformer requires valid chemical structures as input."
-  - "The analysis goal is to identify phase II metabolites (e.g., conjugation products with glutathione or glucuronic acid) without modification of BioTransformer parameters; the default CYP450 setting targets phase I oxidative transformations and may not fully capture subsequent phase II modifications."
-edam_operation: "http://edamontology.org/operation_3802"
-edam_topics: |
-  - "http://edamontology.org/topic_0625"
-  - "http://edamontology.org/topic_3407"
-tools: |
-  - name: "BioTransformer"
-  role: "Predicts phase I metabolite structures and molecular formulas from parent xenobiotic structures using rule-based and machine learning approaches; serves as the reference prediction set for comparison against experimental detections."
-  - name: "GenForm"
-  role: "Calculates molecular formulas from MS1 and MS2 spectra; generates the experimental formula dataset used for comparison against BioTransformer predictions."
-  - name: "XCMS version 3.8"
-  role: "Performs feature detection, alignment, and retention time correction on LC–HRMS data; upstream step that produces the feature list requiring formula assignment."
-  - name: "CAMERA"
-  role: "Componentizes all features (isotopes, adducts) after XCMS processing; refines the feature list before molecular formula calculation and metabolite filtering."
-  - name: "R v 3.6.1"
-  role: "Scripting environment (incubatoR workflow) for set-based comparison of predicted and experimental formula sets, visualization of Venn diagrams, and statistical analysis of metabolite overlap."
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Use BioTransformer to generate predicted phase I metabolite structures and molecular formulas for parent xenobiotics, then compare predicted formulas against experimentally detected molecular formulas from LC–HRMS data to assess metabolic coverage and identify experimentally detected metabolites supported by in silico prediction.
+when_to_use_negative:
+- Input experimental metabolites have not yet been assigned unambiguous molecular formulas (e.g., formulas are ambiguous or missing); formula assignment must precede prediction comparison.
+- Parent compound structures are unavailable or poorly defined; BioTransformer requires valid chemical structures as input.
+- The analysis goal is to identify phase II metabolites (e.g., conjugation products with glutathione or glucuronic acid) without modification of BioTransformer parameters; the default CYP450 setting targets phase I oxidative transformations and may not fully capture subsequent phase II modifications.
+edam_operation: http://edamontology.org/operation_3802
+edam_topics:
+- http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3407
+tools:
+- name: BioTransformer
+  role: Predicts phase I metabolite structures and molecular formulas from parent xenobiotic structures using rule-based and machine learning approaches; serves as the reference prediction set for comparison against experimental detections.
+- name: GenForm
+  role: Calculates molecular formulas from MS1 and MS2 spectra; generates the experimental formula dataset used for comparison against BioTransformer predictions.
+- name: XCMS version 3.8
+  role: Performs feature detection, alignment, and retention time correction on LC–HRMS data; upstream step that produces the feature list requiring formula assignment.
+- name: CAMERA
+  role: Componentizes all features (isotopes, adducts) after XCMS processing; refines the feature list before molecular formula calculation and metabolite filtering.
+- name: R v 3.6.1
+  role: Scripting environment (incubatoR workflow) for set-based comparison of predicted and experimental formula sets, visualization of Venn diagrams, and statistical analysis of metabolite overlap.
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_005
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-structure-prediction-biotransformer@sha256:e9ca45bfa5a2633eb7f766f1d08def85adad336c9067a36890024f5f62ada448
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-structure-prediction-biotransformer@sha256:f95139c0e1a06b4323d73beac85c113874d1d383df1d01e91218d074633e69ea
 ---
 
 # metabolite-structure-prediction-biotransformer

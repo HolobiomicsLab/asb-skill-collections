@@ -1,33 +1,33 @@
 ---
 name: metadata-harmonization-cleaning
-description: "Systematically clean and harmonize metadata in mass spectral libraries by applying a tiered filter pipeline (basic, default, library cleaning) that validates chemical annotations, repairs structural identifiers (SMILES, InChI, InChIKey), reconciles precursor m/z and adduct assignments with structure, and removes or repairs spectra with incomplete or inconsistent metadata. This skill is essential for preparing public MS/MS libraries (e.g., GNPS, MoNA, MassBank) for reliable downstream analysis and sharing."
-when_to_use_negative: |
-  - "Input library is already fully annotated and has been validated against fragment ion composition (i.e., fragments already verified to match the given chemical structure); additional repair will not improve reliability."
-  - "Annotated spectra contain wrong chemical structures that are consistent with measured parent mass (e.g., isomers); the current pipeline cannot detect these and will pass them through."
-  - "Library lacks sufficient metadata (e.g., no ion mode, no precursor m/z fields at all) to enable even basic harmonization; preprocessing to recover or impute these fields is required first."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "matchms"
-  role: "Core framework for executing the metadata cleaning and repair filter pipeline, including basic, default, and library cleaning tiers; orchestrates RDKit and PubChem calls."
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Validates and repairs SMILES strings; identifies salt components; derives canonical SMILES, InChI, and InChIKey; compares chemical structures to detect inconsistencies."
-  - name: "PubChem"
-  role: "Supplies canonical chemical identifiers (SMILES, InChI, InChIKey) when compound name is provided; used by the 'derive annotation from compound name' filter."
-  - name: "Python"
-  role: "Runtime environment for matchms and integration of filter logic, logging, and statistics reporting."
-provenance: |
+description: Systematically clean and harmonize metadata in mass spectral libraries by applying a tiered filter pipeline (basic, default, library cleaning) that validates chemical annotations, repairs structural identifiers (SMILES, InChI, InChIKey), reconciles precursor m/z and adduct assignments with structure, and removes or repairs spectra with incomplete or inconsistent metadata. This skill is essential for preparing public MS/MS libraries (e.g., GNPS, MoNA, MassBank) for reliable downstream analysis and sharing.
+when_to_use_negative:
+- Input library is already fully annotated and has been validated against fragment ion composition (i.e., fragments already verified to match the given chemical structure); additional repair will not improve reliability.
+- Annotated spectra contain wrong chemical structures that are consistent with measured parent mass (e.g., isomers); the current pipeline cannot detect these and will pass them through.
+- Library lacks sufficient metadata (e.g., no ion mode, no precursor m/z fields at all) to enable even basic harmonization; preprocessing to recover or impute these fields is required first.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0121
+tools:
+- name: matchms
+  role: Core framework for executing the metadata cleaning and repair filter pipeline, including basic, default, and library cleaning tiers; orchestrates RDKit and PubChem calls.
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Validates and repairs SMILES strings; identifies salt components; derives canonical SMILES, InChI, and InChIKey; compares chemical structures to detect inconsistencies.
+- name: PubChem
+  role: Supplies canonical chemical identifiers (SMILES, InChI, InChIKey) when compound name is provided; used by the 'derive annotation from compound name' filter.
+- name: Python
+  role: Runtime environment for matchms and integration of filter logic, logging, and statistics reporting.
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-harmonization-cleaning@sha256:92dbfb0dea7156096d38d2526a11dbc527ee3b47ef41c67fc1db89c37908275a
+  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-harmonization-cleaning@sha256:d8a69a9419be66df5c2249df4c8f2815ca7b921ad836861e3dc3cd3bff94b5f7
 ---
 
 # metadata-harmonization-cleaning

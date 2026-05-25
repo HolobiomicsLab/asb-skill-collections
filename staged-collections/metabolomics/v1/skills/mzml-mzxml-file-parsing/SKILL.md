@@ -1,36 +1,36 @@
 ---
 name: mzml-mzxml-file-parsing
-description: "Parse open-format mass spectrometry data files (mzML, mzXML, MGF) into memory-resident data structures (pandas DataFrames) to enable downstream spectral filtering and pattern queries. This is foundational for accessing MS1 and MS2 spectra programmatically."
-when_to_use_negative: |
-  - "Input is already a pre-processed feature table or consensus spectrum library (e.g., GNPS spectral library or MGF from molecular networking); re-parsing adds computational overhead without new information."
-  - "You require vendor-specific raw file formats (.raw from Thermo, .d from Agilent) without prior conversion to open formats; pyteomics cannot directly read proprietary binaries."
-  - "Analysis requires ion mobility separation metadata not embedded in the mzML/mzXML file structure; additional parsing or vendor libraries may be needed."
-edam_operation: "http://edamontology.org/operation_3763"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "pyteomics"
-  role: "Reads mzML, mzXML, and MGF files into Python data structures; handles mass spectrometry file I/O"
-  - name: "pandas"
-  role: "Stores parsed spectra as DataFrames; enables efficient filtering and slicing by m/z, retention time, scan number, and other metadata"
-  - name: "Apache Feather"
-  role: "Caches parsed spectra to disk in columnar format for fast reloading during repeated queries without re-parsing raw files"
-  - name: "MZmine"
-  role: "Open-source MS data analysis platform; natively supports mzML/mzXML import and spectral browsing"
-  repo: "https://github.com/mzmine/mzmine"
-  - name: "lark"
-  role: "Parser library used to transform MassQL query strings into parse trees for execution against parsed spectral DataFrames"
-  repo: "https://github.com/lark-parser/lark"
-provenance: |
+description: Parse open-format mass spectrometry data files (mzML, mzXML, MGF) into memory-resident data structures (pandas DataFrames) to enable downstream spectral filtering and pattern queries. This is foundational for accessing MS1 and MS2 spectra programmatically.
+when_to_use_negative:
+- Input is already a pre-processed feature table or consensus spectrum library (e.g., GNPS spectral library or MGF from molecular networking); re-parsing adds computational overhead without new information.
+- You require vendor-specific raw file formats (.raw from Thermo, .d from Agilent) without prior conversion to open formats; pyteomics cannot directly read proprietary binaries.
+- Analysis requires ion mobility separation metadata not embedded in the mzML/mzXML file structure; additional parsing or vendor libraries may be needed.
+edam_operation: http://edamontology.org/operation_3763
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+tools:
+- name: pyteomics
+  role: Reads mzML, mzXML, and MGF files into Python data structures; handles mass spectrometry file I/O
+- name: pandas
+  role: Stores parsed spectra as DataFrames; enables efficient filtering and slicing by m/z, retention time, scan number, and other metadata
+- name: Apache Feather
+  role: Caches parsed spectra to disk in columnar format for fast reloading during repeated queries without re-parsing raw files
+- name: MZmine
+  role: Open-source MS data analysis platform; natively supports mzML/mzXML import and spectral browsing
+  repo: https://github.com/mzmine/mzmine
+- name: lark
+  role: Parser library used to transform MassQL query strings into parse trees for execution against parsed spectral DataFrames
+  repo: https://github.com/lark-parser/lark
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mzml-mzxml-file-parsing@sha256:826c506b887ae32a68d544b4374b63698eec9fb1ff9a86539d08c85ed115ef9b
+  iri: https://w3id.org/holobiomicslab/asb-skill/mzml-mzxml-file-parsing@sha256:02899e290fb15eed4379136ed3751ce77f96f9b5d9bdf39bc3926b8da4800095
 ---
 
 # mzml-mzxml-file-parsing

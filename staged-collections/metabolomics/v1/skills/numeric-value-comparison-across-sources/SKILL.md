@@ -1,32 +1,32 @@
 ---
 name: numeric-value-comparison-across-sources
-description: "Cross-validate reported summary statistics (e.g., input counts, removal counts, repair counts, retention counts) from a scientific article against structured data artifacts (e.g., processing reports, supplementary tables) to verify reproducibility and detect transcription or calculation errors."
-when_to_use_negative: |
-  - "The artifact does not exist or is inaccessible at the cited location (e.g., Zenodo link is dead or requires authentication)."
-  - "The article reports aggregate statistics without citing a specific artifact or supplementary table as the source (comparison cannot be grounded)."
-  - "The artifact field names or structure are ambiguous or not aligned with the article's reported metrics (e.g., article reports 'spectra removed' but artifact has only 'spectra filtered' without definition)."
-edam_operation: "http://edamontology.org/operation_3436"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3372"
-tools: |
-  - name: "matchms"
-  role: "pipeline execution and metadata cleaning that produces the summary statistics being validated"
-  repo: "https://github.com/MassBank/matchms"
-  - name: "Python"
-  role: "script language for parsing artifacts, extracting values, and performing numeric comparisons"
-  - name: "Zenodo"
-  role: "repository host for supplementary tables, processing reports, and data artifacts cited in the article"
-  repo: "https://zenodo.org/"
-provenance: |
+description: Cross-validate reported summary statistics (e.g., input counts, removal counts, repair counts, retention counts) from a scientific article against structured data artifacts (e.g., processing reports, supplementary tables) to verify reproducibility and detect transcription or calculation errors.
+when_to_use_negative:
+- The artifact does not exist or is inaccessible at the cited location (e.g., Zenodo link is dead or requires authentication).
+- The article reports aggregate statistics without citing a specific artifact or supplementary table as the source (comparison cannot be grounded).
+- The artifact field names or structure are ambiguous or not aligned with the article's reported metrics (e.g., article reports 'spectra removed' but artifact has only 'spectra filtered' without definition).
+edam_operation: http://edamontology.org/operation_3436
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3372
+tools:
+- name: matchms
+  role: pipeline execution and metadata cleaning that produces the summary statistics being validated
+  repo: https://github.com/MassBank/matchms
+- name: Python
+  role: script language for parsing artifacts, extracting values, and performing numeric comparisons
+- name: Zenodo
+  role: repository host for supplementary tables, processing reports, and data artifacts cited in the article
+  repo: https://zenodo.org/
+provenance:
   source_task_ids:
   - task_007
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/numeric-value-comparison-across-sources@sha256:234e5abdfc03fd2b9128fe4868e0c89866e65b447d71975c23ca81174536a9b7
+  iri: https://w3id.org/holobiomicslab/asb-skill/numeric-value-comparison-across-sources@sha256:398c656140013aeb61815a175aec6ad6a39fcfb8b118c79feec2286b70be3378
 ---
 
 # numeric-value-comparison-across-sources

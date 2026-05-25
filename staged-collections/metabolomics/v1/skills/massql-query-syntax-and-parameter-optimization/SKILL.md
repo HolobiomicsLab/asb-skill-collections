@@ -1,39 +1,39 @@
 ---
 name: massql-query-syntax-and-parameter-optimization
-description: "Design and refine MassQL query strings to match specific mass spectrometry patterns (isotope ratios, product ions, retention time windows) on a reference dataset before scaling to large repositories. This skill ensures queries capture target analytes while minimizing false positives through iterative parameter tuning."
-when_to_use_negative: |
-  - "You do not have a reference dataset with known compounds to validate against; use domain knowledge or pilot data collection first."
-  - "The target analytes exhibit highly variable MS fragmentation or isotope patterns across instrument vendors or ionization sources; MassQL is designed to be vendor-agnostic but may require separate query refinement for each instrument class."
-  - "You have already executed a query at scale and are troubleshooting results post-hoc; redesign the query parameters and re-execute rather than applying this skill."
-edam_operation: "http://edamontology.org/operation_3631"
-edam_topics: |
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "MassQL"
-  role: "Query language and reference engine for pattern matching in MS data; parses query syntax and executes filtering logic against spectral data"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark"
-  role: "Python parser library used to transform MassQL query strings into internal parse tree data structures"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Python library for reading MS data files in mzML, mzXML, and MGF formats into memory for query execution"
-  - name: "pandas"
-  role: "Data manipulation and filtering library; processes query logic over MS spectra represented as DataFrames"
-  - name: "GNPS spectral libraries"
-  role: "Reference MS/MS library used to design and validate MassQL queries on known compounds before scaling"
-  - name: "MZmine"
-  role: "Open-source MS data analysis software that has natively adopted and integrated MassQL for query execution"
-  repo: "https://github.com/mzmine/mzmine"
-provenance: |
+description: Design and refine MassQL query strings to match specific mass spectrometry patterns (isotope ratios, product ions, retention time windows) on a reference dataset before scaling to large repositories. This skill ensures queries capture target analytes while minimizing false positives through iterative parameter tuning.
+when_to_use_negative:
+- You do not have a reference dataset with known compounds to validate against; use domain knowledge or pilot data collection first.
+- The target analytes exhibit highly variable MS fragmentation or isotope patterns across instrument vendors or ionization sources; MassQL is designed to be vendor-agnostic but may require separate query refinement for each instrument class.
+- You have already executed a query at scale and are troubleshooting results post-hoc; redesign the query parameters and re-execute rather than applying this skill.
+edam_operation: http://edamontology.org/operation_3631
+edam_topics:
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0121
+tools:
+- name: MassQL
+  role: Query language and reference engine for pattern matching in MS data; parses query syntax and executes filtering logic against spectral data
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark
+  role: Python parser library used to transform MassQL query strings into internal parse tree data structures
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Python library for reading MS data files in mzML, mzXML, and MGF formats into memory for query execution
+- name: pandas
+  role: Data manipulation and filtering library; processes query logic over MS spectra represented as DataFrames
+- name: GNPS spectral libraries
+  role: Reference MS/MS library used to design and validate MassQL queries on known compounds before scaling
+- name: MZmine
+  role: Open-source MS data analysis software that has natively adopted and integrated MassQL for query execution
+  repo: https://github.com/mzmine/mzmine
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:9a3ecd95282d2163337e3c64e5c046f9063d86ed165668344ea1b50a58c12154
+  iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:25157f3b82cd98e46af9ee7e93bab5b82ecda71b4874809fa2ab23bb4f02d97e
 ---
 
 # MassQL Query Syntax and Parameter Optimization

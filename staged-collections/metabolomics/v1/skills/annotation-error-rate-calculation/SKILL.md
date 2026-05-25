@@ -1,33 +1,33 @@
 ---
 name: annotation-error-rate-calculation
-description: "Calculate and report error rates when applying annotation-repair or annotation-derivation filters to mass spectral libraries, quantifying the proportion of spectra that could not be annotated, were left unannotated, or received structurally divergent annotations compared to originals. This skill validates filter efficacy and identifies systematic failure modes in library cleaning pipelines."
-when_to_use_negative: |
-  - "Input spectra are unannotated or lack compound name, parent mass, or adduct metadata — filter will have no reference for comparison and error rate will be meaningless."
-  - "Filter is not applied yet — error rate calculation requires both original and filtered annotation fields; do not use this skill on unfiltered data."
-  - "Comparison field (reference annotation) is not chemically standardized (e.g., raw user-entered SMILES with variable aromaticity) — RDKit comparison will fail or give false mismatches; canonicalize reference annotations first."
-edam_operation: "http://edamontology.org/operation_3096"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0602"
-tools: |
-  - name: "matchms"
-  role: "load, filter, and manage spectrum objects; apply annotation-derivation filters and structure comparison workflows"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "parse, canonicalize, and compare SMILES, InChI, and InChIKey; detect structural equivalence and mismatches"
-  - name: "PubChem"
-  role: "source for canonical SMILES, InChI, and InChIKey lookup from compound names; used by 'derive_annotation_from_compound_name' filter"
-  - name: "Python"
-  role: "scripting environment for tabular output generation, percentage calculations, and error aggregation"
-provenance: |
+description: Calculate and report error rates when applying annotation-repair or annotation-derivation filters to mass spectral libraries, quantifying the proportion of spectra that could not be annotated, were left unannotated, or received structurally divergent annotations compared to originals. This skill validates filter efficacy and identifies systematic failure modes in library cleaning pipelines.
+when_to_use_negative:
+- Input spectra are unannotated or lack compound name, parent mass, or adduct metadata — filter will have no reference for comparison and error rate will be meaningless.
+- Filter is not applied yet — error rate calculation requires both original and filtered annotation fields; do not use this skill on unfiltered data.
+- Comparison field (reference annotation) is not chemically standardized (e.g., raw user-entered SMILES with variable aromaticity) — RDKit comparison will fail or give false mismatches; canonicalize reference annotations first.
+edam_operation: http://edamontology.org/operation_3096
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0602
+tools:
+- name: matchms
+  role: load, filter, and manage spectrum objects; apply annotation-derivation filters and structure comparison workflows
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: parse, canonicalize, and compare SMILES, InChI, and InChIKey; detect structural equivalence and mismatches
+- name: PubChem
+  role: source for canonical SMILES, InChI, and InChIKey lookup from compound names; used by 'derive_annotation_from_compound_name' filter
+- name: Python
+  role: scripting environment for tabular output generation, percentage calculations, and error aggregation
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:2539c4ba3c97ebb32bc8e697ddcbb21b22fa1a7aa602c79b3cbe266123c6423a
+  iri: https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:cec5e086ac538f54d8ac3a4fcbf5a734a4f3deda4637e39f229f5672bd3d20f2
 ---
 
 # annotation-error-rate-calculation

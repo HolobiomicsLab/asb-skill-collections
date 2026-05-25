@@ -1,29 +1,29 @@
 ---
 name: feature-mass-difference-filtering
-description: "Remove features whose m/z exceeds the parent pesticide m/z by more than +50 u, as these are more likely to originate from phase II conjugation reactions rather than true phase I metabolites. This filtering step reduces false positives in automated metabolite screening workflows by eliminating features corresponding to additions of more than three oxygen atoms."
-when_to_use_negative: |
-  - "Input features have not yet undergone blank subtraction and isotope/adduct removal; apply those filters first to avoid filtering artifacts."
-  - "Analysis goal is to detect phase II conjugation metabolites (e.g., glucuronide or sulfate conjugates); this filter explicitly removes them."
-  - "Parent pesticide m/z value is unknown or unreliable; mass difference filtering requires accurate reference ion mass."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "incubatoR workflow (Rscripts/metabolites.R)"
-  role: "Implements mass difference filtering as step 3 in automated pesticide metabolite detection; applies +50 u threshold and outputs filtered feature list"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "R v3.6.1"
-  role: "Execution environment for mass difference filtering calculations"
-provenance: |
+description: Remove features whose m/z exceeds the parent pesticide m/z by more than +50 u, as these are more likely to originate from phase II conjugation reactions rather than true phase I metabolites. This filtering step reduces false positives in automated metabolite screening workflows by eliminating features corresponding to additions of more than three oxygen atoms.
+when_to_use_negative:
+- Input features have not yet undergone blank subtraction and isotope/adduct removal; apply those filters first to avoid filtering artifacts.
+- Analysis goal is to detect phase II conjugation metabolites (e.g., glucuronide or sulfate conjugates); this filter explicitly removes them.
+- Parent pesticide m/z value is unknown or unreliable; mass difference filtering requires accurate reference ion mass.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0121
+tools:
+- name: incubatoR workflow (Rscripts/metabolites.R)
+  role: Implements mass difference filtering as step 3 in automated pesticide metabolite detection; applies +50 u threshold and outputs filtered feature list
+  repo: https://github.com/chufz/incubatoR
+- name: R v3.6.1
+  role: Execution environment for mass difference filtering calculations
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/feature-mass-difference-filtering@sha256:d38c5bebb53ed51d3949c5026a22f163834e92cee7f331e31842f259f9f7d1d5
+  iri: https://w3id.org/holobiomicslab/asb-skill/feature-mass-difference-filtering@sha256:01ddeedfc2838a41b9274255c73e9842de2ecc160f71c0dc527ca8c9979bd440
 ---
 
 # feature-mass-difference-filtering

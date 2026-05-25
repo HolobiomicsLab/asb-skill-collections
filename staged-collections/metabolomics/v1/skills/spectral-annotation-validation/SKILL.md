@@ -1,33 +1,33 @@
 ---
 name: spectral-annotation-validation
-description: "Validate the internal consistency of chemical annotation fields (SMILES, InChI, InChIKey) in mass spectral library records using RDKit cross-validation. This skill detects and quantifies annotation errors and inconsistencies that compromise spectral library quality and downstream analysis."
-when_to_use_negative: |
-  - "Spectra that have not yet undergone repair functions (e.g., 'derive annotation from compound name', 'repair adduct and parent mass based on SMILES'). Run repair filters first to reduce false negatives; 52,084 spectra in the GNPS library had repairable inconsistencies."
-  - "Annotated spectra where chemical structure annotation is intentionally incomplete or absent (e.g., unannotated experimental data or library fragments). This filter requires all three SMILES, InChI, and InChIKey fields to be present."
-  - "Data where the rationale for annotation inconsistency is external to the annotations themselves (e.g., correct SMILES but wrong measured mass due to instrument error). This skill validates annotation internal consistency only; it does not check whether annotated structures match measured fragment ions."
-edam_operation: "http://edamontology.org/operation_3802"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0602"
-tools: |
-  - name: "matchms"
-  role: "Core framework for loading, filtering, and validating mass spectral libraries; implements the 'require_valid_annotation' filter that performs RDKit cross-validation of SMILES, InChI, and InChIKey fields"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Parses and validates SMILES, InChI, and InChIKey strings; detects internal inconsistencies and confirms mutual chemical structure equivalence across annotation formats"
-  repo: "https://www.rdkit.org"
-  - name: "PubChem"
-  role: "Source for canonical SMILES, InChI, and InChIKey used in repair and validation workflows; used by the 'derive annotation from compound name' filter to retrieve reference annotations"
-  repo: "https://pubchem.ncbi.nlm.nih.gov"
-provenance: |
+description: Validate the internal consistency of chemical annotation fields (SMILES, InChI, InChIKey) in mass spectral library records using RDKit cross-validation. This skill detects and quantifies annotation errors and inconsistencies that compromise spectral library quality and downstream analysis.
+when_to_use_negative:
+- Spectra that have not yet undergone repair functions (e.g., 'derive annotation from compound name', 'repair adduct and parent mass based on SMILES'). Run repair filters first to reduce false negatives; 52,084 spectra in the GNPS library had repairable inconsistencies.
+- Annotated spectra where chemical structure annotation is intentionally incomplete or absent (e.g., unannotated experimental data or library fragments). This filter requires all three SMILES, InChI, and InChIKey fields to be present.
+- Data where the rationale for annotation inconsistency is external to the annotations themselves (e.g., correct SMILES but wrong measured mass due to instrument error). This skill validates annotation internal consistency only; it does not check whether annotated structures match measured fragment ions.
+edam_operation: http://edamontology.org/operation_3802
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0602
+tools:
+- name: matchms
+  role: Core framework for loading, filtering, and validating mass spectral libraries; implements the 'require_valid_annotation' filter that performs RDKit cross-validation of SMILES, InChI, and InChIKey fields
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Parses and validates SMILES, InChI, and InChIKey strings; detects internal inconsistencies and confirms mutual chemical structure equivalence across annotation formats
+  repo: https://www.rdkit.org
+- name: PubChem
+  role: Source for canonical SMILES, InChI, and InChIKey used in repair and validation workflows; used by the 'derive annotation from compound name' filter to retrieve reference annotations
+  repo: https://pubchem.ncbi.nlm.nih.gov
+provenance:
   source_task_ids:
   - task_006
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-annotation-validation@sha256:788a5d5649019eb465461533e6e3dc44c72bf058d29def5f3aa517da0615869d
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-annotation-validation@sha256:8a9c0e94c1e9a271235698fb77ccd55215de7fd6daeec6c52fd6fd926453b460
 ---
 
 # Spectral Annotation Validation

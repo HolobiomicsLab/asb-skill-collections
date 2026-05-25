@@ -1,30 +1,30 @@
 ---
 name: pcoa-visualization-interpretation
-description: "Principal-coordinate analysis (PCoA) is an ordination technique that projects high-dimensional metabolite feature abundance data into a low-dimensional space to visualize clustering patterns and compositional differences among samples. It is essential for assessing whether sample groups (e.g., industrialization categories) exhibit distinct metabolomic profiles and for interpreting multivariate statistical significance."
-when_to_use_negative: |
-  - "Feature abundance table has already been ordinated and visualized; re-running PCoA on the same data wastes computation."
-  - "Categorical grouping variable is continuous (e.g., age, pH) rather than discrete; use regression-based or correlation-based ordination instead."
-  - "Sample size is very small (n < 6 per group); ordination plots become unreliable and visual clustering patterns are meaningless."
-edam_operation: "http://edamontology.org/operation_3932"
-edam_topics: |
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "QIIME2"
-  role: "Computes Canberra distance matrices and generates PCoA ordinations from metabolite feature tables"
-  - name: "EMPeror"
-  role: "Visualizes PCoA ordinations interactively, supporting 2D/3D rendering and sample coloring by metadata variables"
-  - name: "PERMANOVA"
-  role: "Tests statistical significance of group separation observed in PCoA; reports R² (variance explained by group) and P-value"
-provenance: |
+description: Principal-coordinate analysis (PCoA) is an ordination technique that projects high-dimensional metabolite feature abundance data into a low-dimensional space to visualize clustering patterns and compositional differences among samples. It is essential for assessing whether sample groups (e.g., industrialization categories) exhibit distinct metabolomic profiles and for interpreting multivariate statistical significance.
+when_to_use_negative:
+- Feature abundance table has already been ordinated and visualized; re-running PCoA on the same data wastes computation.
+- Categorical grouping variable is continuous (e.g., age, pH) rather than discrete; use regression-based or correlation-based ordination instead.
+- Sample size is very small (n < 6 per group); ordination plots become unreliable and visual clustering patterns are meaningless.
+edam_operation: http://edamontology.org/operation_3932
+edam_topics:
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0121
+tools:
+- name: QIIME2
+  role: Computes Canberra distance matrices and generates PCoA ordinations from metabolite feature tables
+- name: EMPeror
+  role: Visualizes PCoA ordinations interactively, supporting 2D/3D rendering and sample coloring by metadata variables
+- name: PERMANOVA
+  role: Tests statistical significance of group separation observed in PCoA; reports R² (variance explained by group) and P-value
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/pcoa-visualization-interpretation@sha256:95583def27d1d26f809ca36f6efa51a76f4e2fb4d527e64f8de98cd790a5e1f3
+  iri: https://w3id.org/holobiomicslab/asb-skill/pcoa-visualization-interpretation@sha256:172bcdc0da9f000b3980b3f87190c4c63b1833b7663f3a54eec0ca195ae63266
 ---
 
 # PCoA visualization and interpretation

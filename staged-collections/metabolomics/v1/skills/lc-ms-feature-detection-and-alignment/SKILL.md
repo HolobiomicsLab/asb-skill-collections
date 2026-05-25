@@ -1,35 +1,35 @@
 ---
 name: lc-ms-feature-detection-and-alignment
-description: "Automated detection, alignment, and retention-time correction of LC–HRMS features from centroided mzML files using XCMS with IPO-optimized parameters, followed by isotope/adduct deconvolution via CAMERA to generate a feature table (m/z, retention time, per-sample intensity) suitable for metabolite screening."
-when_to_use_negative: |
-  - "Input files are already in profile (non-centroided) mode; use ProteoWizard centroiding first."
-  - "Sample set lacks replicate structure or contains only single measurements; retention-time alignment and quality filtering depend on cross-sample consistency."
-  - "Data originate from targeted or scheduled LC–MS/MS with pre-defined inclusion lists; use targeted feature extraction (e.g., XICs) instead of discovery-mode peak detection."
-edam_operation: "http://edamontology.org/operation_3634"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0121"
-tools: |
-  - name: "XCMS"
-  role: "Peak detection (centwave), retention-time correction (orbiwarp), and peak grouping (density method) on centroided mzML spectra"
-  - name: "IPO"
-  role: "Optimization of XCMS parameters (peakwidth, ppm, snthresh, prefilter, bw, mzwid) to maximize feature detection and minimize false positives"
-  - name: "CAMERA"
-  role: "Post-hoc deconvolution and grouping of XCMS features into isotope and adduct clusters; assignment of adduct type and mass annotation"
-  - name: "ProteoWizard"
-  role: "Conversion of vendor-specific raw mass spectrometry data to centroided mzML format prior to XCMS processing"
-  - name: "incubatoR"
-  role: "Integrated R/bash workflow wrapper combining XCMS, CAMERA, statistical filtering (Rvolcano), and downstream metabolite prioritization via mass-defect and abundance filtering"
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Automated detection, alignment, and retention-time correction of LC–HRMS features from centroided mzML files using XCMS with IPO-optimized parameters, followed by isotope/adduct deconvolution via CAMERA to generate a feature table (m/z, retention time, per-sample intensity) suitable for metabolite screening.
+when_to_use_negative:
+- Input files are already in profile (non-centroided) mode; use ProteoWizard centroiding first.
+- Sample set lacks replicate structure or contains only single measurements; retention-time alignment and quality filtering depend on cross-sample consistency.
+- Data originate from targeted or scheduled LC–MS/MS with pre-defined inclusion lists; use targeted feature extraction (e.g., XICs) instead of discovery-mode peak detection.
+edam_operation: http://edamontology.org/operation_3634
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0121
+tools:
+- name: XCMS
+  role: Peak detection (centwave), retention-time correction (orbiwarp), and peak grouping (density method) on centroided mzML spectra
+- name: IPO
+  role: Optimization of XCMS parameters (peakwidth, ppm, snthresh, prefilter, bw, mzwid) to maximize feature detection and minimize false positives
+- name: CAMERA
+  role: Post-hoc deconvolution and grouping of XCMS features into isotope and adduct clusters; assignment of adduct type and mass annotation
+- name: ProteoWizard
+  role: Conversion of vendor-specific raw mass spectrometry data to centroided mzML format prior to XCMS processing
+- name: incubatoR
+  role: Integrated R/bash workflow wrapper combining XCMS, CAMERA, statistical filtering (Rvolcano), and downstream metabolite prioritization via mass-defect and abundance filtering
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/lc-ms-feature-detection-and-alignment@sha256:c6e05ad407b5faa2f131eec72a402db60fb0e9f1c9ccb1aba01bf8c019e4ab21
+  iri: https://w3id.org/holobiomicslab/asb-skill/lc-ms-feature-detection-and-alignment@sha256:648b98a5771f6a3f0e77c8ace6ee67197e2eb46c2dfe313f47b6fa8cf3c33182
 ---
 
 # lc-ms-feature-detection-and-alignment

@@ -1,37 +1,37 @@
 ---
 name: fungal-genome-sequence-retrieval-and-processing
-description: "Retrieval and preprocessing of deduced amino acid sequences from fungal genome databases, followed by domain-based filtering and alignment to prepare protein sequences for comparative genomics and phylogenetic analysis. This skill enables systematic identification of gene families (e.g., UDP-glycosyltransferases) across multiple fungal species."
-when_to_use_negative: |
-  - "Input sequences are already functionally characterized or experimentally validated; use this skill for hypothesis generation and target prioritization, not confirmation."
-  - "Target domain is not well-represented in Pfam or you have custom domain definitions; consider ab initio domain discovery (InterProScan, HMMER3 custom models) instead."
-  - "You require nucleotide-level sequence information (e.g., codon usage, splice sites); this skill operates on translated protein sequences only."
-edam_operation: "http://edamontology.org/operation_0346"
-edam_topics: |
-  - "http://edamontology.org/topic_0637"
-  - "http://edamontology.org/topic_0080"
-  - "http://edamontology.org/topic_3293"
-tools: |
-  - name: "JGI MycoCosm database"
-  role: "primary source for download of deduced amino acid sequences from wood-decaying fungal genomes"
-  - name: "Pfam database"
-  role: "domain annotation reference (v34); used with hmmscan to identify PF00201-containing sequences"
-  - name: "hmmscan"
-  role: "profile-HMM scanning tool to query amino acid sequences against Pfam domains; identifies candidate sequences and returns E-values and bitscores"
-  - name: "MAFFT"
-  role: "multiple sequence alignment of filtered protein candidates using default parameters to preserve structural alignment quality"
-  - name: "TrimAl"
-  role: "automated trimming of multiple sequence alignment to remove low-information (high-gap) columns prior to phylogenetic analysis"
-  - name: "FastTree / RAxML"
-  role: "tree-building software to construct maximum-likelihood phylogenetic tree from trimmed alignment for resolving placement of novel candidate sequences (e.g., UGT66A1)"
-provenance: |
+description: Retrieval and preprocessing of deduced amino acid sequences from fungal genome databases, followed by domain-based filtering and alignment to prepare protein sequences for comparative genomics and phylogenetic analysis. This skill enables systematic identification of gene families (e.g., UDP-glycosyltransferases) across multiple fungal species.
+when_to_use_negative:
+- Input sequences are already functionally characterized or experimentally validated; use this skill for hypothesis generation and target prioritization, not confirmation.
+- Target domain is not well-represented in Pfam or you have custom domain definitions; consider ab initio domain discovery (InterProScan, HMMER3 custom models) instead.
+- You require nucleotide-level sequence information (e.g., codon usage, splice sites); this skill operates on translated protein sequences only.
+edam_operation: http://edamontology.org/operation_0346
+edam_topics:
+- http://edamontology.org/topic_0637
+- http://edamontology.org/topic_0080
+- http://edamontology.org/topic_3293
+tools:
+- name: JGI MycoCosm database
+  role: primary source for download of deduced amino acid sequences from wood-decaying fungal genomes
+- name: Pfam database
+  role: domain annotation reference (v34); used with hmmscan to identify PF00201-containing sequences
+- name: hmmscan
+  role: profile-HMM scanning tool to query amino acid sequences against Pfam domains; identifies candidate sequences and returns E-values and bitscores
+- name: MAFFT
+  role: multiple sequence alignment of filtered protein candidates using default parameters to preserve structural alignment quality
+- name: TrimAl
+  role: automated trimming of multiple sequence alignment to remove low-information (high-gap) columns prior to phylogenetic analysis
+- name: FastTree / RAxML
+  role: tree-building software to construct maximum-likelihood phylogenetic tree from trimmed alignment for resolving placement of novel candidate sequences (e.g., UGT66A1)
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1073/pnas"
-  title: "Proceedings of the National Academy of Sciences"
-schema_version: "0.2.0"
+  - doi: 10.1073/pnas
+    title: Proceedings of the National Academy of Sciences
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:ed11edd80887640a288195b12f8231f6bb0be0c5da380130647b61de91213b37
+  iri: https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:102d47bdc8991cfa55044a5c210b68ad6329df55202434ff1515019c1009bfef
 ---
 
 # fungal-genome-sequence-retrieval-and-processing

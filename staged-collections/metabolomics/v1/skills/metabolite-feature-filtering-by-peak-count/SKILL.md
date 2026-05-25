@@ -1,29 +1,29 @@
 ---
 name: metabolite-feature-filtering-by-peak-count
-description: "Apply a minimum-peaks-in-a-row threshold in MZmine to remove low-frequency metabolite features from untargeted LC-MS/MS data, reducing noise and retaining only features with contiguous peak detection across multiple samples. This filtering is typically applied to non-gap-filled data before population-level presence filtering to identify a robust shared metabolome."
-when_to_use_negative: |
-  - "Input data is already gap-filled—apply filtering before gap-filling, not after, to avoid artificially inflating peak counts."
-  - "Study has only one or two samples per group—minimum-peaks-in-a-row filtering will be too stringent and may remove valid but rare metabolites."
-  - "You are working with targeted metabolomics or known-compound datasets where every detected feature has been independently validated; this filter is designed for untargeted discovery to reduce false positives."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0092"
-tools: |
-  - name: "MZmine"
-  role: "Applies the minimum-peaks-in-a-row filter during feature detection on raw LC-MS/MS data"
-  - name: "R"
-  role: "Post-processes MZmine output to apply population-level presence filtering (removal of features not found in ≥6 samples per population)"
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Apply a minimum-peaks-in-a-row threshold in MZmine to remove low-frequency metabolite features from untargeted LC-MS/MS data, reducing noise and retaining only features with contiguous peak detection across multiple samples. This filtering is typically applied to non-gap-filled data before population-level presence filtering to identify a robust shared metabolome.
+when_to_use_negative:
+- Input data is already gap-filled—apply filtering before gap-filling, not after, to avoid artificially inflating peak counts.
+- Study has only one or two samples per group—minimum-peaks-in-a-row filtering will be too stringent and may remove valid but rare metabolites.
+- You are working with targeted metabolomics or known-compound datasets where every detected feature has been independently validated; this filter is designed for untargeted discovery to reduce false positives.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0092
+tools:
+- name: MZmine
+  role: Applies the minimum-peaks-in-a-row filter during feature detection on raw LC-MS/MS data
+- name: R
+  role: Post-processes MZmine output to apply population-level presence filtering (removal of features not found in ≥6 samples per population)
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-filtering-by-peak-count@sha256:07331f8ce96d0f854f02247343606adae7dbd683d1bdbf346366f3722c8c77cd
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-filtering-by-peak-count@sha256:1df7a815c2004b04196d8ed5b7d686f9ba4569bebb61de50ab2ce3ef4b2d9103
 ---
 
 # metabolite-feature-filtering-by-peak-count

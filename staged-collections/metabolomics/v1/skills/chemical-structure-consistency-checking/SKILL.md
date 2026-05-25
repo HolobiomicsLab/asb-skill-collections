@@ -1,32 +1,32 @@
 ---
 name: chemical-structure-consistency-checking
-description: "Validate the internal consistency of chemical structure annotations (SMILES, InChI, InChIKey) in mass spectral library entries using RDKit to detect and report mismatches. This skill is essential for identifying annotated spectra with conflicting or corrupted structure metadata that would otherwise propagate errors through downstream analysis."
-when_to_use_negative: |
-  - "Input spectra lack any chemical structure annotation fields (SMILES, InChI, InChIKey); the skill cannot validate what is not present."
-  - "Your goal is to filter on mass accuracy or spectral similarity alone; structure consistency is orthogonal to these signals."
-  - "You are working with experimental (unannotated) spectra; this skill applies only to annotated library data."
-edam_operation: "http://edamontology.org/operation_3961"
-edam_topics: |
-  - "http://edamontology.org/topic_0218"
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3407"
-tools: |
-  - name: "matchms"
-  role: "Framework that orchestrates the require_valid_annotation filter and hosts the RDKit-backed consistency validation logic; version 0.26.4 or later required"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Cheminformatics engine that parses SMILES, derives canonical InChI and InChIKey, and performs field-to-field comparison to detect structure inconsistencies"
-  - name: "PubChem"
-  role: "Reference source for canonical SMILES, InChI, and InChIKey used in derive_annotation and repair operations upstream of consistency validation"
-provenance: |
+description: Validate the internal consistency of chemical structure annotations (SMILES, InChI, InChIKey) in mass spectral library entries using RDKit to detect and report mismatches. This skill is essential for identifying annotated spectra with conflicting or corrupted structure metadata that would otherwise propagate errors through downstream analysis.
+when_to_use_negative:
+- Input spectra lack any chemical structure annotation fields (SMILES, InChI, InChIKey); the skill cannot validate what is not present.
+- Your goal is to filter on mass accuracy or spectral similarity alone; structure consistency is orthogonal to these signals.
+- You are working with experimental (unannotated) spectra; this skill applies only to annotated library data.
+edam_operation: http://edamontology.org/operation_3961
+edam_topics:
+- http://edamontology.org/topic_0218
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3407
+tools:
+- name: matchms
+  role: Framework that orchestrates the require_valid_annotation filter and hosts the RDKit-backed consistency validation logic; version 0.26.4 or later required
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Cheminformatics engine that parses SMILES, derives canonical InChI and InChIKey, and performs field-to-field comparison to detect structure inconsistencies
+- name: PubChem
+  role: Reference source for canonical SMILES, InChI, and InChIKey used in derive_annotation and repair operations upstream of consistency validation
+provenance:
   source_task_ids:
   - task_006
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-consistency-checking@sha256:608ec6e273c29ede4243fdf395c7a233bdc05828452810fefa3a2f0731703748
+  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-consistency-checking@sha256:1b969e7838f49b84d5f3a1358bbf8730c7b31409c5b3b70f1421f30a6402efa6
 ---
 
 # chemical-structure-consistency-checking

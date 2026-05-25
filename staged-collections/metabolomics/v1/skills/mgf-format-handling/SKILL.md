@@ -1,44 +1,44 @@
 ---
 name: mgf-format-handling
-description: "Loading and parsing tandem MS spectra from MGF (Mascot Generic Format) files for downstream clustering, networking, or querying. MGF is a human-readable text format widely supported by mass spectrometry analysis tools and repositories, making it essential for exchange of MS/MS spectral data."
-when_to_use_negative: |
-  - "When working with vendor-specific binary formats (Thermo .raw, Waters .raw) without prior conversion—use native converters (RawFileReader, CDCReader) first."
-  - "When you only have precursor m/z and intensity (MS1 level data)—MGF is designed for MS/MS (MS2) spectra with fragment ion information."
-  - "When your analysis requires chromatographic trace information or ion mobility data that is not adequately represented in flat MGF format—consider mzML or mzXML for richer metadata."
-edam_operation: "http://edamontology.org/operation_3357"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_3148"
-tools: |
-  - name: "MassQL"
-  role: "Query language and retrieval engine that outputs MS/MS spectra in MGF format from repository-scale searches"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "pyteomics"
-  role: "Python library used by MassQL reference engine to read and parse MGF, mzML, and mzXML files into data structures"
-  - name: "MS-Cluster"
-  role: "Clustering tool that takes retrieved MGF spectra as input and outputs consensus spectra in MGF format"
-  - name: "Falcon-MS"
-  role: "Alternative clustering tool for collapsing redundant MS/MS observations from MGF inputs"
-  - name: "MZmine"
-  role: "Open-source MS data processing software with native MassQL and MGF support for workflow integration"
-  repo: "https://github.com/mzmine/mzmine"
-  - name: "GNPS"
-  role: "Global repository and molecular networking platform that accepts MGF files and integrates MassQL query results"
-  - name: "MS-DIAL"
-  role: "Open-source peak detection and MS/MS spectral processing software with native MassQL support"
-  - name: "UniDec"
-  role: "Deconvolution software supporting open MS data formats including those derived from MGF queries"
-  repo: "https://github.com/michaelmarty/UniDec"
-provenance: |
+description: Loading and parsing tandem MS spectra from MGF (Mascot Generic Format) files for downstream clustering, networking, or querying. MGF is a human-readable text format widely supported by mass spectrometry analysis tools and repositories, making it essential for exchange of MS/MS spectral data.
+when_to_use_negative:
+- When working with vendor-specific binary formats (Thermo .raw, Waters .raw) without prior conversion—use native converters (RawFileReader, CDCReader) first.
+- When you only have precursor m/z and intensity (MS1 level data)—MGF is designed for MS/MS (MS2) spectra with fragment ion information.
+- When your analysis requires chromatographic trace information or ion mobility data that is not adequately represented in flat MGF format—consider mzML or mzXML for richer metadata.
+edam_operation: http://edamontology.org/operation_3357
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_3148
+tools:
+- name: MassQL
+  role: Query language and retrieval engine that outputs MS/MS spectra in MGF format from repository-scale searches
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: pyteomics
+  role: Python library used by MassQL reference engine to read and parse MGF, mzML, and mzXML files into data structures
+- name: MS-Cluster
+  role: Clustering tool that takes retrieved MGF spectra as input and outputs consensus spectra in MGF format
+- name: Falcon-MS
+  role: Alternative clustering tool for collapsing redundant MS/MS observations from MGF inputs
+- name: MZmine
+  role: Open-source MS data processing software with native MassQL and MGF support for workflow integration
+  repo: https://github.com/mzmine/mzmine
+- name: GNPS
+  role: Global repository and molecular networking platform that accepts MGF files and integrates MassQL query results
+- name: MS-DIAL
+  role: Open-source peak detection and MS/MS spectral processing software with native MassQL support
+- name: UniDec
+  role: Deconvolution software supporting open MS data formats including those derived from MGF queries
+  repo: https://github.com/michaelmarty/UniDec
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:cd16bc77a09b43e34d3be4d244fb874ef8efd5f57adc78c07663e2a8670ba323
+  iri: https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:262490ebdfa0a6b0dc3729de9bf930fc2b8cac7080b9e86da57ceab5df35a31d
 ---
 
 # mgf-format-handling

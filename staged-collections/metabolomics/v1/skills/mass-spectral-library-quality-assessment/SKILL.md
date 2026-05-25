@@ -1,33 +1,33 @@
 ---
 name: mass-spectral-library-quality-assessment
-description: "Comprehensive evaluation of mass spectral library metadata integrity and annotation consistency using automated validation filters (basic, default, library-cleaning tiers) to identify and quantify structural and chemical inconsistencies before curation. This skill assesses whether spectra retain valid SMILES/InChI/InChIKey annotations, correct adduct assignments, consistent precursor m/z values, and properly normalized peak intensities across large spectral repositories (e.g., GNPS, MoNA)."
-when_to_use_negative: |
-  - "Input library is already curated (e.g., NIST private library or post-peer-review subset) and lacks known annotation artifacts — assessment overhead outweighs benefit."
-  - "Library contains primarily unannotated spectra (e.g., experimental untargeted metabolomics data) — this skill targets *library* metadata consistency, not unknown compound discovery."
-  - "Downstream analysis requires fragment-ion-to-annotation matching that this pipeline explicitly does not perform (article notes: 'wrong chemical annotations consistent with measured mass will go unnoticed')."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "matchms"
-  role: "Core framework for loading spectra, applying tiered filter pipelines (basic, default, library-cleaning), and exporting curated libraries with metadata repair and validation"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Cross-validates SMILES, InChI, and InChIKey consistency; derives canonical structures from compound names; checks adduct–SMILES compatibility"
-  - name: "PubChem API"
-  role: "Supplies canonical SMILES, InChI, and InChIKey when deriving annotations from compound names"
-  - name: "Git / Conda / pip"
-  role: "Version control and environment management for reproducible matchms installation and filter configurations (YAML-based)"
-provenance: |
+description: Comprehensive evaluation of mass spectral library metadata integrity and annotation consistency using automated validation filters (basic, default, library-cleaning tiers) to identify and quantify structural and chemical inconsistencies before curation. This skill assesses whether spectra retain valid SMILES/InChI/InChIKey annotations, correct adduct assignments, consistent precursor m/z values, and properly normalized peak intensities across large spectral repositories (e.g., GNPS, MoNA).
+when_to_use_negative:
+- Input library is already curated (e.g., NIST private library or post-peer-review subset) and lacks known annotation artifacts — assessment overhead outweighs benefit.
+- Library contains primarily unannotated spectra (e.g., experimental untargeted metabolomics data) — this skill targets *library* metadata consistency, not unknown compound discovery.
+- 'Downstream analysis requires fragment-ion-to-annotation matching that this pipeline explicitly does not perform (article notes: ''wrong chemical annotations consistent with measured mass will go unnoticed'').'
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
+tools:
+- name: matchms
+  role: Core framework for loading spectra, applying tiered filter pipelines (basic, default, library-cleaning), and exporting curated libraries with metadata repair and validation
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Cross-validates SMILES, InChI, and InChIKey consistency; derives canonical structures from compound names; checks adduct–SMILES compatibility
+- name: PubChem API
+  role: Supplies canonical SMILES, InChI, and InChIKey when deriving annotations from compound names
+- name: Git / Conda / pip
+  role: Version control and environment management for reproducible matchms installation and filter configurations (YAML-based)
+provenance:
   source_task_ids:
   - task_006
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectral-library-quality-assessment@sha256:ff575373de16fcb13b57db61b4918115784076af1eed944691217e698aca6868
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectral-library-quality-assessment@sha256:3ef25e0904e5b3e3710d807f2268223816c315dfca75f119c3629944df6f4dc0
 ---
 
 # mass-spectral-library-quality-assessment

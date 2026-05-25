@@ -1,41 +1,41 @@
 ---
 name: iron-binding-compound-detection-by-isotope-ratio
-description: "Detect iron-binding compounds (siderophores) in untargeted mass spectrometry datasets by querying for characteristic iron isotope patterns (54Fe/56Fe ratio at 6.3% relative intensity), 13C peaks, and iron-specific neutral loss signatures. This skill enables discovery of novel iron-chelators across large public MS repositories without prior spectral library matches."
-when_to_use_negative: |
-  - "Input spectra are already identified by reference spectral libraries or high-confidence in-silico predictions; use library search first"
-  - "MS data lacks isotope resolution or m/z accuracy below ~10 ppm (e.g., low-resolution or time-of-flight instruments without sufficient calibration)"
-  - "Sample has not been exposed to iron stress, supplementation, or chelator addition; isotope patterns will be absent or too weak to detect against noise"
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3520"
-  - "http://edamontology.org/topic_0091"
-tools: |
-  - name: "MassQL"
-  role: "Query language and execution engine for defining and filtering MS spectra by chemical pattern (isotope ratios, neutral losses, product ions)"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark"
-  role: "Parser library used to transform MassQL query strings into parse trees for execution"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Python library to read open-format MS data files (mzML, mzXML, MGF) into memory"
-  - name: "pandas"
-  role: "Data frame library for filtering and manipulating MS spectra records during query execution"
-  - name: "MS-Cluster or Falcon-MS"
-  role: "Spectral clustering tool to collapse redundant MS/MS observations into consensus spectra"
-  - name: "GNPS"
-  role: "Global Natural Products Social Molecular Networking platform for creating consensus networks and spectral library annotation of iron-binding compound hits"
-  - name: "MZmine"
-  role: "Open-source MS data analysis software with native MassQL integration for query execution and visualization"
-  repo: "https://github.com/mzmine/mzmine"
-provenance: |
+description: Detect iron-binding compounds (siderophores) in untargeted mass spectrometry datasets by querying for characteristic iron isotope patterns (54Fe/56Fe ratio at 6.3% relative intensity), 13C peaks, and iron-specific neutral loss signatures. This skill enables discovery of novel iron-chelators across large public MS repositories without prior spectral library matches.
+when_to_use_negative:
+- Input spectra are already identified by reference spectral libraries or high-confidence in-silico predictions; use library search first
+- MS data lacks isotope resolution or m/z accuracy below ~10 ppm (e.g., low-resolution or time-of-flight instruments without sufficient calibration)
+- Sample has not been exposed to iron stress, supplementation, or chelator addition; isotope patterns will be absent or too weak to detect against noise
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3520
+- http://edamontology.org/topic_0091
+tools:
+- name: MassQL
+  role: Query language and execution engine for defining and filtering MS spectra by chemical pattern (isotope ratios, neutral losses, product ions)
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark
+  role: Parser library used to transform MassQL query strings into parse trees for execution
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Python library to read open-format MS data files (mzML, mzXML, MGF) into memory
+- name: pandas
+  role: Data frame library for filtering and manipulating MS spectra records during query execution
+- name: MS-Cluster or Falcon-MS
+  role: Spectral clustering tool to collapse redundant MS/MS observations into consensus spectra
+- name: GNPS
+  role: Global Natural Products Social Molecular Networking platform for creating consensus networks and spectral library annotation of iron-binding compound hits
+- name: MZmine
+  role: Open-source MS data analysis software with native MassQL integration for query execution and visualization
+  repo: https://github.com/mzmine/mzmine
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:7283a25c5d1ef2839286ac3e2b10dd7f60bef142c28cce3baaafd9b42a139c7e
+  iri: https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:d6192b3b919a4b02a8bd40bc2251e4189580a475ca1887b049069eb2239e4635
 ---
 
 # iron-binding-compound-detection-by-isotope-ratio

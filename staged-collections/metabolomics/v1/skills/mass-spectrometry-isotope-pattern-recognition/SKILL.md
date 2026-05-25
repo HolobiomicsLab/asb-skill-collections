@@ -1,43 +1,43 @@
 ---
 name: mass-spectrometry-isotope-pattern-recognition
-description: "Query MS1 and MS2 spectra to detect characteristic isotope patterns (e.g., iron-binding 54Fe/56Fe ratios, 13C peaks, characteristic adducts) using declarative pattern-matching language (MassQL) and filtering across open MS data repositories. This skill enables discovery of novel compounds sharing isotopic signatures without prior spectral library annotation."
-when_to_use_negative: |
-  - "Input is already a feature table or aligned peak matrix; this skill operates on raw or processed spectra in standard open formats (mzML, mzXML, MGF), not tabular peak-intensity matrices."
-  - "The isotope pattern of interest cannot be characterized quantitatively (e.g., relative intensity thresholds, mass offsets, or adduct m/z offsets are unknown or highly variable). The skill requires precise, measurable isotopic signature criteria."
-  - "You need to correlate isotope patterns across consecutive eluting chromatographic features or exploit temporal covariance in retention time; MassQL has limited capability to leverage more than a handful of consecutive MS spectra from a single feature."
-edam_operation: "http://edamontology.org/operation_3644"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3370"
-tools: |
-  - name: "MassQL"
-  role: "Query engine to define and execute declarative patterns on MS isotope signatures; parses query syntax into a searchable specification"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark"
-  role: "Python parsing toolkit to convert MassQL query strings into parse trees and internal data structures"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Reads open MS data formats (mzML, mzXML, MGF) and loads spectra into memory for querying"
-  - name: "pandas"
-  role: "DataFrames for in-memory filtering and manipulation of MS spectra during query execution"
-  - name: "MZmine"
-  role: "Open-source MS data processing and visualization platform with native MassQL integration"
-  repo: "https://github.com/mzmine/mzmine"
-  - name: "MS-Cluster"
-  role: "Collapses redundant MS/MS spectra to generate consensus spectra from matched isotope-pattern hits"
-  - name: "Falcon-MS"
-  role: "Alternative tool to collapse redundant MS/MS spectra and generate consensus spectra"
-  - name: "GNPS/MassIVE"
-  role: "Public MS data repository (230 million+ MS/MS spectra, 97,109 files) for large-scale isotope pattern queries and spectral library search"
-provenance: |
+description: Query MS1 and MS2 spectra to detect characteristic isotope patterns (e.g., iron-binding 54Fe/56Fe ratios, 13C peaks, characteristic adducts) using declarative pattern-matching language (MassQL) and filtering across open MS data repositories. This skill enables discovery of novel compounds sharing isotopic signatures without prior spectral library annotation.
+when_to_use_negative:
+- Input is already a feature table or aligned peak matrix; this skill operates on raw or processed spectra in standard open formats (mzML, mzXML, MGF), not tabular peak-intensity matrices.
+- The isotope pattern of interest cannot be characterized quantitatively (e.g., relative intensity thresholds, mass offsets, or adduct m/z offsets are unknown or highly variable). The skill requires precise, measurable isotopic signature criteria.
+- You need to correlate isotope patterns across consecutive eluting chromatographic features or exploit temporal covariance in retention time; MassQL has limited capability to leverage more than a handful of consecutive MS spectra from a single feature.
+edam_operation: http://edamontology.org/operation_3644
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3370
+tools:
+- name: MassQL
+  role: Query engine to define and execute declarative patterns on MS isotope signatures; parses query syntax into a searchable specification
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark
+  role: Python parsing toolkit to convert MassQL query strings into parse trees and internal data structures
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Reads open MS data formats (mzML, mzXML, MGF) and loads spectra into memory for querying
+- name: pandas
+  role: DataFrames for in-memory filtering and manipulation of MS spectra during query execution
+- name: MZmine
+  role: Open-source MS data processing and visualization platform with native MassQL integration
+  repo: https://github.com/mzmine/mzmine
+- name: MS-Cluster
+  role: Collapses redundant MS/MS spectra to generate consensus spectra from matched isotope-pattern hits
+- name: Falcon-MS
+  role: Alternative tool to collapse redundant MS/MS spectra and generate consensus spectra
+- name: GNPS/MassIVE
+  role: Public MS data repository (230 million+ MS/MS spectra, 97,109 files) for large-scale isotope pattern queries and spectral library search
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-isotope-pattern-recognition@sha256:57fd3351638aa7a939dc8cbc5acd7dd229f1b31f0bb2ac14fef611449f78a1b0
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-isotope-pattern-recognition@sha256:9a749fb4343e347e4398b1bc53d005d5c48a5606c96e2e0b4220e5b2d90d3245
 ---
 
 # mass-spectrometry-isotope-pattern-recognition

@@ -1,33 +1,33 @@
 ---
 name: phase-i-biotransformation-constraint-application
-description: "This skill applies biochemical constraints to filter putative metabolite features in LC–HRMS data by removing signals with mass shifts inconsistent with phase-I oxidative transformations (reduction, oxidation, hydrolysis, dehydration). It distinguishes true phase-I metabolites from artifacts of phase-II conjugation or instrumental noise by enforcing strict bounds on mass difference relative to the parent pesticide m/z."
-when_to_use_negative: |
-  - "Input features are already restricted to known phase-I metabolites (e.g., pre-curated reference standards)."
-  - "The parent pesticide ionization state is ambiguous or multiple adducts ([M+H]+, [M+Na]+, etc.) are present without mode-specific labeling."
-  - "The study explicitly includes phase-II metabolites (glucuronides, sulfates) as targets; in this case, increase the upper mass-defect cutoff or apply a separate phase-II constraint (e.g., +176 u for glucuronidation)."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0153"
-tools: |
-  - name: "incubatoR"
-  role: "R workflow that implements mass-difference filtering in metabolites.R script as step 3, calculating and removing features with m/z > +50 u relative to parent pesticide"
-  repo: "https://github.com/chufz/incubatoR"
-  - name: "XCMS"
-  role: "Feature detection and alignment prior to mass-difference filtering; provides m/z and retention-time coordinates"
-  - name: "CAMERA"
-  role: "Isotope and adduct annotation; used to componentize features before mass-difference filtering to reduce false positives"
-  - name: "R v3.6.1"
-  role: "Scripting environment for implementing mass-difference calculations and filtering logic"
-provenance: |
+description: This skill applies biochemical constraints to filter putative metabolite features in LC–HRMS data by removing signals with mass shifts inconsistent with phase-I oxidative transformations (reduction, oxidation, hydrolysis, dehydration). It distinguishes true phase-I metabolites from artifacts of phase-II conjugation or instrumental noise by enforcing strict bounds on mass difference relative to the parent pesticide m/z.
+when_to_use_negative:
+- Input features are already restricted to known phase-I metabolites (e.g., pre-curated reference standards).
+- The parent pesticide ionization state is ambiguous or multiple adducts ([M+H]+, [M+Na]+, etc.) are present without mode-specific labeling.
+- The study explicitly includes phase-II metabolites (glucuronides, sulfates) as targets; in this case, increase the upper mass-defect cutoff or apply a separate phase-II constraint (e.g., +176 u for glucuronidation).
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0153
+tools:
+- name: incubatoR
+  role: R workflow that implements mass-difference filtering in metabolites.R script as step 3, calculating and removing features with m/z > +50 u relative to parent pesticide
+  repo: https://github.com/chufz/incubatoR
+- name: XCMS
+  role: Feature detection and alignment prior to mass-difference filtering; provides m/z and retention-time coordinates
+- name: CAMERA
+  role: Isotope and adduct annotation; used to componentize features before mass-difference filtering to reduce false positives
+- name: R v3.6.1
+  role: Scripting environment for implementing mass-difference calculations and filtering logic
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/phase-i-biotransformation-constraint-application@sha256:e6b2df9cc3bb51614eb4d3a76ea9a33ac1e28bc465f115b9eecb375421f83313
+  iri: https://w3id.org/holobiomicslab/asb-skill/phase-i-biotransformation-constraint-application@sha256:dde8dfef227e3706091f9b986f69809e038df545de2d2e733800f99bc8af669c
 ---
 
 # Phase-I-biotransformation-constraint-application

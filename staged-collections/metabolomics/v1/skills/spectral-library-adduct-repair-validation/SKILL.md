@@ -1,33 +1,33 @@
 ---
 name: spectral-library-adduct-repair-validation
-description: "This skill repairs adduct assignments in annotated MS/MS spectra by deriving canonical SMILES from PubChem, recalculating parent mass and adduct from chemical structure, and validates repair success against known error rates. It is essential for correcting inconsistencies between declared adducts, precursor m/z, and chemical annotations in curated spectral libraries."
-when_to_use_negative: |
-  - "Input spectra lack chemical annotation (SMILES, InChI, or compound name) — the filter requires structure data to derive adducts."
-  - "Precursor m/z or ion mode (positive/negative) metadata is missing — the filter cannot match expected adducts without observed precursor m/z."
-  - "Input is already a fully validated and manually curated adduct table — repair is redundant and risks introducing errors."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0625"
-tools: |
-  - name: "matchms"
-  role: "Framework hosting the 'repair_adduct_based_on_smiles' filter; orchestrates spectrum I/O, metadata access, and filter application"
-  repo: "https://github.com/matchms/matchms"
-  - name: "RDKit"
-  role: "Derives canonical SMILES, InChI, and InChIKey from chemical annotations; calculates monoisotopic mass from structure"
-  - name: "PubChem"
-  role: "Reference database queried (via RDKit) to resolve compound names to SMILES and validate structure canonicalization"
-  - name: "Python"
-  role: "Language for implementing the repair pipeline and error-rate statistics generation"
-provenance: |
+description: This skill repairs adduct assignments in annotated MS/MS spectra by deriving canonical SMILES from PubChem, recalculating parent mass and adduct from chemical structure, and validates repair success against known error rates. It is essential for correcting inconsistencies between declared adducts, precursor m/z, and chemical annotations in curated spectral libraries.
+when_to_use_negative:
+- Input spectra lack chemical annotation (SMILES, InChI, or compound name) — the filter requires structure data to derive adducts.
+- Precursor m/z or ion mode (positive/negative) metadata is missing — the filter cannot match expected adducts without observed precursor m/z.
+- Input is already a fully validated and manually curated adduct table — repair is redundant and risks introducing errors.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0625
+tools:
+- name: matchms
+  role: Framework hosting the 'repair_adduct_based_on_smiles' filter; orchestrates spectrum I/O, metadata access, and filter application
+  repo: https://github.com/matchms/matchms
+- name: RDKit
+  role: Derives canonical SMILES, InChI, and InChIKey from chemical annotations; calculates monoisotopic mass from structure
+- name: PubChem
+  role: Reference database queried (via RDKit) to resolve compound names to SMILES and validate structure canonicalization
+- name: Python
+  role: Language for implementing the repair pipeline and error-rate statistics generation
+provenance:
   source_task_ids:
   - task_003
   source_papers:
-  - doi: "10.1186/s13321-024-00878-1"
-  title: "Reproducible MS/MS library cleaning pipeline in matchms"
-schema_version: "0.2.0"
+  - doi: 10.1186/s13321-024-00878-1
+    title: Reproducible MS/MS library cleaning pipeline in matchms
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-library-adduct-repair-validation@sha256:3d33f76d13ace81e17f8334cd5493122e778172f59a52bc7cdcca5cd8f0abba9
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-library-adduct-repair-validation@sha256:aad300534ff894290e9ced067fef48f1e91cd5b1bbf60c57905ff6dd282119e1
 ---
 
 # Spectral Library Adduct Repair and Validation

@@ -1,35 +1,35 @@
 ---
 name: repository-scale-spectral-processing
-description: "Apply MS-Cluster or Falcon-MS to collapse redundant MS/MS observations retrieved at repository scale (millions of spectra) into consensus spectra suitable for downstream molecular networking and annotation. This skill transforms large unfiltered spectral result sets into compact, representative datasets by identifying and merging duplicate acquisitions."
-when_to_use_negative: |
-  - "Input spectra are already deduplicated or come from a single sample with no redundancy expected."
-  - "Consensus spectra are not required downstream; you plan direct library matching or molecular feature detection without aggregation."
-  - "You need to preserve intensity or scan-level metadata that clustering would lose; consider filtering by retention time or other orthogonal criteria instead."
-edam_operation: "http://edamontology.org/operation_3933"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "MS-Cluster"
-  role: "Primary clustering algorithm to merge redundant MS/MS spectra into consensus spectra by identifying similar fragmentation patterns"
-  - name: "Falcon-MS"
-  role: "Alternative consensus spectral generation tool for collapsing redundant observations; used interchangeably with MS-Cluster"
-  - name: "MassQL"
-  role: "Upstream retrieval tool to query repository and generate the large spectral result sets that feed into clustering"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "GNPS"
-  role: "Hosts downstream molecular networking and spectral library annotation on consensus spectra"
-  - name: "pyteomics"
-  role: "Python library for reading and writing MS data files (mzML, mzXML, MGF) used by MassQL reference engine"
-provenance: |
+description: Apply MS-Cluster or Falcon-MS to collapse redundant MS/MS observations retrieved at repository scale (millions of spectra) into consensus spectra suitable for downstream molecular networking and annotation. This skill transforms large unfiltered spectral result sets into compact, representative datasets by identifying and merging duplicate acquisitions.
+when_to_use_negative:
+- Input spectra are already deduplicated or come from a single sample with no redundancy expected.
+- Consensus spectra are not required downstream; you plan direct library matching or molecular feature detection without aggregation.
+- You need to preserve intensity or scan-level metadata that clustering would lose; consider filtering by retention time or other orthogonal criteria instead.
+edam_operation: http://edamontology.org/operation_3933
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
+tools:
+- name: MS-Cluster
+  role: Primary clustering algorithm to merge redundant MS/MS spectra into consensus spectra by identifying similar fragmentation patterns
+- name: Falcon-MS
+  role: Alternative consensus spectral generation tool for collapsing redundant observations; used interchangeably with MS-Cluster
+- name: MassQL
+  role: Upstream retrieval tool to query repository and generate the large spectral result sets that feed into clustering
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: GNPS
+  role: Hosts downstream molecular networking and spectral library annotation on consensus spectra
+- name: pyteomics
+  role: Python library for reading and writing MS data files (mzML, mzXML, MGF) used by MassQL reference engine
+provenance:
   source_task_ids:
   - task_002
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/repository-scale-spectral-processing@sha256:c52cbd29c6f706c90f97207adf42f596a73a60d5feb0b049a42d4d7a4d077728
+  iri: https://w3id.org/holobiomicslab/asb-skill/repository-scale-spectral-processing@sha256:d50cc699f71b418887e79df6817476397caf56303f5ca8982200b617cf891f79
 ---
 
 # Repository-scale spectral processing

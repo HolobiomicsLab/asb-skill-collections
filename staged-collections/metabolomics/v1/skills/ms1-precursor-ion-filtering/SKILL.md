@@ -1,39 +1,39 @@
 ---
 name: ms1-precursor-ion-filtering
-description: "Filter MS1 spectra by precursor m/z value and isotope pattern intensity to isolate ions matching a target analyte class (e.g., iron-binding compounds, organophosphate esters). This skill enables targeted discovery of structurally related metabolites across large public repositories by applying precise m/z and intensity constraints to raw MS data."
-when_to_use_negative: |
-  - "Target analyte class has no characteristic isotope pattern or m/z signature (use untargeted feature detection instead)"
-  - "Input data is already annotated or filtered to a feature table (redundant application)"
-  - "MS1 resolution or mass accuracy is insufficient for the defined ppm tolerance (e.g., low-resolution quadrupole data with >50 ppm error)"
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_0769"
-tools: |
-  - name: "MassQL"
-  role: "Query language and reference engine for parsing MS1 isotope pattern queries and executing filters on spectral DataFrames"
-  repo: "https://github.com/mwang87/MassQueryLanguage"
-  - name: "lark"
-  role: "Python parsing library used to parse MassQL query strings into an internal data structure and parse tree"
-  repo: "https://github.com/lark-parser/lark"
-  - name: "pyteomics"
-  role: "Python library to read open MS data file formats (mzML, mzXML, MGF) into pandas DataFrames"
-  - name: "pandas"
-  role: "Data manipulation library used to filter DataFrame rows by m/z, intensity, and isotope pattern criteria"
-  - name: "MZmine"
-  role: "Open-source MS data analysis tool with native MassQL support for executing MS1 precursor filtering workflows"
-  repo: "https://github.com/mzmine/mzmine"
-  - name: "GNPS/MassIVE"
-  role: "Public MS data repository from which reference datasets and large-scale MS1 scans are retrieved"
-provenance: |
+description: Filter MS1 spectra by precursor m/z value and isotope pattern intensity to isolate ions matching a target analyte class (e.g., iron-binding compounds, organophosphate esters). This skill enables targeted discovery of structurally related metabolites across large public repositories by applying precise m/z and intensity constraints to raw MS data.
+when_to_use_negative:
+- Target analyte class has no characteristic isotope pattern or m/z signature (use untargeted feature detection instead)
+- Input data is already annotated or filtered to a feature table (redundant application)
+- MS1 resolution or mass accuracy is insufficient for the defined ppm tolerance (e.g., low-resolution quadrupole data with >50 ppm error)
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_0769
+tools:
+- name: MassQL
+  role: Query language and reference engine for parsing MS1 isotope pattern queries and executing filters on spectral DataFrames
+  repo: https://github.com/mwang87/MassQueryLanguage
+- name: lark
+  role: Python parsing library used to parse MassQL query strings into an internal data structure and parse tree
+  repo: https://github.com/lark-parser/lark
+- name: pyteomics
+  role: Python library to read open MS data file formats (mzML, mzXML, MGF) into pandas DataFrames
+- name: pandas
+  role: Data manipulation library used to filter DataFrame rows by m/z, intensity, and isotope pattern criteria
+- name: MZmine
+  role: Open-source MS data analysis tool with native MassQL support for executing MS1 precursor filtering workflows
+  repo: https://github.com/mzmine/mzmine
+- name: GNPS/MassIVE
+  role: Public MS data repository from which reference datasets and large-scale MS1 scans are retrieved
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1038/s41592-025-02660-z"
-  title: "A universal language for finding mass spectrometry data patterns"
-schema_version: "0.2.0"
+  - doi: 10.1038/s41592-025-02660-z
+    title: A universal language for finding mass spectrometry data patterns
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:82592f275abb40360c273858dc18677affa2a2999db16f655eea68f6277bb65a
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:ec19061e2608ddc1bb13dc7164f4d258ca1c0742d227fad925cf2f4439f823e7
 ---
 
 # MS1 Precursor Ion Filtering

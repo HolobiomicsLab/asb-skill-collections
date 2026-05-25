@@ -1,29 +1,29 @@
 ---
 name: metabolite-feature-table-distance-metric-computation
-description: "Compute pairwise distance metrics (Canberra) from a metabolite feature abundance matrix to enable ordination and statistical testing of metabolome composition differences across sample groups. This skill transforms raw feature abundances into a distance/dissimilarity matrix that quantifies metabolic differences between samples."
-when_to_use_negative: |
-  - "Input is already a pre-computed distance or dissimilarity matrix—skip directly to ordination or PERMANOVA."
-  - "Feature table contains gap-filled data and you require only non-gap-filled analysis (compute distance separately on non-gap-filled subset)."
-  - "Sample groups are nested or have hierarchical structure requiring mixed-model analysis rather than flat group assignment."
-edam_operation: "http://edamontology.org/operation_3279"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3520"
-tools: |
-  - name: "QIIME2"
-  role: "Compute Canberra distance matrix from metabolite feature abundance table; output serves as input to PCoA and PERMANOVA commands."
-  repo: "https://github.com/qiime2/qiime2"
-  - name: "EMPeror"
-  role: "Visualize PCoA plots generated from the computed distance matrix to explore metabolome ordination space."
-provenance: |
+description: Compute pairwise distance metrics (Canberra) from a metabolite feature abundance matrix to enable ordination and statistical testing of metabolome composition differences across sample groups. This skill transforms raw feature abundances into a distance/dissimilarity matrix that quantifies metabolic differences between samples.
+when_to_use_negative:
+- Input is already a pre-computed distance or dissimilarity matrix—skip directly to ordination or PERMANOVA.
+- Feature table contains gap-filled data and you require only non-gap-filled analysis (compute distance separately on non-gap-filled subset).
+- Sample groups are nested or have hierarchical structure requiring mixed-model analysis rather than flat group assignment.
+edam_operation: http://edamontology.org/operation_3279
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3520
+tools:
+- name: QIIME2
+  role: Compute Canberra distance matrix from metabolite feature abundance table; output serves as input to PCoA and PERMANOVA commands.
+  repo: https://github.com/qiime2/qiime2
+- name: EMPeror
+  role: Visualize PCoA plots generated from the computed distance matrix to explore metabolome ordination space.
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-table-distance-metric-computation@sha256:6ca52f6ac7d5554b5a77d0dc13b416aef735e8e55e0d9f107998b0a77d0e8976
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-table-distance-metric-computation@sha256:d1b6b09df5214589ab06d8302f2b2928575c1b22dc07d82304b146f4719cbcab
 ---
 
 # metabolite-feature-table-distance-metric-computation

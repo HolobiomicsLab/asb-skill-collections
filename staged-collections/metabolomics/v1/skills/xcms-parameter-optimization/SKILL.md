@@ -1,37 +1,37 @@
 ---
 name: xcms-parameter-optimization
-description: "Optimize XCMS feature detection, alignment, and retention time correction parameters using the IPO algorithm to maximize sensitivity and specificity in LC–HRMS metabolomics workflows. This skill applies data-driven parameter tuning to centroided mzML files before peak picking, ensuring robust detection of low-abundance metabolite features across replicate samples."
-when_to_use_negative: |
-  - "Input mzML files are already profile-mode (not centroided); XCMS requires centroided spectra—use ProteoWizard to centroid first."
-  - "Your sample set lacks replicate structure or quality controls (e.g., reference standards, blanks); IPO requires examples of true peaks to optimize against."
-  - "Feature table is already generated; parameter optimization is a preprocessing step that must occur before peak detection, not after."
-edam_operation: "http://edamontology.org/operation_3629"
-edam_topics: |
-  - "http://edamontology.org/topic_0091"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "XCMS"
-  role: "Core feature detection, peak alignment, and retention time correction engine; processes centroided mzML and outputs xcmsSet with optimized parameters"
-  repo: "https://bioconductor.org/packages/xcms/"
-  - name: "IPO"
-  role: "Parameter optimization package; systematically searches XCMS parameter space to maximize feature detection accuracy using known reference compounds"
-  repo: "https://bioconductor.org/packages/IPO/"
-  - name: "ProteoWizard"
-  role: "Converts raw vendor mass spectra formats to centroided mzML before XCMS processing"
-  - name: "CAMERA"
-  role: "Post-XCMS componentization of features; groups adducts, isotopes, and in-source fragments for downstream filtering"
-  repo: "https://bioconductor.org/packages/CAMERA/"
-  - name: "R"
-  role: "Language environment for running XCMS, IPO, and CAMERA workflows; version 3.6.1 used in this study"
-provenance: |
+description: Optimize XCMS feature detection, alignment, and retention time correction parameters using the IPO algorithm to maximize sensitivity and specificity in LC–HRMS metabolomics workflows. This skill applies data-driven parameter tuning to centroided mzML files before peak picking, ensuring robust detection of low-abundance metabolite features across replicate samples.
+when_to_use_negative:
+- Input mzML files are already profile-mode (not centroided); XCMS requires centroided spectra—use ProteoWizard to centroid first.
+- Your sample set lacks replicate structure or quality controls (e.g., reference standards, blanks); IPO requires examples of true peaks to optimize against.
+- Feature table is already generated; parameter optimization is a preprocessing step that must occur before peak detection, not after.
+edam_operation: http://edamontology.org/operation_3629
+edam_topics:
+- http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
+tools:
+- name: XCMS
+  role: Core feature detection, peak alignment, and retention time correction engine; processes centroided mzML and outputs xcmsSet with optimized parameters
+  repo: https://bioconductor.org/packages/xcms/
+- name: IPO
+  role: Parameter optimization package; systematically searches XCMS parameter space to maximize feature detection accuracy using known reference compounds
+  repo: https://bioconductor.org/packages/IPO/
+- name: ProteoWizard
+  role: Converts raw vendor mass spectra formats to centroided mzML before XCMS processing
+- name: CAMERA
+  role: Post-XCMS componentization of features; groups adducts, isotopes, and in-source fragments for downstream filtering
+  repo: https://bioconductor.org/packages/CAMERA/
+- name: R
+  role: Language environment for running XCMS, IPO, and CAMERA workflows; version 3.6.1 used in this study
+provenance:
   source_task_ids:
   - task_001
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/xcms-parameter-optimization@sha256:5d4971ae1a1d6f069ed18f4dee622f5b0e3db690cfe076ca18fa2e2d0d25d611
+  iri: https://w3id.org/holobiomicslab/asb-skill/xcms-parameter-optimization@sha256:c860fca05506e91e8f6cd9f908b2cb94e61a65c5712f0b382397fe26181e7991
 ---
 
 # xcms-parameter-optimization

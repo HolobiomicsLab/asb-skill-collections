@@ -1,31 +1,31 @@
 ---
 name: metabolite-feature-table-subsetting
-description: "Subset a metabolite feature table to a curated list of annotated metabolites and filter conditionally-dependent taxa based on predictive strength, enabling focused analysis of microbe-metabolite interactions. This skill reduces feature and taxa complexity to only those with high-confidence annotations and strong conditional probability relationships."
-when_to_use_negative: |
-  - "Input is already a fully annotated, curated interaction table with pre-selected metabolites and taxa."
-  - "You require exhaustive exploration of all taxa-metabolite pairs, not prioritization by conditional probability; subsetting discards weak associations."
-  - "Conditional probabilities have not yet been computed; mmvec analysis has not been run on your microbiome and metabolite data."
-edam_operation: "http://edamontology.org/operation_3695"
-edam_topics: |
-  - "http://edamontology.org/topic_3172"
-  - "http://edamontology.org/topic_3391"
-tools: |
-  - name: "mmvec"
-  role: "Computes conditional probability distributions of metabolites given taxa; output is subsetted by this skill."
-  - name: "QIIME2"
-  role: "Hosts the microbe-metabolite vectors plugin that produces the conditional probability artifact to be filtered."
-  - name: "R"
-  role: "Used to perform subsetting operations on conditional probability tables and filter by metabolite identifiers and taxa ranks."
-  repo: "https://github.com/jhaffner09/core_metabolome_2021"
-provenance: |
+description: Subset a metabolite feature table to a curated list of annotated metabolites and filter conditionally-dependent taxa based on predictive strength, enabling focused analysis of microbe-metabolite interactions. This skill reduces feature and taxa complexity to only those with high-confidence annotations and strong conditional probability relationships.
+when_to_use_negative:
+- Input is already a fully annotated, curated interaction table with pre-selected metabolites and taxa.
+- You require exhaustive exploration of all taxa-metabolite pairs, not prioritization by conditional probability; subsetting discards weak associations.
+- Conditional probabilities have not yet been computed; mmvec analysis has not been run on your microbiome and metabolite data.
+edam_operation: http://edamontology.org/operation_3695
+edam_topics:
+- http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3391
+tools:
+- name: mmvec
+  role: Computes conditional probability distributions of metabolites given taxa; output is subsetted by this skill.
+- name: QIIME2
+  role: Hosts the microbe-metabolite vectors plugin that produces the conditional probability artifact to be filtered.
+- name: R
+  role: Used to perform subsetting operations on conditional probability tables and filter by metabolite identifiers and taxa ranks.
+  repo: https://github.com/jhaffner09/core_metabolome_2021
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1128/msystems.00710-22"
-  title: "Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions"
-schema_version: "0.2.0"
+  - doi: 10.1128/msystems.00710-22
+    title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-table-subsetting@sha256:106aab1ed3b9a9286706aa395c98678757ecd3fb59c97a843d8055791681589f
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-table-subsetting@sha256:2596784bf8983d34b068c39f3c5c8553b56e7d2036353bfa122659cf976356b2
 ---
 
 # metabolite-feature-table-subsetting

@@ -1,35 +1,35 @@
 ---
 name: ms2-spectral-fragmentation-interpretation
-description: "Interpret MS2 fragmentation spectra to assign unambiguous molecular formulas and elucidate metabolite structures by combining GenForm formula calculation with Sirius in silico fragmentation analysis and dot-product similarity scoring against reference spectra. This skill distinguishes true metabolite fragments from unexplainable peaks and validates spectral quality."
-when_to_use_negative: |
-  - "Input MS2 spectra contain primarily noise or exhibit poor signal-to-noise ratio; Sirius and GenForm require interpretable fragment patterns."
-  - "Features have already been structurally confirmed by authentic reference standards or orthogonal techniques; re-interpretation adds no value."
-  - "MS1 mass accuracy is worse than 8 ppm or MS2 resolution is insufficient to resolve isobaric fragments; GenForm and Sirius will produce unreliable or ambiguous formulas."
-edam_operation: "http://edamontology.org/operation_3632"
-edam_topics: |
-  - "http://edamontology.org/topic_0121"
-  - "http://edamontology.org/topic_3172"
-tools: |
-  - name: "GenForm"
-  role: "Command-line tool for calculating molecular formulas from MS1 m/z and MS2 spectra, constrained by parent compound elemental composition; outputs unambiguous formula assignments and explains MS2 peak origins."
-  - name: "Sirius version 4.4.27"
-  role: "In silico fragmentation and molecular fingerprint prediction tool for structure elucidation of ambiguous or complex fragmentation patterns; generates fragmentation trees and identifies parent pesticide-like fragments and functional groups."
-  - name: "OrgMassSpecR"
-  role: "R package providing SpectrumSimilarity function for calculating dot-product similarity scores between experimental and reference MS2 spectra; assesses spectral quality and confidence in formula assignments."
-  - name: "mzR"
-  role: "R package for extracting MS2 spectra corresponding to prioritized metabolite features from data-dependent acquisition in mzML or vendor-native formats."
-  - name: "incubatoR"
-  role: "R/bash workflow pipeline integrating XCMS, CAMERA, statistical filtering, and GenForm/Sirius execution for automated pesticide metabolite identification from LC-HRMS data."
-  repo: "https://github.com/chufz/incubatoR"
-provenance: |
+description: Interpret MS2 fragmentation spectra to assign unambiguous molecular formulas and elucidate metabolite structures by combining GenForm formula calculation with Sirius in silico fragmentation analysis and dot-product similarity scoring against reference spectra. This skill distinguishes true metabolite fragments from unexplainable peaks and validates spectral quality.
+when_to_use_negative:
+- Input MS2 spectra contain primarily noise or exhibit poor signal-to-noise ratio; Sirius and GenForm require interpretable fragment patterns.
+- Features have already been structurally confirmed by authentic reference standards or orthogonal techniques; re-interpretation adds no value.
+- MS1 mass accuracy is worse than 8 ppm or MS2 resolution is insufficient to resolve isobaric fragments; GenForm and Sirius will produce unreliable or ambiguous formulas.
+edam_operation: http://edamontology.org/operation_3632
+edam_topics:
+- http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3172
+tools:
+- name: GenForm
+  role: Command-line tool for calculating molecular formulas from MS1 m/z and MS2 spectra, constrained by parent compound elemental composition; outputs unambiguous formula assignments and explains MS2 peak origins.
+- name: Sirius version 4.4.27
+  role: In silico fragmentation and molecular fingerprint prediction tool for structure elucidation of ambiguous or complex fragmentation patterns; generates fragmentation trees and identifies parent pesticide-like fragments and functional groups.
+- name: OrgMassSpecR
+  role: R package providing SpectrumSimilarity function for calculating dot-product similarity scores between experimental and reference MS2 spectra; assesses spectral quality and confidence in formula assignments.
+- name: mzR
+  role: R package for extracting MS2 spectra corresponding to prioritized metabolite features from data-dependent acquisition in mzML or vendor-native formats.
+- name: incubatoR
+  role: R/bash workflow pipeline integrating XCMS, CAMERA, statistical filtering, and GenForm/Sirius execution for automated pesticide metabolite identification from LC-HRMS data.
+  repo: https://github.com/chufz/incubatoR
+provenance:
   source_task_ids:
   - task_004
   source_papers:
-  - doi: "10.1021/acs.analchem.1c00972"
-  title: "Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing"
-schema_version: "0.2.0"
+  - doi: 10.1021/acs.analchem.1c00972
+    title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+schema_version: 0.2.0
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms2-spectral-fragmentation-interpretation@sha256:52246a2c61c4ff1822a95fa408c5c73725ae9094378d47291277d834207587b1
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms2-spectral-fragmentation-interpretation@sha256:7b05367275a9b0960a6cebe30b171bcc8e8d78376202a185ec427571b50f7a89
 ---
 
 # MS2 Spectral Fragmentation Interpretation
