@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-data-preprocessing
-description: Use when processing metabolomics data with mass spectrometry techniques such as LC-MS and GC-MS to convert raw LC–HRMS data to centroided mzML format while applying feature detection, alignment, and retention-time correction for generating a normalized feature table.
+description: Converts raw LC–HRMS data to centroided mzML format and applies feature detection, alignment, and retention-time correction to generate a normalized feature table with m/z values, retention times, and per-sample intensities. This is the foundation for downstream metabolite discovery and annotation in high-throughput screening workflows.
 when_to_use_negative:
 - Input is already a feature table or normalized intensity matrix (skip directly to statistical filtering or annotation).
 - Raw data are already in mzML and do not require centroiding (use XCMS + CAMERA only, bypass ProteoWizard).
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-data-preprocessing/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-data-preprocessing/skill.md
-    merged_at: '2026-05-25T07:04:57.597646+00:00'
+    merged_at: '2026-05-25T07:15:31.008662+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-data-preprocessing@sha256:3e34c7ce5f4eeeb510d2a9fff1c516e95dff2429e2b513f58e5c947efee0c25a
   related_workflows:

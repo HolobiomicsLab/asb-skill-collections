@@ -1,6 +1,6 @@
 ---
 name: metabolite-annotation-consistency-checking
-description: Use when validating metabolite annotations in metabolomics by comparing derived canonical chemical identifiers (SMILES, InChI, InChIKey) against reference data in LC-MS and GC-MS untargeted lipidomics, checking consistency between precursor m/z, adduct assignment, and molecular weight.
+description: Validate metabolite annotations in MS/MS library spectra by comparing derived canonical chemical identifiers (SMILES, InChI, InChIKey) against reference data and checking consistency between precursor m/z, adduct assignment, and molecular weight. This skill detects mismatches that indicate incorrect or incomplete annotations before library curation.
 when_to_use_negative:
 - Input spectra lack compound names, SMILES, or other chemical identifiers that can be mapped to PubChem.
 - The dataset contains only unannotated spectra or spectra with de novo annotations not yet validated against reference databases.
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/metabolite-annotation-consistency-checking/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/metabolite-annotation-consistency-checking/skill.md
-    merged_at: '2026-05-25T07:04:57.396687+00:00'
+    merged_at: '2026-05-25T07:15:30.805377+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:43e148b9035ca8f15d50cce5359f9f0b9e52912f11581542b0092bbd868b1440
   related_workflows:

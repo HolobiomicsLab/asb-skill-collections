@@ -1,0 +1,43 @@
+canonical_url: https://pubchem.ncbi.nlm.nih.gov/
+evidence_spans:
+- This filter derives the canonical SMILES, InChI and InChIKey from PubChem
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.374766+00:00'
+  n_source_records: 16
+  source_paper_dois:
+  - 10.1186/s13321-024-00878-1
+name: PubChem
+related_skills:
+- adduct-ion-classification-accuracy-assessment
+- annotation-error-rate-calculation
+- chemical-structure-derivation-from-compound-names
+- mass-spectrometry-metadata-harmonization
+- metabolite-annotation-consistency-checking
+- metadata-harmonization-cleaning
+- ms-spectra-library-parsing
+- precursor-adduct-mass-reconciliation
+- pubchem-structure-lookup-and-retrieval
+- smiles-inchi-chemical-identifier-repair
+- smiles-inchi-inchikey-comparison-and-validation
+- smiles-structure-canonicalization
+- spectral-count-quality-assessment
+- spectral-library-adduct-repair-validation
+- spectral-metadata-annotation-mismatch-detection
+- structure-annotation-validation
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+resolution_attempts:
+- match: pubchem
+  source: platform_override
+slug: pubchem
+source_paper_doi: 10.1186/s13321-024-00878-1
+source_paper_title: Reproducible MS/MS library cleaning pipeline in matchms
+source_task_ids:
+- task_001
+- task_002
+- task_003

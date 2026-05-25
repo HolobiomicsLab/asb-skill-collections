@@ -1,6 +1,6 @@
 ---
 name: transcript-abundance-estimation-counting
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to quantify mRNA abundance from RNA-seq read alignments by counting reads per annotated gene and normalizing for library composition bias.
+description: Quantify mRNA abundance from RNA-seq read alignments by counting reads per annotated gene and normalizing for library composition bias. This skill bridges alignment and differential expression analysis, producing normalized expression matrices suitable for statistical testing.
 when_to_use_negative:
 - Input reads are unaligned or from unstranded libraries where strand information is unavailable — HTSeq mode=union with stranded=reverse will produce biased counts
 - Gene annotations are incomplete or highly fragmented — HTSeq union mode will misassign reads to wrong features, inflating noise
@@ -29,7 +29,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/transcript-abundance-estimation-counting/SKILL.md
     - outputs/audit_jeong_full/skills/transcript-abundance-estimation-counting/skill.md
-    merged_at: '2026-05-25T07:04:57.523354+00:00'
+    merged_at: '2026-05-25T07:15:30.932799+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:2b98d67848d186361a8aae3829ccc271476f63f79804c4d569f0466794e488e8
   related_workflows:

@@ -1,6 +1,6 @@
 ---
 name: metabolite-feature-filtering-by-peak-count
-description: Use when metabolomics applies a minimum-peaks-in-a-row threshold in MZmine to filter low-frequency metabolite features from untargeted LC-MS/MS data based on contiguous peak detection across multiple samples.
+description: Apply a minimum-peaks-in-a-row threshold in MZmine to remove low-frequency metabolite features from untargeted LC-MS/MS data, reducing noise and retaining only features with contiguous peak detection across multiple samples. This filtering is typically applied to non-gap-filled data before population-level presence filtering to identify a robust shared metabolome.
 when_to_use_negative:
 - Input data is already gap-filled—apply filtering before gap-filling, not after, to avoid artificially inflating peak counts.
 - Study has only one or two samples per group—minimum-peaks-in-a-row filtering will be too stringent and may remove valid but rare metabolites.
@@ -28,7 +28,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/metabolite-feature-filtering-by-peak-count/SKILL.md
     - outputs/audit_haffner_v2/skills/metabolite-feature-filtering-by-peak-count/skill.md
-    merged_at: '2026-05-25T07:04:57.467116+00:00'
+    merged_at: '2026-05-25T07:15:30.875945+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-filtering-by-peak-count@sha256:c69d25f18e0feb64445fa888e4f43c9d588cf1526fa2901cbd99880cc37af80d
   related_workflows:

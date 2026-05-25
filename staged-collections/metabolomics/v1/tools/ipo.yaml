@@ -1,0 +1,46 @@
+canonical_url: https://pypi.org/project/ipo/
+evidence_spans:
+- The parameters of XCMS were optimized by the IPO approach.28
+install:
+  kind: pip
+  package: ipo
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.376508+00:00'
+  n_source_records: 4
+  source_paper_dois:
+  - 10.1021/acs.analchem.1c00972
+name: IPO
+related_skills:
+- lc-ms-feature-detection-and-alignment
+- mass-spectrometry-data-preprocessing
+- retention-time-correction
+- xcms-parameter-optimization
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+resolution_attempts:
+- http_status: 200
+  source: pypi
+  status: hit
+  url: https://pypi.org/pypi/ipo/json
+- http_status: 404
+  source: conda-forge
+  status: miss
+  url: https://api.anaconda.org/package/conda-forge/ipo
+- http_status: 404
+  source: bioconda
+  status: miss
+  url: https://api.anaconda.org/package/bioconda/ipo
+- http_status: 200
+  source: bio.tools
+  status: hit
+  url: https://bio.tools/api/ipo?format=json
+slug: ipo
+source_paper_doi: 10.1021/acs.analchem.1c00972
+source_paper_title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+source_task_ids:
+- task_001

@@ -1,6 +1,6 @@
 ---
 name: retention-time-correction
-description: Use when metabolomics retention time correction is needed across LC–HRMS runs using XCMS's orbiwarp algorithm with IPO-optimized parameters to ensure consistent feature matching and metabolite identification across multiple samples and replicates.
+description: Align and correct retention times across LC–HRMS runs using XCMS's orbiwarp algorithm with IPO-optimized parameters to ensure consistent feature matching and metabolite identification across multiple samples and replicates.
 when_to_use_negative:
 - Input xcmsSet already contains grouped features; retention time correction must occur before grouping, not after.
 - Single run or single-replicate analysis where no cross-run drift exists; correction is redundant and may introduce noise.
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/retention-time-correction/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/retention-time-correction/skill.md
-    merged_at: '2026-05-25T07:04:57.616011+00:00'
+    merged_at: '2026-05-25T07:15:31.027464+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/retention-time-correction@sha256:4c979b18e42d638a84917cfcf41b9c57355ea8d1a378b0a532aa2aa87b87eb37
   related_workflows:

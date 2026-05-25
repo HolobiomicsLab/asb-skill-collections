@@ -1,6 +1,6 @@
 ---
 name: high-resolution-mass-accuracy-analysis
-description: Use when metabolomics high-resolution mass accuracy analysis applies sub-ppm mass tolerance thresholds and mass defect filtering to prioritize metabolite features from LC–HRMS data.
+description: High-resolution mass accuracy analysis applies sub-ppm mass tolerance thresholds and mass defect filtering to prioritize metabolite features from LC–HRMS data and constrain molecular formula assignments in xenobiotic screening. This skill combines instrumental mass accuracy monitoring, mass defect shift filtering, and formula validation to distinguish true metabolites from background noise and matrix artifacts.
 when_to_use_negative:
 - Input data already contains curated, reference-matched metabolite identifications from a spectral library (skill would be redundant)
 - Mass accuracy of the instrument is unknown or unstable (>5 ppm drift observed); recalibrate before applying ±8 ppm tolerance thresholds
@@ -40,7 +40,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/high-resolution-mass-accuracy-analysis/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/high-resolution-mass-accuracy-analysis/skill.md
-    merged_at: '2026-05-25T07:04:57.572105+00:00'
+    merged_at: '2026-05-25T07:15:30.982348+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/high-resolution-mass-accuracy-analysis@sha256:f1360fe72bbc9e7c0228f5e60e9a938620b51d3e80dbd79b4016a6c4481f121c
   related_workflows:

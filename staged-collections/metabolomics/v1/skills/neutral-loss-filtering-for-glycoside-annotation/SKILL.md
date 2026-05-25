@@ -1,6 +1,6 @@
 ---
 name: neutral-loss-filtering-for-glycoside-annotation
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to filter MS/MS spectra by characteristic neutral losses, applying MassQL queries for pentose (132.0423 Da) and hexose (162.0528 Da) to annotate glycosylated metabolites in feature-based molecular networks.
+description: Filter MS/MS spectra by characteristic neutral losses to rapidly annotate glycosylated metabolites in feature-based molecular networks. This skill uses MassQL queries targeting pentose (132.0423 Da) and hexose (162.0528 Da) neutral losses to identify and cluster glycoside variants in untargeted LC-MS/MS data without reference standards.
 when_to_use_negative:
 - Input is already a fully structurally annotated feature table with confirmed metabolite identities from NMR or MS/MS library matching; neutral-loss filtering adds no value.
 - MS/MS spectra lack sufficient fragmentation depth or signal intensity (peaks below 10,000 amplitude threshold) to reliably detect neutral losses.
@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/neutral-loss-filtering-for-glycoside-annotation/SKILL.md
     - outputs/audit_jeong_full/skills/neutral-loss-filtering-for-glycoside-annotation/skill.md
-    merged_at: '2026-05-25T07:04:57.517497+00:00'
+    merged_at: '2026-05-25T07:15:30.926905+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:4c9129983817ca59d431f4921241e93a006924a94c0c5ace87e62db640ecb9d6
   related_workflows:

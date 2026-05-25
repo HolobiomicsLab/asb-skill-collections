@@ -1,6 +1,6 @@
 ---
 name: microbial-taxa-rank-selection-by-predictive-strength
-description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to select the most predictive microbial taxa by ranking them according to their conditional probability values from mmvec output across all metabolites.
+description: Select the most predictive microbial taxa from mmvec conditional-probability output by ranking taxa according to their conditional probability values across all metabolites. This skill identifies the subset of microbes with the strongest quantitative associations to a curated set of metabolites, reducing noise and focusing downstream interaction analysis on taxa with robust predictive power.
 when_to_use_negative:
 - mmvec conditional probability output has not yet been computed—first run the mmvec neural network on your microbe and metabolite abundance tables.
 - You have not yet curated or filtered metabolites to a set of interest (e.g., shared annotated metabolites)—this skill is applied *after* metabolite curation, not before.
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/microbial-taxa-rank-selection-by-predictive-strength/SKILL.md
     - outputs/audit_haffner_v2/skills/microbial-taxa-rank-selection-by-predictive-strength/skill.md
-    merged_at: '2026-05-25T07:04:57.496794+00:00'
+    merged_at: '2026-05-25T07:15:30.905790+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/microbial-taxa-rank-selection-by-predictive-strength@sha256:320a107aae1cc4338925e22f709df52838355cf7d62f10779821420e281456fb
   related_workflows:

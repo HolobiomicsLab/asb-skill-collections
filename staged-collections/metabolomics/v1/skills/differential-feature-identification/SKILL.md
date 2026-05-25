@@ -1,6 +1,6 @@
 ---
 name: differential-feature-identification
-description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to identify metabolite features associated with a categorical experimental variable by training a random-forest classifier on high-abundance features and filtering by variable-importance score.
+description: Identify metabolite features most strongly associated with a categorical experimental variable (e.g., industrialization group) by training a random-forest classifier on high-abundance features and filtering results by variable-importance score. This skill ranks features by their predictive power and retains only those exceeding a statistical threshold, yielding a curated set of candidate differential features for downstream annotation and validation.
 when_to_use_negative:
 - Input feature table is already heavily pre-filtered to a small set (e.g., <100 features); random-forest variable importance may be unstable or overfitting due to small feature count relative to sample count.
 - Categorical grouping variable has very imbalanced class sizes (e.g., 95% samples in one group, 5% in another); random-forest importance can be biased toward the majority class, and the selected features may not generalize to minority populations.
@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/differential-feature-identification/SKILL.md
     - outputs/audit_haffner_v2/skills/differential-feature-identification/skill.md
-    merged_at: '2026-05-25T07:04:57.490413+00:00'
+    merged_at: '2026-05-25T07:15:30.899247+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:0ed164b7bc7b5dfbb0b49792ccdbece1e29c2c83a7ea5cd1e0e17f9545ff82b0
   related_workflows:

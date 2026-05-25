@@ -1,6 +1,6 @@
 ---
 name: pubchem-structure-lookup-and-retrieval
-description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to query PubChem for canonical SMILES, InChI, and InChIKey from compound names for mass spectra annotations.
+description: Query PubChem to derive canonical SMILES, InChI, and InChIKey from compound names for mass spectra annotations. This skill validates and standardizes chemical structure representations in spectral metadata, enabling detection of structural mismatches and unannotated spectra.
 when_to_use_negative:
 - Spectra lack compound names or have ambiguous/multi-part compound identifiers that PubChem cannot resolve uniquely.
 - The analysis goal does not require standardized or canonical structure representations (e.g., only peak-level filtering or intensity normalization is needed).
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/pubchem-structure-lookup-and-retrieval/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/pubchem-structure-lookup-and-retrieval/skill.md
-    merged_at: '2026-05-25T07:04:57.425777+00:00'
+    merged_at: '2026-05-25T07:15:30.834549+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/pubchem-structure-lookup-and-retrieval@sha256:caf14e38619145abf86e3bd669f0f084b6232caaa13d1e8c550a5295033f0c5b
   related_workflows:

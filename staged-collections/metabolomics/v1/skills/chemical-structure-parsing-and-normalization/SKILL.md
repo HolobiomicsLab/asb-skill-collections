@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-parsing-and-normalization
-description: Use when parsing chemical structures from metadata such as SMILES, InChI, and compound names in the domain of metabolomics using RDKit and external chemical databases to normalize them to canonical forms.
+description: Parse chemical structures from metadata (SMILES, InChI, compound names) and normalize them to canonical forms using RDKit and external chemical databases. This skill is essential for validating structure annotations in mass spectral libraries and detecting mismatches between chemical identifiers.
 when_to_use_negative:
 - Input spectra lack any chemical structure metadata (SMILES, InChI, or compound name) — parsing has no source material.
 - Mass spectra are experimental, unannotated data without assigned chemical identities — structure parsing requires annotation.
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-parsing-and-normalization/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-parsing-and-normalization/skill.md
-    merged_at: '2026-05-25T07:04:57.427633+00:00'
+    merged_at: '2026-05-25T07:15:30.836383+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-parsing-and-normalization@sha256:eea6a61e9429e76af7f311c03ef6e4eb44a5d19c5bd2e744ae4b4262b3504e67
   related_workflows:

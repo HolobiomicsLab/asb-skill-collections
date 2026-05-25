@@ -1,6 +1,6 @@
 ---
 name: numeric-value-comparison-across-sources
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to cross-validate reported summary statistics against structured data artifacts for verifying reproducibility and detecting transcription or calculation errors.
+description: Cross-validate reported summary statistics (e.g., input counts, removal counts, repair counts, retention counts) from a scientific article against structured data artifacts (e.g., processing reports, supplementary tables) to verify reproducibility and detect transcription or calculation errors.
 when_to_use_negative:
 - The artifact does not exist or is inaccessible at the cited location (e.g., Zenodo link is dead or requires authentication).
 - The article reports aggregate statistics without citing a specific artifact or supplementary table as the source (comparison cannot be grounded).
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/numeric-value-comparison-across-sources/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/numeric-value-comparison-across-sources/skill.md
-    merged_at: '2026-05-25T07:04:57.434251+00:00'
+    merged_at: '2026-05-25T07:15:30.843131+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/numeric-value-comparison-across-sources@sha256:1f3a1848e78f6b19da4811b27585c90e56be19717820178567625d6fa78c7a4a
   related_workflows:

@@ -1,6 +1,6 @@
 ---
 name: spectral-redundancy-clustering
-description: Use when collapsing redundant MS/MS spectra from large-scale repository queries into consensus spectra using MS-Cluster or Falcon-MS, reducing dataset size by 70–80% while preserving fragmentation patterns for downstream molecular networking and library annotation.
+description: Collapse redundant MS/MS spectra from large-scale repository queries into consensus spectra using MS-Cluster or Falcon-MS, reducing dataset size by 70–80% while preserving representative fragmentation patterns for downstream molecular networking and library annotation.
 when_to_use_negative:
 - Input spectrum set is already small (< 100 unique spectra) or has been manually curated; clustering overhead is unnecessary.
 - Spectral redundancy is intentional (e.g., studying instrument or ionization variability); collapsing removes that signal.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/spectral-redundancy-clustering/SKILL.md
     - outputs/audit_s41592_full/skills/spectral-redundancy-clustering/skill.md
-    merged_at: '2026-05-25T07:04:57.539375+00:00'
+    merged_at: '2026-05-25T07:15:30.948501+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:431f4f9692b5895ab5760ee9a270aec07691ab7dd39380b62bcd52a3809f44bb
   related_workflows:

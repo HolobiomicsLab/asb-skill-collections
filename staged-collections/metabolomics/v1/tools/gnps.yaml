@@ -1,0 +1,39 @@
+evidence_spans:
+- Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library
+- To identify OPEs in public data, we scaled the MassQL query to all Q Exactive data in the GNPS/MassIVE data repository
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.375077+00:00'
+  n_source_records: 12
+  source_paper_dois:
+  - 10.1073/pnas
+  - 10.1038/s41592-025-02660-z
+name: GNPS
+related_skills:
+- cross-reference-spectral-clusters-to-chemical-standards
+- mass-spectrometry-query-language-syntax
+- massql-query-formulation-for-mass-difference-screening
+- molecular-network-node-annotation-via-library-matching
+- ms-data-format-conversion-and-export
+- ms-ms-spectral-data-retrieval
+- neutral-loss-filtering-for-glycoside-annotation
+- organophosphate-ester-compound-class-recognition
+- ppm-tolerance-filtering-and-calibration
+- product-ion-fragment-filtering
+- relative-intensity-threshold-filtering
+- spectral-similarity-network-construction
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: gnps
+source_papers:
+- doi: 10.1073/pnas
+  title: Proceedings of the National Academy of Sciences
+- doi: 10.1038/s41592-025-02660-z
+  title: A universal language for finding mass spectrometry data patterns
+source_task_ids:
+- task_001
+- task_003

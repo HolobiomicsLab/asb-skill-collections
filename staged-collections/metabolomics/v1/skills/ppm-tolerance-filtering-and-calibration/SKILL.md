@@ -1,6 +1,6 @@
 ---
 name: ppm-tolerance-filtering-and-calibration
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to apply mass accuracy filtering using parts-per-million (ppm) tolerance windows to match observed m/z values against expected fragment ions or precursors in high-resolution mass spectrometry datasets.
+description: Apply mass accuracy filtering using parts-per-million (ppm) tolerance windows to match observed m/z values against expected fragment ions or precursors in high-resolution mass spectrometry datasets. This skill is essential for reducing false positives when querying large repositories of LC-MS/MS data, particularly when searching for specific molecular signatures across heterogeneous instrument types and ionization sources.
 when_to_use_negative:
 - Your instrument has not been recently mass-calibrated and you do not know its actual mass error profile; applying an arbitrary ppm window could yield spurious matches or miss true features.
 - You are filtering data that has already been deconvoluted or centroided by vendor software into discrete peaks; applying ppm tolerance to pre-processed peak lists requires verification that m/z values are still in the original instrument's mass space.
@@ -41,7 +41,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/ppm-tolerance-filtering-and-calibration/SKILL.md
     - outputs/audit_s41592_full/skills/ppm-tolerance-filtering-and-calibration/skill.md
-    merged_at: '2026-05-25T07:04:57.557769+00:00'
+    merged_at: '2026-05-25T07:15:30.967487+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:5e4a84204174b2cb5a93cca37c32687cbd77265bd9c4b635a43a459308664913
   related_workflows:

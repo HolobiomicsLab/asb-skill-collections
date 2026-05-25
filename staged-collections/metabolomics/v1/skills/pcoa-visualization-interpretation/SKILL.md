@@ -1,6 +1,6 @@
 ---
 name: pcoa-visualization-interpretation
-description: Use when analyzing metabolomics data through principal-coordinate analysis (PCoA) to visualize clustering patterns and compositional differences in high-dimensional LC-MS, GC-MS, or untargeted lipidomics feature abundance data.
+description: Principal-coordinate analysis (PCoA) is an ordination technique that projects high-dimensional metabolite feature abundance data into a low-dimensional space to visualize clustering patterns and compositional differences among samples. It is essential for assessing whether sample groups (e.g., industrialization categories) exhibit distinct metabolomic profiles and for interpreting multivariate statistical significance.
 when_to_use_negative:
 - Feature abundance table has already been ordinated and visualized; re-running PCoA on the same data wastes computation.
 - Categorical grouping variable is continuous (e.g., age, pH) rather than discrete; use regression-based or correlation-based ordination instead.
@@ -29,7 +29,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/pcoa-visualization-interpretation/SKILL.md
     - outputs/audit_haffner_v2/skills/pcoa-visualization-interpretation/skill.md
-    merged_at: '2026-05-25T07:04:57.488508+00:00'
+    merged_at: '2026-05-25T07:15:30.897348+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/pcoa-visualization-interpretation@sha256:1242ede58a29af6e3100a5cc8db8f3e1a94335dce076a548404835806a63facc
   related_workflows:

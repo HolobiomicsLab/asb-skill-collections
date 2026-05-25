@@ -1,6 +1,6 @@
 ---
 name: venn-diagram-set-visualization-multiway-comparison
-description: Use when analyzing metabolomics data through Venn diagram visualization to compare three-way sets of in vitro S9-incubated metabolites, BioTransformer in silico predictions, and literature-reported metabolites.
+description: Venn diagram visualization for three-way set comparison showing overlap and exclusive membership among in vitro S9-incubated metabolites, BioTransformer in silico predictions, and literature-reported metabolites. This skill evaluates metabolite discovery completeness and prediction algorithm performance.
 when_to_use_negative:
 - Input metabolites are not yet standardized to a common identifier (molecular formula, InChI, SMILES) — first normalize the representation across sources.
 - You have fewer than two reference knowledge sources (e.g., only in vitro and literature, no predictions, or only predictions) — use pairwise or single-source visualizations instead.
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/venn-diagram-set-visualization-multiway-comparison/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/venn-diagram-set-visualization-multiway-comparison/skill.md
-    merged_at: '2026-05-25T07:04:57.595604+00:00'
+    merged_at: '2026-05-25T07:15:31.006580+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/venn-diagram-set-visualization-multiway-comparison@sha256:957a96c23918e618294443bd3cdc23729b98e07603741af438d5a349fd2b54b2
   related_workflows:

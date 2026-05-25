@@ -1,6 +1,6 @@
 ---
 name: differential-expression-validation-fold-change-verification
-description: Use when validating predicted fold-change in metabolomics by quantifying RNA-seq read counts, applying library-size normalization, and computing RPKM values to confirm that target genes meet expected expression thresholds under specific treatment conditions.
+description: Validates predicted fold-change in gene expression by quantifying RNA-seq read counts, applying library-size normalization, and computing RPKM values to confirm that target genes meet expected expression thresholds under specific treatment conditions. This skill bridges transcriptional hypothesis and computational quantification, ensuring fold-change claims are grounded in normalized count data.
 when_to_use_negative:
 - Input is already a normalized expression matrix or TPM/FPKM values—skip to fold-change extraction rather than re-normalizing.
 - RNA-seq reads have not been aligned to a reference genome or BAM files are unsorted/unvalidated—perform alignment and BAM curation first.
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/differential-expression-validation-fold-change-verification/SKILL.md
     - outputs/audit_jeong_full/skills/differential-expression-validation-fold-change-verification/skill.md
-    merged_at: '2026-05-25T07:04:57.527259+00:00'
+    merged_at: '2026-05-25T07:15:30.936784+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:068aa34e78e72ab42cabb57fc02604e0ca7d37e79b5e4c06f9127dc26999862d
   related_workflows:

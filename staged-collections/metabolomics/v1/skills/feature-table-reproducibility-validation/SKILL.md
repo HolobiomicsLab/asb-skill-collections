@@ -1,6 +1,6 @@
 ---
 name: feature-table-reproducibility-validation
-description: Use when validating a metabolomics feature table by applying LC-MS or GC-MS techniques to ensure it matches expected cardinality after sequential filtering steps.
+description: Validates that a metabolomic feature table has been correctly filtered and processed by verifying it matches expected cardinality (e.g., 7,483 features) after applying sequential filtering steps (minimum-peaks-in-a-row thresholds and population-level presence filtering). This skill ensures reproducibility of feature selection decisions across non-gap-filled and gap-filled datasets.
 when_to_use_negative:
 - Input data is already gap-filled; apply reproducibility validation separately to non-gap-filled data to isolate the effect of gap-filling.
 - Population structure differs from the six-population design; thresholds (6 peaks, 6 samples per population) must be recalibrated.
@@ -28,7 +28,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/feature-table-reproducibility-validation/SKILL.md
     - outputs/audit_haffner_v2/skills/feature-table-reproducibility-validation/skill.md
-    merged_at: '2026-05-25T07:04:57.486619+00:00'
+    merged_at: '2026-05-25T07:15:30.895475+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/feature-table-reproducibility-validation@sha256:6f0ebbd5da4ccb310a43b07617bcf351be7246437b966ef413bab3c48c252fea
   related_workflows:

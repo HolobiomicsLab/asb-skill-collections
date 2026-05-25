@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-consistency-checking
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to validate the internal consistency of chemical structure annotations (SMILES, InChI, InChIKey) in mass spectral library entries using RDKit to detect and report mismatches.
+description: Validate the internal consistency of chemical structure annotations (SMILES, InChI, InChIKey) in mass spectral library entries using RDKit to detect and report mismatches. This skill is essential for identifying annotated spectra with conflicting or corrupted structure metadata that would otherwise propagate errors through downstream analysis.
 when_to_use_negative:
 - Input spectra lack any chemical structure annotation fields (SMILES, InChI, InChIKey); the skill cannot validate what is not present.
 - Your goal is to filter on mass accuracy or spectral similarity alone; structure consistency is orthogonal to these signals.
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-consistency-checking/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-consistency-checking/skill.md
-    merged_at: '2026-05-25T07:04:57.436216+00:00'
+    merged_at: '2026-05-25T07:15:30.845069+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-consistency-checking@sha256:f69938338d83de9b0eabf9889324d630924578341eb990b22a51b78cf50ef2bf
   related_workflows:

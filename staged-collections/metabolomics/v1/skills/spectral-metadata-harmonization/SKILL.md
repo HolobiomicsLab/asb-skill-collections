@@ -1,6 +1,6 @@
 ---
 name: spectral-metadata-harmonization
-description: Use when harmonizing and repairing MS/MS spectral metadata in the metabolomics domain using LC-MS and GC-MS techniques to ensure valid and comparable library entries.
+description: Harmonize and repair MS/MS spectral metadata (parent mass, adducts, SMILES, compound names, ionization modes) against reference chemical structures and consistency rules to produce valid, comparable library entries. This skill detects and corrects systematic errors—such as molar mass vs. monoisotopic mass confusion, missing adduct assignments, and mismatched annotations—across large spectral libraries.
 when_to_use_negative:
 - Metadata is already manually curated and validated against chemical structures; harmonization may overwrite correct custom annotations or introduce false positives.
 - Your goal is to annotate *unknown* experimental spectra against a library; use spectral similarity matching or MS/MS fragmentation prediction instead; metadata harmonization is for library curation, not peak matching.
@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-metadata-harmonization/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-metadata-harmonization/skill.md
-    merged_at: '2026-05-25T07:04:57.410173+00:00'
+    merged_at: '2026-05-25T07:15:30.818501+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-metadata-harmonization@sha256:007ac824dc78b009af17bfbd45404882776d923bfae5f7fb212649d636368329
   related_workflows:

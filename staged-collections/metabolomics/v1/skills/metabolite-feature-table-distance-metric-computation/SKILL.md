@@ -1,6 +1,6 @@
 ---
 name: metabolite-feature-table-distance-metric-computation
-description: Use when computing pairwise distance metrics (Canberra) from a metabolite feature abundance matrix in the domain of metabolomics for ordination and statistical testing of metabolome composition differences across sample groups.
+description: Compute pairwise distance metrics (Canberra) from a metabolite feature abundance matrix to enable ordination and statistical testing of metabolome composition differences across sample groups. This skill transforms raw feature abundances into a distance/dissimilarity matrix that quantifies metabolic differences between samples.
 when_to_use_negative:
 - Input is already a pre-computed distance or dissimilarity matrix—skip directly to ordination or PERMANOVA.
 - Feature table contains gap-filled data and you require only non-gap-filled analysis (compute distance separately on non-gap-filled subset).
@@ -28,7 +28,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/metabolite-feature-table-distance-metric-computation/SKILL.md
     - outputs/audit_haffner_v2/skills/metabolite-feature-table-distance-metric-computation/skill.md
-    merged_at: '2026-05-25T07:04:57.473077+00:00'
+    merged_at: '2026-05-25T07:15:30.881765+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-table-distance-metric-computation@sha256:beda4f1f86123bd66f9d54e5d2af3265de3168d37023fd51fbadff2176f9f56f
   related_workflows:

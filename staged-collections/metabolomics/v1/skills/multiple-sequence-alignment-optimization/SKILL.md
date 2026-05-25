@@ -1,6 +1,6 @@
 ---
 name: multiple-sequence-alignment-optimization
-description: Use when optimizing multiple sequence alignment in metabolomics using LC-MS or GC-MS techniques by trimming low-information columns and removing gap-rich regions to enhance phylogenetic signal before tree construction.
+description: Optimize a multiple sequence alignment by trimming low-information columns and removing gap-rich regions to improve phylogenetic signal before tree construction. This skill is essential when building phylogenetic trees from domain-filtered protein sequences to ensure that only informative sites contribute to evolutionary inference.
 when_to_use_negative:
 - Input alignment is already curated, published, or hand-trimmed for a specific analysis—re-trimming may discard biologically informative positions.
 - Sequences are too divergent or too short (< 50 amino acids) to tolerate aggressive gap removal without losing critical information.
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/multiple-sequence-alignment-optimization/SKILL.md
     - outputs/audit_jeong_full/skills/multiple-sequence-alignment-optimization/skill.md
-    merged_at: '2026-05-25T07:04:57.521415+00:00'
+    merged_at: '2026-05-25T07:15:30.930861+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/multiple-sequence-alignment-optimization@sha256:ccc1a5801c9cabd37f2e92507974322960d651f7df24fd754e405ef03301453e
   related_workflows:

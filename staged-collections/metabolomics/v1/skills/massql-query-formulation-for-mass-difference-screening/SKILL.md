@@ -1,6 +1,6 @@
 ---
 name: massql-query-formulation-for-mass-difference-screening
-description: Use when formulating and executing MassQL queries to systematically filter MS/MS spectra for specific neutral loss patterns in the domain of metabolomics, applying this technique to annotate post-translationally modified metabolites in untargeted LC-MS/MS datasets.
+description: Formulate and execute MassQL queries to systematically filter MS/MS spectra for specific neutral loss patterns (e.g., pentosylation or hexosylation) to annotate post-translationally modified metabolites in untargeted LC-MS/MS datasets. This skill enables rapid, high-throughput discovery of glycosylated or sugar-conjugated metabolites without manual spectral inspection.
 when_to_use_negative:
 - Input is tandem MS data with very low mass accuracy (>20 ppm instrument resolution) — neutral loss screening relies on precise mass matching and may suffer false positives or negatives.
 - Target modification has a neutral loss mass that overlaps with common fragments from unmodified background compounds — specificity will degrade and manual filtering will be required.
@@ -29,7 +29,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/massql-query-formulation-for-mass-difference-screening/SKILL.md
     - outputs/audit_jeong_full/skills/massql-query-formulation-for-mass-difference-screening/skill.md
-    merged_at: '2026-05-25T07:04:57.511069+00:00'
+    merged_at: '2026-05-25T07:15:30.919750+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-formulation-for-mass-difference-screening@sha256:8435a32d6e09d2e6b4d39e57558e7e5e6d931de8f8cb5bbc642d2b0da7008ed7
   related_workflows:

@@ -1,6 +1,6 @@
 ---
 name: molecular-formula-comparison-overlap-analysis
-description: Use when comparing predicted metabolite molecular formulas from in silico tools like BioTransformer against experimentally detected molecular formulas from LC–HRMS data processing in the domain of metabolomics to quantify overlap and visualize membership in three-way sets.
+description: Compare predicted metabolite molecular formulas (from in silico tools like BioTransformer) against experimentally detected molecular formulas (from LC–HRMS data processing) to quantify overlap, identify agreement with literature data, and visualize membership in three-way sets (in vitro, prediction, literature). This skill evaluates the completeness and accuracy of metabolite discovery workflows.
 when_to_use_negative:
 - Input experimental dataset contains unassigned features or ambiguous molecular formulas; first resolve formula ambiguity via isotope/adduct removal, MS2 fragmentation analysis, or stricter GenForm cutoffs.
 - BioTransformer predictions are limited to a single biotransformation type (e.g., only Phase II conjugation); this skill is designed for Phase I phase I metabolite prediction; adjust workflow if predicting Phase II or III metabolites.
@@ -37,7 +37,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/molecular-formula-comparison-overlap-analysis/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/molecular-formula-comparison-overlap-analysis/skill.md
-    merged_at: '2026-05-25T07:04:57.583720+00:00'
+    merged_at: '2026-05-25T07:15:30.994375+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/molecular-formula-comparison-overlap-analysis@sha256:7b9bf664bb66f08b22235d782f20ea6e1a065d171ddc4983bae72590e68705ff
   related_workflows:

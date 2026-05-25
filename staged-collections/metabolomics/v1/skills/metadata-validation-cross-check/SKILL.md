@@ -1,6 +1,6 @@
 ---
 name: metadata-validation-cross-check
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to cross-validate computed chemical properties such as monoisotopic mass, adduct, and structure identifiers derived from SMILES or compound names against metadata fields in mass spectral library records.
+description: Cross-validate computed chemical properties (monoisotopic mass, adduct, structure identifiers) derived from SMILES or compound names against their corresponding metadata fields in mass spectral library records. This skill detects inconsistencies that would silently corrupt library curation, enabling targeted repair before removal.
 when_to_use_negative:
 - Spectrum records lack SMILES or compound name metadata to begin with — use basic metadata harmonization or manual curation first.
 - The repair filter did not run (e.g., 'repair_smiles_of_salts' was skipped) — cross-validation assumes an upstream repair step has been applied.
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/metadata-validation-cross-check/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/metadata-validation-cross-check/skill.md
-    merged_at: '2026-05-25T07:04:57.461198+00:00'
+    merged_at: '2026-05-25T07:15:30.869703+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metadata-validation-cross-check@sha256:35b212bf448852ed71ed8860896c053d7a4c324e2058951cd7364e5ab35e5ad1
   related_workflows:

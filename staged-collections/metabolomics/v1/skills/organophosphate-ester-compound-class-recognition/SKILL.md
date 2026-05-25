@@ -1,6 +1,6 @@
 ---
 name: organophosphate-ester-compound-class-recognition
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to recognize organophosphate ester (OPE) compounds in high-resolution LC-MS/MS data by querying for a diagnostic phosphate product ion (H₄PO₄⁺, m/z 98.9847) using MassQL.
+description: Recognize organophosphate ester (OPE) compounds in high-resolution LC-MS/MS data by querying for a diagnostic phosphate product ion (H₄PO₄⁺, m/z 98.9847) using MassQL, enabling discovery of known and novel OPE structures across large public repositories. This skill leverages a class-selective fragmentation pattern rather than precursor m/z to identify compounds with diverse molecular weights and structures that share a common metabolic or synthetic route.
 when_to_use_negative:
 - Input is already a curated feature table or consensus spectrum library; use this skill on raw or minimally processed MS/MS data, not post-feature-detection outputs.
 - Your analytical goal is quantitative OPE measurement or pharmacokinetics; this skill performs untargeted class discovery and produces primarily qualitative/putative identifications.
@@ -46,7 +46,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/organophosphate-ester-compound-class-recognition/SKILL.md
     - outputs/audit_s41592_full/skills/organophosphate-ester-compound-class-recognition/skill.md
-    merged_at: '2026-05-25T07:04:57.536488+00:00'
+    merged_at: '2026-05-25T07:15:30.945690+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/organophosphate-ester-compound-class-recognition@sha256:3c3f43164b8833ee913efd09f50aa95a61f509112a8f3940c47febc506f0e9a4
   related_workflows:

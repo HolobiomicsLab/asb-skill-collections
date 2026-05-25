@@ -1,6 +1,6 @@
 ---
 name: threshold-based-feature-filtering
-description: Use when metabolomics data is analyzed using LC-MS or GC-MS techniques to filter a ranked feature list by applying a quantitative threshold, retaining only features that meet a statistical or importance cutoff for downstream annotation and biological interpretation.
+description: Filter a ranked feature list (e.g., random-forest variable importance scores) by applying a quantitative threshold to retain only features meeting a statistical or importance cutoff. This skill is used to reduce high-dimensional metabolomic data to a smaller, interpretable set of differential features suitable for downstream annotation and biological interpretation.
 when_to_use_negative:
 - Input feature list is already below ~500 features and does not require further reduction for annotation
 - No ranking metric or statistical score has been computed; threshold-based filtering requires a quantitative score per feature
@@ -28,7 +28,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/threshold-based-feature-filtering/SKILL.md
     - outputs/audit_haffner_v2/skills/threshold-based-feature-filtering/skill.md
-    merged_at: '2026-05-25T07:04:57.471213+00:00'
+    merged_at: '2026-05-25T07:15:30.879945+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/threshold-based-feature-filtering@sha256:7d325abe7b5c60284c3d5bb80c7c1e43162e9855e68c1724ed9f4a96d3955e8d
   related_workflows:

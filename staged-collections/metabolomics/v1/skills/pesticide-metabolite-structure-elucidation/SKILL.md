@@ -1,6 +1,6 @@
 ---
 name: pesticide-metabolite-structure-elucidation
-description: Use when conducting metabolomics to elucidate the structure of pesticide metabolites through high-resolution MS/MS fragmentation analysis, molecular formula assignment, and in silico fragmentation prediction applied to LC–HRMS data.
+description: Structural elucidation of pesticide metabolites by combining high-resolution MS/MS fragmentation analysis, molecular formula assignment, and in silico fragmentation prediction to annotate detected metabolite features to unambiguous molecular structures or formulas. This skill assigns chemical identities to pesticide biotransformation products detected in LC–HRMS metabolomics data.
 when_to_use_negative:
 - Input features have not been filtered for mass defect (±100 mmu lower / +50 mmu upper cutoff) and abundance (fold change >4, detected in ≥2 replicates); run filtering steps first.
 - No MS2 spectra are available for the feature; GenForm and Sirius require MS2 fragmentation data for formula and structure elucidation.
@@ -38,7 +38,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/pesticide-metabolite-structure-elucidation/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/pesticide-metabolite-structure-elucidation/skill.md
-    merged_at: '2026-05-25T07:04:57.604430+00:00'
+    merged_at: '2026-05-25T07:15:31.015345+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/pesticide-metabolite-structure-elucidation@sha256:ada8fcc753cbd57782c27615cfa02942e50168bca0cd9f900bcda001b50c1d8f
   related_workflows:

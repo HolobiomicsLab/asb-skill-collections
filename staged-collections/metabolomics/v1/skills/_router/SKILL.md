@@ -1,17 +1,17 @@
 ---
 name: metabolomics-router
-description: Use when seeking information in the domain of metabolomics, specifically utilizing LC-MS or GC-MS techniques for untargeted lipidomics analysis.
-allowed-tools:
-- mcp__perspicacite__search_skill_kb
-- mcp__perspicacite__search_knowledge_base
-- Read
+description: |
+  Use FIRST for any metabolomics question. Routes to the most
+  relevant specialized skill in the Metabolomics collection (105 skills,
+  derived from 5 papers).
+allowed-tools: [mcp__perspicacite__search_skill_kb, mcp__perspicacite__search_knowledge_base, Read]
 license: Apache-2.0
 metadata:
   iri: w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1/router
   routes_to_collection: w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1
   edam_topics:
-  - http://edamontology.org/topic_3172
-  - http://edamontology.org/topic_3520
+    - http://edamontology.org/topic_3172
+    - http://edamontology.org/topic_3520
 ---
 
 # Metabolomics Router

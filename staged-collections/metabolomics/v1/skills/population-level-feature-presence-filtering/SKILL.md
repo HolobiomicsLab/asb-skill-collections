@@ -1,6 +1,6 @@
 ---
 name: population-level-feature-presence-filtering
-description: Use when filtering a metabolite feature table in metabolomics using LC-MS or GC-MS techniques to retain only features present in a minimum number of samples within each population stratum.
+description: Filter a metabolite feature table to retain only features present in a minimum number of samples within each population stratum, ensuring population-level prevalence of metabolic markers. This skill ensures that downstream comparative analyses focus on shared, robust metabolic signatures that are consistently detectable across the sampled populations.
 when_to_use_negative:
 - Input data are already gap-filled or imputed; population-level filtering is most effective on raw, unimputed feature matrices to avoid inflating apparent prevalence.
 - Populations are severely imbalanced (e.g., one population has <6 samples); the threshold becomes meaningless or overly stringent.
@@ -28,7 +28,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/population-level-feature-presence-filtering/SKILL.md
     - outputs/audit_haffner_v2/skills/population-level-feature-presence-filtering/skill.md
-    merged_at: '2026-05-25T07:04:57.474865+00:00'
+    merged_at: '2026-05-25T07:15:30.883574+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/population-level-feature-presence-filtering@sha256:e786956b3d2bd614db207ddbc8797355d28278d6199ffdebb280a0f47a5c1a6d
   related_workflows:

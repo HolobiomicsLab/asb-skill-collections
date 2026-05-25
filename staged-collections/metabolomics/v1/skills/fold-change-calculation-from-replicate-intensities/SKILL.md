@@ -1,6 +1,6 @@
 ---
 name: fold-change-calculation-from-replicate-intensities
-description: Use when calculating fold-change (FC) values in metabolomics by dividing mean intensity of pesticide-incubated replicate groups by mean intensity of negative control samples, applying FC > 4 threshold and presence in ≥2 of 3 replicates to filter features in LC–HRMS metabolite screening.
+description: Calculate fold-change (FC) values by dividing mean intensity of pesticide-incubated replicate groups by mean intensity of negative control samples (S9 + NADPH only), then apply FC > 4 threshold combined with presence in ≥2 of 3 replicates to filter features in LC–HRMS metabolite screening. This abundance filter reduces false positives and prioritizes reproducible metabolic signals.
 when_to_use_negative:
 - Input feature table lacks biological replicates (n < 2) or has no negative control group (e.g., S9 + NADPH only samples).
 - Feature intensities have not been blank-subtracted or isotope/adduct-annotated; applying FC filter to raw data will inflate false positives.
@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/fold-change-calculation-from-replicate-intensities/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/fold-change-calculation-from-replicate-intensities/skill.md
-    merged_at: '2026-05-25T07:04:57.622340+00:00'
+    merged_at: '2026-05-25T07:15:31.033785+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:ccbba5b780b8a414c69d59bdec92fb6d75b13fa6faaf5526bf3ed10516591626
   related_workflows:

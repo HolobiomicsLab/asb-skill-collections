@@ -1,6 +1,6 @@
 ---
 name: massql-query-syntax-and-parameter-optimization
-description: Use when working in the metabolomics domain with LC-MS and GC-MS techniques to design and refine MassQL query strings that match specific mass spectrometry patterns such as isotope ratios, product ions, and retention time windows.
+description: Design and refine MassQL query strings to match specific mass spectrometry patterns (isotope ratios, product ions, retention time windows) on a reference dataset before scaling to large repositories. This skill ensures queries capture target analytes while minimizing false positives through iterative parameter tuning.
 when_to_use_negative:
 - You do not have a reference dataset with known compounds to validate against; use domain knowledge or pilot data collection first.
 - The target analytes exhibit highly variable MS fragmentation or isotope patterns across instrument vendors or ionization sources; MassQL is designed to be vendor-agnostic but may require separate query refinement for each instrument class.
@@ -38,7 +38,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/massql-query-syntax-and-parameter-optimization/SKILL.md
     - outputs/audit_s41592_full/skills/massql-query-syntax-and-parameter-optimization/skill.md
-    merged_at: '2026-05-25T07:04:57.548840+00:00'
+    merged_at: '2026-05-25T07:15:30.958265+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:21941755216584435e5a0ba37a82bad1ce7f68509f0a90c65f110e2c0a86c26d
   related_workflows:

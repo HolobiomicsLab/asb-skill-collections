@@ -1,6 +1,6 @@
 ---
 name: spectral-metadata-annotation-mismatch-detection
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to detect mismatches between derived chemical structures (SMILES, InChI, InChIKey) and existing spectrum annotations by deriving canonical structures from compound names via PubChem lookup.
+description: Detect mismatches between derived chemical structures (SMILES, InChI, InChIKey) and existing spectrum annotations by deriving canonical structures from compound names via PubChem lookup and comparing them against recorded annotations. This skill identifies both unannotated spectra and spectra with incorrect or inconsistent 2D structural assignments that would otherwise propagate errors through downstream analysis.
 when_to_use_negative:
 - Spectra lack compound names or existing structure annotations—the filter requires both to perform comparison.
 - Ion mode or adduct information is incomplete or missing—the workflow filters for spectra with valid, matching adduct data before annotation derivation.
@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-metadata-annotation-mismatch-detection/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-metadata-annotation-mismatch-detection/skill.md
-    merged_at: '2026-05-25T07:04:57.401880+00:00'
+    merged_at: '2026-05-25T07:15:30.810347+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-metadata-annotation-mismatch-detection@sha256:81ca04d1d4e97615b1ba2adf49978f5a0bf65d898845104b63bfaeef19de57aa
   related_workflows:

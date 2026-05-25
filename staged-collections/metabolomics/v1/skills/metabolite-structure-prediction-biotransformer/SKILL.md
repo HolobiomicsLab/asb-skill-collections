@@ -1,6 +1,6 @@
 ---
 name: metabolite-structure-prediction-biotransformer
-description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to generate predicted phase I metabolite structures and molecular formulas for parent xenobiotics, then compare these predictions against experimentally detected molecular formulas from LC–HRMS data.
+description: Use BioTransformer to generate predicted phase I metabolite structures and molecular formulas for parent xenobiotics, then compare predicted formulas against experimentally detected molecular formulas from LC–HRMS data to assess metabolic coverage and identify experimentally detected metabolites supported by in silico prediction.
 when_to_use_negative:
 - Input experimental metabolites have not yet been assigned unambiguous molecular formulas (e.g., formulas are ambiguous or missing); formula assignment must precede prediction comparison.
 - Parent compound structures are unavailable or poorly defined; BioTransformer requires valid chemical structures as input.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-structure-prediction-biotransformer/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-structure-prediction-biotransformer/skill.md
-    merged_at: '2026-05-25T07:04:57.579360+00:00'
+    merged_at: '2026-05-25T07:15:30.990053+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-structure-prediction-biotransformer@sha256:1ee8500ee859f7a8b172fb71c455ac871d8fec0585e53fba0e5323b09595eefb
   related_workflows:

@@ -1,6 +1,6 @@
 ---
 name: non-gap-filled-data-processing
-description: Use when processing untargeted metabolomics LC-MS/MS and GC-MS data without gap-filling to maintain the integrity of detection patterns across samples, ensuring accurate analysis of shared metabolites in populations.
+description: Process untargeted LC-MS/MS metabolomic data without gap-filling to preserve the integrity of detection patterns across samples. This approach is critical when analyzing shared metabolites across populations where missing-value imputation could mask genuine absence or alter inter-sample comparison validity.
 when_to_use_negative:
 - Input is already gap-filled or imputed; re-filtering will propagate artifacts.
 - Downstream analysis requires complete feature matrices with no missing values (e.g., certain multivariate methods that cannot tolerate NAs).
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/non-gap-filled-data-processing/SKILL.md
     - outputs/audit_haffner_v2/skills/non-gap-filled-data-processing/skill.md
-    merged_at: '2026-05-25T07:04:57.476759+00:00'
+    merged_at: '2026-05-25T07:15:30.885427+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/non-gap-filled-data-processing@sha256:bf5a3913bb9c3188b7b65c68c55360144d0e987378e0deb60f5cd1227c6f90e9
   related_workflows:

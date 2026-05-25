@@ -1,0 +1,51 @@
+canonical_url: https://github.com/mwang87/MassQueryLanguage
+evidence_spans:
+- MassQL was helpful for the annotation of sugar conjugation, as it rapidly annotated hexosylation and pentosylation of the flavonoids
+- Here we introduce a new language, the Mass Spectrometry Query Language (MassQL), and an accompanying software ecosystem
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.375129+00:00'
+  n_source_records: 21
+  source_paper_dois:
+  - 10.1073/pnas
+  - 10.1038/s41592-025-02660-z
+name: MassQL
+related_skills:
+- consensus-spectrum-generation
+- cross-reference-spectral-clusters-to-chemical-standards
+- iron-binding-compound-detection-by-isotope-ratio
+- mass-spectrometry-isotope-pattern-recognition
+- mass-spectrometry-query-language-syntax
+- massql-query-formulation-for-mass-difference-screening
+- massql-query-syntax-and-parameter-optimization
+- mgf-format-handling
+- molecular-network-node-annotation-via-library-matching
+- ms-data-export-and-format-conversion
+- ms-data-format-conversion-and-export
+- ms-ms-spectral-data-retrieval
+- ms1-precursor-ion-filtering
+- mzml-mzxml-file-parsing
+- neutral-loss-filtering-for-glycoside-annotation
+- organophosphate-ester-compound-class-recognition
+- ppm-tolerance-filtering-and-calibration
+- product-ion-fragment-filtering
+- relative-intensity-threshold-filtering
+- repository-scale-spectral-processing
+- spectral-redundancy-clustering
+- spectral-similarity-network-construction
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: massql
+source_papers:
+- doi: 10.1073/pnas
+  title: Proceedings of the National Academy of Sciences
+- doi: 10.1038/s41592-025-02660-z
+  title: A universal language for finding mass spectrometry data patterns
+source_task_ids:
+- task_001
+- task_002
+- task_003

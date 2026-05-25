@@ -1,0 +1,38 @@
+evidence_spans:
+- We analyzed the broth of the 1-supplemented culture of L. brumalis with LC-MS/MS in a time-dependent manner
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.375002+00:00'
+  n_source_records: 15
+  source_paper_dois:
+  - 10.1073/pnas
+name: LC-MS/MS
+related_skills:
+- count-data-normalization-library-size-correction
+- cross-reference-spectral-clusters-to-chemical-standards
+- differential-expression-validation-fold-change-verification
+- fungal-genome-sequence-retrieval-and-processing
+- gene-expression-quantification-rpkm-calculation
+- massql-query-formulation-for-mass-difference-screening
+- molecular-network-node-annotation-via-library-matching
+- multiple-sequence-alignment-optimization
+- neutral-loss-filtering-for-glycoside-annotation
+- phylogenetic-tree-construction-and-interpretation
+- protein-sequence-domain-scanning
+- rna-seq-read-alignment-splice-aware-mapping
+- spectral-similarity-network-construction
+- transcript-abundance-estimation-counting
+- ugt-sequence-curation-and-filtering
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: lc-ms-ms
+source_paper_doi: 10.1073/pnas
+source_paper_title: Proceedings of the National Academy of Sciences
+source_task_ids:
+- task_001
+- task_002
+- task_003

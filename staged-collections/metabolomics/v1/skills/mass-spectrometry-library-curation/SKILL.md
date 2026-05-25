@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-library-curation
-description: Use when metabolomics involves systematic cleaning and validation of mass spectrometry spectral library metadata and annotations using the matchms framework, applying to LC-MS and GC-MS untargeted lipidomics.
+description: Systematic cleaning and validation of mass spectrometry spectral library metadata and annotations using the matchms framework, including repair of structural notations (salts, adducts), harmonization of precursor masses, and removal of spectra with unrecoverable or inconsistent annotations.
 when_to_use_negative:
 - Input library is already manually curated and has passed institutional QC (e.g., NIST private library); re-curation may introduce unnecessary changes.
 - Analysis requires retention of all spectral observations regardless of metadata quality (e.g., exploratory analysis of instrument artifacts or rare ionization modes not yet documented in standards).
@@ -35,7 +35,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-library-curation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-library-curation/skill.md
-    merged_at: '2026-05-25T07:04:57.414778+00:00'
+    merged_at: '2026-05-25T07:15:30.823488+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:0b99cf307b34e82fd17554469f9bab9696eba3c76e282df8c84e169e1a874c3f
   related_workflows:

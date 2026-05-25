@@ -1,6 +1,6 @@
 ---
 name: control-group-selection-for-metabolite-screening
-description: Use when selecting and preparing negative control samples (S9 + NADPH without xenobiotic incubation) for fold-change calculations in untargeted LC-MS screening of pesticide metabolites to distinguish true metabolite signals from background signals and instrumental noise.
+description: Selection and preparation of negative control samples (S9 + NADPH without xenobiotic incubation) for use as the denominator in fold-change calculations during untargeted LC–HRMS screening of pesticide metabolites. Proper control definition ensures that true metabolite signals are distinguished from background signals and instrumental noise.
 when_to_use_negative:
 - If the input data consists only of a single timepoint or single biological replicate per pesticide; the control group selection method relies on at least two replicates to assess consistency.
 - If negative control samples were not processed in parallel with pesticide-incubated samples in the same analytical batch; controls must be contemporaneous to account for instrumental drift and batch effects.
@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/control-group-selection-for-metabolite-screening/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/control-group-selection-for-metabolite-screening/skill.md
-    merged_at: '2026-05-25T07:04:57.590800+00:00'
+    merged_at: '2026-05-25T07:15:31.001427+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/control-group-selection-for-metabolite-screening@sha256:0069c3b7ded2ffdf9a8bed0152225305c54add67475846af6099c8edc5c76db3
   related_workflows:

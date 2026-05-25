@@ -1,6 +1,6 @@
 ---
 name: relative-intensity-threshold-filtering
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics requires filtering MS/MS spectra by applying a minimum intensity threshold for product ions relative to the base peak in each scan to reduce false positives in fragmentation pattern queries.
+description: Filter MS/MS spectra by requiring product ions to meet a minimum intensity threshold relative to the base peak (most intense ion) in each scan. This skill is essential for reducing false positives when querying large repositories for characteristic fragmentation patterns, such as phosphate product ions from organophosphate esters or isotope patterns from metal-binding compounds.
 when_to_use_negative:
 - The input spectra are from targeted analysis (e.g., SRM/MRM) where all relevant ions are already separated and abundant—intensity thresholding is redundant.
 - The diagnostic ion is known to be very weak or variable in true positives (e.g., rare isotope patterns with <10% base peak intensity); a low threshold may be missed entirely.
@@ -36,7 +36,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/relative-intensity-threshold-filtering/SKILL.md
     - outputs/audit_s41592_full/skills/relative-intensity-threshold-filtering/skill.md
-    merged_at: '2026-05-25T07:04:57.546546+00:00'
+    merged_at: '2026-05-25T07:15:30.955948+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:a50ac7b0d8f0deba2e9c613fbda9673ff18bc36a8f8ce624c5936ed830173f4a
   related_workflows:

@@ -1,6 +1,6 @@
 ---
 name: metabolite-importance-ranking
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to rank metabolite features by variable importance scores from a random-forest classifier trained on industrialization group membership and apply a quantitative threshold to identify differential metabolites for downstream annotation.
+description: Rank metabolite features by variable importance scores from a random-forest classifier trained on industrialization group membership, then apply a quantitative threshold to identify differential metabolites for downstream annotation. This skill distills high-dimensional untargeted metabolomic data into a curated set of features most predictive of the experimental condition.
 when_to_use_negative:
 - Input is already a curated, annotated feature list (e.g., from targeted metabolomics or pre-filtered databases) — ranking is designed for discovery in untargeted, high-dimensional data.
 - Experimental variable is continuous (e.g., age, BMI) rather than categorical — random-forest variable importance is most interpretable for classification; regression importance may differ.
@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/metabolite-importance-ranking/SKILL.md
     - outputs/audit_haffner_v2/skills/metabolite-importance-ranking/skill.md
-    merged_at: '2026-05-25T07:04:57.469078+00:00'
+    merged_at: '2026-05-25T07:15:30.877833+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-importance-ranking@sha256:760b35f66a60eeb9247863f97bee77209d095155ce7de359d48a948171b8b60c
   related_workflows:

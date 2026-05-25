@@ -1,6 +1,6 @@
 ---
 name: annotation-error-rate-calculation
-description: Use when calculating error rates in metabolomics using LC-MS or GC-MS techniques to assess the efficacy of annotation-repair or annotation-derivation filters on mass spectral libraries.
+description: Calculate and report error rates when applying annotation-repair or annotation-derivation filters to mass spectral libraries, quantifying the proportion of spectra that could not be annotated, were left unannotated, or received structurally divergent annotations compared to originals. This skill validates filter efficacy and identifies systematic failure modes in library cleaning pipelines.
 when_to_use_negative:
 - Input spectra are unannotated or lack compound name, parent mass, or adduct metadata — filter will have no reference for comparison and error rate will be meaningless.
 - Filter is not applied yet — error rate calculation requires both original and filtered annotation fields; do not use this skill on unfiltered data.
@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/annotation-error-rate-calculation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/annotation-error-rate-calculation/skill.md
-    merged_at: '2026-05-25T07:04:57.406170+00:00'
+    merged_at: '2026-05-25T07:15:30.814603+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:5ffb67ca31a67d4fa87b700b525758cd4bd4bdb9b7e95c2405ef9d0224bdd961
   related_workflows:

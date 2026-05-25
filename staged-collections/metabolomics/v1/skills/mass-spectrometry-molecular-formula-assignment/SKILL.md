@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-molecular-formula-assignment
-description: Use when assigning molecular formulas to high-resolution LC–HRMS metabolite features by applying GenForm to MS1 m/z values and tandem MS2 spectra, constrained by parent pesticide elemental composition rules and validated through MS2 fragment explainability and in silico fragmentation prediction.
+description: Assignment of unambiguous molecular formulas to high-resolution LC–HRMS metabolite features by applying GenForm to MS1 m/z values and tandem MS2 spectra, constrained by parent pesticide elemental composition rules and validated through MS2 fragment explainability and in silico fragmentation prediction.
 when_to_use_negative:
 - Input features already have validated reference spectra or confirmed structural identifications (use instead for confirmation or structure refinement).
 - MS2 spectra are missing or of poor quality (low signal, sparse fragments); GenForm requires informative fragmentation patterns to constrain formula space.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-molecular-formula-assignment/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-molecular-formula-assignment/skill.md
-    merged_at: '2026-05-25T07:04:57.613744+00:00'
+    merged_at: '2026-05-25T07:15:31.025176+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-molecular-formula-assignment@sha256:6987ca22c32bb9242c873b4d2ec218962705f1ddfbb01d6f6f40edd55fae24a4
   related_workflows:

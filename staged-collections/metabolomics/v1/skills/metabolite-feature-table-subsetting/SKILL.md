@@ -1,6 +1,6 @@
 ---
 name: metabolite-feature-table-subsetting
-description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to subset a metabolite feature table to a curated list of annotated metabolites and filter conditionally-dependent taxa based on predictive strength.
+description: Subset a metabolite feature table to a curated list of annotated metabolites and filter conditionally-dependent taxa based on predictive strength, enabling focused analysis of microbe-metabolite interactions. This skill reduces feature and taxa complexity to only those with high-confidence annotations and strong conditional probability relationships.
 when_to_use_negative:
 - Input is already a fully annotated, curated interaction table with pre-selected metabolites and taxa.
 - You require exhaustive exploration of all taxa-metabolite pairs, not prioritization by conditional probability; subsetting discards weak associations.
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/metabolite-feature-table-subsetting/SKILL.md
     - outputs/audit_haffner_v2/skills/metabolite-feature-table-subsetting/skill.md
-    merged_at: '2026-05-25T07:04:57.478600+00:00'
+    merged_at: '2026-05-25T07:15:30.887501+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-table-subsetting@sha256:025add36e533d83855ec27b6dc259efea461d1ad94ab7bec077c4762e80ab40f
   related_workflows:

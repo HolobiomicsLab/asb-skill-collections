@@ -1,6 +1,6 @@
 ---
 name: rna-seq-read-alignment-splice-aware-mapping
-description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to align paired-end RNA-seq reads to a reference genome using a splice-aware aligner (HISAT2) for generating sorted BAM files that maintain exon–intron boundaries.
+description: Align paired-end RNA-seq reads to a reference genome using a splice-aware aligner (HISAT2) to generate sorted BAM files that preserve exon–intron boundaries. This is essential for accurately quantifying gene expression in organisms where spliced transcripts dominate.
 when_to_use_negative:
 - Input reads are single-end or already aligned (BAM/SAM files exist).
 - The organism has no introns or a very simple, unspliced transcriptome (e.g., many prokaryotes).
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/rna-seq-read-alignment-splice-aware-mapping/SKILL.md
     - outputs/audit_jeong_full/skills/rna-seq-read-alignment-splice-aware-mapping/skill.md
-    merged_at: '2026-05-25T07:04:57.503407+00:00'
+    merged_at: '2026-05-25T07:15:30.912142+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:642839479498337d59e061602e8f3a2251884eb146753b4cb57478961247f3af
   related_workflows:

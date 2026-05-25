@@ -1,6 +1,6 @@
 ---
 name: feature-table-reduction-and-quality-control
-description: Use when working in the metabolomics domain to reduce dimensionality and noise in LC-MS and GC-MS untargeted lipidomics feature tables by applying sequential statistical and chemical filters such as blank subtraction and isotope/adduct removal.
+description: This skill reduces the dimensionality and noise of LC–HRMS feature tables by applying sequential statistical and chemical filters (blank subtraction, isotope/adduct removal, fold-change thresholding, replication criteria, mass defect and mass difference boundaries) to prioritize putative metabolite features for downstream structure elucidation. It is essential for distinguishing true metabolic transformation products from background noise, matrix effects, and instrumental artifacts in high-throughput in vitro incubation studies.
 when_to_use_negative:
 - Do not apply this skill if the input feature table is already a curated target list of known metabolites; this skill is for exploratory discovery, not targeted confirmation.
 - Do not use if you lack biological replicates or negative control samples; the replication and fold-change criteria require comparison groups.
@@ -36,7 +36,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/feature-table-reduction-and-quality-control/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/feature-table-reduction-and-quality-control/skill.md
-    merged_at: '2026-05-25T07:04:57.620001+00:00'
+    merged_at: '2026-05-25T07:15:31.031438+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/feature-table-reduction-and-quality-control@sha256:e1969da7ba75484c919f4cfa64c3b2c996bb38bd579323d1f7ec1c8e8d83a498
   related_workflows:

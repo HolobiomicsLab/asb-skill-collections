@@ -1,6 +1,6 @@
 ---
 name: metabolite-feature-prioritization
-description: Use when prioritizing pesticide metabolite features detected in LC–HRMS data by applying sequential statistical and chemical filters such as abundance fold-change, mass defect, mass difference, and blank subtraction to eliminate artifacts and non-metabolic peaks.
+description: Prioritize pesticide metabolite features detected in LC–HRMS data by applying sequential statistical and chemical filters (abundance fold-change, mass defect, mass difference, blank subtraction) to eliminate artifacts and non-metabolic peaks, reducing feature complexity while retaining true Phase I transformation products.
 when_to_use_negative:
 - Input is already a confirmed molecular structure or validated spectral library; this skill operates on unidentified features requiring prioritization.
 - Studying conjugation metabolites or Phase II transformations where mass differences >+50 u are expected and legitimate (e.g., glucuronide, sulfate adducts).
@@ -35,7 +35,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-feature-prioritization/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-feature-prioritization/skill.md
-    merged_at: '2026-05-25T07:04:57.577197+00:00'
+    merged_at: '2026-05-25T07:15:30.987845+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-prioritization@sha256:7a4ccd30d9896b92987934ffe9031671672254b32d14182e056bf749d249307f
   related_workflows:

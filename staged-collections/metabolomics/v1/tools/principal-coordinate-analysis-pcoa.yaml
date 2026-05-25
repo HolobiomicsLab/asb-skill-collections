@@ -1,0 +1,42 @@
+evidence_spans:
+- populations exhibited similar metabolomes based on the degree of industrialization determined by principal-coordinate analysis (PCoA)
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.374823+00:00'
+  n_source_records: 18
+  source_paper_dois:
+  - 10.1128/msystems.00710-22
+name: principal-coordinate analysis (PCoA)
+related_skills:
+- conditional-probability-matrix-manipulation
+- differential-feature-identification
+- feature-table-reproducibility-validation
+- industrial-gradient-metadata-categorization
+- machine-learning-feature-selection
+- metabolite-feature-filtering-by-peak-count
+- metabolite-feature-table-distance-metric-computation
+- metabolite-feature-table-subsetting
+- metabolite-importance-ranking
+- microbe-metabolite-conditional-probability-filtering
+- microbial-taxa-rank-selection-by-predictive-strength
+- multivariate-microbiome-analysis
+- non-gap-filled-data-processing
+- pcoa-visualization-interpretation
+- permanova-beta-diversity-testing
+- population-level-feature-presence-filtering
+- random-forest-model-training
+- threshold-based-feature-filtering
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: principal-coordinate-analysis-pcoa
+source_paper_doi: 10.1128/msystems.00710-22
+source_paper_title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+source_task_ids:
+- task_001
+- task_002
+- task_003
+- task_004

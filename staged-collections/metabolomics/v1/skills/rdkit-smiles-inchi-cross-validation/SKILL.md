@@ -1,6 +1,6 @@
 ---
 name: rdkit-smiles-inchi-cross-validation
-description: Use when validating the internal consistency of chemical structure annotations (SMILES, InChI, and InChIKey) in mass spectral library records in the domain of metabolomics using RDKit, applying to mass spectral data from LC-MS and GC-MS untargeted lipidomics.
+description: This skill validates the internal consistency of chemical structure annotations (SMILES, InChI, and InChIKey) in mass spectral library records using RDKit, identifying and removing spectra with missing or mutually inconsistent annotation fields. It is essential for ensuring that curated MS/MS libraries contain chemically coherent metadata that can reliably support downstream compound identification and structure analysis.
 when_to_use_negative:
 - Input library contains only a single chemical structure representation (e.g., SMILES alone) — this skill requires at least two independent representations to cross-validate.
 - Spectra are already known to have been validated by a prior RDKit consistency check or by manual curation with identical stringency.
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/rdkit-smiles-inchi-cross-validation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/rdkit-smiles-inchi-cross-validation/skill.md
-    merged_at: '2026-05-25T07:04:57.416976+00:00'
+    merged_at: '2026-05-25T07:15:30.825705+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/rdkit-smiles-inchi-cross-validation@sha256:872c136417ee9540b4972ceb246373f4eb816fe3ab76968eef2154342751eb65
   related_workflows:

@@ -1,0 +1,33 @@
+canonical_url: https://github.com/qiime2/qiime2
+evidence_spans:
+- Principal coordinate analysis (PCoA) plots were created using Canberra distance metrics from QIIME2 (93)
+- Metabolite and microbe feature tables were input to the Quantitative Insights into Microbial Ecology 2 (QIIME2) (93) microbe-metabolite vectors (mmvec) plugin
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.374941+00:00'
+  n_source_records: 9
+  source_paper_dois:
+  - 10.1128/msystems.00710-22
+name: QIIME2
+related_skills:
+- conditional-probability-matrix-manipulation
+- industrial-gradient-metadata-categorization
+- metabolite-feature-table-distance-metric-computation
+- metabolite-feature-table-subsetting
+- microbe-metabolite-conditional-probability-filtering
+- microbial-taxa-rank-selection-by-predictive-strength
+- multivariate-microbiome-analysis
+- pcoa-visualization-interpretation
+- permanova-beta-diversity-testing
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: qiime2
+source_paper_doi: 10.1128/msystems.00710-22
+source_paper_title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+source_task_ids:
+- task_001
+- task_004

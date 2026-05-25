@@ -1,0 +1,27 @@
+evidence_spans:
+- The parsing is done by using the lark Python library
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.375242+00:00'
+  n_source_records: 6
+  source_paper_dois:
+  - 10.1038/s41592-025-02660-z
+name: lark (parser library)
+related_skills:
+- iron-binding-compound-detection-by-isotope-ratio
+- mass-spectrometry-isotope-pattern-recognition
+- massql-query-syntax-and-parameter-optimization
+- ms-data-export-and-format-conversion
+- ms1-precursor-ion-filtering
+- mzml-mzxml-file-parsing
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: lark-parser-library
+source_paper_doi: 10.1038/s41592-025-02660-z
+source_paper_title: A universal language for finding mass spectrometry data patterns
+source_task_ids:
+- task_001

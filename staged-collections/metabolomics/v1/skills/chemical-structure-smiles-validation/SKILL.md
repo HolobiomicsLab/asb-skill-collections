@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-smiles-validation
-description: Use when validating and repairing chemical structure annotations (SMILES, InChI, InChIKey) in the domain of metabolomics using methods like LC-MS and GC-MS, applying to compound names or PubChem to ensure consistency with measured precursor mass or adduct state.
+description: Validates and repairs chemical structure annotations (SMILES, InChI, InChIKey) by deriving canonical forms from compound names or PubChem, comparing structural representations for consistency, and detecting mismatches between annotation and measured precursor mass or adduct state. This skill is essential for ensuring that MS/MS spectral libraries contain chemically plausible and internally consistent structural metadata.
 when_to_use_negative:
 - Spectra already contain validated, canonicalized SMILES and verified parent masses—skip this step to avoid redundant computation.
 - Library does not include compound name or structure information—structural validation cannot proceed without a reference annotation.
@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-smiles-validation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-smiles-validation/skill.md
-    merged_at: '2026-05-25T07:04:57.423678+00:00'
+    merged_at: '2026-05-25T07:15:30.832474+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-smiles-validation@sha256:4fcfd8d2890db5ad760baebecf61d37930445225a6fe4079efc28e8dc41a64c0
   related_workflows:

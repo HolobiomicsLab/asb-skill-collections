@@ -1,6 +1,6 @@
 ---
 name: machine-learning-feature-selection
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to apply random-forest variable importance scoring on a preprocessed feature table to identify and rank discriminative metabolite features, followed by a quantitative threshold to subset differential features for annotation and validation.
+description: Use random-forest variable importance scoring to identify and rank the most discriminative metabolite features from a preprocessed feature table, then apply a quantitative threshold to subset a tractable set of differential features for downstream annotation and validation. This approach reduces dimensionality while preserving biological signal by letting the ensemble model weight features by their predictive power.
 when_to_use_negative:
 - Input feature table is already a curated, low-dimensional feature set (e.g., <50 features); random-forest selection adds unnecessary complexity.
 - Outcome variable is continuous (e.g., age, metabolite concentration); use regression-based feature selection (e.g., elastic net, recursive feature elimination) instead.
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/machine-learning-feature-selection/SKILL.md
     - outputs/audit_haffner_v2/skills/machine-learning-feature-selection/skill.md
-    merged_at: '2026-05-25T07:04:57.482681+00:00'
+    merged_at: '2026-05-25T07:15:30.891591+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/machine-learning-feature-selection@sha256:cf969729ae5f745ee7bbccb5bd4cffc2688fae52d17a262126b3c5527792bfd4
   related_workflows:

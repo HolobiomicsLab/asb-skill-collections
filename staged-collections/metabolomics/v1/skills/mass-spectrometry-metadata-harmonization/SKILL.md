@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-metadata-harmonization
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to systematically repair and validate MS/MS spectral metadata, including adducts, precursor m/z, SMILES, and compound annotations, through chemical structure validation against reference databases and cross-field consistency checks.
+description: Systematically repair and validate MS/MS spectral metadata—including adducts, precursor m/z, SMILES, and compound annotations—using chemical structure validation against reference databases and cross-field consistency checks. This skill ensures that library spectra meet plausibility thresholds before downstream analysis or publication.
 when_to_use_negative:
 - Input spectra already have complete, manually curated, and structurally validated metadata (e.g., NIST or internal curated standards); harmonization would be redundant.
 - The analysis goal requires preservation of original (even if incorrect) metadata for historical comparison or error auditing; repair operations are destructive.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-metadata-harmonization/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-metadata-harmonization/skill.md
-    merged_at: '2026-05-25T07:04:57.451061+00:00'
+    merged_at: '2026-05-25T07:15:30.859746+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-metadata-harmonization@sha256:60a99a82f5ca79ce8d0d0e1e72ed281bf2643fb036d6a6127c45159c2c231137
   related_workflows:

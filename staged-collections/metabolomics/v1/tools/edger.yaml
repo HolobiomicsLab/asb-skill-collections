@@ -1,0 +1,26 @@
+evidence_spans:
+- normalise with edgeR
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.375037+00:00'
+  n_source_records: 5
+  source_paper_dois:
+  - 10.1073/pnas
+name: edgeR
+related_skills:
+- count-data-normalization-library-size-correction
+- differential-expression-validation-fold-change-verification
+- gene-expression-quantification-rpkm-calculation
+- rna-seq-read-alignment-splice-aware-mapping
+- transcript-abundance-estimation-counting
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: edger
+source_paper_doi: 10.1073/pnas
+source_paper_title: Proceedings of the National Academy of Sciences
+source_task_ids:
+- task_003

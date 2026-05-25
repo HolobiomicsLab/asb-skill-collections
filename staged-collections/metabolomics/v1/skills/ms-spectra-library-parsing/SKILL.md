@@ -1,6 +1,6 @@
 ---
 name: ms-spectra-library-parsing
-description: Use when working in the metabolomics domain to parse and load mass spectrometry spectral libraries in MGF format, extracting spectrum metadata, precursor m/z, fragment peaks, and chemical annotations for downstream cleaning and validation.
+description: Parse and load mass spectrometry spectral libraries in MGF format into a Python-based spectral object framework, extracting spectrum metadata, precursor m/z, fragment peaks, and chemical annotations for downstream cleaning and validation. This is the essential first step in any reproducible MS/MS library curation pipeline.
 when_to_use_negative:
 - Input is already a SpectrumList or deserialized Python object — skip directly to cleaning pipeline.
 - Input is in a non-MGF format (e.g., mzML, NetCDF, JSON) without a format conversion step beforehand.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/ms-spectra-library-parsing/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/ms-spectra-library-parsing/skill.md
-    merged_at: '2026-05-25T07:04:57.442175+00:00'
+    merged_at: '2026-05-25T07:15:30.850894+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ms-spectra-library-parsing@sha256:c10420e6eaef45b18fbb4d8f0aad240f6da9cae459e99785f7241b9bd4768016
   related_workflows:

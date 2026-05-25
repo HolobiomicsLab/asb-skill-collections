@@ -1,6 +1,6 @@
 ---
 name: lc-ms-feature-detection-and-alignment
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics requires automated detection, alignment, and retention-time correction of LC–HRMS features from centroided mzML files using XCMS with IPO-optimized parameters, followed by isotope/adduct deconvolution via CAMERA to generate a feature table.
+description: Automated detection, alignment, and retention-time correction of LC–HRMS features from centroided mzML files using XCMS with IPO-optimized parameters, followed by isotope/adduct deconvolution via CAMERA to generate a feature table (m/z, retention time, per-sample intensity) suitable for metabolite screening.
 when_to_use_negative:
 - Input files are already in profile (non-centroided) mode; use ProteoWizard centroiding first.
 - Sample set lacks replicate structure or contains only single measurements; retention-time alignment and quality filtering depend on cross-sample consistency.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/lc-ms-feature-detection-and-alignment/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/lc-ms-feature-detection-and-alignment/skill.md
-    merged_at: '2026-05-25T07:04:57.609108+00:00'
+    merged_at: '2026-05-25T07:15:31.020249+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/lc-ms-feature-detection-and-alignment@sha256:0c97c344868541ff7a3c4aa5d79e94ec427fad9ceba651342ecaf8fc7e3202c2
   related_workflows:

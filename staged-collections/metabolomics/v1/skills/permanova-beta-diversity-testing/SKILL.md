@@ -1,6 +1,6 @@
 ---
 name: permanova-beta-diversity-testing
-description: Use when analyzing metabolomics data with PERMANOVA to test if a categorical variable explains significant variance in metabolome composition based on a distance matrix.
+description: PERMANOVA tests whether a categorical variable (e.g., industrialization group) explains statistically significant variance in metabolome composition by permuting group assignments across a distance matrix. This skill assesses beta-diversity structure and effect size when exploring how sample metadata drives metabolite feature abundance patterns.
 when_to_use_negative:
 - Distance matrix has not yet been computed from the feature table — compute distance first.
 - Grouping variable is continuous (e.g., age in years) rather than categorical — use Mantel test or distance-based linear regression instead.
@@ -29,7 +29,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/permanova-beta-diversity-testing/SKILL.md
     - outputs/audit_haffner_v2/skills/permanova-beta-diversity-testing/skill.md
-    merged_at: '2026-05-25T07:04:57.484732+00:00'
+    merged_at: '2026-05-25T07:15:30.893599+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/permanova-beta-diversity-testing@sha256:85446bc795c46f0007ecc7f5a73a86c95a4a51fda255189878d583c53bae8e95
   related_workflows:

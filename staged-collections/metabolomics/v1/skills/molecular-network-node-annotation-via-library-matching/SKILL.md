@@ -1,6 +1,6 @@
 ---
 name: molecular-network-node-annotation-via-library-matching
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics requires annotating spectral nodes in feature-based molecular networks by matching MS/MS fragmentation spectra against curated reference libraries for structural identification of metabolites.
+description: Annotate spectral nodes in feature-based molecular networks by matching MS/MS fragmentation spectra against curated reference libraries (e.g., GNPS public library), enabling rapid structural identification of metabolites with high spectral coverage. This skill is essential when a molecular network contains hundreds of spectral nodes and manual curation is infeasible.
 when_to_use_negative:
 - Your metabolites are not well-represented in public reference libraries (e.g., novel synthetic compounds or rare plant species); use de novo structure elucidation or alternative annotation strategies instead.
 - Your MS/MS data were acquired on a non-standard instrument or under collision energies not represented in the reference library; spectral matching will fail due to fragmentation pattern mismatch.
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/molecular-network-node-annotation-via-library-matching/SKILL.md
     - outputs/audit_jeong_full/skills/molecular-network-node-annotation-via-library-matching/skill.md
-    merged_at: '2026-05-25T07:04:57.505247+00:00'
+    merged_at: '2026-05-25T07:15:30.913968+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:0df80f06f53be883ea74dea46f247959d6faa416ecef6772acbca0e17a88d855
   related_workflows:

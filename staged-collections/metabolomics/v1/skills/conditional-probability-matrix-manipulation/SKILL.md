@@ -1,6 +1,6 @@
 ---
 name: conditional-probability-matrix-manipulation
-description: Use when extracting and filtering conditional probability matrices from mmvec neural network output to identify high-confidence microbe–metabolite interaction pairs by retaining rows for annotated metabolites and columns for taxa with the highest conditional probabilities.
+description: Extract and filter conditional probability matrices from mmvec (microbe-metabolite vectors) neural network output to identify high-confidence microbe–metabolite interaction pairs. This skill isolates the most predictive taxa–metabolite associations by retaining rows corresponding to annotated metabolites and columns corresponding to taxa with the highest conditional probabilities.
 when_to_use_negative:
 - Input is already a curated set of interactions (e.g., from literature or validated databases); filtering would redundantly remove signals.
 - All metabolites are unannotated or lack compound-level identifications; filtering to annotated metabolites would leave an empty or uninformative result.
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/conditional-probability-matrix-manipulation/SKILL.md
     - outputs/audit_haffner_v2/skills/conditional-probability-matrix-manipulation/skill.md
-    merged_at: '2026-05-25T07:04:57.498876+00:00'
+    merged_at: '2026-05-25T07:15:30.907924+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/conditional-probability-matrix-manipulation@sha256:58b04e3f7e98a8c788c3d5ac4f4325423115f81783a491a3a9252fd544fcaa13
   related_workflows:

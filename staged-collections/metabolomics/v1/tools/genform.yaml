@@ -1,0 +1,49 @@
+canonical_url: https://anaconda.org/bioconda/genform
+evidence_spans:
+- The corresponding molecular formula was calculated using the GenForm command line tool.
+install:
+  channel: bioconda
+  kind: conda
+  package: genform
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.375772+00:00'
+  n_source_records: 6
+  source_paper_dois:
+  - 10.1021/acs.analchem.1c00972
+name: GenForm
+related_skills:
+- high-resolution-mass-accuracy-analysis
+- in-silico-fragmentation-tree-analysis
+- mass-spectrometry-molecular-formula-assignment
+- ms2-spectral-fragmentation-interpretation
+- pesticide-metabolite-structure-elucidation
+- spectral-similarity-scoring-and-validation
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+resolution_attempts:
+- http_status: 404
+  source: pypi
+  status: miss
+  url: https://pypi.org/pypi/genform/json
+- http_status: 404
+  source: conda-forge
+  status: miss
+  url: https://api.anaconda.org/package/conda-forge/genform
+- http_status: 200
+  source: bioconda
+  status: hit
+  url: https://api.anaconda.org/package/bioconda/genform
+- http_status: 404
+  source: bio.tools
+  status: miss
+  url: https://bio.tools/api/genform?format=json
+slug: genform
+source_paper_doi: 10.1021/acs.analchem.1c00972
+source_paper_title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+source_task_ids:
+- task_004

@@ -1,6 +1,6 @@
 ---
 name: ms-ms-spectral-data-retrieval
-description: Use when retrieving MS/MS spectra in the metabolomics domain using declarative MassQL queries to match compound-class-specific fragment ion signatures from large public repositories like GNPS/MassIVE, Metabolomics Workbench, and MetaboLights.
+description: Retrieve MS/MS spectra matching compound-class-specific fragment ion signatures from large public repositories (GNPS/MassIVE, Metabolomics Workbench, MetaboLights) using declarative MassQL queries. This skill enables discovery of known and novel compounds by translating chemical knowledge (e.g., phosphate fragment m/z 98.9847 ± 50 ppm, iron isotope ratios) into queryable patterns across hundreds of millions of spectra.
 when_to_use_negative:
 - Your target compounds are already well-represented in commercial spectral libraries or your dataset is small (<10 million spectra); traditional library matching will be faster and more cost-effective.
 - You lack a biochemically motivated hypothesis about a characteristic fragment or neutral loss; exploratory untargeted MS/MS analysis or networking without pre-query feature definition is more appropriate.
@@ -44,7 +44,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/ms-ms-spectral-data-retrieval/SKILL.md
     - outputs/audit_s41592_full/skills/ms-ms-spectral-data-retrieval/skill.md
-    merged_at: '2026-05-25T07:04:57.569424+00:00'
+    merged_at: '2026-05-25T07:15:30.979688+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ms-ms-spectral-data-retrieval@sha256:81065decbb4458d72ff62ca9d0a33239f8b87b5a6012172e9b9b8c74a6119b6f
   related_workflows:

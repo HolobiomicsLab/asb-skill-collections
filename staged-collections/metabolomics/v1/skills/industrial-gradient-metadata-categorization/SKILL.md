@@ -1,6 +1,6 @@
 ---
 name: industrial-gradient-metadata-categorization
-description: Use when categorizing fecal samples in the metabolomics domain using LC-MS and GC-MS techniques based on industrialization levels for downstream analyses.
+description: Stratifies fecal samples into four discrete industrialization categories (urban industrialized, rural industrialized, rural traditional, isolated traditional) and uses these assignments as the primary grouping variable for downstream metabolomic and microbiomic analyses. This skill is foundational for detecting and quantifying the impact of industrialization on metabolome composition and microbiome-metabolome interactions.
 when_to_use_negative:
 - Samples lack geographic or contextual information to justify industrialization assignment
 - Your research focuses on within-population heterogeneity rather than between-population comparisons
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/industrial-gradient-metadata-categorization/SKILL.md
     - outputs/audit_haffner_v2/skills/industrial-gradient-metadata-categorization/skill.md
-    merged_at: '2026-05-25T07:04:57.492706+00:00'
+    merged_at: '2026-05-25T07:15:30.901520+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/industrial-gradient-metadata-categorization@sha256:bd6a3a51aac238a5512a6bfa5cd3c21fb61fe86e14057f12351efdc1350dcb45
   related_workflows:

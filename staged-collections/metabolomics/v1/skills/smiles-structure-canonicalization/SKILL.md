@@ -1,6 +1,6 @@
 ---
 name: smiles-structure-canonicalization
-description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to derive canonical SMILES, InChI, and InChIKey representations from compound names or existing chemical identifiers using RDKit and PubChem reference data.
+description: Derive canonical SMILES, InChI, and InChIKey representations from compound names or existing chemical identifiers using RDKit and PubChem reference data. This skill ensures consistent, machine-readable chemical structure notation across a mass spectral library, enabling reliable downstream annotation validation and adduct repair.
 when_to_use_negative:
 - Input records already contain validated canonical SMILES and matching InChIKey without ambiguities.
 - Compound names are trade names, metabolite identifiers, or non-IUPAC strings that do not resolve to PubChem entries.
@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-structure-canonicalization/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-structure-canonicalization/skill.md
-    merged_at: '2026-05-25T07:04:57.408285+00:00'
+    merged_at: '2026-05-25T07:15:30.816653+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/smiles-structure-canonicalization@sha256:12c9e046c28e4733b21866514d95dc17459c40314a3766c5ed0f189132491509
   related_workflows:

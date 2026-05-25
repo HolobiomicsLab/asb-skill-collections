@@ -1,6 +1,6 @@
 ---
 name: artifact-provenance-tracing-to-repository
-description: Use when retrieving and validating processing artifacts such as supplementary tables and cleaned spectral libraries from public repositories in the metabolomics domain, specifically using LC-MS and GC-MS techniques to ensure reproducibility of reported statistics and processing parameters.
+description: Retrieve and validate processing artifacts (e.g., supplementary tables, cleaned spectral libraries, YAML configuration files) from public repositories (Zenodo, GitHub) to verify that reported statistics and processing parameters match the actual outputs claimed in a published article. This skill ensures reproducibility by grounding published findings in auditable, versioned artifacts.
 when_to_use_negative:
 - The article does not cite a public repository or makes no quantitative claims about pipeline outputs that can be verified against an artifact.
 - The repository deposit is embargoed, access-restricted, or no longer available.
@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/artifact-provenance-tracing-to-repository/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/artifact-provenance-tracing-to-repository/skill.md
-    merged_at: '2026-05-25T07:04:57.457377+00:00'
+    merged_at: '2026-05-25T07:15:30.865897+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/artifact-provenance-tracing-to-repository@sha256:0b5c44af72134f61a4460042cb7d55b9baca7165ec5d3ef9c6ecfc91553bb37f
   related_workflows:

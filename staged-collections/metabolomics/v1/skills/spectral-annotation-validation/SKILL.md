@@ -1,6 +1,6 @@
 ---
 name: spectral-annotation-validation
-description: Use when validating the internal consistency of chemical annotation fields (SMILES, InChI, InChIKey) in metabolomics mass spectral library records through RDKit cross-validation to detect and quantify annotation errors.
+description: Validate the internal consistency of chemical annotation fields (SMILES, InChI, InChIKey) in mass spectral library records using RDKit cross-validation. This skill detects and quantifies annotation errors and inconsistencies that compromise spectral library quality and downstream analysis.
 when_to_use_negative:
 - Spectra that have not yet undergone repair functions (e.g., 'derive annotation from compound name', 'repair adduct and parent mass based on SMILES'). Run repair filters first to reduce false negatives; 52,084 spectra in the GNPS library had repairable inconsistencies.
 - Annotated spectra where chemical structure annotation is intentionally incomplete or absent (e.g., unannotated experimental data or library fragments). This filter requires all three SMILES, InChI, and InChIKey fields to be present.
@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-annotation-validation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/spectral-annotation-validation/skill.md
-    merged_at: '2026-05-25T07:04:57.431968+00:00'
+    merged_at: '2026-05-25T07:15:30.840872+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-annotation-validation@sha256:81b5193863d89a6c2b18291cb0f7fa2730b17482fdaf22678221cf973ee818c1
   related_workflows:

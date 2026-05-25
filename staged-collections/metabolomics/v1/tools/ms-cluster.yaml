@@ -1,0 +1,25 @@
+evidence_spans:
+- We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations of the candidate iron-binding molecules.
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.375153+00:00'
+  n_source_records: 4
+  source_paper_dois:
+  - 10.1038/s41592-025-02660-z
+name: MS-Cluster
+related_skills:
+- consensus-spectrum-generation
+- mgf-format-handling
+- repository-scale-spectral-processing
+- spectral-redundancy-clustering
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: ms-cluster
+source_paper_doi: 10.1038/s41592-025-02660-z
+source_paper_title: A universal language for finding mass spectrometry data patterns
+source_task_ids:
+- task_002

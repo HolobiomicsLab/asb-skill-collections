@@ -1,0 +1,43 @@
+canonical_url: https://github.com/jhaffner09/core_metabolome_2021
+evidence_spans:
+- For the six-sample filtering, additional processing was done in R (84) to remove any features that were not found in at least six samples from each population.
+- Conditional probabilities were exported to R (84).
+- The R code for the RNAseq data processing is available from https://github.com/KyobinKang/supplementary-L_brumalis_UGT
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.374868+00:00'
+  n_source_records: 13
+  source_paper_dois:
+  - 10.1128/msystems.00710-22
+  - 10.1073/pnas
+name: R
+related_skills:
+- conditional-probability-matrix-manipulation
+- count-data-normalization-library-size-correction
+- differential-expression-validation-fold-change-verification
+- feature-table-reproducibility-validation
+- gene-expression-quantification-rpkm-calculation
+- metabolite-feature-filtering-by-peak-count
+- metabolite-feature-table-subsetting
+- microbe-metabolite-conditional-probability-filtering
+- microbial-taxa-rank-selection-by-predictive-strength
+- non-gap-filled-data-processing
+- population-level-feature-presence-filtering
+- rna-seq-read-alignment-splice-aware-mapping
+- transcript-abundance-estimation-counting
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: r
+source_papers:
+- doi: 10.1128/msystems.00710-22
+  title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+- doi: 10.1073/pnas
+  title: Proceedings of the National Academy of Sciences
+source_task_ids:
+- task_002
+- task_003
+- task_004

@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-derivation-from-compound-names
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to derive canonical SMILES, InChI, and InChIKey structures from compound names by querying PubChem, facilitating structural validation and error detection in mass spectral library annotations.
+description: Derives canonical SMILES, InChI, and InChIKey structures from compound names by querying PubChem, enabling structural validation and error detection in mass spectral library annotations. This skill is essential for identifying unannotated spectra and detecting structural mismatches between derived and existing annotations.
 when_to_use_negative:
 - Input spectra lack compound names or have blank/invalid compound name fields; PubChem lookup will fail for unmapped names.
 - Spectra already have validated, manually curated SMILES and InChI annotations from primary literature or high-confidence reference standards; re-derivation from PubChem may overwrite accurate manual curation.
@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-derivation-from-compound-names/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-derivation-from-compound-names/skill.md
-    merged_at: '2026-05-25T07:04:57.446564+00:00'
+    merged_at: '2026-05-25T07:15:30.855362+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-derivation-from-compound-names@sha256:15e14cb2015645713d14f5000507d306c96f3081d1ef3cfd39007ad964f8d041
   related_workflows:

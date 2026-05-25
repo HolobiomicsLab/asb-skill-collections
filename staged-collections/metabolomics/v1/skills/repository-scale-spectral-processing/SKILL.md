@@ -1,6 +1,6 @@
 ---
 name: repository-scale-spectral-processing
-description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to apply MS-Cluster or Falcon-MS for collapsing redundant MS/MS observations at repository scale into consensus spectra for downstream molecular networking and annotation.
+description: Apply MS-Cluster or Falcon-MS to collapse redundant MS/MS observations retrieved at repository scale (millions of spectra) into consensus spectra suitable for downstream molecular networking and annotation. This skill transforms large unfiltered spectral result sets into compact, representative datasets by identifying and merging duplicate acquisitions.
 when_to_use_negative:
 - Input spectra are already deduplicated or come from a single sample with no redundancy expected.
 - Consensus spectra are not required downstream; you plan direct library matching or molecular feature detection without aggregation.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/repository-scale-spectral-processing/SKILL.md
     - outputs/audit_s41592_full/skills/repository-scale-spectral-processing/skill.md
-    merged_at: '2026-05-25T07:04:57.551151+00:00'
+    merged_at: '2026-05-25T07:15:30.960915+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/repository-scale-spectral-processing@sha256:a02ca468322fdcfde554cdbff3f444683f07f6ad07d51e6c22f46a2aa9e3a42a
   related_workflows:

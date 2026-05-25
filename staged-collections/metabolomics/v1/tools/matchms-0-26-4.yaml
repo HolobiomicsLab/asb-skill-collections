@@ -1,0 +1,81 @@
+canonical_url: https://pypi.org/project/matchms/
+evidence_spans:
+- Matchms version 0.26.4 was used to run these pipelines
+install:
+  kind: pip
+  package: matchms
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.373736+00:00'
+  n_source_records: 29
+  source_paper_dois:
+  - 10.1186/s13321-024-00878-1
+name: matchms 0.26.4
+related_skills:
+- adduct-ion-classification-accuracy-assessment
+- annotation-error-rate-calculation
+- chemical-structure-consistency-checking
+- chemical-structure-derivation-from-compound-names
+- chemical-structure-parsing-and-normalization
+- chemical-structure-smiles-validation
+- mass-spectral-library-quality-assessment
+- mass-spectrometry-library-curation
+- mass-spectrometry-metadata-harmonization
+- metabolite-annotation-consistency-checking
+- metadata-completeness-evaluation
+- metadata-harmonization-cleaning
+- metadata-validation-cross-check
+- monoisotopic-mass-calculation-from-smiles
+- monoisotopic-mass-calculation-from-structure
+- ms-spectra-library-parsing
+- parent-mass-correction-from-molar-mass
+- precursor-adduct-mass-reconciliation
+- pubchem-structure-lookup-and-retrieval
+- rdkit-smiles-inchi-cross-validation
+- smiles-inchi-chemical-identifier-repair
+- smiles-inchi-inchikey-comparison-and-validation
+- smiles-salt-notation-repair
+- smiles-structure-canonicalization
+- spectral-annotation-validation
+- spectral-count-quality-assessment
+- spectral-library-adduct-repair-validation
+- spectral-metadata-annotation-mismatch-detection
+- spectral-metadata-harmonization
+- structure-annotation-validation
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+resolution_attempts:
+- from_cache: true
+  http_status: 200
+  source: pypi
+  status: hit
+  url: https://pypi.org/pypi/matchms/json
+- from_cache: true
+  http_status: 404
+  source: conda-forge
+  status: miss
+  url: https://api.anaconda.org/package/conda-forge/matchms
+- from_cache: true
+  http_status: 200
+  source: bioconda
+  status: hit
+  url: https://api.anaconda.org/package/bioconda/matchms
+- from_cache: true
+  http_status: 200
+  source: bio.tools
+  status: hit
+  url: https://bio.tools/api/matchms?format=json
+slug: matchms-0-26-4
+source_paper_doi: 10.1186/s13321-024-00878-1
+source_paper_title: Reproducible MS/MS library cleaning pipeline in matchms
+source_task_ids:
+- task_001
+- task_002
+- task_003
+- task_004
+- task_005
+- task_006

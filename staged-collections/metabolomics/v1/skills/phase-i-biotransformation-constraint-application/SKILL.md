@@ -1,6 +1,6 @@
 ---
 name: phase-i-biotransformation-constraint-application
-description: Use when filtering putative metabolite features in LC-HRMS metabolomics by enforcing biochemical mass-shift constraints for phase-I oxidative transformations (reduction, oxidation, hydrolysis, dehydration) to discriminate true phase-I metabolites from phase-II conjugation artifacts.
+description: This skill applies biochemical constraints to filter putative metabolite features in LC–HRMS data by removing signals with mass shifts inconsistent with phase-I oxidative transformations (reduction, oxidation, hydrolysis, dehydration). It distinguishes true phase-I metabolites from artifacts of phase-II conjugation or instrumental noise by enforcing strict bounds on mass difference relative to the parent pesticide m/z.
 when_to_use_negative:
 - Input features are already restricted to known phase-I metabolites (e.g., pre-curated reference standards).
 - The parent pesticide ionization state is ambiguous or multiple adducts ([M+H]+, [M+Na]+, etc.) are present without mode-specific labeling.
@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/phase-i-biotransformation-constraint-application/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/phase-i-biotransformation-constraint-application/skill.md
-    merged_at: '2026-05-25T07:04:57.602204+00:00'
+    merged_at: '2026-05-25T07:15:31.013204+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/phase-i-biotransformation-constraint-application@sha256:75f94f4c8dffc210e6d6d6d2c0485093cbd39c3a79bcd1ad7caf8a5503c56717
   related_workflows:

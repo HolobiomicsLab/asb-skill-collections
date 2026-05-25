@@ -1,6 +1,6 @@
 ---
 name: multivariate-microbiome-analysis
-description: Use when conducting multivariate analysis in metabolomics with techniques such as ordination (PCoA), permutation testing (PERMANOVA), and machine learning to assess population-level differences in microbial and metabolite composition based on categorical factors.
+description: Multivariate analysis of microbiome and metabolomic data using ordination (PCoA), permutation testing (PERMANOVA), and machine learning to identify population-level differences in microbial and metabolite composition. This skill tests whether categorical factors (e.g., industrialization group, geographic origin) explain significant variance in community structure.
 when_to_use_negative:
 - Feature table is already filtered to a small set of pre-identified discriminant features; use univariate testing instead.
 - Samples lack clear categorical grouping metadata or the grouping variable has too few replicates per group (typically <3 samples per group will yield unreliable permutation tests).
@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/multivariate-microbiome-analysis/SKILL.md
     - outputs/audit_haffner_v2/skills/multivariate-microbiome-analysis/skill.md
-    merged_at: '2026-05-25T07:04:57.500913+00:00'
+    merged_at: '2026-05-25T07:15:30.909960+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/multivariate-microbiome-analysis@sha256:df37a8af4046d901278ad808ecf2b6d6cb8b4ff42d2adb7d771fd934157e7f5c
   related_workflows:

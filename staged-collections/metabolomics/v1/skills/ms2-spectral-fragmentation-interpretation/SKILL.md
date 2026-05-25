@@ -1,6 +1,6 @@
 ---
 name: ms2-spectral-fragmentation-interpretation
-description: Use when interpreting MS2 fragmentation spectra in metabolomics to assign molecular formulas and elucidate metabolite structures by combining GenForm formula calculation with Sirius in silico fragmentation analysis and dot-product similarity scoring against reference spectra.
+description: Interpret MS2 fragmentation spectra to assign unambiguous molecular formulas and elucidate metabolite structures by combining GenForm formula calculation with Sirius in silico fragmentation analysis and dot-product similarity scoring against reference spectra. This skill distinguishes true metabolite fragments from unexplainable peaks and validates spectral quality.
 when_to_use_negative:
 - Input MS2 spectra contain primarily noise or exhibit poor signal-to-noise ratio; Sirius and GenForm require interpretable fragment patterns.
 - Features have already been structurally confirmed by authentic reference standards or orthogonal techniques; re-interpretation adds no value.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/ms2-spectral-fragmentation-interpretation/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/ms2-spectral-fragmentation-interpretation/skill.md
-    merged_at: '2026-05-25T07:04:57.593187+00:00'
+    merged_at: '2026-05-25T07:15:31.004082+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ms2-spectral-fragmentation-interpretation@sha256:1afff755c8c270d206121002ffddf414c26bf69d6a9ccaab440485ab534b53a9
   related_workflows:

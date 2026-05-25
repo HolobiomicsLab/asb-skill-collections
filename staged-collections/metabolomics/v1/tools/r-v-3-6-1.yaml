@@ -1,0 +1,65 @@
+evidence_spans:
+- All data analysis was performed in an automated workflow running on a CentOS 7 high-performance computation cluster based on the R language (v 3.6.1)
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.376273+00:00'
+  n_source_records: 23
+  source_paper_dois:
+  - 10.1021/acs.analchem.1c00972
+name: R v 3.6.1
+related_skills:
+- control-group-selection-for-metabolite-screening
+- cyp450-enzyme-metabolization-rules
+- feature-abundance-filtering-with-statistical-thresholds
+- feature-mass-difference-filtering
+- feature-table-reduction-and-quality-control
+- fold-change-calculation-from-replicate-intensities
+- high-resolution-mass-accuracy-analysis
+- in-silico-fragmentation-tree-analysis
+- lc-ms-feature-detection-and-alignment
+- mass-spectrometry-data-preprocessing
+- mass-spectrometry-molecular-formula-assignment
+- metabolite-feature-prioritization
+- metabolite-structure-prediction-biotransformer
+- molecular-formula-comparison-overlap-analysis
+- ms2-spectral-fragmentation-interpretation
+- pesticide-metabolite-structure-elucidation
+- phase-i-biotransformation-constraint-application
+- phase-i-transformation-biotransformation-pathways
+- replicate-detection-consistency-filtering
+- retention-time-correction
+- spectral-similarity-scoring-and-validation
+- venn-diagram-set-visualization-multiway-comparison
+- xcms-parameter-optimization
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+resolution_attempts:
+- http_status: 404
+  source: pypi
+  status: miss
+  url: https://pypi.org/pypi/r-v/json
+- http_status: 404
+  source: conda-forge
+  status: miss
+  url: https://api.anaconda.org/package/conda-forge/r-v
+- http_status: 404
+  source: bioconda
+  status: miss
+  url: https://api.anaconda.org/package/bioconda/r-v
+- http_status: 404
+  source: bio.tools
+  status: miss
+  url: https://bio.tools/api/r-v?format=json
+slug: r-v-3-6-1
+source_paper_doi: 10.1021/acs.analchem.1c00972
+source_paper_title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
+source_task_ids:
+- task_001
+- task_002
+- task_003
+- task_004
+- task_005

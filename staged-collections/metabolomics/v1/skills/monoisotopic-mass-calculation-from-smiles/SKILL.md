@@ -1,6 +1,6 @@
 ---
 name: monoisotopic-mass-calculation-from-smiles
-description: Use when calculating the exact monoisotopic mass of a chemical structure from its SMILES representation in the domain of metabolomics using RDKit, applying it to validate and correct parent mass metadata in tandem mass spectrometry library records.
+description: Calculate the exact monoisotopic mass of a chemical structure from its SMILES representation using RDKit, enabling validation and correction of parent mass metadata in tandem mass spectrometry library records. This skill is essential for detecting and repairing metadata errors where parent mass was incorrectly derived from molar mass instead of monoisotopic mass.
 when_to_use_negative:
 - SMILES is invalid, malformed, or cannot be parsed by RDKit; skip mass calculation for that spectrum and flag it for manual curation.
 - Parent mass metadata is missing or marked as unknown; monoisotopic mass calculation alone cannot fill the gap without external reference data.
@@ -41,7 +41,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/monoisotopic-mass-calculation-from-smiles/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/monoisotopic-mass-calculation-from-smiles/skill.md
-    merged_at: '2026-05-25T07:04:57.419086+00:00'
+    merged_at: '2026-05-25T07:15:30.827839+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/monoisotopic-mass-calculation-from-smiles@sha256:4a2a0813fcbe9e0f7a35196fee6c3c75ab912524986a004650c1d1ebb2fa5948
   related_workflows:

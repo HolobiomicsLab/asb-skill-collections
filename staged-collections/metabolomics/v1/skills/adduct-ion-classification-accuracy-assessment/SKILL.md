@@ -1,6 +1,6 @@
 ---
 name: adduct-ion-classification-accuracy-assessment
-description: Use when evaluating the correctness of adduct ion assignments in metabolomics using LC-MS or GC-MS techniques by comparing repair outcomes against reference data to measure derivation failure rate and misassignment rate.
+description: Evaluate the correctness of adduct ion assignments derived from chemical structure (SMILES) by comparing repair outcomes against reference data, measuring both derivation failure rate and misassignment rate. This skill quantifies the reliability of automated adduct correction in mass spectral library cleaning pipelines.
 when_to_use_negative:
 - Input spectra lack valid SMILES, InChI, or compound name annotations; the repair filter cannot derive an adduct without chemical structure.
 - Reference adduct assignments are themselves unreliable or missing; accuracy assessment requires ground-truth labels.
@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/adduct-ion-classification-accuracy-assessment/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/adduct-ion-classification-accuracy-assessment/skill.md
-    merged_at: '2026-05-25T07:04:57.404033+00:00'
+    merged_at: '2026-05-25T07:15:30.812493+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/adduct-ion-classification-accuracy-assessment@sha256:cf0d5cff00992b1b0d62523af62098bc630ca4ab8c4cf41fe7f15c76a1f46bb0
   related_workflows:

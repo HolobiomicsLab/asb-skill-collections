@@ -1,0 +1,26 @@
+evidence_spans:
+- a random forest machine learning algorithm from the R package RandomForest was used in Jupyter Notebook
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.374881+00:00'
+  n_source_records: 5
+  source_paper_dois:
+  - 10.1128/msystems.00710-22
+name: random forest
+related_skills:
+- differential-feature-identification
+- machine-learning-feature-selection
+- metabolite-importance-ranking
+- random-forest-model-training
+- threshold-based-feature-filtering
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: random-forest
+source_paper_doi: 10.1128/msystems.00710-22
+source_paper_title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
+source_task_ids:
+- task_003

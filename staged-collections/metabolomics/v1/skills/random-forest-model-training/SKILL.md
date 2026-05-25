@@ -1,6 +1,6 @@
 ---
 name: random-forest-model-training
-description: Use when training a random-forest classifier in metabolomics using LC-MS or GC-MS untargeted lipidomics feature data to identify features predictive of categorical phenotypes, iteratively increasing tree count until out-of-bag error stabilizes.
+description: Train a random-forest classifier on metabolomic feature data to identify features predictive of categorical phenotypes (e.g., industrialization group), with tree count iteratively increased until out-of-bag error stabilizes. This skill surfaces variable-importance scores for subsequent feature selection and filtering.
 when_to_use_negative:
 - Input feature table has already been dimensionally reduced to a small, curated set; random forests perform best with hundreds of candidate features, not dozens.
 - Your outcome is continuous (e.g., abundance value, metabolite concentration); use random-forest regression instead of classification.
@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/random-forest-model-training/SKILL.md
     - outputs/audit_haffner_v2/skills/random-forest-model-training/skill.md
-    merged_at: '2026-05-25T07:04:57.480604+00:00'
+    merged_at: '2026-05-25T07:15:30.889514+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/random-forest-model-training@sha256:e8eeaf9e05572ac6b717cde330c21f3ed605fbefae462f04d7ed5998a149d84e
   related_workflows:

@@ -1,0 +1,29 @@
+canonical_url: https://github.com/lark-parser/lark
+evidence_spans:
+- The parsing is done by using the lark Python library
+merge_audit:
+  merge_kind: slug_match_union
+  merged_at: '2026-05-25T07:15:30.375202+00:00'
+  n_source_records: 7
+  source_paper_dois:
+  - 10.1038/s41592-025-02660-z
+name: lark parser
+related_skills:
+- mass-spectrometry-query-language-syntax
+- ms-data-format-conversion-and-export
+- ms-ms-spectral-data-retrieval
+- organophosphate-ester-compound-class-recognition
+- ppm-tolerance-filtering-and-calibration
+- product-ion-fragment-filtering
+- relative-intensity-threshold-filtering
+related_workflows:
+- benchmark/tasks/audit_haffner_v2/workflow.smk
+- benchmark/tasks/audit_jeong_full/workflow.smk
+- benchmark/tasks/article_878_full_2026-05-10_v5/workflow.smk
+- benchmark/tasks/pesticide_full_2026-05-10_v2/workflow.smk
+- benchmark/tasks/audit_s41592_full/workflow.smk
+slug: lark-parser
+source_paper_doi: 10.1038/s41592-025-02660-z
+source_paper_title: A universal language for finding mass spectrometry data patterns
+source_task_ids:
+- task_003
