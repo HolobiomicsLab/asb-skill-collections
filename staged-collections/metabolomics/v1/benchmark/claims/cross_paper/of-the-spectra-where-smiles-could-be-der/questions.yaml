@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Of the spectra where SMILES could be derived from the compound name (72.4%), 1.62% were annotated with a different 2D structure than the original annotation.' say?
+  expected_result_ids:
+    - result_017
+  expected_claim_ids:
+    - claim_056
+  tier: silver

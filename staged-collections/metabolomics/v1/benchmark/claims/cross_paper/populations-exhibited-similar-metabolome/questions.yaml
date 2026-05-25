@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Populations exhibited similar metabolomes based on the degree of industrialization determined by principal-coordinate analysis (PCoA).' say?
+  expected_result_ids:
+    - result_001
+  expected_claim_ids:
+    - claim_001
+  tier: silver

@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about '7,504 consensus MS/MS spectra were identified using MS-Cluster on the retrieved MS/MS spectra.' say?
+  expected_result_ids:
+    - result_006
+  expected_claim_ids:
+    - claim_007
+  tier: silver

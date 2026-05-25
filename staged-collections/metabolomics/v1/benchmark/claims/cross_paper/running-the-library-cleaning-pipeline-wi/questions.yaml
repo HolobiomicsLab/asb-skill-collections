@@ -1,0 +1,7 @@
+- question: Across papers, what do claims about 'Running the library cleaning pipeline without the newly added repair functions focused on repairing annotation resulted in removal of 83,843 spectra. Running the library cleaning pipeline with the newly added repair functions resulted in re' say?
+  expected_result_ids:
+    - result_013
+  expected_claim_ids:
+    - claim_051
+    - claim_052
+  tier: silver

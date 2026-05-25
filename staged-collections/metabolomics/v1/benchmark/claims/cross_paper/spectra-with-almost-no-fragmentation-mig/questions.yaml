@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Spectra with almost no fragmentation might not have enough information for accurate library matching.' say?
+  expected_result_ids:
+    - result_009
+  expected_claim_ids:
+    - claim_044
+  tier: silver

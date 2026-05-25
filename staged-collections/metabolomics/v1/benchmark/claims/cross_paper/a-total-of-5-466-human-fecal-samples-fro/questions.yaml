@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'A total of 5,466 human fecal samples from ReDU were coanalyzed.' say?
+  expected_result_ids:
+    - result_010
+  expected_claim_ids:
+    - claim_010
+  tier: silver

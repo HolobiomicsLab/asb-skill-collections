@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Mass spectral libraries are essential for mass spectrum annotation, both for library matching and training new machine learning algorithms.' say?
+  expected_result_ids:
+    - result_001
+  expected_claim_ids:
+    - claim_001
+  tier: silver

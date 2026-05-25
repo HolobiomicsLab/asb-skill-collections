@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about '10 of the 12 total amino acid-conjugated bile acids annotated in this study demonstrated a striking increase with industrialization.' say?
+  expected_result_ids:
+    - result_005
+  expected_claim_ids:
+    - claim_005
+  tier: silver

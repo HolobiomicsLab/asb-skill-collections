@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Before cleaning, the GNPS library contained 500,569 spectra.' say?
+  expected_result_ids:
+    - result_012
+  expected_claim_ids:
+    - claim_050
+  tier: silver

@@ -1,0 +1,30 @@
+- question: What does this paper claim about Public libraries of mass spectrometry data that ar?
+  expected_claim_ids:
+    - claim_002
+  tier: silver
+  source_doi: article_878_full_2026-05-10_v5
+- question: What evidence supports claims about Public libraries of mass spectrometry data that ar?
+  expected_claim_ids:
+    - claim_002
+  tier: silver
+  source_doi: article_878_full_2026-05-10_v5
+- question: What are the key findings related to Public libraries of mass spectrometry data that ar?
+  expected_claim_ids:
+    - claim_002
+  tier: silver
+  source_doi: article_878_full_2026-05-10_v5
+- question: What does this paper claim about library cleaning pipeline?
+  expected_claim_ids:
+    - claim_004
+  tier: silver
+  source_doi: article_878_full_2026-05-10_v5
+- question: What evidence supports claims about library cleaning pipeline?
+  expected_claim_ids:
+    - claim_004
+  tier: silver
+  source_doi: article_878_full_2026-05-10_v5
+- question: What are the key findings related to library cleaning pipeline?
+  expected_claim_ids:
+    - claim_004
+  tier: silver
+  source_doi: article_878_full_2026-05-10_v5

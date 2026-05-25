@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Urobilin abundance is affected by host diet and behavior.' say?
+  expected_result_ids:
+    - result_007
+  expected_claim_ids:
+    - claim_007
+  tier: silver

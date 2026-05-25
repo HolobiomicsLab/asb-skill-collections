@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Delay to initial freezing did impact the overall fecal metabolome.' say?
+  expected_result_ids:
+    - result_003
+  expected_claim_ids:
+    - claim_003
+  tier: silver

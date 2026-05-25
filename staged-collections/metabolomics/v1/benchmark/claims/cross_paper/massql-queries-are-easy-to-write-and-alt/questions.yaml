@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'MassQL queries are easy to write and alter due to the formal grammar based on common MS terminology.' say?
+  expected_result_ids:
+    - result_007
+  expected_claim_ids:
+    - claim_009
+  tier: silver

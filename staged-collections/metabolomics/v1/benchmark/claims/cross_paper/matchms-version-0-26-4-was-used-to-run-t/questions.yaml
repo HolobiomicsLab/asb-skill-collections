@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Matchms version 0.26.4 was used to run the pipelines on the GNPS library.' say?
+  expected_result_ids:
+    - result_011
+  expected_claim_ids:
+    - claim_049
+  tier: silver

@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'The repair adduct and parent mass based on SMILES filter did not derive an adduct for 0.02% of spectra.' say?
+  expected_result_ids:
+    - result_018
+  expected_claim_ids:
+    - claim_057
+  tier: silver

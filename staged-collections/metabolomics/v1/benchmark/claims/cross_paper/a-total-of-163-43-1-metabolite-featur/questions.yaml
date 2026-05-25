@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'A total of 163 (43.1%) metabolite features had compound-level annotations.' say?
+  expected_result_ids:
+    - result_004
+  expected_claim_ids:
+    - claim_004
+  tier: silver

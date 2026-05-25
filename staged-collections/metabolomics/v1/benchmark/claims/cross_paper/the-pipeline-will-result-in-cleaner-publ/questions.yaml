@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'The pipeline will result in cleaner public mass spectral libraries that will improve library searching and the quality of machine-learning training datasets in mass spectrometry.' say?
+  expected_result_ids:
+    - result_003
+  expected_claim_ids:
+    - claim_004
+  tier: silver

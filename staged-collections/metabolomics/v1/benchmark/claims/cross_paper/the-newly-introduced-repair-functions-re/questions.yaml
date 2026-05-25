@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'The newly introduced repair functions repaired the metadata of 52,084 spectra.' say?
+  expected_result_ids:
+    - result_014
+  expected_claim_ids:
+    - claim_053
+  tier: silver

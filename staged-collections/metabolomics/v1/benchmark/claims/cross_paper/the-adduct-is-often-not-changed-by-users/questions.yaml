@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'The adduct is often not changed by users from the default [M + H]+ to the actual adduct.' say?
+  expected_result_ids:
+    - result_007
+  expected_claim_ids:
+    - claim_034
+  tier: silver

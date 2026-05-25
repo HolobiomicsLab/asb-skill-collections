@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Many MS2 spectra in the library contain spectra that have almost not been fragmented.' say?
+  expected_result_ids:
+    - result_008
+  expected_claim_ids:
+    - claim_043
+  tier: silver

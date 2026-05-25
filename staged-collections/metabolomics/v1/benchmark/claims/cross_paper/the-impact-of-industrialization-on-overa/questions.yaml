@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'The impact of industrialization on overall fecal metabolome profiles was comparable between gap-filled and non-gap-filled data.' say?
+  expected_result_ids:
+    - result_009
+  expected_claim_ids:
+    - claim_009
+  tier: silver

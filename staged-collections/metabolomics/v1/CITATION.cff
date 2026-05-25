@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Metabolomics v1"
+version: 1
+date-released: 2026-05-25
+doi: TBD
+abstract: "ASB curated skill + benchmark collection: Metabolomics"
+repository-code: https://github.com/HolobiomicsLab/asb-skill-collections
+license: Apache-2.0

@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Mass spectrometry captures unique chemical characteristics, making it a powerful analytical tool, but also presents challenges for data interpretation.' say?
+  expected_result_ids:
+    - result_004
+  expected_claim_ids:
+    - claim_004
+  tier: silver

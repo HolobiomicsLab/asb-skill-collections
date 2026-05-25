@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'MassQL has been implemented in various open-source and commercial tools, improving data mining capabilities.' say?
+  expected_result_ids:
+    - result_002
+  expected_claim_ids:
+    - claim_002
+  tier: silver

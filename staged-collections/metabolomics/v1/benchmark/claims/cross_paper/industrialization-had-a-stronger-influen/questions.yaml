@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Industrialization had a stronger influence on metabolic similarity between populations than geographic origin, age, or sex.' say?
+  expected_result_ids:
+    - result_002
+  expected_claim_ids:
+    - claim_002
+  tier: silver

@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Salts often fall apart into different salts when measured in a mass spectrometer, resulting in measuring only one or a few of the ions added.' say?
+  expected_result_ids:
+    - result_005
+  expected_claim_ids:
+    - claim_030
+  tier: silver

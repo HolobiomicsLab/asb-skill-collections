@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'For 27.6% of spectra with valid annotation, compound name, and adduct matching the ion mode, SMILES could not be derived from the compound name.' say?
+  expected_result_ids:
+    - result_016
+  expected_claim_ids:
+    - claim_055
+  tier: silver

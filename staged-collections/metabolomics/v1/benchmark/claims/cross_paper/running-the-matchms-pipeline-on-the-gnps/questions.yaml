@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Running the matchms pipeline on the GNPS library of 500,569 spectra took 6 hours and 45 minutes.' say?
+  expected_result_ids:
+    - result_020
+  expected_claim_ids:
+    - claim_059
+  tier: silver

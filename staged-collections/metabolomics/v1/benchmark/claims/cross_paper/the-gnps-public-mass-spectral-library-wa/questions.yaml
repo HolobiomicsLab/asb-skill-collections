@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'The GNPS public mass spectral library was downloaded on 21-08-2023 in the no propagated version.' say?
+  expected_result_ids:
+    - result_010
+  expected_claim_ids:
+    - claim_048
+  tier: silver

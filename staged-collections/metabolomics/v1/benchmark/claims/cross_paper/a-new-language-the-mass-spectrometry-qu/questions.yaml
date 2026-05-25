@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'A new language, the Mass Spectrometry Query Language (MassQL), has been introduced to query mass spectrometry data.' say?
+  expected_result_ids:
+    - result_001
+  expected_claim_ids:
+    - claim_001
+  tier: silver

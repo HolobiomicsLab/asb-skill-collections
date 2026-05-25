@@ -1,0 +1,30 @@
+{"question": "What does this paper claim about populations?", "expected_claim_ids": ["claim_001"]}
+{"question": "What evidence supports claims about populations?", "expected_claim_ids": ["claim_001"]}
+{"question": "What are the key findings related to populations?", "expected_claim_ids": ["claim_001"]}
+{"question": "What does this paper claim about industrialization?", "expected_claim_ids": ["claim_002"]}
+{"question": "What evidence supports claims about industrialization?", "expected_claim_ids": ["claim_002"]}
+{"question": "What are the key findings related to industrialization?", "expected_claim_ids": ["claim_002"]}
+{"question": "What does this paper claim about delay to initial freezing?", "expected_claim_ids": ["claim_003"]}
+{"question": "What evidence supports claims about delay to initial freezing?", "expected_claim_ids": ["claim_003"]}
+{"question": "What are the key findings related to delay to initial freezing?", "expected_claim_ids": ["claim_003"]}
+{"question": "What does this paper claim about metabolite features?", "expected_claim_ids": ["claim_004"]}
+{"question": "What evidence supports claims about metabolite features?", "expected_claim_ids": ["claim_004"]}
+{"question": "What are the key findings related to metabolite features?", "expected_claim_ids": ["claim_004"]}
+{"question": "What does this paper claim about amino acid-conjugated bile acids?", "expected_claim_ids": ["claim_005"]}
+{"question": "What evidence supports claims about amino acid-conjugated bile acids?", "expected_claim_ids": ["claim_005"]}
+{"question": "What are the key findings related to amino acid-conjugated bile acids?", "expected_claim_ids": ["claim_005"]}
+{"question": "What does this paper claim about leucyl-leucine?", "expected_claim_ids": ["claim_006"]}
+{"question": "What evidence supports claims about leucyl-leucine?", "expected_claim_ids": ["claim_006"]}
+{"question": "What are the key findings related to leucyl-leucine?", "expected_claim_ids": ["claim_006"]}
+{"question": "What does this paper claim about Urobilin abundance is affected by host diet and be?", "expected_claim_ids": ["claim_007"]}
+{"question": "What evidence supports claims about Urobilin abundance is affected by host diet and be?", "expected_claim_ids": ["claim_007"]}
+{"question": "What are the key findings related to Urobilin abundance is affected by host diet and be?", "expected_claim_ids": ["claim_007"]}
+{"question": "What does this paper claim about This is the first study to illustrate the industri?", "expected_claim_ids": ["claim_008"]}
+{"question": "What evidence supports claims about This is the first study to illustrate the industri?", "expected_claim_ids": ["claim_008"]}
+{"question": "What are the key findings related to This is the first study to illustrate the industri?", "expected_claim_ids": ["claim_008"]}
+{"question": "What does this paper claim about The impact of industrialization on overall fecal m?", "expected_claim_ids": ["claim_009"]}
+{"question": "What evidence supports claims about The impact of industrialization on overall fecal m?", "expected_claim_ids": ["claim_009"]}
+{"question": "What are the key findings related to The impact of industrialization on overall fecal m?", "expected_claim_ids": ["claim_009"]}
+{"question": "What does this paper claim about A total of 5,466 human fecal samples from ReDU wer?", "expected_claim_ids": ["claim_010"]}
+{"question": "What evidence supports claims about A total of 5,466 human fecal samples from ReDU wer?", "expected_claim_ids": ["claim_010"]}
+{"question": "What are the key findings related to A total of 5,466 human fecal samples from ReDU wer?", "expected_claim_ids": ["claim_010"]}

@@ -1,0 +1,105 @@
+- question: What does this paper claim about MassQL?
+  expected_claim_ids:
+    - claim_001
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What evidence supports claims about MassQL?
+  expected_claim_ids:
+    - claim_001
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What are the key findings related to MassQL?
+  expected_claim_ids:
+    - claim_001
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What does this paper claim about MassQL?
+  expected_claim_ids:
+    - claim_002
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What evidence supports claims about MassQL?
+  expected_claim_ids:
+    - claim_002
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What are the key findings related to MassQL?
+  expected_claim_ids:
+    - claim_002
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What does this paper claim about MassQL?
+  expected_claim_ids:
+    - claim_003
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What evidence supports claims about MassQL?
+  expected_claim_ids:
+    - claim_003
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What are the key findings related to MassQL?
+  expected_claim_ids:
+    - claim_003
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What does this paper claim about Mass spectrometry?
+  expected_claim_ids:
+    - claim_004
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What evidence supports claims about Mass spectrometry?
+  expected_claim_ids:
+    - claim_004
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What are the key findings related to Mass spectrometry?
+  expected_claim_ids:
+    - claim_004
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What does this paper claim about MassQL?
+  expected_claim_ids:
+    - claim_006
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What evidence supports claims about MassQL?
+  expected_claim_ids:
+    - claim_006
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What are the key findings related to MassQL?
+  expected_claim_ids:
+    - claim_006
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What does this paper claim about MS-Cluster?
+  expected_claim_ids:
+    - claim_007
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What evidence supports claims about MS-Cluster?
+  expected_claim_ids:
+    - claim_007
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What are the key findings related to MS-Cluster?
+  expected_claim_ids:
+    - claim_007
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What does this paper claim about MassQL?
+  expected_claim_ids:
+    - claim_009
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What evidence supports claims about MassQL?
+  expected_claim_ids:
+    - claim_009
+  tier: silver
+  source_doi: audit_s41592_full
+- question: What are the key findings related to MassQL?
+  expected_claim_ids:
+    - claim_009
+  tier: silver
+  source_doi: audit_s41592_full

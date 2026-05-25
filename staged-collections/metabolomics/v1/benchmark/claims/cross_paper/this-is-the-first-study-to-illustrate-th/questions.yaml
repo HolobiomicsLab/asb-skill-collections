@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'This is the first study to illustrate the industrialization gradient in the human fecal metabolome.' say?
+  expected_result_ids:
+    - result_008
+  expected_claim_ids:
+    - claim_008
+  tier: silver

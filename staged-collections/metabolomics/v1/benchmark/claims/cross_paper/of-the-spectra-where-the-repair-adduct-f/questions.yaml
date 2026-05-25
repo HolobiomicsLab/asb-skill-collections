@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Of the spectra where the repair adduct filter derived an adduct (99.98%), 0.024% had an incorrect adduct after the filter.' say?
+  expected_result_ids:
+    - result_019
+  expected_claim_ids:
+    - claim_058
+  tier: silver

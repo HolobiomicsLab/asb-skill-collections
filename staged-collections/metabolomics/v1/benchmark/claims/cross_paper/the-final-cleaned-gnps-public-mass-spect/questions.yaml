@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'The final cleaned GNPS public mass spectral library contains 448,485 curated mass spectra.' say?
+  expected_result_ids:
+    - result_015
+  expected_claim_ids:
+    - claim_054
+  tier: silver

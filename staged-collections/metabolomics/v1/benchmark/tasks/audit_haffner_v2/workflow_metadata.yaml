@@ -1,0 +1,2 @@
+workflow_format: snakemake
+tier: structural_only

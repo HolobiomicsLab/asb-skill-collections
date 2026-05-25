@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'A common mistake in mass spectrometry metadata is that the parent mass is calculated from the molar mass instead of the monoisotopic mass.' say?
+  expected_result_ids:
+    - result_006
+  expected_claim_ids:
+    - claim_032
+  tier: silver

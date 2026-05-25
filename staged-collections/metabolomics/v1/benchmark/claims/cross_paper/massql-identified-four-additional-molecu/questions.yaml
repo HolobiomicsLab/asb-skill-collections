@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'MassQL identified four additional molecules that IIMN did not find.' say?
+  expected_result_ids:
+    - result_005
+  expected_claim_ids:
+    - claim_006
+  tier: silver

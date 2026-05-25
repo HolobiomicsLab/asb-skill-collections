@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'The pipeline has the potential to become the standard in the field for cleaning tandem mass spectrometry libraries due to its high quality software, reproducibility, and improved logging.' say?
+  expected_result_ids:
+    - result_004
+  expected_claim_ids:
+    - claim_006
+  tier: silver

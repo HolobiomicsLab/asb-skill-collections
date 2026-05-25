@@ -1,0 +1,6 @@
+- question: Across papers, what do claims about 'Public libraries of mass spectrometry data that are open to user submission often suffer from limited metadata curation and harmonization.' say?
+  expected_result_ids:
+    - result_002
+  expected_claim_ids:
+    - claim_002
+  tier: silver
