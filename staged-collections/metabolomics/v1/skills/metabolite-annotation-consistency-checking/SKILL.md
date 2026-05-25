@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/metabolite-annotation-consistency-checking/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/metabolite-annotation-consistency-checking/skill.md
-    merged_at: '2026-05-25T07:15:30.805377+00:00'
+    merged_at: '2026-05-25T07:33:56.258039+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:43e148b9035ca8f15d50cce5359f9f0b9e52912f11581542b0092bbd868b1440
   related_workflows:

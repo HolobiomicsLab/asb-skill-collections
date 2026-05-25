@@ -1,0 +1,175 @@
+# verify-paper.yml — Runs on PRs that touch corpus.yaml.
+# For every paper entry the PR adds or modifies, queries Unpaywall to
+# determine access tier + Crossref to confirm DOI validity, and posts
+# the verification report as a PR comment. Populates the
+# ``access.{type, license, verified_via, verified_at}`` fields when
+# the PR is merged (via tier-update.yml style auto-commit, future).
+#
+# Spec ref: OPEN_ACCESS_POLICY.md §"Paper-proposal workflow"
+
+name: Verify paper
+
+on:
+  pull_request:
+    paths:
+      - 'collections/**/corpus.yaml'
+      - 'staged-collections/**/corpus.yaml'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  verify-paper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml httpx
+
+      - name: Identify corpus.yaml files changed
+        id: changed
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          head="${{ github.event.pull_request.head.sha }}"
+          git diff --name-only "$base" "$head" \
+            | grep -E '(collections|staged-collections)/.+/corpus\.yaml$' \
+            > /tmp/changed_corpus.txt || true
+          echo "count=$(wc -l < /tmp/changed_corpus.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          cat /tmp/changed_corpus.txt
+
+      - name: Verify each paper in changed corpus files
+        if: steps.changed.outputs.count != '0'
+        id: verify
+        run: |
+          python - <<'PYEOF'
+          import sys
+          import yaml
+          import json
+          import httpx
+          import datetime as _dt
+          from pathlib import Path
+
+          UNPAYWALL_EMAIL = "louisfelix.nothias@gmail.com"  # required by Unpaywall API
+
+          changed = Path("/tmp/changed_corpus.txt").read_text().strip().splitlines()
+          report_rows = []
+          fail = False
+
+          for corpus_path in changed:
+              if not corpus_path or not Path(corpus_path).exists():
+                  continue
+              try:
+                  corpus = yaml.safe_load(Path(corpus_path).read_text()) or {}
+              except Exception as exc:
+                  report_rows.append(f"| `{corpus_path}` | — | parse-error | {exc} |")
+                  fail = True
+                  continue
+
+              for paper in corpus.get("papers") or []:
+                  doi = (paper.get("doi") or "").strip()
+                  status = paper.get("status", "?")
+                  if not doi:
+                      report_rows.append(f"| `{corpus_path}` | (missing DOI) | — | skip |")
+                      continue
+
+                  # Crossref check (registered + not retracted)
+                  cx_status = "unknown"
+                  cx_title = ""
+                  cx_retracted = False
+                  try:
+                      r = httpx.get(
+                          f"https://api.crossref.org/works/{doi}",
+                          headers={"User-Agent": f"asb-skill-collections/0.1 (mailto:{UNPAYWALL_EMAIL})"},
+                          timeout=15,
+                      )
+                      if r.status_code == 200:
+                          msg = r.json().get("message", {})
+                          cx_title = (msg.get("title") or [""])[0]
+                          if msg.get("update-to"):
+                              # Crossref flags retractions/corrections via update-to
+                              for u in msg["update-to"]:
+                                  if u.get("type") == "retraction":
+                                      cx_retracted = True
+                                      break
+                          cx_status = "retracted" if cx_retracted else "registered"
+                      elif r.status_code == 404:
+                          cx_status = "NOT-FOUND"
+                          fail = True
+                      else:
+                          cx_status = f"HTTP {r.status_code}"
+                  except Exception as exc:
+                      cx_status = f"err:{type(exc).__name__}"
+
+                  # Unpaywall — access tier
+                  oa_status = "unknown"
+                  oa_license = ""
+                  try:
+                      r = httpx.get(
+                          f"https://api.unpaywall.org/v2/{doi}",
+                          params={"email": UNPAYWALL_EMAIL},
+                          timeout=15,
+                      )
+                      if r.status_code == 200:
+                          oa_data = r.json()
+                          if oa_data.get("is_oa"):
+                              oa_status = "open-access"
+                          else:
+                              oa_status = "hybrid"
+                          best_oa = oa_data.get("best_oa_location") or {}
+                          oa_license = best_oa.get("license") or ""
+                      elif r.status_code == 404:
+                          oa_status = "closed"
+                      else:
+                          oa_status = f"HTTP {r.status_code}"
+                  except Exception as exc:
+                      oa_status = f"err:{type(exc).__name__}"
+
+                  report_rows.append(
+                      f"| `{doi}` | {status} | {cx_status} | {oa_status} | "
+                      f"{oa_license or '—'} | {cx_title[:60] if cx_title else '—'} |"
+                  )
+
+          report = "\n".join(report_rows) if report_rows else "_(no papers found in diff)_"
+          # Write report markdown to file for the next step
+          report_md = (
+              "| DOI | Status | Crossref | Unpaywall | License | Title |\n"
+              "|---|---|---|---|---|---|\n"
+              f"{report}\n\n"
+              f"_Verified at: {_dt.datetime.now(_dt.timezone.utc).isoformat()}_\n"
+              "_Driver: `scripts/verify_paper.py` · Policy: `OPEN_ACCESS_POLICY.md`_"
+          )
+          Path("/tmp/paper-report.md").write_text(report_md)
+          print(report_md)
+          if fail:
+              sys.exit(1)
+          PYEOF
+
+      - name: Post verification report as PR comment
+        if: always() && steps.changed.outputs.count != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/paper-report.md', 'utf8');
+            const status = "${{ job.status }}";
+            const heading = status === "success"
+              ? "### ✅ Paper verification passed"
+              : "### ❌ Paper verification failed";
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `${heading}\n\n${report}`
+            });

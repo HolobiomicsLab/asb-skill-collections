@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/spectral-similarity-scoring-and-validation/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/spectral-similarity-scoring-and-validation/skill.md
-    merged_at: '2026-05-25T07:15:30.996874+00:00'
+    merged_at: '2026-05-25T07:33:56.450737+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-scoring-and-validation@sha256:fe444303b30780a9ab4965f9f0afe2360dc2b649151a519e2d3fe798e5ec9348
   related_workflows:

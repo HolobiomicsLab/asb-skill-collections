@@ -2,7 +2,7 @@ evidence_spans:
 - Scanning of deduced amino acid sequences of the 19 species against the Pfam database found a total of 138 sequences
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.375142+00:00'
+  merged_at: '2026-05-25T07:33:55.840926+00:00'
   n_source_records: 5
   source_paper_dois:
   - 10.1073/pnas

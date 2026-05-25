@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/metabolite-importance-ranking/SKILL.md
     - outputs/audit_haffner_v2/skills/metabolite-importance-ranking/skill.md
-    merged_at: '2026-05-25T07:15:30.877833+00:00'
+    merged_at: '2026-05-25T07:33:56.331065+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-importance-ranking@sha256:760b35f66a60eeb9247863f97bee77209d095155ce7de359d48a948171b8b60c
   related_workflows:

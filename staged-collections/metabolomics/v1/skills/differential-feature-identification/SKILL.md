@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/differential-feature-identification/SKILL.md
     - outputs/audit_haffner_v2/skills/differential-feature-identification/skill.md
-    merged_at: '2026-05-25T07:15:30.899247+00:00'
+    merged_at: '2026-05-25T07:33:56.352932+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:0ed164b7bc7b5dfbb0b49792ccdbece1e29c2c83a7ea5cd1e0e17f9545ff82b0
   related_workflows:

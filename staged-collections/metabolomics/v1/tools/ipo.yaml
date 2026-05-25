@@ -6,7 +6,7 @@ install:
   package: ipo
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.376508+00:00'
+  merged_at: '2026-05-25T07:33:55.842320+00:00'
   n_source_records: 4
   source_paper_dois:
   - 10.1021/acs.analchem.1c00972

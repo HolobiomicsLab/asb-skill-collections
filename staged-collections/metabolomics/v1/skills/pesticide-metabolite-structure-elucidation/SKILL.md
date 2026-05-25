@@ -38,7 +38,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/pesticide-metabolite-structure-elucidation/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/pesticide-metabolite-structure-elucidation/skill.md
-    merged_at: '2026-05-25T07:15:31.015345+00:00'
+    merged_at: '2026-05-25T07:33:56.469567+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/pesticide-metabolite-structure-elucidation@sha256:ada8fcc753cbd57782c27615cfa02942e50168bca0cd9f900bcda001b50c1d8f
   related_workflows:

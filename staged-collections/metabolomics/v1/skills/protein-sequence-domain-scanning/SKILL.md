@@ -36,7 +36,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/protein-sequence-domain-scanning/SKILL.md
     - outputs/audit_jeong_full/skills/protein-sequence-domain-scanning/skill.md
-    merged_at: '2026-05-25T07:15:30.934548+00:00'
+    merged_at: '2026-05-25T07:33:56.388633+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/protein-sequence-domain-scanning@sha256:fc1aa2db66537753c9bd1087c37416ded80364264b684713e886e19183c67e85
   related_workflows:

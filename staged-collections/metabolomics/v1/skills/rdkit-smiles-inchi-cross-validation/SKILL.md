@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/rdkit-smiles-inchi-cross-validation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/rdkit-smiles-inchi-cross-validation/skill.md
-    merged_at: '2026-05-25T07:15:30.825705+00:00'
+    merged_at: '2026-05-25T07:33:56.278495+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/rdkit-smiles-inchi-cross-validation@sha256:872c136417ee9540b4972ceb246373f4eb816fe3ab76968eef2154342751eb65
   related_workflows:

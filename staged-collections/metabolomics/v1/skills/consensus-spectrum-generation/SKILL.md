@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/consensus-spectrum-generation/SKILL.md
     - outputs/audit_s41592_full/skills/consensus-spectrum-generation/skill.md
-    merged_at: '2026-05-25T07:15:30.970370+00:00'
+    merged_at: '2026-05-25T07:33:56.424543+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/consensus-spectrum-generation@sha256:c67c2a705974c275113dbf7201478f11d93b1f3912a5f9461d509ac35570ee94
   related_workflows:

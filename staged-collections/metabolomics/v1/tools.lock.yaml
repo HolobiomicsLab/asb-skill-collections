@@ -1,7 +1,7 @@
 tools:
 - name: matchms
   slug: matchms
-  iri: https://w3id.org/holobiomicslab/asb-tool/matchms@sha256:59969a703c94593344c65e4a96b2e65ae7eaa3c6a2b3e4a072a028ea8de6d68c
+  iri: https://w3id.org/holobiomicslab/asb-tool/matchms@sha256:21eb61f1def438afafd4b4442efcd9d8c54ad2e171eb231b38e75ac18df11d09
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/matchms
   path: tools/matchms.yaml
   related_workflows:
@@ -12,7 +12,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: matchms 0.26.4
   slug: matchms-0-26-4
-  iri: https://w3id.org/holobiomicslab/asb-tool/matchms-0-26-4@sha256:d758bf14db5984dfd2f3f685fb0f9c623ce218f8083a9242b8b7fa3bf03fe026
+  iri: https://w3id.org/holobiomicslab/asb-tool/matchms-0-26-4@sha256:2d54a7637aaa3b598d783a8e1bed3863780fc1e4368762e93b68da1dcf2db00e
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/matchms-0-26-4
   path: tools/matchms-0-26-4.yaml
   related_workflows:
@@ -23,7 +23,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: RDKit
   slug: rdkit
-  iri: https://w3id.org/holobiomicslab/asb-tool/rdkit@sha256:07ae5a27c20fdfd54d82a5f004882e082822df0697a3e920ffe27d9f3817a2b1
+  iri: https://w3id.org/holobiomicslab/asb-tool/rdkit@sha256:7ab192c860c16e786be3d332c351387656c5042bf9055399b153abd1643cc2f0
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/rdkit
   path: tools/rdkit.yaml
   related_workflows:
@@ -34,7 +34,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: Python
   slug: python
-  iri: https://w3id.org/holobiomicslab/asb-tool/python@sha256:25a08c59ca2ba62c133a8ed3edb9da3fb9bd3cb307d1329466ef43b6d3d8b1c9
+  iri: https://w3id.org/holobiomicslab/asb-tool/python@sha256:b914ec5545590c83b07c6ea3cf705a19fc4197e539b3797228c930e20186e176
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/python
   path: tools/python.yaml
   related_workflows:
@@ -45,7 +45,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: PubChem
   slug: pubchem
-  iri: https://w3id.org/holobiomicslab/asb-tool/pubchem@sha256:d89293d7df2eb3e2a8b3a6a59cc6152ac2b6c57ca135f2d339285d3997e583a8
+  iri: https://w3id.org/holobiomicslab/asb-tool/pubchem@sha256:5a6a365ff861a4c62fbc3f794545571d2cef882fdfa29672076b4e542f8affe4
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/pubchem
   path: tools/pubchem.yaml
   related_workflows:
@@ -56,7 +56,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: principal-coordinate analysis (PCoA)
   slug: principal-coordinate-analysis-pcoa
-  iri: https://w3id.org/holobiomicslab/asb-tool/principal-coordinate-analysis-pcoa@sha256:959ab79a8ce6235e49c368d8291bca76a189d86b3168b9e7b5c936dd040fec46
+  iri: https://w3id.org/holobiomicslab/asb-tool/principal-coordinate-analysis-pcoa@sha256:156a9c3f04b2751d0685bef00587b2c0ecee0a562acaf447b664d5cc8aa1df5a
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/principal-coordinate-analysis-pcoa
   path: tools/principal-coordinate-analysis-pcoa.yaml
   related_workflows:
@@ -67,7 +67,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: MZmine
   slug: mzmine
-  iri: https://w3id.org/holobiomicslab/asb-tool/mzmine@sha256:f019cb27db1c1977ff24af2b4d78757c761ffd40411e9395fc3067731aeb43e2
+  iri: https://w3id.org/holobiomicslab/asb-tool/mzmine@sha256:f55360ebd194dd7439466f23833ecd95889e5156c530db037faafeb57515865e
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/mzmine
   path: tools/mzmine.yaml
   related_workflows:
@@ -78,7 +78,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: R
   slug: r
-  iri: https://w3id.org/holobiomicslab/asb-tool/r@sha256:4e637a80073c6bc0e24ce355de1e79d1006cd8dfb2907cdb2481d4c9236d70fd
+  iri: https://w3id.org/holobiomicslab/asb-tool/r@sha256:42e49cef79be3dc39790d54f7e2c4f261c668be52444f746f2c54cfde7eb9e55
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/r
   path: tools/r.yaml
   related_workflows:
@@ -89,7 +89,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: random forest
   slug: random-forest
-  iri: https://w3id.org/holobiomicslab/asb-tool/random-forest@sha256:76254f8ae8a2243523f9b957ed410814936a861c6136d7d52801b36a5e35cbc0
+  iri: https://w3id.org/holobiomicslab/asb-tool/random-forest@sha256:35de36e7ea2aeb54bf19f25e9b9da84e7fc67508bc1cb5a8be8268e164ec72ef
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/random-forest
   path: tools/random-forest.yaml
   related_workflows:
@@ -100,7 +100,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: R programming language
   slug: r-programming-language
-  iri: https://w3id.org/holobiomicslab/asb-tool/r-programming-language@sha256:dec5c1af457bd783354d92563a8a455f54ee1fedcfb45e7030092e2d086a1e58
+  iri: https://w3id.org/holobiomicslab/asb-tool/r-programming-language@sha256:424555ab2021c00f70e15504f3bde77dba23a852f7e3c54655ebea3565bcc623
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/r-programming-language
   path: tools/r-programming-language.yaml
   related_workflows:
@@ -111,7 +111,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: Jupyter Notebook
   slug: jupyter-notebook
-  iri: https://w3id.org/holobiomicslab/asb-tool/jupyter-notebook@sha256:f47c7a3d809131276aef18930143b3128f1aa074675dd23631a42921bd421bc8
+  iri: https://w3id.org/holobiomicslab/asb-tool/jupyter-notebook@sha256:357f4a08a0061e363150ab5fc508f8fbe052712ac67a6c4207142f396fb12be5
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/jupyter-notebook
   path: tools/jupyter-notebook.yaml
   related_workflows:
@@ -122,7 +122,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: PERMANOVA
   slug: permanova
-  iri: https://w3id.org/holobiomicslab/asb-tool/permanova@sha256:7b933c11d5eab492d534e80cce1c06f6c39c7bfa94407a82be7454e684666211
+  iri: https://w3id.org/holobiomicslab/asb-tool/permanova@sha256:cbccf96cd367b43955dbb756657d9782ada379311bcc46ca0e7554e0182145e1
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/permanova
   path: tools/permanova.yaml
   related_workflows:
@@ -133,7 +133,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: QIIME2
   slug: qiime2
-  iri: https://w3id.org/holobiomicslab/asb-tool/qiime2@sha256:baf5d1d4b91142089be7447f4e103700c2f4906f1870ff69f6a02d03d3d06b8a
+  iri: https://w3id.org/holobiomicslab/asb-tool/qiime2@sha256:b30328bee1fc1e4e1b3788810e3f0d87784597b46b45a1d68daa2c8d06b8e201
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/qiime2
   path: tools/qiime2.yaml
   related_workflows:
@@ -144,7 +144,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: EMPeror
   slug: emperor
-  iri: https://w3id.org/holobiomicslab/asb-tool/emperor@sha256:e7a4f3f995e3b367832b2bc697c0ee5db6ab1ae773dee448ef66fcb0984bf2c3
+  iri: https://w3id.org/holobiomicslab/asb-tool/emperor@sha256:c598a6b90cb485daaeef2f091d13bb543a6184eb347af380a587a385ac99711b
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/emperor
   path: tools/emperor.yaml
   related_workflows:
@@ -155,7 +155,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: mmvec
   slug: mmvec
-  iri: https://w3id.org/holobiomicslab/asb-tool/mmvec@sha256:c92238ad101814b711673d8464872d72f00d6c0b49aa17d9622f574938e0a194
+  iri: https://w3id.org/holobiomicslab/asb-tool/mmvec@sha256:774b86e0c9b222057b77f50f05205ae5849c4a0a8d41063ef93f00a11a3b2ee6
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/mmvec
   path: tools/mmvec.yaml
   related_workflows:
@@ -166,7 +166,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: LC-MS/MS
   slug: lc-ms-ms
-  iri: https://w3id.org/holobiomicslab/asb-tool/lc-ms-ms@sha256:175fce735cc37a098fde6eeb15801b689ff065720e3563d109c1e10c40f4eb40
+  iri: https://w3id.org/holobiomicslab/asb-tool/lc-ms-ms@sha256:d41c5a3643a122207c4c3d29d8dd499af6fb5c237ef4e99c5576dc6824b53330
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/lc-ms-ms
   path: tools/lc-ms-ms.yaml
   related_workflows:
@@ -177,7 +177,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: HISAT2
   slug: hisat2
-  iri: https://w3id.org/holobiomicslab/asb-tool/hisat2@sha256:088a833e8abf7d31f225f8f6dc98530239cc78097ae62ee3bdeb09c60f0ea519
+  iri: https://w3id.org/holobiomicslab/asb-tool/hisat2@sha256:4300cda39394a5424b639792140083d321c0da78aa3af51daaa9f44dc91ab23f
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/hisat2
   path: tools/hisat2.yaml
   related_workflows:
@@ -188,7 +188,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: HTSeq
   slug: htseq
-  iri: https://w3id.org/holobiomicslab/asb-tool/htseq@sha256:90142d9fb0b2558bcec3059011d1fffd2cc8e994652cb40855121c95505627df
+  iri: https://w3id.org/holobiomicslab/asb-tool/htseq@sha256:a82e7bb308a202e035c45e1b443a7c8dec3480c582931b1cdf744363fe18b639
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/htseq
   path: tools/htseq.yaml
   related_workflows:
@@ -199,7 +199,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: edgeR
   slug: edger
-  iri: https://w3id.org/holobiomicslab/asb-tool/edger@sha256:14261b7e867e611ba122a11ed036add4d417c5f9a64907908d0fc4003e931119
+  iri: https://w3id.org/holobiomicslab/asb-tool/edger@sha256:27dbeaa9db014702cbf233064ee9d417b77b435ccde2cfa5cc23b21683b4d7cd
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/edger
   path: tools/edger.yaml
   related_workflows:
@@ -210,7 +210,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: SRA Toolkit
   slug: sra-toolkit
-  iri: https://w3id.org/holobiomicslab/asb-tool/sra-toolkit@sha256:4c6934eb29b0f4cf140713268eea5f0e15d12255c8e845f04df5e51573c71b1f
+  iri: https://w3id.org/holobiomicslab/asb-tool/sra-toolkit@sha256:375e291ffb64d39be92343db7a896260204c2b52e5f5740e05f2a07a181034e1
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/sra-toolkit
   path: tools/sra-toolkit.yaml
   related_workflows:
@@ -221,7 +221,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: GNPS
   slug: gnps
-  iri: https://w3id.org/holobiomicslab/asb-tool/gnps@sha256:979e31e7a358454b81373642c9725ed3be985f236de1e36b75670d0ccb11a30f
+  iri: https://w3id.org/holobiomicslab/asb-tool/gnps@sha256:29f82ecad3dc49acf9218eae433d6248e948f93e00099e0186a0bfac23d10b1a
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/gnps
   path: tools/gnps.yaml
   related_workflows:
@@ -232,7 +232,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: MassQL
   slug: massql
-  iri: https://w3id.org/holobiomicslab/asb-tool/massql@sha256:5a4ef47c82d92a028a32305e5fe923b706f3e6e07feeb5c79b589b7e65668f1f
+  iri: https://w3id.org/holobiomicslab/asb-tool/massql@sha256:70f63dcfa2380691bc846dddd54ccbc161e263e2aeaf22a3a07573c6b5659078
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/massql
   path: tools/massql.yaml
   related_workflows:
@@ -243,7 +243,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: Pfam
   slug: pfam
-  iri: https://w3id.org/holobiomicslab/asb-tool/pfam@sha256:0a04059e93df7413502f1738ef1c5eccd0687be9e03314db6adb286a0d93839a
+  iri: https://w3id.org/holobiomicslab/asb-tool/pfam@sha256:c0d065fa168644893a52ada1c5fa8903204bce698356cf0d92b322b37cc1dd85
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/pfam
   path: tools/pfam.yaml
   related_workflows:
@@ -254,7 +254,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: MS-Cluster
   slug: ms-cluster
-  iri: https://w3id.org/holobiomicslab/asb-tool/ms-cluster@sha256:5ee04f5d396b74f9f9338014c5ebb829f29c9483114e97d3e16d7dd0c38187d9
+  iri: https://w3id.org/holobiomicslab/asb-tool/ms-cluster@sha256:ad80480fd51b505a3cbcd04608fabb79e42c103759c0fb158c03c25d294a687f
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/ms-cluster
   path: tools/ms-cluster.yaml
   related_workflows:
@@ -265,7 +265,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: pyteomics
   slug: pyteomics
-  iri: https://w3id.org/holobiomicslab/asb-tool/pyteomics@sha256:6274b29753c855851c33e2871734e92fd7d56f3b54e4471751c868bbbddcfedb
+  iri: https://w3id.org/holobiomicslab/asb-tool/pyteomics@sha256:c7e1c0e69d95a6176ec0da505b96846b7227bbfa2e052db3416ca3ffa73fffc1
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/pyteomics
   path: tools/pyteomics.yaml
   related_workflows:
@@ -276,7 +276,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: lark parser
   slug: lark-parser
-  iri: https://w3id.org/holobiomicslab/asb-tool/lark-parser@sha256:2ac7595badaeabec0c11f469bd259904f128ace690990f62e4c82d4d6b03be3f
+  iri: https://w3id.org/holobiomicslab/asb-tool/lark-parser@sha256:ab0cef7fe0165e2e64378c47cc1164259bd2b9c004772f3851c9141ef749dae8
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/lark-parser
   path: tools/lark-parser.yaml
   related_workflows:
@@ -287,7 +287,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: pandas
   slug: pandas
-  iri: https://w3id.org/holobiomicslab/asb-tool/pandas@sha256:f49e7b1458f11290f9b073a4677b403d34ba2dbfc7d1c5bc427856097c153215
+  iri: https://w3id.org/holobiomicslab/asb-tool/pandas@sha256:4628191fb1c771bd7abc624cbef560683185dbb9a94bbeffd2c3b07aa3812d71
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/pandas
   path: tools/pandas.yaml
   related_workflows:
@@ -298,7 +298,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: lark (parser library)
   slug: lark-parser-library
-  iri: https://w3id.org/holobiomicslab/asb-tool/lark-parser-library@sha256:079dbb347be3e2a9a28d25c833eb0bd1ceabe13f5a9995092f4d4ed96508bd32
+  iri: https://w3id.org/holobiomicslab/asb-tool/lark-parser-library@sha256:31d3a7fdb433de9dbf6f8d4604f9883b1bece120f1817e15a8cc2787e9628918
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/lark-parser-library
   path: tools/lark-parser-library.yaml
   related_workflows:
@@ -309,7 +309,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: ProteoWizard v3.0.18265
   slug: proteowizard-v3-0-18265
-  iri: https://w3id.org/holobiomicslab/asb-tool/proteowizard-v3-0-18265@sha256:9ebf71724c60a158aa07cc9e900fdfffbaaffe1b533b9c71c9c3fd879264a2d7
+  iri: https://w3id.org/holobiomicslab/asb-tool/proteowizard-v3-0-18265@sha256:b0282e172fb3add414fdd70312a332d1f4474f70a55dc6b7d724748fcd11046b
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/proteowizard-v3-0-18265
   path: tools/proteowizard-v3-0-18265.yaml
   related_workflows:
@@ -320,7 +320,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: mzR
   slug: mzr
-  iri: https://w3id.org/holobiomicslab/asb-tool/mzr@sha256:94d0179516cb1c36a90fffb9ef888ed82965e6e74a0ab43c345200d382f8b49a
+  iri: https://w3id.org/holobiomicslab/asb-tool/mzr@sha256:80e09c4f59c21b359b8759262382e33ef66712a2f9ab9f19c77ee7be9798d397
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/mzr
   path: tools/mzr.yaml
   related_workflows:
@@ -331,7 +331,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: GenForm
   slug: genform
-  iri: https://w3id.org/holobiomicslab/asb-tool/genform@sha256:099160f7ab5c213a1ef2ebbc21aedf92bfd474d96123bceb126f6f4e7b085004
+  iri: https://w3id.org/holobiomicslab/asb-tool/genform@sha256:29cc7ffef31c361c10a4224c83133dacb265ae415e221346ae2f940fa95e7116
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/genform
   path: tools/genform.yaml
   related_workflows:
@@ -342,7 +342,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: Sirius version 4.4.27
   slug: sirius-version-4-4-27
-  iri: https://w3id.org/holobiomicslab/asb-tool/sirius-version-4-4-27@sha256:42dee876db6fa780acf5bff69bdb7487e16121e98e83f3134240603d4475b2df
+  iri: https://w3id.org/holobiomicslab/asb-tool/sirius-version-4-4-27@sha256:2bf86e02b9c7648dc54ae4da768fea95b925735c62a3e4e7054f89857687c8ef
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/sirius-version-4-4-27
   path: tools/sirius-version-4-4-27.yaml
   related_workflows:
@@ -353,7 +353,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: OrgMassSpecR
   slug: orgmassspecr
-  iri: https://w3id.org/holobiomicslab/asb-tool/orgmassspecr@sha256:79049717b0cd99f99c52e9c57d2ad703581f066cec8388c406c6b31599476e74
+  iri: https://w3id.org/holobiomicslab/asb-tool/orgmassspecr@sha256:f7e4e469b90f6c73fc2ba94fbe3291fd3f588cd29f799b8dc6201af7ef382e7d
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/orgmassspecr
   path: tools/orgmassspecr.yaml
   related_workflows:
@@ -364,7 +364,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: R v 3.6.1
   slug: r-v-3-6-1
-  iri: https://w3id.org/holobiomicslab/asb-tool/r-v-3-6-1@sha256:4c1aee9317ca9b58e02257584d98412def5bef44163e16ba6282418260de3a97
+  iri: https://w3id.org/holobiomicslab/asb-tool/r-v-3-6-1@sha256:2844b22a0fc2c5ced53dc2579396340e8e84319c19bb7c5541a1f7550ed64c0e
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/r-v-3-6-1
   path: tools/r-v-3-6-1.yaml
   related_workflows:
@@ -375,7 +375,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: BioTransformer
   slug: biotransformer
-  iri: https://w3id.org/holobiomicslab/asb-tool/biotransformer@sha256:1f409163e3d3a6757431e1b63d8e73f59535a4197381c7cc780dd20cfc35d03e
+  iri: https://w3id.org/holobiomicslab/asb-tool/biotransformer@sha256:830671bf0a19ed8ef0a9714d3a886d9a3d8d270ea2e889d6f1fe6b0e7c5468b9
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/biotransformer
   path: tools/biotransformer.yaml
   related_workflows:
@@ -386,7 +386,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: 'incubatoR workflow (GitHub: chufz/incubatoR)'
   slug: incubator-workflow-github-chufz-incubator
-  iri: https://w3id.org/holobiomicslab/asb-tool/incubator-workflow-github-chufz-incubator@sha256:0ad2764484ac62d8923b6497501f6ecaf12a9b16b99ae9fbdf8da4868859d99c
+  iri: https://w3id.org/holobiomicslab/asb-tool/incubator-workflow-github-chufz-incubator@sha256:c97d299b32cb21eada6eeec08cc5091e8a5c0286ccb011c3f1668c77c2c03518
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/incubator-workflow-github-chufz-incubator
   path: tools/incubator-workflow-github-chufz-incubator.yaml
   related_workflows:
@@ -397,7 +397,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: XCMS version 3.8
   slug: xcms-version-3-8
-  iri: https://w3id.org/holobiomicslab/asb-tool/xcms-version-3-8@sha256:903e610f15d0b067b94a8bd23e15678610a90b5dc10935212fb801d7c0b2bec6
+  iri: https://w3id.org/holobiomicslab/asb-tool/xcms-version-3-8@sha256:9207ee5e5992d9c1deb0842936d703fc1248edf35135546978b6e83cfd3bc2cb
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/xcms-version-3-8
   path: tools/xcms-version-3-8.yaml
   related_workflows:
@@ -408,7 +408,7 @@ tools:
   - benchmark/tasks/audit_s41592_full/workflow.smk
 - name: IPO
   slug: ipo
-  iri: https://w3id.org/holobiomicslab/asb-tool/ipo@sha256:d0a5ebb285aebd21ac394a7ae0cba8066631ee6d787328fe64861f1fa504a0e4
+  iri: https://w3id.org/holobiomicslab/asb-tool/ipo@sha256:909fb4c3201501bc034a13a8d226aea0736f34ece1364a2511c5f1a5e92076d6
   iri_latest: https://w3id.org/holobiomicslab/asb-tool/ipo
   path: tools/ipo.yaml
   related_workflows:

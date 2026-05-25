@@ -38,7 +38,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/massql-query-syntax-and-parameter-optimization/SKILL.md
     - outputs/audit_s41592_full/skills/massql-query-syntax-and-parameter-optimization/skill.md
-    merged_at: '2026-05-25T07:15:30.958265+00:00'
+    merged_at: '2026-05-25T07:33:56.412559+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:21941755216584435e5a0ba37a82bad1ce7f68509f0a90c65f110e2c0a86c26d
   related_workflows:

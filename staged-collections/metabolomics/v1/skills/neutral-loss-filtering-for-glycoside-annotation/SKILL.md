@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/neutral-loss-filtering-for-glycoside-annotation/SKILL.md
     - outputs/audit_jeong_full/skills/neutral-loss-filtering-for-glycoside-annotation/skill.md
-    merged_at: '2026-05-25T07:15:30.926905+00:00'
+    merged_at: '2026-05-25T07:33:56.380762+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:4c9129983817ca59d431f4921241e93a006924a94c0c5ace87e62db640ecb9d6
   related_workflows:

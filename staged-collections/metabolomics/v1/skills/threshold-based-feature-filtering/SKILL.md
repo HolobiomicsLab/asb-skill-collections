@@ -28,7 +28,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/threshold-based-feature-filtering/SKILL.md
     - outputs/audit_haffner_v2/skills/threshold-based-feature-filtering/skill.md
-    merged_at: '2026-05-25T07:15:30.879945+00:00'
+    merged_at: '2026-05-25T07:33:56.333225+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/threshold-based-feature-filtering@sha256:7d325abe7b5c60284c3d5bb80c7c1e43162e9855e68c1724ed9f4a96d3955e8d
   related_workflows:

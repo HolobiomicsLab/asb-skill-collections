@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-structure-canonicalization/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-structure-canonicalization/skill.md
-    merged_at: '2026-05-25T07:15:30.816653+00:00'
+    merged_at: '2026-05-25T07:33:56.269426+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/smiles-structure-canonicalization@sha256:12c9e046c28e4733b21866514d95dc17459c40314a3766c5ed0f189132491509
   related_workflows:

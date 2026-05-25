@@ -46,7 +46,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/organophosphate-ester-compound-class-recognition/SKILL.md
     - outputs/audit_s41592_full/skills/organophosphate-ester-compound-class-recognition/skill.md
-    merged_at: '2026-05-25T07:15:30.945690+00:00'
+    merged_at: '2026-05-25T07:33:56.399532+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/organophosphate-ester-compound-class-recognition@sha256:3c3f43164b8833ee913efd09f50aa95a61f509112a8f3940c47febc506f0e9a4
   related_workflows:

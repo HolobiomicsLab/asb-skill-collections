@@ -7,7 +7,7 @@ install:
   package: python
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.374688+00:00'
+  merged_at: '2026-05-25T07:33:55.840481+00:00'
   n_source_records: 33
   source_paper_dois:
   - 10.1186/s13321-024-00878-1

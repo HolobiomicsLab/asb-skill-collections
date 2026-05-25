@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/conditional-probability-matrix-manipulation/SKILL.md
     - outputs/audit_haffner_v2/skills/conditional-probability-matrix-manipulation/skill.md
-    merged_at: '2026-05-25T07:15:30.907924+00:00'
+    merged_at: '2026-05-25T07:33:56.361940+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/conditional-probability-matrix-manipulation@sha256:58b04e3f7e98a8c788c3d5ac4f4325423115f81783a491a3a9252fd544fcaa13
   related_workflows:

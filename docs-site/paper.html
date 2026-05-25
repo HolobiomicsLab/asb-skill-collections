@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paper review — ASB Skill Collections</title>
+  <meta name="description" content="Per-paper review page: see all skills, tools, claims derived from a given source paper; one-click verify / flag.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="paper-title">Paper review</h1>
+    <p class="tagline" id="paper-meta">Loading…</p>
+    <nav>
+      <a href="./">Catalogue</a>
+      <a href="./corpus.html">Corpus</a>
+      <a href="./propose.html">Propose paper</a>
+      <a href="https://github.com/HolobiomicsLab/asb-skill-collections">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="paper-info">
+      <div id="meta-card"><p class="loading">Resolving DOI…</p></div>
+    </section>
+
+    <section id="actions" class="actions">
+      <button id="btn-verify-all">✓ Verify all derived content</button>
+      <button id="btn-flag">⚠ Flag an issue</button>
+    </section>
+
+    <section id="skills">
+      <h2>Derived skills</h2>
+      <div id="skills-list"><p class="loading">Loading…</p></div>
+    </section>
+
+    <section id="tools">
+      <h2>Derived tools</h2>
+      <div id="tools-list"><p class="loading">Loading…</p></div>
+    </section>
+
+    <section id="workflow">
+      <h2>Reference workflow</h2>
+      <div id="workflow-detail"><p class="hint">Loading…</p></div>
+    </section>
+
+    <section id="about" class="hint">
+      <p>
+        See <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/COI_POLICY.md">COI policy</a>
+        for self-review rules. Verifying content requires an ORCID-linked GitHub account
+        (see <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>).
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Holobiomics Lab · CNRS / Université Côte d'Azur</p>
+  </footer>
+
+  <script src="paper.js"></script>
+</body>
+</html>

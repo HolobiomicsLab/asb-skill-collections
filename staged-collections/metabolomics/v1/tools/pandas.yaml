@@ -2,7 +2,7 @@ evidence_spans:
 - The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.375229+00:00'
+  merged_at: '2026-05-25T07:33:55.841020+00:00'
   n_source_records: 12
   source_paper_dois:
   - 10.1038/s41592-025-02660-z

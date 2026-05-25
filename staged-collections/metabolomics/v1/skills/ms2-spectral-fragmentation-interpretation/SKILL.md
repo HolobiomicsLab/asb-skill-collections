@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/ms2-spectral-fragmentation-interpretation/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/ms2-spectral-fragmentation-interpretation/skill.md
-    merged_at: '2026-05-25T07:15:31.004082+00:00'
+    merged_at: '2026-05-25T07:33:56.458309+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ms2-spectral-fragmentation-interpretation@sha256:1afff755c8c270d206121002ffddf414c26bf69d6a9ccaab440485ab534b53a9
   related_workflows:

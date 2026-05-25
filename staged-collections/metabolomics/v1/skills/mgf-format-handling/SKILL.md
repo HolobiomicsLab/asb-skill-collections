@@ -43,7 +43,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/mgf-format-handling/SKILL.md
     - outputs/audit_s41592_full/skills/mgf-format-handling/skill.md
-    merged_at: '2026-05-25T07:15:30.943294+00:00'
+    merged_at: '2026-05-25T07:33:56.397099+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:8e4e828983262e7fae14a968cac6b4b7483e75747e7bae88202977f951362756
   related_workflows:

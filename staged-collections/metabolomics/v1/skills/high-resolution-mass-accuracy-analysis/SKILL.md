@@ -40,7 +40,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/high-resolution-mass-accuracy-analysis/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/high-resolution-mass-accuracy-analysis/skill.md
-    merged_at: '2026-05-25T07:15:30.982348+00:00'
+    merged_at: '2026-05-25T07:33:56.436571+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/high-resolution-mass-accuracy-analysis@sha256:f1360fe72bbc9e7c0228f5e60e9a938620b51d3e80dbd79b4016a6c4481f121c
   related_workflows:

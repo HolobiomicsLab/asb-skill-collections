@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-molecular-formula-assignment/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-molecular-formula-assignment/skill.md
-    merged_at: '2026-05-25T07:15:31.025176+00:00'
+    merged_at: '2026-05-25T07:33:56.479562+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-molecular-formula-assignment@sha256:6987ca22c32bb9242c873b4d2ec218962705f1ddfbb01d6f6f40edd55fae24a4
   related_workflows:

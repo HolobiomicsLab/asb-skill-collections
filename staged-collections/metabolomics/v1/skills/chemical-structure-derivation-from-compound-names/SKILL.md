@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-derivation-from-compound-names/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-derivation-from-compound-names/skill.md
-    merged_at: '2026-05-25T07:15:30.855362+00:00'
+    merged_at: '2026-05-25T07:33:56.308523+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-derivation-from-compound-names@sha256:15e14cb2015645713d14f5000507d306c96f3081d1ef3cfd39007ad964f8d041
   related_workflows:

@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-inchi-chemical-identifier-repair/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/smiles-inchi-chemical-identifier-repair/skill.md
-    merged_at: '2026-05-25T07:15:30.808212+00:00'
+    merged_at: '2026-05-25T07:33:56.260782+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:d3e3512149a31d029d5fbe311cec92991577fb056ef336b976a46ee37d859709
   related_workflows:

@@ -44,7 +44,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/ms-ms-spectral-data-retrieval/SKILL.md
     - outputs/audit_s41592_full/skills/ms-ms-spectral-data-retrieval/skill.md
-    merged_at: '2026-05-25T07:15:30.979688+00:00'
+    merged_at: '2026-05-25T07:33:56.433540+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ms-ms-spectral-data-retrieval@sha256:81065decbb4458d72ff62ca9d0a33239f8b87b5a6012172e9b9b8c74a6119b6f
   related_workflows:

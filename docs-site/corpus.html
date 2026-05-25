@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Corpus — ASB Skill Collections</title>
+  <meta name="description" content="Browse the papers underpinning each ASB-Skill collection; filter by status, access tier, derivation counts.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Corpus</h1>
+    <p class="tagline">Source papers in each ASB-Skill collection — proposed, accepted, included, retracted.</p>
+    <nav>
+      <a href="./">Catalogue</a>
+      <a href="./corpus.html">Corpus</a>
+      <a href="./propose.html">Propose paper</a>
+      <a href="https://github.com/HolobiomicsLab/asb-skill-collections">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="filters">
+      <label>Collection:
+        <select id="filter-collection"><option value="">All</option></select>
+      </label>
+      <label>Status:
+        <select id="filter-status">
+          <option value="">All</option>
+          <option value="proposed">proposed</option>
+          <option value="accepted">accepted</option>
+          <option value="included" selected>included</option>
+          <option value="retracted">retracted</option>
+          <option value="excluded">excluded</option>
+        </select>
+      </label>
+      <label>Access:
+        <select id="filter-access">
+          <option value="">All</option>
+          <option value="open-access">open-access</option>
+          <option value="hybrid">hybrid</option>
+          <option value="closed">closed</option>
+          <option value="unknown">unknown</option>
+        </select>
+      </label>
+      <label>Search:
+        <input type="search" id="filter-search" placeholder="DOI / title / author">
+      </label>
+    </section>
+
+    <section id="papers">
+      <p class="loading">Loading corpus…</p>
+    </section>
+
+    <section id="about" class="hint">
+      <p>
+        Inclusion in this corpus is not an endorsement of a paper's conclusions; we extract methods and structured facts. See
+        <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/OPEN_ACCESS_POLICY.md">OPEN_ACCESS_POLICY.md</a>
+        for what we store under each access tier and the proposal workflow.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Holobiomics Lab · CNRS / Université Côte d'Azur</p>
+  </footer>
+
+  <script src="corpus.js"></script>
+</body>
+</html>

@@ -38,7 +38,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/ms1-precursor-ion-filtering/SKILL.md
     - outputs/audit_s41592_full/skills/ms1-precursor-ion-filtering/skill.md
-    merged_at: '2026-05-25T07:15:30.975029+00:00'
+    merged_at: '2026-05-25T07:33:56.428922+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:1bcaf2d85da573ee3d1aa6c363146dec3916472b6fc4c8a7785171b784f825fc
   related_workflows:

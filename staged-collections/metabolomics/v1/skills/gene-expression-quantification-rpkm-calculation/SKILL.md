@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/gene-expression-quantification-rpkm-calculation/SKILL.md
     - outputs/audit_jeong_full/skills/gene-expression-quantification-rpkm-calculation/skill.md
-    merged_at: '2026-05-25T07:15:30.915978+00:00'
+    merged_at: '2026-05-25T07:33:56.370034+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:1bebfa07f6d2c340ae4c614b3f83515a1e2d6270d9d7f68923f82f248c173bd8
   related_workflows:

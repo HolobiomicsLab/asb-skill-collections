@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/fold-change-calculation-from-replicate-intensities/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/fold-change-calculation-from-replicate-intensities/skill.md
-    merged_at: '2026-05-25T07:15:31.033785+00:00'
+    merged_at: '2026-05-25T07:33:56.488430+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:ccbba5b780b8a414c69d59bdec92fb6d75b13fa6faaf5526bf3ed10516591626
   related_workflows:

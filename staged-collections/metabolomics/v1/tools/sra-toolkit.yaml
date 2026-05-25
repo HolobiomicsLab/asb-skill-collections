@@ -2,7 +2,7 @@ evidence_spans:
 - Raw sequence reads acquired from the RNAseq analysis have been deposited at NCBI Sequence Read Archive under BioProject PRJNA906931
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.375049+00:00'
+  merged_at: '2026-05-25T07:33:55.840835+00:00'
   n_source_records: 5
   source_paper_dois:
   - 10.1073/pnas

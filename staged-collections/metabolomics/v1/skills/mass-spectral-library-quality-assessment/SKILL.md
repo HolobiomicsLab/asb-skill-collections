@@ -32,7 +32,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectral-library-quality-assessment/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectral-library-quality-assessment/skill.md
-    merged_at: '2026-05-25T07:15:30.857539+00:00'
+    merged_at: '2026-05-25T07:33:56.310670+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectral-library-quality-assessment@sha256:ffae52438e4744cdf326f3c6959e8db6caca1f0b2df156d17663a93b8b958aeb
   related_workflows:

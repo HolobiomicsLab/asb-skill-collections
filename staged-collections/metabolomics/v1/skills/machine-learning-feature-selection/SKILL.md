@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/machine-learning-feature-selection/SKILL.md
     - outputs/audit_haffner_v2/skills/machine-learning-feature-selection/skill.md
-    merged_at: '2026-05-25T07:15:30.891591+00:00'
+    merged_at: '2026-05-25T07:33:56.345188+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/machine-learning-feature-selection@sha256:cf969729ae5f745ee7bbccb5bd4cffc2688fae52d17a262126b3c5527792bfd4
   related_workflows:

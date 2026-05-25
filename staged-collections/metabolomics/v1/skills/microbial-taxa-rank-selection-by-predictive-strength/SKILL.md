@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/microbial-taxa-rank-selection-by-predictive-strength/SKILL.md
     - outputs/audit_haffner_v2/skills/microbial-taxa-rank-selection-by-predictive-strength/skill.md
-    merged_at: '2026-05-25T07:15:30.905790+00:00'
+    merged_at: '2026-05-25T07:33:56.359825+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/microbial-taxa-rank-selection-by-predictive-strength@sha256:320a107aae1cc4338925e22f709df52838355cf7d62f10779821420e281456fb
   related_workflows:

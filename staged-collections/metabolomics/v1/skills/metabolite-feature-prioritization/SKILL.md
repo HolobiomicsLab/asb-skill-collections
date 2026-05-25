@@ -35,7 +35,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-feature-prioritization/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-feature-prioritization/skill.md
-    merged_at: '2026-05-25T07:15:30.987845+00:00'
+    merged_at: '2026-05-25T07:33:56.441777+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-prioritization@sha256:7a4ccd30d9896b92987934ffe9031671672254b32d14182e056bf749d249307f
   related_workflows:

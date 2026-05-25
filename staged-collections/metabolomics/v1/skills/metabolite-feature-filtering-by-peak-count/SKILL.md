@@ -28,7 +28,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/metabolite-feature-filtering-by-peak-count/SKILL.md
     - outputs/audit_haffner_v2/skills/metabolite-feature-filtering-by-peak-count/skill.md
-    merged_at: '2026-05-25T07:15:30.875945+00:00'
+    merged_at: '2026-05-25T07:33:56.329155+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-filtering-by-peak-count@sha256:c69d25f18e0feb64445fa888e4f43c9d588cf1526fa2901cbd99880cc37af80d
   related_workflows:

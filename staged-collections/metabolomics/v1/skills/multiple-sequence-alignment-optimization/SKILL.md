@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/multiple-sequence-alignment-optimization/SKILL.md
     - outputs/audit_jeong_full/skills/multiple-sequence-alignment-optimization/skill.md
-    merged_at: '2026-05-25T07:15:30.930861+00:00'
+    merged_at: '2026-05-25T07:33:56.384695+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/multiple-sequence-alignment-optimization@sha256:ccc1a5801c9cabd37f2e92507974322960d651f7df24fd754e405ef03301453e
   related_workflows:

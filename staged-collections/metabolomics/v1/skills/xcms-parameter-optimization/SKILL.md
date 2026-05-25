@@ -36,7 +36,7 @@ metadata:
     source_files:
     - outputs/pesticide_full_2026-05-10_v2/skills/xcms-parameter-optimization/SKILL.md
     - outputs/pesticide_full_2026-05-10_v2/skills/xcms-parameter-optimization/skill.md
-    merged_at: '2026-05-25T07:15:30.999189+00:00'
+    merged_at: '2026-05-25T07:33:56.453089+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/xcms-parameter-optimization@sha256:30957d372b9de96545a8157fc77c3e9e82f72931ff773cbdcf45c3a2361937b0
   related_workflows:

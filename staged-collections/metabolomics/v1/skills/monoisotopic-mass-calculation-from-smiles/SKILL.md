@@ -41,7 +41,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/monoisotopic-mass-calculation-from-smiles/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/monoisotopic-mass-calculation-from-smiles/skill.md
-    merged_at: '2026-05-25T07:15:30.827839+00:00'
+    merged_at: '2026-05-25T07:33:56.280588+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/monoisotopic-mass-calculation-from-smiles@sha256:4a2a0813fcbe9e0f7a35196fee6c3c75ab912524986a004650c1d1ebb2fa5948
   related_workflows:

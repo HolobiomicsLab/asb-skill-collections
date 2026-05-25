@@ -34,7 +34,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/adduct-ion-classification-accuracy-assessment/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/adduct-ion-classification-accuracy-assessment/skill.md
-    merged_at: '2026-05-25T07:15:30.812493+00:00'
+    merged_at: '2026-05-25T07:33:56.265155+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/adduct-ion-classification-accuracy-assessment@sha256:cf0d5cff00992b1b0d62523af62098bc630ca4ab8c4cf41fe7f15c76a1f46bb0
   related_workflows:

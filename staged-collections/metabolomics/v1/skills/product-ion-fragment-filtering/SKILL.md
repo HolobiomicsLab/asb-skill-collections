@@ -44,7 +44,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/product-ion-fragment-filtering/SKILL.md
     - outputs/audit_s41592_full/skills/product-ion-fragment-filtering/skill.md
-    merged_at: '2026-05-25T07:15:30.950460+00:00'
+    merged_at: '2026-05-25T07:33:56.404898+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/product-ion-fragment-filtering@sha256:04c039186a12c868b071fd44702506164c129f83df8793f105e93bc9d996be56
   related_workflows:

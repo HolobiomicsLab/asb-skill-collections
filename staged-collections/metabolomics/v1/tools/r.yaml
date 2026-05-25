@@ -5,7 +5,7 @@ evidence_spans:
 - The R code for the RNAseq data processing is available from https://github.com/KyobinKang/supplementary-L_brumalis_UGT
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.374868+00:00'
+  merged_at: '2026-05-25T07:33:55.840663+00:00'
   n_source_records: 13
   source_paper_dois:
   - 10.1128/msystems.00710-22

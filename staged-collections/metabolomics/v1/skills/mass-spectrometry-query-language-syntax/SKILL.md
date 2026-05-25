@@ -41,7 +41,7 @@ metadata:
     source_files:
     - outputs/audit_s41592_full/skills/mass-spectrometry-query-language-syntax/SKILL.md
     - outputs/audit_s41592_full/skills/mass-spectrometry-query-language-syntax/skill.md
-    merged_at: '2026-05-25T07:15:30.965067+00:00'
+    merged_at: '2026-05-25T07:33:56.419169+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-query-language-syntax@sha256:fe95261fe57d43bc3bf2f76fe124dd1539d45ea969ea1ca12a0c5e04a6446260
   related_workflows:

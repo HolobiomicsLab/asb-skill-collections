@@ -2,7 +2,7 @@ evidence_spans:
 - The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.375181+00:00'
+  merged_at: '2026-05-25T07:33:55.840973+00:00'
   n_source_records: 12
   source_paper_dois:
   - 10.1038/s41592-025-02660-z

@@ -33,3 +33,82 @@ a { color: #0066cc; }
          font-size: .75rem; background: #e8f0fe; color: #1a3d7c; }
 .error { color: #c62828; font-style: italic; }
 .loading { color: #666; font-style: italic; }
+
+/* Corpus + paper review extras */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: .8rem;
+  background: #f8f9fb;
+  border-radius: 6px;
+}
+#filters label { display: flex; flex-direction: column; font-size: .85rem; color: #444; }
+#filters input, #filters select {
+  padding: .3rem .5rem;
+  font-size: .9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: .8rem;
+  margin: 1rem 0;
+}
+.actions button {
+  padding: .5rem 1rem;
+  font-size: .95rem;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.actions button:hover { background: #1d4ed8; }
+.actions button:nth-child(2) {
+  background: #fff;
+  color: #b91c1c;
+  border-color: #b91c1c;
+}
+.actions button:nth-child(2):hover { background: #fee2e2; }
+
+.skill-list code {
+  background: #f0f0f5;
+  padding: .1rem .3rem;
+  border-radius: 3px;
+  font-size: .85rem;
+}
+
+form label { display: block; margin: .8rem 0; }
+form label input, form label textarea, form label select {
+  display: block;
+  width: 100%;
+  padding: .4rem .6rem;
+  font-size: .95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: .3rem;
+  font-family: inherit;
+}
+form label textarea { font-family: inherit; resize: vertical; }
+form fieldset { margin: 1rem 0; padding: .8rem 1rem; border: 1px solid #e0e0e0; border-radius: 4px; }
+form fieldset legend { font-weight: 600; padding: 0 .5rem; }
+form fieldset label { margin: .4rem 0; display: flex; align-items: center; gap: .4rem; }
+form fieldset label input[type=checkbox] { width: auto; margin: 0; }
+form .required { color: #b91c1c; }
+form button[type=submit] {
+  margin-top: 1rem;
+  padding: .6rem 1.2rem;
+  font-size: 1rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form button[type=submit]:hover { background: #1d4ed8; }
+
+.error { color: #b91c1c; }
+.empty { color: #6b7280; font-style: italic; }

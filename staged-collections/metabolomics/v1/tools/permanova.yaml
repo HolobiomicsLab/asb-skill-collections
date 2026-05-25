@@ -2,7 +2,7 @@ evidence_spans:
 - permutational multivariate analysis of variance [PERMANOVA] (38) P = 0.001, R2 = 0.140
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.374919+00:00'
+  merged_at: '2026-05-25T07:33:55.840710+00:00'
   n_source_records: 5
   source_paper_dois:
   - 10.1128/msystems.00710-22

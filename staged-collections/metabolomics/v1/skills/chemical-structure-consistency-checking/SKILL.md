@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-consistency-checking/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-consistency-checking/skill.md
-    merged_at: '2026-05-25T07:15:30.845069+00:00'
+    merged_at: '2026-05-25T07:33:56.297928+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-consistency-checking@sha256:f69938338d83de9b0eabf9889324d630924578341eb990b22a51b78cf50ef2bf
   related_workflows:

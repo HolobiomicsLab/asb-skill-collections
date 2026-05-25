@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/audit_haffner_v2/skills/microbe-metabolite-conditional-probability-filtering/SKILL.md
     - outputs/audit_haffner_v2/skills/microbe-metabolite-conditional-probability-filtering/skill.md
-    merged_at: '2026-05-25T07:15:30.903626+00:00'
+    merged_at: '2026-05-25T07:33:56.357655+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:bd57ce4a21ca83058df43ec5f8b5407c93ede24b92428f3b0f9e3e21ab8b6e77
   related_workflows:

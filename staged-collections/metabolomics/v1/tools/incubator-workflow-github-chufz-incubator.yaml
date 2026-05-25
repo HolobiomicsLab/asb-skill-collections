@@ -2,7 +2,7 @@ evidence_spans:
 - All code is available at https://github.com/chufz/incubatoR.
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.376394+00:00'
+  merged_at: '2026-05-25T07:33:55.842196+00:00'
   n_source_records: 3
   source_paper_dois:
   - 10.1021/acs.analchem.1c00972

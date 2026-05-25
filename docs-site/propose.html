@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Propose a paper — ASB Skill Collections</title>
+  <meta name="description" content="Propose a new paper for inclusion in an ASB-Skill collection's corpus. Submits via a GitHub Issue.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Propose a paper</h1>
+    <p class="tagline">Suggest a paper for inclusion in an ASB-Skill collection.</p>
+    <nav>
+      <a href="./">Catalogue</a>
+      <a href="./corpus.html">Corpus</a>
+      <a href="./propose.html">Propose paper</a>
+      <a href="https://github.com/HolobiomicsLab/asb-skill-collections">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="propose-form">
+      <label>DOI <span class="required">*</span>
+        <input type="text" name="doi" placeholder="10.1186/s13321-024-00878-1" required>
+      </label>
+      <label>Title <span class="required">*</span>
+        <input type="text" name="title" placeholder="Full paper title" required>
+      </label>
+      <label>Target collection <span class="required">*</span>
+        <input type="text" name="collection" value="metabolomics" required>
+      </label>
+      <label>Target version
+        <input type="text" name="version" placeholder="next (or v2, v3…)" value="next">
+      </label>
+      <label>Access tier
+        <select name="access">
+          <option value="dont-know">Don't know — let CI determine</option>
+          <option value="open-access">Open-access (CC / OA)</option>
+          <option value="hybrid">Hybrid (paywalled with quotation rights)</option>
+          <option value="closed">Closed (paywalled, no open abstract)</option>
+        </select>
+      </label>
+      <label>Rationale (3–6 sentences) <span class="required">*</span>
+        <textarea name="rationale" rows="6" placeholder="Why this paper? What method/tool/skill does it introduce? Why retrieval-key for this domain?" required></textarea>
+      </label>
+      <fieldset>
+        <legend>Your information</legend>
+        <label>Your GitHub handle
+          <input type="text" name="gh" placeholder="your-handle">
+        </label>
+        <label>Your ORCID (optional, recommended)
+          <input type="text" name="orcid" placeholder="0000-0000-0000-0000">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Conflicts of interest (disclose, don't disqualify)</legend>
+        <label><input type="checkbox" name="coi_author"> I am an author of this paper</label>
+        <label><input type="checkbox" name="coi_inst"> I am at the same institution as the lead author</label>
+        <label><input type="checkbox" name="coi_fund"> I have direct funding ties to the work</label>
+      </fieldset>
+      <button type="submit">Open GitHub Issue →</button>
+    </form>
+
+    <p class="hint">
+      Submitting opens a pre-filled GitHub Issue (you'll be redirected to GitHub to sign in if needed).
+      The lab maintainers + Lead Curator for the target collection review proposals.
+      See <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/OPEN_ACCESS_POLICY.md">OPEN_ACCESS_POLICY.md</a>
+      for what we accept and how access tiers are handled.
+    </p>
+  </main>
+
+  <footer>
+    <p>Holobiomics Lab · CNRS / Université Côte d'Azur</p>
+  </footer>
+
+  <script>
+  const REPO = "HolobiomicsLab/asb-skill-collections";
+  document.getElementById("propose-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const cois = [];
+    if (f.get("coi_author")) cois.push("Author of this paper");
+    if (f.get("coi_inst")) cois.push("Same institution as lead author");
+    if (f.get("coi_fund")) cois.push("Direct funding ties");
+    const body = [
+      "## Paper",
+      `- **DOI:** ${f.get("doi") || "—"}`,
+      `- **Title:** ${f.get("title") || "—"}`,
+      "",
+      "## Target collection",
+      `- **Collection:** ${f.get("collection") || "—"}`,
+      `- **Version target:** ${f.get("version") || "next"}`,
+      "",
+      "## Access tier (self-reported, CI will verify)",
+      `- ${f.get("access") || "dont-know"}`,
+      "",
+      "## Rationale",
+      f.get("rationale") || "",
+      "",
+      "## Proposer",
+      `- **GitHub:** ${f.get("gh") ? "@" + f.get("gh") : "—"}`,
+      `- **ORCID:** ${f.get("orcid") || "—"}`,
+      "",
+      "## Conflicts of interest",
+      cois.length ? cois.map(c => `- ${c}`).join("\n") : "- None disclosed",
+    ].join("\n");
+    const url = `https://github.com/${REPO}/issues/new?` +
+      new URLSearchParams({
+        title: `Propose: ${(f.get("doi") || f.get("title") || "").trim()}`,
+        body,
+        labels: "propose-paper,needs-triage",
+      });
+    window.open(url, "_blank");
+  });
+  </script>
+</body>
+</html>

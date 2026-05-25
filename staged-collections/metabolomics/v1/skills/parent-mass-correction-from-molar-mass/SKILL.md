@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/parent-mass-correction-from-molar-mass/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/parent-mass-correction-from-molar-mass/skill.md
-    merged_at: '2026-05-25T07:15:30.862007+00:00'
+    merged_at: '2026-05-25T07:33:56.315132+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/parent-mass-correction-from-molar-mass@sha256:09b738668aa8cccb332d9c3bc566ceb00c4fad1c5eb93325a5e19c898205c2be
   related_workflows:

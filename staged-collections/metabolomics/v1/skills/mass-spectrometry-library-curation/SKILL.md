@@ -35,7 +35,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-library-curation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-library-curation/skill.md
-    merged_at: '2026-05-25T07:15:30.823488+00:00'
+    merged_at: '2026-05-25T07:33:56.276284+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:0b99cf307b34e82fd17554469f9bab9696eba3c76e282df8c84e169e1a874c3f
   related_workflows:

@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/numeric-value-comparison-across-sources/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/numeric-value-comparison-across-sources/skill.md
-    merged_at: '2026-05-25T07:15:30.843131+00:00'
+    merged_at: '2026-05-25T07:33:56.296065+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/numeric-value-comparison-across-sources@sha256:1f3a1848e78f6b19da4811b27585c90e56be19717820178567625d6fa78c7a4a
   related_workflows:

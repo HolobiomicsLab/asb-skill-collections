@@ -30,7 +30,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/precursor-adduct-mass-reconciliation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/precursor-adduct-mass-reconciliation/skill.md
-    merged_at: '2026-05-25T07:15:30.838799+00:00'
+    merged_at: '2026-05-25T07:33:56.291899+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/precursor-adduct-mass-reconciliation@sha256:df5131cc0f1b4de69d464c4509686dd1830a77e29ca661a62b33d3b2b8161cba
   related_workflows:

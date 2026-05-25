@@ -3,7 +3,7 @@ evidence_spans:
 - This filter derives the canonical SMILES, InChI and InChIKey from PubChem
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.374766+00:00'
+  merged_at: '2026-05-25T07:33:55.840559+00:00'
   n_source_records: 16
   source_paper_dois:
   - 10.1186/s13321-024-00878-1

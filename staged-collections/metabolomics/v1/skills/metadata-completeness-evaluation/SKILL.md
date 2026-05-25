@@ -31,7 +31,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/metadata-completeness-evaluation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/metadata-completeness-evaluation/skill.md
-    merged_at: '2026-05-25T07:15:30.863912+00:00'
+    merged_at: '2026-05-25T07:33:56.317057+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/metadata-completeness-evaluation@sha256:63346a0e73861953a8a6e6c63c7c88719408d47852ecd03111aea7b034c22f2e
   related_workflows:

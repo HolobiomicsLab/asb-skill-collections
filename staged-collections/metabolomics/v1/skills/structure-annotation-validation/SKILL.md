@@ -33,7 +33,7 @@ metadata:
     source_files:
     - outputs/article_878_full_2026-05-10_v5/skills/structure-annotation-validation/SKILL.md
     - outputs/article_878_full_2026-05-10_v5/skills/structure-annotation-validation/skill.md
-    merged_at: '2026-05-25T07:15:30.847001+00:00'
+    merged_at: '2026-05-25T07:33:56.299906+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/structure-annotation-validation@sha256:f498930dbc1dcaf383147101edc7b9ae6ef04d73ad5db576bb75e7210b1c527e
   related_workflows:

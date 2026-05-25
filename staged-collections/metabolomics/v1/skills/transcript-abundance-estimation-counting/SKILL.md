@@ -29,7 +29,7 @@ metadata:
     source_files:
     - outputs/audit_jeong_full/skills/transcript-abundance-estimation-counting/SKILL.md
     - outputs/audit_jeong_full/skills/transcript-abundance-estimation-counting/skill.md
-    merged_at: '2026-05-25T07:15:30.932799+00:00'
+    merged_at: '2026-05-25T07:33:56.386651+00:00'
     merge_kind: slug_match_union
   iri: https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:2b98d67848d186361a8aae3829ccc271476f63f79804c4d569f0466794e488e8
   related_workflows:

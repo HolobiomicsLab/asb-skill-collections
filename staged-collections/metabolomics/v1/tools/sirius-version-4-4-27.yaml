@@ -2,7 +2,7 @@ evidence_spans:
 - structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27
 merge_audit:
   merge_kind: slug_match_union
-  merged_at: '2026-05-25T07:15:30.375856+00:00'
+  merged_at: '2026-05-25T07:33:55.841649+00:00'
   n_source_records: 6
   source_paper_dois:
   - 10.1021/acs.analchem.1c00972
