@@ -1,0 +1,35 @@
+/* ASB Skill Collections — minimal Pages site */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0 1rem 2rem;
+  max-width: 900px;
+  margin-inline: auto;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+h1 { font-size: 1.6rem; margin-top: 2rem; }
+h2 { font-size: 1.2rem; margin-top: 1.8rem; border-bottom: 1px solid #e0e0e0; padding-bottom: .3rem; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: .8rem;
+}
+th, td {
+  text-align: left;
+  padding: .4rem .6rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+th { background: #f5f5f5; font-weight: 600; }
+tr:hover td { background: #fafafa; }
+
+a { color: #0066cc; }
+.badge { display: inline-block; padding: .15rem .5rem; border-radius: 3px;
+         font-size: .75rem; background: #e8f0fe; color: #1a3d7c; }
+.error { color: #c62828; font-style: italic; }
+.loading { color: #666; font-style: italic; }
