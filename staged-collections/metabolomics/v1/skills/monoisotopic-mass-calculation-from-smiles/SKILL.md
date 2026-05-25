@@ -35,8 +35,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/monoisotopic-mass-calculation-from-smiles@sha256:f4938da3ca9a597ea3aa061f6fd52f38e901c820364327d2cdc0b153ca49fc2a
+  iri: https://w3id.org/holobiomicslab/asb-skill/monoisotopic-mass-calculation-from-smiles@sha256:4a2a0813fcbe9e0f7a35196fee6c3c75ab912524986a004650c1d1ebb2fa5948
 ---
 
 # Monoisotopic mass calculation from SMILES

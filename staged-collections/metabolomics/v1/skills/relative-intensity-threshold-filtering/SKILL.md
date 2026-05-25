@@ -30,8 +30,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:777ae9464df62d25dcb11bc128c7fce096d2f497af59bdf38e1d49f950f77405
+  iri: https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:58e4dcc7c6749c5da6301a87a6614878d4e5de5227b846d38f4c2f28e6f43837
 ---
 
 # Relative Intensity Threshold Filtering

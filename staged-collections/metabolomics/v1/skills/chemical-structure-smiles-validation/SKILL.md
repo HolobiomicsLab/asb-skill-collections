@@ -27,8 +27,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-smiles-validation@sha256:22cb729f524e9cfb721e04de44c81ee382169df91ceccfd3389ac2776c3ba563
+  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-smiles-validation@sha256:4fcfd8d2890db5ad760baebecf61d37930445225a6fe4079efc28e8dc41a64c0
 ---
 
 # Chemical Structure SMILES Validation

@@ -25,8 +25,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/multiple-sequence-alignment-optimization@sha256:fbba11419e22a121b51dfe90df01dfbdd17abc2db0b9190719fa3b2771c0f74b
+  iri: https://w3id.org/holobiomicslab/asb-skill/multiple-sequence-alignment-optimization@sha256:365f8c23e57bed6a0eae8a8bde6b8693a78e00d593a12387b1671a1ad2abf0c5
 ---
 
 # multiple-sequence-alignment-optimization

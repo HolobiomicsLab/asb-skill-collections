@@ -28,8 +28,10 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1021/acs.analchem.1c00972
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-structure-prediction-biotransformer@sha256:f95139c0e1a06b4323d73beac85c113874d1d383df1d01e91218d074633e69ea
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-structure-prediction-biotransformer@sha256:1ee8500ee859f7a8b172fb71c455ac871d8fec0585e53fba0e5323b09595eefb
 ---
 
 # metabolite-structure-prediction-biotransformer

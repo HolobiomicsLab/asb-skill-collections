@@ -26,8 +26,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:cec5e086ac538f54d8ac3a4fcbf5a734a4f3deda4637e39f229f5672bd3d20f2
+  iri: https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:bf10b2f122040eb8848a6b89c23d20409948d5718ab29d4e3d9e4f234acfaee0
 ---
 
 # annotation-error-rate-calculation

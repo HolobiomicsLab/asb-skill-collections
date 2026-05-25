@@ -28,8 +28,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:dd5edb3711611af5fb4ebd9e912898a2333609e1925543f486b9f12603296fca
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:6c57994b7e14763f6f71970763a504fa230d37313818316fcec31d1d6af41a28
 ---
 
 # spectral-redundancy-clustering

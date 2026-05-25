@@ -32,8 +32,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/phylogenetic-tree-construction-and-interpretation@sha256:2466bb295032a32f8a5f62544db662fe2eb4b7cec46ebb44f4ad46b336d412e9
+  iri: https://w3id.org/holobiomicslab/asb-skill/phylogenetic-tree-construction-and-interpretation@sha256:5e3a249aae5dfb87f50cfe92c56256752e253f562658f25fa2a2a4a3916613d4
 ---
 
 # phylogenetic-tree-construction-and-interpretation

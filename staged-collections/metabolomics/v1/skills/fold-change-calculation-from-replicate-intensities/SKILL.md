@@ -27,8 +27,10 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1021/acs.analchem.1c00972
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:0719fd2ff34680fddd40d42f2355ae861bfccce66fbde9940c474651728ddb6b
+  iri: https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:d865fa2fc4993b297673d1cf5cb6f6fced0cad0de34af83d645eb873f544ca5f
 ---
 
 # fold-change-calculation-from-replicate-intensities

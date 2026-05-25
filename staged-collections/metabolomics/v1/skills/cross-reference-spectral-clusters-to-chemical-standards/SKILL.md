@@ -27,8 +27,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:1395ad7e5df1dae1409e544bfb0588311b084a2b87a3236764b36ed7622a45ab
+  iri: https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:73503b45b2c299b0de762f3769f88036d71df52a620340481568f153edfdbd87
 ---
 
 # cross-reference-spectral-clusters-to-chemical-standards

@@ -27,8 +27,10 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1128/msystems.00710-22
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:dc1fb13b36f396a311ffdee44bf8e43c4c7e4107409146d204099cd75a3d6a0b
+  iri: https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:f48f29ce007cd0aba9c7481125342a10f79fcb7b878c8812206f5c2c4d534529
 ---
 
 # microbe-metabolite-conditional-probability-filtering

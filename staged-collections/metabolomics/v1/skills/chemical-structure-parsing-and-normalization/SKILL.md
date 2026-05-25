@@ -24,8 +24,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-parsing-and-normalization@sha256:c5f0e00b3e66e662e3c3d77e76452b1650a44b2c46aad340461f904b33c67b2a
+  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-parsing-and-normalization@sha256:eea6a61e9429e76af7f311c03ef6e4eb44a5d19c5bd2e744ae4b4262b3504e67
 ---
 
 # chemical-structure-parsing-and-normalization

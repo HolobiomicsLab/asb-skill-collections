@@ -30,8 +30,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:102d47bdc8991cfa55044a5c210b68ad6329df55202434ff1515019c1009bfef
+  iri: https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:7c4a7e4109818876a85d203cb625d7325b3eedae3ab4c2bd577b1dba6717655a
 ---
 
 # fungal-genome-sequence-retrieval-and-processing

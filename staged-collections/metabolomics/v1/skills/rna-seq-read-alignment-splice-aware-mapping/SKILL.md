@@ -25,8 +25,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:1cdebe42806a1a30d095a8393fc1201528aabe9061269653c91612437f390de5
+  iri: https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:1d32586b880ff295baa8298ca12ab914b885ce0dcc7bebf62cc8cfa383731383
 ---
 
 # RNA-seq read alignment with splice-aware mapping

@@ -29,8 +29,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:3eb33fd865ac9e5fef24216bca1dd2311406e438d1ed2c5eddcc42571a4c9f38
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:bfee19fd71242906992de7ebe16930203e842b9672ad977c834d31ac6355e1ce
 ---
 
 # mass-spectrometry-library-curation

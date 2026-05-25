@@ -23,8 +23,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:1da0e6c3e23226a8156a6a4b129c3ea2cb8c865fa46b6b19af744e8070eab33f
+  iri: https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:e51e8ec706815fc0d066b6848eb77792aea1e4911ea2b77b8dd22c6874405989
 ---
 
 # transcript-abundance-estimation-counting

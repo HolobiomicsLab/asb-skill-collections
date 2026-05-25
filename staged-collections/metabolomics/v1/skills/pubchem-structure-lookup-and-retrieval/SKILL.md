@@ -24,8 +24,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/pubchem-structure-lookup-and-retrieval@sha256:df8dc77afced4e796bfc66c5e227aeb276cbea7cb631f055f594b6775d624042
+  iri: https://w3id.org/holobiomicslab/asb-skill/pubchem-structure-lookup-and-retrieval@sha256:caf14e38619145abf86e3bd669f0f084b6232caaa13d1e8c550a5295033f0c5b
 ---
 
 # PubChem structure lookup and retrieval

@@ -35,8 +35,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:6b2f5eae097eb162e4f5fe083bd8c93d6cb7c6ac6806a84921eb1f9830716c8c
+  iri: https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:d15729d14263bf80b537cb3c4b42a3f07ab2899fd8bd517c0661f1d493a786f3
 ---
 
 # ppm-tolerance-filtering-and-calibration

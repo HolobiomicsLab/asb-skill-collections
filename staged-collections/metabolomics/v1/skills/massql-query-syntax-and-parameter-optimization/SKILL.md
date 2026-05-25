@@ -32,8 +32,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:25157f3b82cd98e46af9ee7e93bab5b82ecda71b4874809fa2ab23bb4f02d97e
+  iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:99dda737ae02e7ef4ff7a0ed3fd02c06749f63b7c2f5f5ae333e1016e9d82e7b
 ---
 
 # MassQL Query Syntax and Parameter Optimization

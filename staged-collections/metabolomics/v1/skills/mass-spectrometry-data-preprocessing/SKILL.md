@@ -28,8 +28,10 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1021/acs.analchem.1c00972
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-data-preprocessing@sha256:478094b364eace323de38f2bcd59c14e29db3c0f2bfa6703c19de4fc0a581a22
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-data-preprocessing@sha256:b1d38acd3c9aab73568775615b6bfc2c398441fd510b2f2bbc71033441f256e5
 ---
 
 # mass-spectrometry-data-preprocessing

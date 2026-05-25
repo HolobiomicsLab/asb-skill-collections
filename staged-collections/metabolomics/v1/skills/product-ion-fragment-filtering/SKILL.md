@@ -38,8 +38,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/product-ion-fragment-filtering@sha256:122a8df5c1298ba4cbae11d70e7821de5e447ca44d0e9dbd470cd299d0fb3f5f
+  iri: https://w3id.org/holobiomicslab/asb-skill/product-ion-fragment-filtering@sha256:04c039186a12c868b071fd44702506164c129f83df8793f105e93bc9d996be56
 ---
 
 # product-ion-fragment-filtering

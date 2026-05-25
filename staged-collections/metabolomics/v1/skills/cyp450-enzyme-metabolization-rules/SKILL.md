@@ -31,8 +31,10 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1021/acs.analchem.1c00972
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/cyp450-enzyme-metabolization-rules@sha256:999dce115060cb49e36062783f57197b28b70e09c8949d1ca64d220282c50030
+  iri: https://w3id.org/holobiomicslab/asb-skill/cyp450-enzyme-metabolization-rules@sha256:507def0dc7fae4c16a3e48f54f25bd7d7c617843830f5874cff4c6e50eee4fd3
 ---
 
 # cyp450-enzyme-metabolization-rules

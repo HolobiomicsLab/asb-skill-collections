@@ -24,8 +24,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/precursor-adduct-mass-reconciliation@sha256:cf8275e8fd8f3d48cdfbebf3b8fee9aeb17ff1bec859b815180ab09b9bafecc9
+  iri: https://w3id.org/holobiomicslab/asb-skill/precursor-adduct-mass-reconciliation@sha256:df5131cc0f1b4de69d464c4509686dd1830a77e29ca661a62b33d3b2b8161cba
 ---
 
 # precursor-adduct-mass-reconciliation

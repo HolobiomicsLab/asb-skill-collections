@@ -23,8 +23,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ugt-sequence-curation-and-filtering@sha256:d3c5a5d912465fd910695078fb61dced90467af89b77a5ea8c9fe1fbed0c104c
+  iri: https://w3id.org/holobiomicslab/asb-skill/ugt-sequence-curation-and-filtering@sha256:912c230db7a2308608040c8a3e711215e030d62b72416c2468e255d904d59678
 ---
 
 # UGT sequence curation and filtering

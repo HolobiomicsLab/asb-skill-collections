@@ -23,8 +23,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-formulation-for-mass-difference-screening@sha256:e8feba18dd18ff6631f574b74b18d72f57f828d92afad7bf695d8d343036096c
+  iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-formulation-for-mass-difference-screening@sha256:8435a32d6e09d2e6b4d39e57558e7e5e6d931de8f8cb5bbc642d2b0da7008ed7
 ---
 
 # massql-query-formulation-for-mass-difference-screening

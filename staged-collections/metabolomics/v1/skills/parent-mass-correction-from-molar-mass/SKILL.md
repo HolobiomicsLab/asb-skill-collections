@@ -24,8 +24,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/parent-mass-correction-from-molar-mass@sha256:ea5f4d9bb97faf2a06cce90ec0ad20665757eaeb105408fc9169e5c397104093
+  iri: https://w3id.org/holobiomicslab/asb-skill/parent-mass-correction-from-molar-mass@sha256:09b738668aa8cccb332d9c3bc566ceb00c4fad1c5eb93325a5e19c898205c2be
 ---
 
 # parent-mass-correction-from-molar-mass

@@ -23,8 +23,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/count-data-normalization-library-size-correction@sha256:47316047ca57609323b163c3eaa3172c0b1be9108a74fdd4978f3c556d9d6ff5
+  iri: https://w3id.org/holobiomicslab/asb-skill/count-data-normalization-library-size-correction@sha256:6564c807ca2b61460eb3556f2a6c8b727ae4c21273b8bee3b519a0909b8523be
 ---
 
 # count-data-normalization-library-size-correction

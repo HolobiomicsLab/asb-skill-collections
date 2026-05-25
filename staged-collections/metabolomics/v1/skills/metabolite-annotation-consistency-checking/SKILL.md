@@ -25,8 +25,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:3cfbc2294ca3aa7f866794ddcaf7aae8ed41ab9274894e0462e1d4a367a2623a
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:614587b1f76df9f58c39800303cbbe3af2b35b5bac32ffd4bb562bf4cc4cf136
 ---
 
 # Metabolite annotation consistency checking

@@ -34,8 +34,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:d6192b3b919a4b02a8bd40bc2251e4189580a475ca1887b049069eb2239e4635
+  iri: https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:e7a4f6c833bd1e101b0e2bdcaadc1e7b1a29bcc24dc0b8ebd6183b7ea2a46e8f
 ---
 
 # iron-binding-compound-detection-by-isotope-ratio

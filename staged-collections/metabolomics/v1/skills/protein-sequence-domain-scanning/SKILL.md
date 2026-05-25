@@ -30,8 +30,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/protein-sequence-domain-scanning@sha256:ee4d6dde5ac225b179678203b32a5a73f965951f92480f91bc6a21464cdbf6be
+  iri: https://w3id.org/holobiomicslab/asb-skill/protein-sequence-domain-scanning@sha256:fc1aa2db66537753c9bd1087c37416ded80364264b684713e886e19183c67e85
 ---
 
 # protein-sequence-domain-scanning

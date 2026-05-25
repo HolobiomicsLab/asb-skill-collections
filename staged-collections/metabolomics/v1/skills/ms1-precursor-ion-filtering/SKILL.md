@@ -32,8 +32,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:ec19061e2608ddc1bb13dc7164f4d258ca1c0742d227fad925cf2f4439f823e7
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:7ff687d90d00222662b120b8a264fbac6f36b34826c7178ea4862cbe6cc3cd4d
 ---
 
 # MS1 Precursor Ion Filtering

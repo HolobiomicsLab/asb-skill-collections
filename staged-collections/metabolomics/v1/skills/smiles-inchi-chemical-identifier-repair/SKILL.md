@@ -24,8 +24,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:95009297c7c899c79c658052f912b6553eaa3f84c845a87f673c28344b09cf49
+  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:48051c1922ef63b480f10b715857476524dda1c44dbbdc6dffe340165a11851d
 ---
 
 # SMILES/InChI Chemical Identifier Repair

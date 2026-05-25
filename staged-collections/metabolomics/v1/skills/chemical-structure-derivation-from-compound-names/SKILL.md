@@ -27,8 +27,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-derivation-from-compound-names@sha256:f0c46b859ccccba769669e82b28e21a30eedb9ebcdf77e686f2a89975cbf28fc
+  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-derivation-from-compound-names@sha256:15e14cb2015645713d14f5000507d306c96f3081d1ef3cfd39007ad964f8d041
 ---
 
 # chemical-structure-derivation-from-compound-names

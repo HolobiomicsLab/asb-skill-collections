@@ -25,8 +25,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-salt-notation-repair@sha256:4e5a6e858087537b91c8979223acf7c7c166fd78ac9c3233aefb29ef78bb45f7
+  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-salt-notation-repair@sha256:51f1b86acfc822c7f33e72f4c73da859a6979f46758ae14621571f0e83cafebd
 ---
 
 # SMILES salt-notation repair

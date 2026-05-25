@@ -25,8 +25,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:c5014d12c0c43d8821dc4beca1fd28f6271828bdf48664831d2c554ebae26bbc
+  iri: https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:bc6f2034e5a1b329c0db028cf366c6e7d8fdf475674653ef9d30704966a1a7f3
 ---
 
 # gene-expression-quantification-rpkm-calculation

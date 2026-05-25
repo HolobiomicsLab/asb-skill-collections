@@ -25,8 +25,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:146ae04bf1974544503455722c6c0ef4c1ff6bd636b5e527e7be8146f53080ca
+  iri: https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:2eb0f1cda4121a6add72d5dc115bf8f7e29765fe86e0cae47b40aa0687dc9a2f
 ---
 
 # differential-expression-validation-fold-change-verification

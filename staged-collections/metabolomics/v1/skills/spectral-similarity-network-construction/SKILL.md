@@ -23,8 +23,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-network-construction@sha256:57b3839ca261bc018c04f6223dd27e5d07657a088b64076a11da7350668e1699
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-network-construction@sha256:d31f4718adb1b0d1fb3b44cd285e235197dd90c59e88643335745dac11bf311e
 ---
 
 # spectral-similarity-network-construction

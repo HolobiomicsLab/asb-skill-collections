@@ -27,8 +27,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:16c3e80a9877a37678a4ae7f3a9bc9822d949be83cbc9dacfcc7ac5770605e3b
+  iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:9e98f6317de841bec951fe2cbabd34428b9efff7e5ab346312463ffeeacf2ceb
 ---
 
 # neutral-loss-filtering-for-glycoside-annotation

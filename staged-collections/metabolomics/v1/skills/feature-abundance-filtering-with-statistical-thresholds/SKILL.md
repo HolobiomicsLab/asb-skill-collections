@@ -27,8 +27,10 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1021/acs.analchem.1c00972
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/feature-abundance-filtering-with-statistical-thresholds@sha256:e7213c9e79d001ab0744c2c2db56239a190cf40ed780dea3077837d01f2eaa2a
+  iri: https://w3id.org/holobiomicslab/asb-skill/feature-abundance-filtering-with-statistical-thresholds@sha256:810881633b4a7700612f3c34cb942098d3e5b33c4782bade27e176e807670a5a
 ---
 
 # feature-abundance-filtering-with-statistical-thresholds

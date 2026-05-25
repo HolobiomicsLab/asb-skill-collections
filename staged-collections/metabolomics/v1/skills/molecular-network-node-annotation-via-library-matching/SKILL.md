@@ -24,8 +24,10 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1073/pnas
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:877e0c9c6893042dfbc73a5074db73c454fbd75facc040cd584491b39c4ef0f3
+  iri: https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:bd357a231da37efb3f7dc383effe92f016890e1b94b5d7a3d92fdd3aef1cb92c
 ---
 
 # molecular-network-node-annotation-via-library-matching

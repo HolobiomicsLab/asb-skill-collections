@@ -31,8 +31,10 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1021/acs.analchem.1c00972
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/molecular-formula-comparison-overlap-analysis@sha256:12c889efdcce249a93659e0fc34187fad4ecab1ccda1383950af5d166a67255a
+  iri: https://w3id.org/holobiomicslab/asb-skill/molecular-formula-comparison-overlap-analysis@sha256:7b9bf664bb66f08b22235d782f20ea6e1a065d171ddc4983bae72590e68705ff
 ---
 
 # molecular-formula-comparison-overlap-analysis

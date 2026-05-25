@@ -26,8 +26,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/consensus-spectrum-generation@sha256:d5b5fb1364f40d55f410ff1911824f68bb8939820c3c0d3e89a330ca5c61f851
+  iri: https://w3id.org/holobiomicslab/asb-skill/consensus-spectrum-generation@sha256:c67c2a705974c275113dbf7201478f11d93b1f3912a5f9461d509ac35570ee94
 ---
 
 # consensus-spectrum-generation

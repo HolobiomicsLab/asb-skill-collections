@@ -37,8 +37,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:262490ebdfa0a6b0dc3729de9bf930fc2b8cac7080b9e86da57ceab5df35a31d
+  iri: https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:caf4d05a561cea1c726fb511e840f1621930bb6c676e19c1417741b3be4b3746
 ---
 
 # mgf-format-handling

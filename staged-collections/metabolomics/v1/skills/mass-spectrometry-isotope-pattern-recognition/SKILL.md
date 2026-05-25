@@ -36,8 +36,10 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1038/s41592-025-02660-z
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-isotope-pattern-recognition@sha256:9a749fb4343e347e4398b1bc53d005d5c48a5606c96e2e0b4220e5b2d90d3245
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-isotope-pattern-recognition@sha256:384b6ea059a09edd1221b35d9e8d7adee2c5b956e6bc9ff4fbe80e22a0eb7137
 ---
 
 # mass-spectrometry-isotope-pattern-recognition

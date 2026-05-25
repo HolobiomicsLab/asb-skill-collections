@@ -28,8 +28,10 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+derived_from:
+- doi: 10.1186/s13321-024-00878-1
 metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/adduct-ion-classification-accuracy-assessment@sha256:5dfc742e42842b5a6ef7c476633ffd9902e58b5290e14b79353e0fe376d415ab
+  iri: https://w3id.org/holobiomicslab/asb-skill/adduct-ion-classification-accuracy-assessment@sha256:cf0d5cff00992b1b0d62523af62098bc630ca4ab8c4cf41fe7f15c76a1f46bb0
 ---
 
 # Adduct-Ion Classification Accuracy Assessment
