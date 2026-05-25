@@ -79,6 +79,24 @@ jobs:
             --output "$OUTPUT"
           echo "Generated HF dataset card at $OUTPUT"
 
+      - name: Validate HF Dataset card structure
+        run: |
+          CPATH="${{ steps.tag_parse.outputs.collection_path }}"
+          # Strict-fail on missing required keys / sections; warn-only on
+          # missing best-practice items. Exit code: 0 = pass, 1 = error,
+          # 2 = warnings only (CI continues).
+          python scripts/validate_hf_card.py --card "${CPATH}/README_HF.md" || rc=$?
+          rc=${rc:-0}
+          if [ "$rc" = "1" ]; then
+            echo "::error::HF card validation failed — refusing to upload to HuggingFace"
+            exit 1
+          fi
+          if [ "$rc" = "2" ]; then
+            echo "HF card has warnings (non-blocking) — review before tagging final release"
+          else
+            echo "HF card validation passed"
+          fi
+
       - name: Generate HF Space files
         run: |
           CPATH="${{ steps.tag_parse.outputs.collection_path }}"

@@ -201,3 +201,50 @@ form button[type=submit]:hover { background: #1d4ed8; }
   cursor: pointer;
 }
 .btn-verify-claim:hover { background: #2563eb; color: #fff; }
+
+/* Search page (search.html / search.js) */
+#search-box { margin-top: 1rem; }
+#search-input {
+  width: 100%;
+  padding: .7rem .9rem;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+#search-input:focus { outline: 2px solid #2563eb; outline-offset: -1px; border-color: #2563eb; }
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: .8rem 0 1.2rem;
+  align-items: center;
+  font-size: .9rem;
+}
+.search-filters label { display: inline-flex; align-items: center; gap: .3rem; cursor: pointer; }
+.search-filters .hint { margin-left: auto; color: #666; font-style: italic; }
+
+.result-group { margin: 1.2rem 0; }
+.result-group h2 { font-size: 1.05rem; margin-top: 1.2rem; }
+.result-item {
+  padding: .7rem .8rem;
+  margin: .5rem 0;
+  border: 1px solid #e8eaf0;
+  border-radius: 5px;
+  background: #fff;
+}
+.result-item:hover { background: #fafbfd; border-color: #d0d4dc; }
+.result-title { font-weight: 600; font-size: 1rem; display: inline-block; margin-bottom: .25rem; }
+.result-meta { font-size: .8rem; color: #555; margin-bottom: .35rem; }
+.result-meta code { background: #f0f0f5; padding: 0 .25rem; border-radius: 2px; font-size: .78rem; }
+.result-snippet { font-size: .88rem; color: #333; line-height: 1.4; }
+.result-snippet mark { background: #fff3a3; color: inherit; padding: 0 .1rem; border-radius: 2px; }
+
+.badge-paper { background: #e0f2fe; color: #0c4a6e; }
+.badge-skill { background: #ede9fe; color: #4c1d95; }
+.badge-tool { background: #dcfce7; color: #14532d; }
+
+#empty-state ul, #no-results ul { font-size: .9rem; color: #555; }
+#empty-state code, #no-results code {
+  background: #f0f0f5; padding: .05rem .35rem; border-radius: 3px; font-size: .85rem;
+}

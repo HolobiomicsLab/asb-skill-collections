@@ -134,17 +134,34 @@ jobs:
               creators = [{"name": f"{a.get('family-names', '')} {a.get('given-names', '')}".strip(),
                            "orcid": a.get("orcid", "")} for a in cff["authors"] if a]
 
-          meta = {
-            "metadata": {
-              "title": title,
-              "upload_type": "dataset",
-              "description": f"ASB Skill Collection release: {slug} version {version}.",
-              "creators": creators,
-              "keywords": ["agentic-ai", "scientific-agents", slug, "asb"],
-              "license": "apache-2.0",
-              "version": version,
-            }
+          # Prefer a checked-in .zenodo.json (reviewable in PR) over the
+          # inline-built fallback. Fields present in the file win; missing
+          # fields fall back to the auto-derived defaults from CITATION.cff.
+          import json as _json
+          zenodo_file = collection_dir / ".zenodo.json"
+          base_metadata = {
+            "title": title,
+            "upload_type": "dataset",
+            "description": f"ASB Skill Collection release: {slug} version {version}.",
+            "creators": creators,
+            "keywords": ["agentic-ai", "scientific-agents", slug, "asb"],
+            "license": "apache-2.0",
+            "version": version,
           }
+          if zenodo_file.exists():
+            try:
+              checked_in = _json.loads(zenodo_file.read_text())
+              # .zenodo.json may use either flat shape or {"metadata": {...}}.
+              if "metadata" in checked_in:
+                checked_in = checked_in["metadata"]
+              # Override version with the tag's version regardless of file
+              # contents — the file is a template; the tag is the truth.
+              checked_in["version"] = version
+              base_metadata.update(checked_in)
+              print(f"Using .zenodo.json from {zenodo_file}")
+            except Exception as e:
+              print(f"WARNING: failed to parse .zenodo.json: {e} — using inline defaults")
+          meta = {"metadata": base_metadata}
           meta_resp = requests.put(
             f"{base_url}/deposit/depositions/{dep_id}",
             json=meta,

@@ -1,0 +1,62 @@
+{
+  "title": "ASB Skill Collection: metabolomics v1",
+  "upload_type": "dataset",
+  "description": "Curated, evidence-grounded scientific-agent skill + tool + benchmark collection for metabolomics, derived by AgenticScienceBuilder (ASB) from 5 peer-reviewed source papers (4 included, 1 documented-excluded). Includes 106 deduplicated skills with EDAM annotations, 38 tool records with SPDX licensing + CycloneDX SBOM, per-paper benchmark tasks, silver/gold-tiered claim ledger, and CC-BY attribution notices.",
+  "creators": [
+    {
+      "name": "AgenticScienceBuilder",
+      "affiliation": "Holobiomics Lab, CNRS / Université Côte d'Azur"
+    },
+    {
+      "name": "Holobiomics Lab",
+      "affiliation": "Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Université Côte d'Azur"
+    }
+  ],
+  "keywords": [
+    "agentic-ai",
+    "scientific-agents",
+    "metabolomics",
+    "mass-spectrometry",
+    "benchmark",
+    "skills",
+    "tools",
+    "asb",
+    "skill-collection",
+    "claude-code-plugin"
+  ],
+  "subjects": [
+    {
+      "term": "Metabolomics",
+      "identifier": "http://edamontology.org/topic_3172",
+      "scheme": "EDAM"
+    },
+    {
+      "term": "Mass spectrometry",
+      "identifier": "http://edamontology.org/topic_3520",
+      "scheme": "EDAM"
+    }
+  ],
+  "communities": [],
+  "grants": [],
+  "license": "apache-2.0",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/HolobiomicsLab/asb-skill-collections",
+      "relation": "isPartOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/HolobiomicsLab/AgenticScienceBuilder",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://w3id.org/holobiomicslab/asb-skill-collection/metabolomics/v1",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Source paper attribution + per-tier licensing handled per OPEN_ACCESS_POLICY.md; verbatim quotations sanitized for non-OA papers (see quotation_audit.json). Tool licenses + SBOM inventory at sbom.cdx.json. Per-paper attribution chain at NOTICES.md.",
+  "version": "1"
+}
