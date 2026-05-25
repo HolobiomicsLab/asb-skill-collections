@@ -15,11 +15,23 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+hf = [
+    "huggingface_hub>=0.23",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov",
+    "responses>=0.25",
+    "huggingface_hub>=0.23",
+]
 test = [
     "pytest>=8.0",
     "pytest-cov",
     "responses>=0.25",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
