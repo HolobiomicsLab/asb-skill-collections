@@ -1,6 +1,6 @@
 ---
 name: metabolite-feature-table-distance-metric-computation
-description: Compute pairwise distance metrics (Canberra) from a metabolite feature abundance matrix to enable ordination and statistical testing of metabolome composition differences across sample groups. This skill transforms raw feature abundances into a distance/dissimilarity matrix that quantifies metabolic differences between samples.
+description: Use when computing pairwise distance metrics (Canberra) from a metabolite feature abundance matrix in the domain of metabolomics for ordination and statistical testing of metabolome composition differences across sample groups.
 when_to_use_negative:
 - Input is already a pre-computed distance or dissimilarity matrix—skip directly to ordination or PERMANOVA.
 - Feature table contains gap-filled data and you require only non-gap-filled analysis (compute distance separately on non-gap-filled subset).

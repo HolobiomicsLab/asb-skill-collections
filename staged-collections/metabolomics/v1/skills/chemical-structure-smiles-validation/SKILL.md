@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-smiles-validation
-description: Validates and repairs chemical structure annotations (SMILES, InChI, InChIKey) by deriving canonical forms from compound names or PubChem, comparing structural representations for consistency, and detecting mismatches between annotation and measured precursor mass or adduct state. This skill is essential for ensuring that MS/MS spectral libraries contain chemically plausible and internally consistent structural metadata.
+description: Use when validating and repairing chemical structure annotations (SMILES, InChI, InChIKey) in the domain of metabolomics using methods like LC-MS and GC-MS, applying to compound names or PubChem to ensure consistency with measured precursor mass or adduct state.
 when_to_use_negative:
 - Spectra already contain validated, canonicalized SMILES and verified parent masses—skip this step to avoid redundant computation.
 - Library does not include compound name or structure information—structural validation cannot proceed without a reference annotation.

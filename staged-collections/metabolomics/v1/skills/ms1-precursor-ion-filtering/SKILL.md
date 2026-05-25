@@ -1,6 +1,6 @@
 ---
 name: ms1-precursor-ion-filtering
-description: Filter MS1 spectra by precursor m/z value and isotope pattern intensity to isolate ions matching a target analyte class (e.g., iron-binding compounds, organophosphate esters). This skill enables targeted discovery of structurally related metabolites across large public repositories by applying precise m/z and intensity constraints to raw MS data.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to filter MS1 spectra by precursor m/z value and isotope pattern intensity to isolate ions matching a target analyte class.
 when_to_use_negative:
 - Target analyte class has no characteristic isotope pattern or m/z signature (use untargeted feature detection instead)
 - Input data is already annotated or filtered to a feature table (redundant application)

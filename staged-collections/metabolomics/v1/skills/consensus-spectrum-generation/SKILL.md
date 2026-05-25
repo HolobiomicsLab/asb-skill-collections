@@ -1,6 +1,6 @@
 ---
 name: consensus-spectrum-generation
-description: Collapse redundant MS/MS spectra from repository-scale queries into representative consensus spectra to reduce data dimensionality and enable downstream molecular networking and annotation. This skill is essential when large-scale mass spectrometry queries retrieve thousands of spectra with substantial redundancy across different samples or analytical runs.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to collapse redundant MS/MS spectra from repository-scale queries into representative consensus spectra, reducing data dimensionality for downstream molecular networking and annotation.
 when_to_use_negative:
 - Input is already a curated spectral library or manually validated dataset — consensus generation is unnecessary and may obscure individual validated differences.
 - Redundancy is intentionally preserved for statistical power or publication of all variant spectra — clustering removes this granularity.

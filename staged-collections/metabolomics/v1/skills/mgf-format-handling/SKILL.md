@@ -1,6 +1,6 @@
 ---
 name: mgf-format-handling
-description: Loading and parsing tandem MS spectra from MGF (Mascot Generic Format) files for downstream clustering, networking, or querying. MGF is a human-readable text format widely supported by mass spectrometry analysis tools and repositories, making it essential for exchange of MS/MS spectral data.
+description: Use when handling metabolomics data by loading and parsing tandem MS spectra from MGF (Mascot Generic Format) files for downstream clustering, networking, or querying.
 when_to_use_negative:
 - When working with vendor-specific binary formats (Thermo .raw, Waters .raw) without prior conversion—use native converters (RawFileReader, CDCReader) first.
 - When you only have precursor m/z and intensity (MS1 level data)—MGF is designed for MS/MS (MS2) spectra with fragment ion information.

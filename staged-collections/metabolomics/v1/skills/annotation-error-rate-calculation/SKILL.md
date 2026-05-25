@@ -1,6 +1,6 @@
 ---
 name: annotation-error-rate-calculation
-description: Calculate and report error rates when applying annotation-repair or annotation-derivation filters to mass spectral libraries, quantifying the proportion of spectra that could not be annotated, were left unannotated, or received structurally divergent annotations compared to originals. This skill validates filter efficacy and identifies systematic failure modes in library cleaning pipelines.
+description: Use when calculating error rates in metabolomics using LC-MS or GC-MS techniques to assess the efficacy of annotation-repair or annotation-derivation filters on mass spectral libraries.
 when_to_use_negative:
 - Input spectra are unannotated or lack compound name, parent mass, or adduct metadata — filter will have no reference for comparison and error rate will be meaningless.
 - Filter is not applied yet — error rate calculation requires both original and filtered annotation fields; do not use this skill on unfiltered data.

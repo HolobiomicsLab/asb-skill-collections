@@ -1,6 +1,6 @@
 ---
 name: mzml-mzxml-file-parsing
-description: Parse open-format mass spectrometry data files (mzML, mzXML, MGF) into memory-resident data structures (pandas DataFrames) to enable downstream spectral filtering and pattern queries. This is foundational for accessing MS1 and MS2 spectra programmatically.
+description: Use when parsing open-format mass spectrometry data files (mzML, mzXML, MGF) in the domain of metabolomics to convert them into memory-resident data structures (pandas DataFrames) for downstream spectral filtering and pattern queries, specifically for accessing MS1 and MS2 spectra programmatically.
 when_to_use_negative:
 - Input is already a pre-processed feature table or consensus spectrum library (e.g., GNPS spectral library or MGF from molecular networking); re-parsing adds computational overhead without new information.
 - You require vendor-specific raw file formats (.raw from Thermo, .d from Agilent) without prior conversion to open formats; pyteomics cannot directly read proprietary binaries.

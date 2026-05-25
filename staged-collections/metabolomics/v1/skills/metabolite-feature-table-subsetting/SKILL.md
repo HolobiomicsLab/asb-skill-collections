@@ -1,6 +1,6 @@
 ---
 name: metabolite-feature-table-subsetting
-description: Subset a metabolite feature table to a curated list of annotated metabolites and filter conditionally-dependent taxa based on predictive strength, enabling focused analysis of microbe-metabolite interactions. This skill reduces feature and taxa complexity to only those with high-confidence annotations and strong conditional probability relationships.
+description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to subset a metabolite feature table to a curated list of annotated metabolites and filter conditionally-dependent taxa based on predictive strength.
 when_to_use_negative:
 - Input is already a fully annotated, curated interaction table with pre-selected metabolites and taxa.
 - You require exhaustive exploration of all taxa-metabolite pairs, not prioritization by conditional probability; subsetting discards weak associations.

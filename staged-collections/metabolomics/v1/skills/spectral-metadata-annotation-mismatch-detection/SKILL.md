@@ -1,6 +1,6 @@
 ---
 name: spectral-metadata-annotation-mismatch-detection
-description: Detect mismatches between derived chemical structures (SMILES, InChI, InChIKey) and existing spectrum annotations by deriving canonical structures from compound names via PubChem lookup and comparing them against recorded annotations. This skill identifies both unannotated spectra and spectra with incorrect or inconsistent 2D structural assignments that would otherwise propagate errors through downstream analysis.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to detect mismatches between derived chemical structures (SMILES, InChI, InChIKey) and existing spectrum annotations by deriving canonical structures from compound names via PubChem lookup.
 when_to_use_negative:
 - Spectra lack compound names or existing structure annotations—the filter requires both to perform comparison.
 - Ion mode or adduct information is incomplete or missing—the workflow filters for spectra with valid, matching adduct data before annotation derivation.

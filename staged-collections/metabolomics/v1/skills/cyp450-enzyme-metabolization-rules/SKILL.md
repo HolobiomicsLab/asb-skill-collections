@@ -1,6 +1,6 @@
 ---
 name: cyp450-enzyme-metabolization-rules
-description: Apply computational prediction of Phase I CYP450-mediated metabolite structures and molecular formulas using BioTransformer, then compare predicted metabolites against experimentally detected metabolite formulas from LC–HRMS data to validate in vitro metabolic transformation coverage and identify unmapped transformation pathways.
+description: Use when metabolomics involves LC-MS or GC-MS techniques to apply computational prediction of Phase I CYP450-mediated metabolite structures and molecular formulas using BioTransformer, and compare these predictions against experimentally detected metabolite formulas from LC–HRMS data.
 when_to_use_negative:
 - Input parent structures are missing or incomplete—BioTransformer requires valid chemical structure input.
 - Experimental metabolite dataset has not been filtered for false positives (blank contamination, isotopes, adducts not removed)—apply abundance filters (>4-fold), mass defect (−100 to +50 mmu), and mass difference (<+50 u) filtering before comparison.

@@ -1,6 +1,6 @@
 ---
 name: ms-data-export-and-format-conversion
-description: Convert mass spectrometry data between open standardized formats (mzML, mzXML, MGF) to enable interoperability across analysis software and repositories. This skill is essential for querying MS data with tools like MassQL that require specific input formats.
+description: Use when metabolomics data needs conversion between open standardized formats (mzML, mzXML, MGF) for interoperability across analysis software and repositories in LC-MS and GC-MS untargeted lipidomics.
 when_to_use_negative:
 - Your analysis tool natively supports your raw instrument format (e.g., Thermo Xcalibur software reading .raw files directly) and you do not need to share data with external repositories.
 - You are working exclusively with processed feature tables (m/z-by-sample matrices) rather than raw spectra; format conversion applies only to spectrum-level data.

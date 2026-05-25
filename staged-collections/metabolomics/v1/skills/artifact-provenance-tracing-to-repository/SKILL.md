@@ -1,6 +1,6 @@
 ---
 name: artifact-provenance-tracing-to-repository
-description: Retrieve and validate processing artifacts (e.g., supplementary tables, cleaned spectral libraries, YAML configuration files) from public repositories (Zenodo, GitHub) to verify that reported statistics and processing parameters match the actual outputs claimed in a published article. This skill ensures reproducibility by grounding published findings in auditable, versioned artifacts.
+description: Use when retrieving and validating processing artifacts such as supplementary tables and cleaned spectral libraries from public repositories in the metabolomics domain, specifically using LC-MS and GC-MS techniques to ensure reproducibility of reported statistics and processing parameters.
 when_to_use_negative:
 - The article does not cite a public repository or makes no quantitative claims about pipeline outputs that can be verified against an artifact.
 - The repository deposit is embargoed, access-restricted, or no longer available.

@@ -1,6 +1,6 @@
 ---
 name: organophosphate-ester-compound-class-recognition
-description: Recognize organophosphate ester (OPE) compounds in high-resolution LC-MS/MS data by querying for a diagnostic phosphate product ion (H₄PO₄⁺, m/z 98.9847) using MassQL, enabling discovery of known and novel OPE structures across large public repositories. This skill leverages a class-selective fragmentation pattern rather than precursor m/z to identify compounds with diverse molecular weights and structures that share a common metabolic or synthetic route.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to recognize organophosphate ester (OPE) compounds in high-resolution LC-MS/MS data by querying for a diagnostic phosphate product ion (H₄PO₄⁺, m/z 98.9847) using MassQL.
 when_to_use_negative:
 - Input is already a curated feature table or consensus spectrum library; use this skill on raw or minimally processed MS/MS data, not post-feature-detection outputs.
 - Your analytical goal is quantitative OPE measurement or pharmacokinetics; this skill performs untargeted class discovery and produces primarily qualitative/putative identifications.

@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-metadata-harmonization
-description: Systematically repair and validate MS/MS spectral metadata—including adducts, precursor m/z, SMILES, and compound annotations—using chemical structure validation against reference databases and cross-field consistency checks. This skill ensures that library spectra meet plausibility thresholds before downstream analysis or publication.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to systematically repair and validate MS/MS spectral metadata, including adducts, precursor m/z, SMILES, and compound annotations, through chemical structure validation against reference databases and cross-field consistency checks.
 when_to_use_negative:
 - Input spectra already have complete, manually curated, and structurally validated metadata (e.g., NIST or internal curated standards); harmonization would be redundant.
 - The analysis goal requires preservation of original (even if incorrect) metadata for historical comparison or error auditing; repair operations are destructive.

@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-isotope-pattern-recognition
-description: Query MS1 and MS2 spectra to detect characteristic isotope patterns (e.g., iron-binding 54Fe/56Fe ratios, 13C peaks, characteristic adducts) using declarative pattern-matching language (MassQL) and filtering across open MS data repositories. This skill enables discovery of novel compounds sharing isotopic signatures without prior spectral library annotation.
+description: Use when metabolomics involves LC-MS or GC-MS techniques to query MS1 and MS2 spectra for detecting characteristic isotope patterns using MassQL and filtering across open MS data repositories.
 when_to_use_negative:
 - Input is already a feature table or aligned peak matrix; this skill operates on raw or processed spectra in standard open formats (mzML, mzXML, MGF), not tabular peak-intensity matrices.
 - The isotope pattern of interest cannot be characterized quantitatively (e.g., relative intensity thresholds, mass offsets, or adduct m/z offsets are unknown or highly variable). The skill requires precise, measurable isotopic signature criteria.

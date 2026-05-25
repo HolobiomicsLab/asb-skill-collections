@@ -1,6 +1,6 @@
 ---
 name: spectral-similarity-scoring-and-validation
-description: This skill calculates dot-product similarity scores between experimental MS2 spectra and reference spectra to assess spectral quality, confidence, and library utility for metabolite identification. It is essential for validating that detected metabolite spectra are sufficiently similar to reference standards or literature spectra to support confident metabolite annotation.
+description: Use when assessing metabolomics data through LC-MS or GC-MS by calculating dot-product similarity scores between experimental MS2 spectra and reference spectra to validate metabolite identification.
 when_to_use_negative:
 - Do not use if no suitable reference spectrum exists (neither MassBank, nor reference standard, nor predicted library available); in such cases, rely on molecular formula consistency and fragmentation logic instead.
 - Do not use if the experimental spectrum is severely contaminated or exhibits poor signal-to-noise; clean or filter the spectrum first before scoring.

@@ -1,6 +1,6 @@
 ---
 name: tabular-data-parsing-and-structure-verification
-description: Parse and validate the structure of tabular processing reports (e.g., Supplementary Table S1 from matchms library cleaning pipelines) by extracting numeric fields, verifying data types and field presence, and comparing extracted values against published statistics to confirm pipeline execution fidelity.
+description: Use when parsing and validating the structure of tabular processing reports in metabolomics using LC-MS and GC-MS techniques, applying to numeric fields and verifying data types and field presence against published statistics.
 when_to_use_negative:
 - The input is already a validated schema or has been previously verified by the data producer.
 - The table documents intermediate filtering steps rather than aggregate final counts (use this skill only when validating summary statistics, not per-spectrum metadata).

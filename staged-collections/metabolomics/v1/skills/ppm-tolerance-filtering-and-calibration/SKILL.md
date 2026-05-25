@@ -1,6 +1,6 @@
 ---
 name: ppm-tolerance-filtering-and-calibration
-description: Apply mass accuracy filtering using parts-per-million (ppm) tolerance windows to match observed m/z values against expected fragment ions or precursors in high-resolution mass spectrometry datasets. This skill is essential for reducing false positives when querying large repositories of LC-MS/MS data, particularly when searching for specific molecular signatures across heterogeneous instrument types and ionization sources.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to apply mass accuracy filtering using parts-per-million (ppm) tolerance windows to match observed m/z values against expected fragment ions or precursors in high-resolution mass spectrometry datasets.
 when_to_use_negative:
 - Your instrument has not been recently mass-calibrated and you do not know its actual mass error profile; applying an arbitrary ppm window could yield spurious matches or miss true features.
 - You are filtering data that has already been deconvoluted or centroided by vendor software into discrete peaks; applying ppm tolerance to pre-processed peak lists requires verification that m/z values are still in the original instrument's mass space.

@@ -1,6 +1,6 @@
 ---
 name: cross-reference-spectral-clusters-to-chemical-standards
-description: Match molecular network spectral nodes to known chemical standards and reference libraries by comparing MS/MS fragmentation patterns and neutral loss signatures. This skill bridges untargeted spectral clustering with targeted compound identification, enabling annotation of metabolite structures and enzymatic products in complex biotransformation datasets.
+description: Use when metabolomics technique involves LC-MS or GC-MS to match molecular network spectral nodes to known chemical standards by comparing MS/MS fragmentation patterns and neutral loss signatures.
 when_to_use_negative:
 - Input is already a fully annotated feature table (e.g., from targeted metabolomics with internal standards) — skip clustering and reference matching.
 - Reference library coverage is <50% for your compound class — annotation confidence will be too low without supplementary NMR or MS/MS fragmentation validation.

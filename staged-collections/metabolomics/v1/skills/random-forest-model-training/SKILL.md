@@ -1,6 +1,6 @@
 ---
 name: random-forest-model-training
-description: Train a random-forest classifier on metabolomic feature data to identify features predictive of categorical phenotypes (e.g., industrialization group), with tree count iteratively increased until out-of-bag error stabilizes. This skill surfaces variable-importance scores for subsequent feature selection and filtering.
+description: Use when training a random-forest classifier in metabolomics using LC-MS or GC-MS untargeted lipidomics feature data to identify features predictive of categorical phenotypes, iteratively increasing tree count until out-of-bag error stabilizes.
 when_to_use_negative:
 - Input feature table has already been dimensionally reduced to a small, curated set; random forests perform best with hundreds of candidate features, not dozens.
 - Your outcome is continuous (e.g., abundance value, metabolite concentration); use random-forest regression instead of classification.

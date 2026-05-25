@@ -1,6 +1,6 @@
 ---
 name: metabolite-annotation-consistency-checking
-description: Validate metabolite annotations in MS/MS library spectra by comparing derived canonical chemical identifiers (SMILES, InChI, InChIKey) against reference data and checking consistency between precursor m/z, adduct assignment, and molecular weight. This skill detects mismatches that indicate incorrect or incomplete annotations before library curation.
+description: Use when validating metabolite annotations in metabolomics by comparing derived canonical chemical identifiers (SMILES, InChI, InChIKey) against reference data in LC-MS and GC-MS untargeted lipidomics, checking consistency between precursor m/z, adduct assignment, and molecular weight.
 when_to_use_negative:
 - Input spectra lack compound names, SMILES, or other chemical identifiers that can be mapped to PubChem.
 - The dataset contains only unannotated spectra or spectra with de novo annotations not yet validated against reference databases.

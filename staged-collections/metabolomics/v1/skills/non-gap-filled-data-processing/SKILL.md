@@ -1,6 +1,6 @@
 ---
 name: non-gap-filled-data-processing
-description: Process untargeted LC-MS/MS metabolomic data without gap-filling to preserve the integrity of detection patterns across samples. This approach is critical when analyzing shared metabolites across populations where missing-value imputation could mask genuine absence or alter inter-sample comparison validity.
+description: Use when processing untargeted metabolomics LC-MS/MS and GC-MS data without gap-filling to maintain the integrity of detection patterns across samples, ensuring accurate analysis of shared metabolites in populations.
 when_to_use_negative:
 - Input is already gap-filled or imputed; re-filtering will propagate artifacts.
 - Downstream analysis requires complete feature matrices with no missing values (e.g., certain multivariate methods that cannot tolerate NAs).

@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-molecular-formula-assignment
-description: Assignment of unambiguous molecular formulas to high-resolution LC–HRMS metabolite features by applying GenForm to MS1 m/z values and tandem MS2 spectra, constrained by parent pesticide elemental composition rules and validated through MS2 fragment explainability and in silico fragmentation prediction.
+description: Use when assigning molecular formulas to high-resolution LC–HRMS metabolite features by applying GenForm to MS1 m/z values and tandem MS2 spectra, constrained by parent pesticide elemental composition rules and validated through MS2 fragment explainability and in silico fragmentation prediction.
 when_to_use_negative:
 - Input features already have validated reference spectra or confirmed structural identifications (use instead for confirmation or structure refinement).
 - MS2 spectra are missing or of poor quality (low signal, sparse fragments); GenForm requires informative fragmentation patterns to constrain formula space.

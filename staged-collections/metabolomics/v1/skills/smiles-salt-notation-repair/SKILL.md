@@ -1,6 +1,6 @@
 ---
 name: smiles-salt-notation-repair
-description: This skill removes dot-separated salt notation from SMILES strings in mass spectral library metadata, extracting the neutral parent compound structure and validating the repaired SMILES against the parent_mass field. It prevents spectra with salt-notation SMILES from being incorrectly filtered out during library curation.
+description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to remove dot-separated salt notation from SMILES strings in mass spectral library metadata, extracting the neutral parent compound structure and validating the repaired SMILES against the parent_mass field.
 when_to_use_negative:
 - Input SMILES already contain only neutral parent structures without salt notation (no salts to remove).
 - parent_mass metadata field is missing or unpopulated, preventing validation of the repair outcome.

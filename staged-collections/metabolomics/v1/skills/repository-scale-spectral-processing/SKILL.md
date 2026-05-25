@@ -1,6 +1,6 @@
 ---
 name: repository-scale-spectral-processing
-description: Apply MS-Cluster or Falcon-MS to collapse redundant MS/MS observations retrieved at repository scale (millions of spectra) into consensus spectra suitable for downstream molecular networking and annotation. This skill transforms large unfiltered spectral result sets into compact, representative datasets by identifying and merging duplicate acquisitions.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to apply MS-Cluster or Falcon-MS for collapsing redundant MS/MS observations at repository scale into consensus spectra for downstream molecular networking and annotation.
 when_to_use_negative:
 - Input spectra are already deduplicated or come from a single sample with no redundancy expected.
 - Consensus spectra are not required downstream; you plan direct library matching or molecular feature detection without aggregation.

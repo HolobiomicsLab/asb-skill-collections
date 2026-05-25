@@ -1,6 +1,6 @@
 ---
 name: threshold-based-feature-filtering
-description: Filter a ranked feature list (e.g., random-forest variable importance scores) by applying a quantitative threshold to retain only features meeting a statistical or importance cutoff. This skill is used to reduce high-dimensional metabolomic data to a smaller, interpretable set of differential features suitable for downstream annotation and biological interpretation.
+description: Use when metabolomics data is analyzed using LC-MS or GC-MS techniques to filter a ranked feature list by applying a quantitative threshold, retaining only features that meet a statistical or importance cutoff for downstream annotation and biological interpretation.
 when_to_use_negative:
 - Input feature list is already below ~500 features and does not require further reduction for annotation
 - No ranking metric or statistical score has been computed; threshold-based filtering requires a quantitative score per feature

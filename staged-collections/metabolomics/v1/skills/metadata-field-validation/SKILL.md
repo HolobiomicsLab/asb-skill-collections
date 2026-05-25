@@ -1,6 +1,6 @@
 ---
 name: metadata-field-validation
-description: Systematic validation of metadata field presence, data types, and values in mass spectral library records against expected schemas and plausibility thresholds. This skill ensures that essential annotation fields (SMILES, InChI, InChIKey, adduct, precursor m/z, parent mass) are correctly populated and logically consistent before downstream analysis.
+description: Use when validating metadata fields in metabolomics using LC-MS and GC-MS techniques to ensure the presence, data types, and values of essential annotation fields like SMILES, InChI, InChIKey, adduct, precursor m/z, and parent mass against expected schemas and plausibility thresholds.
 when_to_use_negative:
 - Input spectra lack any structural annotation (SMILES, InChI, or compound name); metadata-field-validation requires at least one annotation source to derive or repair fields.
 - Analysis goal is to filter unannotated experimental MS/MS data without structure assignment; use peak filtering and intensity normalization instead.

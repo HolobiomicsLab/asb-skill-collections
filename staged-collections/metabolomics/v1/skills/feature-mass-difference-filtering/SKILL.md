@@ -1,6 +1,6 @@
 ---
 name: feature-mass-difference-filtering
-description: Remove features whose m/z exceeds the parent pesticide m/z by more than +50 u, as these are more likely to originate from phase II conjugation reactions rather than true phase I metabolites. This filtering step reduces false positives in automated metabolite screening workflows by eliminating features corresponding to additions of more than three oxygen atoms.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to remove features whose m/z exceeds the parent pesticide m/z by more than +50 u, reducing false positives in automated metabolite screening workflows.
 when_to_use_negative:
 - Input features have not yet undergone blank subtraction and isotope/adduct removal; apply those filters first to avoid filtering artifacts.
 - Analysis goal is to detect phase II conjugation metabolites (e.g., glucuronide or sulfate conjugates); this filter explicitly removes them.

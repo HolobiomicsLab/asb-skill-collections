@@ -1,6 +1,6 @@
 ---
 name: ms-spectra-library-parsing
-description: Parse and load mass spectrometry spectral libraries in MGF format into a Python-based spectral object framework, extracting spectrum metadata, precursor m/z, fragment peaks, and chemical annotations for downstream cleaning and validation. This is the essential first step in any reproducible MS/MS library curation pipeline.
+description: Use when working in the metabolomics domain to parse and load mass spectrometry spectral libraries in MGF format, extracting spectrum metadata, precursor m/z, fragment peaks, and chemical annotations for downstream cleaning and validation.
 when_to_use_negative:
 - Input is already a SpectrumList or deserialized Python object — skip directly to cleaning pipeline.
 - Input is in a non-MGF format (e.g., mzML, NetCDF, JSON) without a format conversion step beforehand.

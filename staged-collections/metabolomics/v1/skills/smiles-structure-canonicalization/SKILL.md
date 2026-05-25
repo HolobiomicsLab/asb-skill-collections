@@ -1,6 +1,6 @@
 ---
 name: smiles-structure-canonicalization
-description: Derive canonical SMILES, InChI, and InChIKey representations from compound names or existing chemical identifiers using RDKit and PubChem reference data. This skill ensures consistent, machine-readable chemical structure notation across a mass spectral library, enabling reliable downstream annotation validation and adduct repair.
+description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to derive canonical SMILES, InChI, and InChIKey representations from compound names or existing chemical identifiers using RDKit and PubChem reference data.
 when_to_use_negative:
 - Input records already contain validated canonical SMILES and matching InChIKey without ambiguities.
 - Compound names are trade names, metabolite identifiers, or non-IUPAC strings that do not resolve to PubChem entries.

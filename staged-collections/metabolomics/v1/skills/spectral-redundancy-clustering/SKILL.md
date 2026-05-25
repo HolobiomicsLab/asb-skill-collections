@@ -1,6 +1,6 @@
 ---
 name: spectral-redundancy-clustering
-description: Collapse redundant MS/MS spectra from large-scale repository queries into consensus spectra using MS-Cluster or Falcon-MS, reducing dataset size by 70–80% while preserving representative fragmentation patterns for downstream molecular networking and library annotation.
+description: Use when collapsing redundant MS/MS spectra from large-scale repository queries into consensus spectra using MS-Cluster or Falcon-MS, reducing dataset size by 70–80% while preserving fragmentation patterns for downstream molecular networking and library annotation.
 when_to_use_negative:
 - Input spectrum set is already small (< 100 unique spectra) or has been manually curated; clustering overhead is unnecessary.
 - Spectral redundancy is intentional (e.g., studying instrument or ionization variability); collapsing removes that signal.

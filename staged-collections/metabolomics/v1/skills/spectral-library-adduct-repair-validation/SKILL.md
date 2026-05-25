@@ -1,6 +1,6 @@
 ---
 name: spectral-library-adduct-repair-validation
-description: This skill repairs adduct assignments in annotated MS/MS spectra by deriving canonical SMILES from PubChem, recalculating parent mass and adduct from chemical structure, and validates repair success against known error rates. It is essential for correcting inconsistencies between declared adducts, precursor m/z, and chemical annotations in curated spectral libraries.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics requires repairing adduct assignments in annotated MS/MS spectra by deriving canonical SMILES from PubChem, recalculating parent mass and adduct from chemical structure, and validating repair success against known error rates.
 when_to_use_negative:
 - Input spectra lack chemical annotation (SMILES, InChI, or compound name) — the filter requires structure data to derive adducts.
 - Precursor m/z or ion mode (positive/negative) metadata is missing — the filter cannot match expected adducts without observed precursor m/z.

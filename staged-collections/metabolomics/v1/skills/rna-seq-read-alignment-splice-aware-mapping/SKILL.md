@@ -1,6 +1,6 @@
 ---
 name: rna-seq-read-alignment-splice-aware-mapping
-description: Align paired-end RNA-seq reads to a reference genome using a splice-aware aligner (HISAT2) to generate sorted BAM files that preserve exon–intron boundaries. This is essential for accurately quantifying gene expression in organisms where spliced transcripts dominate.
+description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to align paired-end RNA-seq reads to a reference genome using a splice-aware aligner (HISAT2) for generating sorted BAM files that maintain exon–intron boundaries.
 when_to_use_negative:
 - Input reads are single-end or already aligned (BAM/SAM files exist).
 - The organism has no introns or a very simple, unspliced transcriptome (e.g., many prokaryotes).

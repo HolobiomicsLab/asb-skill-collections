@@ -1,6 +1,6 @@
 ---
 name: mass-spectral-library-quality-assessment
-description: Comprehensive evaluation of mass spectral library metadata integrity and annotation consistency using automated validation filters (basic, default, library-cleaning tiers) to identify and quantify structural and chemical inconsistencies before curation. This skill assesses whether spectra retain valid SMILES/InChI/InChIKey annotations, correct adduct assignments, consistent precursor m/z values, and properly normalized peak intensities across large spectral repositories (e.g., GNPS, MoNA).
+description: Use when assessing the integrity and annotation consistency of mass spectral library metadata in the domain of metabolomics using automated validation filters on LC-MS and GC-MS untargeted lipidomics data.
 when_to_use_negative:
 - Input library is already curated (e.g., NIST private library or post-peer-review subset) and lacks known annotation artifacts — assessment overhead outweighs benefit.
 - Library contains primarily unannotated spectra (e.g., experimental untargeted metabolomics data) — this skill targets *library* metadata consistency, not unknown compound discovery.

@@ -1,6 +1,6 @@
 ---
 name: feature-table-reproducibility-validation
-description: Validates that a metabolomic feature table has been correctly filtered and processed by verifying it matches expected cardinality (e.g., 7,483 features) after applying sequential filtering steps (minimum-peaks-in-a-row thresholds and population-level presence filtering). This skill ensures reproducibility of feature selection decisions across non-gap-filled and gap-filled datasets.
+description: Use when validating a metabolomics feature table by applying LC-MS or GC-MS techniques to ensure it matches expected cardinality after sequential filtering steps.
 when_to_use_negative:
 - Input data is already gap-filled; apply reproducibility validation separately to non-gap-filled data to isolate the effect of gap-filling.
 - Population structure differs from the six-population design; thresholds (6 peaks, 6 samples per population) must be recalibrated.

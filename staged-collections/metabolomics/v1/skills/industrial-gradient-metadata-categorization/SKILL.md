@@ -1,6 +1,6 @@
 ---
 name: industrial-gradient-metadata-categorization
-description: Stratifies fecal samples into four discrete industrialization categories (urban industrialized, rural industrialized, rural traditional, isolated traditional) and uses these assignments as the primary grouping variable for downstream metabolomic and microbiomic analyses. This skill is foundational for detecting and quantifying the impact of industrialization on metabolome composition and microbiome-metabolome interactions.
+description: Use when categorizing fecal samples in the metabolomics domain using LC-MS and GC-MS techniques based on industrialization levels for downstream analyses.
 when_to_use_negative:
 - Samples lack geographic or contextual information to justify industrialization assignment
 - Your research focuses on within-population heterogeneity rather than between-population comparisons

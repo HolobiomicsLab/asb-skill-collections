@@ -1,6 +1,6 @@
 ---
 name: feature-abundance-filtering-with-statistical-thresholds
-description: Filter LC–HRMS metabolomics feature tables by applying fold-change thresholds and replication criteria to remove background noise and prioritize genuine metabolite features. This skill combines abundance-based statistical filtering with biological replication requirements to reduce false positives in untargeted screening of pesticide metabolites.
+description: Use when filtering LC–HRMS metabolomics feature tables in untargeted lipidomics by applying fold-change thresholds and replication criteria to prioritize genuine metabolite features and reduce false positives.
 when_to_use_negative:
 - Input feature table already contains only manually curated or literature-validated metabolites; statistical filtering is redundant.
 - Sample set lacks ≥2 biological replicates per treatment group; the replication criterion cannot be applied and false-positive rate will increase.

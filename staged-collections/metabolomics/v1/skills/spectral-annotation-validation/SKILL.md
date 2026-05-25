@@ -1,6 +1,6 @@
 ---
 name: spectral-annotation-validation
-description: Validate the internal consistency of chemical annotation fields (SMILES, InChI, InChIKey) in mass spectral library records using RDKit cross-validation. This skill detects and quantifies annotation errors and inconsistencies that compromise spectral library quality and downstream analysis.
+description: Use when validating the internal consistency of chemical annotation fields (SMILES, InChI, InChIKey) in metabolomics mass spectral library records through RDKit cross-validation to detect and quantify annotation errors.
 when_to_use_negative:
 - Spectra that have not yet undergone repair functions (e.g., 'derive annotation from compound name', 'repair adduct and parent mass based on SMILES'). Run repair filters first to reduce false negatives; 52,084 spectra in the GNPS library had repairable inconsistencies.
 - Annotated spectra where chemical structure annotation is intentionally incomplete or absent (e.g., unannotated experimental data or library fragments). This filter requires all three SMILES, InChI, and InChIKey fields to be present.

@@ -1,6 +1,6 @@
 ---
 name: machine-learning-feature-selection
-description: Use random-forest variable importance scoring to identify and rank the most discriminative metabolite features from a preprocessed feature table, then apply a quantitative threshold to subset a tractable set of differential features for downstream annotation and validation. This approach reduces dimensionality while preserving biological signal by letting the ensemble model weight features by their predictive power.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to apply random-forest variable importance scoring on a preprocessed feature table to identify and rank discriminative metabolite features, followed by a quantitative threshold to subset differential features for annotation and validation.
 when_to_use_negative:
 - Input feature table is already a curated, low-dimensional feature set (e.g., <50 features); random-forest selection adds unnecessary complexity.
 - Outcome variable is continuous (e.g., age, metabolite concentration); use regression-based feature selection (e.g., elastic net, recursive feature elimination) instead.

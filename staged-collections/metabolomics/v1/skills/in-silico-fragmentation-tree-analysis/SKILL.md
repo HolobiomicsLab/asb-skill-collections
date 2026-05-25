@@ -1,6 +1,6 @@
 ---
 name: in-silico-fragmentation-tree-analysis
-description: Uses computational fragmentation prediction and molecular fingerprinting (Sirius) to elucidate the structure of ambiguous metabolite features by examining in-silico fragmentation trees for diagnostic parent-like fragments and functional group assignments. This skill bridges formula assignment and structural confirmation when MS2 spectra alone are insufficient.
+description: Use when analyzing metabolomics data through LC-MS or GC-MS untargeted lipidomics by employing in-silico fragmentation trees and molecular fingerprinting (Sirius) to clarify the structure of ambiguous metabolite features.
 when_to_use_negative:
 - Input MS2 spectrum is below signal-to-noise threshold (SNR < 3:1) or contains <4 diagnostic fragments — in-silico prediction becomes unreliable without sufficient experimental fragmentation data.
 - Molecular formula has already been conclusively validated by high-confidence spectral matching (dot-product similarity > 0.85) to a reference standard in MassBank — further in-silico analysis adds no discriminatory value.

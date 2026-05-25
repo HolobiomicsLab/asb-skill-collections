@@ -1,6 +1,6 @@
 ---
 name: precursor-adduct-mass-reconciliation
-description: Reconcile precursor m/z and adduct ion assignments in MS/MS spectral libraries by deriving chemical structure from SMILES and comparing calculated vs. recorded masses. This skill repairs incorrect or missing adduct annotations that would otherwise cause spectra to be removed during library curation.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to reconcile precursor m/z and adduct ion assignments in MS/MS spectral libraries by deriving chemical structure from SMILES and comparing calculated vs. recorded masses.
 when_to_use_negative:
 - Spectra without valid SMILES annotation or molecular structure information cannot be reconciled via this method.
 - Spectra with ambiguous or multiple possible SMILES representations where RDKit cannot compute a unique monoisotopic mass.
