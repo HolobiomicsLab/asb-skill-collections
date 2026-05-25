@@ -114,3 +114,21 @@ https://w3id.org/holobiomicslab/asb-skill/<slug>
 https://w3id.org/holobiomicslab/asb-tool/<slug>
 https://w3id.org/holobiomicslab/asb-benchmark/<slug>/v<N>
 ```
+
+> [!IMPORTANT]
+> **w3id IRIs are aspirational until the redirection PR lands at
+> [perma-id/w3id.org](https://github.com/perma-id/w3id.org).** The IRIs above appear
+> in artifact `@id` fields and are stable identifiers, but until the redirection
+> rules are merged at w3id.org, they don't yet HTTP-resolve to the GitHub-hosted
+> content.
+>
+> Temporary fallback for IRI resolution:
+>
+> | Logical IRI | Fallback URL |
+> |---|---|
+> | `w3id.org/holobiomicslab/asb-skill/<slug>` | `raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main/collections/<collection>/v<N>/skills/<slug>/SKILL.md` |
+> | `w3id.org/holobiomicslab/asb-tool/<slug>` | `raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main/collections/<collection>/v<N>/tools/<slug>.yaml` |
+>
+> The w3id PR text is drafted; submission is tracked in the project release plan.
+> Once merged at perma-id/w3id.org, IRIs resolve transparently and this fallback is
+> deprecated.

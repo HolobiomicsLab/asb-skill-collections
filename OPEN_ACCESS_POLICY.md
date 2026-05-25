@@ -111,6 +111,22 @@ To add a paper to a collection's corpus:
 
 A Lead Curator can solo-approve papers in their domain. For papers spanning multiple domains, two-curator sign-off is recommended (not strictly enforced; up to maintainer judgment).
 
+### Proposal SLA
+
+To keep the queue moving and avoid contributions stalling indefinitely:
+
+| Event | Target | Hard cap |
+|---|---|---|
+| Lead Curator acknowledges proposal (initial comment) | **7 days** | 14 days |
+| First substantive review (accept / request-changes / reject) | **30 days** | 60 days |
+| Decision finalised (PR merged or closed) | **45 days** | 90 days |
+
+**Stale handling:** if a `propose-paper` PR has had no maintainer activity in 90 days, a maintainer or any Curator may mark it `stale` and close. The proposer can re-open with new rationale or a different Lead Curator assignment. Closing a stale PR is non-final — the proposal can always be resubmitted.
+
+**Acceleration:** retracted-source detection, security-relevant content, and time-critical methodological corrections can bypass the standard SLA; tag the proposal `expedite` and the lead maintainer assigns directly.
+
+**Volume protection:** during release-cycle freeze (2 weeks before a tag), Lead Curators may pause new-proposal review and resume after the tag. The freeze is announced in `CHANGELOG.md` and on the Discussion forum.
+
 ---
 
 ## Curator review of derived content

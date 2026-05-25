@@ -7,7 +7,13 @@ abstract: "ASB curated skill + benchmark collection: Metabolomics"
 repository-code: https://github.com/HolobiomicsLab/asb-skill-collections
 license: Apache-2.0
 authors:
-  - family-names: Holobiomics Lab
-    given-names: ""
+  - name: AgenticScienceBuilder
+    alias: ASB
+    website: https://github.com/HolobiomicsLab/AgenticScienceBuilder
+    # entity: the pipeline that produced derived skills/tools/claims
+    # type: ResearchSoftware
+  - name: Holobiomics Lab
     affiliation: CNRS / Université Côte d'Azur
-    # role: placeholder — replace with Lead Curator + Curators after candidacy review
+    website: https://github.com/HolobiomicsLab
+    # entity: lab operating the pipeline + curating releases
+    # role: placeholder — replaced by Lead Curator + Curators after candidacy review
