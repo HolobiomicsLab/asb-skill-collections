@@ -1,0 +1,84 @@
+# vet-curator.yml — Runs on PRs that propose a new curator candidacy.
+# For each candidate YAML in the PR diff, runs 3-layer identity verification
+# (GitHub URL in ORCID profile + OpenAlex publication authorship + optional
+# institutional affiliation) and posts a tier-eligibility report.
+#
+# Spec ref: §9.2 (Identity verification) and §9.6 (Automation flows)
+# Driver: scripts/vet_curator.py
+
+name: Vet Curator
+
+on:
+  pull_request:
+    paths:
+      - 'candidates/*.yaml'
+      - 'candidates/*.yml'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  vet-curator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml httpx
+
+      - name: Identify candidacy files changed in this PR
+        id: changed
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          head="${{ github.event.pull_request.head.sha }}"
+          git diff --name-only --diff-filter=AM "$base" "$head" \
+            | grep -E '^candidates/.+\.ya?ml$' \
+            > /tmp/changed_candidates.txt || true
+          echo "count=$(wc -l < /tmp/changed_candidates.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          cat /tmp/changed_candidates.txt
+
+      - name: Vet each candidacy
+        if: steps.changed.outputs.count != '0'
+        id: vet
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/vet-reports
+          all_reports=""
+          while IFS= read -r cand_file; do
+            [ -z "$cand_file" ] && continue
+            out="/tmp/vet-reports/$(basename "$cand_file" .yaml).md"
+            python scripts/vet_curator.py "$cand_file" --output "$out"
+            all_reports="${all_reports}\n\n---\n\n#### \`${cand_file}\`\n\n$(cat "$out")"
+          done < /tmp/changed_candidates.txt
+          {
+            echo "report<<EOF"
+            echo -e "$all_reports"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Post PR comment with vetting report
+        if: always() && steps.changed.outputs.count != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const report = `${{ steps.vet.outputs.report }}`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `### Curator vetting report\n\n` +
+                    `_Auto-check via OpenAlex + ORCID public profile. Final approval rests with maintainers (see \`MAINTAINERS.md\`)._\n` +
+                    report +
+                    `\n\nDriver: \`scripts/vet_curator.py\` · Spec §9.2 / §9.6`
+            });

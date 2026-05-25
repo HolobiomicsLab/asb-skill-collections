@@ -1,0 +1,91 @@
+# tier-update.yml — Runs on merge to main when review attestations land.
+# Increments per-collection review counters in contributors.jsonld and
+# re-evaluates the contributor's tier per the collection's curator-criteria.yaml.
+#
+# Spec ref: §9.6 (Automation flows — tier_update.yml)
+# Driver: scripts/tier_update.py
+
+name: Tier Update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'collections/**/reviews/*.yaml'
+      - 'collections/**/reviews/*.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  tier-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # need before/after to diff this push
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Identify newly added review files in this push
+        id: changed
+        run: |
+          # Diff this push (before -> after) for added review attestations only.
+          before="${{ github.event.before }}"
+          after="${{ github.sha }}"
+          if [ "$before" = "0000000000000000000000000000000000000000" ]; then
+            git diff --name-only --diff-filter=A HEAD~1 HEAD \
+              > /tmp/added_reviews.txt 2>/dev/null || \
+            git ls-tree -r --name-only HEAD > /tmp/added_reviews.txt
+          else
+            git diff --name-only --diff-filter=A "$before" "$after" \
+              > /tmp/added_reviews.txt
+          fi
+          grep -E '^collections/.+/reviews/.+\.ya?ml$' /tmp/added_reviews.txt \
+            > /tmp/new_review_files.txt || true
+          echo "count=$(wc -l < /tmp/new_review_files.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          cat /tmp/new_review_files.txt
+
+      - name: Update tier per merged review
+        if: steps.changed.outputs.count != '0'
+        run: |
+          set -euo pipefail
+          while IFS= read -r review_file; do
+            [ -z "$review_file" ] && continue
+            # Parse: collections/<slug>/v<N>/reviews/<doi>.yaml
+            slug=$(echo "$review_file" | awk -F/ '{print $2}')
+            criteria_file="collections/${slug}/$(echo "$review_file" | awk -F/ '{print $3}')/curator-criteria.yaml"
+            [ -f "$criteria_file" ] || criteria_file="templates/curator-criteria.yaml.template"
+
+            orcid=$(python -c "import yaml; d=yaml.safe_load(open('$review_file')); print(d['reviewer']['orcid'])")
+            is_self=$(python -c "import yaml; d=yaml.safe_load(open('$review_file')); print('--is-self-authored' if d['reviewer'].get('is_coauthor') else '')")
+
+            python scripts/tier_update.py \
+              --orcid "$orcid" \
+              --collection "$slug" \
+              $is_self \
+              --contributors contributors.jsonld \
+              --criteria "$criteria_file"
+          done < /tmp/new_review_files.txt
+
+      - name: Commit and push contributors.jsonld
+        if: steps.changed.outputs.count != '0'
+        run: |
+          if ! git diff --quiet contributors.jsonld; then
+            git config user.name "asb-skill-collections-bot"
+            git config user.email "bot@holobiomicslab.cnrs.fr"
+            git add contributors.jsonld
+            git commit -m "chore(tier): auto-update contributor tiers after review merge
+
+Driver: scripts/tier_update.py · Spec §9.6"
+            git push origin main
+          fi
