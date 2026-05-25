@@ -7,8 +7,8 @@ when_to_use_negative:
 - You are working with targeted metabolomics or known-compound datasets where every detected feature has been independently validated; this filter is designed for untargeted discovery to reduce false positives.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0092
+- http://edamontology.org/topic_3172
 tools:
 - name: MZmine
   role: Applies the minimum-peaks-in-a-row filter during feature detection on raw LC-MS/MS data
@@ -22,10 +22,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/metabolite-feature-filtering-by-peak-count/SKILL.md
+    - outputs/audit_haffner_v2/skills/metabolite-feature-filtering-by-peak-count/skill.md
+    merged_at: '2026-05-25T06:57:01.478682+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-filtering-by-peak-count@sha256:c69d25f18e0feb64445fa888e4f43c9d588cf1526fa2901cbd99880cc37af80d
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-filtering-by-peak-count@sha256:4b374c3e7cd14dfb93beaabc710b337a27f04c78505ff7dadee84c9afc51b825
 ---
 
 # metabolite-feature-filtering-by-peak-count

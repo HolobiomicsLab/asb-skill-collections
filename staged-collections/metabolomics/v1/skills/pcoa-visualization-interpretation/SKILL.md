@@ -7,8 +7,8 @@ when_to_use_negative:
 - Sample size is very small (n < 6 per group); ordination plots become unreliable and visual clustering patterns are meaningless.
 edam_operation: http://edamontology.org/operation_3932
 edam_topics:
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
 tools:
 - name: QIIME2
   role: Computes Canberra distance matrices and generates PCoA ordinations from metabolite feature tables
@@ -23,10 +23,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/pcoa-visualization-interpretation/SKILL.md
+    - outputs/audit_haffner_v2/skills/pcoa-visualization-interpretation/skill.md
+    merged_at: '2026-05-25T06:57:01.502911+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/pcoa-visualization-interpretation@sha256:1242ede58a29af6e3100a5cc8db8f3e1a94335dce076a548404835806a63facc
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/pcoa-visualization-interpretation@sha256:ec7e501bd3909c0134a61daba287ccee9d5c2c9da9af7dca33e11bc335333d30
 ---
 
 # PCoA visualization and interpretation

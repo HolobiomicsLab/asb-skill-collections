@@ -7,8 +7,8 @@ when_to_use_negative:
 - Library lacks sufficient metadata (e.g., no ion mode, no precursor m/z fields at all) to enable even basic harmonization; preprocessing to recover or impute these fields is required first.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
 tools:
 - name: matchms
   role: Core framework for executing the metadata cleaning and repair filter pipeline, including basic, default, and library cleaning tiers; orchestrates RDKit and PubChem calls.
@@ -26,10 +26,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/metadata-harmonization-cleaning/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/metadata-harmonization-cleaning/skill.md
+    merged_at: '2026-05-25T06:57:01.455400+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-harmonization-cleaning@sha256:a53214b50a28c5d7c90d11d5c69c0067f422c1a78147aba44aa09ceacf55256d
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-harmonization-cleaning@sha256:529704f698cf68b06db99cfe5ca7adb67ffdb6a8636cbc58b3cdd7fdc6ce7039
 ---
 
 # metadata-harmonization-cleaning

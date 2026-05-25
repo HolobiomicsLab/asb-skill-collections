@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-consistency-checking/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/chemical-structure-consistency-checking/skill.md
+    merged_at: '2026-05-25T06:57:01.447461+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-consistency-checking@sha256:f69938338d83de9b0eabf9889324d630924578341eb990b22a51b78cf50ef2bf
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/chemical-structure-consistency-checking@sha256:f69938338d83de9b0eabf9889324d630924578341eb990b22a51b78cf50ef2bf
 ---
 
 # chemical-structure-consistency-checking

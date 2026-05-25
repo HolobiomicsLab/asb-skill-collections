@@ -7,8 +7,8 @@ when_to_use_negative:
 - The analysis goal is to detect rare or low-abundance taxa; this skill specifically selects high-strength predictors and will discard rare taxa regardless of biological relevance.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3174
 - http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3174
 tools:
 - name: mmvec
   role: Generates conditional probability matrices encoding the likelihood of observing each metabolite given each microbial taxon; output is filtered and ranked by this skill.
@@ -24,10 +24,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/microbial-taxa-rank-selection-by-predictive-strength/SKILL.md
+    - outputs/audit_haffner_v2/skills/microbial-taxa-rank-selection-by-predictive-strength/skill.md
+    merged_at: '2026-05-25T06:57:01.511766+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/microbial-taxa-rank-selection-by-predictive-strength@sha256:320a107aae1cc4338925e22f709df52838355cf7d62f10779821420e281456fb
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/microbial-taxa-rank-selection-by-predictive-strength@sha256:420f46653aa3fdf683299f788cdfc7366eff5fd1bc97d7d7c3cdcb11d784f543
 ---
 
 # microbial-taxa-rank-selection-by-predictive-strength

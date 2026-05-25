@@ -34,10 +34,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/high-resolution-mass-accuracy-analysis/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/high-resolution-mass-accuracy-analysis/skill.md
+    merged_at: '2026-05-25T06:57:01.591295+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/high-resolution-mass-accuracy-analysis@sha256:f1360fe72bbc9e7c0228f5e60e9a938620b51d3e80dbd79b4016a6c4481f121c
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/high-resolution-mass-accuracy-analysis@sha256:f1360fe72bbc9e7c0228f5e60e9a938620b51d3e80dbd79b4016a6c4481f121c
 ---
 
 # high-resolution-mass-accuracy-analysis

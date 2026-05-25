@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
 - http://edamontology.org/topic_0091
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_3071
+- http://edamontology.org/topic_3520
 tools:
 - name: matchms
   role: Core library cleaning and metadata harmonization framework; provides filter classes (Basic, Default, Library Cleaning) and repair functions (repair_adduct_based_on_smiles, repair_parent_mass, repair_smiles_of_salts, derive_annotation_from_compound_name)
@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-metadata-harmonization/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-metadata-harmonization/skill.md
+    merged_at: '2026-05-25T06:57:01.462004+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-metadata-harmonization@sha256:60a99a82f5ca79ce8d0d0e1e72ed281bf2643fb036d6a6127c45159c2c231137
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-metadata-harmonization@sha256:e0c390fccfd56752d4b011e38d65179cbcb306a6bc308128ad218831de26ce81
 ---
 
 # mass-spectrometry-metadata-harmonization

@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3933
 edam_topics:
 - http://edamontology.org/topic_0121
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_0654
+- http://edamontology.org/topic_3520
 tools:
 - name: MS-Cluster
   role: 'Primary clustering engine: merges redundant MS/MS spectra and outputs consensus peaks'
@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/spectral-redundancy-clustering/SKILL.md
+    - outputs/audit_s41592_full/skills/spectral-redundancy-clustering/skill.md
+    merged_at: '2026-05-25T06:57:01.556298+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:431f4f9692b5895ab5760ee9a270aec07691ab7dd39380b62bcd52a3809f44bb
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:6c57994b7e14763f6f71970763a504fa230d37313818316fcec31d1d6af41a28
 ---
 
 # spectral-redundancy-clustering

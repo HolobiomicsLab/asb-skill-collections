@@ -7,8 +7,8 @@ when_to_use_negative:
 - Unannotated experimental mass spectral data without chemical structure metadata; this skill is designed for library cleaning, not de novo annotation discovery.
 edam_operation: http://edamontology.org/operation_3932
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0593
+- http://edamontology.org/topic_3172
 tools:
 - name: matchms
   role: Framework that implements the 'require_valid_annotation' filter to load and cross-validate SMILES, InChI, and InChIKey using RDKit; orchestrates repair functions and generates validation reports.
@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/metadata-completeness-evaluation/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/metadata-completeness-evaluation/skill.md
+    merged_at: '2026-05-25T06:57:01.466762+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-completeness-evaluation@sha256:63346a0e73861953a8a6e6c63c7c88719408d47852ecd03111aea7b034c22f2e
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-completeness-evaluation@sha256:103cfa369572bc8069bd11fc541dc7de955507ec6ad370a851f8ac76b027b788
 ---
 
 # metadata-completeness-evaluation

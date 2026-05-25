@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3632
 edam_topics:
 - http://edamontology.org/topic_0153
-- http://edamontology.org/topic_3375
 - http://edamontology.org/topic_0943
+- http://edamontology.org/topic_3375
 tools:
 - name: GenForm
   role: Command-line tool for molecular formula calculation from MS1 m/z and MS2 fragmentation spectra, with elemental composition constraints based on parent pesticide formula
@@ -32,10 +32,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/pesticide-metabolite-structure-elucidation/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/pesticide-metabolite-structure-elucidation/skill.md
+    merged_at: '2026-05-25T06:57:01.624433+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/pesticide-metabolite-structure-elucidation@sha256:ada8fcc753cbd57782c27615cfa02942e50168bca0cd9f900bcda001b50c1d8f
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/pesticide-metabolite-structure-elucidation@sha256:dec449f882a4a42939f95621f61c6a2c8a622808cc20a86c2bb0b455d1c7bb16
 ---
 
 # pesticide-metabolite-structure-elucidation

@@ -7,8 +7,8 @@ when_to_use_negative:
 - Parent pesticide elemental composition is unknown or highly ambiguous; the fuzzy formula constraint is essential to avoid combinatorial explosion of candidates.
 edam_operation: http://edamontology.org/operation_3632
 edam_topics:
-- http://edamontology.org/topic_3370
 - http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3370
 tools:
 - name: GenForm
   role: command-line tool for calculating molecular formulas from MS1 m/z and MS2 spectra, constrained by fuzzy formula; outputs scored candidate formulas and fragment explainability
@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-molecular-formula-assignment/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-molecular-formula-assignment/skill.md
+    merged_at: '2026-05-25T06:57:01.633914+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-molecular-formula-assignment@sha256:6987ca22c32bb9242c873b4d2ec218962705f1ddfbb01d6f6f40edd55fae24a4
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-molecular-formula-assignment@sha256:929b65a413b6a21c6e3ecd276442a1bff6175f65dc9f19929aaeef53a11efef3
 ---
 
 # mass-spectrometry-molecular-formula-assignment

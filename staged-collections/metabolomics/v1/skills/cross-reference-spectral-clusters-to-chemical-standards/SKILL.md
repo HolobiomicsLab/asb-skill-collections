@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3860
 edam_topics:
 - http://edamontology.org/topic_0121
-- http://edamontology.org/topic_3375
 - http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3375
 tools:
 - name: GNPS (Global Natural Products Social Molecular Networking)
   role: Generates feature-based molecular networks, provides MS/MS reference library, hosts MassQL query engine for spectral filtering
@@ -27,10 +27,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/cross-reference-spectral-clusters-to-chemical-standards/SKILL.md
+    - outputs/audit_jeong_full/skills/cross-reference-spectral-clusters-to-chemical-standards/skill.md
+    merged_at: '2026-05-25T06:57:01.532029+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:9c4a255f87cba9fde503c0300cc06cdd5dccb231a8d15d3f776679c35b6481fe
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:73503b45b2c299b0de762f3769f88036d71df52a620340481568f153edfdbd87
 ---
 
 # cross-reference-spectral-clusters-to-chemical-standards

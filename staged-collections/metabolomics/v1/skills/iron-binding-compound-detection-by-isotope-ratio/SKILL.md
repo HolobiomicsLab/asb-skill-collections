@@ -7,8 +7,8 @@ when_to_use_negative:
 - Sample has not been exposed to iron stress, supplementation, or chelator addition; isotope patterns will be absent or too weak to detect against noise
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3520
 tools:
 - name: MassQL
   role: Query language and execution engine for defining and filtering MS spectra by chemical pattern (isotope ratios, neutral losses, product ions)
@@ -34,10 +34,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/iron-binding-compound-detection-by-isotope-ratio/SKILL.md
+    - outputs/audit_s41592_full/skills/iron-binding-compound-detection-by-isotope-ratio/skill.md
+    merged_at: '2026-05-25T06:57:01.581047+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:be2f9e9d143389202bc25ad142ade9256d2978f1a6b69986fed30d4b63d5a436
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:e7a4f6c833bd1e101b0e2bdcaadc1e7b1a29bcc24dc0b8ebd6183b7ea2a46e8f
 ---
 
 # iron-binding-compound-detection-by-isotope-ratio

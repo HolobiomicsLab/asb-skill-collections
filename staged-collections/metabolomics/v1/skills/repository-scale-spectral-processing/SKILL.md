@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/repository-scale-spectral-processing/SKILL.md
+    - outputs/audit_s41592_full/skills/repository-scale-spectral-processing/skill.md
+    merged_at: '2026-05-25T06:57:01.568416+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/repository-scale-spectral-processing@sha256:a02ca468322fdcfde554cdbff3f444683f07f6ad07d51e6c22f46a2aa9e3a42a
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/repository-scale-spectral-processing@sha256:a02ca468322fdcfde554cdbff3f444683f07f6ad07d51e6c22f46a2aa9e3a42a
 ---
 
 # Repository-scale spectral processing

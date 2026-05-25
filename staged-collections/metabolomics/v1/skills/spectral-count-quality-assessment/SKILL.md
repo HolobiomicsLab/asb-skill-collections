@@ -7,8 +7,8 @@ when_to_use_negative:
 - Your goal is to identify individual miscurated spectra, not to measure aggregate curation quality—this skill is aggregate-focused and will not flag which specific spectrum entry is wrong.
 edam_operation: http://edamontology.org/operation_3802
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
 tools:
 - name: matchms
   role: Core library-cleaning framework that executes the filter chain, repair functions, and tracks spectrum counts through each stage
@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/spectral-count-quality-assessment/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/spectral-count-quality-assessment/skill.md
+    merged_at: '2026-05-25T06:57:01.432923+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-count-quality-assessment@sha256:a6d95d1e93bc0084c4b81162e3fdf9db210dec9e630df63ce81cedc3602a2f91
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-count-quality-assessment@sha256:f1fbead48571f4152c58784a8a1a511b221803ea35481fa1ba28995b96cce9dc
 ---
 
 # spectral-count-quality-assessment

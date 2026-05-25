@@ -7,8 +7,8 @@ when_to_use_negative:
 - Comparison field (reference annotation) is not chemically standardized (e.g., raw user-entered SMILES with variable aromaticity) — RDKit comparison will fail or give false mismatches; canonicalize reference annotations first.
 edam_operation: http://edamontology.org/operation_3096
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3172
 tools:
 - name: matchms
   role: load, filter, and manage spectrum objects; apply annotation-derivation filters and structure comparison workflows
@@ -26,10 +26,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/annotation-error-rate-calculation/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/annotation-error-rate-calculation/skill.md
+    merged_at: '2026-05-25T06:57:01.416818+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:5ffb67ca31a67d4fa87b700b525758cd4bd4bdb9b7e95c2405ef9d0224bdd961
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:bf10b2f122040eb8848a6b89c23d20409948d5718ab29d4e3d9e4f234acfaee0
 ---
 
 # annotation-error-rate-calculation

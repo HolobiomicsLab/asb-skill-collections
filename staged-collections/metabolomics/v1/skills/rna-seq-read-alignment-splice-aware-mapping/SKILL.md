@@ -7,8 +7,8 @@ when_to_use_negative:
 - You only need to quantify pre-existing features and do not need to discover novel isoforms or splice variants.
 edam_operation: http://edamontology.org/operation_3198
 edam_topics:
-- http://edamontology.org/topic_3170
 - http://edamontology.org/topic_0203
+- http://edamontology.org/topic_3170
 tools:
 - name: HISAT2
   role: Splice-aware short-read aligner; maps paired-end RNA-seq reads to reference genome with automatic exon–intron junction detection
@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/rna-seq-read-alignment-splice-aware-mapping/SKILL.md
+    - outputs/audit_jeong_full/skills/rna-seq-read-alignment-splice-aware-mapping/skill.md
+    merged_at: '2026-05-25T06:57:01.519594+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:642839479498337d59e061602e8f3a2251884eb146753b4cb57478961247f3af
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:1d32586b880ff295baa8298ca12ab914b885ce0dcc7bebf62cc8cfa383731383
 ---
 
 # RNA-seq read alignment with splice-aware mapping

@@ -7,8 +7,8 @@ when_to_use_negative:
 - Do not use MassQL if your data is already annotated and you simply need to organize or cluster known compounds; it is designed for discovery and pattern matching, not for post-hoc metadata curation.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3370
 - http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3370
 tools:
 - name: lark
   role: Parses MassQL query strings into internal parse trees and data structures for execution
@@ -35,10 +35,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/mass-spectrometry-query-language-syntax/SKILL.md
+    - outputs/audit_s41592_full/skills/mass-spectrometry-query-language-syntax/skill.md
+    merged_at: '2026-05-25T06:57:01.573814+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-query-language-syntax@sha256:fe95261fe57d43bc3bf2f76fe124dd1539d45ea969ea1ca12a0c5e04a6446260
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-query-language-syntax@sha256:83aff9096a427540d8ae2eed34b86b7a9b12504f276e76c5496bf341e3fd9066
 ---
 
 # mass-spectrometry-query-language-syntax

@@ -7,9 +7,9 @@ when_to_use_negative:
 - Target metabolites are aglycones or contain no glycosidic bonds; no neutral losses of 132 or 162 Da will occur.
 edam_operation: http://edamontology.org/operation_3933
 edam_topics:
+- http://edamontology.org/topic_0121
 - http://edamontology.org/topic_0625
 - http://edamontology.org/topic_3520
-- http://edamontology.org/topic_0121
 tools:
 - name: GNPS (Global Natural Products Social Molecular Networking)
   role: Host platform for feature-based molecular networking (FBMN) workflow and MassQL query execution; generates spectral similarity networks and cosine similarity scoring
@@ -27,10 +27,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/neutral-loss-filtering-for-glycoside-annotation/SKILL.md
+    - outputs/audit_jeong_full/skills/neutral-loss-filtering-for-glycoside-annotation/skill.md
+    merged_at: '2026-05-25T06:57:01.534375+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:4c9129983817ca59d431f4921241e93a006924a94c0c5ace87e62db640ecb9d6
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:9e98f6317de841bec951fe2cbabd34428b9efff7e5ab346312463ffeeacf2ceb
 ---
 
 # neutral-loss-filtering-for-glycoside-annotation

@@ -7,8 +7,8 @@ when_to_use_negative:
 - Input is already a fully validated and manually curated adduct table — repair is redundant and risks introducing errors.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3172
 tools:
 - name: matchms
   role: Framework hosting the 'repair_adduct_based_on_smiles' filter; orchestrates spectrum I/O, metadata access, and filter application
@@ -26,10 +26,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/spectral-library-adduct-repair-validation/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/spectral-library-adduct-repair-validation/skill.md
+    merged_at: '2026-05-25T06:57:01.474820+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-library-adduct-repair-validation@sha256:f47112cc9b6584c2cb2b0aa6db0ebc5996002df3104e96bd607c98484bd7869a
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-library-adduct-repair-validation@sha256:096a8a76e054a5e4037331e6d818b00228b1cfd3b0f82fbb0144cf3bcf17743f
 ---
 
 # Spectral Library Adduct Repair and Validation

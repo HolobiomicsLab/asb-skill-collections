@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3436
 edam_topics:
 - http://edamontology.org/topic_0625
-- http://edamontology.org/topic_3407
 - http://edamontology.org/topic_3314
+- http://edamontology.org/topic_3407
 tools:
 - name: matchms
   role: Provides metadata filters ('Require valid annotation', 'Repair adduct and parent mass based on SMILES', 'Repair not matching annotation') that implement field validation logic and repair workflows; orchestrates the full pipeline
@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/metadata-field-validation/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/metadata-field-validation/skill.md
+    merged_at: '2026-05-25T06:57:01.423547+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-field-validation@sha256:0fc89ba772be7ad3f46367c823a57534252f1b2b76d30f76970d58493a34d267
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-field-validation@sha256:756085e1f827db454109447903b230dca5c02a484275748ea9151d2158b39b53
 ---
 
 # metadata-field-validation

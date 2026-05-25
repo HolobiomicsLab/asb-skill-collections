@@ -7,8 +7,8 @@ when_to_use_negative:
 - The predicted fold-change threshold is not specified or hypothesis is exploratory (not confirmatory)—use differential expression testing (e.g., edgeR GLM, DESeq2) instead to identify significant genes without a prior fold-change target.
 edam_operation: http://edamontology.org/operation_3565
 edam_topics:
-- http://edamontology.org/topic_3170
 - http://edamontology.org/topic_0203
+- http://edamontology.org/topic_3170
 tools:
 - name: HTSeq
   role: Counts reads mapped to annotated genes from sorted BAM files using union overlap mode and reverse strand orientation to produce raw count matrices.
@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/differential-expression-validation-fold-change-verification/SKILL.md
+    - outputs/audit_jeong_full/skills/differential-expression-validation-fold-change-verification/skill.md
+    merged_at: '2026-05-25T06:57:01.544181+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:068aa34e78e72ab42cabb57fc02604e0ca7d37e79b5e4c06f9127dc26999862d
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:2eb0f1cda4121a6add72d5dc115bf8f7e29765fe86e0cae47b40aa0687dc9a2f
 ---
 
 # differential-expression-validation-fold-change-verification

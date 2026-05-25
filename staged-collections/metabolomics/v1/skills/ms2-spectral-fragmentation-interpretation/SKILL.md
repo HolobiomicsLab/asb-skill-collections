@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/ms2-spectral-fragmentation-interpretation/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/ms2-spectral-fragmentation-interpretation/skill.md
+    merged_at: '2026-05-25T06:57:01.613060+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms2-spectral-fragmentation-interpretation@sha256:1afff755c8c270d206121002ffddf414c26bf69d6a9ccaab440485ab534b53a9
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms2-spectral-fragmentation-interpretation@sha256:1afff755c8c270d206121002ffddf414c26bf69d6a9ccaab440485ab534b53a9
 ---
 
 # MS2 Spectral Fragmentation Interpretation

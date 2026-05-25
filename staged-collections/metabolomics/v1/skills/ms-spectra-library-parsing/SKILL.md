@@ -7,8 +7,8 @@ when_to_use_negative:
 - Library has already been filtered or curated and you are resuming from an intermediate checkpoint — load from the serialized checkpoint instead of re-parsing the original MGF.
 edam_operation: http://edamontology.org/operation_3436
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3172
 tools:
 - name: matchms
   role: Core library for parsing MGF spectral files and instantiating Spectrum objects with metadata
@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/ms-spectra-library-parsing/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/ms-spectra-library-parsing/skill.md
+    merged_at: '2026-05-25T06:57:01.453306+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms-spectra-library-parsing@sha256:c10420e6eaef45b18fbb4d8f0aad240f6da9cae459e99785f7241b9bd4768016
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms-spectra-library-parsing@sha256:3dbb93f870086d73ce0149d05252d1b2dad18c409f6cacf4454f57cd5559cf6e
 ---
 
 # MS/MS Spectra Library Parsing

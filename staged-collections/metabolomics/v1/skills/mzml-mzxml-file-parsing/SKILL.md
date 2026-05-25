@@ -29,10 +29,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/mzml-mzxml-file-parsing/SKILL.md
+    - outputs/audit_s41592_full/skills/mzml-mzxml-file-parsing/skill.md
+    merged_at: '2026-05-25T06:57:01.570487+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/mzml-mzxml-file-parsing@sha256:a95235cf9686fe6c8bd0f41f394b2dc9dd496fe245f493bcb7856066c44637e6
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mzml-mzxml-file-parsing@sha256:a95235cf9686fe6c8bd0f41f394b2dc9dd496fe245f493bcb7856066c44637e6
 ---
 
 # mzml-mzxml-file-parsing

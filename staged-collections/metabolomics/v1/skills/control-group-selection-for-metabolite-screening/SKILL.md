@@ -7,8 +7,8 @@ when_to_use_negative:
 - If the study uses a different biotransformation system (e.g., pooled human liver S9 from a single donor, or recombinant P450 enzymes) without re-optimization of the FC threshold; the absolute fold-change threshold of >4 may require adjustment based on signal-to-noise ratio specific to that system.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3172
 tools:
 - name: XCMS
   role: Feature detection, alignment, and retention time correction of all LC–HRMS samples (pesticide-incubated and negative control) prior to fold-change calculation
@@ -27,10 +27,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/control-group-selection-for-metabolite-screening/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/control-group-selection-for-metabolite-screening/skill.md
+    merged_at: '2026-05-25T06:57:01.610658+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/control-group-selection-for-metabolite-screening@sha256:0069c3b7ded2ffdf9a8bed0152225305c54add67475846af6099c8edc5c76db3
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/control-group-selection-for-metabolite-screening@sha256:57c4ae9401a92ebb16b6b0704b28bd7461158883253e8d6806cfa62204db26b3
 ---
 
 # control-group-selection-for-metabolite-screening

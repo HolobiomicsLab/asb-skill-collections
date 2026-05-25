@@ -7,8 +7,8 @@ when_to_use_negative:
 - Sample sizes are very small (n < 2 per group) — TMM normalization requires sufficient library diversity to estimate composition bias reliably
 edam_operation: http://edamontology.org/operation_3680
 edam_topics:
-- http://edamontology.org/topic_3170
 - http://edamontology.org/topic_0203
+- http://edamontology.org/topic_3170
 tools:
 - name: HTSeq
   role: Count reads overlapping annotated genes from BAM files in union mode with reverse strand orientation
@@ -23,10 +23,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/transcript-abundance-estimation-counting/SKILL.md
+    - outputs/audit_jeong_full/skills/transcript-abundance-estimation-counting/skill.md
+    merged_at: '2026-05-25T06:57:01.540264+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:2b98d67848d186361a8aae3829ccc271476f63f79804c4d569f0466794e488e8
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:e51e8ec706815fc0d066b6848eb77792aea1e4911ea2b77b8dd22c6874405989
 ---
 
 # transcript-abundance-estimation-counting

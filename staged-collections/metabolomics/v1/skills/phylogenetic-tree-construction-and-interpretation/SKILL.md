@@ -7,9 +7,9 @@ when_to_use_negative:
 - Sequence divergence is very high or the alignment has excessive gaps (>50% missing data per column); homology assumptions break down and tree topology becomes unreliable.
 edam_operation: http://edamontology.org/operation_0323
 edam_topics:
-- http://edamontology.org/topic_3293
 - http://edamontology.org/topic_0080
 - http://edamontology.org/topic_0623
+- http://edamontology.org/topic_3293
 tools:
 - name: MAFFT
   role: Multiple sequence alignment of candidate UGT sequences to establish positional homology; used with default parameters prior to tree inference
@@ -32,10 +32,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/phylogenetic-tree-construction-and-interpretation/SKILL.md
+    - outputs/audit_jeong_full/skills/phylogenetic-tree-construction-and-interpretation/skill.md
+    merged_at: '2026-05-25T06:57:01.548467+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/phylogenetic-tree-construction-and-interpretation@sha256:9df5bc7f500b1ba6254ef02cd6d57035bf52e09c0ade2149b235f9cd63252cec
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/phylogenetic-tree-construction-and-interpretation@sha256:5e3a249aae5dfb87f50cfe92c56256752e253f562658f25fa2a2a4a3916613d4
 ---
 
 # phylogenetic-tree-construction-and-interpretation

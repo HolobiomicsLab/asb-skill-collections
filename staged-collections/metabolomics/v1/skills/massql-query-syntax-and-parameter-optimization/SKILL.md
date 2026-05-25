@@ -7,8 +7,8 @@ when_to_use_negative:
 - You have already executed a query at scale and are troubleshooting results post-hoc; redesign the query parameters and re-execute rather than applying this skill.
 edam_operation: http://edamontology.org/operation_3631
 edam_topics:
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
 tools:
 - name: MassQL
   role: Query language and reference engine for pattern matching in MS data; parses query syntax and executes filtering logic against spectral data
@@ -32,10 +32,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/massql-query-syntax-and-parameter-optimization/SKILL.md
+    - outputs/audit_s41592_full/skills/massql-query-syntax-and-parameter-optimization/skill.md
+    merged_at: '2026-05-25T06:57:01.566014+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:21941755216584435e5a0ba37a82bad1ce7f68509f0a90c65f110e2c0a86c26d
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:99dda737ae02e7ef4ff7a0ed3fd02c06749f63b7c2f5f5ae333e1016e9d82e7b
 ---
 
 # MassQL Query Syntax and Parameter Optimization

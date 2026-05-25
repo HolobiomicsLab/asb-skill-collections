@@ -7,8 +7,8 @@ when_to_use_negative:
 - Your workflow requires vendor-specific metadata or calibration that is lost in conversion to open formats.
 edam_operation: http://edamontology.org/operation_3650
 edam_topics:
-- http://edamontology.org/topic_3370
 - http://edamontology.org/topic_0769
+- http://edamontology.org/topic_3370
 tools:
 - name: pyteomics
   role: Read and parse open MS data files (mzML, mzXML, MGF) into in-memory pandas data frames for downstream filtering and export
@@ -23,14 +23,6 @@ tools:
   role: Cache converted MS spectra in columnar format for fast repeated querying of large datasets
 - name: pandas
   role: Serialize and export filtered or processed MS spectra to tabular formats (CSV/TSV) with scan identifiers, m/z, intensity, and metadata
-merged_aliases:
-- ms-data-format-conversion-and-export
-merged_alias_records:
-- alias: ms-data-format-conversion-and-export
-  slug: ms-data-format-conversion-and-export
-  jaccard_score: 1.0
-  method: token-set-jaccard
-  decision: auto
 provenance:
   source_task_ids:
   - task_001
@@ -38,11 +30,26 @@ provenance:
   source_papers:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
+merged_aliases:
+- ms-data-format-conversion-and-export
 schema_version: 0.2.0
+merged_alias_records:
+- alias: ms-data-format-conversion-and-export
+  slug: ms-data-format-conversion-and-export
+  jaccard_score: 1.0
+  method: token-set-jaccard
+  decision: auto
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/ms-data-export-and-format-conversion/SKILL.md
+    - outputs/audit_s41592_full/skills/ms-data-export-and-format-conversion/skill.md
+    merged_at: '2026-05-25T06:57:01.585845+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms-data-export-and-format-conversion@sha256:3f1111d546b0f308bbad53f6499e64fdc0f0189aa54bdb39326ced6d820d2a4f
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms-data-export-and-format-conversion@sha256:a7b9c2d41b457abb9ce0c1ffe95a3d74a297bed88b91f98458c944bbdbc4c5a1
 ---
 
 # MS data export and format conversion

@@ -24,10 +24,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/metadata-validation-cross-check/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/metadata-validation-cross-check/skill.md
+    merged_at: '2026-05-25T06:57:01.472726+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-validation-cross-check@sha256:35b212bf448852ed71ed8860896c053d7a4c324e2058951cd7364e5ab35e5ad1
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metadata-validation-cross-check@sha256:35b212bf448852ed71ed8860896c053d7a4c324e2058951cd7364e5ab35e5ad1
 ---
 
 # metadata-validation-cross-check

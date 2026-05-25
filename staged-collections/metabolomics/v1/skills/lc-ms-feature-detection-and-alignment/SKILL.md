@@ -7,8 +7,8 @@ when_to_use_negative:
 - Data originate from targeted or scheduled LC–MS/MS with pre-defined inclusion lists; use targeted feature extraction (e.g., XICs) instead of discovery-mode peak detection.
 edam_operation: http://edamontology.org/operation_3634
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3172
 tools:
 - name: XCMS
   role: Peak detection (centwave), retention-time correction (orbiwarp), and peak grouping (density method) on centroided mzML spectra
@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/lc-ms-feature-detection-and-alignment/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/lc-ms-feature-detection-and-alignment/skill.md
+    merged_at: '2026-05-25T06:57:01.629120+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/lc-ms-feature-detection-and-alignment@sha256:0c97c344868541ff7a3c4aa5d79e94ec427fad9ceba651342ecaf8fc7e3202c2
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/lc-ms-feature-detection-and-alignment@sha256:81dc5205af455e83c3630bc5eb7718627f96925c5988e3f94f82100b8aa87846
 ---
 
 # lc-ms-feature-detection-and-alignment

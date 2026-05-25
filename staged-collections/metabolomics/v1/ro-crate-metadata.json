@@ -477,14 +477,14 @@
       "@type": "HowTo",
       "name": "metabolite-annotation-consistency-checking",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:614587b1f76df9f58c39800303cbbe3af2b35b5bac32ffd4bb562bf4cc4cf136"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:43e148b9035ca8f15d50cce5359f9f0b9e52912f11581542b0092bbd868b1440"
     },
     {
       "@id": "urn:asb:skill:smiles-inchi-chemical-identifier-repair",
       "@type": "HowTo",
       "name": "smiles-inchi-chemical-identifier-repair",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:48051c1922ef63b480f10b715857476524dda1c44dbbdc6dffe340165a11851d"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:d3e3512149a31d029d5fbe311cec92991577fb056ef336b976a46ee37d859709"
     },
     {
       "@id": "urn:asb:skill:spectral-metadata-annotation-mismatch-detection",
@@ -505,7 +505,7 @@
       "@type": "HowTo",
       "name": "annotation-error-rate-calculation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:bf10b2f122040eb8848a6b89c23d20409948d5718ab29d4e3d9e4f234acfaee0"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/annotation-error-rate-calculation@sha256:5ffb67ca31a67d4fa87b700b525758cd4bd4bdb9b7e95c2405ef9d0224bdd961"
     },
     {
       "@id": "urn:asb:skill:smiles-structure-canonicalization",
@@ -526,14 +526,14 @@
       "@type": "HowTo",
       "name": "metadata-field-validation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metadata-field-validation@sha256:756085e1f827db454109447903b230dca5c02a484275748ea9151d2158b39b53"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metadata-field-validation@sha256:0fc89ba772be7ad3f46367c823a57534252f1b2b76d30f76970d58493a34d267"
     },
     {
       "@id": "urn:asb:skill:mass-spectrometry-library-curation",
       "@type": "HowTo",
       "name": "mass-spectrometry-library-curation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:bfee19fd71242906992de7ebe16930203e842b9672ad977c834d31ac6355e1ce"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:0b99cf307b34e82fd17554469f9bab9696eba3c76e282df8c84e169e1a874c3f"
     },
     {
       "@id": "urn:asb:skill:rdkit-smiles-inchi-cross-validation",
@@ -554,7 +554,7 @@
       "@type": "HowTo",
       "name": "spectral-count-quality-assessment",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/spectral-count-quality-assessment@sha256:f1fbead48571f4152c58784a8a1a511b221803ea35481fa1ba28995b96cce9dc"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/spectral-count-quality-assessment@sha256:a6d95d1e93bc0084c4b81162e3fdf9db210dec9e630df63ce81cedc3602a2f91"
     },
     {
       "@id": "urn:asb:skill:chemical-structure-smiles-validation",
@@ -589,7 +589,7 @@
       "@type": "HowTo",
       "name": "spectral-annotation-validation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/spectral-annotation-validation@sha256:6694fb60400e97785cb5ccd6a1ae457e2a38d866eadc9f11316bc70d0646de49"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/spectral-annotation-validation@sha256:81b5193863d89a6c2b18291cb0f7fa2730b17482fdaf22678221cf973ee818c1"
     },
     {
       "@id": "urn:asb:skill:numeric-value-comparison-across-sources",
@@ -624,14 +624,14 @@
       "@type": "HowTo",
       "name": "ms-spectra-library-parsing",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/ms-spectra-library-parsing@sha256:3dbb93f870086d73ce0149d05252d1b2dad18c409f6cacf4454f57cd5559cf6e"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/ms-spectra-library-parsing@sha256:c10420e6eaef45b18fbb4d8f0aad240f6da9cae459e99785f7241b9bd4768016"
     },
     {
       "@id": "urn:asb:skill:metadata-harmonization-cleaning",
       "@type": "HowTo",
       "name": "metadata-harmonization-cleaning",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metadata-harmonization-cleaning@sha256:529704f698cf68b06db99cfe5ca7adb67ffdb6a8636cbc58b3cdd7fdc6ce7039"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metadata-harmonization-cleaning@sha256:a53214b50a28c5d7c90d11d5c69c0067f422c1a78147aba44aa09ceacf55256d"
     },
     {
       "@id": "urn:asb:skill:chemical-structure-derivation-from-compound-names",
@@ -652,7 +652,7 @@
       "@type": "HowTo",
       "name": "mass-spectrometry-metadata-harmonization",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-metadata-harmonization@sha256:e0c390fccfd56752d4b011e38d65179cbcb306a6bc308128ad218831de26ce81"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-metadata-harmonization@sha256:60a99a82f5ca79ce8d0d0e1e72ed281bf2643fb036d6a6127c45159c2c231137"
     },
     {
       "@id": "urn:asb:skill:parent-mass-correction-from-molar-mass",
@@ -666,7 +666,7 @@
       "@type": "HowTo",
       "name": "metadata-completeness-evaluation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metadata-completeness-evaluation@sha256:103cfa369572bc8069bd11fc541dc7de955507ec6ad370a851f8ac76b027b788"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metadata-completeness-evaluation@sha256:63346a0e73861953a8a6e6c63c7c88719408d47852ecd03111aea7b034c22f2e"
     },
     {
       "@id": "urn:asb:skill:artifact-provenance-tracing-to-repository",
@@ -694,7 +694,7 @@
       "@type": "HowTo",
       "name": "spectral-library-adduct-repair-validation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/spectral-library-adduct-repair-validation@sha256:096a8a76e054a5e4037331e6d818b00228b1cfd3b0f82fbb0144cf3bcf17743f"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/spectral-library-adduct-repair-validation@sha256:f47112cc9b6584c2cb2b0aa6db0ebc5996002df3104e96bd607c98484bd7869a"
     },
     {
       "@id": "urn:asb:skill:smiles-salt-notation-repair",
@@ -708,7 +708,7 @@
       "@type": "HowTo",
       "name": "metabolite-feature-filtering-by-peak-count",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-filtering-by-peak-count@sha256:4b374c3e7cd14dfb93beaabc710b337a27f04c78505ff7dadee84c9afc51b825"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-filtering-by-peak-count@sha256:c69d25f18e0feb64445fa888e4f43c9d588cf1526fa2901cbd99880cc37af80d"
     },
     {
       "@id": "urn:asb:skill:metabolite-importance-ranking",
@@ -722,7 +722,7 @@
       "@type": "HowTo",
       "name": "threshold-based-feature-filtering",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/threshold-based-feature-filtering@sha256:ef09dd79c111fc545e6bc83172000b70bcfa03480f5a21ffdd4d9a853068c1de"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/threshold-based-feature-filtering@sha256:7d325abe7b5c60284c3d5bb80c7c1e43162e9855e68c1724ed9f4a96d3955e8d"
     },
     {
       "@id": "urn:asb:skill:metabolite-feature-table-distance-metric-computation",
@@ -743,7 +743,7 @@
       "@type": "HowTo",
       "name": "non-gap-filled-data-processing",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/non-gap-filled-data-processing@sha256:366dbaafa1379e4b51872fe3d03ca0455ab420477dfe86b85e4f90d05fd8821b"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/non-gap-filled-data-processing@sha256:bf5a3913bb9c3188b7b65c68c55360144d0e987378e0deb60f5cd1227c6f90e9"
     },
     {
       "@id": "urn:asb:skill:metabolite-feature-table-subsetting",
@@ -771,28 +771,28 @@
       "@type": "HowTo",
       "name": "permanova-beta-diversity-testing",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/permanova-beta-diversity-testing@sha256:bc385a9ed6fa97c4762da2fa170e39320274b8d8f3d7c12d25debd681c4f7712"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/permanova-beta-diversity-testing@sha256:85446bc795c46f0007ecc7f5a73a86c95a4a51fda255189878d583c53bae8e95"
     },
     {
       "@id": "urn:asb:skill:feature-table-reproducibility-validation",
       "@type": "HowTo",
       "name": "feature-table-reproducibility-validation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/feature-table-reproducibility-validation@sha256:9727b65e60eb19beca165f40458698159378bd63df3197844218ab7e9cbd5716"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/feature-table-reproducibility-validation@sha256:6f0ebbd5da4ccb310a43b07617bcf351be7246437b966ef413bab3c48c252fea"
     },
     {
       "@id": "urn:asb:skill:pcoa-visualization-interpretation",
       "@type": "HowTo",
       "name": "pcoa-visualization-interpretation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/pcoa-visualization-interpretation@sha256:ec7e501bd3909c0134a61daba287ccee9d5c2c9da9af7dca33e11bc335333d30"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/pcoa-visualization-interpretation@sha256:1242ede58a29af6e3100a5cc8db8f3e1a94335dce076a548404835806a63facc"
     },
     {
       "@id": "urn:asb:skill:differential-feature-identification",
       "@type": "HowTo",
       "name": "differential-feature-identification",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:eb0c85627bc197bf60eb7ca0ee4dcaa44aad42130971da2873cd7acd59b6c293"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:0ed164b7bc7b5dfbb0b49792ccdbece1e29c2c83a7ea5cd1e0e17f9545ff82b0"
     },
     {
       "@id": "urn:asb:skill:industrial-gradient-metadata-categorization",
@@ -806,56 +806,56 @@
       "@type": "HowTo",
       "name": "microbe-metabolite-conditional-probability-filtering",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:f48f29ce007cd0aba9c7481125342a10f79fcb7b878c8812206f5c2c4d534529"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:bd57ce4a21ca83058df43ec5f8b5407c93ede24b92428f3b0f9e3e21ab8b6e77"
     },
     {
       "@id": "urn:asb:skill:microbial-taxa-rank-selection-by-predictive-strength",
       "@type": "HowTo",
       "name": "microbial-taxa-rank-selection-by-predictive-strength",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/microbial-taxa-rank-selection-by-predictive-strength@sha256:420f46653aa3fdf683299f788cdfc7366eff5fd1bc97d7d7c3cdcb11d784f543"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/microbial-taxa-rank-selection-by-predictive-strength@sha256:320a107aae1cc4338925e22f709df52838355cf7d62f10779821420e281456fb"
     },
     {
       "@id": "urn:asb:skill:conditional-probability-matrix-manipulation",
       "@type": "HowTo",
       "name": "conditional-probability-matrix-manipulation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/conditional-probability-matrix-manipulation@sha256:d3ea23544831ede50b9f708fee358115dd6a1f8bdf59b9972ad42448c0e07bd3"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/conditional-probability-matrix-manipulation@sha256:58b04e3f7e98a8c788c3d5ac4f4325423115f81783a491a3a9252fd544fcaa13"
     },
     {
       "@id": "urn:asb:skill:multivariate-microbiome-analysis",
       "@type": "HowTo",
       "name": "multivariate-microbiome-analysis",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/multivariate-microbiome-analysis@sha256:588447a23f46b81e89bcc6378f2a8ab2a85627950359086fffb004fb9983c9b2"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/multivariate-microbiome-analysis@sha256:df37a8af4046d901278ad808ecf2b6d6cb8b4ff42d2adb7d771fd934157e7f5c"
     },
     {
       "@id": "urn:asb:skill:rna-seq-read-alignment-splice-aware-mapping",
       "@type": "HowTo",
       "name": "rna-seq-read-alignment-splice-aware-mapping",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:1d32586b880ff295baa8298ca12ab914b885ce0dcc7bebf62cc8cfa383731383"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/rna-seq-read-alignment-splice-aware-mapping@sha256:642839479498337d59e061602e8f3a2251884eb146753b4cb57478961247f3af"
     },
     {
       "@id": "urn:asb:skill:molecular-network-node-annotation-via-library-matching",
       "@type": "HowTo",
       "name": "molecular-network-node-annotation-via-library-matching",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:bd357a231da37efb3f7dc383effe92f016890e1b94b5d7a3d92fdd3aef1cb92c"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:0df80f06f53be883ea74dea46f247959d6faa416ecef6772acbca0e17a88d855"
     },
     {
       "@id": "urn:asb:skill:gene-expression-quantification-rpkm-calculation",
       "@type": "HowTo",
       "name": "gene-expression-quantification-rpkm-calculation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:bc6f2034e5a1b329c0db028cf366c6e7d8fdf475674653ef9d30704966a1a7f3"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:1bebfa07f6d2c340ae4c614b3f83515a1e2d6270d9d7f68923f82f248c173bd8"
     },
     {
       "@id": "urn:asb:skill:count-data-normalization-library-size-correction",
       "@type": "HowTo",
       "name": "count-data-normalization-library-size-correction",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/count-data-normalization-library-size-correction@sha256:6564c807ca2b61460eb3556f2a6c8b727ae4c21273b8bee3b519a0909b8523be"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/count-data-normalization-library-size-correction@sha256:ec3e9768f6f082c3e291850fb12cb92adf94e2b5fc250eb555e993af44286339"
     },
     {
       "@id": "urn:asb:skill:massql-query-formulation-for-mass-difference-screening",
@@ -869,21 +869,21 @@
       "@type": "HowTo",
       "name": "fungal-genome-sequence-retrieval-and-processing",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:7c4a7e4109818876a85d203cb625d7325b3eedae3ab4c2bd577b1dba6717655a"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:90f44da076ae58dc8acb5b08e0f2a78ad4ea035c934bd47fef11fdd84c30e895"
     },
     {
       "@id": "urn:asb:skill:cross-reference-spectral-clusters-to-chemical-standards",
       "@type": "HowTo",
       "name": "cross-reference-spectral-clusters-to-chemical-standards",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:73503b45b2c299b0de762f3769f88036d71df52a620340481568f153edfdbd87"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/cross-reference-spectral-clusters-to-chemical-standards@sha256:9c4a255f87cba9fde503c0300cc06cdd5dccb231a8d15d3f776679c35b6481fe"
     },
     {
       "@id": "urn:asb:skill:neutral-loss-filtering-for-glycoside-annotation",
       "@type": "HowTo",
       "name": "neutral-loss-filtering-for-glycoside-annotation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:9e98f6317de841bec951fe2cbabd34428b9efff7e5ab346312463ffeeacf2ceb"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/neutral-loss-filtering-for-glycoside-annotation@sha256:4c9129983817ca59d431f4921241e93a006924a94c0c5ace87e62db640ecb9d6"
     },
     {
       "@id": "urn:asb:skill:ugt-sequence-curation-and-filtering",
@@ -897,14 +897,14 @@
       "@type": "HowTo",
       "name": "multiple-sequence-alignment-optimization",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/multiple-sequence-alignment-optimization@sha256:365f8c23e57bed6a0eae8a8bde6b8693a78e00d593a12387b1671a1ad2abf0c5"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/multiple-sequence-alignment-optimization@sha256:ccc1a5801c9cabd37f2e92507974322960d651f7df24fd754e405ef03301453e"
     },
     {
       "@id": "urn:asb:skill:transcript-abundance-estimation-counting",
       "@type": "HowTo",
       "name": "transcript-abundance-estimation-counting",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:e51e8ec706815fc0d066b6848eb77792aea1e4911ea2b77b8dd22c6874405989"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/transcript-abundance-estimation-counting@sha256:2b98d67848d186361a8aae3829ccc271476f63f79804c4d569f0466794e488e8"
     },
     {
       "@id": "urn:asb:skill:protein-sequence-domain-scanning",
@@ -918,7 +918,7 @@
       "@type": "HowTo",
       "name": "differential-expression-validation-fold-change-verification",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:2eb0f1cda4121a6add72d5dc115bf8f7e29765fe86e0cae47b40aa0687dc9a2f"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/differential-expression-validation-fold-change-verification@sha256:068aa34e78e72ab42cabb57fc02604e0ca7d37e79b5e4c06f9127dc26999862d"
     },
     {
       "@id": "urn:asb:skill:spectral-similarity-network-construction",
@@ -932,14 +932,14 @@
       "@type": "HowTo",
       "name": "phylogenetic-tree-construction-and-interpretation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/phylogenetic-tree-construction-and-interpretation@sha256:5e3a249aae5dfb87f50cfe92c56256752e253f562658f25fa2a2a4a3916613d4"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/phylogenetic-tree-construction-and-interpretation@sha256:9df5bc7f500b1ba6254ef02cd6d57035bf52e09c0ade2149b235f9cd63252cec"
     },
     {
       "@id": "urn:asb:skill:mgf-format-handling",
       "@type": "HowTo",
       "name": "mgf-format-handling",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:caf4d05a561cea1c726fb511e840f1621930bb6c676e19c1417741b3be4b3746"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:8e4e828983262e7fae14a968cac6b4b7483e75747e7bae88202977f951362756"
     },
     {
       "@id": "urn:asb:skill:organophosphate-ester-compound-class-recognition",
@@ -953,7 +953,7 @@
       "@type": "HowTo",
       "name": "spectral-redundancy-clustering",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:6c57994b7e14763f6f71970763a504fa230d37313818316fcec31d1d6af41a28"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/spectral-redundancy-clustering@sha256:431f4f9692b5895ab5760ee9a270aec07691ab7dd39380b62bcd52a3809f44bb"
     },
     {
       "@id": "urn:asb:skill:product-ion-fragment-filtering",
@@ -974,14 +974,14 @@
       "@type": "HowTo",
       "name": "relative-intensity-threshold-filtering",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:58e4dcc7c6749c5da6301a87a6614878d4e5de5227b846d38f4c2f28e6f43837"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:a50ac7b0d8f0deba2e9c613fbda9673ff18bc36a8f8ce624c5936ed830173f4a"
     },
     {
       "@id": "urn:asb:skill:massql-query-syntax-and-parameter-optimization",
       "@type": "HowTo",
       "name": "massql-query-syntax-and-parameter-optimization",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:99dda737ae02e7ef4ff7a0ed3fd02c06749f63b7c2f5f5ae333e1016e9d82e7b"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/massql-query-syntax-and-parameter-optimization@sha256:21941755216584435e5a0ba37a82bad1ce7f68509f0a90c65f110e2c0a86c26d"
     },
     {
       "@id": "urn:asb:skill:repository-scale-spectral-processing",
@@ -1002,14 +1002,14 @@
       "@type": "HowTo",
       "name": "mass-spectrometry-query-language-syntax",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-query-language-syntax@sha256:83aff9096a427540d8ae2eed34b86b7a9b12504f276e76c5496bf341e3fd9066"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-query-language-syntax@sha256:fe95261fe57d43bc3bf2f76fe124dd1539d45ea969ea1ca12a0c5e04a6446260"
     },
     {
       "@id": "urn:asb:skill:ppm-tolerance-filtering-and-calibration",
       "@type": "HowTo",
       "name": "ppm-tolerance-filtering-and-calibration",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:d15729d14263bf80b537cb3c4b42a3f07ab2899fd8bd517c0661f1d493a786f3"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:5e4a84204174b2cb5a93cca37c32687cbd77265bd9c4b635a43a459308664913"
     },
     {
       "@id": "urn:asb:skill:consensus-spectrum-generation",
@@ -1023,21 +1023,21 @@
       "@type": "HowTo",
       "name": "iron-binding-compound-detection-by-isotope-ratio",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:e7a4f6c833bd1e101b0e2bdcaadc1e7b1a29bcc24dc0b8ebd6183b7ea2a46e8f"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/iron-binding-compound-detection-by-isotope-ratio@sha256:be2f9e9d143389202bc25ad142ade9256d2978f1a6b69986fed30d4b63d5a436"
     },
     {
       "@id": "urn:asb:skill:ms1-precursor-ion-filtering",
       "@type": "HowTo",
       "name": "ms1-precursor-ion-filtering",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:7ff687d90d00222662b120b8a264fbac6f36b34826c7178ea4862cbe6cc3cd4d"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:1bcaf2d85da573ee3d1aa6c363146dec3916472b6fc4c8a7785171b784f825fc"
     },
     {
       "@id": "urn:asb:skill:ms-data-export-and-format-conversion",
       "@type": "HowTo",
       "name": "ms-data-export-and-format-conversion",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/ms-data-export-and-format-conversion@sha256:a7b9c2d41b457abb9ce0c1ffe95a3d74a297bed88b91f98458c944bbdbc4c5a1"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/ms-data-export-and-format-conversion@sha256:3f1111d546b0f308bbad53f6499e64fdc0f0189aa54bdb39326ced6d820d2a4f"
     },
     {
       "@id": "urn:asb:skill:ms-ms-spectral-data-retrieval",
@@ -1065,7 +1065,7 @@
       "@type": "HowTo",
       "name": "metabolite-feature-prioritization",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-prioritization@sha256:57c46b8ee53a5816236f2a497fac7141839759f1842e1d74546f4f3a63db3b30"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-prioritization@sha256:7a4ccd30d9896b92987934ffe9031671672254b32d14182e056bf749d249307f"
     },
     {
       "@id": "urn:asb:skill:metabolite-structure-prediction-biotransformer",
@@ -1079,7 +1079,7 @@
       "@type": "HowTo",
       "name": "feature-mass-difference-filtering",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/feature-mass-difference-filtering@sha256:f4311b770a8c70a93d3697a01240312a2d4abe43381191f8a30c06674125a8c5"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/feature-mass-difference-filtering@sha256:d6335957f4759baed8514b62a96b86089a71c66ca379caca6455700ddf86d225"
     },
     {
       "@id": "urn:asb:skill:molecular-formula-comparison-overlap-analysis",
@@ -1107,7 +1107,7 @@
       "@type": "HowTo",
       "name": "control-group-selection-for-metabolite-screening",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/control-group-selection-for-metabolite-screening@sha256:57c4ae9401a92ebb16b6b0704b28bd7461158883253e8d6806cfa62204db26b3"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/control-group-selection-for-metabolite-screening@sha256:0069c3b7ded2ffdf9a8bed0152225305c54add67475846af6099c8edc5c76db3"
     },
     {
       "@id": "urn:asb:skill:ms2-spectral-fragmentation-interpretation",
@@ -1121,14 +1121,14 @@
       "@type": "HowTo",
       "name": "venn-diagram-set-visualization-multiway-comparison",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/venn-diagram-set-visualization-multiway-comparison@sha256:f69b2c74209d76778534be4702120cffc59f9242cd18851cd4b5515339303d7a"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/venn-diagram-set-visualization-multiway-comparison@sha256:957a96c23918e618294443bd3cdc23729b98e07603741af438d5a349fd2b54b2"
     },
     {
       "@id": "urn:asb:skill:mass-spectrometry-data-preprocessing",
       "@type": "HowTo",
       "name": "mass-spectrometry-data-preprocessing",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-data-preprocessing@sha256:b1d38acd3c9aab73568775615b6bfc2c398441fd510b2f2bbc71033441f256e5"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-data-preprocessing@sha256:3e34c7ce5f4eeeb510d2a9fff1c516e95dff2429e2b513f58e5c947efee0c25a"
     },
     {
       "@id": "urn:asb:skill:in-silico-fragmentation-tree-analysis",
@@ -1142,14 +1142,14 @@
       "@type": "HowTo",
       "name": "phase-i-biotransformation-constraint-application",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/phase-i-biotransformation-constraint-application@sha256:ab21c8448b5933ec99eee75094d90219074771c790d88d63a928f617737b4e5c"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/phase-i-biotransformation-constraint-application@sha256:75f94f4c8dffc210e6d6d6d2c0485093cbd39c3a79bcd1ad7caf8a5503c56717"
     },
     {
       "@id": "urn:asb:skill:pesticide-metabolite-structure-elucidation",
       "@type": "HowTo",
       "name": "pesticide-metabolite-structure-elucidation",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/pesticide-metabolite-structure-elucidation@sha256:dec449f882a4a42939f95621f61c6a2c8a622808cc20a86c2bb0b455d1c7bb16"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/pesticide-metabolite-structure-elucidation@sha256:ada8fcc753cbd57782c27615cfa02942e50168bca0cd9f900bcda001b50c1d8f"
     },
     {
       "@id": "urn:asb:skill:feature-abundance-filtering-with-statistical-thresholds",
@@ -1163,7 +1163,7 @@
       "@type": "HowTo",
       "name": "lc-ms-feature-detection-and-alignment",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/lc-ms-feature-detection-and-alignment@sha256:81dc5205af455e83c3630bc5eb7718627f96925c5988e3f94f82100b8aa87846"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/lc-ms-feature-detection-and-alignment@sha256:0c97c344868541ff7a3c4aa5d79e94ec427fad9ceba651342ecaf8fc7e3202c2"
     },
     {
       "@id": "urn:asb:skill:cyp450-enzyme-metabolization-rules",
@@ -1177,7 +1177,7 @@
       "@type": "HowTo",
       "name": "mass-spectrometry-molecular-formula-assignment",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-molecular-formula-assignment@sha256:929b65a413b6a21c6e3ecd276442a1bff6175f65dc9f19929aaeef53a11efef3"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-molecular-formula-assignment@sha256:6987ca22c32bb9242c873b4d2ec218962705f1ddfbb01d6f6f40edd55fae24a4"
     },
     {
       "@id": "urn:asb:skill:retention-time-correction",
@@ -1191,21 +1191,21 @@
       "@type": "HowTo",
       "name": "replicate-detection-consistency-filtering",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/replicate-detection-consistency-filtering@sha256:fa930abac99134176a8baf36f45d2c738ec257deacb43f847f04d0b4cab3540b"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/replicate-detection-consistency-filtering@sha256:a4ca82f5e18ba3b781adc8f199cd72f54fe3ab23540a56f46dc7afe758d0f871"
     },
     {
       "@id": "urn:asb:skill:feature-table-reduction-and-quality-control",
       "@type": "HowTo",
       "name": "feature-table-reduction-and-quality-control",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/feature-table-reduction-and-quality-control@sha256:d0d206b58110b2dbf8c76766f5957768218860a4da0b9d544ff11e1f7c7000e7"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/feature-table-reduction-and-quality-control@sha256:e1969da7ba75484c919f4cfa64c3b2c996bb38bd579323d1f7ec1c8e8d83a498"
     },
     {
       "@id": "urn:asb:skill:fold-change-calculation-from-replicate-intensities",
       "@type": "HowTo",
       "name": "fold-change-calculation-from-replicate-intensities",
       "description": "",
-      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:d865fa2fc4993b297673d1cf5cb6f6fced0cad0de34af83d645eb873f544ca5f"
+      "sameAs": "https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:ccbba5b780b8a414c69d59bdec92fb6d75b13fa6faaf5526bf3ed10516591626"
     },
     {
       "@id": "urn:asb:tool:matchms",

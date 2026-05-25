@@ -24,10 +24,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/smiles-structure-canonicalization/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/smiles-structure-canonicalization/skill.md
+    merged_at: '2026-05-25T06:57:01.419149+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-structure-canonicalization@sha256:12c9e046c28e4733b21866514d95dc17459c40314a3766c5ed0f189132491509
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-structure-canonicalization@sha256:12c9e046c28e4733b21866514d95dc17459c40314a3766c5ed0f189132491509
 ---
 
 # SMILES Structure Canonicalization

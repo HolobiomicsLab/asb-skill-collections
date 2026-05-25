@@ -7,8 +7,8 @@ when_to_use_negative:
 - Study design does not include in vitro incubation or metabolite discovery; FC filtering is optimized for xenobiotic biotransformation assays, not general metabolomics screening.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3172
 tools:
 - name: R v 3.6.1
   role: Statistical computation and fold-change arithmetic; used in the automated incubatoR workflow to calculate mean intensities, FC values, and replicate-based filtering
@@ -27,10 +27,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/fold-change-calculation-from-replicate-intensities/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/fold-change-calculation-from-replicate-intensities/skill.md
+    merged_at: '2026-05-25T06:57:01.642676+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:ccbba5b780b8a414c69d59bdec92fb6d75b13fa6faaf5526bf3ed10516591626
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/fold-change-calculation-from-replicate-intensities@sha256:d865fa2fc4993b297673d1cf5cb6f6fced0cad0de34af83d645eb873f544ca5f
 ---
 
 # fold-change-calculation-from-replicate-intensities

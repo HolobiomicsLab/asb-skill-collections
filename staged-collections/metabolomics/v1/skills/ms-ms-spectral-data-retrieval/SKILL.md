@@ -38,10 +38,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/ms-ms-spectral-data-retrieval/SKILL.md
+    - outputs/audit_s41592_full/skills/ms-ms-spectral-data-retrieval/skill.md
+    merged_at: '2026-05-25T06:57:01.588428+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms-ms-spectral-data-retrieval@sha256:81065decbb4458d72ff62ca9d0a33239f8b87b5a6012172e9b9b8c74a6119b6f
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms-ms-spectral-data-retrieval@sha256:81065decbb4458d72ff62ca9d0a33239f8b87b5a6012172e9b9b8c74a6119b6f
 ---
 
 # MS/MS Spectral Data Retrieval

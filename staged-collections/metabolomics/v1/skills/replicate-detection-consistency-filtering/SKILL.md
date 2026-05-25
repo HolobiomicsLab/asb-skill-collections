@@ -7,8 +7,8 @@ when_to_use_negative:
 - Negative controls are missing or poorly matched in intensity distribution to the incubation groups (fold-change calculation will be unstable).
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3172
 tools:
 - name: R v 3.6.1
   role: Host language for fold-change calculation, replication counting, and feature filtering logic
@@ -27,10 +27,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/replicate-detection-consistency-filtering/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/replicate-detection-consistency-filtering/skill.md
+    merged_at: '2026-05-25T06:57:01.638256+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/replicate-detection-consistency-filtering@sha256:a4ca82f5e18ba3b781adc8f199cd72f54fe3ab23540a56f46dc7afe758d0f871
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/replicate-detection-consistency-filtering@sha256:fa930abac99134176a8baf36f45d2c738ec257deacb43f847f04d0b4cab3540b
 ---
 
 # replicate-detection-consistency-filtering

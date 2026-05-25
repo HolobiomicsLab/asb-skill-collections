@@ -7,8 +7,8 @@ when_to_use_negative:
 - Metadata fields critical to your analysis (e.g., collision energy, instrument type) are not yet supported by matchms filters, as the current pipeline does not harmonize these fields.
 edam_operation: http://edamontology.org/operation_3435
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0601
+- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_3391
 tools:
 - name: matchms
@@ -29,10 +29,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-library-curation/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/mass-spectrometry-library-curation/skill.md
+    merged_at: '2026-05-25T06:57:01.425796+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:0b99cf307b34e82fd17554469f9bab9696eba3c76e282df8c84e169e1a874c3f
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-library-curation@sha256:bfee19fd71242906992de7ebe16930203e842b9672ad977c834d31ac6355e1ce
 ---
 
 # mass-spectrometry-library-curation

@@ -7,8 +7,8 @@ when_to_use_negative:
 - Parent pesticide m/z value is unknown or unreliable; mass difference filtering requires accurate reference ion mass.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3172
 tools:
 - name: incubatoR workflow (Rscripts/metabolites.R)
   role: Implements mass difference filtering as step 3 in automated pesticide metabolite detection; applies +50 u threshold and outputs filtered feature list
@@ -22,10 +22,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/feature-mass-difference-filtering/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/feature-mass-difference-filtering/skill.md
+    merged_at: '2026-05-25T06:57:01.601488+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/feature-mass-difference-filtering@sha256:d6335957f4759baed8514b62a96b86089a71c66ca379caca6455700ddf86d225
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/feature-mass-difference-filtering@sha256:f4311b770a8c70a93d3697a01240312a2d4abe43381191f8a30c06674125a8c5
 ---
 
 # feature-mass-difference-filtering

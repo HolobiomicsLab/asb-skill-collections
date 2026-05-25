@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/rdkit-smiles-inchi-cross-validation/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/rdkit-smiles-inchi-cross-validation/skill.md
+    merged_at: '2026-05-25T06:57:01.427979+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/rdkit-smiles-inchi-cross-validation@sha256:872c136417ee9540b4972ceb246373f4eb816fe3ab76968eef2154342751eb65
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/rdkit-smiles-inchi-cross-validation@sha256:872c136417ee9540b4972ceb246373f4eb816fe3ab76968eef2154342751eb65
 ---
 
 # RDKit SMILES/InChI/InChIKey Cross-Validation

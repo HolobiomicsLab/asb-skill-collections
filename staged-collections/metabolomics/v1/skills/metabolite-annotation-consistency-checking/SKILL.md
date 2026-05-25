@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3282
 edam_topics:
 - http://edamontology.org/topic_0599
-- http://edamontology.org/topic_3365
 - http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3365
 tools:
 - name: matchms
   role: Python library that implements the repair_adduct_based_on_smiles filter and manages the full spectrum metadata harmonization pipeline
@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/metabolite-annotation-consistency-checking/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/metabolite-annotation-consistency-checking/skill.md
+    merged_at: '2026-05-25T06:57:01.407147+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:43e148b9035ca8f15d50cce5359f9f0b9e52912f11581542b0092bbd868b1440
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-annotation-consistency-checking@sha256:614587b1f76df9f58c39800303cbbe3af2b35b5bac32ffd4bb562bf4cc4cf136
 ---
 
 # Metabolite annotation consistency checking

@@ -30,10 +30,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/protein-sequence-domain-scanning/SKILL.md
+    - outputs/audit_jeong_full/skills/protein-sequence-domain-scanning/skill.md
+    merged_at: '2026-05-25T06:57:01.542032+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/protein-sequence-domain-scanning@sha256:fc1aa2db66537753c9bd1087c37416ded80364264b684713e886e19183c67e85
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/protein-sequence-domain-scanning@sha256:fc1aa2db66537753c9bd1087c37416ded80364264b684713e886e19183c67e85
 ---
 
 # protein-sequence-domain-scanning

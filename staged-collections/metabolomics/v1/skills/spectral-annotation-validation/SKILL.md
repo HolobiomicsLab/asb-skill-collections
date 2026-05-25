@@ -7,8 +7,8 @@ when_to_use_negative:
 - Data where the rationale for annotation inconsistency is external to the annotations themselves (e.g., correct SMILES but wrong measured mass due to instrument error). This skill validates annotation internal consistency only; it does not check whether annotated structures match measured fragment ions.
 edam_operation: http://edamontology.org/operation_3802
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3172
 tools:
 - name: matchms
   role: Core framework for loading, filtering, and validating mass spectral libraries; implements the 'require_valid_annotation' filter that performs RDKit cross-validation of SMILES, InChI, and InChIKey fields
@@ -26,10 +26,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/spectral-annotation-validation/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/spectral-annotation-validation/skill.md
+    merged_at: '2026-05-25T06:57:01.443314+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-annotation-validation@sha256:81b5193863d89a6c2b18291cb0f7fa2730b17482fdaf22678221cf973ee818c1
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-annotation-validation@sha256:6694fb60400e97785cb5ccd6a1ae457e2a38d866eadc9f11316bc70d0646de49
 ---
 
 # Spectral Annotation Validation

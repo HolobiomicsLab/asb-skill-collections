@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
 - http://edamontology.org/topic_0602
-- http://edamontology.org/topic_3391
 - http://edamontology.org/topic_0637
+- http://edamontology.org/topic_3391
 tools:
 - name: mmvec
   role: neural network platform that generates conditional probability estimates of metabolite co-occurrence given microbial taxa; output is filtered by this skill
@@ -27,10 +27,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/microbe-metabolite-conditional-probability-filtering/SKILL.md
+    - outputs/audit_haffner_v2/skills/microbe-metabolite-conditional-probability-filtering/skill.md
+    merged_at: '2026-05-25T06:57:01.509321+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:bd57ce4a21ca83058df43ec5f8b5407c93ede24b92428f3b0f9e3e21ab8b6e77
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/microbe-metabolite-conditional-probability-filtering@sha256:f48f29ce007cd0aba9c7481125342a10f79fcb7b878c8812206f5c2c4d534529
 ---
 
 # microbe-metabolite-conditional-probability-filtering

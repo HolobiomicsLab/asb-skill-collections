@@ -7,9 +7,9 @@ when_to_use_negative:
 - The goal is to identify rare or low-probability associations; this skill prioritizes high-confidence pairs and will mask weak but real interactions.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
-- http://edamontology.org/topic_0602
 - http://edamontology.org/topic_0154
+- http://edamontology.org/topic_0602
+- http://edamontology.org/topic_3172
 tools:
 - name: mmvec
   role: generates conditional probability matrices of metabolite abundance given taxon abundance via neural network; output is the primary input to this skill
@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/conditional-probability-matrix-manipulation/SKILL.md
+    - outputs/audit_haffner_v2/skills/conditional-probability-matrix-manipulation/skill.md
+    merged_at: '2026-05-25T06:57:01.514075+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/conditional-probability-matrix-manipulation@sha256:58b04e3f7e98a8c788c3d5ac4f4325423115f81783a491a3a9252fd544fcaa13
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/conditional-probability-matrix-manipulation@sha256:d3ea23544831ede50b9f708fee358115dd6a1f8bdf59b9972ad42448c0e07bd3
 ---
 
 # conditional-probability-matrix-manipulation

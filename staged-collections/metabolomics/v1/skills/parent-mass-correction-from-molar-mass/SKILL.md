@@ -24,10 +24,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/parent-mass-correction-from-molar-mass/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/parent-mass-correction-from-molar-mass/skill.md
+    merged_at: '2026-05-25T06:57:01.464709+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/parent-mass-correction-from-molar-mass@sha256:09b738668aa8cccb332d9c3bc566ceb00c4fad1c5eb93325a5e19c898205c2be
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/parent-mass-correction-from-molar-mass@sha256:09b738668aa8cccb332d9c3bc566ceb00c4fad1c5eb93325a5e19c898205c2be
 ---
 
 # parent-mass-correction-from-molar-mass

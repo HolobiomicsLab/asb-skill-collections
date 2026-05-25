@@ -7,8 +7,8 @@ when_to_use_negative:
 - Analysis goal is discovery of new structural variants where minor fragments may carry diagnostic information; strict intensity thresholds may exclude novel chemistry.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3520
 tools:
 - name: MassQL
   role: Query language and execution engine that parses INTENSITYPERCENT directives and applies relative intensity filtering during MS/MS scan traversal
@@ -30,10 +30,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/relative-intensity-threshold-filtering/SKILL.md
+    - outputs/audit_s41592_full/skills/relative-intensity-threshold-filtering/skill.md
+    merged_at: '2026-05-25T06:57:01.563451+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:a50ac7b0d8f0deba2e9c613fbda9673ff18bc36a8f8ce624c5936ed830173f4a
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/relative-intensity-threshold-filtering@sha256:58e4dcc7c6749c5da6301a87a6614878d4e5de5227b846d38f4c2f28e6f43837
 ---
 
 # Relative Intensity Threshold Filtering

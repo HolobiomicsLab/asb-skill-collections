@@ -7,8 +7,8 @@ when_to_use_negative:
 - MS1 resolution or mass accuracy is insufficient for the defined ppm tolerance (e.g., low-resolution quadrupole data with >50 ppm error)
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0769
+- http://edamontology.org/topic_3172
 tools:
 - name: MassQL
   role: Query language and reference engine for parsing MS1 isotope pattern queries and executing filters on spectral DataFrames
@@ -32,10 +32,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/ms1-precursor-ion-filtering/SKILL.md
+    - outputs/audit_s41592_full/skills/ms1-precursor-ion-filtering/skill.md
+    merged_at: '2026-05-25T06:57:01.583615+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:1bcaf2d85da573ee3d1aa6c363146dec3916472b6fc4c8a7785171b784f825fc
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ms1-precursor-ion-filtering@sha256:7ff687d90d00222662b120b8a264fbac6f36b34826c7178ea4862cbe6cc3cd4d
 ---
 
 # MS1 Precursor Ion Filtering

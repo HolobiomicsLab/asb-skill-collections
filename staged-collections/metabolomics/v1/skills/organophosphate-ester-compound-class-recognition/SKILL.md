@@ -40,10 +40,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/organophosphate-ester-compound-class-recognition/SKILL.md
+    - outputs/audit_s41592_full/skills/organophosphate-ester-compound-class-recognition/skill.md
+    merged_at: '2026-05-25T06:57:01.553419+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/organophosphate-ester-compound-class-recognition@sha256:3c3f43164b8833ee913efd09f50aa95a61f509112a8f3940c47febc506f0e9a4
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/organophosphate-ester-compound-class-recognition@sha256:3c3f43164b8833ee913efd09f50aa95a61f509112a8f3940c47febc506f0e9a4
 ---
 
 # organophosphate-ester-compound-class-recognition

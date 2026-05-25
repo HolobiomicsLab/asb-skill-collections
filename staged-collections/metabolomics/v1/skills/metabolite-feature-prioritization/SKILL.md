@@ -7,8 +7,8 @@ when_to_use_negative:
 - Working with direct biomonitoring samples without parallel in vitro incubation controls; blank and replicate structure are fundamental to the approach.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_3407
 tools:
 - name: XCMS
@@ -29,10 +29,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-feature-prioritization/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/metabolite-feature-prioritization/skill.md
+    merged_at: '2026-05-25T06:57:01.596612+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-prioritization@sha256:7a4ccd30d9896b92987934ffe9031671672254b32d14182e056bf749d249307f
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/metabolite-feature-prioritization@sha256:57c46b8ee53a5816236f2a497fac7141839759f1842e1d74546f4f3a63db3b30
 ---
 
 # metabolite-feature-prioritization

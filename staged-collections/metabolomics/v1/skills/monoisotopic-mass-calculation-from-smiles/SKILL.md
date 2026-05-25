@@ -19,14 +19,6 @@ tools:
   role: Specific version used in the library cleaning pipeline that implements salt-splitting and parent mass repair workflows relying on RDKit monoisotopic mass calculation
 - name: PubChem
   role: External reference source for canonical SMILES and structure data used to validate and correct annotations before monoisotopic mass calculation
-merged_aliases:
-- monoisotopic-mass-calculation-from-structure
-merged_alias_records:
-- alias: monoisotopic-mass-calculation-from-structure
-  slug: monoisotopic-mass-calculation-from-structure
-  jaccard_score: 0.6
-  method: token-set-jaccard
-  decision: needs_review
 provenance:
   source_task_ids:
   - task_005
@@ -34,11 +26,26 @@ provenance:
   source_papers:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
+merged_aliases:
+- monoisotopic-mass-calculation-from-structure
 schema_version: 0.2.0
+merged_alias_records:
+- alias: monoisotopic-mass-calculation-from-structure
+  slug: monoisotopic-mass-calculation-from-structure
+  jaccard_score: 0.6
+  method: token-set-jaccard
+  decision: needs_review
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/monoisotopic-mass-calculation-from-smiles/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/monoisotopic-mass-calculation-from-smiles/skill.md
+    merged_at: '2026-05-25T06:57:01.430408+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/monoisotopic-mass-calculation-from-smiles@sha256:4a2a0813fcbe9e0f7a35196fee6c3c75ab912524986a004650c1d1ebb2fa5948
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/monoisotopic-mass-calculation-from-smiles@sha256:4a2a0813fcbe9e0f7a35196fee6c3c75ab912524986a004650c1d1ebb2fa5948
 ---
 
 # Monoisotopic mass calculation from SMILES

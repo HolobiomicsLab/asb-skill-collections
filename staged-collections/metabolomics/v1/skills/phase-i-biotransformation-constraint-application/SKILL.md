@@ -7,8 +7,8 @@ when_to_use_negative:
 - The study explicitly includes phase-II metabolites (glucuronides, sulfates) as targets; in this case, increase the upper mass-defect cutoff or apply a separate phase-II constraint (e.g., +176 u for glucuronidation).
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0153
+- http://edamontology.org/topic_3172
 tools:
 - name: incubatoR
   role: R workflow that implements mass-difference filtering in metabolites.R script as step 3, calculating and removing features with m/z > +50 u relative to parent pesticide
@@ -26,10 +26,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/phase-i-biotransformation-constraint-application/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/phase-i-biotransformation-constraint-application/skill.md
+    merged_at: '2026-05-25T06:57:01.622286+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/phase-i-biotransformation-constraint-application@sha256:75f94f4c8dffc210e6d6d6d2c0485093cbd39c3a79bcd1ad7caf8a5503c56717
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/phase-i-biotransformation-constraint-application@sha256:ab21c8448b5933ec99eee75094d90219074771c790d88d63a928f617737b4e5c
 ---
 
 # Phase-I-biotransformation-constraint-application

@@ -7,9 +7,9 @@ when_to_use_negative:
 - The query targets low-abundance isotope peaks (e.g., ⁵⁴Fe with <25% expected intensity relative to ⁵⁶Fe) in samples with high chemical noise; a single fixed ppm and intensity threshold may miss these due to random fluctuations or miss-calibration, as documented for the IIMN method.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_0121
 - http://edamontology.org/topic_3375
+- http://edamontology.org/topic_3520
 tools:
 - name: MassQL
   role: Query language and reference engine for specifying and executing m/z filtering with ppm tolerance across MS/MS repositories
@@ -35,10 +35,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/ppm-tolerance-filtering-and-calibration/SKILL.md
+    - outputs/audit_s41592_full/skills/ppm-tolerance-filtering-and-calibration/skill.md
+    merged_at: '2026-05-25T06:57:01.576250+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:5e4a84204174b2cb5a93cca37c32687cbd77265bd9c4b635a43a459308664913
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ppm-tolerance-filtering-and-calibration@sha256:d15729d14263bf80b537cb3c4b42a3f07ab2899fd8bd517c0661f1d493a786f3
 ---
 
 # ppm-tolerance-filtering-and-calibration

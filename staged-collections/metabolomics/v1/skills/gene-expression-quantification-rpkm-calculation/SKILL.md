@@ -7,8 +7,8 @@ when_to_use_negative:
 - Gene length annotations are unavailable; RPKM requires exact per-gene length to normalize for transcript size.
 edam_operation: http://edamontology.org/operation_3565
 edam_topics:
-- http://edamontology.org/topic_3170
 - http://edamontology.org/topic_0769
+- http://edamontology.org/topic_3170
 tools:
 - name: HTSeq
   role: counts aligned reads mapping to annotated genes in union mode (stranded=reverse) to produce raw count matrices that serve as input to RPKM normalization
@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/gene-expression-quantification-rpkm-calculation/SKILL.md
+    - outputs/audit_jeong_full/skills/gene-expression-quantification-rpkm-calculation/skill.md
+    merged_at: '2026-05-25T06:57:01.523751+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:1bebfa07f6d2c340ae4c614b3f83515a1e2d6270d9d7f68923f82f248c173bd8
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/gene-expression-quantification-rpkm-calculation@sha256:bc6f2034e5a1b329c0db028cf366c6e7d8fdf475674653ef9d30704966a1a7f3
 ---
 
 # gene-expression-quantification-rpkm-calculation

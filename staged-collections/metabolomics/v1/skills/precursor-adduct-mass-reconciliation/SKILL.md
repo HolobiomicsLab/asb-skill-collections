@@ -24,10 +24,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/precursor-adduct-mass-reconciliation/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/precursor-adduct-mass-reconciliation/skill.md
+    merged_at: '2026-05-25T06:57:01.441387+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/precursor-adduct-mass-reconciliation@sha256:df5131cc0f1b4de69d464c4509686dd1830a77e29ca661a62b33d3b2b8161cba
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/precursor-adduct-mass-reconciliation@sha256:df5131cc0f1b4de69d464c4509686dd1830a77e29ca661a62b33d3b2b8161cba
 ---
 
 # precursor-adduct-mass-reconciliation

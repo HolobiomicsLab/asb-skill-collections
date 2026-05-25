@@ -7,8 +7,8 @@ when_to_use_negative:
 - You require nucleotide-level sequence information (e.g., codon usage, splice sites); this skill operates on translated protein sequences only.
 edam_operation: http://edamontology.org/operation_0346
 edam_topics:
-- http://edamontology.org/topic_0637
 - http://edamontology.org/topic_0080
+- http://edamontology.org/topic_0637
 - http://edamontology.org/topic_3293
 tools:
 - name: JGI MycoCosm database
@@ -30,10 +30,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/fungal-genome-sequence-retrieval-and-processing/SKILL.md
+    - outputs/audit_jeong_full/skills/fungal-genome-sequence-retrieval-and-processing/skill.md
+    merged_at: '2026-05-25T06:57:01.529705+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:90f44da076ae58dc8acb5b08e0f2a78ad4ea035c934bd47fef11fdd84c30e895
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/fungal-genome-sequence-retrieval-and-processing@sha256:7c4a7e4109818876a85d203cb625d7325b3eedae3ab4c2bd577b1dba6717655a
 ---
 
 # fungal-genome-sequence-retrieval-and-processing

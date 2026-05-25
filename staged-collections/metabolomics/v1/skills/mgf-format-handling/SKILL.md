@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3357
 edam_topics:
 - http://edamontology.org/topic_0121
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_3148
+- http://edamontology.org/topic_3520
 tools:
 - name: MassQL
   role: Query language and retrieval engine that outputs MS/MS spectra in MGF format from repository-scale searches
@@ -37,10 +37,17 @@ provenance:
   - doi: 10.1038/s41592-025-02660-z
     title: A universal language for finding mass spectrometry data patterns
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_s41592_full/skills/mgf-format-handling/SKILL.md
+    - outputs/audit_s41592_full/skills/mgf-format-handling/skill.md
+    merged_at: '2026-05-25T06:57:01.550940+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:8e4e828983262e7fae14a968cac6b4b7483e75747e7bae88202977f951362756
 derived_from:
 - doi: 10.1038/s41592-025-02660-z
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mgf-format-handling@sha256:caf4d05a561cea1c726fb511e840f1621930bb6c676e19c1417741b3be4b3746
 ---
 
 # mgf-format-handling

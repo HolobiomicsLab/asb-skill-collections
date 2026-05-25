@@ -7,8 +7,8 @@ when_to_use_negative:
 - Data come from a spectral library or reference database rather than raw samples (this skill targets discovery of unknown features, not library matching).
 edam_operation: http://edamontology.org/operation_3215
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0121
+- http://edamontology.org/topic_3172
 tools:
 - name: ProteoWizard
   role: Converts raw vendor LC–HRMS spectra to centroided mzML format for downstream XCMS processing
@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-data-preprocessing/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/mass-spectrometry-data-preprocessing/skill.md
+    merged_at: '2026-05-25T06:57:01.617756+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-data-preprocessing@sha256:3e34c7ce5f4eeeb510d2a9fff1c516e95dff2429e2b513f58e5c947efee0c25a
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/mass-spectrometry-data-preprocessing@sha256:b1d38acd3c9aab73568775615b6bfc2c398441fd510b2f2bbc71033441f256e5
 ---
 
 # mass-spectrometry-data-preprocessing

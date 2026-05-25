@@ -23,10 +23,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/ugt-sequence-curation-and-filtering/SKILL.md
+    - outputs/audit_jeong_full/skills/ugt-sequence-curation-and-filtering/skill.md
+    merged_at: '2026-05-25T06:57:01.536531+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/ugt-sequence-curation-and-filtering@sha256:912c230db7a2308608040c8a3e711215e030d62b72416c2468e255d904d59678
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/ugt-sequence-curation-and-filtering@sha256:912c230db7a2308608040c8a3e711215e030d62b72416c2468e255d904d59678
 ---
 
 # UGT sequence curation and filtering

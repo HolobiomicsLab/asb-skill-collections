@@ -7,8 +7,8 @@ when_to_use_negative:
 - Data are compositional with extreme sparsity (>99% zeros); consider rarefaction, centered log-ratio transformation, or compositional distance metrics before ordination.
 edam_operation: http://edamontology.org/operation_3697
 edam_topics:
-- http://edamontology.org/topic_3174
 - http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3174
 tools:
 - name: QIIME2
   role: Construct Canberra distance matrix from metabolite feature table and perform PERMANOVA on distance matrix with grouping variable
@@ -27,10 +27,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/multivariate-microbiome-analysis/SKILL.md
+    - outputs/audit_haffner_v2/skills/multivariate-microbiome-analysis/skill.md
+    merged_at: '2026-05-25T06:57:01.517192+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/multivariate-microbiome-analysis@sha256:df37a8af4046d901278ad808ecf2b6d6cb8b4ff42d2adb7d771fd934157e7f5c
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/multivariate-microbiome-analysis@sha256:588447a23f46b81e89bcc6378f2a8ab2a85627950359086fffb004fb9983c9b2
 ---
 
 # multivariate-microbiome-analysis

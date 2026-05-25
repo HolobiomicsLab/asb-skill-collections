@@ -7,8 +7,8 @@ when_to_use_negative:
 - Sample size is very small (n < 4 per group) — permutation test power is limited and results may be unreliable.
 edam_operation: http://edamontology.org/operation_3799
 edam_topics:
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3520
 tools:
 - name: QIIME2
   role: Computes Canberra distance matrix from feature table and executes PERMANOVA with permutation testing and effect size calculation
@@ -23,10 +23,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/permanova-beta-diversity-testing/SKILL.md
+    - outputs/audit_haffner_v2/skills/permanova-beta-diversity-testing/skill.md
+    merged_at: '2026-05-25T06:57:01.498885+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/permanova-beta-diversity-testing@sha256:85446bc795c46f0007ecc7f5a73a86c95a4a51fda255189878d583c53bae8e95
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/permanova-beta-diversity-testing@sha256:bc385a9ed6fa97c4762da2fa170e39320274b8d8f3d7c12d25debd681c4f7712
 ---
 
 # permanova-beta-diversity-testing

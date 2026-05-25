@@ -7,8 +7,8 @@ when_to_use_negative:
 - Your analysis does not require structural metadata or does not perform adduct/parent mass repair — this repair is only necessary when downstream filters depend on chemically consistent SMILES.
 edam_operation: http://edamontology.org/operation_3930
 edam_topics:
-- http://edamontology.org/topic_3407
 - http://edamontology.org/topic_0154
+- http://edamontology.org/topic_3407
 tools:
 - name: RDKit
   role: Parse, validate, canonicalize, and interconvert SMILES, InChI, and InChIKey; remove ionic counter-ions from salt-form SMILES
@@ -24,10 +24,17 @@ provenance:
   - doi: 10.1186/s13321-024-00878-1
     title: Reproducible MS/MS library cleaning pipeline in matchms
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/article_878_full_2026-05-10_v5/skills/smiles-inchi-chemical-identifier-repair/SKILL.md
+    - outputs/article_878_full_2026-05-10_v5/skills/smiles-inchi-chemical-identifier-repair/skill.md
+    merged_at: '2026-05-25T06:57:01.410166+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:d3e3512149a31d029d5fbe311cec92991577fb056ef336b976a46ee37d859709
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/smiles-inchi-chemical-identifier-repair@sha256:48051c1922ef63b480f10b715857476524dda1c44dbbdc6dffe340165a11851d
 ---
 
 # SMILES/InChI Chemical Identifier Repair

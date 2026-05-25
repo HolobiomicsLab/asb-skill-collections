@@ -28,10 +28,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/spectral-similarity-scoring-and-validation/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/spectral-similarity-scoring-and-validation/skill.md
+    merged_at: '2026-05-25T06:57:01.605921+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-scoring-and-validation@sha256:fe444303b30780a9ab4965f9f0afe2360dc2b649151a519e2d3fe798e5ec9348
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-scoring-and-validation@sha256:fe444303b30780a9ab4965f9f0afe2360dc2b649151a519e2d3fe798e5ec9348
 ---
 
 # Spectral Similarity Scoring and Validation

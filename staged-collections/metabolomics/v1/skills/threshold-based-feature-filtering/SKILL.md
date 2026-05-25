@@ -7,8 +7,8 @@ when_to_use_negative:
 - Threshold value is arbitrary or chosen post-hoc from the data distribution (i.e., chosen after inspecting the data); use a pre-specified or cross-validated threshold instead
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0091
+- http://edamontology.org/topic_3172
 tools:
 - name: random forest
   role: generates variable importance scores for each metabolite feature; thresholds are then applied to these importance values to identify differential features
@@ -22,10 +22,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/threshold-based-feature-filtering/SKILL.md
+    - outputs/audit_haffner_v2/skills/threshold-based-feature-filtering/skill.md
+    merged_at: '2026-05-25T06:57:01.483435+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/threshold-based-feature-filtering@sha256:7d325abe7b5c60284c3d5bb80c7c1e43162e9855e68c1724ed9f4a96d3955e8d
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/threshold-based-feature-filtering@sha256:ef09dd79c111fc545e6bc83172000b70bcfa03480f5a21ffdd4d9a853068c1de
 ---
 
 # threshold-based-feature-filtering

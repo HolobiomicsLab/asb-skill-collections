@@ -7,8 +7,8 @@ when_to_use_negative:
 - You require per-feature p-values, confidence intervals, or effect sizes; random-forest variable importance is a relative ranking without formal statistical inference—use univariate tests (e.g., Kruskal-Wallis, ANOVA) if statistical significance and direction are critical.
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_0625
+- http://edamontology.org/topic_3172
 tools:
 - name: RandomForest R package
   role: Train random-forest classifier on top abundant features to compute variable-importance scores for feature ranking and selection.
@@ -26,10 +26,17 @@ provenance:
   - doi: 10.1128/msystems.00710-22
     title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_haffner_v2/skills/differential-feature-identification/SKILL.md
+    - outputs/audit_haffner_v2/skills/differential-feature-identification/skill.md
+    merged_at: '2026-05-25T06:57:01.504842+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:0ed164b7bc7b5dfbb0b49792ccdbece1e29c2c83a7ea5cd1e0e17f9545ff82b0
 derived_from:
 - doi: 10.1128/msystems.00710-22
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/differential-feature-identification@sha256:eb0c85627bc197bf60eb7ca0ee4dcaa44aad42130971da2873cd7acd59b6c293
 ---
 
 # differential-feature-identification

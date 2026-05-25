@@ -7,8 +7,8 @@ when_to_use_negative:
 - Sample metadata or batch information is unavailable; normalization without accounting for known batch effects may remove biological signal.
 edam_operation: http://edamontology.org/operation_3565
 edam_topics:
-- http://edamontology.org/topic_3170
 - http://edamontology.org/topic_0203
+- http://edamontology.org/topic_3170
 tools:
 - name: HTSeq
   role: Generates raw read count matrices by counting aligned reads per annotated gene feature using union-mode, reverse-strand settings
@@ -23,10 +23,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/count-data-normalization-library-size-correction/SKILL.md
+    - outputs/audit_jeong_full/skills/count-data-normalization-library-size-correction/skill.md
+    merged_at: '2026-05-25T06:57:01.525682+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/count-data-normalization-library-size-correction@sha256:ec3e9768f6f082c3e291850fb12cb92adf94e2b5fc250eb555e993af44286339
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/count-data-normalization-library-size-correction@sha256:6564c807ca2b61460eb3556f2a6c8b727ae4c21273b8bee3b519a0909b8523be
 ---
 
 # count-data-normalization-library-size-correction

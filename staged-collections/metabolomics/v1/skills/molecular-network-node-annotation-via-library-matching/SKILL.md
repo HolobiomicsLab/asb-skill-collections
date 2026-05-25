@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3631
 edam_topics:
 - http://edamontology.org/topic_0091
-- http://edamontology.org/topic_3520
 - http://edamontology.org/topic_3172
+- http://edamontology.org/topic_3520
 tools:
 - name: GNPS (Global Natural Products Social Molecular Networking)
   role: Platform hosting feature-based molecular networking workflow, cosine similarity scoring engine, and public MS/MS reference library for library matching
@@ -24,10 +24,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/molecular-network-node-annotation-via-library-matching/SKILL.md
+    - outputs/audit_jeong_full/skills/molecular-network-node-annotation-via-library-matching/skill.md
+    merged_at: '2026-05-25T06:57:01.521454+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:0df80f06f53be883ea74dea46f247959d6faa416ecef6772acbca0e17a88d855
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/molecular-network-node-annotation-via-library-matching@sha256:bd357a231da37efb3f7dc383effe92f016890e1b94b5d7a3d92fdd3aef1cb92c
 ---
 
 # molecular-network-node-annotation-via-library-matching

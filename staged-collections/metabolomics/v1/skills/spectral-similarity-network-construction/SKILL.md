@@ -23,10 +23,17 @@ provenance:
   - doi: 10.1073/pnas
     title: Proceedings of the National Academy of Sciences
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/audit_jeong_full/skills/spectral-similarity-network-construction/SKILL.md
+    - outputs/audit_jeong_full/skills/spectral-similarity-network-construction/skill.md
+    merged_at: '2026-05-25T06:57:01.546513+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-network-construction@sha256:d31f4718adb1b0d1fb3b44cd285e235197dd90c59e88643335745dac11bf311e
 derived_from:
 - doi: 10.1073/pnas
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/spectral-similarity-network-construction@sha256:d31f4718adb1b0d1fb3b44cd285e235197dd90c59e88643335745dac11bf311e
 ---
 
 # spectral-similarity-network-construction

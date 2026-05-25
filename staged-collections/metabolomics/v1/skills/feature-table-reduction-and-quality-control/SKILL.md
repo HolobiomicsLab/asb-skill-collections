@@ -8,8 +8,8 @@ when_to_use_negative:
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
 - http://edamontology.org/topic_0629
-- http://edamontology.org/topic_3172
 - http://edamontology.org/topic_2258
+- http://edamontology.org/topic_3172
 tools:
 - name: XCMS
   role: Feature detection, alignment, and retention-time correction prior to filtering and componentization
@@ -30,10 +30,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/feature-table-reduction-and-quality-control/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/feature-table-reduction-and-quality-control/skill.md
+    merged_at: '2026-05-25T06:57:01.640347+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/feature-table-reduction-and-quality-control@sha256:e1969da7ba75484c919f4cfa64c3b2c996bb38bd579323d1f7ec1c8e8d83a498
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/feature-table-reduction-and-quality-control@sha256:d0d206b58110b2dbf8c76766f5957768218860a4da0b9d544ff11e1f7c7000e7
 ---
 
 # feature-table-reduction-and-quality-control

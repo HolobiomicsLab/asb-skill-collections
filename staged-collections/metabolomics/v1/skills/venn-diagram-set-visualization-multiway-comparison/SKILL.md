@@ -7,9 +7,9 @@ when_to_use_negative:
 - The three sets originate from different chemical spaces or parent compounds — ensure all three are derived from the same set of parent compounds (22 pesticides in this study).
 edam_operation: http://edamontology.org/operation_3695
 edam_topics:
-- http://edamontology.org/topic_3370
 - http://edamontology.org/topic_0154
 - http://edamontology.org/topic_2269
+- http://edamontology.org/topic_3370
 tools:
 - name: BioTransformer
   role: In silico prediction of phase I metabolite structures and molecular formulas using rule-based and machine-learning approaches with CYP450 transformation type selection
@@ -25,10 +25,17 @@ provenance:
   - doi: 10.1021/acs.analchem.1c00972
     title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
 schema_version: 0.2.0
+metadata:
+  merge_audit:
+    n_source_runs: 2
+    source_files:
+    - outputs/pesticide_full_2026-05-10_v2/skills/venn-diagram-set-visualization-multiway-comparison/SKILL.md
+    - outputs/pesticide_full_2026-05-10_v2/skills/venn-diagram-set-visualization-multiway-comparison/skill.md
+    merged_at: '2026-05-25T06:57:01.615462+00:00'
+    merge_kind: slug_match_union
+  iri: https://w3id.org/holobiomicslab/asb-skill/venn-diagram-set-visualization-multiway-comparison@sha256:957a96c23918e618294443bd3cdc23729b98e07603741af438d5a349fd2b54b2
 derived_from:
 - doi: 10.1021/acs.analchem.1c00972
-metadata:
-  iri: https://w3id.org/holobiomicslab/asb-skill/venn-diagram-set-visualization-multiway-comparison@sha256:f69b2c74209d76778534be4702120cffc59f9242cd18851cd4b5515339303d7a
 ---
 
 # venn-diagram-set-visualization-multiway-comparison
