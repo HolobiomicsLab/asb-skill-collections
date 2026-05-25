@@ -1,0 +1,52 @@
+{
+  "_doc": "ASB Benchmark Leaderboard — JSON-LD template. Copy to collections/<slug>/vN/benchmark/leaderboard.jsonld and fill in. Remove all _doc keys before submitting.",
+
+  "@context": {
+    "_doc": "JSON-LD context. Do not modify.",
+    "asb": "https://w3id.org/holobiomicslab/asb-skill/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+
+  "@type": "asb:Leaderboard",
+  "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/SLUG/vN/leaderboard",
+  "_doc_id": "Replace SLUG and N with the collection slug and version number.",
+
+  "collection": "https://w3id.org/holobiomicslab/asb-skill/collection/SLUG/vN",
+  "_doc_collection": "The canonical @id of the collection this leaderboard belongs to.",
+
+  "entries": [
+    {
+      "_doc": "One entry per submitted result. Duplicate this block for each entry.",
+
+      "result_type": "agent",
+      "_doc_result_type": "DISCRIMINATOR — must be one of: 'agent' | 'rag_system' | 'hybrid'. 'agent' = executes benchmark tasks end-to-end. 'rag_system' = retrieves claims from benchmark/claims/. 'hybrid' = both.",
+
+      "submitter_handle": "your-github-handle",
+      "_doc_submitter_handle": "Your GitHub username. Required.",
+
+      "submitter_orcid": null,
+      "_doc_submitter_orcid": "Your ORCID (optional but recommended for credit). Format: '0000-0001-2345-6789'.",
+
+      "agent_or_system_name": "MyAgent v1.0",
+      "_doc_agent_or_system_name": "Human-readable name of your agent or RAG system, including version.",
+
+      "image_digest": "sha256:AAAA...ZZZZ",
+      "_doc_image_digest": "Docker image digest (sha256:<64-hex>) for reproducibility, OR a git commit SHA. Required.",
+
+      "submitted_at": "2026-01-01T00:00:00Z",
+      "_doc_submitted_at": "ISO 8601 UTC timestamp when this result was produced. Required.",
+
+      "scores": {
+        "_doc": "Map of challenge_id to numeric score (float in [0,1] unless otherwise specified). challenge_id matches benchmark/tasks/<paper-doi>/ or benchmark/claims/<topic>/.",
+        "task-001": 0.0,
+        "claim-q001": 0.0
+      },
+
+      "metrics": {
+        "_doc": "Optional additional metrics. Common fields: latency_s, cost_usd, recall_at_5, mrr, ndcg.",
+        "latency_s": 0.0,
+        "cost_usd": 0.0
+      }
+    }
+  ]
+}
