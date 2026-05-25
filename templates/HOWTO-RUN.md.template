@@ -1,0 +1,72 @@
+# How to Run — ASB {{COLLECTION_TITLE}} Benchmark v{{COLLECTION_VERSION}}
+
+This guide explains how to install the skill collection, run agent challenges, run the
+claim-retrieval eval, and submit results to the leaderboard.
+
+## 1. Install the skill collection
+
+In Claude Code (or any ASB-compatible agent environment):
+
+```
+/plugin install {{COLLECTION_SLUG}}-v{{COLLECTION_VERSION}}@HolobiomicsLab/asb-skill-collections
+```
+
+This installs the `_router/SKILL.md` as the default router plus all domain skills.
+
+## 2. Run agent challenges (benchmark/tasks/)
+
+Each task lives in `benchmark/tasks/<paper-doi>/`.
+
+```bash
+# List available tasks
+ls benchmark/tasks/
+
+# Inspect a task
+cat benchmark/tasks/<paper-doi>/task.md
+cat benchmark/tasks/<paper-doi>/workflow_metadata.yaml
+
+# Run with Snakemake (full-tier tasks only)
+snakemake --snakefile benchmark/tasks/<paper-doi>/workflow.smk \
+    --directory benchmark/tasks/<paper-doi>/ \
+    --cores 4
+
+# Evaluate results
+asb run-eval benchmark/tasks/<paper-doi>/eval.json \
+    --results-dir benchmark/tasks/<paper-doi>/outputs/
+```
+
+## 3. Run the claim-retrieval eval (benchmark/claims/)
+
+```bash
+# Per-paper eval (silver tier)
+python -m pytest benchmark/claims/per_paper/ -v
+
+# Or with a RAG system implementing the ASB eval API:
+asb eval-claims \
+    --claims benchmark/claims/per_paper/ \
+    --rag-endpoint http://localhost:8765 \
+    --output results/claim_eval_$(date +%Y%m%d).json
+```
+
+See `benchmark/claims/HOWTO-EVAL.md` for metric definitions (MRR, NDCG, recall@k).
+
+## 4. Submit results to the leaderboard
+
+1. Run your agent or RAG system against the benchmark.
+2. Collect your results in the format required by `leaderboard.jsonld` (see schema in `benchmark/leaderboard.jsonld`).
+3. Open a GitHub Issue using the template:
+   https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=submit-agent-result.md
+4. A maintainer will review your PR and merge it to `benchmark/leaderboard.jsonld`.
+
+Your result will appear on the live HuggingFace Space leaderboard:
+https://huggingface.co/spaces/HolobiomicsLab/asb-{{COLLECTION_SLUG}}-v{{COLLECTION_VERSION}}-leaderboard
+
+## 5. Cite
+
+If you benchmark against this collection, please cite:
+
+```
+{{COLLECTION_CITATION}}
+```
+
+See the Zenodo DOI at the top of the collection README for the machine-readable citation.
