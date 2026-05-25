@@ -1,0 +1,111 @@
+# mirror-to-hf.yml — Push a release tag to HuggingFace Datasets
+# Triggered on tags matching <slug>-v<N> (e.g. metabolomics-v1).
+# Requires HF_TOKEN secret in repo settings.
+# Fail-soft: missing HF_TOKEN logs a warning but does not block the release.
+
+name: Mirror to HuggingFace
+
+on:
+  push:
+    tags:
+      - "*-v[0-9]*"
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    name: Mirror collection to HF Datasets
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install "huggingface_hub>=0.23" pyyaml
+
+      - name: Parse tag to slug and version
+        id: tag_parse
+        shell: bash
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          if [[ ! "$TAG" =~ ^([a-z][a-z0-9_-]+)-v([0-9]+)$ ]]; then
+            echo "ERROR: Tag '$TAG' does not match pattern <slug>-v<N>" >&2
+            exit 1
+          fi
+          SLUG="${BASH_REMATCH[1]}"
+          VERSION="${BASH_REMATCH[2]}"
+          COLLECTION_PATH="collections/${SLUG}/v${VERSION}"
+          HF_REPO="HolobiomicsLab/asb-${SLUG}-v${VERSION}"
+          SPACE_REPO="HolobiomicsLab/asb-${SLUG}-v${VERSION}-leaderboard"
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "collection_path=${COLLECTION_PATH}" >> "$GITHUB_OUTPUT"
+          echo "hf_repo=${HF_REPO}" >> "$GITHUB_OUTPUT"
+          echo "space_repo=${SPACE_REPO}" >> "$GITHUB_OUTPUT"
+          echo "Parsed: slug=${SLUG}, version=${VERSION}, path=${COLLECTION_PATH}"
+
+      - name: Check collection path exists
+        run: |
+          CPATH="${{ steps.tag_parse.outputs.collection_path }}"
+          if [ ! -d "$CPATH" ]; then
+            echo "ERROR: Collection directory not found: $CPATH" >&2
+            exit 1
+          fi
+          echo "Collection found at $CPATH"
+
+      - name: Generate HF Dataset card README
+        run: |
+          CPATH="${{ steps.tag_parse.outputs.collection_path }}"
+          COLLECTION_YAML="${CPATH}/collection.yaml"
+          OUTPUT="${CPATH}/README_HF.md"
+
+          CITATION_ARG=""
+          if [ -f "${CPATH}/CITATION.cff" ]; then
+            CITATION_ARG="--citation ${CPATH}/CITATION.cff"
+          fi
+
+          python scripts/generate_hf_dataset_card.py \
+            --collection "$COLLECTION_YAML" \
+            $CITATION_ARG \
+            --output "$OUTPUT"
+          echo "Generated HF dataset card at $OUTPUT"
+
+      - name: Generate HF Space files
+        run: |
+          CPATH="${{ steps.tag_parse.outputs.collection_path }}"
+          SLUG="${{ steps.tag_parse.outputs.slug }}"
+          VERSION="${{ steps.tag_parse.outputs.version }}"
+          LEADERBOARD_URL="https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main/${CPATH}/benchmark/leaderboard.jsonld"
+
+          python scripts/generate_hf_space_config.py \
+            --collection "${CPATH}/collection.yaml" \
+            --leaderboard-url "$LEADERBOARD_URL" \
+            --output "${CPATH}/.hf-space/"
+          echo "Generated Space files at ${CPATH}/.hf-space/"
+
+      - name: Upload collection to HF Datasets
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_REPO: ${{ steps.tag_parse.outputs.hf_repo }}
+          CPATH: ${{ steps.tag_parse.outputs.collection_path }}
+          TAG: ${{ github.ref_name }}
+          HF_STEP: upload_dataset
+        run: python scripts/mirror_to_hf.py
+
+      - name: Create or update HF Space leaderboard
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SPACE_REPO: ${{ steps.tag_parse.outputs.space_repo }}
+          CPATH: ${{ steps.tag_parse.outputs.collection_path }}
+          TAG: ${{ github.ref_name }}
+          HF_STEP: upload_space
+        run: python scripts/mirror_to_hf.py
