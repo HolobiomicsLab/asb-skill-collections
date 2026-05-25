@@ -125,6 +125,9 @@ jobs:
           checked = 0
           skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
           skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
+          # Skip auto-generated router skills — they aggregate, not derive
+          # from a single paper.
+          skill_files = [s for s in skill_files if s.parent.name != "_router"]
           for skill_md in skill_files[:10]:
               text = skill_md.read_text()
               if not text.startswith("---"):
@@ -133,7 +136,14 @@ jobs:
                   fm = yaml.safe_load(text.split("---", 2)[1])
               except Exception:
                   continue
+              # Accept both canonical derived_from and the upstream
+              # provenance.source_papers shape used by the ASB pipeline.
               derived = fm.get("derived_from") or []
+              if not derived:
+                  prov = fm.get("provenance") or {}
+                  if isinstance(prov, dict):
+                      src = prov.get("source_papers") or []
+                      derived = [s for s in src if isinstance(s, dict) and s.get("doi")]
               if not derived:
                   failures.append(f"{skill_md}: no derived_from DOIs")
                   continue
