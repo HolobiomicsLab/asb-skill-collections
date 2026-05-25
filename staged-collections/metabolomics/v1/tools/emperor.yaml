@@ -1,5 +1,6 @@
 evidence_spans:
 - visualized using EMPeror (95)
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840743+00:00'

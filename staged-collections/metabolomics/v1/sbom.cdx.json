@@ -1,0 +1,682 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:0defe04b8f7bfd93dde0458b79aba174",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-05-25T09:28:26.472521+00:00",
+    "component": {
+      "type": "library",
+      "bom-ref": "asb-skill-collections/metabolomics/v1",
+      "name": "asb-skill-collections/metabolomics",
+      "version": "1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "tools": [
+      {
+        "vendor": "Holobiomics Lab",
+        "name": "asb collection promote"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:biotransformer",
+      "name": "BioTransformer",
+      "version": "unknown",
+      "purl": "pkg:generic/biotransformer@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://anaconda.org/bioconda/biotransformer"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:edger",
+      "name": "edgeR",
+      "version": "unknown",
+      "purl": "pkg:generic/edger@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1073/pnas"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:emperor",
+      "name": "EMPeror",
+      "version": "unknown",
+      "purl": "pkg:generic/emperor@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:genform",
+      "name": "GenForm",
+      "version": "unknown",
+      "purl": "pkg:generic/genform@unknown",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://anaconda.org/bioconda/genform"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:gnps",
+      "name": "GNPS",
+      "version": "unknown",
+      "purl": "pkg:generic/gnps@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:hisat2",
+      "name": "HISAT2",
+      "version": "unknown",
+      "purl": "pkg:generic/hisat2@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1073/pnas"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:htseq",
+      "name": "HTSeq",
+      "version": "unknown",
+      "purl": "pkg:generic/htseq@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1073/pnas"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:incubator-workflow-github-chufz-incubator",
+      "name": "incubatoR workflow (GitHub: chufz/incubatoR)",
+      "version": "unknown",
+      "purl": "pkg:generic/incubator-workflow-github-chufz-incubator@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:ipo",
+      "name": "IPO",
+      "version": "unknown",
+      "purl": "pkg:generic/ipo@unknown",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pypi.org/project/ipo/"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:jupyter-notebook",
+      "name": "Jupyter Notebook",
+      "version": "unknown",
+      "purl": "pkg:generic/jupyter-notebook@unknown",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jhaffner09/core_metabolome_2021"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:lark-parser-library",
+      "name": "lark (parser library)",
+      "version": "unknown",
+      "purl": "pkg:generic/lark-parser-library@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1038/s41592-025-02660-z"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:lark-parser",
+      "name": "lark parser",
+      "version": "unknown",
+      "purl": "pkg:generic/lark-parser@unknown",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/lark-parser/lark"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1038/s41592-025-02660-z"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:lc-ms-ms",
+      "name": "LC-MS/MS",
+      "version": "unknown",
+      "purl": "pkg:generic/lc-ms-ms@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1073/pnas"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:massql",
+      "name": "MassQL",
+      "version": "unknown",
+      "purl": "pkg:generic/massql@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/mwang87/MassQueryLanguage"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:matchms-0-26-4",
+      "name": "matchms 0.26.4",
+      "version": "unknown",
+      "purl": "pkg:generic/matchms-0-26-4@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pypi.org/project/matchms/"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1186/s13321-024-00878-1"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:matchms",
+      "name": "matchms",
+      "version": "unknown",
+      "purl": "pkg:generic/matchms@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pypi.org/project/matchms/"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1186/s13321-024-00878-1"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:mmvec",
+      "name": "mmvec",
+      "version": "unknown",
+      "purl": "pkg:generic/mmvec@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:ms-cluster",
+      "name": "MS-Cluster",
+      "version": "unknown",
+      "purl": "pkg:generic/ms-cluster@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1038/s41592-025-02660-z"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:mzmine",
+      "name": "MZmine",
+      "version": "2.33",
+      "purl": "pkg:generic/mzmine@2.33",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:mzr",
+      "name": "mzR",
+      "version": "unknown",
+      "purl": "pkg:generic/mzr@unknown",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://bio.tools/mzr"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:orgmassspecr",
+      "name": "OrgMassSpecR",
+      "version": "unknown",
+      "purl": "pkg:generic/orgmassspecr@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:pandas",
+      "name": "pandas",
+      "version": "unknown",
+      "purl": "pkg:generic/pandas@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1038/s41592-025-02660-z"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:permanova",
+      "name": "PERMANOVA",
+      "version": "0.001",
+      "purl": "pkg:generic/permanova@0.001",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:pfam",
+      "name": "Pfam",
+      "version": "unknown",
+      "purl": "pkg:generic/pfam@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "CC0-1.0"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1073/pnas"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:principal-coordinate-analysis-pcoa",
+      "name": "principal-coordinate analysis (PCoA)",
+      "version": "unknown",
+      "purl": "pkg:generic/principal-coordinate-analysis-pcoa@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:proteowizard-v3-0-18265",
+      "name": "ProteoWizard v3.0.18265",
+      "version": "unknown",
+      "purl": "pkg:generic/proteowizard-v3-0-18265@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:pubchem",
+      "name": "PubChem",
+      "version": "unknown",
+      "purl": "pkg:generic/pubchem@unknown",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1186/s13321-024-00878-1"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:pyteomics",
+      "name": "pyteomics",
+      "version": "unknown",
+      "purl": "pkg:generic/pyteomics@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1038/s41592-025-02660-z"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:python",
+      "name": "Python",
+      "version": "unknown",
+      "purl": "pkg:generic/python@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "PSF-2.0"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://anaconda.org/conda-forge/python"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1186/s13321-024-00878-1"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:qiime2",
+      "name": "QIIME2",
+      "version": "unknown",
+      "purl": "pkg:generic/qiime2@unknown",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/qiime2/qiime2"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:r-programming-language",
+      "name": "R programming language",
+      "version": "3.5.3",
+      "purl": "pkg:generic/r-programming-language@3.5.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jhaffner09/core_metabolome_2021"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:r-v-3-6-1",
+      "name": "R v 3.6.1",
+      "version": "unknown",
+      "purl": "pkg:generic/r-v-3-6-1@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:r",
+      "name": "R",
+      "version": "unknown",
+      "purl": "pkg:generic/r@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jhaffner09/core_metabolome_2021"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:random-forest",
+      "name": "random forest",
+      "version": "unknown",
+      "purl": "pkg:generic/random-forest@unknown",
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1128/msystems.00710-22"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:rdkit",
+      "name": "RDKit",
+      "version": "unknown",
+      "purl": "pkg:generic/rdkit@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pypi.org/project/rdkit/"
+        },
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1186/s13321-024-00878-1"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:sirius-version-4-4-27",
+      "name": "Sirius version 4.4.27",
+      "version": "4.4.27",
+      "purl": "pkg:generic/sirius-version-4-4-27@4.4.27",
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0-or-later"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:sra-toolkit",
+      "name": "SRA Toolkit",
+      "version": "unknown",
+      "purl": "pkg:generic/sra-toolkit@unknown",
+      "licenses": [
+        {
+          "license": {
+            "id": "Public-Domain"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1073/pnas"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "asb-tool:xcms-version-3-8",
+      "name": "XCMS version 3.8",
+      "version": "3.8.27",
+      "purl": "pkg:generic/xcms-version-3-8@3.8.27",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "documentation",
+          "url": "https://doi.org/10.1021/acs.analchem.1c00972"
+        }
+      ]
+    }
+  ]
+}

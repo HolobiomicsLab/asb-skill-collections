@@ -1,0 +1,217 @@
+# corpus-freshness.yml — Monthly retraction monitor.
+# Runs on the 1st of each month at 06:00 UTC (and on manual dispatch).
+# Walks every corpus.yaml under collections/ and staged-collections/,
+# queries Crossref for each paper with status `included` or `accepted`,
+# and opens a tracking issue per collection if any DOIs are now retracted.
+#
+# Spec ref: OPEN_ACCESS_POLICY.md §"Retraction policy"
+# Issue label convention: `[retraction-watch]` in the title; 30-day soft
+# cap prevents duplicate issues from successive monthly runs.
+
+name: Corpus freshness
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  corpus-freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml requests
+
+      - name: Scan corpora for retractions and open tracking issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PYEOF'
+          import os
+          import sys
+          import json
+          import pathlib
+          import datetime as _dt
+          import subprocess
+          import yaml
+          import requests
+
+          USER_AGENT = "asb-skill-collections/0.1 (mailto:louisfelix.nothias@gmail.com)"
+          REPO = os.environ["GH_REPO"]
+          INCLUDED_STATUSES = {"included", "accepted"}
+          SOFT_CAP_DAYS = 30
+
+          def crossref_retraction_check(doi):
+              """Return (is_retracted, title, error) for a DOI."""
+              url = f"https://api.crossref.org/works/{doi}"
+              try:
+                  r = requests.get(
+                      url,
+                      headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
+                      timeout=15,
+                  )
+                  if r.status_code != 200:
+                      return False, "", f"HTTP {r.status_code}"
+                  msg = r.json().get("message", {})
+                  title = (msg.get("title") or [""])[0]
+                  for u in msg.get("update-to") or []:
+                      if u.get("type") == "retraction":
+                          return True, title, None
+                  return False, title, None
+              except Exception as exc:
+                  return False, "", f"err:{type(exc).__name__}:{exc}"
+
+          def find_existing_issue(collection_slug, version):
+              """Return (issue_number, created_at_iso) for any open retraction-watch
+              issue for this collection/version, or (None, None)."""
+              title_marker = f"[retraction-watch] "
+              search_q = (
+                  f'repo:{REPO} is:issue in:title "[retraction-watch]" "{collection_slug}/v{version}"'
+              )
+              try:
+                  out = subprocess.check_output(
+                      [
+                          "gh", "api",
+                          "-X", "GET", "search/issues",
+                          "-f", f"q={search_q}",
+                          "--jq", ".items[] | {number, title, state, created_at}",
+                      ],
+                      text=True,
+                  )
+              except subprocess.CalledProcessError as exc:
+                  print(f"WARN: gh search failed: {exc}")
+                  return None, None
+              for line in out.strip().splitlines():
+                  if not line.strip():
+                      continue
+                  try:
+                      item = json.loads(line)
+                  except json.JSONDecodeError:
+                      continue
+                  if title_marker in item.get("title", "") and f"{collection_slug}/v{version}" in item["title"]:
+                      return item["number"], item["created_at"]
+              return None, None
+
+          def days_since(iso_ts):
+              try:
+                  ts = _dt.datetime.fromisoformat(iso_ts.replace("Z", "+00:00"))
+              except Exception:
+                  return None
+              return (_dt.datetime.now(_dt.timezone.utc) - ts).days
+
+          def open_issue(title, body):
+              subprocess.check_call(
+                  ["gh", "issue", "create", "--repo", REPO,
+                   "--title", title, "--body", body, "--label", "retraction-watch"],
+              )
+
+          def update_issue(number, body):
+              subprocess.check_call(
+                  ["gh", "issue", "comment", str(number), "--repo", REPO, "--body", body],
+              )
+
+          # Walk every corpus.yaml under collections/ and staged-collections/
+          corpus_files = list(pathlib.Path("collections").rglob("corpus.yaml"))
+          corpus_files += list(pathlib.Path("staged-collections").rglob("corpus.yaml"))
+          if not corpus_files:
+              print("SKIP: no corpus.yaml files found")
+              sys.exit(0)
+
+          total_papers = 0
+          total_retracted = 0
+          per_collection = {}  # (slug, version) -> list of (doi, title)
+
+          for corpus_path in corpus_files:
+              # Path shape: collections/<slug>/v<N>/corpus.yaml
+              parts = corpus_path.parts
+              try:
+                  # find slug + version segments
+                  slug = parts[-3]
+                  version = parts[-2].lstrip("v")
+              except IndexError:
+                  print(f"WARN: cannot parse slug/version from {corpus_path}")
+                  continue
+              try:
+                  doc = yaml.safe_load(corpus_path.read_text()) or {}
+              except Exception as exc:
+                  print(f"WARN: parse error in {corpus_path}: {exc}")
+                  continue
+              papers = doc.get("papers") or []
+              for paper in papers:
+                  status = (paper.get("status") or "").strip().lower()
+                  if status not in INCLUDED_STATUSES:
+                      continue
+                  doi = (paper.get("doi") or "").strip()
+                  if not doi:
+                      continue
+                  total_papers += 1
+                  is_retracted, title, err = crossref_retraction_check(doi)
+                  if err:
+                      print(f"WARN: {doi}: {err}")
+                      continue
+                  if is_retracted:
+                      total_retracted += 1
+                      per_collection.setdefault((slug, version), []).append((doi, title))
+                      print(f"RETRACTED: {slug}/v{version}: {doi} — {title[:80]}")
+
+          print(f"\nScanned {total_papers} included/accepted papers across {len(corpus_files)} corpus files.")
+          print(f"Retractions found: {total_retracted}")
+
+          if not per_collection:
+              print("PASS: no retractions detected.")
+              sys.exit(0)
+
+          # Open or update one tracking issue per collection
+          for (slug, version), dois in per_collection.items():
+              title = f"[retraction-watch] Found {len(dois)} retracted paper(s) in {slug}/v{version}"
+              body_lines = [
+                  f"Monthly retraction sweep detected **{len(dois)}** retracted DOI(s) in `{slug}/v{version}`.",
+                  "",
+                  "| DOI | Crossref | Title |",
+                  "|---|---|---|",
+              ]
+              for doi, t in dois:
+                  body_lines.append(
+                      f"| `{doi}` | https://api.crossref.org/works/{doi} | {t[:80] if t else '—'} |"
+                  )
+              body_lines += [
+                  "",
+                  "### Proposed next step",
+                  f"Open a PR against `collections/{slug}/v{version}/corpus.yaml` (or",
+                  f"`staged-collections/{slug}/v{version}/corpus.yaml`) marking each",
+                  "affected paper with `status: retracted` and a `retraction:` block",
+                  "(date, notice DOI). See OPEN_ACCESS_POLICY.md §Retraction policy.",
+                  "",
+                  f"_Generated by `corpus-freshness.yml` on {_dt.datetime.now(_dt.timezone.utc).isoformat()}_",
+              ]
+              body = "\n".join(body_lines)
+
+              existing_number, existing_created = find_existing_issue(slug, version)
+              if existing_number is not None:
+                  age = days_since(existing_created)
+                  if age is not None and age < SOFT_CAP_DAYS:
+                      print(f"SKIP: issue #{existing_number} opened {age} days ago (< {SOFT_CAP_DAYS}); commenting instead of opening duplicate.")
+                      update_issue(existing_number, "Re-detected on monthly sweep:\n\n" + body)
+                      continue
+              try:
+                  open_issue(title, body)
+                  print(f"OPENED: issue for {slug}/v{version} ({len(dois)} DOIs)")
+              except subprocess.CalledProcessError as exc:
+                  print(f"::error::failed to open issue for {slug}/v{version}: {exc}")
+                  sys.exit(1)
+          PYEOF

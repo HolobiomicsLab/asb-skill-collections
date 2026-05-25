@@ -133,6 +133,177 @@ function makeAttestationPRBody({ doi, slugs, collection, version }) {
   return lines.join("\n");
 }
 
+function parseJSONL(text) {
+  const out = [];
+  for (const line of text.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    try { out.push(JSON.parse(trimmed)); } catch { /* skip malformed */ }
+  }
+  return out;
+}
+
+async function fetchClaimsForTier(paperIds, tier) {
+  // tier: "silver" -> ground_truth.jsonl
+  //       "gold"   -> gold/ground_truth.jsonl
+  const suffix = tier === "gold" ? "gold/ground_truth.jsonl" : "ground_truth.jsonl";
+  for (const id of paperIds) {
+    const url = `${RAW_BASE}/benchmark/claims/per_paper/${id}/${suffix}`;
+    try {
+      const txt = await fetchText(url);
+      return parseJSONL(txt).map(c => ({ ...c, _tier: tier, _paperId: id }));
+    } catch { /* try next id */ }
+  }
+  return [];
+}
+
+function truncate(s, n) {
+  if (!s) return "";
+  s = String(s);
+  return s.length > n ? s.slice(0, n - 1) + "…" : s;
+}
+
+async function renderClaims({ doi, doiSafe, collection, version, myWorkflow }) {
+  const listDiv = document.getElementById("claims-list");
+  const filterDiv = document.getElementById("claims-filter");
+  const countEl = document.getElementById("claims-count");
+  if (!listDiv) return;
+
+  // Build candidate paper-ids the per_paper directory may use.
+  const candidates = new Set();
+  candidates.add(doiSafe);
+  candidates.add(doi);
+  candidates.add(doi.toLowerCase());
+  candidates.add(doi.replace(/[^a-zA-Z0-9]/g, "_"));
+  // If workflow path encodes the paper-id as the first segment, try that.
+  if (myWorkflow) {
+    const parts = myWorkflow.split("/").filter(Boolean);
+    for (const p of parts) {
+      if (p && !p.endsWith(".yaml") && !p.endsWith(".json") && p !== "workflows" && p !== "runs") {
+        candidates.add(p);
+      }
+    }
+  }
+  const ids = [...candidates];
+
+  const [silver, gold] = await Promise.all([
+    fetchClaimsForTier(ids, "silver"),
+    fetchClaimsForTier(ids, "gold"),
+  ]);
+
+  // Merge: gold claims may also appear in silver under same claim_id;
+  // prefer the gold record when there is a collision.
+  const byId = new Map();
+  for (const c of silver) {
+    const cid = c.claim_id || c.id || JSON.stringify(c).slice(0, 32);
+    byId.set(cid, { ...c, claim_id: cid });
+  }
+  for (const c of gold) {
+    const cid = c.claim_id || c.id || JSON.stringify(c).slice(0, 32);
+    byId.set(cid, { ...c, claim_id: cid, _tier: "gold" });
+  }
+  const allClaims = [...byId.values()];
+
+  if (!allClaims.length) {
+    listDiv.innerHTML = "";
+    listDiv.appendChild(el("p", { class: "empty" },
+      "No claim ledger emitted for this paper yet."));
+    return;
+  }
+
+  filterDiv.hidden = false;
+
+  let currentTier = "all";
+
+  function renderTable() {
+    listDiv.innerHTML = "";
+    const filtered = currentTier === "all"
+      ? allClaims
+      : allClaims.filter(c => c._tier === currentTier);
+
+    countEl.textContent = `${filtered.length} of ${allClaims.length} claim(s)`;
+
+    if (!filtered.length) {
+      listDiv.appendChild(el("p", { class: "empty" },
+        `No ${currentTier}-tier claims for this paper.`));
+      return;
+    }
+
+    const table = el("table", { class: "claims-table" });
+    const thead = el("thead", {}, el("tr", {},
+      el("th", {}, "claim_id"),
+      el("th", {}, "tier"),
+      el("th", {}, "text"),
+      el("th", {}, "section"),
+      el("th", {}, ""),
+    ));
+    table.appendChild(thead);
+    const tbody = el("tbody", {});
+    for (const c of filtered) {
+      const tierBadge = el("span",
+        { class: c._tier === "gold" ? "badge badge-gold" : "badge badge-silver" },
+        c._tier);
+      const verifyBtn = el("button", {
+        type: "button",
+        class: "btn-verify-claim",
+        onclick: () => openClaimAttestation({ doi, collection, version, claim: c }),
+      }, "Verify ✓");
+      tbody.appendChild(el("tr", {},
+        el("td", {}, el("code", {}, truncate(c.claim_id, 40))),
+        el("td", {}, tierBadge),
+        el("td", {}, truncate(c.text || c.claim || c.statement || "", 200)),
+        el("td", {}, truncate(c.section || c.location || "", 40)),
+        el("td", {}, verifyBtn),
+      ));
+    }
+    table.appendChild(tbody);
+    listDiv.appendChild(table);
+  }
+
+  for (const btn of filterDiv.querySelectorAll(".tier-btn")) {
+    btn.addEventListener("click", () => {
+      currentTier = btn.dataset.tier;
+      for (const b of filterDiv.querySelectorAll(".tier-btn")) {
+        b.classList.toggle("is-active", b === btn);
+      }
+      renderTable();
+    });
+  }
+
+  renderTable();
+}
+
+function openClaimAttestation({ doi, collection, version, claim }) {
+  const cid = claim.claim_id || claim.id || "<claim-id>";
+  const lines = [];
+  lines.push(`# Claim verification for paper ${doi}`);
+  lines.push(``);
+  lines.push(`Reviewing a single claim from the ${claim._tier}-tier ledger.`);
+  lines.push(``);
+  lines.push("```yaml");
+  lines.push(`# Save as collections/${collection}/v${version}/reviews/${(doi || "").replace(/[/:]/g, "_")}.yaml`);
+  lines.push(`paper_doi: ${doi}`);
+  lines.push(`collection: ${collection}/v${version}`);
+  lines.push(`reviewer:`);
+  lines.push(`  orcid: 0000-0000-0000-0000   # <-- replace with your ORCID`);
+  lines.push(`  github: <your-github-handle>`);
+  lines.push(`  is_coauthor: false`);
+  lines.push(`reviewed_at: ${new Date().toISOString().slice(0, 10)}`);
+  lines.push(`verdict: accepted`);
+  lines.push(`verified_claim_ids:`);
+  lines.push(`  - ${cid}`);
+  lines.push(`tier_reviewed: ${claim._tier}`);
+  lines.push(`notes: |`);
+  lines.push(`  Claim text (truncated): ${truncate(claim.text || claim.claim || claim.statement || "", 240)}`);
+  lines.push("```");
+  const url = makeIssueURL({
+    title: `[review:claim] ${cid} from ${doi}`,
+    body: lines.join("\n"),
+    labels: ["review-attestation", "claim-verification", `tier:${claim._tier}`],
+  });
+  window.open(url, "_blank");
+}
+
 (async function init() {
   const doi = getParam("doi");
   const collection = getParam("collection") || "metabolomics";
@@ -262,6 +433,11 @@ function makeAttestationPRBody({ doi, slugs, collection, version }) {
     });
     window.open(url, "_blank");
   });
+  // -------------------------------------------------------------------
+  // Claims ledger (Enhancement 2): silver + gold tier rendering w/ filter
+  // -------------------------------------------------------------------
+  await renderClaims({ doi, doiSafe, collection, version, myWorkflow });
+
   document.getElementById("btn-flag").addEventListener("click", () => {
     const body = `## Issue with derived content from paper ${doi}\n\n` +
       `Collection: ${collection}/v${version}\n\n` +

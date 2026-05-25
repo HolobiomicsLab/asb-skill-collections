@@ -5,6 +5,8 @@ install:
   channel: bioconda
   kind: conda
   package: biotransformer
+license_source: curated
+license_spdx: GPL-3.0-or-later
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.842148+00:00'

@@ -1,5 +1,6 @@
 evidence_spans:
 - All code is available at https://github.com/chufz/incubatoR.
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.842196+00:00'

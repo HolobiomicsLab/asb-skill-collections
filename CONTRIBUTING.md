@@ -95,6 +95,91 @@ Moving to hosted execution is tracked as a v1.1+ improvement and requires
 cost guardrails, (b) public Perspicacité MCP endpoint, (c) `actions/cache`
 wiring for the PDF / figure / LLM response caches.
 
+## Budget-tier LLM mode for cost-constrained contributors
+
+The default ASB pipeline runs at **economy tier** (~$0.10-$0.35 per paper),
+which uses Sonnet for outline-level reasoning and Haiku for card-level
+extraction. For contributors at lower-resource institutions, or for
+first-pass dogfooding before committing real review time, this can still
+be a barrier. We support a **budget tier** that brings per-paper cost down
+to ~$0.02-$0.05.
+
+### Invocation
+
+```bash
+asb build <paper-doi> --llm-tier=budget
+asb collection promote <slug> --llm-tier=budget
+```
+
+The `--llm-tier=budget` flag is the intended interface. If your local
+`asb` build does not yet expose it, see `docs/cli_reference.md` for the
+current status and any environment-variable equivalents.
+
+### Models used
+
+| Agent | Economy tier (default) | Budget tier |
+|---|---|---|
+| Outline / decomposition | Sonnet | `openai/gpt-4o-mini` |
+| Card extraction | Haiku | `openai/gpt-4o-mini` |
+| Claim extraction | Haiku | `openai/gpt-4o-mini` |
+| Description rewrite (discipline pass) | Haiku | Haiku — unchanged |
+
+Budget tier uses one model (`openai/gpt-4o-mini`) for every agent except
+the description-rewrite step, which stays on Haiku because consistency of
+the EDAM-conformant skill descriptions is non-negotiable for the
+collection's quality contract.
+
+### Quality tradeoffs (observed, indicative)
+
+- **Decomposition quality drops ~10-20%.** Budget tier produces fewer
+  cards per paper and is more likely to merge distinct sub-methods into a
+  single card.
+- **Claim extraction quality drops more.** Both precision and recall
+  decline noticeably. Budget-tier claim sets should be treated as a
+  starting point for human curation, not as a final artifact.
+- **Description discipline holds.** The rewrite step is identical
+  between tiers, so the EDAM-aligned descriptions still pass the
+  description linter.
+
+### Acceptable use cases
+
+- **First-pass dogfooding** before requesting Lead Curator review — get
+  a sense of what the pipeline will produce, find obvious problems,
+  iterate locally without burning a higher-tier budget.
+- **Reviewer attestation work** that does **not** regenerate derived
+  content — verifying an existing economy-tier artifact does not require
+  re-running the pipeline at all, and budget tier is fine for any
+  ancillary regeneration during review.
+- **Educational and demonstration runs** — teaching how the pipeline
+  works, showing a class, or producing reproducible examples for
+  documentation.
+
+### Quality gates
+
+- Budget-tier outputs are flagged in the build manifest
+  (`build_manifest.yaml`) with `tier: budget` on every derived artifact.
+- The Lead Curator **must explicitly re-promote** budget-tier artifacts
+  with `--llm-tier=economy` (or higher) before any `<slug>-v<N>` tag is
+  cut. `release.yml` refuses to deposit a release whose manifest contains
+  any `tier: budget` artifact.
+- Reviewer attestations against budget-tier artifacts are allowed during
+  staging review, but the artifacts they attest to must be re-derived at
+  economy tier before release. The attestation is re-checked against the
+  re-derived artifact; if the re-derivation changes the artifact
+  materially, the attestation is invalidated and a fresh review is
+  required.
+
+### Cost ceiling
+
+| Tier | Estimated cost / paper |
+|---|---|
+| Budget | $0.02 - $0.05 |
+| Economy (default) | $0.10 - $0.35 |
+| Premium (Opus everywhere, not used in routine builds) | $1 - $3 |
+
+These numbers are indicative as of 2026 model pricing and will drift; the
+flag itself is stable.
+
 ## Code of Conduct
 
 We follow the Contributor Covenant v2.1. Scientific integrity and respectful review

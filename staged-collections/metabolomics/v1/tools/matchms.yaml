@@ -4,6 +4,8 @@ evidence_spans:
 install:
   kind: pip
   package: matchms
+license_source: curated
+license_spdx: Apache-2.0
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.838826+00:00'

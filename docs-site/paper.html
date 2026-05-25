@@ -43,6 +43,18 @@
       <div id="workflow-detail"><p class="hint">Loading…</p></div>
     </section>
 
+    <section id="claims">
+      <h2>Verifiable claims</h2>
+      <div id="claims-filter" class="filter-row" hidden>
+        <span class="filter-label">Tier:</span>
+        <button type="button" class="tier-btn is-active" data-tier="all">All</button>
+        <button type="button" class="tier-btn" data-tier="silver">Silver only</button>
+        <button type="button" class="tier-btn" data-tier="gold">Gold only</button>
+        <span id="claims-count" class="filter-count"></span>
+      </div>
+      <div id="claims-list"><p class="loading">Loading…</p></div>
+    </section>
+
     <section id="about" class="hint">
       <p>
         See <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/COI_POLICY.md">COI policy</a>

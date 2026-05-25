@@ -1,5 +1,7 @@
 evidence_spans:
 - MZmine v2.33 (83) was used to identify MS features for all samples
+license_source: curated
+license_spdx: MIT
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840630+00:00'

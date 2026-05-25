@@ -1,5 +1,6 @@
 evidence_spans:
 - The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.841020+00:00'

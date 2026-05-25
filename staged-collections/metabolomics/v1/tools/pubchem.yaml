@@ -1,6 +1,7 @@
 canonical_url: https://pubchem.ncbi.nlm.nih.gov/
 evidence_spans:
 - This filter derives the canonical SMILES, InChI and InChIKey from PubChem
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840559+00:00'

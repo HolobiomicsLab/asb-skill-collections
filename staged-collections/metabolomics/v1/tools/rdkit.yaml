@@ -4,6 +4,8 @@ evidence_spans:
 install:
   kind: pip
   package: rdkit
+license_source: curated
+license_spdx: BSD-3-Clause
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.839984+00:00'

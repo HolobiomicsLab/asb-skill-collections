@@ -1,5 +1,6 @@
 evidence_spans:
 - populations exhibited similar metabolomes based on the degree of industrialization determined by principal-coordinate analysis (PCoA)
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840618+00:00'

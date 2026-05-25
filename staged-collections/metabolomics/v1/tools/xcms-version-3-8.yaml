@@ -1,5 +1,7 @@
 evidence_spans:
 - Feature detection, alignment, and retention time correction were performed using XCMS version 3.8.27
+license_source: curated
+license_spdx: GPL-2.0-or-later
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.842257+00:00'

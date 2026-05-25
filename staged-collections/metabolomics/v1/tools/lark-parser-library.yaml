@@ -1,5 +1,6 @@
 evidence_spans:
 - The parsing is done by using the lark Python library
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.841033+00:00'

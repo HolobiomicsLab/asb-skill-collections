@@ -2,6 +2,8 @@ canonical_url: https://github.com/mwang87/MassQueryLanguage
 evidence_spans:
 - MassQL was helpful for the annotation of sugar conjugation, as it rapidly annotated hexosylation and pentosylation of the flavonoids
 - Here we introduce a new language, the Mass Spectrometry Query Language (MassQL), and an accompanying software ecosystem
+license_source: curated
+license_spdx: MIT
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840914+00:00'

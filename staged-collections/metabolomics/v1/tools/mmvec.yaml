@@ -1,5 +1,6 @@
 evidence_spans:
 - we used the neural network platform microbe-metabolite vectors (mmvec) (69)
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840752+00:00'

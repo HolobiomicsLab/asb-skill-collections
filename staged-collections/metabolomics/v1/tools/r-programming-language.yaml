@@ -1,6 +1,7 @@
 canonical_url: https://github.com/jhaffner09/core_metabolome_2021
 evidence_spans:
 - Total ion current (TIC) normalization was conducted through R programming language v3.5.3 (84) in Jupyter Notebook
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840688+00:00'

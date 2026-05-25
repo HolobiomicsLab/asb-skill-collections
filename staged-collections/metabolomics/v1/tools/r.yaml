@@ -3,6 +3,8 @@ evidence_spans:
 - For the six-sample filtering, additional processing was done in R (84) to remove any features that were not found in at least six samples from each population.
 - Conditional probabilities were exported to R (84).
 - The R code for the RNAseq data processing is available from https://github.com/KyobinKang/supplementary-L_brumalis_UGT
+license_source: curated
+license_spdx: GPL-2.0-or-later
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840663+00:00'

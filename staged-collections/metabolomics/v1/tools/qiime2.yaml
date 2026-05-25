@@ -2,6 +2,7 @@ canonical_url: https://github.com/qiime2/qiime2
 evidence_spans:
 - Principal coordinate analysis (PCoA) plots were created using Canberra distance metrics from QIIME2 (93)
 - Metabolite and microbe feature tables were input to the Quantitative Insights into Microbial Ecology 2 (QIIME2) (93) microbe-metabolite vectors (mmvec) plugin
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840732+00:00'

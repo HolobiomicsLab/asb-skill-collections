@@ -1,5 +1,6 @@
 evidence_spans:
 - We analyzed the broth of the 1-supplemented culture of L. brumalis with LC-MS/MS in a time-dependent manner
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840792+00:00'

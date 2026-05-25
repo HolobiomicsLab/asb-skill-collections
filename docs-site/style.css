@@ -112,3 +112,92 @@ form button[type=submit]:hover { background: #1d4ed8; }
 
 .error { color: #b91c1c; }
 .empty { color: #6b7280; font-style: italic; }
+
+/* Draft backup banner (propose.html) */
+.draft-banner {
+  margin: 1rem 0;
+  padding: .6rem .8rem;
+  background: #fff8e1;
+  border: 1px solid #f0c97b;
+  border-radius: 4px;
+  font-size: .9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+.draft-banner button {
+  padding: .3rem .7rem;
+  font-size: .85rem;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.draft-banner button.btn-secondary {
+  background: #fff;
+  color: #444;
+  border-color: #999;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 1rem;
+}
+.form-actions .btn-secondary {
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  background: #fff;
+  color: #444;
+  border: 1px solid #999;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-actions .btn-secondary:hover { background: #f5f5f5; }
+.draft-status { font-size: .8rem; color: #666; font-style: italic; }
+
+/* Claim tier filter (paper.html) */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  margin: .8rem 0;
+  padding: .5rem .7rem;
+  background: #f8f9fb;
+  border-radius: 4px;
+  font-size: .85rem;
+}
+.filter-row .filter-label { color: #444; font-weight: 600; }
+.filter-row .filter-count { color: #666; margin-left: auto; font-style: italic; }
+.tier-btn {
+  padding: .25rem .7rem;
+  font-size: .85rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tier-btn:hover { background: #eef2ff; }
+.tier-btn.is-active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+.claims-table code { font-size: .8rem; }
+.badge-silver { background: #eceff1; color: #455a64; }
+.badge-gold { background: #fff3cd; color: #8a6d00; }
+.btn-verify-claim {
+  padding: .2rem .55rem;
+  font-size: .8rem;
+  border: 1px solid #2563eb;
+  background: #fff;
+  color: #2563eb;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn-verify-claim:hover { background: #2563eb; color: #fff; }

@@ -5,6 +5,8 @@ install:
   channel: conda-forge
   kind: conda
   package: python
+license_source: curated
+license_spdx: PSF-2.0
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840481+00:00'

@@ -1,6 +1,7 @@
 canonical_url: https://github.com/jhaffner09/core_metabolome_2021
 evidence_spans:
 - a random forest machine learning algorithm from the R package RandomForest was used in Jupyter Notebook (44)
+license_source: unresolved
 merge_audit:
   merge_kind: slug_match_union
   merged_at: '2026-05-25T07:33:55.840699+00:00'
