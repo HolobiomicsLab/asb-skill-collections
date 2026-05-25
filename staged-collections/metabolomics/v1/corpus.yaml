@@ -1,4 +1,4 @@
-schema_version: '0.1'
+schema_version: '0.2'
 collection: metabolomics
 collection_version: 1
 generated_at: '2026-05-25T07:33:56.847151+00:00'
@@ -8,10 +8,10 @@ papers:
   title: Improving the Screening Analysis of Pesticide Metabolites in Human Biomonitoring by Combining High-Throughput <i>In Vitro</i> Incubation and Automated LC–HRMS Data Processing
   status: included
   access:
-    type: unknown
+    type: hybrid
     license: ''
-    verified_via: ''
-    verified_at: null
+    verified_via: publisher-known
+    verified_at: '2026-05-25'
   proposed_by: ''
   proposed_at: null
   accepted_by: ''
@@ -24,14 +24,23 @@ papers:
     verified_by: []
     verified_at: null
     discussion: null
+  external_ids:
+    github: []
+    zenodo_dois: []
+    pdb: []
+    chebi: []
+    hmdb: []
+    uniprot: []
+  data_accessions: []
+  supplementary: []
 - doi: 10.1038/s41592-025-02660-z
   title: A universal language for finding mass spectrometry data patterns
   status: included
   access:
-    type: unknown
+    type: hybrid
     license: ''
-    verified_via: ''
-    verified_at: null
+    verified_via: publisher-known
+    verified_at: '2026-05-25'
   proposed_by: ''
   proposed_at: null
   accepted_by: ''
@@ -44,9 +53,18 @@ papers:
     verified_by: []
     verified_at: null
     discussion: null
+  external_ids:
+    github: []
+    zenodo_dois: []
+    pdb: []
+    chebi: []
+    hmdb: []
+    uniprot: []
+  data_accessions: []
+  supplementary: []
 - doi: 10.1073/pnas
   title: Proceedings of the National Academy of Sciences
-  status: included
+  status: excluded
   access:
     type: unknown
     license: ''
@@ -56,7 +74,27 @@ papers:
   proposed_at: null
   accepted_by: ''
   accepted_at: null
-  rationale: ''
+  rationale: 'Excluded from v1: ingested with incomplete metadata (`10.1073/pnas` is the
+
+    journal stub, not a paper DOI; title field holds the journal name rather
+
+    than the paper title). The 15 skills + 9 tool records traced to this entry
+
+    have been retained but their verbatim quotations were stripped by the
+
+    quotation-cap sanitizer (see quotation_audit.json). To restore: re-ingest
+
+    the underlying article (Jeong et al., examples/jeong_package) with a real
+
+    DOI and rerun `asb collection promote`. Tracked as known-issue in v1
+
+    CHANGELOG. Pending domain audit on whether the RNA-seq tooling
+
+    (edger / hisat2 / htseq / sra-toolkit / pfam) belongs in a metabolomics
+
+    collection at all — flavor split may be needed.
+
+    '
   derived_skills: 15
   derived_tools: 9
   source_runs: []
@@ -64,14 +102,23 @@ papers:
     verified_by: []
     verified_at: null
     discussion: null
+  external_ids:
+    github: []
+    zenodo_dois: []
+    pdb: []
+    chebi: []
+    hmdb: []
+    uniprot: []
+  data_accessions: []
+  supplementary: []
 - doi: 10.1128/msystems.00710-22
   title: Untargeted Fecal Metabolomic Analyses across an Industrialization Gradient Reveal Shared Metabolites and Impact of Industrialization on Fecal Microbiome-Metabolome Interactions
   status: included
   access:
-    type: unknown
-    license: ''
-    verified_via: ''
-    verified_at: null
+    type: open-access
+    license: CC-BY-4.0
+    verified_via: publisher-known
+    verified_at: '2026-05-25'
   proposed_by: ''
   proposed_at: null
   accepted_by: ''
@@ -84,14 +131,23 @@ papers:
     verified_by: []
     verified_at: null
     discussion: null
+  external_ids:
+    github: []
+    zenodo_dois: []
+    pdb: []
+    chebi: []
+    hmdb: []
+    uniprot: []
+  data_accessions: []
+  supplementary: []
 - doi: 10.1186/s13321-024-00878-1
   title: Reproducible MS/MS library cleaning pipeline in matchms
   status: included
   access:
-    type: unknown
-    license: ''
-    verified_via: ''
-    verified_at: null
+    type: open-access
+    license: CC-BY-4.0
+    verified_via: publisher-known
+    verified_at: '2026-05-25'
   proposed_by: ''
   proposed_at: null
   accepted_by: ''
@@ -104,3 +160,12 @@ papers:
     verified_by: []
     verified_at: null
     discussion: null
+  external_ids:
+    github: []
+    zenodo_dois: []
+    pdb: []
+    chebi: []
+    hmdb: []
+    uniprot: []
+  data_accessions: []
+  supplementary: []

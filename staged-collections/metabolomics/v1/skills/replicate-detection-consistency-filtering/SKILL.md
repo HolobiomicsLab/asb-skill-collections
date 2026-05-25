@@ -103,8 +103,8 @@ Calculate fold-change (FC) for each feature by dividing the mean intensity of th
 
 ## Evidence
 
-- [methods] abundance_filter_definition: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] blank_subtraction_effect: "The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−."
-- [other] fold_change_calculation: "fold-change (FC) values for each feature by dividing mean intensity of each pesticide-incubated replicate group by mean intensity of negative control samples (S9 + NADPH only) using the formula FC ="
-- [readme] metabolite_filtering_workflow: "Filtering of non-metabolic features by several cut-off values and plotting for manual evaluation by `Rscripts/metabolites.R`"
-- [discussion] adaptive_filtering: "The individual filtering steps provided in this workflow can be adapted for a more or less strict prioritization of features"
+- [methods] abundance_filter_definition
+- [methods] blank_subtraction_effect
+- [other] fold_change_calculation
+- [readme] metabolite_filtering_workflow
+- [discussion] adaptive_filtering

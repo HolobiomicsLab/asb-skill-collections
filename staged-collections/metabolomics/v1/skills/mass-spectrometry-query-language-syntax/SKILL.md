@@ -120,11 +120,11 @@ from massql import MassQueryLanguage; query = 'MS2PROD=98.9847:TOLERANCEPPM=50:I
 
 ## Evidence
 
-- [full_text] MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source (for example, electrospray ionization and matrix assisted laser: "MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source (for example, electrospray ionization and matrix assisted laser"
-- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats: "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats"
-- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree: "The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree"
-- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations: "The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations"
-- [full_text] MassQL query found 338,439 [MS/MS spectra] for organophosphate ester phosphate product ion query: "To identify OPEs in public data, we scaled the MassQL query to all Q Exactive data in the GNPS/MassIVE data repository (which included >230 million MS/MS spectra). The MassQL query found 338,439"
-- [full_text] MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising: "MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising"
-- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%: "The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
-- [readme] Lark can parse all context-free languages… and do so efficiently. It also constructs an annotated parse-tree for you, using only the grammar and an input: "Lark can parse all context-free languages… It also constructs an annotated parse-tree for you, using only the grammar and an input"
+- [full_text] MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source (for example, electrospray ionization and matrix assisted laser
+- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
+- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree
+- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations
+- [full_text] MassQL query found 338,439 [MS/MS spectra] for organophosphate ester phosphate product ion query
+- [full_text] MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising
+- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%
+- [readme] Lark can parse all context-free languages… and do so efficiently. It also constructs an annotated parse-tree for you, using only the grammar and an input

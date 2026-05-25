@@ -131,11 +131,11 @@ massql_query = 'MS2PROD=98.9847:TOLERANCEPPM=50:INTENSITYPERCENT=50'; spectra_df
 
 ## Evidence
 
-- [full_text] MassQL phosphate fragment query for OPE class recognition: "Execute MassQL phosphate product-ion MS2 query (MS2PROD=98.9847, TOLERANCEPPM=50, INTENSITYPERCENT=50) on a marine water test dataset to retrieve candidate OPE spectra"
-- [full_text] Discovery scope and false-positive rate in public repositories: "The MassQL query found 338,439 MS/MS spectra matching organophosphate ester phosphate product ion query. Only 15% (51,310) of the MS/MS found by MassQL could be explained (precursor m/z match with 20"
+- [full_text] MassQL phosphate fragment query for OPE class recognition
+- [full_text] Discovery scope and false-positive rate in public repositories
 - [full_text] Workflow: query parsing and MS data filtering: "Parse the MassQL query string using the lark parser to construct an internal query data structure. Load MS data into pandas data frames using pyteomics. Apply the query engine to filter all MS/MS"
-- [full_text] Redundancy clustering and network annotation for OPE discovery: "We extracted all MS/MS spectra and created consensus MS/MS spectra using Falcon-MS, resulting in 2,777 consensus spectra. We used these consensus spectra to create a molecular network."
-- [full_text] Annotation yield and novel compound discovery: "Combining the spectral library search and the molecular network, we putatively identified 153 of the 2,777 consensus OPE spectra (5.5%). The remaining 94.5% represent potential novel OPE-like"
-- [full_text] Instrument and vendor agnostic design: "MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source (for example, electrospray ionization)"
-- [full_text] Data caching and optimization for repeated queries: "spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying"
-- [full_text] Export format and metadata preservation: "Export matched MS/MS spectra in tabular format (CSV/TSV) with scan identifiers, precursor m/z, product ion m/z, intensity values, and metadata."
+- [full_text] Redundancy clustering and network annotation for OPE discovery
+- [full_text] Annotation yield and novel compound discovery
+- [full_text] Instrument and vendor agnostic design
+- [full_text] Data caching and optimization for repeated queries
+- [full_text] Export format and metadata preservation

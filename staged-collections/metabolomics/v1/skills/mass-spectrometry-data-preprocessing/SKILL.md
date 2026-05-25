@@ -109,13 +109,13 @@ First, convert raw mass spectra to centroided mzML format using ProteoWizard (v3
 
 ## Evidence
 
-- [methods] Raw mass spectra were converted to the mzML format and centroided using ProteoWizard26 v3.0.18265 with the vendor library.: "Raw mass spectra were converted to the mzML format and centroided using ProteoWizard26 v3.0.18265 with the vendor library."
-- [methods] Feature detection, alignment, and retention time correction were performed using XCMS version 3.8.27: "Feature detection, alignment, and retention time correction were performed using XCMS version 3.8.27"
-- [methods] The parameters of XCMS were optimized by the IPO approach.28: "The parameters of XCMS were optimized by the IPO approach.28"
-- [methods] All features were componentized using CAMERA.29: "All features were componentized using CAMERA.29"
-- [methods] The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−.: "The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−."
-- [methods] We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [supplementary] peakwidth 12.32,40 ppm 11.75 [positive mode]; peakwidth 25.3, 76 ppm 7 [negative mode]: "peakwidth 12.32,40 25.3, 76 ppm 11.75 7"
-- [readme] XCMS [1] and CAMERA [2]) by `Rscripts/xcms.R` and `Rscripts/camera.R` outputting `xcms.rds`, `camera.rds`, `metadata.tsv`, `peaklist.tsv`: "Peaklist generation (XCMS [1] and CAMERA [2]) by `Rscripts/xcms.R` and `Rscripts/camera.R` outputting `xcms.rds`, `camera.rds`, `metadata.tsv`, `peaklist.tsv`"
-- [readme] The sample set should contain measurements of incubated replicates of each compound, a reference standard solution, negative controls and injection/ sample peparation blanks.: "The sample set should contain measurements of incubated replicates of each compound, a reference standard solution, negative controls and injection/ sample peparation blanks."
-- [discussion] Some might have been formed but could not have been detected due to low ionization efficiencies...Also, losses during the sample extraction and cleanup procedure are possible: "Some might have been formed but could not have been detected due to low ionization efficiencies...Also, losses during the sample extraction and cleanup procedure are possible"
+- [methods] Raw mass spectra were converted to the mzML format and centroided using ProteoWizard26 v3.0.18265 with the vendor library.
+- [methods] Feature detection, alignment, and retention time correction were performed using XCMS version 3.8.27
+- [methods] The parameters of XCMS were optimized by the IPO approach.28
+- [methods] All features were componentized using CAMERA.29
+- [methods] The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−.
+- [methods] We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates
+- [supplementary] peakwidth 12.32,40 ppm 11.75 [positive mode]; peakwidth 25.3, 76 ppm 7 [negative mode]
+- [readme] XCMS [1] and CAMERA [2]) by `Rscripts/xcms.R` and `Rscripts/camera.R` outputting `xcms.rds`, `camera.rds`, `metadata.tsv`, `peaklist.tsv`
+- [readme] The sample set should contain measurements of incubated replicates of each compound, a reference standard solution, negative controls and injection/ sample peparation blanks.
+- [discussion] Some might have been formed but could not have been detected due to low ionization efficiencies...Also, losses during the sample extraction and cleanup procedure are possible

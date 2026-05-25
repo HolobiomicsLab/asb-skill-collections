@@ -124,17 +124,17 @@ from lark import Lark; from pyteomics import mzml; import pandas as pd; query = 
 
 ## Evidence
 
-- [full_text] Here we introduce a new language, the Mass Spectrometry Query Language (MassQL), and an accompanying software ecosystem: "Here we introduce a new language, the Mass Spectrometry Query Language (MassQL), and an accompanying software ecosystem"
-- [full_text] MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source (for example, electrospray ionization and matrix assisted laser: "MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source (for example, electrospray ionization and matrix assisted laser"
-- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree: "The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree"
-- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats: "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats"
-- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations: "The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations"
-- [full_text] spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying: "spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying"
-- [full_text] we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries: "we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries"
-- [full_text] In searching over 230 million MS/MS spectra in 97,109 public data files, we retrieved 26,944 MS/MS spectra associated with the iron-characteristic isotope pattern: "In searching over 230 million MS/MS spectra in 97,109 public data files, we retrieved 26,944 MS/MS spectra associated with the iron-characteristic isotope pattern"
-- [full_text] The MassQL query found 338,439: "To identify OPEs in public data, we scaled the MassQL query to all Q Exactive data in the GNPS/MassIVE data repository (which included >230 million MS/MS spectra). The MassQL query found 338,439"
-- [full_text] Only 15% (51,310) of the MS/MS found by MassQL could be explained (precursor m/z match with 20 ppm mass error) by known OPEs: "Only 15% (51,310) of the MS/MS found by MassQL could be explained (precursor m/z match with 20 ppm mass error) by known OPEs"
-- [full_text] We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations: "We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations"
-- [full_text] Using these consensus spectra, we created a molecular network in GNPS: "Using these consensus spectra, we created a molecular network in GNPS"
-- [full_text] MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising: "MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising"
-- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%: "The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
+- [full_text] Here we introduce a new language, the Mass Spectrometry Query Language (MassQL), and an accompanying software ecosystem
+- [full_text] MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source (for example, electrospray ionization and matrix assisted laser
+- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree
+- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
+- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations
+- [full_text] spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying
+- [full_text] we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries
+- [full_text] In searching over 230 million MS/MS spectra in 97,109 public data files, we retrieved 26,944 MS/MS spectra associated with the iron-characteristic isotope pattern
+- [full_text] The MassQL query found 338,439
+- [full_text] Only 15% (51,310) of the MS/MS found by MassQL could be explained (precursor m/z match with 20 ppm mass error) by known OPEs
+- [full_text] We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations
+- [full_text] Using these consensus spectra, we created a molecular network in GNPS
+- [full_text] MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising
+- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%

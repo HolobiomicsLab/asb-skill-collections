@@ -107,10 +107,10 @@ First, obtain parent pesticide structures (SMILES or InChI) for the 22 or more c
 
 ## Evidence
 
-- [methods] Metabolites were predicted using BioTransformer, which combines a rule-based approach and a machine learning approach.: "Metabolites were predicted using BioTransformer,35 which combines a rule-based approach and a machine learning approach."
-- [methods] About two-thirds of the in vitro-metabolites were reported in the literature or predicted by BioTransformer.: "About two-thirds of the in vitro-metabolites were reported in the literature or predicted"
-- [methods] By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides.: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides."
-- [discussion] A comparison with the literature data and metabolization prediction showed that the S9 incubation does not cover all potential or existing metabolites.: "A comparison with the literature data and metabolization prediction showed that the S9 incubation does not cover all potential or existing metabolites."
-- [discussion] In vitro metabolites, which were not predicted, were mainly formed by reduction reactions (dehydrogenation), two consecutive hydroxylations or the breaking of a weak bond in the molecule: "In vitro metabolites, which were not predicted, were mainly formed by reduction reactions (dehydrogenation), two consecutive hydroxylations or the breaking of a weak bond in the molecule"
-- [discussion] For metazachlor, 12 mammalian metabolites are described in the registration dossier, but we only observed three in the incubation experiment.: "For metazachlor, 12 mammalian metabolites are described in the registration dossier, but we only observed three in the incubation experiment."
-- [methods] The corresponding molecular formula was calculated using the GenForm33 command line tool.: "The corresponding molecular formula was calculated using the GenForm33 command line tool."
+- [methods] Metabolites were predicted using BioTransformer, which combines a rule-based approach and a machine learning approach.
+- [methods] About two-thirds of the in vitro-metabolites were reported in the literature or predicted by BioTransformer.
+- [methods] By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides.
+- [discussion] A comparison with the literature data and metabolization prediction showed that the S9 incubation does not cover all potential or existing metabolites.
+- [discussion] In vitro metabolites, which were not predicted, were mainly formed by reduction reactions (dehydrogenation), two consecutive hydroxylations or the breaking of a weak bond in the molecule
+- [discussion] For metazachlor, 12 mammalian metabolites are described in the registration dossier, but we only observed three in the incubation experiment.
+- [methods] The corresponding molecular formula was calculated using the GenForm33 command line tool.

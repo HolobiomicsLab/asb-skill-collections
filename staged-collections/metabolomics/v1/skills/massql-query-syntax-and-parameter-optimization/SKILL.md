@@ -115,9 +115,9 @@ from lark import Lark; from pyteomics import mzml; import pandas as pd; from mas
 
 ## Evidence
 
-- [full_text] we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries: "we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries"
-- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree: "The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree"
-- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats: "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats"
-- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations: "The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations"
-- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%: "The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
-- [readme] Lark can parse all context-free languages. To put it simply, it means that it is capable of parsing almost any programming language out there: "Lark can parse all context-free languages. To put it simply, it means that it is capable of parsing almost any programming language out there"
+- [full_text] we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries
+- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree
+- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
+- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations
+- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%
+- [readme] Lark can parse all context-free languages. To put it simply, it means that it is capable of parsing almost any programming language out there

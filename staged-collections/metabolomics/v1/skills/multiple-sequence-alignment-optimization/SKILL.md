@@ -104,7 +104,7 @@ mafft --auto ugt_candidates.fasta > ugt_aligned.fasta && trimal -in ugt_aligned.
 
 ## Evidence
 
-- [methods] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters.: "Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters."
-- [methods] Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns.: "Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns."
-- [methods] Construct a maximum-likelihood phylogenetic tree from the trimmed alignment using standard tree-building software (FastTree or RAxML) to resolve placement of UGT66A1 among the 138 UGTs.: "Construct a maximum-likelihood phylogenetic tree from the trimmed alignment using standard tree-building software (FastTree or RAxML) to resolve placement of UGT66A1 among the 138 UGTs."
-- [results] phylogenetic analysis revealed that UGT66A1 clusters only with UGT62A1, a fungal UGT from Hericium erinaceum: "phylogenetic analysis revealed that UGT66A1 clusters only with UGT62A1, a fungal UGT from Hericium erinaceum"
+- [methods] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters.
+- [methods] Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns.
+- [methods] Construct a maximum-likelihood phylogenetic tree from the trimmed alignment using standard tree-building software (FastTree or RAxML) to resolve placement of UGT66A1 among the 138 UGTs.
+- [results] phylogenetic analysis revealed that UGT66A1 clusters only with UGT62A1, a fungal UGT from Hericium erinaceum

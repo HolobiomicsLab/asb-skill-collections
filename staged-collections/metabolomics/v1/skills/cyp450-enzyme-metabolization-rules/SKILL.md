@@ -110,13 +110,13 @@ First, input parent pesticide structures (e.g., 2,4-dichlorophenoxyacetic acid, 
 
 ## Evidence
 
-- [methods] BioTransformer prediction method: "Metabolites were predicted using BioTransformer, which combines a rule-based approach and a machine learning approach."
-- [methods] Overlap finding—two-thirds of in vitro metabolites: "About two-thirds of the in vitro-metabolites were reported in the literature or predicted"
-- [methods] Experimental metabolite dataset size and filtering: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides."
-- [methods] Mass difference filter cutoff rationale: "all features with a mass difference higher than +50 u to the parent compound, corresponding to an addition of three O atoms, were also not further evaluated."
-- [discussion] Types of unpredicted metabolites: "In vitro metabolites, which were not predicted, were mainly formed by reduction reactions (dehydrogenation), two consecutive hydroxylations or the breaking of a weak bond in the molecule"
-- [discussion] Incomplete detection for specific compounds: "For metazachlor, 12 mammalian metabolites are described in the registration dossier, but we only observed three in the incubation experiment."
-- [discussion] Possible detection loss mechanisms: "Some might have been formed but could not have been detected due to low ionization efficiencies. Also, losses during the sample extraction and cleanup procedure are possible"
-- [readme] Workflow purpose—incubatoR README: "Main task is to identify metabolic transformation products in a LC-HRMS2 dataset of in-parallel incubated xenobiotic compounds by applying statistical tools as well as mass defect filtering"
-- [methods] Abundance and replication filter parameters: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] Mass defect filter parameters: "For mass defect filtering, features with a mass defect shift of <−100 and >+50 mmu were removed."
+- [methods] BioTransformer prediction method
+- [methods] Overlap finding—two-thirds of in vitro metabolites
+- [methods] Experimental metabolite dataset size and filtering
+- [methods] Mass difference filter cutoff rationale
+- [discussion] Types of unpredicted metabolites
+- [discussion] Incomplete detection for specific compounds
+- [discussion] Possible detection loss mechanisms
+- [readme] Workflow purpose—incubatoR README
+- [methods] Abundance and replication filter parameters
+- [methods] Mass defect filter parameters

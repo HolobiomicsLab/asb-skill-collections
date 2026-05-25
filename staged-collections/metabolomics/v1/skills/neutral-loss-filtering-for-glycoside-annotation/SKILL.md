@@ -103,10 +103,10 @@ After generating a feature-based molecular network in GNPS with cosine similarit
 
 ## Evidence
 
-- [results] MassQL successfully annotated hexosylation and pentosylation by detecting neutral losses of 162.05 Da and 132.04 Da in MS/MS fragmentation spectra: "MassQL successfully annotated hexosylation and pentosylation by detecting neutral losses of 162.05 Da and 132.04 Da in MS/MS fragmentation spectra, enabling rapid annotation of glycosylated flavonoid"
-- [results] MassQL was helpful for the annotation of sugar conjugation, as it rapidly annotated hexosylation and pentosylation of the flavonoids: "MassQL was helpful for the annotation of sugar conjugation, as it rapidly annotated hexosylation and pentosylation of the flavonoids"
-- [discussion] MS/MS spectra containing neutral losses of 132.0423 or 162.0528 Da were searched via MassQL: "MS/MS spectra containing neutral losses of 132.0423 or 162.0528 Da were searched via MassQL"
-- [discussion] with peak detection set at over 10,000 amplitudes to cutoff noise level: "with peak detection set at over 10,000 amplitudes to cutoff noise level"
-- [results] Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library: "Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library"
-- [other] Apply MassQL queries within GNPS to filter for MS/MS spectra exhibiting neutral losses of 132.0423 Da (pentosylation) or 162.0528 Da (hexosylation): "Apply MassQL queries within GNPS to filter for MS/MS spectra exhibiting neutral losses of 132.0423 Da (pentosylation) or 162.0528 Da (hexosylation)."
-- [other] Cross-reference MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites: "Cross-reference MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites."
+- [results] MassQL successfully annotated hexosylation and pentosylation by detecting neutral losses of 162.05 Da and 132.04 Da in MS/MS fragmentation spectra
+- [results] MassQL was helpful for the annotation of sugar conjugation, as it rapidly annotated hexosylation and pentosylation of the flavonoids
+- [discussion] MS/MS spectra containing neutral losses of 132.0423 or 162.0528 Da were searched via MassQL
+- [discussion] with peak detection set at over 10,000 amplitudes to cutoff noise level
+- [results] Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library
+- [other] Apply MassQL queries within GNPS to filter for MS/MS spectra exhibiting neutral losses of 132.0423 Da (pentosylation) or 162.0528 Da (hexosylation)
+- [other] Cross-reference MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites

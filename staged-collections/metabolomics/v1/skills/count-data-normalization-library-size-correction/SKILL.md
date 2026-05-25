@@ -103,8 +103,8 @@ library(edgeR); counts <- read.table('htseq_counts.txt', row.names=1); y <- DGEL
 
 ## Evidence
 
-- [results] Count data normalization using TMM and RPKM calculation in edgeR: "Load count data into R and apply edgeR normalization using trimmed mean of M-values (TMM) and calcNormFactors() to account for library size and composition bias"
-- [results] RPKM as the expression quantification metric: "Calculate RPKM (reads per kilobase per million mapped reads) values using edgeR's rpkm() function"
-- [results] Two-fold increase in LbUGT3 expression quantified by RPKM: "the expression level of LbUGT3 showed two-fold increase in the growth media containing 1"
-- [other] HTSeq as the gene-level counting tool: "Count reads mapping to annotated genes using HTSeq (mode=union, stranded=reverse) to produce raw count matrices"
-- [other] Verification and tabulation of normalized expression: "Extract and tabulate LbUGT3 expression values for baicalin-supplemented and control conditions, verify two-fold expression increase, and save normalized expression table"
+- [results] Count data normalization using TMM and RPKM calculation in edgeR
+- [results] RPKM as the expression quantification metric
+- [results] Two-fold increase in LbUGT3 expression quantified by RPKM
+- [other] HTSeq as the gene-level counting tool
+- [other] Verification and tabulation of normalized expression

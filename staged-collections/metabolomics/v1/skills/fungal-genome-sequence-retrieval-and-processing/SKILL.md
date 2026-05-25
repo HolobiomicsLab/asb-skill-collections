@@ -115,10 +115,10 @@ hmmscan --domtblout ugt_results.txt Pfam-A.hmm fungal_sequences.fasta | grep 'PF
 
 ## Evidence
 
-- [results] Download deduced amino acid sequences of 19 wood-decaying fungal species from JGI MycoCosm database: "Download deduced amino acid sequences of 19 wood-decaying fungal species from JGI MycoCosm database"
-- [results] Scan all sequences against Pfam database version 34 using hmmscan to identify those containing PF00201: "Scan all sequences against Pfam database version 34 using hmmscan to identify those containing PF00201 (UDP-glucoronosyl/glucosyl transferase domain), yielding 138 candidate sequences"
-- [results] Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only: "Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only"
-- [results] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters: "Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters"
-- [results] Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns: "Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns"
-- [results] Scanning of deduced amino acid sequences of the 19 species against the Pfam database found a total of 138 sequences containing a Pfam domain for UDP-glucoronosyl and UDP-glucosyl transferase: "Scanning of deduced amino acid sequences of the 19 species against the Pfam database found a total of 138 sequences containing a Pfam domain for UDP-glucoronosyl and UDP-glucosyl transferase"
-- [results] Protein sequence–based phylogenetic analysis with the other experimentally characterized UGTs revealed that UGT66A1 clusters only with UGT62A1: "Protein sequence–based phylogenetic analysis with the other experimentally characterized UGTs revealed that UGT66A1 clusters only with UGT62A1"
+- [results] Download deduced amino acid sequences of 19 wood-decaying fungal species from JGI MycoCosm database
+- [results] Scan all sequences against Pfam database version 34 using hmmscan to identify those containing PF00201
+- [results] Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only
+- [results] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters
+- [results] Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns
+- [results] Scanning of deduced amino acid sequences of the 19 species against the Pfam database found a total of 138 sequences containing a Pfam domain for UDP-glucoronosyl and UDP-glucosyl transferase
+- [results] Protein sequence–based phylogenetic analysis with the other experimentally characterized UGTs revealed that UGT66A1 clusters only with UGT62A1

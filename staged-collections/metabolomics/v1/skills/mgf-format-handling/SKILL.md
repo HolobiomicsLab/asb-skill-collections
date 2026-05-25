@@ -122,9 +122,9 @@ from pyteomics import mgf; spectra = list(mgf.read('query_results.mgf')); print(
 
 ## Evidence
 
-- [full_text] Load 26,944 MS/MS spectra retrieved from GNPS/MassIVE iron-binding MassQL query (in MGF format): "Load 26,944 MS/MS spectra retrieved from GNPS/MassIVE iron-binding MassQL query (in MGF format)"
-- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats: "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats"
-- [full_text] Output 7,504 consensus MS/MS spectra (representative peaks per cluster) in MGF format: "Output 7,504 consensus MS/MS spectra (representative peaks per cluster) in MGF format"
-- [full_text] We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations: "We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations"
-- [full_text] MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising: "MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising"
-- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%: "The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
+- [full_text] Load 26,944 MS/MS spectra retrieved from GNPS/MassIVE iron-binding MassQL query (in MGF format)
+- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
+- [full_text] Output 7,504 consensus MS/MS spectra (representative peaks per cluster) in MGF format
+- [full_text] We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations
+- [full_text] MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising
+- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%

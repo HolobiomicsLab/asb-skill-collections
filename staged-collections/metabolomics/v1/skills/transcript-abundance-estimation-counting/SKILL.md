@@ -108,8 +108,8 @@ library(edgeR); counts <- read.table('baicalin_counts.txt'); dge <- DGEList(coun
 
 ## Evidence
 
-- [methods] Count reads using HTSeq approach and normalization: "Count reads mapping to annotated genes using HTSeq (mode=union, stranded=reverse) to produce raw count matrices."
-- [methods] TMM normalization procedure in edgeR: "Load count data into R and apply edgeR normalization using trimmed mean of M-values (TMM) and calcNormFactors() to account for library size and composition bias."
-- [methods] RPKM calculation and expression extraction: "Calculate RPKM (reads per kilobase per million mapped reads) values using edgeR's rpkm() function."
-- [results] Verification of two-fold expression increase: "the expression level of LbUGT3 showed two-fold increase in the growth media containing 1"
-- [results] Transcriptional profiling workflow context: "We conducted transcriptional profiling of eight L. brumalis UGTs in growth conditions without plant phenolics or with a flavonoid baicalin"
+- [methods] Count reads using HTSeq approach and normalization
+- [methods] TMM normalization procedure in edgeR
+- [methods] RPKM calculation and expression extraction
+- [results] Verification of two-fold expression increase
+- [results] Transcriptional profiling workflow context

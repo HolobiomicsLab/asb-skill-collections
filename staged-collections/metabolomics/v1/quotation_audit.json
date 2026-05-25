@@ -1,0 +1,45 @@
+{
+  "per_doi": {
+    "10.1021/acs.analchem.1c00972": {
+      "ground_truth_chars_stripped": 0,
+      "skill_md_chars_stripped": 22290,
+      "skills_sanitized": 23,
+      "tier": "hybrid"
+    },
+    "10.1038/s41592-025-02660-z": {
+      "ground_truth_chars_stripped": 0,
+      "skill_md_chars_stripped": 15587,
+      "skills_sanitized": 16,
+      "tier": "hybrid"
+    },
+    "10.1073/pnas": {
+      "ground_truth_chars_stripped": 0,
+      "skill_md_chars_stripped": 10321,
+      "skills_sanitized": 15,
+      "tier": "unknown"
+    },
+    "<dir:article_878_full_2026-05-10_v5>": {
+      "ground_truth_chars_stripped": 167,
+      "skill_md_chars_stripped": 0,
+      "skills_sanitized": 0,
+      "tier": "unknown"
+    },
+    "<dir:audit_haffner_v2>": {
+      "ground_truth_chars_stripped": 86,
+      "skill_md_chars_stripped": 0,
+      "skills_sanitized": 0,
+      "tier": "unknown"
+    },
+    "<dir:audit_s41592_full>": {
+      "ground_truth_chars_stripped": 217,
+      "skill_md_chars_stripped": 0,
+      "skills_sanitized": 0,
+      "tier": "unknown"
+    }
+  },
+  "policy": {
+    "non_oa_cumulative_chars": 1500,
+    "non_oa_per_span_chars": 300,
+    "oa_unlimited": true
+  }
+}

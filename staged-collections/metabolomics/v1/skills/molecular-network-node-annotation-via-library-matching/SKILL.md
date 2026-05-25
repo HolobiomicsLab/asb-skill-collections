@@ -98,7 +98,7 @@ After FBMN job completion, retrieve the molecular network node table and MS/MS s
 
 ## Evidence
 
-- [results] Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library: "Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library"
-- [results] An example of the molecular network- and MassQL-based enzymatic reactivity annotation: "An example of the molecular network- and MassQL-based enzymatic reactivity annotation"
-- [other] Retrieve the molecular network nodes and edges. Apply MassQL queries within GNPS to filter for MS/MS spectra exhibiting neutral losses of 132.0423 Da (pentosylation) or 162.0528 Da (hexosylation). Cross-reference MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites.: "Cross-reference MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites"
-- [other] Configure FBMN to generate a spectral similarity network and cosine similarity scoring.: "Configure FBMN to generate a spectral similarity network and cosine similarity scoring"
+- [results] Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library
+- [results] An example of the molecular network- and MassQL-based enzymatic reactivity annotation
+- [other] Retrieve the molecular network nodes and edges. Apply MassQL queries within GNPS to filter for MS/MS spectra exhibiting neutral losses of 132.0423 Da (pentosylation) or 162.0528 Da (hexosylation). Cross-reference MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites.
+- [other] Configure FBMN to generate a spectral similarity network and cosine similarity scoring.

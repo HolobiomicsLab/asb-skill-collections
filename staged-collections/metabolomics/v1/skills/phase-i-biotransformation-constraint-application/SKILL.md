@@ -102,9 +102,9 @@ First, compute the nominal mass difference (Δm/z) between each feature's m/z an
 
 ## Evidence
 
-- [methods] abundance-filter-fold-change: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] mass-difference-threshold-and-rationale: "all features with a mass difference higher than +50 u to the parent compound, corresponding to an addition of three O atoms, were also not further evaluated"
-- [discussion] phase-I-vs-conjugation-distinction: "Features with an m/z value >+50 mu to the parent pesticide were removed since they are more likely to occur from conjugation"
-- [readme] workflow-step-filtering-order: "Filtering of non-metabolic features by several cut-off values and plotting for manual evaluation by `Rscripts/metabolites.R`"
-- [discussion] in-vitro-incubation-metabolite-coverage: "A comparison with the literature data and metabolization prediction showed that the S9 incubation does not cover all potential or existing metabolites."
-- [discussion] incomplete-metabolite-detection-example: "For metazachlor, 12 mammalian metabolites are described in the registration dossier, but we only observed three in the incubation experiment."
+- [methods] abundance-filter-fold-change
+- [methods] mass-difference-threshold-and-rationale
+- [discussion] phase-I-vs-conjugation-distinction
+- [readme] workflow-step-filtering-order
+- [discussion] in-vitro-incubation-metabolite-coverage
+- [discussion] incomplete-metabolite-detection-example

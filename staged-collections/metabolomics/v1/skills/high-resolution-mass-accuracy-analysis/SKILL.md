@@ -117,13 +117,13 @@ First, establish a mass accuracy baseline by monitoring internal standards acros
 
 ## Evidence
 
-- [methods] Mass defect filtering to constrain metabolite detection: "For mass defect filtering, features with a mass defect shift of <−100 and >+50 mmu were removed."
-- [supplementary] Mass accuracy monitoring and tolerance specification: "Mass accuracy was measured to be within < 2 ppm, while the retention time shift for the internal standards was observed with a median standard deviation of 0.3 sec for negative (maximum deviation of"
-- [supplementary] GenForm formula assignment with MS accuracy thresholds: "GenForm intensity weighting wi sqrt MS1 accuracy ppm 8 acceptance of MS2 peak acc 8 rejection of MS2 peak rej 15"
-- [methods] Molecular formula calculation workflow applied to filtered features: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides."
-- [methods] MS2 spectrum extraction and validation for filtered features: "all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR.32"
-- [methods] Mass difference filtering to remove unlikely transformations: "Features with an m/z value >+50 mu to the parent pesticide were removed since they are more likely to occur from conjugation"
-- [methods] Elemental composition constraints for GenForm molecular formula assignment: "constraining elemental compositions based on parent pesticide formula (C 0−X C H 0−∞ N 0−X N O 0−(X O +3) P 0−X P S 0−X S F 0−X F Cl 0−X Cl Br 0−X Br)"
-- [methods] Spectral quality assessment via dot-product similarity: "Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR.34"
-- [methods] Workflow validation against literature and predicted metabolites: "About two-thirds of the in vitro-metabolites were reported in the literature or predicted"
-- [readme] incubatoR automated workflow implementation: "Main task is to identify metabolic transformation products in a LC-HRMS2 dataset of in-parallel incubated xenobiotic compounds by applying statistical tools as well as mass defect filtering and"
+- [methods] Mass defect filtering to constrain metabolite detection
+- [supplementary] Mass accuracy monitoring and tolerance specification
+- [supplementary] GenForm formula assignment with MS accuracy thresholds
+- [methods] Molecular formula calculation workflow applied to filtered features
+- [methods] MS2 spectrum extraction and validation for filtered features
+- [methods] Mass difference filtering to remove unlikely transformations
+- [methods] Elemental composition constraints for GenForm molecular formula assignment
+- [methods] Spectral quality assessment via dot-product similarity
+- [methods] Workflow validation against literature and predicted metabolites
+- [readme] incubatoR automated workflow implementation

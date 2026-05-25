@@ -103,8 +103,8 @@ Calculate fold-change (FC) for each feature by dividing the mean intensity of th
 
 ## Evidence
 
-- [methods] fold_change_formula: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] blank_subtraction_workflow: "The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−."
-- [methods] structural_group_removal: "Features from structurally similar pesticide groups (atrazine, terbuthylazine, terbutryn) that may share metabolites to avoid false exclusions in the control group"
-- [readme] automated_workflow_implementation: "Filtering of non-metabolic features by several cut-off values and plotting for manual evaluation by Rscripts/metabolites.R"
-- [discussion] variable_strictness_flexibility: "The individual filtering steps provided in this workflow can be adapted for a more or less strict prioritization of features"
+- [methods] fold_change_formula
+- [methods] blank_subtraction_workflow
+- [methods] structural_group_removal
+- [readme] automated_workflow_implementation
+- [discussion] variable_strictness_flexibility

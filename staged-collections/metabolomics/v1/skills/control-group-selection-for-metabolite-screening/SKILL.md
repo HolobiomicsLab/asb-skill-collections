@@ -107,9 +107,9 @@ Prepare negative control samples by incubating the S9 enzyme preparation with NA
 
 ## Evidence
 
-- [methods] Fold-change definition and threshold: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] Feature reduction outcome from control-based filtering: "The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−."
-- [readme] Negative control composition and incubation setup: "The sample set should contain measurements of incubated replicates of each compound, a reference standard solution, negative controls and injection/sample preparation blanks."
-- [discussion] S9 incubation limitations for complete metabolite coverage: "A comparison with the literature data and metabolization prediction showed that the S9 incubation does not cover all potential or existing metabolites."
-- [discussion] Incomplete metabolite detection in specific compounds: "For metazachlor, 12 mammalian metabolites are described in the registration dossier, but we only observed three in the incubation experiment."
-- [other] Fold-change calculation formula and control group role: "calculate fold-change (FC) values for each feature by dividing mean intensity of each pesticide-incubated replicate group by mean intensity of negative control samples (S9 + NADPH only)"
+- [methods] Fold-change definition and threshold
+- [methods] Feature reduction outcome from control-based filtering
+- [readme] Negative control composition and incubation setup
+- [discussion] S9 incubation limitations for complete metabolite coverage
+- [discussion] Incomplete metabolite detection in specific compounds
+- [other] Fold-change calculation formula and control group role

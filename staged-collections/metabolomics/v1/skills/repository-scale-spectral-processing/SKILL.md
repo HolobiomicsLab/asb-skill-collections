@@ -105,8 +105,8 @@ Load the retrieved MS/MS spectra in MGF format. Apply MS-Cluster with default se
 
 ## Evidence
 
-- [full_text] MS-Cluster clustering of the 26,944 iron-characteristic MS/MS spectra yielded 7,504 consensus spectra, reducing the dataset by 72% for downstream molecular networking and annotation.: "MS-Cluster clustering of the 26,944 iron-characteristic MS/MS spectra yielded 7,504 consensus spectra, reducing the dataset by 72% for downstream molecular networking and annotation."
-- [full_text] We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations: "We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations"
-- [full_text] We extracted all MS/MS spectra and created consensus MS/MS spectra using Falcon-MS, resulting in 2,777 consensus spectra.: "We extracted all MS/MS spectra and created consensus MS/MS spectra using Falcon-MS, resulting in 2,777 consensus spectra."
-- [full_text] Using these consensus spectra, we created a molecular network in GNPS: "Using these consensus spectra, we created a molecular network in GNPS"
-- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%: "The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
+- [full_text] MS-Cluster clustering of the 26,944 iron-characteristic MS/MS spectra yielded 7,504 consensus spectra, reducing the dataset by 72% for downstream molecular networking and annotation.
+- [full_text] We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations
+- [full_text] We extracted all MS/MS spectra and created consensus MS/MS spectra using Falcon-MS, resulting in 2,777 consensus spectra.
+- [full_text] Using these consensus spectra, we created a molecular network in GNPS
+- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%

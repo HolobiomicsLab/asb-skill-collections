@@ -102,8 +102,8 @@ Load the MGF-formatted MS/MS spectra retrieved from GNPS/MassIVE or another publ
 
 ## Evidence
 
-- [full_text] We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations: "We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations"
-- [full_text] MS-Cluster clustering of the 26,944 iron-characteristic MS/MS spectra yielded 7,504 consensus spectra, reducing the dataset by 72%: "MS-Cluster clustering of the 26,944 iron-characteristic MS/MS spectra yielded 7,504 consensus spectra, reducing the dataset by 72%"
-- [full_text] Apply MS-Cluster algorithm with default settings to identify and merge redundant MS/MS observations. Output 7,504 consensus MS/MS spectra (representative peaks per cluster) in MGF format.: "Apply MS-Cluster algorithm with default settings to identify and merge redundant MS/MS observations. Output 7,504 consensus MS/MS spectra (representative peaks per cluster) in MGF format."
-- [full_text] Using these consensus spectra, we created a molecular network in GNPS. We could putatively identify 441 (5%) of the consensus spectra: "Using these consensus spectra, we created a molecular network in GNPS. We could putatively identify 441 (5%) of the consensus spectra"
-- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%: "The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
+- [full_text] We used MS-Cluster on the retrieved MS/MS spectra to collapse redundant observations
+- [full_text] MS-Cluster clustering of the 26,944 iron-characteristic MS/MS spectra yielded 7,504 consensus spectra, reducing the dataset by 72%
+- [full_text] Apply MS-Cluster algorithm with default settings to identify and merge redundant MS/MS observations. Output 7,504 consensus MS/MS spectra (representative peaks per cluster) in MGF format.
+- [full_text] Using these consensus spectra, we created a molecular network in GNPS. We could putatively identify 441 (5%) of the consensus spectra
+- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%

@@ -96,8 +96,8 @@ Within XCMS v3.8, invoke the orbiwarp retention time correction method following
 
 ## Evidence
 
-- [methods] Feature detection, alignment, and retention time correction: "Feature detection, alignment, and retention time correction were performed using XCMS version 3.8"
-- [supplementary] IPO-optimized orbiwarp parameters for retention time correction: "retention-correction method orbiwarp distFunc cor opt profStep 0.91 0.91 center 1 2 response 1 1 gapInit 0.352 0.64 factorDiag 2 2 factorGap 1 1"
-- [methods] Integration of retention time correction in automated workflow: "The parameters of XCMS were optimized by the IPO approach"
-- [methods] Retention time correction enables assignment of 91 molecular formulas: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides"
-- [readme] Retention time values used as filtering input: "RT_compound.txt: Retention time of the parent compound"
+- [methods] Feature detection, alignment, and retention time correction
+- [supplementary] IPO-optimized orbiwarp parameters for retention time correction
+- [methods] Integration of retention time correction in automated workflow
+- [methods] Retention time correction enables assignment of 91 molecular formulas
+- [readme] Retention time values used as filtering input

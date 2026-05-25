@@ -95,7 +95,7 @@ Parse the hmmscan output and filter out sequences containing both the PF00201 (U
 
 ## Evidence
 
-- [other] Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only.: "Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only."
-- [other] Scanning 19 wood-decaying fungal species against the Pfam database identified 138 total UGT sequences with the PF00201 domain, with eight putative UGTs found in L. brumalis.: "Scanning 19 wood-decaying fungal species against the Pfam database identified 138 total UGT sequences with the PF00201 domain, with eight putative UGTs found in L. brumalis."
-- [other] Scan all sequences against Pfam database version 34 using hmmscan to identify those containing PF00201 (UDP-glucoronosyl/glucosyl transferase domain), yielding 138 candidate sequences.: "Scan all sequences against Pfam database version 34 using hmmscan to identify those containing PF00201 (UDP-glucoronosyl/glucosyl transferase domain), yielding 138 candidate sequences."
-- [other] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters.: "Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters."
+- [other] Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only.
+- [other] Scanning 19 wood-decaying fungal species against the Pfam database identified 138 total UGT sequences with the PF00201 domain, with eight putative UGTs found in L. brumalis.
+- [other] Scan all sequences against Pfam database version 34 using hmmscan to identify those containing PF00201 (UDP-glucoronosyl/glucosyl transferase domain), yielding 138 candidate sequences.
+- [other] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters.

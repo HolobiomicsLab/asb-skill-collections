@@ -60,6 +60,12 @@ The paper is published in a venue that retains traditional copyright but allows 
   - Verbatim quotes ≤300 chars per `evidence_span`, attributed via `source: <DOI>`
 - **Per-quote attribution required** — every `evidence_span` includes the source DOI so users can trace back
 - **Cumulative cap** — across all evidence_spans from a single paper, ≤2% of paper word count or ≤1500 chars total (whichever is smaller). This margin keeps quotation within fair-use bounds under all major jurisdictions.
+- **Enforcement** — `asb collection promote` runs `_sanitize_quotations_for_release()` after all artifacts are emitted. For any paper with `access.type` ∈ {hybrid, closed, unknown}:
+  - SKILL.md `## Evidence` lines are stripped of the trailing `: "verbatim quote"` portion (paraphrase prefix retained — it's independently authored and discriminative).
+  - `benchmark/claims/per_paper/*/ground_truth.jsonl` rows where `source_excerpt == text` have the redundant `source_excerpt` field dropped; otherwise truncated to ≤150 chars.
+  - A per-DOI accounting written to `quotation_audit.json` for transparent verification.
+  - Tool YAMLs are NOT stripped (per-tool excerpts are ≤300 chars and serve attribution purpose; they fall under fair use as critical commentary).
+- The sanitizer is **idempotent** — running twice produces no further changes. Running on a pure-OA collection is a no-op.
 
 ### Closed (no abstract, `type: closed`)
 

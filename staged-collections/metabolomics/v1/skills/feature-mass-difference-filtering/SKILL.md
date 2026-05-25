@@ -94,8 +94,8 @@ Calculate the nominal mass difference (Δm/z in u) between each remaining featur
 
 ## Evidence
 
-- [methods] Mass difference filtering rationale: "all features with a mass difference higher than +50 u to the parent compound, corresponding to an addition of three O atoms, were also not further evaluated."
-- [methods] Workflow placement and integration: "The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−."
+- [methods] Mass difference filtering rationale
+- [methods] Workflow placement and integration
 - [other] Biological rationale: phase I vs. phase II: "Features with m/z values exceeding the parent pesticide by more than +50 u are more likely to originate from conjugation reactions (beyond phase I oxidation, reduction, or bond cleavage)."
-- [readme] Automated workflow implementation: "Filtering of non-metabolic features by several cut-off values and plotting for manual evaluation by `Rscripts/metabolites.R`"
-- [discussion] Adaptability of filtering thresholds: "The individual filtering steps provided in this workflow can be adapted for a more or less strict prioritization of features"
+- [readme] Automated workflow implementation
+- [discussion] Adaptability of filtering thresholds

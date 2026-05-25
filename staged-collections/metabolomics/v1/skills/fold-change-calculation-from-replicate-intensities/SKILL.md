@@ -104,10 +104,10 @@ Load the blank-subtracted feature table. For each feature, calculate mean intens
 
 ## Evidence
 
-- [methods] fold-change calculation formula and threshold application: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] blank-subtracted input and FC calculation methodology: "Mean intensity values in the samples were compared to the injection and sample blanks. Features with a higher mean intensity in the blanks were removed."
-- [methods] quantitative reduction in feature count from FC and replication filtering: "The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−."
-- [other] replicate-level detection requirement and filtering rationale: "FC = (∑(I_replicate)/n_replicate) / (∑(I_control)/n_control). 2. Select all features with FC > 4. 3. Retain only features detected in at least two of the three biological replicates per pesticide."
-- [other] removal of shared metabolites from structurally similar pesticide groups: "Remove features from structurally similar pesticide groups (atrazine, terbuthylazine, terbutryn) that may share metabolites to avoid false exclusions in the control group."
-- [discussion] adaptive tuning of filtering strictness: "The individual filtering steps provided in this workflow can be adapted for a more or less strict prioritization of features"
-- [readme] implementation in R-based incubatoR workflow with statistical comparison: "Calculation of the statistical comparisson by `Rscripts/statistics.R`... Filtering of non-metabolic features by several cut-off values and plotting for manual evaluation by `Rscripts/metabolites.R`"
+- [methods] fold-change calculation formula and threshold application
+- [methods] blank-subtracted input and FC calculation methodology
+- [methods] quantitative reduction in feature count from FC and replication filtering
+- [other] replicate-level detection requirement and filtering rationale
+- [other] removal of shared metabolites from structurally similar pesticide groups
+- [discussion] adaptive tuning of filtering strictness
+- [readme] implementation in R-based incubatoR workflow with statistical comparison

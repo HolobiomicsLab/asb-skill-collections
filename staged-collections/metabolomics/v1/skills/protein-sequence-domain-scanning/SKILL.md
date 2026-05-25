@@ -115,8 +115,8 @@ hmmscan --domtblout results.domtbl Pfam-A.hmm fungal_sequences.fasta | grep 'PF0
 
 ## Evidence
 
-- [results] Scanning 19 wood-decaying fungal species against the Pfam database identified 138 total UGT sequences with the PF00201 domain, with eight putative UGTs found in L. brumalis: "Scanning of deduced amino acid sequences of the 19 species against the Pfam database found a total of 138 sequences containing a Pfam domain for UDP-glucoronosyl and UDP-glucosyl transferase"
-- [methods] Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only: "Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only"
-- [methods] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters: "Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters"
-- [results] phylogenetic analysis revealed that UGT66A1 clusters only with UGT62A1, a fungal UGT from Hericium erinaceum: "Protein sequence–based phylogenetic analysis with the other experimentally characterized UGTs revealed that UGT66A1 clusters only with UGT62A1"
-- [methods] Deduced amino acid sequences of 19 wood-decaying fungi were downloaded from the JGI MycoCosm database and scanned using Pfam version 34: "Deduced amino acid sequences of 19 wood-decaying fungi were downloaded from the JGI MycoCosm database"
+- [results] Scanning 19 wood-decaying fungal species against the Pfam database identified 138 total UGT sequences with the PF00201 domain, with eight putative UGTs found in L. brumalis
+- [methods] Filter out sequences containing both PF00201 and PF03033 domains to retain single-domain UGTs only
+- [methods] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters
+- [results] phylogenetic analysis revealed that UGT66A1 clusters only with UGT62A1, a fungal UGT from Hericium erinaceum
+- [methods] Deduced amino acid sequences of 19 wood-decaying fungi were downloaded from the JGI MycoCosm database and scanned using Pfam version 34

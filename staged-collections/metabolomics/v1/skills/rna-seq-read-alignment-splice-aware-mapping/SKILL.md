@@ -107,8 +107,8 @@ hisat2-build L_brumalis_genome.fasta L_brumalis_index && hisat2 -x L_brumalis_in
 
 ## Evidence
 
-- [methods] Build HISAT2 reference index and align reads: "Build HISAT2 reference index from the L. brumalis genome sequence. 3. Align reads to reference genome using HISAT2 with default splice-aware parameters, generating sorted BAM files for"
-- [methods] Download raw paired-end reads from SRA: "Download raw paired-end RNA-seq reads from NCBI Sequence Read Archive under BioProject PRJNA906931 using SRA Toolkit (fastq-dump or fasterq-dump)."
-- [methods] HTSeq downstream quantification: "Count reads mapping to annotated genes using HTSeq (mode=union, stranded=reverse) to produce raw count matrices."
-- [results] Verification by expression increase: "the expression level of LbUGT3 showed two-fold increase in the growth media containing 1"
-- [discussion] Availability of code and data: "Raw sequence reads acquired from the RNAseq analysis have been deposited at NCBI Sequence Read Archive under BioProject PRJNA906931"
+- [methods] Build HISAT2 reference index and align reads
+- [methods] Download raw paired-end reads from SRA
+- [methods] HTSeq downstream quantification
+- [results] Verification by expression increase
+- [discussion] Availability of code and data

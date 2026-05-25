@@ -123,13 +123,13 @@ from massql.query import MassQLQuery; query = MassQLQuery('MS2PROD=98.9847:TOLER
 
 ## Evidence
 
-- [other] Execute MassQL phosphate product-ion MS2 query (MS2PROD=98.9847, TOLERANCEPPM=50, INTENSITYPERCENT=50) on a marine water test dataset to retrieve candidate OPE spectra: "Execute MassQL phosphate product-ion MS2 query (MS2PROD=98.9847, TOLERANCEPPM=50, INTENSITYPERCENT=50)"
-- [other] In a test marine water dataset where three OPEs were previously identified by manual analysis, the MassQL phosphate fragment query returned 589 MS/MS spectra belonging to ~60 unique molecular features.: "the MassQL phosphate fragment query returned 589 MS/MS spectra belonging to ~60 unique molecular features"
-- [other] Apply the query engine to filter all MS/MS scans, retaining only those with a product ion at m/z 98.9847 ± 50 ppm and peak intensity ≥ 50% of base peak.: "Apply the query engine to filter all MS/MS scans, retaining only those with a product ion at m/z 98.9847 ± 50 ppm and peak intensity ≥ 50% of base peak"
-- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats: "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats"
-- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree: "The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree"
-- [full_text] spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying: "spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying"
-- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations: "The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations"
-- [full_text] we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries: "we first used the GNPS spectral libraries to design and refine MassQL queries"
-- [other] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%: "The unique compound was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
-- [full_text] MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising: "MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising"
+- [other] Execute MassQL phosphate product-ion MS2 query (MS2PROD=98.9847, TOLERANCEPPM=50, INTENSITYPERCENT=50) on a marine water test dataset to retrieve candidate OPE spectra
+- [other] In a test marine water dataset where three OPEs were previously identified by manual analysis, the MassQL phosphate fragment query returned 589 MS/MS spectra belonging to ~60 unique molecular features.
+- [other] Apply the query engine to filter all MS/MS scans, retaining only those with a product ion at m/z 98.9847 ± 50 ppm and peak intensity ≥ 50% of base peak.
+- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
+- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree
+- [full_text] spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying
+- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations
+- [full_text] we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries
+- [other] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%
+- [full_text] MassQL has limited capabilities to leverage more than a handful of MS spectra, for example, consecutive MS spectra arising

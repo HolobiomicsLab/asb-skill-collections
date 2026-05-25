@@ -110,11 +110,11 @@ Extract MS2 spectra for prioritized metabolite features from data-dependent acqu
 
 ## Evidence
 
-- [methods] By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides.: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides."
-- [methods] The corresponding molecular formula was calculated using the GenForm33 command line tool.: "The corresponding molecular formula was calculated using the GenForm33 command line tool."
-- [methods] all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR.32: "all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR.32"
-- [methods] structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27.14: "structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27.14"
-- [methods] Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR.34: "Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR.34"
+- [methods] By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides.
+- [methods] The corresponding molecular formula was calculated using the GenForm33 command line tool.
+- [methods] all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR.32
+- [methods] structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27.14
+- [methods] Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR.34
 - [readme] Molecular formula annotation - implementation of GenForm [6] (`bash/jobsubmit_6genform.sh` for parallel job submission). **INPUT:** `class.csv`, `compound/MSMS/*`, `compound/MSMS/*/MS1.txt`, `FF_compound.txt`, `parameter_genform.sh`, `globalvar.sh` **OUTPUT:** `compound/MSMS/*/*.out` `compound/MSMS/*/Clean_*.txt`: "Molecular formula annotation - implementation of GenForm [6] (`bash/jobsubmit_6genform.sh` for parallel job submission). **INPUT:** `class.csv`, `compound/MSMS/*`, `compound/MSMS/*/MS1.txt`,"
-- [methods] For mass defect filtering, features with a mass defect shift of <−100 and >+50 mmu were removed.: "For mass defect filtering, features with a mass defect shift of <−100 and >+50 mmu were removed."
+- [methods] For mass defect filtering, features with a mass defect shift of <−100 and >+50 mmu were removed.
 - [readme] `compound/MSMS/*/Clean_*.txt`: Spectra only containing the fragments that can be explained by the given formula: "`compound/MSMS/*/Clean_*.txt`: Spectra only containing the fragments that can be explained by the given formula"

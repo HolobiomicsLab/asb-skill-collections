@@ -121,12 +121,12 @@ from massql.query import QuerySpecifier; from pyteomics import mzml; query = Que
 
 ## Evidence
 
-- [full_text] MS2PROD=<m/z>, MS2PROD=163.1: "Fragmentation product ion m/z, MS2PROD=<m/z>, MS2PROD=163.1"
-- [other] Execute MassQL phosphate product-ion MS2 query (MS2PROD=98.9847, TOLERANCEPPM=50, INTENSITYPERCENT=50): "Execute MassQL phosphate product-ion MS2 query (MS2PROD=98.9847, TOLERANCEPPM=50, INTENSITYPERCENT=50)"
-- [other] Apply the query engine to filter all MS/MS scans, retaining only those with a product ion at m/z 98.9847 ± 50 ppm and peak intensity ≥ 50% of base peak.: "Apply the query engine to filter all MS/MS scans, retaining only those with a product ion at m/z 98.9847 ± 50 ppm and peak intensity ≥ 50% of base peak."
-- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats: "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats"
-- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree: "The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree"
-- [full_text] we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries: "we first used the GNPS spectral libraries to design and refine MassQL queries"
-- [full_text] Thereafter, when using the refined MassQL queries to search repository data, more than 594,000 putative bile acids MS/MS spectra were retrieved: "when using the refined MassQL queries to search repository data, more than 594,000 putative bile acids MS/MS spectra were retrieved"
-- [full_text] MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source: "MassQL is agnostic to the instrument vendor, mass detector and ionization source"
-- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%: "The unique compound was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
+- [full_text] MS2PROD=<m/z>, MS2PROD=163.1
+- [other] Execute MassQL phosphate product-ion MS2 query (MS2PROD=98.9847, TOLERANCEPPM=50, INTENSITYPERCENT=50)
+- [other] Apply the query engine to filter all MS/MS scans, retaining only those with a product ion at m/z 98.9847 ± 50 ppm and peak intensity ≥ 50% of base peak.
+- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
+- [full_text] The parsing is done by using the lark Python library and specific Python code to transform a MassQL query to a parse tree
+- [full_text] we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries
+- [full_text] Thereafter, when using the refined MassQL queries to search repository data, more than 594,000 putative bile acids MS/MS spectra were retrieved
+- [full_text] MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source
+- [full_text] The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%

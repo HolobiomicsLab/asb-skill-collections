@@ -112,9 +112,9 @@ from massql.query import QuerySpectra; query = QuerySpectra('MS2PROD=98.9847:TOL
 
 ## Evidence
 
-- [methods] INTENSITYPERCENT threshold parameter for filtering MS/MS spectra: "MS2PROD=98.9847:TOLERANCEPPM=50:INTENSITYPERCENT=50 product ion m/z, mass tolerance (ppm) and peak intensity ≥ 50% of base peak."
-- [full_text] Application of intensity filtering to reduce false positives in large-scale queries: "retaining only those with a product ion at m/z 98.9847 ± 50 ppm and peak intensity ≥ 50% of base peak"
-- [full_text] Demonstration that intensity thresholding improves specificity on public repositories: "The MassQL query found 338,439 MS/MS spectra matching organophosphate ester phosphate product ion query across >230 million spectra in GNPS/MassIVE"
-- [full_text] Calibration of intensity threshold using reference spectra: "we first used the GNPS spectral libraries (which contained 4,533 reference spectra of bile acids) to design and refine MassQL queries"
+- [methods] INTENSITYPERCENT threshold parameter for filtering MS/MS spectra
+- [full_text] Application of intensity filtering to reduce false positives in large-scale queries
+- [full_text] Demonstration that intensity thresholding improves specificity on public repositories
+- [full_text] Calibration of intensity threshold using reference spectra
 - [full_text] Limitation: low-intensity diagnostic ions missed by fixed thresholds: "The unique compound that was found using IIMN but not by the MassQL query was missed because the 54Fe peak intensity fell outside of the expected intensity tolerance of 25%"
 - [full_text] Implementation: pandas data frame filtering for intensity conditions: "The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations"

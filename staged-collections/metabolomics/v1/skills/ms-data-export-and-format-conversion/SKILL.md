@@ -123,8 +123,8 @@ from pyteomics import mzml; import pandas as pd; spectra = [s for s in mzml.read
 
 ## Evidence
 
-- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats: "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats"
-- [full_text] spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying: "spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying"
-- [readme] For Water's .raw files, UniDec is bundled with converters (CDCReader.exe) to convert the data to .txt. It will compress the retention time dimension into a single spectrum.: "For Water's .raw files, UniDec is bundled with converters (CDCReader.exe) to convert the data to .txt. It will compress the retention time dimension into a single spectrum."
-- [full_text] entire MS repositories, including GNPS/MassIVE, Metabolomics Workbench and MetaboLights: "entire MS repositories, including GNPS/MassIVE, Metabolomics Workbench and MetaboLights"
-- [other] Export matched MS/MS spectra in tabular format (CSV/TSV) with scan identifiers, precursor m/z, product ion m/z, intensity values, and metadata.: "Export matched MS/MS spectra in tabular format (CSV/TSV) with scan identifiers, precursor m/z, product ion m/z, intensity values, and metadata."
+- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
+- [full_text] spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying
+- [readme] For Water's .raw files, UniDec is bundled with converters (CDCReader.exe) to convert the data to .txt. It will compress the retention time dimension into a single spectrum.
+- [full_text] entire MS repositories, including GNPS/MassIVE, Metabolomics Workbench and MetaboLights
+- [other] Export matched MS/MS spectra in tabular format (CSV/TSV) with scan identifiers, precursor m/z, product ion m/z, intensity values, and metadata.

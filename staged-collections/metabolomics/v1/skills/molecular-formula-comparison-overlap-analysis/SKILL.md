@@ -114,12 +114,12 @@ Obtain parent pesticide structures and execute BioTransformer with CYP450 transf
 
 ## Evidence
 
-- [methods] Overlap analysis (set intersection/union/exclusive membership) and Venn diagram visualization: "Compare predicted and experimental formula sets using set intersection, union, and exclusive elements to calculate overlap percentage and generate membership categories. Create Venn diagram"
+- [methods] Overlap analysis (set intersection/union/exclusive membership) and Venn diagram visualization
 - [methods] Experimental formula input: 91 formulas from LC–HRMS data processing: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides."
-- [methods] Mass difference filtering to exclude formulas > parent + 50 u: "all features with a mass difference higher than +50 u to the parent compound, corresponding to an addition of three O atoms, were also not further evaluated."
-- [methods] BioTransformer prediction with CYP450 transformation type: "Metabolites were predicted using BioTransformer, which combines a rule-based approach and a machine learning approach."
+- [methods] Mass difference filtering to exclude formulas > parent + 50 u
+- [methods] BioTransformer prediction with CYP450 transformation type
 - [methods] Key finding: two-thirds overlap between in vitro and prediction/literature: "About two-thirds of the in vitro-metabolites were reported in the literature or predicted"
 - [discussion] Incomplete metabolite coverage example: metazachlor: "For metazachlor, 12 mammalian metabolites are described in the registration dossier, but we only observed three in the incubation experiment."
-- [discussion] Types of undetected predicted metabolites: "In vitro metabolites, which were not predicted, were mainly formed by reduction reactions (dehydrogenation), two consecutive hydroxylations or the breaking of a weak bond in the molecule"
-- [discussion] Incomplete S9 incubation coverage vs. BioTransformer prediction: "For the other compounds, a complete overlap of metabolites in S9 incubation and prediction was only found for isoproturon and triazines."
+- [discussion] Types of undetected predicted metabolites
+- [discussion] Incomplete S9 incubation coverage vs. BioTransformer prediction
 - [readme] incubatoR workflow overview: metabolite filtering and formula annotation: "Main task is to identify metabolic transformation products in a LC-HRMS2 dataset of in-parallel incubated xenobiotic compounds by applying statistical tools as well as mass defect filtering and"

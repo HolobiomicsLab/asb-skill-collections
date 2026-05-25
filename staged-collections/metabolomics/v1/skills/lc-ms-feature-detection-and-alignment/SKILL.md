@@ -107,11 +107,11 @@ Load centroided mzML files using XCMS v3.8 with IPO-optimized parameters (e.g., 
 
 ## Evidence
 
-- [methods] Feature detection, alignment, and retention time correction were performed using XCMS version 3.8.: "Feature detection, alignment, and retention time correction were performed using XCMS version 3.8."
-- [methods] The parameters of XCMS were optimized by the IPO approach.: "The parameters of XCMS were optimized by the IPO approach."
-- [methods] All features were componentized using CAMERA.: "All features were componentized using CAMERA."
-- [methods] Raw mass spectra were converted to the mzML format and centroided using ProteoWizard v3.0.18265 with the vendor library.: "Raw mass spectra were converted to the mzML format and centroided using ProteoWizard v3.0.18265 with the vendor library."
-- [methods] We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates, which reduced the number of features: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI−: "we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI−"
-- [readme] Main task is to identify metabolic transformation products in a LC-HRMS2 dataset of in-parallel incubated xenobiotic compounds by applying statistical tools as well as mass defect filtering: "Main task is to identify metabolic transformation products in a LC-HRMS2 dataset of in-parallel incubated xenobiotic compounds by applying statistical tools as well as mass defect filtering"
+- [methods] Feature detection, alignment, and retention time correction were performed using XCMS version 3.8.
+- [methods] The parameters of XCMS were optimized by the IPO approach.
+- [methods] All features were componentized using CAMERA.
+- [methods] Raw mass spectra were converted to the mzML format and centroided using ProteoWizard v3.0.18265 with the vendor library.
+- [methods] We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates, which reduced the number of features
+- [methods] By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI−
+- [readme] Main task is to identify metabolic transformation products in a LC-HRMS2 dataset of in-parallel incubated xenobiotic compounds by applying statistical tools as well as mass defect filtering
 - [readme] Peaklist generation (XCMS and CAMERA) by Rscripts/xcms.R and Rscripts/camera.R. INPUT: settings_xcms.yaml, class.csv, globalvar.sh. OUTPUT: xcms.rds. INPUT: settings_camera.yaml, xcms.rds, globalvar.sh. OUTPUT: camera.rds, metadata.tsv, peaklist.tsv: "Peaklist generation (XCMS [1] and CAMERA [2]) by `Rscripts/xcms.R` and `Rscripts/camera.R`. OUTPUT: `xcms.rds`. OUTPUT: `camera.rds`, `metadata.tsv`, `peaklist.tsv`"

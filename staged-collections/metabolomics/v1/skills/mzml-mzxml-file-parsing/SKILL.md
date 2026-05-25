@@ -119,8 +119,8 @@ df.to_feather('sample_spectra.feather')
 
 ## Evidence
 
-- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats: "The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats"
-- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations: "The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations"
-- [full_text] spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying: "spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying"
-- [other] Retrieve and read the Eutypa lata E. lata post-liquid chromatography iron-addition mzML/mzXML data files from MassIVE using pyteomics library into pandas data frames.: "Retrieve and read the Eutypa lata E. lata post-liquid chromatography iron-addition mzML/mzXML data files from MassIVE using pyteomics library into pandas data frames"
-- [full_text] MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source: "MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source"
+- [full_text] The MassQL reference query engine is written in Python and utilizes pyteomics to read open MS data files from mzML, mzXML and MGF formats
+- [full_text] The query engine itself processes the query over these data frames using the Python pandas library to perform data filtering and manipulations
+- [full_text] spectra in data frame format can optionally be saved as Apache feather files to cache data for repeated querying
+- [other] Retrieve and read the Eutypa lata E. lata post-liquid chromatography iron-addition mzML/mzXML data files from MassIVE using pyteomics library into pandas data frames.
+- [full_text] MassQL is agnostic to the instrument vendor, mass detector (for example, Orbitrap and quadrupole time-of-flight), ionization source

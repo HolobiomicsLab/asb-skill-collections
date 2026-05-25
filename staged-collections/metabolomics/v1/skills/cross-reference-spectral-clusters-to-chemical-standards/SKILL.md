@@ -112,8 +112,8 @@ On GNPS, after FBMN job completion, open the molecular network result, navigate 
 
 ## Evidence
 
-- [results] MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites: "Cross-reference MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites."
-- [results] Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library: "Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library"
-- [results] MassQL was helpful for the annotation of sugar conjugation, as it rapidly annotated hexosylation and pentosylation of the flavonoids: "MassQL was helpful for the annotation of sugar conjugation, as it rapidly annotated hexosylation and pentosylation of the flavonoids"
-- [results] Seven metabolites (2a–2g) were purified, and we identified the structures of these metabolites as O-β-D-xylosylated products of 2: "Seven metabolites (2a–2g) were purified, and we identified the structures of these metabolites as O-β-D-xylosylated products of 2"
-- [discussion] MS/MS spectra containing neutral losses of 132.0423 or 162.0528 Da were searched via MassQL: "MS/MS spectra containing neutral losses of 132.0423 or 162.0528 Da were searched via MassQL"
+- [results] MassQL-annotated spectral nodes with the molecular network to identify clusters corresponding to pentosylated and hexosylated metabolites
+- [results] Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library
+- [results] MassQL was helpful for the annotation of sugar conjugation, as it rapidly annotated hexosylation and pentosylation of the flavonoids
+- [results] Seven metabolites (2a–2g) were purified, and we identified the structures of these metabolites as O-β-D-xylosylated products of 2
+- [discussion] MS/MS spectra containing neutral losses of 132.0423 or 162.0528 Da were searched via MassQL

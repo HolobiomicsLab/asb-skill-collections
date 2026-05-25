@@ -114,13 +114,13 @@ Extract MS2 spectra corresponding to prioritized metabolite features from data-d
 
 ## Evidence
 
-- [methods] Extract cleaned MS2 spectra and molecular formula assignment workflow: "all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR"
-- [methods] GenForm formula calculation with elemental constraints: "The corresponding molecular formula was calculated using the GenForm33 command line tool"
-- [methods] Fragment explicability filtering step: "Filter generated formulas by removing peaks in MS2 spectra that cannot be explained by assigned molecular formula, retaining only explicable fragments"
-- [methods] Sirius in silico structure elucidation for ambiguous metabolites: "structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27"
-- [methods] Dot-product similarity scoring with OrgMassSpecR: "Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR"
+- [methods] Extract cleaned MS2 spectra and molecular formula assignment workflow
+- [methods] GenForm formula calculation with elemental constraints
+- [methods] Fragment explicability filtering step
+- [methods] Sirius in silico structure elucidation for ambiguous metabolites
+- [methods] Dot-product similarity scoring with OrgMassSpecR
 - [methods] Quantitative outcome: 91 unambiguous formulas assigned: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides"
 - [supplementary] Identification confidence levels: structure (**) vs. formula (*): "Column ID is the describing if the metabolite could be linked unambiguously to one molecular structure (**) or only to a molecular formula (*)"
 - [readme] Workflow orchestration in incubatoR: steps 4–6 covering formula annotation and spectral extraction: "Molecular formula annotation - implementation of GenForm [6] (`bash/jobsubmit_6genform.sh` for parallel job submission). INPUT: `class.csv`, `compound/MSMS/*`, `compound/MSMS/*/MS1.txt`,"
-- [supplementary] GenForm parameter settings for MS accuracy and fragment acceptance: "GenForm intensity weighting wi sqrt MS1 accuracy ppm 8 acceptance of MS2 peak acc 8 rejection of MS2 peak rej 15"
+- [supplementary] GenForm parameter settings for MS accuracy and fragment acceptance
 - [discussion] Limitation: incomplete metabolite detection for metazachlor: "For metazachlor, 12 mammalian metabolites are described in the registration dossier, but we only observed three in the incubation experiment"

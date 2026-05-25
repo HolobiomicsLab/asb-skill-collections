@@ -114,8 +114,8 @@ mafft --auto filtered_UGTs.fasta > aligned_UGTs.fasta && trimal -in aligned_UGTs
 
 ## Evidence
 
-- [results] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters.: "Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters."
-- [results] Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns.: "Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns."
-- [results] Construct a maximum-likelihood phylogenetic tree from the trimmed alignment using standard tree-building software (FastTree or RAxML) to resolve placement of UGT66A1 among the 138 UGTs.: "Construct a maximum-likelihood phylogenetic tree from the trimmed alignment using standard tree-building software (FastTree or RAxML)"
-- [results] Protein sequence–based phylogenetic analysis with the other experimentally characterized UGTs revealed that UGT66A1 clusters only with UGT62A1: "Protein sequence–based phylogenetic analysis with the other experimentally characterized UGTs revealed that UGT66A1 clusters only with UGT62A1"
-- [other] Eight putative UGTs were found in L. brumalis; phylogenetic analysis revealed that UGT66A1 clusters only with UGT62A1, a fungal UGT from Hericium erinaceus.: "phylogenetic analysis revealed that UGT66A1 clusters only with UGT62A1, a fungal UGT from Hericium erinaceus"
+- [results] Perform multiple sequence alignment of the filtered UGT sequences using MAFFT with default parameters.
+- [results] Trim the alignment using TrimAl with automated gap-removal settings to remove low-information columns.
+- [results] Construct a maximum-likelihood phylogenetic tree from the trimmed alignment using standard tree-building software (FastTree or RAxML) to resolve placement of UGT66A1 among the 138 UGTs.
+- [results] Protein sequence–based phylogenetic analysis with the other experimentally characterized UGTs revealed that UGT66A1 clusters only with UGT62A1
+- [other] Eight putative UGTs were found in L. brumalis; phylogenetic analysis revealed that UGT66A1 clusters only with UGT62A1, a fungal UGT from Hericium erinaceus.

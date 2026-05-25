@@ -108,12 +108,12 @@ First, extract MS2 spectra corresponding to prioritized metabolite features from
 
 ## Evidence
 
-- [methods] MS2 spectra interpretation for formula assignment: "The corresponding molecular formula was calculated using the GenForm33 command line tool."
-- [methods] Filtered MS2 spectra containing only explicable fragments: "all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR.32"
-- [methods] Sirius in silico fragmentation and fingerprint prediction: "structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27.14"
-- [methods] Dot-product similarity scoring for spectral quality: "Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR.34"
-- [methods] GenForm elemental composition constraints from parent pesticide: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides."
-- [methods] Mass defect filtering removes out-of-range metabolites before formula assignment: "For mass defect filtering, features with a mass defect shift of <−100 and >+50 mmu were removed."
-- [supplementary] GenForm parameters for MS1 and MS2 accuracy in supplementary: "GenForm intensity weighting wi sqrt MS1 accuracy ppm 8 acceptance of MS2 peak acc 8 rejection of MS2 peak rej 15"
-- [discussion] Incomplete metabolite coverage due to ionization or extraction limitations: "Some might have been formed but could not have been detected due to low ionization efficiencies...Also, losses during the sample extraction and cleanup procedure are possible"
+- [methods] MS2 spectra interpretation for formula assignment
+- [methods] Filtered MS2 spectra containing only explicable fragments
+- [methods] Sirius in silico fragmentation and fingerprint prediction
+- [methods] Dot-product similarity scoring for spectral quality
+- [methods] GenForm elemental composition constraints from parent pesticide
+- [methods] Mass defect filtering removes out-of-range metabolites before formula assignment
+- [supplementary] GenForm parameters for MS1 and MS2 accuracy in supplementary
+- [discussion] Incomplete metabolite coverage due to ionization or extraction limitations
 - [readme] incubatoR README: GenForm applied to extracted MSMS spectra: "Molecular formula annotation - implementation of GenForm [6] (`bash/jobsubmit_6genform.sh` for parallel job submission). INPUT: `class.csv`, `compound/MSMS/*`, `compound/MSMS/*/MS1.txt`,"

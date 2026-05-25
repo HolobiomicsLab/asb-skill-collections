@@ -112,13 +112,13 @@ Begin by blank subtraction: compare mean intensity of each feature in incubated 
 
 ## Evidence
 
-- [methods] blank_subtraction: "Mean intensity values in the samples were compared to the injection and sample blanks. Features with a higher mean intensity in the blanks were removed."
-- [methods] isotope_adduct_removal: "All features were componentized using CAMERA.29"
-- [methods] abundance_filter_definition: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] mass_defect_filter_definition: "For mass defect filtering, features with a mass defect shift of <−100 and >+50 mmu were removed."
-- [methods] mass_difference_filter_definition: "Features with an m/z value >+50 mu to the parent pesticide were removed since they are more likely to occur from conjugation"
-- [methods] fold_change_reduction_magnitude: "The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−."
-- [readme] workflow_overview_from_readme: "Filtering of non-metabolic features by several cut-off values and plotting for manual evaluation by `Rscripts/metabolites.R`"
-- [methods] standard_impurity_removal: "To remove impurities stemming from the used pesticide standards in the metabolite data, mean group intensities after incubation were compared to the intensities measured in the pure pesticide standard"
-- [supplementary] camera_parameters: "CAMERA[v1.40] groupFWHM perfwwhm 0.6 groupCorr cor eic th 0.75 findAdducts polarity positive negative"
-- [discussion] filtering_adaptability: "The individual filtering steps provided in this workflow can be adapted for a more or less strict prioritization of features"
+- [methods] blank_subtraction
+- [methods] isotope_adduct_removal
+- [methods] abundance_filter_definition
+- [methods] mass_defect_filter_definition
+- [methods] mass_difference_filter_definition
+- [methods] fold_change_reduction_magnitude
+- [readme] workflow_overview_from_readme
+- [methods] standard_impurity_removal
+- [supplementary] camera_parameters
+- [discussion] filtering_adaptability

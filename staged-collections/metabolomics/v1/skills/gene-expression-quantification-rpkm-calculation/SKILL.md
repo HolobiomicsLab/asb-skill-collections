@@ -107,9 +107,9 @@ library(edgeR); counts <- read.table('htseq_counts.txt', row.names=1); dge <- DG
 
 ## Evidence
 
-- [other] Load count data into R and apply edgeR normalization using trimmed mean of M-values (TMM) and calcNormFactors() to account for library size and composition bias.: "Load count data into R and apply edgeR normalization using trimmed mean of M-values (TMM) and calcNormFactors() to account for library size and composition bias."
-- [other] Calculate RPKM (reads per kilobase per million mapped reads) values using edgeR's rpkm() function.: "Calculate RPKM (reads per kilobase per million mapped reads) values using edgeR's rpkm() function."
-- [results] RNAseq analysis revealed that LbUGT3 expression increased two-fold when L. brumalis was supplemented with baicalin (compound 1) compared to cultures without plant phenolics, as quantified by RPKM (reads per kilobase per million mapped reads).: "RNAseq analysis revealed that LbUGT3 expression increased two-fold when L. brumalis was supplemented with baicalin (compound 1) compared to cultures without plant phenolics, as quantified by RPKM"
-- [results] the expression level of LbUGT3 showed two-fold increase in the growth media containing 1: "the expression level of LbUGT3 showed two-fold increase in the growth media containing 1"
-- [other] Extract and tabulate LbUGT3 expression values for baicalin-supplemented and control conditions, verify two-fold expression increase, and save normalized expression table.: "Extract and tabulate LbUGT3 expression values for baicalin-supplemented and control conditions, verify two-fold expression increase, and save normalized expression table."
-- [discussion] The RNAseq analysis provided us with a clue for target prioritization, but it will not be helpful when multiple genes show high level of expression or target enzyme is a housekeeping one: "The RNAseq analysis provided us with a clue for target prioritization, but it will not be helpful when multiple genes show high level of expression or target enzyme is a housekeeping one"
+- [other] Load count data into R and apply edgeR normalization using trimmed mean of M-values (TMM) and calcNormFactors() to account for library size and composition bias.
+- [other] Calculate RPKM (reads per kilobase per million mapped reads) values using edgeR's rpkm() function.
+- [results] RNAseq analysis revealed that LbUGT3 expression increased two-fold when L. brumalis was supplemented with baicalin (compound 1) compared to cultures without plant phenolics, as quantified by RPKM (reads per kilobase per million mapped reads).
+- [results] the expression level of LbUGT3 showed two-fold increase in the growth media containing 1
+- [other] Extract and tabulate LbUGT3 expression values for baicalin-supplemented and control conditions, verify two-fold expression increase, and save normalized expression table.
+- [discussion] The RNAseq analysis provided us with a clue for target prioritization, but it will not be helpful when multiple genes show high level of expression or target enzyme is a housekeeping one

@@ -106,9 +106,9 @@ Extract the MS2 spectrum and assigned molecular formula for the prioritized meta
 
 ## Evidence
 
-- [methods] structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27: "structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27."
-- [other] examining fragmentation trees for parent pesticide-like fragments and functional group assignments: "For features with ambiguous or complex fragmentation patterns, perform structure elucidation using Sirius version 4.4.27 in silico fragmentation and molecular fingerprint prediction, examining"
-- [methods] Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR: "Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR."
-- [methods] all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR: "all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR."
-- [methods] The corresponding molecular formula was calculated using the GenForm command line tool.: "The corresponding molecular formula was calculated using the GenForm command line tool."
-- [discussion] In vitro metabolites, which were not predicted, were mainly formed by reduction reactions (dehydrogenation), two consecutive hydroxylations or the breaking of a weak bond: "In vitro metabolites, which were not predicted, were mainly formed by reduction reactions (dehydrogenation), two consecutive hydroxylations or the breaking of a weak bond in the molecule"
+- [methods] structure elucidation was performed using the in silico fragmentation and molecular fingerprint prediction of Sirius version 4.4.27
+- [other] examining fragmentation trees for parent pesticide-like fragments and functional group assignments
+- [methods] Dot-product scores were calculated using the function SpectrumSimilarity in OrgMassSpecR
+- [methods] all spectra corresponding to the metabolite features were extracted from the data-dependent MS2 acquisition using mzR
+- [methods] The corresponding molecular formula was calculated using the GenForm command line tool.
+- [discussion] In vitro metabolites, which were not predicted, were mainly formed by reduction reactions (dehydrogenation), two consecutive hydroxylations or the breaking of a weak bond

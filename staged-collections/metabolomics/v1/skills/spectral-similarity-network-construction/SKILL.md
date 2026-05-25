@@ -99,8 +99,8 @@ Upload your feature-extracted LC-MS/MS dataset to GNPS and initiate the feature-
 
 ## Evidence
 
-- [other] Upload dataset to GNPS and initiate the feature-based molecular networking (FBMN) workflow with default parameters for MS/MS peak detection and alignment.: "Upload dataset to GNPS and initiate the feature-based molecular networking (FBMN) workflow with default parameters for MS/MS peak detection and alignment."
-- [other] Configure FBMN to generate a spectral similarity network and cosine similarity scoring.: "Configure FBMN to generate a spectral similarity network and cosine similarity scoring."
-- [results] Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library: "Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library"
-- [discussion] with peak detection set at over 10,000 amplitudes to cutoff noise level: "with peak detection set at over 10,000 amplitudes to cutoff noise level"
-- [results] An example of the molecular network- and MassQL-based enzymatic reactivity annotation: "An example of the molecular network- and MassQL-based enzymatic reactivity annotation"
+- [other] Upload dataset to GNPS and initiate the feature-based molecular networking (FBMN) workflow with default parameters for MS/MS peak detection and alignment.
+- [other] Configure FBMN to generate a spectral similarity network and cosine similarity scoring.
+- [results] Many spectral nodes could be structurally annotated due to high coverage of the GNPS MS/MS reference library
+- [discussion] with peak detection set at over 10,000 amplitudes to cutoff noise level
+- [results] An example of the molecular network- and MassQL-based enzymatic reactivity annotation

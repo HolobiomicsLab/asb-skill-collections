@@ -115,8 +115,8 @@ write.table(rpkm_values[grep('LbUGT3', rownames(rpkm_values)), ], file='LbUGT3_r
 
 ## Evidence
 
-- [methods] HTSeq counting with union mode and reverse strand: "Count reads mapping to annotated genes using HTSeq (mode=union, stranded=reverse) to produce raw count matrices."
-- [methods] edgeR TMM normalization and RPKM computation: "Load count data into R and apply edgeR normalization using trimmed mean of M-values (TMM) and calcNormFactors() to account for library size and composition bias. Calculate RPKM (reads per kilobase"
-- [methods] Extraction and verification of two-fold fold-change: "Extract and tabulate LbUGT3 expression values for baicalin-supplemented and control conditions, verify two-fold expression increase, and save normalized expression table."
-- [results] Finding of LbUGT3 two-fold expression increase: "RNAseq analysis revealed that LbUGT3 expression increased two-fold when L. brumalis was supplemented with baicalin (compound 1) compared to cultures without plant phenolics, as quantified by RPKM"
-- [other] Research question motivating fold-change verification: "Does LbUGT3 expression increase two-fold in L. brumalis cultured with baicalin compared to control conditions, and can this be quantified through RNA-seq read mapping, counting, and normalization"
+- [methods] HTSeq counting with union mode and reverse strand
+- [methods] edgeR TMM normalization and RPKM computation
+- [methods] Extraction and verification of two-fold fold-change
+- [results] Finding of LbUGT3 two-fold expression increase
+- [other] Research question motivating fold-change verification

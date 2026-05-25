@@ -62,6 +62,39 @@ evidence provenance, and FAIR metadata completeness.
 
 Tiers are per-collection-release. Career totals are tracked in `leaderboard/career.jsonld`.
 
+## How the ASB pipeline runs (local-only for now)
+
+AgenticScienceBuilder (the agent that consumes papers and produces skills /
+tools / capsules / workflows) **runs only on a maintainer's machine** — not
+in CI. The asb-skill-collections workflows are validation + plumbing only:
+
+| Workflow | Trigger | What it does |
+|---|---|---|
+| `validate.yml` | every PR + push | LinkML/structural checks, description lint, DOI resolve, EDAM IRI check |
+| `verify-paper.yml` | PRs touching `corpus.yaml` | Crossref retraction check + Unpaywall access tier verification |
+| `release.yml` | tag `<slug>-v<N>` | pytest → regen catalogue → Zenodo deposit → CITATION.{cff,bib} DOI patch → HF mirror trigger |
+| `mirror-to-hf.yml` | release tag | Pushes the collection to HuggingFace |
+| `pages.yml` | push to main | Rebuilds the static docs site |
+
+What this means for contributors:
+
+- A "Propose paper" PR adds the paper to `corpus.yaml` with `status: proposed`.
+- After Lead Curator + maintainer approval, the status flips to `accepted`.
+- A maintainer then runs `asb build` + `asb collection promote` locally and
+  opens a **follow-up PR** with the derived `skills/<slug>/SKILL.md`,
+  `tools/<slug>.yaml`, `benchmark/tasks/<paper>/`, and the
+  `corpus.yaml`-status transition to `included`. This is reviewed by the
+  Lead Curator before merge.
+- Once merged, a tag triggers the Zenodo deposition + HF mirror via CI.
+
+**Why local-only:** the ASB pipeline calls LLMs (~$0.10–$0.35 per paper at
+economy tier) and depends on a reachable Perspicacité MCP server (currently
+not deployed publicly because the Chroma vector store is single-writer).
+Moving to hosted execution is tracked as a v1.1+ improvement and requires
+(a) `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` configured as repo secrets with
+cost guardrails, (b) public Perspicacité MCP endpoint, (c) `actions/cache`
+wiring for the PDF / figure / LLM response caches.
+
 ## Code of Conduct
 
 We follow the Contributor Covenant v2.1. Scientific integrity and respectful review

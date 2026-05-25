@@ -109,9 +109,9 @@ Load centroided mzML files and a class file defining sample groups (incubated re
 
 ## Evidence
 
-- [methods] Feature detection, alignment, and retention time correction were performed using XCMS version 3.8.: "Feature detection, alignment, and retention time correction were performed using XCMS version 3.8."
-- [methods] The parameters of XCMS were optimized by the IPO approach.: "The parameters of XCMS were optimized by the IPO approach."
-- [methods] Raw mass spectra were converted to the mzML format and centroided using ProteoWizard v3.0.18265: "Raw mass spectra were converted to the mzML format and centroided using ProteoWizard26 v3.0.18265 with the vendor library."
-- [other] XCMS version 3.8 with IPO-optimized parameters successfully processed the deposited mzML files and generated feature data that enabled assignment of 91 unambiguous molecular formulas to 82 prioritized features in ESI+ and 39 in ESI− across 22 pesticides.: "XCMS version 3.8 with IPO-optimized parameters successfully processed the deposited mzML files and generated feature data that enabled assignment of 91 unambiguous molecular formulas to 82"
-- [readme] Peaklist generation (XCMS and CAMERA) with INPUT settings_xcms.yaml and OUTPUT xcms.rds: "Peaklist generation (XCMS [1] and CAMERA [2]) by `Rscripts/xcms.R` and `Rscripts/camera.R` INPUT: `settings_xcms.yaml`, `class.csv`, `globalvar.sh` OUTPUT: `xcms.rds`"
-- [supplementary] XCMS parameters documented in Table S3 include centwave method with specific peakwidth, ppm, noise, snthresh, mzdiff, and prefilter values optimized for positive and negative modes.: "xcms[v3.8] peakpicking method centwave peakwidth 12.32,40 25.3, 76 ppm 11.75 7"
+- [methods] Feature detection, alignment, and retention time correction were performed using XCMS version 3.8.
+- [methods] The parameters of XCMS were optimized by the IPO approach.
+- [methods] Raw mass spectra were converted to the mzML format and centroided using ProteoWizard v3.0.18265
+- [other] XCMS version 3.8 with IPO-optimized parameters successfully processed the deposited mzML files and generated feature data that enabled assignment of 91 unambiguous molecular formulas to 82 prioritized features in ESI+ and 39 in ESI− across 22 pesticides.
+- [readme] Peaklist generation (XCMS and CAMERA) with INPUT settings_xcms.yaml and OUTPUT xcms.rds
+- [supplementary] XCMS parameters documented in Table S3 include centwave method with specific peakwidth, ppm, noise, snthresh, mzdiff, and prefilter values optimized for positive and negative modes.

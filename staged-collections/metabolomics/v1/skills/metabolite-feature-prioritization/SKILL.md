@@ -108,11 +108,11 @@ Begin with abundance-filtered features (fold-change >4, detected in ≥2 of 3 re
 
 ## Evidence
 
-- [methods] abundance filter: "We used a generic cutoff value of >4 for the fold change and kept only the features that were detected in at least two of three replicates"
-- [methods] mass difference filtering rationale: "all features with a mass difference higher than +50 u to the parent compound, corresponding to an addition of three O atoms, were also not further evaluated."
-- [methods] mass defect filtering: "a threshold of −100 mmu for the lower and +50 mmu for the upper mass defect cutoff level"
-- [methods] blank subtraction and isotope/adduct removal: "The application of a blank subtraction combined with isotope/adduct peak removal steps reduced the number of peaks by about 60% in both ESI+ and ESI−."
-- [readme] incubatoR filtering workflow overview: "Main task is to identify metabolic transformation products in a LC-HRMS2 dataset of in-parallel incubated xenobiotic compounds by applying statistical tools as well as mass defect filtering"
-- [methods] standard impurity removal: "To remove impurities stemming from the used pesticide standards in the metabolite data, mean group intensities after incubation were compared to the intensities measured in the pure pesticide standard"
-- [methods] metabolite detection outcomes: "By applying the data processing workflow, we could assign in total 91 unambiguous molecular formulas to a number of 82 prioritized features in ESI+ and 39 in ESI− for the 22 pesticides."
-- [discussion] incomplete metabolite coverage: "S9 incubation does not cover all potential or existing metabolites"
+- [methods] abundance filter
+- [methods] mass difference filtering rationale
+- [methods] mass defect filtering
+- [methods] blank subtraction and isotope/adduct removal
+- [readme] incubatoR filtering workflow overview
+- [methods] standard impurity removal
+- [methods] metabolite detection outcomes
+- [discussion] incomplete metabolite coverage
