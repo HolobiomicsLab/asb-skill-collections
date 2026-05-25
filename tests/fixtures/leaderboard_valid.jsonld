@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "asb": "https://w3id.org/holobiomicslab/asb-skill/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "asb:Leaderboard",
+  "collection": "https://w3id.org/holobiomicslab/asb-skill/collection/test-domain/v1",
+  "entries": [
+    {
+      "result_type": "agent",
+      "submitter_handle": "test-user",
+      "submitter_orcid": "0000-0001-2345-6789",
+      "agent_or_system_name": "TestAgent v1.0",
+      "image_digest": "sha256:abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890ab",
+      "submitted_at": "2026-05-25T00:00:00Z",
+      "scores": {"task-001": 0.85, "task-002": 0.72},
+      "metrics": {"latency_s": 12.3, "cost_usd": 0.045}
+    },
+    {
+      "result_type": "rag_system",
+      "submitter_handle": "rag-team",
+      "submitter_orcid": null,
+      "agent_or_system_name": "FastRAG 2.0",
+      "image_digest": "sha256:1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef12",
+      "submitted_at": "2026-05-25T01:00:00Z",
+      "scores": {"claim-q001": 0.91, "claim-q002": 0.88},
+      "metrics": {"recall_at_5": 0.93, "mrr": 0.87}
+    },
+    {
+      "result_type": "hybrid",
+      "submitter_handle": "hybrid-lab",
+      "submitter_orcid": null,
+      "agent_or_system_name": "HybridSys",
+      "image_digest": "abc123def456abc123def456abc123def456abc123def456abc123def456abc123de",
+      "submitted_at": "2026-05-25T02:00:00Z",
+      "scores": {"task-001": 0.80},
+      "metrics": {}
+    }
+  ]
+}

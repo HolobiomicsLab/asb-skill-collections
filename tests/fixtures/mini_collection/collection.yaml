@@ -1,0 +1,19 @@
+# Minimal collection YAML for regen_catalogue unit tests.
+"@context":
+  "@vocab": "https://schema.org/"
+  asb: "https://w3id.org/holobiomicslab/asb-skill/"
+  edam: "http://edamontology.org/"
+"@type": "asb:SkillCollection"
+"@id": "https://w3id.org/holobiomicslab/asb-skill/collection/test-domain/v1"
+title: "Test Domain Collection"
+version: "1"
+slug: "test-domain"
+domain_topics:
+  - "http://edamontology.org/topic_0091"
+doi: null
+released_at: null
+lead_curators:
+  - orcid: "0000-0001-0000-0000"
+    github: "test-curator"
+skills_count: 2
+tools_count: 1

@@ -1,0 +1,12 @@
+{
+  "@context": {"asb": "https://w3id.org/holobiomicslab/asb-skill/"},
+  "@type": "asb:Leaderboard",
+  "collection": "https://w3id.org/holobiomicslab/asb-skill/collection/test-domain/v1",
+  "entries": [
+    {
+      "result_type": "robot",
+      "submitter_handle": "bad-actor",
+      "agent_or_system_name": "BadBot"
+    }
+  ]
+}

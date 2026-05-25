@@ -32,8 +32,13 @@ evidence_spans_accurate: true           # true | false | partial
 
 # List claim IDs you manually verified (gold-tier ground truth for benchmark).
 # These claims are marked as verified in benchmark/claims/ ground truth.
-# Leave empty if you did not verify claims to ground-truth level.
-verified_claim_ids: []                  # e.g., ["urn:asb:claim:abc123", ...]
+# Gold-tier claims enable absolute calibration of RAG-system benchmarks (§10.4).
+# A claim ID is a URN of the form "urn:asb:claim:<slug>".
+# Only list claims you have personally verified by reading the verbatim evidence span
+# and confirming it matches the paper text. Leave empty if not applicable.
+# Silver tier (auto): all ASB-extracted claims with trace_status: exact_match.
+# Gold tier (human): claims listed here by a reviewer with >=reviewer identity tier.
+verified_claim_ids: []              # e.g., ["urn:asb:claim:abc123", "urn:asb:claim:def456"]
 
 # -- COI declaration ---------------------------------------------------------
 # is_coauthor is auto-populated by verify-coi.yml -- but you MUST declare it here
