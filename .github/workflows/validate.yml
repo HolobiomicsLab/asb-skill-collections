@@ -289,16 +289,21 @@ jobs:
       # -- Gate 1: LinkML schema validation ------------------------------------
       - name: LinkML schema validation
         run: |
-          pip install asb-schema || echo "INFO: asb-schema not yet on PyPI; skipping LinkML gate"
           python - <<'EOF'
-          import sys, pathlib, subprocess
+          import sys, pathlib, subprocess, importlib.util
 
-          try:
-              import linkml_runtime  # noqa: F401
-          except ImportError:
-              print("SKIP: linkml_runtime not available")
-              sys.exit(0)
+          # asb-schema is not yet on PyPI; the LinkML schema lives in the
+          # AgenticScienceBuilder repo at scitask-schema/. CI here doesn't
+          # have it checked out, and a wheel install isn't viable yet.
+          #
+          # Until asb-schema is published (v1.1+), this step performs a
+          # structural sanity check on collection.yaml instead of full
+          # LinkML conformance: required top-level keys + value types.
+          # Real LinkML validation runs at release time once asb-schema
+          # ships to PyPI.
 
+          import yaml
+          required_keys = {"slug", "title", "version", "n_skills", "skills"}
           collection_files = list(pathlib.Path("collections").rglob("collection.yaml"))
           collection_files += list(
               pathlib.Path("staged-collections").rglob("collection.yaml")
@@ -309,16 +314,23 @@ jobs:
 
           failures = []
           for cf in collection_files:
-              result = subprocess.run(
-                  ["linkml-validate", "--schema", "asb_skill_bundle.yaml", str(cf)],
-                  capture_output=True, text=True
-              )
-              if result.returncode != 0:
-                  failures.append(f"{cf}: {result.stderr.strip()}")
+              try:
+                  doc = yaml.safe_load(cf.read_text()) or {}
+              except Exception as exc:
+                  failures.append(f"{cf}: YAML parse error: {exc}")
+                  continue
+              missing = required_keys - set(doc.keys())
+              if missing:
+                  failures.append(f"{cf}: missing keys {sorted(missing)}")
+              if not isinstance(doc.get("skills"), list):
+                  failures.append(f"{cf}: 'skills' must be a list")
+              if not isinstance(doc.get("n_skills"), int):
+                  failures.append(f"{cf}: 'n_skills' must be int")
           if failures:
-              print("FAIL: LinkML validation failures:")
+              print("FAIL: structural validation failures:")
               for f in failures:
                   print(f"  - {f}")
               sys.exit(1)
-          print(f"PASS: LinkML validation OK ({len(collection_files)} files)")
+          print(f"PASS: structural validation OK ({len(collection_files)} files)")
+          print("INFO: Full LinkML conformance deferred until asb-schema ships to PyPI (v1.1).")
           EOF
