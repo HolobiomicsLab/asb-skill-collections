@@ -1,0 +1,226 @@
+# release.yml — triggered on tags matching <collection-slug>-v<N>
+# Steps:
+#   1. Validate the tagged collection passes all CI gates
+#   2. Call regen_catalogue.py and commit the updated catalogue.jsonld
+#   3. Upload the collection directory to Zenodo (fail-soft if ZENODO_TOKEN missing)
+#   4. Update CITATION.cff with the minted DOI
+#   5. Trigger mirror-to-hf.yml via workflow_dispatch
+name: Release
+
+on:
+  push:
+    tags:
+      - "*-v[0-9]*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract collection slug and version from tag
+        id: tag
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          # Tag format: <slug>-v<N>  e.g. metabolomics-v1
+          VERSION="${TAG##*-v}"
+          SLUG="${TAG%-v${VERSION}}"
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "Releasing slug=${SLUG} version=${VERSION}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e ".[test]"
+
+      - name: Run CI validation gates
+        run: |
+          python -m pytest tests/ -v
+          echo "All CI gates passed"
+
+      - name: Regenerate catalogue.jsonld
+        run: |
+          python scripts/regen_catalogue.py --repo-root . --output catalogue.jsonld
+          echo "catalogue.jsonld regenerated"
+
+      - name: Commit updated catalogue.jsonld
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add catalogue.jsonld
+          if git diff --cached --quiet; then
+            echo "No catalogue changes to commit"
+          else
+            git commit -m "chore: regen catalogue.jsonld for ${{ steps.tag.outputs.tag }}"
+            git push origin HEAD:main
+          fi
+
+      - name: Upload to Zenodo (fail-soft if token missing)
+        id: zenodo
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
+          COLLECTION_VERSION: ${{ steps.tag.outputs.version }}
+        run: |
+          if [ -z "${ZENODO_TOKEN}" ]; then
+            echo "ZENODO_TOKEN not set — skipping Zenodo upload"
+            echo "doi=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python - <<'PYEOF'
+          import json, os, pathlib, requests, sys, zipfile, tempfile
+
+          token = os.environ["ZENODO_TOKEN"]
+          slug = os.environ["COLLECTION_SLUG"]
+          version = os.environ["COLLECTION_VERSION"]
+          collection_dir = pathlib.Path("collections") / slug / f"v{version}"
+
+          if not collection_dir.exists():
+            print(f"Collection dir not found: {collection_dir}", file=sys.stderr)
+            sys.exit(1)
+
+          headers = {"Authorization": f"Bearer {token}"}
+          base_url = "https://zenodo.org/api"
+
+          # Create a new deposition
+          resp = requests.post(f"{base_url}/deposit/depositions",
+              json={}, headers=headers, timeout=30)
+          resp.raise_for_status()
+          dep = resp.json()
+          dep_id = dep["id"]
+          bucket_url = dep["links"]["bucket"]
+          print(f"Created Zenodo deposition {dep_id}")
+
+          # Zip the collection directory
+          with tempfile.NamedTemporaryFile(suffix=".zip", delete=False) as tf:
+            zip_path = tf.name
+          with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            for f in sorted(collection_dir.rglob("*")):
+              if f.is_file():
+                zf.write(f, f.relative_to(collection_dir.parent.parent))
+
+          # Upload zip
+          with open(zip_path, "rb") as fh:
+            upload_resp = requests.put(
+              f"{bucket_url}/{slug}-v{version}.zip",
+              data=fh,
+              headers=headers,
+              timeout=120,
+            )
+            upload_resp.raise_for_status()
+          print(f"Uploaded {slug}-v{version}.zip")
+
+          # Set metadata
+          citation_path = collection_dir / "CITATION.cff"
+          title = f"ASB Skill Collection: {slug} v{version}"
+          creators = [{"name": "HolobiomicsLab"}]
+          if citation_path.exists():
+            import yaml
+            cff = yaml.safe_load(citation_path.read_text())
+            title = cff.get("title", title)
+            if "authors" in cff:
+              creators = [{"name": f"{a.get('family-names', '')} {a.get('given-names', '')}".strip(),
+                           "orcid": a.get("orcid", "")} for a in cff["authors"] if a]
+
+          meta = {
+            "metadata": {
+              "title": title,
+              "upload_type": "dataset",
+              "description": f"ASB Skill Collection release: {slug} version {version}.",
+              "creators": creators,
+              "keywords": ["agentic-ai", "scientific-agents", slug, "asb"],
+              "license": "apache-2.0",
+              "version": version,
+            }
+          }
+          meta_resp = requests.put(
+            f"{base_url}/deposit/depositions/{dep_id}",
+            json=meta,
+            headers={"Content-Type": "application/json", **headers},
+            timeout=30,
+          )
+          meta_resp.raise_for_status()
+
+          # Publish
+          pub_resp = requests.post(
+            f"{base_url}/deposit/depositions/{dep_id}/actions/publish",
+            headers=headers,
+            timeout=30,
+          )
+          pub_resp.raise_for_status()
+          doi = pub_resp.json().get("doi", "")
+          print(f"Published. DOI: {doi}")
+
+          # Write DOI to GITHUB_OUTPUT
+          with open(os.environ["GITHUB_OUTPUT"], "a") as gho:
+            gho.write(f"doi={doi}\n")
+          PYEOF
+
+      - name: Update CITATION.cff with minted DOI
+        if: steps.zenodo.outputs.doi != ''
+        env:
+          DOI: ${{ steps.zenodo.outputs.doi }}
+          COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
+          COLLECTION_VERSION: ${{ steps.tag.outputs.version }}
+        run: |
+          python - <<'PYEOF'
+          import os, pathlib, re
+
+          doi = os.environ["DOI"]
+          slug = os.environ["COLLECTION_SLUG"]
+          version = os.environ["COLLECTION_VERSION"]
+
+          # Update root CITATION.cff if it exists
+          root_cff = pathlib.Path("CITATION.cff")
+          if root_cff.exists():
+            text = root_cff.read_text()
+            text = re.sub(r'^(doi:\s*).*$', f'doi: {doi}', text, flags=re.MULTILINE)
+            root_cff.write_text(text)
+            print(f"Updated root CITATION.cff with doi: {doi}")
+
+          # Update collection-level CITATION.cff
+          col_cff = pathlib.Path("collections") / slug / f"v{version}" / "CITATION.cff"
+          if col_cff.exists():
+            text = col_cff.read_text()
+            text = re.sub(r'^(doi:\s*).*$', f'doi: {doi}', text, flags=re.MULTILINE)
+            col_cff.write_text(text)
+            print(f"Updated collection CITATION.cff with doi: {doi}")
+          PYEOF
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add CITATION.cff "collections/${{ steps.tag.outputs.slug }}/v${{ steps.tag.outputs.version }}/CITATION.cff" 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No CITATION.cff changes"
+          else
+            git commit -m "chore: update CITATION.cff with Zenodo DOI ${{ steps.zenodo.outputs.doi }}"
+            git push origin HEAD:main
+          fi
+
+      - name: Trigger mirror-to-hf.yml
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'mirror-to-hf.yml',
+              ref: 'main',
+              inputs: {
+                collection_slug: '${{ steps.tag.outputs.slug }}',
+                collection_version: '${{ steps.tag.outputs.version }}'
+              }
+            });
+            console.log('Triggered mirror-to-hf.yml for ${{ steps.tag.outputs.tag }}');
