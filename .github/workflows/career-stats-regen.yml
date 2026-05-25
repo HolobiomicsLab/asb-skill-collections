@@ -1,0 +1,48 @@
+# career-stats-regen.yml — rebuilds leaderboard/ files on push to main when reviews
+# or contributors.jsonld change.
+name: Career Stats Regen
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "collections/**/reviews/*.yaml"
+      - "contributors.jsonld"
+
+permissions:
+  contents: write
+
+jobs:
+  regen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e ".[test]"
+
+      - name: Rebuild leaderboard stats
+        run: |
+          python scripts/regen_career_stats.py --repo-root .
+          echo "Career stats rebuilt"
+
+      - name: Commit updated leaderboard files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add leaderboard/
+          if git diff --cached --quiet; then
+            echo "No leaderboard changes to commit"
+          else
+            git commit -m "chore: regen leaderboard stats [skip ci]"
+            git push origin HEAD:main
+          fi
