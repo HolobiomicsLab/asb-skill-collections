@@ -51,7 +51,10 @@ def _cff_to_bibtex(cff: dict, slug: str, version) -> str:
             authors.append("{" + str(a["name"]) + "}")
     author_str = " and ".join(authors) if authors else "{Holobiomics Lab}"
     title = cff.get("title", f"ASB Skill Collection: {slug}")
-    year = (cff.get("date-released") or "").split("-")[0] or "2026"
+    # date-released may parse as a datetime.date (PyYAML) or a string;
+    # normalise to a YYYY-MM-DD string before split.
+    _dr = cff.get("date-released") or ""
+    year = str(_dr).split("-")[0] if _dr else "2026"
     doi = cff.get("doi") or ""
     cite_key = f"asb{slug.replace('-', '')}v{version}"
     lines = [

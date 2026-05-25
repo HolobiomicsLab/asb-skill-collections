@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "asb": "https://w3id.org/holobiomicslab/asb-skill/",
+    "edam": "http://edamontology.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "collections": {
+      "@id": "asb:collections",
+      "@container": "@set"
+    },
+    "domain_topics": {
+      "@id": "asb:domainTopics",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "lead_curators": {
+      "@id": "asb:leadCurators",
+      "@container": "@set"
+    },
+    "skills_count": {
+      "@id": "asb:skillsCount",
+      "@type": "xsd:integer"
+    },
+    "tools_count": {
+      "@id": "asb:toolsCount",
+      "@type": "xsd:integer"
+    },
+    "generated_at": {
+      "@id": "asb:generatedAt",
+      "@type": "xsd:dateTime"
+    },
+    "released_at": {
+      "@id": "asb:releasedAt",
+      "@type": "xsd:dateTime"
+    },
+    "slug": "asb:slug"
+  },
+  "@type": "asb:SkillCollectionRegistry",
+  "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
+  "name": "ASB Skill Collection Registry",
+  "description": "Auto-generated registry of all released ASB Skill Collections.",
+  "generated_at": "2026-05-25T10:23:25Z",
+  "collections": []
+}

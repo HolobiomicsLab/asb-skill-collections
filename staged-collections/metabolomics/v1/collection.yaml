@@ -2,6 +2,8 @@
 slug: metabolomics
 title: Metabolomics
 version: 1
+domain: metabolomics
+description: "ASB curated skill + benchmark collection for metabolomics. Derived from 5 peer-reviewed source papers (4 included, 1 documented-excluded) via AgenticScienceBuilder. 106 skills with EDAM annotations, 38 tools with SPDX licensing + CycloneDX SBOM, per-paper benchmark tasks, silver/gold-tiered claim ledger, CC-BY attribution chain."
 n_skills: 105
 n_papers: 5
 skills:
