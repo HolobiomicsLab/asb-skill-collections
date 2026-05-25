@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-library-curation
-description: Systematic cleaning and validation of mass spectrometry spectral library metadata and annotations using the matchms framework, including repair of structural notations (salts, adducts), harmonization of precursor masses, and removal of spectra with unrecoverable or inconsistent annotations.
+description: Use when metabolomics involves systematic cleaning and validation of mass spectrometry spectral library metadata and annotations using the matchms framework, applying to LC-MS and GC-MS untargeted lipidomics.
 when_to_use_negative:
 - Input library is already manually curated and has passed institutional QC (e.g., NIST private library); re-curation may introduce unnecessary changes.
 - Analysis requires retention of all spectral observations regardless of metadata quality (e.g., exploratory analysis of instrument artifacts or rare ionization modes not yet documented in standards).

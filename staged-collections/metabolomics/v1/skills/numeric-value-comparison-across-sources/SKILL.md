@@ -1,6 +1,6 @@
 ---
 name: numeric-value-comparison-across-sources
-description: Cross-validate reported summary statistics (e.g., input counts, removal counts, repair counts, retention counts) from a scientific article against structured data artifacts (e.g., processing reports, supplementary tables) to verify reproducibility and detect transcription or calculation errors.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to cross-validate reported summary statistics against structured data artifacts for verifying reproducibility and detecting transcription or calculation errors.
 when_to_use_negative:
 - The artifact does not exist or is inaccessible at the cited location (e.g., Zenodo link is dead or requires authentication).
 - The article reports aggregate statistics without citing a specific artifact or supplementary table as the source (comparison cannot be grounded).

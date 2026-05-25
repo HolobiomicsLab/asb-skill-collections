@@ -1,6 +1,6 @@
 ---
 name: smiles-inchi-chemical-identifier-repair
-description: Repair and validate chemical structure identifiers (SMILES, InChI, InChIKey) by comparing them against each other and canonical references, and correcting salt-form SMILES that would otherwise cause downstream failures. This skill is essential in MS/MS library cleaning to ensure annotations are chemically consistent before requiring them as mandatory metadata.
+description: Use when metabolomics requires the repair and validation of chemical structure identifiers (SMILES, InChI, InChIKey) through comparison with canonical references and correction of salt-form SMILES to prevent downstream failures in LC-MS and GC-MS untargeted lipidomics.
 when_to_use_negative:
 - Input records lack any SMILES, InChI, or InChIKey field — use 'Derive annotation from compound name' (via PubChem) first to obtain initial structure identifiers.
 - The annotation is already curated and chemically validated externally — skip to 'Require valid annotation' filter instead.

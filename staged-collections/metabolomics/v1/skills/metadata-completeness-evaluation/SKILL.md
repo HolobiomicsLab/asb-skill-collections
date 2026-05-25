@@ -1,6 +1,6 @@
 ---
 name: metadata-completeness-evaluation
-description: Systematically assess the completeness and internal consistency of chemical annotation metadata (SMILES, InChI, InChIKey) in mass spectral library records using RDKit validation. This skill identifies incomplete or conflicting annotation fields and quantifies the proportion of spectra affected, enabling targeted repair or removal decisions.
+description: Use when evaluating the completeness and internal consistency of chemical annotation metadata in metabolomics using LC-MS and GC-MS techniques, applying RDKit validation to assess SMILES, InChI, and InChIKey in mass spectral library records.
 when_to_use_negative:
 - Spectra that lack SMILES, InChI, or InChIKey fields entirely and no repair function has been attempted—validation will simply remove them without distinguishing repairable from irreparable gaps.
 - When annotation metadata is already curated and repair functions have been exhausted; further filtering may not improve quality.

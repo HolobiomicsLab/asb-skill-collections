@@ -1,6 +1,6 @@
 ---
 name: metadata-harmonization-cleaning
-description: Systematically clean and harmonize metadata in mass spectral libraries by applying a tiered filter pipeline (basic, default, library cleaning) that validates chemical annotations, repairs structural identifiers (SMILES, InChI, InChIKey), reconciles precursor m/z and adduct assignments with structure, and removes or repairs spectra with incomplete or inconsistent metadata. This skill is essential for preparing public MS/MS libraries (e.g., GNPS, MoNA, MassBank) for reliable downstream analysis and sharing.
+description: Use when working in the metabolomics domain to systematically clean and harmonize metadata in mass spectral libraries using a tiered filter pipeline that validates chemical annotations and repairs structural identifiers for LC-MS and GC-MS untargeted lipidomics.
 when_to_use_negative:
 - Input library is already fully annotated and has been validated against fragment ion composition (i.e., fragments already verified to match the given chemical structure); additional repair will not improve reliability.
 - Annotated spectra contain wrong chemical structures that are consistent with measured parent mass (e.g., isomers); the current pipeline cannot detect these and will pass them through.

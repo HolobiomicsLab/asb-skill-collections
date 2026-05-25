@@ -1,6 +1,6 @@
 ---
 name: fungal-genome-sequence-retrieval-and-processing
-description: Retrieval and preprocessing of deduced amino acid sequences from fungal genome databases, followed by domain-based filtering and alignment to prepare protein sequences for comparative genomics and phylogenetic analysis. This skill enables systematic identification of gene families (e.g., UDP-glycosyltransferases) across multiple fungal species.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to retrieve and preprocess deduced amino acid sequences from fungal genome databases, applying domain-based filtering and alignment for comparative genomics and phylogenetic analysis.
 when_to_use_negative:
 - Input sequences are already functionally characterized or experimentally validated; use this skill for hypothesis generation and target prioritization, not confirmation.
 - Target domain is not well-represented in Pfam or you have custom domain definitions; consider ab initio domain discovery (InterProScan, HMMER3 custom models) instead.

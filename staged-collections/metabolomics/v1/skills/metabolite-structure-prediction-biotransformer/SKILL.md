@@ -1,6 +1,6 @@
 ---
 name: metabolite-structure-prediction-biotransformer
-description: Use BioTransformer to generate predicted phase I metabolite structures and molecular formulas for parent xenobiotics, then compare predicted formulas against experimentally detected molecular formulas from LC–HRMS data to assess metabolic coverage and identify experimentally detected metabolites supported by in silico prediction.
+description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to generate predicted phase I metabolite structures and molecular formulas for parent xenobiotics, then compare these predictions against experimentally detected molecular formulas from LC–HRMS data.
 when_to_use_negative:
 - Input experimental metabolites have not yet been assigned unambiguous molecular formulas (e.g., formulas are ambiguous or missing); formula assignment must precede prediction comparison.
 - Parent compound structures are unavailable or poorly defined; BioTransformer requires valid chemical structures as input.

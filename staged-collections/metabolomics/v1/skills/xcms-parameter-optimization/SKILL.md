@@ -1,6 +1,6 @@
 ---
 name: xcms-parameter-optimization
-description: Optimize XCMS feature detection, alignment, and retention time correction parameters using the IPO algorithm to maximize sensitivity and specificity in LC–HRMS metabolomics workflows. This skill applies data-driven parameter tuning to centroided mzML files before peak picking, ensuring robust detection of low-abundance metabolite features across replicate samples.
+description: Use when optimizing XCMS feature detection, alignment, and retention time correction parameters with the IPO algorithm for LC-MS and GC-MS untargeted lipidomics, applying data-driven parameter tuning to centroided mzML files before peak picking.
 when_to_use_negative:
 - Input mzML files are already profile-mode (not centroided); XCMS requires centroided spectra—use ProteoWizard to centroid first.
 - Your sample set lacks replicate structure or quality controls (e.g., reference standards, blanks); IPO requires examples of true peaks to optimize against.

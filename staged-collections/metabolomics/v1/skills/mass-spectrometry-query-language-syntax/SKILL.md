@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-query-language-syntax
-description: MassQL is a domain-specific query language for flexible, vendor-agnostic pattern matching across mass spectrometry datasets. It enables researchers to express complex MS/MS filtering criteria (precursor m/z, product ions, retention time, polarity, ion mobility) as human-readable query strings that are parsed into executable filters and applied across millions of spectra.
+description: Use when working in the metabolomics domain with LC-MS or GC-MS techniques to apply complex MS/MS filtering criteria such as precursor m/z, product ions, retention time, polarity, and ion mobility across mass spectrometry datasets.
 when_to_use_negative:
 - Do not use MassQL if you lack a well-defined fragmentation signature or product ion target. MassQL excels at hypothesis-driven filtering, not unbiased feature discovery.
 - Do not use MassQL if your analysis requires leveraging consecutive MS spectra (e.g., isotope envelope fitting across multiple scans); the language has limited capability to process multi-scan chromatographic features.

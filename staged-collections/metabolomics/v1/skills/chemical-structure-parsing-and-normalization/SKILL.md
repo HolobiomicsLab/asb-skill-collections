@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-parsing-and-normalization
-description: Parse chemical structures from metadata (SMILES, InChI, compound names) and normalize them to canonical forms using RDKit and external chemical databases. This skill is essential for validating structure annotations in mass spectral libraries and detecting mismatches between chemical identifiers.
+description: Use when parsing chemical structures from metadata such as SMILES, InChI, and compound names in the domain of metabolomics using RDKit and external chemical databases to normalize them to canonical forms.
 when_to_use_negative:
 - Input spectra lack any chemical structure metadata (SMILES, InChI, or compound name) — parsing has no source material.
 - Mass spectra are experimental, unannotated data without assigned chemical identities — structure parsing requires annotation.

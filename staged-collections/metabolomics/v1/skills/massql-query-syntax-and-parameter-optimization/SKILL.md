@@ -1,6 +1,6 @@
 ---
 name: massql-query-syntax-and-parameter-optimization
-description: Design and refine MassQL query strings to match specific mass spectrometry patterns (isotope ratios, product ions, retention time windows) on a reference dataset before scaling to large repositories. This skill ensures queries capture target analytes while minimizing false positives through iterative parameter tuning.
+description: Use when working in the metabolomics domain with LC-MS and GC-MS techniques to design and refine MassQL query strings that match specific mass spectrometry patterns such as isotope ratios, product ions, and retention time windows.
 when_to_use_negative:
 - You do not have a reference dataset with known compounds to validate against; use domain knowledge or pilot data collection first.
 - The target analytes exhibit highly variable MS fragmentation or isotope patterns across instrument vendors or ionization sources; MassQL is designed to be vendor-agnostic but may require separate query refinement for each instrument class.

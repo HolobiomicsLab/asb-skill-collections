@@ -1,6 +1,6 @@
 ---
 name: adduct-ion-classification-accuracy-assessment
-description: Evaluate the correctness of adduct ion assignments derived from chemical structure (SMILES) by comparing repair outcomes against reference data, measuring both derivation failure rate and misassignment rate. This skill quantifies the reliability of automated adduct correction in mass spectral library cleaning pipelines.
+description: Use when evaluating the correctness of adduct ion assignments in metabolomics using LC-MS or GC-MS techniques by comparing repair outcomes against reference data to measure derivation failure rate and misassignment rate.
 when_to_use_negative:
 - Input spectra lack valid SMILES, InChI, or compound name annotations; the repair filter cannot derive an adduct without chemical structure.
 - Reference adduct assignments are themselves unreliable or missing; accuracy assessment requires ground-truth labels.

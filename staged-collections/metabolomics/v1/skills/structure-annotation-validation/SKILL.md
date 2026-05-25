@@ -1,6 +1,6 @@
 ---
 name: structure-annotation-validation
-description: Validate and repair structural annotations (SMILES, InChI, InChIKey) in mass spectral library entries by comparing derived and recorded chemical identifiers, checking adduct–precursor m/z consistency, and flagging or correcting mismatches. This skill ensures annotations are chemically plausible and internally consistent before downstream analysis.
+description: Use when validating and repairing structural annotations (SMILES, InChI, InChIKey) in metabolomics using LC-MS and GC-MS techniques by comparing derived and recorded chemical identifiers and checking adduct–precursor m/z consistency.
 when_to_use_negative:
 - Input library contains only unannotated spectra or lacks compound name, SMILES, InChI, or InChIKey fields; no structural annotation to validate.
 - Annotations have already undergone expert manual curation and are known to be correct; re-validation wastes computation and may introduce false positives.

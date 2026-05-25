@@ -1,6 +1,6 @@
 ---
 name: massql-query-formulation-for-mass-difference-screening
-description: Formulate and execute MassQL queries to systematically filter MS/MS spectra for specific neutral loss patterns (e.g., pentosylation or hexosylation) to annotate post-translationally modified metabolites in untargeted LC-MS/MS datasets. This skill enables rapid, high-throughput discovery of glycosylated or sugar-conjugated metabolites without manual spectral inspection.
+description: Use when formulating and executing MassQL queries to systematically filter MS/MS spectra for specific neutral loss patterns in the domain of metabolomics, applying this technique to annotate post-translationally modified metabolites in untargeted LC-MS/MS datasets.
 when_to_use_negative:
 - Input is tandem MS data with very low mass accuracy (>20 ppm instrument resolution) — neutral loss screening relies on precise mass matching and may suffer false positives or negatives.
 - Target modification has a neutral loss mass that overlaps with common fragments from unmodified background compounds — specificity will degrade and manual filtering will be required.

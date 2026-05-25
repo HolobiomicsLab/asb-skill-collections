@@ -1,6 +1,6 @@
 ---
 name: mass-spectrometry-data-preprocessing
-description: Converts raw LC–HRMS data to centroided mzML format and applies feature detection, alignment, and retention-time correction to generate a normalized feature table with m/z values, retention times, and per-sample intensities. This is the foundation for downstream metabolite discovery and annotation in high-throughput screening workflows.
+description: Use when processing metabolomics data with mass spectrometry techniques such as LC-MS and GC-MS to convert raw LC–HRMS data to centroided mzML format while applying feature detection, alignment, and retention-time correction for generating a normalized feature table.
 when_to_use_negative:
 - Input is already a feature table or normalized intensity matrix (skip directly to statistical filtering or annotation).
 - Raw data are already in mzML and do not require centroiding (use XCMS + CAMERA only, bypass ProteoWizard).

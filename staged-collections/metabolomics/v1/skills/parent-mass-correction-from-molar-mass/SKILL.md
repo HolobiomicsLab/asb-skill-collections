@@ -1,6 +1,6 @@
 ---
 name: parent-mass-correction-from-molar-mass
-description: This skill detects and corrects spectra where the parent mass field has been incorrectly populated with the molar mass instead of the monoisotopic mass—a common annotation error in mass spectral libraries. It uses chemical structure information (SMILES) to calculate the correct monoisotopic mass and repairs the metadata before downstream analysis.
+description: Use when working in the metabolomics domain with LC-MS or GC-MS techniques to correct spectra by replacing incorrect parent mass values populated with molar mass using chemical structure information (SMILES) to derive the correct monoisotopic mass.
 when_to_use_negative:
 - Input spectra already have verified monoisotopic masses or have been validated against reference standards—applying this filter again risks unnecessary modification.
 - No SMILES, InChI, or other chemical structure annotation is available; the filter requires structural data to calculate the correct monoisotopic mass.

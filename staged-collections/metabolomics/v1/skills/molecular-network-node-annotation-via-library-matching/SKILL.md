@@ -1,6 +1,6 @@
 ---
 name: molecular-network-node-annotation-via-library-matching
-description: Annotate spectral nodes in feature-based molecular networks by matching MS/MS fragmentation spectra against curated reference libraries (e.g., GNPS public library), enabling rapid structural identification of metabolites with high spectral coverage. This skill is essential when a molecular network contains hundreds of spectral nodes and manual curation is infeasible.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics requires annotating spectral nodes in feature-based molecular networks by matching MS/MS fragmentation spectra against curated reference libraries for structural identification of metabolites.
 when_to_use_negative:
 - Your metabolites are not well-represented in public reference libraries (e.g., novel synthetic compounds or rare plant species); use de novo structure elucidation or alternative annotation strategies instead.
 - Your MS/MS data were acquired on a non-standard instrument or under collision energies not represented in the reference library; spectral matching will fail due to fragmentation pattern mismatch.

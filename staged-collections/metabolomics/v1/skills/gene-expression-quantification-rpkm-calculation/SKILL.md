@@ -1,6 +1,6 @@
 ---
 name: gene-expression-quantification-rpkm-calculation
-description: Quantifies gene expression levels by normalizing RNA-seq read counts to RPKM (reads per kilobase per million mapped reads), accounting for library size and composition bias through TMM normalization. This skill bridges raw read-count matrices to interpretable expression fold-changes across experimental conditions.
+description: Use when quantifying gene expression levels in metabolomics using RNA-seq read counts normalized to RPKM (reads per kilobase per million mapped reads) while accounting for library size and composition bias through TMM normalization.
 when_to_use_negative:
 - Input count matrix is already log2-transformed or normalized to counts per million (CPM); re-normalizing will compound bias.
 - Only single replicate per condition; statistical power is lost and fold-change estimates become unreliable.

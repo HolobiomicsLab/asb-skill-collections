@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-derivation-from-compound-names
-description: Derives canonical SMILES, InChI, and InChIKey structures from compound names by querying PubChem, enabling structural validation and error detection in mass spectral library annotations. This skill is essential for identifying unannotated spectra and detecting structural mismatches between derived and existing annotations.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to derive canonical SMILES, InChI, and InChIKey structures from compound names by querying PubChem, facilitating structural validation and error detection in mass spectral library annotations.
 when_to_use_negative:
 - Input spectra lack compound names or have blank/invalid compound name fields; PubChem lookup will fail for unmapped names.
 - Spectra already have validated, manually curated SMILES and InChI annotations from primary literature or high-confidence reference standards; re-derivation from PubChem may overwrite accurate manual curation.

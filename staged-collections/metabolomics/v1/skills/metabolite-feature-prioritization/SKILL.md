@@ -1,6 +1,6 @@
 ---
 name: metabolite-feature-prioritization
-description: Prioritize pesticide metabolite features detected in LC–HRMS data by applying sequential statistical and chemical filters (abundance fold-change, mass defect, mass difference, blank subtraction) to eliminate artifacts and non-metabolic peaks, reducing feature complexity while retaining true Phase I transformation products.
+description: Use when prioritizing pesticide metabolite features detected in LC–HRMS data by applying sequential statistical and chemical filters such as abundance fold-change, mass defect, mass difference, and blank subtraction to eliminate artifacts and non-metabolic peaks.
 when_to_use_negative:
 - Input is already a confirmed molecular structure or validated spectral library; this skill operates on unidentified features requiring prioritization.
 - Studying conjugation metabolites or Phase II transformations where mass differences >+50 u are expected and legitimate (e.g., glucuronide, sulfate adducts).

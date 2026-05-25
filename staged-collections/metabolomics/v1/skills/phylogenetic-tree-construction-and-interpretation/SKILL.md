@@ -1,6 +1,6 @@
 ---
 name: phylogenetic-tree-construction-and-interpretation
-description: Construct maximum-likelihood phylogenetic trees from aligned protein sequences to resolve evolutionary relationships and identify functional divergence among homologous enzymes. This skill disambiguates the placement of newly characterized sequences within established protein families and informs functional predictions through phylogenetic clustering.
+description: Use when constructing maximum-likelihood phylogenetic trees in metabolomics using aligned protein sequences to resolve evolutionary relationships and identify functional divergence among homologous enzymes.
 when_to_use_negative:
 - Input sequences have not been filtered for spurious domains or low-complexity regions; alignment quality is not assured, risking misleading topology.
 - The set of reference sequences does not include experimentally characterized family members; phylogenetic position alone cannot then inform functional prediction.

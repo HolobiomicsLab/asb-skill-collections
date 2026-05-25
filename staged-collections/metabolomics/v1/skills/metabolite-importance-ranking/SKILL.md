@@ -1,6 +1,6 @@
 ---
 name: metabolite-importance-ranking
-description: Rank metabolite features by variable importance scores from a random-forest classifier trained on industrialization group membership, then apply a quantitative threshold to identify differential metabolites for downstream annotation. This skill distills high-dimensional untargeted metabolomic data into a curated set of features most predictive of the experimental condition.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to rank metabolite features by variable importance scores from a random-forest classifier trained on industrialization group membership and apply a quantitative threshold to identify differential metabolites for downstream annotation.
 when_to_use_negative:
 - Input is already a curated, annotated feature list (e.g., from targeted metabolomics or pre-filtered databases) — ranking is designed for discovery in untargeted, high-dimensional data.
 - Experimental variable is continuous (e.g., age, BMI) rather than categorical — random-forest variable importance is most interpretable for classification; regression importance may differ.

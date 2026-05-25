@@ -1,6 +1,6 @@
 ---
 name: multivariate-microbiome-analysis
-description: Multivariate analysis of microbiome and metabolomic data using ordination (PCoA), permutation testing (PERMANOVA), and machine learning to identify population-level differences in microbial and metabolite composition. This skill tests whether categorical factors (e.g., industrialization group, geographic origin) explain significant variance in community structure.
+description: Use when conducting multivariate analysis in metabolomics with techniques such as ordination (PCoA), permutation testing (PERMANOVA), and machine learning to assess population-level differences in microbial and metabolite composition based on categorical factors.
 when_to_use_negative:
 - Feature table is already filtered to a small set of pre-identified discriminant features; use univariate testing instead.
 - Samples lack clear categorical grouping metadata or the grouping variable has too few replicates per group (typically <3 samples per group will yield unreliable permutation tests).

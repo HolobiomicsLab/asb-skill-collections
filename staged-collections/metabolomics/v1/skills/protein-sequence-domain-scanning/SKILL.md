@@ -1,6 +1,6 @@
 ---
 name: protein-sequence-domain-scanning
-description: Systematic scanning of deduced protein sequences against curated domain databases (e.g., Pfam) to identify and quantify conserved functional domains across a species set, enabling candidate prioritization and phylogenetic placement. Essential for high-throughput annotation of enzyme families when experimental characterization is infeasible.
+description: Use when metabolomics involves systematic scanning of deduced protein sequences against curated domain databases using techniques like LC-MS and GC-MS to identify and quantify conserved functional domains across a species set.
 when_to_use_negative:
 - Input sequences are already functionally annotated or experimentally characterized; domain scanning is redundant.
 - Your target protein family has no curated domain signature in your chosen database; use sequence homology search instead.

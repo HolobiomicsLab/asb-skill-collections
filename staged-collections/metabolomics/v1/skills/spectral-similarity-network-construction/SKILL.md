@@ -1,6 +1,6 @@
 ---
 name: spectral-similarity-network-construction
-description: Construct feature-based molecular networks by computing cosine similarity scores between MS/MS fragmentation spectra and visualizing them as spectral similarity networks. This skill enables rapid, untargeted annotation of metabolite clusters and detection of related compounds in complex fungal biotransformation LC-MS/MS datasets.
+description: Use when metabolomics technique involves LC-MS or GC-MS to construct feature-based molecular networks by computing cosine similarity scores between MS/MS fragmentation spectra and visualizing them as spectral similarity networks.
 when_to_use_negative:
 - Input is already a pre-curated list of known metabolites with confirmed structures — direct targeted analysis is more efficient.
 - MS/MS spectra lack sufficient fragmentation (e.g., only precursor ion observed) — spectral similarity scoring requires informative product ion peaks.

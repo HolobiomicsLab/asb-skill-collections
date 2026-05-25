@@ -1,6 +1,6 @@
 ---
 name: replicate-detection-consistency-filtering
-description: Filter LC–HRMS metabolite features by requiring consistent detection across biological replicates (≥2 of 3) combined with fold-change thresholding (FC > 4) to remove noise and false positives introduced by blank subtraction and adduct/isotope removal steps. This skill reduces feature table size by ~60% while retaining biologically relevant metabolite signals.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics requires filtering of LC–HRMS metabolite features based on consistent detection across biological replicates (≥2 of 3) and fold-change thresholding (FC > 4) to minimize noise and false positives.
 when_to_use_negative:
 - Input already has <2 biological replicates per compound (replication filter has no effect and may remove valid features arbitrarily).
 - Feature table has not undergone blank subtraction and isotope/adduct removal; fold-change and replication thresholds are calibrated post-cleanup and may be miscalibrated on uncleaned data.

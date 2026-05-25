@@ -1,6 +1,6 @@
 ---
 name: ugt-sequence-curation-and-filtering
-description: Filter and curate UDP-glycosyltransferase (UGT) sequences identified via Pfam domain scanning to retain functionally relevant single-domain candidates for downstream phylogenetic analysis. This skill removes multi-domain sequences that may conflate evolutionary relationships or functional assignments.
+description: Use when curating and filtering UGT sequences in the metabolomics domain using Pfam domain scanning to retain functionally relevant single-domain candidates for downstream phylogenetic analysis.
 when_to_use_negative:
 - Input is already a curated multiple sequence alignment or a phylogenetic tree — filtering is only needed on raw Pfam scan outputs.
 - You intend to characterize multidomain enzymes or study domain-fusion evolution — filtering out PF03033-containing sequences would discard the biology you want to study.

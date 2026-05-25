@@ -1,6 +1,6 @@
 ---
 name: microbe-metabolite-conditional-probability-filtering
-description: Filter mmvec neural-network conditional probability outputs to retain only the highest-confidence microbe–metabolite co-occurrence predictions by subsetting to annotated metabolites and the most predictive microbial taxa. This reduces noise and identifies the strongest probable interactions for downstream interpretation.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to filter mmvec neural-network conditional probability outputs, retaining only the highest-confidence microbe–metabolite co-occurrence predictions by subsetting to annotated metabolites and the most predictive microbial taxa.
 when_to_use_negative:
 - Input mmvec output has not been generated or is missing; run mmvec first on your 16S ASVs and metabolite features.
 - Metabolites are not yet annotated at compound level; filtering by annotation requires prior MS/MS spectral matching and chemical database searches (e.g., MASST, GNPS, HFMDB).

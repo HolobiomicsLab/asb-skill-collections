@@ -1,6 +1,6 @@
 ---
 name: retention-time-correction
-description: Align and correct retention times across LC–HRMS runs using XCMS's orbiwarp algorithm with IPO-optimized parameters to ensure consistent feature matching and metabolite identification across multiple samples and replicates.
+description: Use when metabolomics retention time correction is needed across LC–HRMS runs using XCMS's orbiwarp algorithm with IPO-optimized parameters to ensure consistent feature matching and metabolite identification across multiple samples and replicates.
 when_to_use_negative:
 - Input xcmsSet already contains grouped features; retention time correction must occur before grouping, not after.
 - Single run or single-replicate analysis where no cross-run drift exists; correction is redundant and may introduce noise.

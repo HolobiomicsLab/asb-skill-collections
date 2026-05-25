@@ -1,6 +1,6 @@
 ---
 name: product-ion-fragment-filtering
-description: Filter MS/MS spectra by the presence and intensity of specific product ions (fragment m/z values) to identify compounds with characteristic fragmentation patterns. This skill uses MassQL queries to retrieve all MS/MS scans containing a target product ion within a specified m/z tolerance and minimum relative intensity threshold.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to filter MS/MS spectra by the presence and intensity of specific product ions using MassQL queries to identify compounds with characteristic fragmentation patterns.
 when_to_use_negative:
 - Input dataset contains only MS1 (full-scan) data without MS/MS fragmentation spectra—product-ion filtering requires tandem MS data.
 - Target product ion is highly abundant across unrelated compound classes (high false-positive rate due to in-source fragmentation or common neutral losses); use orthogonal filtering (e.g., precursor m/z, retention time, or ion mobility) to reduce noise.

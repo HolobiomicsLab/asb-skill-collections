@@ -1,6 +1,6 @@
 ---
 name: metabolite-feature-filtering-by-peak-count
-description: Apply a minimum-peaks-in-a-row threshold in MZmine to remove low-frequency metabolite features from untargeted LC-MS/MS data, reducing noise and retaining only features with contiguous peak detection across multiple samples. This filtering is typically applied to non-gap-filled data before population-level presence filtering to identify a robust shared metabolome.
+description: Use when metabolomics applies a minimum-peaks-in-a-row threshold in MZmine to filter low-frequency metabolite features from untargeted LC-MS/MS data based on contiguous peak detection across multiple samples.
 when_to_use_negative:
 - Input data is already gap-filled—apply filtering before gap-filling, not after, to avoid artificially inflating peak counts.
 - Study has only one or two samples per group—minimum-peaks-in-a-row filtering will be too stringent and may remove valid but rare metabolites.

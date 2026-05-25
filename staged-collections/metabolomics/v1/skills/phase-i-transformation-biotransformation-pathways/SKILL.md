@@ -1,6 +1,6 @@
 ---
 name: phase-i-transformation-biotransformation-pathways
-description: Predict and validate phase I metabolite structures and molecular formulas for xenobiotic compounds (pesticides) using rule-based and machine-learning biotransformation prediction, then compare predictions against experimentally detected metabolites from LC–HRMS analysis of in vitro S9 liver microsome incubations. This skill bridges computational metabolite prediction with high-throughput experimental screening to identify which phase I transformations are physiologically relevant.
+description: Use when predicting and validating phase-I metabolite structures and molecular formulas for xenobiotic compounds (pesticides) using rule-based or ML biotransformation prediction, then comparing predictions against LC-HRMS-detected metabolites from S9 liver-microsome incubations.
 when_to_use_negative:
 - Input features already labeled with phase II or conjugation modifications (e.g., glucuronides, sulfates); phase I prediction is orthogonal to these.
 - Parent compounds are already Phase I metabolites (secondary substrates); prediction is most reliable for intact parent structures.

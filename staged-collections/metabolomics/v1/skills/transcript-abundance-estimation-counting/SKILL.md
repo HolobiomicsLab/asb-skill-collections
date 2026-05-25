@@ -1,6 +1,6 @@
 ---
 name: transcript-abundance-estimation-counting
-description: Quantify mRNA abundance from RNA-seq read alignments by counting reads per annotated gene and normalizing for library composition bias. This skill bridges alignment and differential expression analysis, producing normalized expression matrices suitable for statistical testing.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to quantify mRNA abundance from RNA-seq read alignments by counting reads per annotated gene and normalizing for library composition bias.
 when_to_use_negative:
 - Input reads are unaligned or from unstranded libraries where strand information is unavailable — HTSeq mode=union with stranded=reverse will produce biased counts
 - Gene annotations are incomplete or highly fragmented — HTSeq union mode will misassign reads to wrong features, inflating noise

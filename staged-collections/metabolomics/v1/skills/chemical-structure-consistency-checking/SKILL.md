@@ -1,6 +1,6 @@
 ---
 name: chemical-structure-consistency-checking
-description: Validate the internal consistency of chemical structure annotations (SMILES, InChI, InChIKey) in mass spectral library entries using RDKit to detect and report mismatches. This skill is essential for identifying annotated spectra with conflicting or corrupted structure metadata that would otherwise propagate errors through downstream analysis.
+description: Use when metabolomics LC-MS GC-MS untargeted lipidomics to validate the internal consistency of chemical structure annotations (SMILES, InChI, InChIKey) in mass spectral library entries using RDKit to detect and report mismatches.
 when_to_use_negative:
 - Input spectra lack any chemical structure annotation fields (SMILES, InChI, InChIKey); the skill cannot validate what is not present.
 - Your goal is to filter on mass accuracy or spectral similarity alone; structure consistency is orthogonal to these signals.

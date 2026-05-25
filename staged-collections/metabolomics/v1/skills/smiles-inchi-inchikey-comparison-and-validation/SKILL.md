@@ -1,6 +1,6 @@
 ---
 name: smiles-inchi-inchikey-comparison-and-validation
-description: Derives canonical SMILES, InChI, and InChIKey from compound names via PubChem lookup, then compares these chemical structure representations against existing annotations to detect unannotated spectra and structural mismatches. This skill validates chemical structure metadata consistency and identifies annotation errors in mass spectral libraries.
+description: Use when working in the metabolomics domain to derive canonical SMILES, InChI, and InChIKey from compound names via PubChem lookup, then compare these chemical structure representations against existing annotations to detect unannotated spectra and structural mismatches.
 when_to_use_negative:
 - Input spectra lack valid compound name metadata; PubChem lookup requires unambiguous chemical names.
 - Chemical structure metadata is already complete, validated, and trusted; this skill is redundant for pre-curated libraries.

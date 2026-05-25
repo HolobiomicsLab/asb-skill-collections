@@ -1,6 +1,6 @@
 ---
 name: differential-feature-identification
-description: Identify metabolite features most strongly associated with a categorical experimental variable (e.g., industrialization group) by training a random-forest classifier on high-abundance features and filtering results by variable-importance score. This skill ranks features by their predictive power and retains only those exceeding a statistical threshold, yielding a curated set of candidate differential features for downstream annotation and validation.
+description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to identify metabolite features associated with a categorical experimental variable by training a random-forest classifier on high-abundance features and filtering by variable-importance score.
 when_to_use_negative:
 - Input feature table is already heavily pre-filtered to a small set (e.g., <100 features); random-forest variable importance may be unstable or overfitting due to small feature count relative to sample count.
 - Categorical grouping variable has very imbalanced class sizes (e.g., 95% samples in one group, 5% in another); random-forest importance can be biased toward the majority class, and the selected features may not generalize to minority populations.

@@ -1,6 +1,6 @@
 ---
 name: spectral-count-quality-assessment
-description: Quantitatively assess the quality and completeness of a mass spectral library by executing a reproducible cleaning pipeline that tracks spectrum counts through retention, removal, and repair stages. This skill measures data curation effectiveness by comparing input vs. retained vs. removed vs. repaired spectrum counts and reporting metadata repair success rates for each filter applied.
+description: Use when assessing the quality and completeness of a mass spectral library in metabolomics by applying a reproducible cleaning pipeline that tracks spectrum counts through retention, removal, and repair stages.
 when_to_use_negative:
 - Input library is already curated by hand or has been previously cleaned by this same pipeline with identical settings and snapshot date (rerunning adds no new signal).
 - Spectra are from proprietary or small in-house datasets (<1000 spectra) where library-wide statistics are not meaningful.

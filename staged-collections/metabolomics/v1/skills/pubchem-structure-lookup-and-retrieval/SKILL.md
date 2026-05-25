@@ -1,6 +1,6 @@
 ---
 name: pubchem-structure-lookup-and-retrieval
-description: Query PubChem to derive canonical SMILES, InChI, and InChIKey from compound names for mass spectra annotations. This skill validates and standardizes chemical structure representations in spectral metadata, enabling detection of structural mismatches and unannotated spectra.
+description: Use when metabolomics involves LC-MS or GC-MS untargeted lipidomics to query PubChem for canonical SMILES, InChI, and InChIKey from compound names for mass spectra annotations.
 when_to_use_negative:
 - Spectra lack compound names or have ambiguous/multi-part compound identifiers that PubChem cannot resolve uniquely.
 - The analysis goal does not require standardized or canonical structure representations (e.g., only peak-level filtering or intensity normalization is needed).
