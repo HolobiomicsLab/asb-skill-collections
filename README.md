@@ -56,3 +56,61 @@ minted on first release tag.
 
 Apache-2.0 for synthesis layer; fair-use for verbatim paper quotes.
 See [LICENSE.md](LICENSE.md) for details.
+
+---
+
+## Distribution
+
+### Badges
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PLACEHOLDER.svg)](https://doi.org/10.5281/zenodo.PLACEHOLDER)
+[![HuggingFace Datasets](https://img.shields.io/badge/HuggingFace-Datasets-yellow?logo=huggingface)](https://huggingface.co/HolobiomicsLab)
+[![HuggingFace Spaces](https://img.shields.io/badge/HuggingFace-Spaces-orange?logo=huggingface)](https://huggingface.co/spaces/HolobiomicsLab)
+[![w3id IRI](https://img.shields.io/badge/IRI-w3id.org%2Fholobiomicslab-blue)](https://w3id.org/holobiomicslab)
+
+### How to install a collection (Claude Code)
+
+```bash
+# Install latest metabolomics collection
+/plugin install metabolomics-v1@HolobiomicsLab/asb-skill-collections
+
+# Or point directly to the marketplace.json
+/plugin install https://raw.githubusercontent.com/HolobiomicsLab/asb-skill-collections/main/.claude-plugin/marketplace.json
+```
+
+Collections are listed in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json).
+
+### HuggingFace mirror
+
+Each tagged release (`<slug>-v<N>`) is automatically mirrored to a HuggingFace Dataset repo:
+
+```
+HolobiomicsLab/asb-<slug>-v<N>
+```
+
+Programmatic access:
+
+```python
+from datasets import load_dataset
+ds = load_dataset("HolobiomicsLab/asb-metabolomics-v1", "benchmark")
+```
+
+A live leaderboard HF Space is created at:
+
+```
+https://huggingface.co/spaces/HolobiomicsLab/asb-<slug>-v<N>-leaderboard
+```
+
+### Zenodo
+
+Each collection release mints a Zenodo DOI. See `CITATION.cff` at the collection root for the full citation. The Zenodo badge above links to the latest parent record.
+
+### w3id.org IRIs
+
+Skills and tools are addressable via stable IRIs under `w3id.org/holobiomicslab/`:
+
+```
+https://w3id.org/holobiomicslab/asb-skill/<slug>
+https://w3id.org/holobiomicslab/asb-tool/<slug>
+https://w3id.org/holobiomicslab/asb-benchmark/<slug>/v<N>
+```
