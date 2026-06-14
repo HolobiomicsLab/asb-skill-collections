@@ -1,14 +1,27 @@
-# mirror-to-hf.yml — Push a release tag to HuggingFace Datasets
-# Triggered on tags matching <slug>-v<N> (e.g. metabolomics-v1).
+# mirror-to-hf.yml — Push a released collection to HuggingFace Datasets.
+#
+# DISPATCH-ONLY: this workflow is driven exclusively by release.yml via
+# workflow_dispatch (inputs: collection_slug, collection_version). It has NO
+# push:tags trigger — that previously caused a tag double-fire with release.yml
+# (and release.yml's dispatch no-opped because this workflow had no
+# workflow_dispatch trigger). See docs/RELEASE_TRAIN_v0.md.
+#
 # Requires HF_TOKEN secret in repo settings.
 # Fail-soft: missing HF_TOKEN logs a warning but does not block the release.
 
 name: Mirror to HuggingFace
 
 on:
-  push:
-    tags:
-      - "*-v[0-9]*"
+  workflow_dispatch:
+    inputs:
+      collection_slug:
+        description: "Collection slug (e.g. metabolomics)"
+        required: true
+        type: string
+      collection_version:
+        description: "Collection version number (e.g. 1)"
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -32,26 +45,34 @@ jobs:
       - name: Install dependencies
         run: pip install "huggingface_hub>=0.23" pyyaml
 
-      - name: Parse tag to slug and version
+      - name: Resolve slug and version from dispatch inputs
         id: tag_parse
         shell: bash
+        env:
+          INPUT_SLUG: ${{ inputs.collection_slug }}
+          INPUT_VERSION: ${{ inputs.collection_version }}
         run: |
-          TAG="${GITHUB_REF_NAME}"
-          if [[ ! "$TAG" =~ ^([a-z][a-z0-9_-]+)-v([0-9]+)$ ]]; then
-            echo "ERROR: Tag '$TAG' does not match pattern <slug>-v<N>" >&2
+          SLUG="${INPUT_SLUG}"
+          VERSION="${INPUT_VERSION}"
+          if [[ ! "$SLUG" =~ ^[a-z][a-z0-9_-]+$ ]]; then
+            echo "ERROR: collection_slug '$SLUG' does not match pattern <slug>" >&2
             exit 1
           fi
-          SLUG="${BASH_REMATCH[1]}"
-          VERSION="${BASH_REMATCH[2]}"
+          if [[ ! "$VERSION" =~ ^[0-9]+$ ]]; then
+            echo "ERROR: collection_version '$VERSION' is not an integer" >&2
+            exit 1
+          fi
           COLLECTION_PATH="collections/${SLUG}/v${VERSION}"
           HF_REPO="HolobiomicsLab/asb-${SLUG}-v${VERSION}"
           SPACE_REPO="HolobiomicsLab/asb-${SLUG}-v${VERSION}-leaderboard"
+          RELEASE_TAG="${SLUG}-v${VERSION}"
           echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
           echo "collection_path=${COLLECTION_PATH}" >> "$GITHUB_OUTPUT"
           echo "hf_repo=${HF_REPO}" >> "$GITHUB_OUTPUT"
           echo "space_repo=${SPACE_REPO}" >> "$GITHUB_OUTPUT"
-          echo "Parsed: slug=${SLUG}, version=${VERSION}, path=${COLLECTION_PATH}"
+          echo "release_tag=${RELEASE_TAG}" >> "$GITHUB_OUTPUT"
+          echo "Resolved: slug=${SLUG}, version=${VERSION}, path=${COLLECTION_PATH}"
 
       - name: Check collection path exists
         run: |
@@ -97,7 +118,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_REPO: ${{ steps.tag_parse.outputs.hf_repo }}
           CPATH: ${{ steps.tag_parse.outputs.collection_path }}
-          TAG: ${{ github.ref_name }}
+          TAG: ${{ steps.tag_parse.outputs.release_tag }}
           HF_STEP: upload_dataset
         run: python scripts/mirror_to_hf.py
 
@@ -106,6 +127,6 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           SPACE_REPO: ${{ steps.tag_parse.outputs.space_repo }}
           CPATH: ${{ steps.tag_parse.outputs.collection_path }}
-          TAG: ${{ github.ref_name }}
+          TAG: ${{ steps.tag_parse.outputs.release_tag }}
           HF_STEP: upload_space
         run: python scripts/mirror_to_hf.py

@@ -59,8 +59,8 @@ jobs:
           while IFS= read -r review_file; do
             [ -z "$review_file" ] && continue
             orcid=$(python -c "import yaml,sys; d=yaml.safe_load(open('$review_file')); print(d['reviewer']['orcid'])")
-            doi=$(python -c "import yaml,sys; d=yaml.safe_load(open('$review_file')); print(d['paper_doi'])")
-            declared=$(python -c "import yaml,sys; d=yaml.safe_load(open('$review_file')); print(str(d['reviewer'].get('is_coauthor', False)).lower())")
+            doi=$(python -c "import yaml,sys; d=yaml.safe_load(open('$review_file')); print(d['paper']['doi'])")
+            declared=$(python -c "import yaml,sys; d=yaml.safe_load(open('$review_file')); print(str(d.get('is_coauthor', False)).lower())")
             co_reviewer=$(python -c "import yaml,sys; d=yaml.safe_load(open('$review_file')); cr=d.get('co_reviewer'); print('present' if cr else 'absent')")
 
             out="/tmp/coi-reports/$(basename "$review_file" .yaml).json"

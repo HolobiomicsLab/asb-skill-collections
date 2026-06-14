@@ -67,7 +67,7 @@ jobs:
             [ -f "$criteria_file" ] || criteria_file="templates/curator-criteria.yaml.template"
 
             orcid=$(python -c "import yaml; d=yaml.safe_load(open('$review_file')); print(d['reviewer']['orcid'])")
-            is_self=$(python -c "import yaml; d=yaml.safe_load(open('$review_file')); print('--is-self-authored' if d['reviewer'].get('is_coauthor') else '')")
+            is_self=$(python -c "import yaml; d=yaml.safe_load(open('$review_file')); print('--is-self-authored' if d.get('is_coauthor') else '')")
 
             python scripts/tier_update.py \
               --orcid "$orcid" \
