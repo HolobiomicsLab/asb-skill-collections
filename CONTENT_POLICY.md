@@ -1,6 +1,6 @@
 # Content Provenance & Transformation Policy
 
-**Status:** v0 Final · **Date:** 2026-06-14 · **Authority:** Lead Maintainer (Louis-Félix Nothias, ORCID: TODO-REAL-ORCID)
+**Status:** v0 Final · **Date:** 2026-06-14 · **Authority:** Lead Maintainer (Louis-Félix Nothias, ORCID: 0000-0001-6711-6719)
 
 **Sign-off:** This policy authorizes the v0 release and gates all content publication. Override authority and hard-gate enforcement rules are legally binding.
 
@@ -536,7 +536,7 @@ If an error is discovered in a published artifact (Zenodo, HF, GitHub):
 
 These items are required for v0 release:
 
-- [ ] TODO: Confirm real ORCID for lead maintainer (replace `TODO-REAL-ORCID` above in header)
+- [ ] TODO: Confirm real ORCID for lead maintainer (replace `0000-0001-6711-6719` above in header)
 - [ ] TODO: Corpus paper lists locked (metabolomics, epigenomics, transcriptomics) with spot-check OA verification ≥10% per domain
 - [ ] TODO: PII red-team fixture (`tests/fixtures/pii_dual_use_red_team.jsonl`) committed; gate test ≥95% recall passing
 - [ ] TODO: `release_gate.py` wired with gates 1,2,5,6,8,10,12,15 hard-blocking (gate test coverage + PR comments)
