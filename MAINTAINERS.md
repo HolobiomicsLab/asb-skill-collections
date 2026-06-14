@@ -4,7 +4,7 @@
 
 **Louis-Felix Nothias**
 - GitHub: [@lfnothias](https://github.com/lfnothias)
-- ORCID: [0000-0002-XXXX-XXXX](https://orcid.org/0000-0002-XXXX-XXXX)  — update before Wave 4
+- ORCID: [0000-0001-6711-6719](https://orcid.org/0000-0001-6711-6719)  — update before Wave 4
 - Affiliation: Holobiomics Lab, Institut de Chimie de Nice (ICN), CNRS UMR 7272 / Universite Cote d'Azur
 - Email: louisfelix.nothias@gmail.com
 

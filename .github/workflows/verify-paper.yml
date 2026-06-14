@@ -1,0 +1,187 @@
+# verify-paper.yml — Gate 15: access-tier enforcement on pull_request
+#
+# Fails a PR when:
+#   1. A paper has status=included but access.type is empty or 'unknown'
+#   2. For v0, a paper has non-open-access tier (require_open_access=true)
+#
+# This gate enforces the open-access-first posture documented in
+# OPEN_ACCESS_POLICY.md (referenced in SPEC.md / IMPLEMENTATION-PLAN.md task F0-2).
+#
+# Spec ref: SPEC.md § Open-access-first; IMPLEMENTATION-PLAN.md § F0-2
+
+name: Verify Paper Access Tiers
+
+on:
+  pull_request:
+    paths:
+      - 'collections/**/corpus.yaml'
+      - 'collections/**/v*/collection.yaml'
+      - 'staged-collections/**/corpus.yaml'
+      - 'staged-collections/**/v*/collection.yaml'
+  push:
+    branches: [main]
+    paths:
+      - 'collections/**/corpus.yaml'
+      - 'collections/**/v*/collection.yaml'
+      - 'staged-collections/**/corpus.yaml'
+      - 'staged-collections/**/v*/collection.yaml'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  verify-paper-access:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pyyaml
+
+      # -- Gate 15: Paper access-tier validation --------------------------------
+      - name: Validate paper access tiers
+        run: |
+          python - <<'PYEOF'
+          import sys
+          import pathlib
+          import yaml
+
+          # v0 open-access-first enforcement (require_open_access=true is LOCKED).
+          # Gate 15 asserts ONLY the paper-access (open-access) axis. It does NOT
+          # assert workflow openness (benchmark_tier.openness) — that is a separate
+          # axis checked by the contamination gate, not here.
+          require_open_access = True  # Locked decision per IMPLEMENTATION-PLAN.md
+
+          # Single source of truth for the allowed OA set, aligned to
+          # src/agentic_science_builder/release/promote.py (AgenticScienceBuilder repo)
+          # and CONTENT_POLICY.md §3. NOTE: "preprint" is NOT here — it is a
+          # provenance value, not an OA tier.
+          OPEN_ACCESS_TYPES = {
+              "open-access",
+              "open_access",
+              "oa",
+              "gold-oa",
+              "gold_oa",
+              "green-oa",
+              "green",
+              "diamond",
+          }
+
+          def normalize_access_type(raw: str) -> str:
+              """Normalize an access.type token to a canonical OA tier.
+
+              - lowercase + strip
+              - unify hyphen/underscore separators (underscore -> hyphen)
+              - map the bare "green" -> "green-oa"
+              """
+              t = (raw or "").strip().lower()
+              if not t:
+                  return t
+              t = t.replace("_", "-")
+              if t == "green":
+                  t = "green-oa"
+              return t
+
+          # Canonical (post-normalization) view of the allowed set, so membership
+          # checks are spelling-insensitive.
+          NORMALIZED_OPEN_ACCESS_TYPES = {normalize_access_type(t) for t in OPEN_ACCESS_TYPES}
+
+          failures = []
+          checked = 0
+
+          # Find all corpus.yaml and collection.yaml files
+          corpus_files = list(pathlib.Path("collections").rglob("corpus.yaml"))
+          corpus_files += list(pathlib.Path("staged-collections").rglob("corpus.yaml"))
+          collection_files = list(pathlib.Path("collections").rglob("collection.yaml"))
+          collection_files += list(pathlib.Path("staged-collections").rglob("collection.yaml"))
+
+          # Validate corpus.yaml files (source of truth for paper access tiers)
+          for corpus_file in corpus_files:
+              try:
+                  data = yaml.safe_load(corpus_file.read_text())
+              except Exception as e:
+                  failures.append(f"{corpus_file}: YAML parse error: {e}")
+                  continue
+
+              papers = data.get("papers", [])
+              if not papers:
+                  continue
+
+              for i, paper in enumerate(papers):
+                  doi = paper.get("doi", f"[paper {i}]")
+                  status = paper.get("status", "")
+
+                  # Only check papers marked as included
+                  if status != "included":
+                      continue
+
+                  checked += 1
+                  access = paper.get("access") or {}
+                  raw_access_type = (access.get("type") or "").strip().lower()
+                  # Normalization: hyphen/underscore unification + green -> green-oa
+                  access_type = normalize_access_type(raw_access_type)
+
+                  # Gate 15a: access.type must be known (not empty or unknown)
+                  if not access_type or access_type == "unknown":
+                      failures.append(
+                          f"{corpus_file}: paper {doi} has status=included but "
+                          f"access.type is empty or 'unknown'. "
+                          f"Please verify access tier and update access.type."
+                      )
+
+                  # Gate 15a': "preprint" is a provenance value, not an OA tier.
+                  elif access_type == "preprint":
+                      failures.append(
+                          f"{corpus_file}: paper {doi} uses access.type='preprint', "
+                          f"but 'preprint' is a PROVENANCE value, not an OA tier. "
+                          f"Set access.type to a real OA tier "
+                          f"(e.g. open-access / gold-oa / green-oa / diamond) and record "
+                          f"'preprint' on the separate provenance axis. See CONTENT_POLICY.md §3."
+                      )
+
+                  # Gate 15b: v0 requires open access (require_open_access=true).
+                  # Enforces ONLY the paper-access axis (NOT benchmark_tier.openness).
+                  elif require_open_access and access_type and access_type != "unknown":
+                      if access_type not in NORMALIZED_OPEN_ACCESS_TYPES:
+                          failures.append(
+                              f"{corpus_file}: paper {doi} has status=included "
+                              f"but access.type='{raw_access_type}' (normalized: '{access_type}') "
+                              f"is not open-access. v0 policy (require_open_access=true) permits only "
+                              f"{sorted(OPEN_ACCESS_TYPES)} (hyphen/underscore variants accepted; "
+                              f"'green' normalizes to 'green-oa'). See CONTENT_POLICY.md §3 / OPEN_ACCESS_POLICY.md."
+                          )
+
+          if failures:
+              print("FAIL: Paper access-tier validation failures:")
+              for f in failures:
+                  print(f"  - {f}")
+              sys.exit(1)
+          
+          if checked == 0:
+              print("SKIP: No papers with status=included found to validate")
+              sys.exit(0)
+
+          print(f"PASS: Paper access-tier validation OK ({checked} included papers checked)")
+          PYEOF
+
+      - name: Comment on PR with results (if PR)
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## Gate 15: Paper Access Tier Validation FAILED\n\nOne or more papers in this PR have missing or non-open-access tiers. Please:\n\n1. Verify the access tier for each flagged paper (check publisher, DOI resolver, or institutional access)\n2. Update the \`access.type\` field in the relevant \`corpus.yaml\` file\n3. For v0 (require_open_access=true), only open-access papers are permitted\n\nSee **OPEN_ACCESS_POLICY.md** for the full policy and allowed access tiers.`
+            })

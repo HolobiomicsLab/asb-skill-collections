@@ -14,6 +14,11 @@ dependencies = [
     "requests>=2.31",
 ]
 
+[project.scripts]
+# Registry utility CLI (Phase 1.7): registry/verify/doctor only.
+# NOT the install surface — collections install via /plugin install.
+asbb = "scripts.asbb_cli:main"
+
 [project.optional-dependencies]
 hf = [
     "huggingface_hub>=0.23",
