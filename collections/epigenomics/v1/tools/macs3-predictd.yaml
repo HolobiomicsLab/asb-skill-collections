@@ -1,0 +1,10 @@
+name: macs3 predictd
+slug: macs3-predictd
+evidence_spans:
+- This can also be accomplished using the `predictd` subcommand, which we need to apply only to ChIP data
+derived_from:
+- doi: 10.1186/gb-2008-9-9-r137
+  title: macs
+source_repos:
+- macs3-project/MACS
+schema_version: 0.2.0

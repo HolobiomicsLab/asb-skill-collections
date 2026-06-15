@@ -1,0 +1,11 @@
+name: Monte-Carlo Dropout
+slug: monte-carlo-dropout
+evidence_spans:
+- different model varieties through Monte-Carlo Dropout is u
+- To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles [17]. At inference time, dropout was applied to all but the first layer of the base network. N = 10 embeddings were
+derived_from:
+- doi: 10.1186/s13321-021-00558-4
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+source_repos:
+- https://github.com/matchms/ms2deepscore
+schema_version: 0.2.0

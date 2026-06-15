@@ -1,0 +1,10 @@
+name: Hatch
+slug: hatch
+evidence_spans:
+- Using one of the predefined environments in hatch.toml is as simple as running `hatch test`
+derived_from:
+- doi: 10.1186/s13059-017-1382-0
+  title: 'SCANPY: large-scale single-cell gene expression data analysis'
+source_repos:
+- scverse/scanpy
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: pheatmap
+slug: pheatmap
+evidence_spans:
+- library(pheatmap)
+derived_from:
+- doi: 10.1021/acs.analchem.5c04338
+  title: xcms
+source_repos:
+- sneumann/xcms
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: tensorflow serving
+slug: tensorflow-serving
+evidence_spans:
+- We pass through tensorflow serving at this url
+derived_from:
+- doi: 10.1186/s13321-023-00738-4
+  title: DeepSAT
+source_repos:
+- https://github.com/mwang87/DeepSAT
+schema_version: 0.2.0

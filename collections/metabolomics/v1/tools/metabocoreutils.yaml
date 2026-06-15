@@ -1,0 +1,10 @@
+name: MetaboCoreUtils
+slug: metabocoreutils
+evidence_spans:
+- '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'
+derived_from:
+- doi: 10.1021/acs.analchem.5c04338
+  title: xcms
+source_repos:
+- sneumann/xcms
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: pytest-flake8
+slug: pytest-flake8
+evidence_spans:
+- pytest-cov` extension to check code coverage and `pytest-flake8` to check code style
+derived_from:
+- doi: 10.1101/2022.10.31.514564
+  title: 'Cooltools: enabling high-resolution Hi-C analysis in Python'
+source_repos:
+- open2c/cooltools
+schema_version: 0.2.0

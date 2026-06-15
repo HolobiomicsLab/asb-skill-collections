@@ -1,0 +1,10 @@
+name: git
+slug: git
+evidence_spans:
+- This section of the docs covers our practices for working with git on our codebase
+derived_from:
+- doi: 10.1186/s13059-017-1382-0
+  title: 'SCANPY: large-scale single-cell gene expression data analysis'
+source_repos:
+- scverse/scanpy
+schema_version: 0.2.0

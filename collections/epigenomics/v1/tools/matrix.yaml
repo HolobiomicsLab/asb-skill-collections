@@ -1,0 +1,10 @@
+name: Matrix
+slug: matrix
+evidence_spans:
+- library(Matrix)
+derived_from:
+- doi: 10.1038/nmeth.4401
+  title: chromvar
+source_repos:
+- GreenleafLab/chromVAR
+schema_version: 0.2.0

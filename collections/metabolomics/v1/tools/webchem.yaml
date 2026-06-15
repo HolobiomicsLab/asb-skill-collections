@@ -1,0 +1,10 @@
+name: webchem
+slug: webchem
+evidence_spans:
+- uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
+derived_from:
+- doi: 10.1371/journal.pone.0306202
+  title: uafr
+source_repos:
+- castratton/uafR
+schema_version: 0.2.0

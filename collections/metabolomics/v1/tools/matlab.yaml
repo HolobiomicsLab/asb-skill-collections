@@ -1,0 +1,10 @@
+name: Matlab
+slug: matlab
+evidence_spans:
+- Matlab package to match untargeted metabolomic features
+derived_from:
+- doi: 10.1021/acs.analchem.1c03592
+  title: m2s
+source_repos:
+- rjdossan/M2S
+schema_version: 0.2.0

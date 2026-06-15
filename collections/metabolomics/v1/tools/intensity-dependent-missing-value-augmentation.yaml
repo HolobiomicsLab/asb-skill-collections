@@ -1,0 +1,10 @@
+name: Intensity-dependent missing value augmentation
+slug: intensity-dependent-missing-value-augmentation
+evidence_spans:
+- T_ISO introduces an additional process of intensity-dependent missing value in ISO mode
+derived_from:
+- doi: 10.1021/acs.analchem.3c05002
+  title: deepion
+source_repos:
+- BioNet-XMU/DeepION
+schema_version: 0.2.0

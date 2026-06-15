@@ -1,0 +1,48 @@
+name: Python
+slug: python
+evidence_spans:
+- Python versions badge
+- MAMSI is a Python framework
+- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
+- MOCCal, or Multi-Omic CCS Calibrator, is a Python application
+- Our MS2DeepScore Python library offers two types of data generators
+- Our MS2DeepScore Python library
+derived_from:
+- doi: 10.1186/s13321-024-00804-5
+  title: idslmint
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.3390/metabo11030163
+  title: The mwtab Python Library for RESTful Access and Enhanced Quality Control, Deposition, and Curation of the Metabolomics Workbench Data Repository
+- doi: 10.1021/acs.analchem.3c04290
+  title: moccal
+- doi: 10.1186/s13321-021-00558-4
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+- doi: 10.1021/acs.jproteome.5c00435
+  title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
+- doi: 10.1371/journal.pcbi.1009105
+  title: ORA
+- doi: 10.1371/journal.pcbi.1011912
+  title: Common data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline
+- doi: 10.1007/s00216-023-05070-2
+  title: PFΔScreen — an open-source tool for automated PFAS feature prioritization in non-target HRMS data
+- doi: 10.21105/joss.08070
+  title: spectripy
+- doi: 10.1021/acs.analchem.3c04444
+  title: specxplore
+- doi: 10.1021/acs.analchem.0c03895
+  title: Rapid Development of Improved Data-Dependent Acquisition Strategies
+source_repos:
+- HinesLab/MOCCal
+- JonZwe/PFAScreen
+- MoseleyBioinformaticsLab/MESSES
+- glasgowcompbio/vimms
+- https://github.com/cwieder/metabolomics-ORA
+- https://github.com/matchms/ms2deepscore
+- idslme/IDSL_MINT
+- kevinmildau/specXplore
+- kopeckylukas/py-mamsi
+- mobiusklein/mzpeak_prototyping
+- rformassspectrometry/SpectriPy
+- shuzhao-li-lab/PythonCentricPipelineForMetabolomics
+schema_version: 0.2.0

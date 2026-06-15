@@ -1,0 +1,11 @@
+name: networkx
+slug: networkx
+evidence_spans:
+- networkx
+- import ... networkx
+derived_from:
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+source_repos:
+- kopeckylukas/py-mamsi
+schema_version: 0.2.0

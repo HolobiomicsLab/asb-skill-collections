@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: If you use this collection, please cite it as below.
+title: ASB Epigenomics Skill Collection v1
+abstract: Curated, evidence-grounded skills and software-tool records for computational epigenomics, assembled by the AgenticScienceBuilder pipeline from open-access method papers. Each skill is deduplicated across papers, anchored to verbatim evidence spans, and annotated with EDAM IRIs.
+version: '1'
+date-released: '2026-06-15'
+license: CC-BY-4.0
+url: https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1
+doi: TODO-zenodo
+type: dataset
+authors:
+- family-names: Nothias
+  given-names: Louis-Felix
+  orcid: https://orcid.org/0000-0001-6711-6719
+- family-names: TODO
+  given-names: Add-co-curators
+keywords:
+- metabolomics
+- mass spectrometry
+- scientific agents
+- skills
+- EDAM
+references:
+- type: article
+  doi: 10.1016/j.cels.2016.07.002
+- type: article
+  doi: 10.1038/nmeth.4401
+- type: article
+  doi: 10.1038/s41467-020-18035-1
+- type: article
+  doi: 10.1038/s41588-021-00790-6
+- type: article
+  doi: 10.1038/s41592-023-02139-9
+- type: article
+  doi: 10.1093/bioinformatics/btx513
+- type: article
+  doi: 10.1186/gb-2008-9-9-r137
+- type: article
+  doi: 10.1186/gb-2012-13-10-r87
+- type: article
+  doi: 10.1186/s13059-015-0831-x
+- type: article
+  doi: 10.1186/s13072-019-0287-4
+- type: article
+  doi: 10.1371/journal.pcbi.1012067

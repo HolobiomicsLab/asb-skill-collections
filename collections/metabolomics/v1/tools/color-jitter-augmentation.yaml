@@ -1,0 +1,10 @@
+name: Color jitter augmentation
+slug: color-jitter-augmentation
+evidence_spans:
+- T_COL including color jitter, filtering, Poisson noise, and random missing value
+derived_from:
+- doi: 10.1021/acs.analchem.3c05002
+  title: deepion
+source_repos:
+- BioNet-XMU/DeepION
+schema_version: 0.2.0

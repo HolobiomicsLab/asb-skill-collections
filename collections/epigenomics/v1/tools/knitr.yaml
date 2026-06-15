@@ -1,0 +1,10 @@
+name: knitr
+slug: knitr
+evidence_spans:
+- '%\VignetteEngine{knitr::rmarkdown}'
+derived_from:
+- doi: 10.1186/gb-2012-13-10-r87
+  title: methylkit
+source_repos:
+- al2na/methylKit
+schema_version: 0.2.0

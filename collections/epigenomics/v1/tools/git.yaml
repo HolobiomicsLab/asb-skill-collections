@@ -1,0 +1,10 @@
+name: git
+slug: git
+evidence_spans:
+- Clone the SEACR repository
+derived_from:
+- doi: 10.1186/s13072-019-0287-4
+  title: seacr
+source_repos:
+- FredHutch/SEACR
+schema_version: 0.2.0

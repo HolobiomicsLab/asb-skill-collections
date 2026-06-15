@@ -1,0 +1,11 @@
+name: piscem-rs
+slug: piscem-rs
+evidence_spans:
+- The Rust port (built on piscem-rs, which derives orientation correctly)
+- The Rust port (built on piscem-rs, which derives orientation correctly) was right all along
+derived_from:
+- doi: 10.1038/nmeth.4197
+  title: Salmon provides fast and bias-aware quantification of transcript expression
+source_repos:
+- COMBINE-lab/salmon
+schema_version: 0.2.0

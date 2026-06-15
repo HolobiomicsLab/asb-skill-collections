@@ -1,0 +1,141 @@
+schema: asb-corpus/1.0
+collection: transcriptomics
+version: 1
+generated_on: '2026-06-15'
+source: asb-corpus-omics/transcriptomics_candidates*.json (web-discovered, adoption-first, OA-filtered)
+policy: OPEN_ACCESS_POLICY.md (OA-only; access.type verified per DOI)
+summary:
+  total: 10
+  included: 10
+  hold: 0
+papers:
+- name: Scanpy
+  doi: 10.1186/s13059-017-1382-0
+  title: Scanpy
+  category: scRNA-seq toolkit — preprocessing, clustering, visualization (Python)
+  repo_url: scverse/scanpy
+  status: included
+  wave: v0
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: DESeq2
+  doi: 10.1186/s13059-014-0550-8
+  title: DESeq2
+  category: bulk RNA-seq — count-based differential expression analysis
+  repo_url: thelovelab/DESeq2
+  status: included
+  wave: v0
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: Salmon
+  doi: 10.1038/nmeth.4197
+  title: Salmon
+  category: bulk RNA-seq — alignment-free / selective-alignment transcript quantification
+  repo_url: COMBINE-lab/salmon
+  status: included
+  wave: v0
+  access:
+    type: green-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: SUPPA2
+  doi: 10.1186/s13059-018-1417-1
+  title: SUPPA2
+  category: splicing/isoforms — uncertainty-aware differential splicing (PSI) across conditions
+  repo_url: comprna/SUPPA
+  status: included
+  wave: v0
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: Squidpy
+  doi: 10.1038/s41592-021-01358-2
+  title: Squidpy
+  category: spatial transcriptomics — spatial neighbor graphs, spatial statistics, image features
+  repo_url: scverse/squidpy
+  status: included
+  wave: v0
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: limma-voom
+  doi: 10.1186/gb-2014-15-2-r29
+  title: limma-voom
+  category: bulk RNA-seq differential expression (linear models with voom precision weights / empirical Bayes)
+  repo_url: bioc/limma
+  status: included
+  wave: v0-expansion
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: sctransform
+  doi: 10.1186/s13059-019-1874-1
+  title: sctransform
+  category: single-cell normalization & variance stabilization (regularized NB Pearson residuals)
+  repo_url: satijalab/sctransform
+  status: included
+  wave: v0-expansion
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: WGCNA
+  doi: 10.1186/1471-2105-9-559
+  title: WGCNA
+  category: co-expression network analysis (module detection)
+  repo_url: cran/WGCNA
+  status: included
+  wave: v0-expansion
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: tximport
+  doi: 10.12688/f1000research.7563.1
+  title: tximport
+  category: import & gene-level summarization of transcript abundances for DE
+  repo_url: thelovelab/tximport
+  status: included
+  wave: v0-expansion
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+- name: fgsea
+  doi: 10.1101/060012
+  title: fgsea
+  category: functional enrichment / pathways (fast preranked GSEA)
+  repo_url: alserglab/fgsea
+  status: included
+  wave: v0-expansion
+  access:
+    type: green-oa
+    license: cc-by
+    is_oa: true
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'

@@ -1,0 +1,756 @@
+schema: asb-corpus/1.0
+collection: metabolomics
+version: 1
+generated_on: '2026-06-15'
+source: asb-corpus-metabolomics/batch_metabolomics_v0.json (enveda review seed; OA-filtered)
+policy: OPEN_ACCESS_POLICY.md (v0 OA-only; access.type verified per DOI)
+summary:
+  total: 53
+  included: 50
+  hold: 3
+papers:
+- name: INTEGRATE
+  doi: 10.1371/journal.pcbi.1009337
+  title: 'INTEGRATE: Model-based multi-omics data integration to characterize multi-level metabolic regulation'
+  year: 2022
+  category: Multiomics
+  repo_url: https://github.com/qLSLab/integrate
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: NMR2Struct
+  doi: 10.1021/acscentsci.4c01132
+  title: Accurate and Efficient Structure Elucidation from Routine One-Dimensional NMR Spectra Using Multitask Machine Learning
+  year: 2024
+  category: NMR
+  repo_url: https://github.com/MarklandGroup/NMR2Struct
+  status: included
+  access:
+    type: diamond
+    license: cc-by
+    is_oa: true
+    oa_route: diamond
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: Spec2Vec
+  doi: 10.1371/journal.pcbi.1008724
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+  year: 2021
+  category: Annotation
+  repo_url: https://github.com/iomega/spec2vec
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: 13C-SpaceM
+  doi: 10.1038/s42255-024-01118-4
+  title: Spatial single-cell isotope tracing reveals heterogeneity of de novo fatty acid synthesis in cancer
+  year: 2024
+  category: Imaging MS
+  repo_url: https://github.com/Buglakova/13C-SpaceM
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+- name: DeepSAT
+  doi: 10.1186/s13321-023-00738-4
+  title: 'DeepSAT: Learning Molecular Structures from Nuclear Magnetic Resonance Data'
+  year: 2023
+  category: NMR
+  repo_url: https://github.com/mwang87/DeepSAT
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: MetaboDirect
+  doi: 10.1186/s40168-023-01476-3
+  title: 'MetaboDirect: an analytical pipeline for the processing of FT-ICR MS-based metabolomic data'
+  year: 2023
+  category: FT-ICR MS
+  repo_url: https://github.com/Coayala/MetaboDirect
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: Chemprop-IR
+  doi: 10.1021/acs.jcim.1c00055
+  title: Predicting Infrared Spectra with Message Passing Neural Networks
+  year: 2021
+  category: IR
+  repo_url: https://github.com/gfm-collab/chemprop-IR
+  status: included
+  access:
+    type: green-oa
+    license: cc-by
+    is_oa: true
+    oa_route: green
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: MS2DeepScore
+  doi: 10.1186/s13321-021-00558-4
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+  year: 2021
+  category: Annotation
+  repo_url: https://github.com/matchms/ms2deepscore
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: MiMeNet
+  doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+  year: 2021
+  category: Multiomics
+  repo_url: https://github.com/YDaiLab/MiMeNet
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: NPLinker
+  doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+  year: 2021
+  category: Biosynthetic Gene Clusters
+  repo_url: https://github.com/NPLinker/nplinker
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: OpenTIMS, TimsPy, and TimsR
+  doi: 10.1021/acs.jproteome.0c00962
+  title: 'OpenTIMS, TimsPy, and TimsR: Open and Easy Access to timsTOF Raw Data'
+  year: 2021
+  category: Ion Mobility MS
+  repo_url: https://github.com/michalsta/opentims
+  status: hold
+  access:
+    type: hybrid
+    license: cc-by-nc-nd
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  note: 'Non-OA reuse license ''cc-by-nc-nd'' (NoDerivatives/NonCommercial): excluded from v0 public release pending human license review per OPEN_ACCESS_POLICY.md §4.'
+- name: ORA
+  doi: 10.1371/journal.pcbi.1009105
+  title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
+  year: 2021
+  category: Pathway, Enrichment and Ontology Tools
+  repo_url: https://github.com/cwieder/metabolomics-ORA
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: CCSfind
+  doi: 10.1002/jms.5040
+  title: 'CCSfind: A tool for chemically informed LC-IM-MS database building'
+  year: 2024
+  category: Ion Mobility MS
+  repo_url: https://github.com/sangeeta97/ccs_find
+  status: hold
+  access:
+    type: hybrid
+    license: cc-by-nc-nd
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  note: 'Non-OA reuse license ''cc-by-nc-nd'' (NoDerivatives/NonCommercial): excluded from v0 public release pending human license review per OPEN_ACCESS_POLICY.md §4.'
+- name: COMMIT
+  doi: 10.1371/journal.pcbi.1009906
+  title: 'COMMIT: Consideration of metabolite leakage and community composition improves microbial community reconstructions'
+  year: 2022
+  category: Specialized
+  repo_url: https://github.com/pwendering/COMMIT/tree/v1.0.0
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: HExpMetDB
+  doi: 10.1289/EHP7722
+  title: Risk-Based Chemical Ranking and Generating a Prioritized Human Exposome Database
+  year: 2021
+  category: Exposomics
+  repo_url: https://github.com/FangLabNTU/HExpMetDB
+  status: included
+  access:
+    type: diamond
+    license: cc-by
+    is_oa: true
+    oa_route: diamond
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: NP Analyst
+  doi: 10.1021/acscentsci.1c01108
+  title: 'NP Analyst: An Open Online Platform for Compound Activity Mapping'
+  year: 2022
+  category: Specialized
+  repo_url: https://github.com/liningtonlab/npanalyst
+  status: included
+  access:
+    type: diamond
+    license: cc-by
+    is_oa: true
+    oa_route: diamond
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+- name: QComics
+  doi: 10.1021/acs.analchem.3c03660
+  title: 'QComics: Recommendations and Guidelines for Robust, Easily Implementable and Reportable Quality Control of Metabolomics Data'
+  year: 2024
+  category: Quality Control
+  repo_url: https://github.com/ricoderks/QComics
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+- name: patRoon 2
+  doi: 10.21105/joss.04029
+  title: 'patRoon 2.0: Improved non-target analysis workflows including automated transformation product screening'
+  year: 2022
+  category: Multifunctional
+  repo_url: https://github.com/rickhelmus/patRoon
+  status: hold
+  access:
+    type: diamond
+    license: cc-by
+    is_oa: true
+    oa_route: diamond
+    verified_via: unpaywall_oa_status
+    verified_on: '2026-06-15'
+  note: 'R tool (patRoon 2): build held pending the ASB R script-tracing fix; not in v1 skills. Add when the R path lands.'
+- name: xcms
+  doi: 10.1021/acs.analchem.5c04338
+  title: xcms
+  category: Pre-processing
+  repo_url: sneumann/xcms
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: MS2DECIDE
+  doi: 10.1002/cmtd.202400088
+  title: MS2DECIDE
+  category: Annotation aggregation / NP prioritization
+  repo_url: MejriY/MS2DECIDE
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: VIMMS 2.0
+  doi: 10.21105/joss.03990
+  title: VIMMS 2.0
+  category: Specialized
+  repo_url: glasgowcompbio/vimms
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: QC4Metabolomics
+  doi: 10.1021/acs.analchem.4c07078
+  title: QC4Metabolomics
+  category: Quality Control
+  repo_url: stanstrup/QC4Metabolomics
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: RASSP
+  doi: 10.1021/acs.analchem.2c02093
+  title: RASSP
+  category: In-silico fragmentation
+  repo_url: thejonaslab/rassp-public
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: PFdeltaScreen
+  doi: 10.1007/s00216-023-05070-2
+  title: PFdeltaScreen
+  category: Pre-processing / non-target screening (PFAS)
+  repo_url: JonZwe/PFAScreen
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: MetaboAnnotatoR
+  doi: 10.1021/acs.analchem.1c03032
+  title: MetaboAnnotatoR
+  category: Annotation
+  repo_url: gggraca/MetaboAnnotatoR
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: CMM-RT
+  doi: 10.1186/s13321-022-00613-8
+  title: CMM-RT
+  category: RT
+  repo_url: constantino-garcia/cmmrt
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: uafR
+  doi: 10.1371/journal.pone.0306202
+  title: uafR
+  category: GC-MS
+  repo_url: castratton/uafR
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: MobiLipid
+  doi: 10.1021/acs.analchem.4c01253
+  title: MobiLipid
+  category: Ion Mobility MS
+  repo_url: FelinaHildebrand/MobiLipid
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: PCPFM
+  doi: 10.1371/journal.pcbi.1011912
+  title: PCPFM
+  category: Pre-processing
+  repo_url: shuzhao-li-lab/PythonCentricPipelineForMetabolomics
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_best_oa_location
+    verified_on: '2026-06-15'
+  wave: expansion-1
+- name: mzPeak
+  doi: 10.1021/acs.jproteome.5c00435
+  title: mzPeak
+  category: Formats
+  repo_url: mobiusklein/mzpeak_prototyping
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: rawrr
+  doi: 10.1021/acs.jproteome.0c00866
+  title: rawrr
+  category: Formats
+  repo_url: fgcz/rawrr
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: mineMS2
+  doi: 10.1186/s13321-025-01051-y
+  title: mineMS2
+  category: Annotation
+  repo_url: odisce/mineMS2
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: IDSL_MINT
+  doi: 10.1186/s13321-024-00804-5
+  title: IDSL_MINT
+  category: Annotation
+  repo_url: idslme/IDSL_MINT
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: QuantyFey
+  doi: 10.1016/j.aca.2025.344571
+  title: QuantyFey
+  category: Quality Control
+  repo_url: CDLMarkus/QuantyFey
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: Aird
+  doi: 10.1186/s12859-021-04490-0
+  title: Aird
+  category: Formats
+  repo_url: CSi-Studio/AirdPro
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: Mol2CCS
+  doi: 10.1186/s13321-024-00899-w
+  title: Mol2CCS
+  category: Ion Mobility MS
+  repo_url: enveda/ccs-prediction
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: MOCCal
+  doi: 10.1021/acs.analchem.3c04290
+  title: MOCCal
+  category: Ion Mobility MS
+  repo_url: HinesLab/MOCCal
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: mspcompiler
+  doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+  category: Spectral Library
+  repo_url: QizhiSu/mspcompiler
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: M2S
+  doi: 10.1021/acs.analchem.1c03592
+  title: M2S
+  category: Specialized
+  repo_url: rjdossan/M2S
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: DeepION
+  doi: 10.1021/acs.analchem.3c05002
+  title: DeepION
+  category: Imaging MS
+  repo_url: BioNet-XMU/DeepION
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: Met-ID
+  doi: 10.1021/acs.analchem.5c00633
+  title: Met-ID
+  category: Imaging MS
+  repo_url: pbjarterot/Met-ID
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: mass2adduct
+  doi: 10.1021/acs.analchem.0c04720
+  title: mass2adduct
+  category: Imaging MS
+  repo_url: kbseah/mass2adduct
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: MAMSI
+  doi: 10.1021/acs.analchem.5c01327
+  title: MAMSI
+  category: Statistical
+  repo_url: kopeckylukas/py-mamsi
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: rtmsEcho
+  doi: 10.1021/acs.analchem.5c03730
+  title: rtmsEcho
+  category: Pre-processing
+  repo_url: nathanieltwarog/rtmsEcho
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: SpecXplore
+  doi: 10.1021/acs.analchem.3c04444
+  title: SpecXplore
+  category: Visualization
+  repo_url: kevinmildau/specXplore
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: BitterMasS
+  doi: 10.1021/acs.jafc.3c09767
+  title: BitterMasS
+  category: Specialized
+  repo_url: Niv-Lab/BitterPredict1
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: BAM
+  doi: 10.1021/acs.analchem.4c01565
+  title: BAM
+  category: Annotation
+  repo_url: HassounLab/BAM
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: PS2MS
+  doi: 10.1021/acs.analchem.3c05019
+  title: PS2MS
+  category: Annotation
+  repo_url: jhhung/PS2MS
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: mzQuality
+  doi: 10.1021/jasms.5c00073
+  title: mzQuality
+  category: Quality Control
+  repo_url: hankemeierlab/mzQuality
+  status: included
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_route: hybrid
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: mpactR
+  doi: 10.1128/mra.00997-24
+  title: mpactR
+  category: Multifunctional
+  repo_url: mums2/mpactr
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: BinDiscover
+  doi: 10.1186/s13321-023-00734-8
+  title: BinDiscover
+  category: Database
+  repo_url: metabolomics-us/bindiscover
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: SpectriPy
+  doi: 10.21105/joss.08070
+  title: SpectriPy
+  category: Formats
+  repo_url: rformassspectrometry/SpectriPy
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2
+- name: MESSES
+  doi: 10.3390/metabo13070842
+  title: MESSES
+  category: Pre-processing
+  repo_url: MoseleyBioinformaticsLab/MESSES
+  status: included
+  access:
+    type: gold-oa
+    license: cc-by
+    is_oa: true
+    oa_route: gold
+    verified_via: unpaywall_oa_locations
+    verified_on: '2026-06-15'
+  wave: expansion-2

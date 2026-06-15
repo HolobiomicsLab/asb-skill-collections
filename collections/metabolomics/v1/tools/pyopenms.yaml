@@ -1,0 +1,10 @@
+name: pyOpenMS
+slug: pyopenms
+evidence_spans:
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+derived_from:
+- doi: 10.1007/s00216-023-05070-2
+  title: PFΔScreen — an open-source tool for automated PFAS feature prioritization in non-target HRMS data
+source_repos:
+- JonZwe/PFAScreen
+schema_version: 0.2.0

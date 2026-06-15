@@ -1,0 +1,13 @@
+name: salmon 2.0
+slug: salmon-2-0
+version_used: '2.0'
+evidence_spans:
+- Rust port
+- 'salmon 2.0 (Rust): a user-facing summary of removed/ignored/new options lives in MIGRATION.md'
+- re-running the Rust mapper with sparse fixed-k anchors, reference-extended MEMs, and true unitig-constrained uni-MEMs
+derived_from:
+- doi: 10.1038/nmeth.4197
+  title: Salmon provides fast and bias-aware quantification of transcript expression
+source_repos:
+- COMBINE-lab/salmon
+schema_version: 0.2.0

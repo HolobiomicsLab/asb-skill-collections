@@ -1,0 +1,10 @@
+name: Probability Product Kernel (PPK)
+slug: probability-product-kernel-ppk
+evidence_spans:
+- we filter the input spectra to include only the peaks found in the training data, before using the Probability Product Kernel (PPK)
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- https://github.com/NPLinker/nplinker
+schema_version: 0.2.0

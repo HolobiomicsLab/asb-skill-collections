@@ -1,0 +1,12 @@
+name: NIST
+slug: nist
+evidence_spans:
+- NIST is the most commonly used **commercial** EI library
+- The NIST MS2 library can be treated as the same as the NIST EI library
+- Extract experimental RI from the "ri.dat" and "USER.DBU" files. Once you have NIST library installed
+derived_from:
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+source_repos:
+- QizhiSu/mspcompiler
+schema_version: 0.2.0

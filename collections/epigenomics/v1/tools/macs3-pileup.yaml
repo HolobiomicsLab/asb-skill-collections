@@ -1,0 +1,10 @@
+name: macs3 pileup
+slug: macs3-pileup
+evidence_spans:
+- generate a pileup track for the ChIP sample using the MACS3 `pileup` subcommand
+derived_from:
+- doi: 10.1186/gb-2008-9-9-r137
+  title: macs
+source_repos:
+- macs3-project/MACS
+schema_version: 0.2.0

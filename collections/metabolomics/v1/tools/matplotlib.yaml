@@ -1,0 +1,14 @@
+name: matplotlib
+slug: matplotlib
+evidence_spans:
+- from matplotlib import pyplot as plt
+- It requires the Python dependencies NumPy [40], pandas [41, 42], seaborn [43], py4cytoscape, and matplotlib
+derived_from:
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+source_repos:
+- https://github.com/Coayala/MetaboDirect
+- kopeckylukas/py-mamsi
+schema_version: 0.2.0

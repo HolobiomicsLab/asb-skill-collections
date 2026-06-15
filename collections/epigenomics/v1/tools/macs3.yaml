@@ -1,0 +1,10 @@
+name: macs3
+slug: macs3
+evidence_spans:
+- MACS3 does offer a range of subcommands that allow you to customize every step of your analysis
+derived_from:
+- doi: 10.1186/gb-2008-9-9-r137
+  title: macs
+source_repos:
+- macs3-project/MACS
+schema_version: 0.2.0

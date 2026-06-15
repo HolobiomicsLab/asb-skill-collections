@@ -1,0 +1,14 @@
+name: Scanpy
+slug: scanpy
+evidence_spans:
+- Scanpy is a scalable toolkit for analyzing single-cell gene expression data built jointly with anndata
+- It builds on scanpy and anndata
+derived_from:
+- doi: 10.1186/s13059-017-1382-0
+  title: 'SCANPY: large-scale single-cell gene expression data analysis'
+- doi: 10.1038/s41592-021-01358-2
+  title: 'Squidpy: a scalable framework for spatial omics analysis'
+source_repos:
+- scverse/scanpy
+- scverse/squidpy
+schema_version: 0.2.0

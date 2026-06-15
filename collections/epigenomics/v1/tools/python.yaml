@@ -1,0 +1,14 @@
+name: Python
+slug: python
+evidence_spans:
+- enabling high-resolution Hi-C analysis in Python
+- A Python/Rust package for single-cell epigenomics analysis
+derived_from:
+- doi: 10.1101/2022.10.31.514564
+  title: 'Cooltools: enabling high-resolution Hi-C analysis in Python'
+- doi: 10.1038/s41592-023-02139-9
+  title: A fast, scalable and versatile tool for analysis of single-cell omics data
+source_repos:
+- open2c/cooltools
+- scverse/SnapATAC2
+schema_version: 0.2.0

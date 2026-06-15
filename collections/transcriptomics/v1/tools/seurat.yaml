@@ -1,0 +1,10 @@
+name: Seurat
+slug: seurat
+evidence_spans:
+- suppressMessages(library(Seurat)) obj <- readRDS(url("https://alserglab.wustl.edu/files/fgsea/GSE116240.rds"))
+derived_from:
+- doi: 10.1101/060012
+  title: fgsea
+source_repos:
+- alserglab/fgsea
+schema_version: 0.2.0

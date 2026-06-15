@@ -1,0 +1,10 @@
+name: Juicer
+slug: juicer
+evidence_spans:
+- Juicer is a platform for analyzing kilobase resolution Hi-C data
+derived_from:
+- doi: 10.1016/j.cels.2016.07.002
+  title: juicer
+source_repos:
+- aidenlab/juicer
+schema_version: 0.2.0

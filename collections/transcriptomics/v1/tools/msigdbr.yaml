@@ -1,0 +1,11 @@
+name: msigdbr
+slug: msigdbr
+evidence_spans:
+- pathwaysDF <- msigdbr(species="mouse", collection="H")
+- library(msigdbr) pathwaysDF <- msigdbr(species="mouse", collection="C2", subcollection = "CP:KEGG_LEGACY")
+derived_from:
+- doi: 10.1101/060012
+  title: fgsea
+source_repos:
+- alserglab/fgsea
+schema_version: 0.2.0

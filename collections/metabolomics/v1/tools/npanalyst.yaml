@@ -1,0 +1,8 @@
+name: npanalyst
+slug: npanalyst
+derived_from:
+- doi: 10.1021/acscentsci.1c01108
+  title: NP Analyst
+source_repos:
+- https://github.com/liningtonlab/npanalyst
+schema_version: 0.2.0

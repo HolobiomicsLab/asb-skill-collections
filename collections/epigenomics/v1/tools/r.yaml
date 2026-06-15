@@ -1,0 +1,24 @@
+name: R
+slug: r
+evidence_spans:
+- ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data
+- An R package for the analysis of sparse chromatin accessibility
+- library(chromVAR)
+- chromVAR is an R package
+- R (http://www.r-project.org/) with the following packages
+- packageVersion('methylKit')
+derived_from:
+- doi: 10.1038/s41588-021-00790-6
+  title: archr
+- doi: 10.1038/nmeth.4401
+  title: chromvar
+- doi: 10.1186/s13059-015-0831-x
+  title: 'HiC-Pro: an optimized and flexible pipeline for Hi-C data processing'
+- doi: 10.1186/gb-2012-13-10-r87
+  title: methylkit
+source_repos:
+- GreenleafLab/ArchR
+- GreenleafLab/chromVAR
+- al2na/methylKit
+- nservant/HiC-Pro
+schema_version: 0.2.0

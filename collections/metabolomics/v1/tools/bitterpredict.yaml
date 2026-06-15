@@ -1,0 +1,10 @@
+name: BitterPredict
+slug: bitterpredict
+evidence_spans:
+- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+derived_from:
+- doi: 10.1021/acs.jafc.3c09767
+  title: bittermass
+source_repos:
+- Niv-Lab/BitterPredict1
+schema_version: 0.2.0

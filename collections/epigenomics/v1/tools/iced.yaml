@@ -1,0 +1,11 @@
+name: iced
+slug: iced
+evidence_spans:
+- iced module is also required (https://github.com/hiclib/iced)
+- Note that the iced module is also required (https://github.com/hiclib/iced)
+derived_from:
+- doi: 10.1186/s13059-015-0831-x
+  title: 'HiC-Pro: an optimized and flexible pipeline for Hi-C data processing'
+source_repos:
+- nservant/HiC-Pro
+schema_version: 0.2.0

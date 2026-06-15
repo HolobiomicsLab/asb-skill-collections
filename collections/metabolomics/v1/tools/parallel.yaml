@@ -1,0 +1,10 @@
+name: parallel
+slug: parallel
+evidence_spans:
+- library(parallel)
+derived_from:
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+source_repos:
+- QizhiSu/mspcompiler
+schema_version: 0.2.0

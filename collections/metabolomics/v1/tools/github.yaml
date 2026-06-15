@@ -1,0 +1,26 @@
+name: GitHub
+slug: github
+derived_from:
+- doi: 10.1038/s42255-024-01118-4
+  title: 13C-SpaceM
+- doi: 10.1186/s13321-023-00734-8
+  title: bindiscover
+- doi: 10.1289/EHP7722
+  title: HExpMetDB
+- doi: 10.1002/cmtd.202400088
+  title: ms2decide
+- doi: 10.1021/acscentsci.1c01108
+  title: NP Analyst
+- doi: 10.1021/acs.analchem.2c02093
+  title: rassp
+- doi: 10.1021/acs.analchem.5c03730
+  title: rtmsecho
+source_repos:
+- MejriY/MS2DECIDE
+- https://github.com/Buglakova/13C-SpaceM
+- https://github.com/FangLabNTU/HExpMetDB
+- https://github.com/liningtonlab/npanalyst
+- metabolomics-us/bindiscover
+- nathanieltwarog/rtmsEcho
+- thejonaslab/rassp-public
+schema_version: 0.2.0

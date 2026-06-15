@@ -1,0 +1,10 @@
+name: Chemistry Development Kit (CDK)
+slug: chemistry-development-kit-cdk
+evidence_spans:
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- https://github.com/NPLinker/nplinker
+schema_version: 0.2.0

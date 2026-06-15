@@ -1,0 +1,12 @@
+name: salmon 1.12.0
+slug: salmon-1-12-0
+evidence_spans:
+- C++ 1.12.0
+- C++ 1.12.0 mapped | 33,446,029 (92.011%)
+- C++ salmon 1.11.4 vs. this Rust port, both selective-alignment mode
+derived_from:
+- doi: 10.1038/nmeth.4197
+  title: Salmon provides fast and bias-aware quantification of transcript expression
+source_repos:
+- COMBINE-lab/salmon
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: ArchR
+slug: archr
+evidence_spans:
+- ArchR is a full-featured R package for processing and analyzing single-cell ATAC-seq data
+derived_from:
+- doi: 10.1038/s41588-021-00790-6
+  title: archr
+source_repos:
+- GreenleafLab/ArchR
+schema_version: 0.2.0

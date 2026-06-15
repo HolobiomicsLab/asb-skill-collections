@@ -1,0 +1,10 @@
+name: Jupyter
+slug: jupyter
+evidence_spans:
+- The Python code to generate the results is contained within the Jupyter notebook
+derived_from:
+- doi: 10.1371/journal.pcbi.1009105
+  title: ORA
+source_repos:
+- https://github.com/cwieder/metabolomics-ORA
+schema_version: 0.2.0

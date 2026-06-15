@@ -1,0 +1,10 @@
+name: Sphinx
+slug: sphinx
+evidence_spans:
+- We use [Numpy style docstrings](https://numpydoc.readthedocs.io/en/latest/format.html>) and [Sphinx](http://www.sphinx-doc.org/en/stable) to document this library
+derived_from:
+- doi: 10.1101/2022.10.31.514564
+  title: 'Cooltools: enabling high-resolution Hi-C analysis in Python'
+source_repos:
+- open2c/cooltools
+schema_version: 0.2.0

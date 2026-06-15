@@ -1,0 +1,11 @@
+name: cooltools
+slug: cooltools
+evidence_spans:
+- cooltools provides a suite of computational tools with a paired python API
+- cooltools leverages this format to enable flexible and reproducible analysis of high-resolution data.
+derived_from:
+- doi: 10.1101/2022.10.31.514564
+  title: 'Cooltools: enabling high-resolution Hi-C analysis in Python'
+source_repos:
+- open2c/cooltools
+schema_version: 0.2.0

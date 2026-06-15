@@ -1,0 +1,10 @@
+name: khipu
+slug: khipu
+evidence_spans:
+- pre-annotation to group featues to empirical compounds (khipu)
+derived_from:
+- doi: 10.1371/journal.pcbi.1011912
+  title: Common data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline
+source_repos:
+- shuzhao-li-lab/PythonCentricPipelineForMetabolomics
+schema_version: 0.2.0

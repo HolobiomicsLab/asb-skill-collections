@@ -1,0 +1,10 @@
+name: convolutional neural network
+slug: convolutional-neural-network
+evidence_spans:
+- Integrating this capability with a convolutional neural network, we build an end-to-end model
+derived_from:
+- doi: 10.1021/acscentsci.4c01132
+  title: NMR2Struct
+source_repos:
+- https://github.com/MarklandGroup/NMR2Struct
+schema_version: 0.2.0

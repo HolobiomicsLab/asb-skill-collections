@@ -1,0 +1,11 @@
+name: MS-DIAL
+slug: ms-dial
+evidence_spans:
+- MS-DIAL friendly msp file
+- both positive and negative modes are in a single file as well. Therefore, we need to separated the polarity
+derived_from:
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+source_repos:
+- QizhiSu/mspcompiler
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: WGCNA
+slug: wgcna
+evidence_spans:
+- Weighted correlation network analysis (WGCNA) of microbial features was performed using the WGCNA library in R
+- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet to those identified by the Weighted Correlation Network Analysis (WGCNA)
+derived_from:
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+source_repos:
+- https://github.com/YDaiLab/MiMeNet
+schema_version: 0.2.0

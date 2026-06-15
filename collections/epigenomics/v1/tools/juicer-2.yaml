@@ -1,0 +1,10 @@
+name: Juicer 2
+slug: juicer-2
+evidence_spans:
+- If you clone the Juicer repo directly from Github, it will clone Juicer 2, which is under active development
+derived_from:
+- doi: 10.1016/j.cels.2016.07.002
+  title: juicer
+source_repos:
+- aidenlab/juicer
+schema_version: 0.2.0

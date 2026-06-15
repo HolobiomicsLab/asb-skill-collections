@@ -1,0 +1,10 @@
+name: py4cytoscape
+slug: py4cytoscape
+evidence_spans:
+- It requires the Python dependencies NumPy [40], pandas [41, 42], seaborn [43], py4cytoscape, and matplotlib [44]
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+source_repos:
+- https://github.com/Coayala/MetaboDirect
+schema_version: 0.2.0

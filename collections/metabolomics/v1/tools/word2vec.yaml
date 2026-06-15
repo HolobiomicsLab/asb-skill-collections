@@ -1,0 +1,11 @@
+name: Word2Vec
+slug: word2vec
+evidence_spans:
+- inspired by a natural language processing algorithm—Word2Vec
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+derived_from:
+- doi: 10.1371/journal.pcbi.1008724
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+source_repos:
+- https://github.com/iomega/spec2vec
+schema_version: 0.2.0

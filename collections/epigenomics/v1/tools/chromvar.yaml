@@ -1,0 +1,12 @@
+name: chromVAR
+slug: chromvar
+evidence_spans:
+- chromVAR is an R package for the analysis of sparse chromatin accessibility
+- computeVariability(dev)
+- library(chromVAR)
+derived_from:
+- doi: 10.1038/nmeth.4401
+  title: chromvar
+source_repos:
+- GreenleafLab/chromVAR
+schema_version: 0.2.0

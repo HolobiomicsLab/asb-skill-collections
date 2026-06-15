@@ -1,0 +1,14 @@
+name: conda
+slug: conda
+evidence_spans:
+- we recommend using [conda](https://docs.conda.io/en/latest/miniconda.html)
+- conda env create -f MY_INSTALL_PATH/HiC-Pro/environment.yml
+derived_from:
+- doi: 10.1101/2022.10.31.514564
+  title: 'Cooltools: enabling high-resolution Hi-C analysis in Python'
+- doi: 10.1186/s13059-015-0831-x
+  title: 'HiC-Pro: an optimized and flexible pipeline for Hi-C data processing'
+source_repos:
+- nservant/HiC-Pro
+- open2c/cooltools
+schema_version: 0.2.0

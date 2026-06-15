@@ -1,0 +1,11 @@
+name: NPLinker
+slug: nplinker
+evidence_spans:
+- NPLinker, a software framework to link genomic and metabolomic data
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- https://github.com/NPLinker/nplinker
+schema_version: 0.2.0

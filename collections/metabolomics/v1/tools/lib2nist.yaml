@@ -1,0 +1,10 @@
+name: Lib2NIST
+slug: lib2nist
+evidence_spans:
+- you can transformed it into a msp file by *Lib2NIST*
+derived_from:
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+source_repos:
+- QizhiSu/mspcompiler
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: voom
+slug: voom
+evidence_spans:
+- 'Voom: precision weights unlock linear model analysis tools for RNA-seq read counts'
+derived_from:
+- doi: 10.1093/nar/gkv007
+  title: limma powers differential expression analyses for RNA-sequencing and microarray studies
+source_repos:
+- bioc/limma
+schema_version: 0.2.0

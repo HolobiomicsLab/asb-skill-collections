@@ -1,0 +1,10 @@
+name: ENCODE Hi-C uniform processing pipeline (encode_hic_pipeline)
+slug: encode-hi-c-uniform-processing-pipeline-encode-hic-pipeline
+evidence_spans:
+- ENCODE's Hi-C uniform processing pipeline based on Juicer can be found [here](https://github.com/ENCODE-DCC/hic-pipeline)
+derived_from:
+- doi: 10.1016/j.cels.2016.07.002
+  title: juicer
+source_repos:
+- aidenlab/juicer
+schema_version: 0.2.0

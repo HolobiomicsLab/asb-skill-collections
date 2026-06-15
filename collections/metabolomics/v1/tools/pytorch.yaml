@@ -1,0 +1,14 @@
+name: PyTorch
+slug: pytorch
+evidence_spans:
+- PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white
+- enveda/ccs-prediction
+derived_from:
+- doi: 10.1186/s13321-024-00804-5
+  title: idslmint
+- doi: 10.1186/s13321-024-00899-w
+  title: mol2ccs
+source_repos:
+- enveda/ccs-prediction
+- idslme/IDSL_MINT
+schema_version: 0.2.0

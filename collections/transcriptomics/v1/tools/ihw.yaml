@@ -1,0 +1,10 @@
+name: IHW
+slug: ihw
+evidence_spans:
+- A Bioconductor package, [IHW](http://bioconductor.org/packages/IHW), is available that implements the method of *Independent Hypothesis Weighting*
+derived_from:
+- doi: 10.1186/s13059-014-0550-8
+  title: Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2
+source_repos:
+- thelovelab/DESeq2
+schema_version: 0.2.0

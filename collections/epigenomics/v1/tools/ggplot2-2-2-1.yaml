@@ -1,0 +1,11 @@
+name: ggplot2 (>2.2.1)
+slug: ggplot2-2-2-1
+version_used: 2.2.1
+evidence_spans:
+- ggplot2 (>2.2.1)
+derived_from:
+- doi: 10.1186/s13059-015-0831-x
+  title: 'HiC-Pro: an optimized and flexible pipeline for Hi-C data processing'
+source_repos:
+- nservant/HiC-Pro
+schema_version: 0.2.0

@@ -1,0 +1,13 @@
+name: antiSMASH
+slug: antismash
+version_used: 5.0.0
+evidence_spans:
+- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- genomes were run through antiSMASH v5.0.0 for BGC detection
+- the genomes were run through antiSMASH v5.0.0 for BGC detection
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- https://github.com/NPLinker/nplinker
+schema_version: 0.2.0

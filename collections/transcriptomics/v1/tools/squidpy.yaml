@@ -1,0 +1,12 @@
+name: Squidpy
+slug: squidpy
+evidence_spans:
+- Squidpy is the scverse toolkit for scalable analysis and visualization of spatial molecular data.
+- gr.nhood_enrichment
+- gr.sepal
+derived_from:
+- doi: 10.1038/s41592-021-01358-2
+  title: 'Squidpy: a scalable framework for spatial omics analysis'
+source_repos:
+- scverse/squidpy
+schema_version: 0.2.0

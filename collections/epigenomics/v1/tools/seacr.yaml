@@ -1,0 +1,10 @@
+name: SEACR
+slug: seacr
+evidence_spans:
+- github:FredHutch__SEACR
+derived_from:
+- doi: 10.1186/s13072-019-0287-4
+  title: seacr
+source_repos:
+- FredHutch/SEACR
+schema_version: 0.2.0

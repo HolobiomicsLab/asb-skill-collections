@@ -1,0 +1,10 @@
+name: pp.import_fragments
+slug: pp-import-fragments
+evidence_spans:
+- pp.import_fragments
+derived_from:
+- doi: 10.1038/s41592-023-02139-9
+  title: A fast, scalable and versatile tool for analysis of single-cell omics data
+source_repos:
+- scverse/SnapATAC2
+schema_version: 0.2.0

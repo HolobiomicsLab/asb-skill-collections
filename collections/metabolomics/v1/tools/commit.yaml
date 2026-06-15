@@ -1,0 +1,10 @@
+name: COMMIT
+slug: commit
+evidence_spans:
+- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana
+derived_from:
+- doi: 10.1371/journal.pcbi.1009906
+  title: COMMIT
+source_repos:
+- https://github.com/pwendering/COMMIT/tree/v1.0.0
+schema_version: 0.2.0

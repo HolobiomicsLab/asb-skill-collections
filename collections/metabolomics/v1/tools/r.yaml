@@ -1,0 +1,43 @@
+name: R
+slug: r
+version_used: 4.5.0
+evidence_spans:
+- library(mass2adduct)
+- To install this package, start R (version "4.5.0" or higher)
+- vignette title and package context indicate R-based package
+- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- providing a R Markdown that integrates into IM-MS lipidomics workflows
+- This table can be used for a variety of analyses that can be conducted in R
+derived_from:
+- doi: 10.1021/acs.analchem.0c04720
+  title: Determination of Abundant Metabolite Matrix Adducts Illuminates the Dark Metabolome of MALDI-Mass Spectrometry Imaging Datasets
+- doi: 10.1021/acs.analchem.1c03032
+  title: Automated Annotation of Untargeted All-Ion Fragmentation LC–MS Metabolomics Data with MetaboAnnotatoR
+- doi: 10.1186/s13321-025-01051-y
+  title: minems2
+- doi: 10.1021/acs.analchem.4c01253
+  title: mobilipid
+- doi: 10.1021/acs.analchem.2c04632
+  title: 'Metabolomics Peak Analysis Computational Tool (MPACT): An Advanced Informatics Tool for Metabolomics and Data Visualization of Molecules from Complex Biological Samples'
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+- doi: 10.1021/acs.jproteome.5c00435
+  title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
+- doi: 10.1021/jasms.5c00073
+  title: mzquality
+- doi: 10.21105/joss.08070
+  title: spectripy
+- doi: 10.1371/journal.pone.0306202
+  title: uafr
+source_repos:
+- FelinaHildebrand/MobiLipid
+- QizhiSu/mspcompiler
+- castratton/uafR
+- gggraca/MetaboAnnotatoR
+- hankemeierlab/mzQuality
+- kbseah/mass2adduct
+- mobiusklein/mzpeak_prototyping
+- mums2/mpactr
+- odisce/mineMS2
+- rformassspectrometry/SpectriPy
+schema_version: 0.2.0

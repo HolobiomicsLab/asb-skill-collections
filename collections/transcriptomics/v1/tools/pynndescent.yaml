@@ -1,0 +1,10 @@
+name: pynndescent
+slug: pynndescent
+evidence_spans:
+- The [pynndescent](https://github.com/lmcinnes/pynndescent) library provides an approximate nearest-neighbor search backend
+derived_from:
+- doi: 10.1038/s41592-021-01358-2
+  title: 'Squidpy: a scalable framework for spatial omics analysis'
+source_repos:
+- scverse/squidpy
+schema_version: 0.2.0

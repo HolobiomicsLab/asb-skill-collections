@@ -1,0 +1,10 @@
+name: Elastic Net regression
+slug: elastic-net-regression
+evidence_spans:
+- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV using 5-fold internal cross-validation for hyper-parameter tuning where the hyper-parameter grid contained
+derived_from:
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+source_repos:
+- https://github.com/YDaiLab/MiMeNet
+schema_version: 0.2.0

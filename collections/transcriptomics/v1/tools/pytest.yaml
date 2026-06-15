@@ -1,0 +1,14 @@
+name: pytest
+slug: pytest
+evidence_spans:
+- We use pytest to test scanpy. To run the tests, simply run `hatch test`
+- This package uses [pytest][] for automated testing.
+derived_from:
+- doi: 10.1186/s13059-017-1382-0
+  title: 'SCANPY: large-scale single-cell gene expression data analysis'
+- doi: 10.1038/s41592-021-01358-2
+  title: 'Squidpy: a scalable framework for spatial omics analysis'
+source_repos:
+- scverse/scanpy
+- scverse/squidpy
+schema_version: 0.2.0

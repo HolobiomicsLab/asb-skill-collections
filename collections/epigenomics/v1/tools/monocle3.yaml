@@ -1,0 +1,10 @@
+name: monocle3
+slug: monocle3
+evidence_spans:
+- ArchR now directly supports both monocle3 and Slingshot based trajectory analysis
+derived_from:
+- doi: 10.1038/s41588-021-00790-6
+  title: archr
+source_repos:
+- GreenleafLab/ArchR
+schema_version: 0.2.0

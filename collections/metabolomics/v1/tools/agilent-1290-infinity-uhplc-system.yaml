@@ -1,0 +1,10 @@
+name: Agilent 1290 Infinity UHPLC system
+slug: agilent-1290-infinity-uhplc-system
+evidence_spans:
+- LC separation was performed using an Agilent 1290 Infinity UHPLC system and an InfintyLab Poroshell 120 PFP column
+derived_from:
+- doi: 10.1371/journal.pcbi.1009337
+  title: 'INTEGRATE: Model-based multi-omics data integration to characterize multi-level metabolic regulation'
+source_repos:
+- https://github.com/qLSLab/integrate
+schema_version: 0.2.0

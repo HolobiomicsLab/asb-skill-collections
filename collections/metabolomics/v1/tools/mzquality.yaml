@@ -1,0 +1,12 @@
+name: mzQuality
+slug: mzquality
+evidence_spans:
+- library(mzQuality)
+- mzQuality requires a specific format for the input data.
+- mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC)
+derived_from:
+- doi: 10.1021/jasms.5c00073
+  title: mzquality
+source_repos:
+- hankemeierlab/mzQuality
+schema_version: 0.2.0

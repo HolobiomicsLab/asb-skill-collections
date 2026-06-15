@@ -1,0 +1,10 @@
+name: Shiny
+slug: shiny
+evidence_spans:
+- QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry (MS) data
+derived_from:
+- doi: 10.1016/j.aca.2025.344571
+  title: quantyfey
+source_repos:
+- CDLMarkus/QuantyFey
+schema_version: 0.2.0

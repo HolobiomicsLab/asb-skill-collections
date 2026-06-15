@@ -1,0 +1,18 @@
+name: Cytoscape
+slug: cytoscape
+evidence_spans:
+- You can also save the network as an NX object and review in [Cytoscape](https://cytoscape.org)
+- Networks are then constructed using Cytoscape [79] and colored based on their molecular class.
+- using Cytoscape
+derived_from:
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+source_repos:
+- https://github.com/Coayala/MetaboDirect
+- https://github.com/YDaiLab/MiMeNet
+- kopeckylukas/py-mamsi
+schema_version: 0.2.0

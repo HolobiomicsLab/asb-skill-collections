@@ -1,0 +1,10 @@
+name: macs3 bdgpeakcall
+slug: macs3-bdgpeakcall
+evidence_spans:
+- identify regions that surpass a specific score cutoff using the `bdgpeakcall` function for narrow peak calling
+derived_from:
+- doi: 10.1186/gb-2008-9-9-r137
+  title: macs
+source_repos:
+- macs3-project/MACS
+schema_version: 0.2.0

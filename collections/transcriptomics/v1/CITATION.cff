@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: If you use this collection, please cite it as below.
+title: ASB Transcriptomics Skill Collection v1
+abstract: Curated, evidence-grounded skills and software-tool records for computational transcriptomics, assembled by the AgenticScienceBuilder pipeline from open-access method papers. Each skill is deduplicated across papers, anchored to verbatim evidence spans, and annotated with EDAM IRIs.
+version: '1'
+date-released: '2026-06-15'
+license: CC-BY-4.0
+url: https://w3id.org/holobiomicslab/asb-skill/collection/transcriptomics/v1
+doi: TODO-zenodo
+type: dataset
+authors:
+- family-names: Nothias
+  given-names: Louis-Felix
+  orcid: https://orcid.org/0000-0001-6711-6719
+- family-names: TODO
+  given-names: Add-co-curators
+keywords:
+- metabolomics
+- mass spectrometry
+- scientific agents
+- skills
+- EDAM
+references:
+- type: article
+  doi: 10.1038/nmeth.4197
+- type: article
+  doi: 10.1038/s41592-021-01358-2
+- type: article
+  doi: 10.1101/060012
+- type: article
+  doi: 10.1186/1471-2105-9-559
+- type: article
+  doi: 10.1186/gb-2014-15-2-r29
+- type: article
+  doi: 10.1186/s13059-014-0550-8
+- type: article
+  doi: 10.1186/s13059-017-1382-0
+- type: article
+  doi: 10.1186/s13059-018-1417-1
+- type: article
+  doi: 10.1186/s13059-019-1874-1
+- type: article
+  doi: 10.12688/f1000research.7563.1

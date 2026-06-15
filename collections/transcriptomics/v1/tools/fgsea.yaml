@@ -1,0 +1,12 @@
+name: fgsea
+slug: fgsea
+evidence_spans:
+- '`fgsea` is an R-package for fast preranked gene set enrichment analysis (GSEA)'
+- gesecaRes <- geseca(pathways, exprs(es), minSize = 15, maxSize = 500)
+- gesecaResRed <- geseca(pathways, Ered, minSize = 15, maxSize = 500, center=FALSE)
+derived_from:
+- doi: 10.1101/060012
+  title: fgsea
+source_repos:
+- alserglab/fgsea
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: UltraMassExplorer
+slug: ultramassexplorer
+evidence_spans:
+- web-based applications such as UltraMassExplorer (UME)
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+source_repos:
+- https://github.com/Coayala/MetaboDirect
+schema_version: 0.2.0

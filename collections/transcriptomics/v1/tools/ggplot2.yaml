@@ -1,0 +1,11 @@
+name: ggplot2
+slug: ggplot2
+evidence_spans:
+- library(ggplot2)
+- ggplot(data=merge(...)) + geom_point(aes(x=logPvalFull, y=logPvalRed))
+derived_from:
+- doi: 10.1101/060012
+  title: fgsea
+source_repos:
+- alserglab/fgsea
+schema_version: 0.2.0

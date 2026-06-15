@@ -1,0 +1,11 @@
+name: Mann-Whitney U test
+slug: mann-whitney-u-test
+version_used: '0.05'
+evidence_spans:
+- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD distributions of each pair of the five cell lines
+derived_from:
+- doi: 10.1371/journal.pcbi.1009337
+  title: 'INTEGRATE: Model-based multi-omics data integration to characterize multi-level metabolic regulation'
+source_repos:
+- https://github.com/qLSLab/integrate
+schema_version: 0.2.0

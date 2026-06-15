@@ -1,0 +1,15 @@
+name: limma
+slug: limma
+evidence_spans:
+- exprs(es) <- normalizeBetweenArrays(log2(exprs(es)), method="quantile")
+- Limma is an R package for the analysis of gene expression data, especially the use of linear models for analysing designed experiments
+- Limma is an R package for the analysis of gene expression data, especially the use of linear models for analysing designed experiments and the assessment of differential expression
+derived_from:
+- doi: 10.1101/060012
+  title: fgsea
+- doi: 10.1093/nar/gkv007
+  title: limma powers differential expression analyses for RNA-sequencing and microarray studies
+source_repos:
+- alserglab/fgsea
+- bioc/limma
+schema_version: 0.2.0

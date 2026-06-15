@@ -1,0 +1,11 @@
+name: GitHub
+slug: github
+derived_from:
+- doi: 10.1186/s13059-019-1874-1
+  title: sctransform
+- doi: 10.1186/1471-2105-9-559
+  title: wgcna
+source_repos:
+- cran/WGCNA
+- satijalab/sctransform
+schema_version: 0.2.0

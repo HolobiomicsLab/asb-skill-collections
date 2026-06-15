@@ -1,0 +1,12 @@
+name: BiG-SCAPE
+slug: big-scape
+version_used: 1.0.0
+evidence_spans:
+- and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- https://github.com/NPLinker/nplinker
+schema_version: 0.2.0

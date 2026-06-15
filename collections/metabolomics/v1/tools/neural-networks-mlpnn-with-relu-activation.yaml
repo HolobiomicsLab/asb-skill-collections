@@ -1,0 +1,10 @@
+name: neural networks (MLPNN with ReLU activation)
+slug: neural-networks-mlpnn-with-relu-activation
+evidence_spans:
+- In MiMeNet, φ is set as the rectified linear unit (ReLU).
+derived_from:
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+source_repos:
+- https://github.com/YDaiLab/MiMeNet
+schema_version: 0.2.0

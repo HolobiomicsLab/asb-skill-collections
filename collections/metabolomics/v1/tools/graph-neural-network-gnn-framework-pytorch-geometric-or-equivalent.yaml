@@ -1,0 +1,10 @@
+name: Graph Neural Network (GNN) framework (PyTorch Geometric or equivalent)
+slug: graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent
+evidence_spans:
+- graph neural networks for predicting collision cross section
+derived_from:
+- doi: 10.1186/s13321-024-00899-w
+  title: mol2ccs
+source_repos:
+- enveda/ccs-prediction
+schema_version: 0.2.0

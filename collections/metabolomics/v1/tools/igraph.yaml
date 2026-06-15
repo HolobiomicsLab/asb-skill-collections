@@ -1,0 +1,10 @@
+name: igraph
+slug: igraph
+evidence_spans:
+- '%\VignetteDepends{igraph}'
+derived_from:
+- doi: 10.1186/s13321-025-01051-y
+  title: minems2
+source_repos:
+- odisce/mineMS2
+schema_version: 0.2.0

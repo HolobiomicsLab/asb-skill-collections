@@ -1,0 +1,10 @@
+name: numpy
+slug: numpy
+evidence_spans:
+- np.repeat(np.arange(n_obs), self.n_neighs); np.ones_like(row_indices, dtype=np.float32)
+derived_from:
+- doi: 10.1038/s41592-021-01358-2
+  title: 'Squidpy: a scalable framework for spatial omics analysis'
+source_repos:
+- scverse/squidpy
+schema_version: 0.2.0

@@ -1,0 +1,17 @@
+name: R
+slug: r
+evidence_spans:
+- R-package for fast preranked gene set enrichment analysis
+- fgsea is an R-package for fast preranked gene set enrichment analysis
+- E <- t(base::scale(t(exprs(es)), scale=FALSE))
+- Limma is an R package for the analysis of gene expression data
+- Limma is an R package
+derived_from:
+- doi: 10.1101/060012
+  title: fgsea
+- doi: 10.1093/nar/gkv007
+  title: limma powers differential expression analyses for RNA-sequencing and microarray studies
+source_repos:
+- alserglab/fgsea
+- bioc/limma
+schema_version: 0.2.0

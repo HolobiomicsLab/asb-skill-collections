@@ -1,0 +1,12 @@
+name: cooler
+slug: cooler
+evidence_spans:
+- The recently-introduced cooler format readily handles storage of high-resolution datasets via a sparse data model.
+- the recently-introduced cooler format readily handles storage of high-resolution datasets
+- The recently-introduced cooler format readily handles storage of high-resolution datasets
+derived_from:
+- doi: 10.1101/2022.10.31.514564
+  title: 'Cooltools: enabling high-resolution Hi-C analysis in Python'
+source_repos:
+- open2c/cooltools
+schema_version: 0.2.0

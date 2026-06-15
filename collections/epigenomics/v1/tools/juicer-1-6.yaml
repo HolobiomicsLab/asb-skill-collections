@@ -1,0 +1,11 @@
+name: Juicer 1.6
+slug: juicer-1-6
+version_used: '1.6'
+evidence_spans:
+- To access Juicer 1.6 (last stable release)
+derived_from:
+- doi: 10.1016/j.cels.2016.07.002
+  title: juicer
+source_repos:
+- aidenlab/juicer
+schema_version: 0.2.0

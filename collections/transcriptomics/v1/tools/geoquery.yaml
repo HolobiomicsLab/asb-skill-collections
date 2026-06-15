@@ -1,0 +1,10 @@
+name: GEOquery
+slug: geoquery
+evidence_spans:
+- library(GEOquery)
+derived_from:
+- doi: 10.1101/060012
+  title: fgsea
+source_repos:
+- alserglab/fgsea
+schema_version: 0.2.0

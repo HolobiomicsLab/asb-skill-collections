@@ -1,0 +1,10 @@
+name: pytest-cov
+slug: pytest-cov
+evidence_spans:
+- We use [pytest](https://docs.pytest.org/en/latest) as our unit testing framework with the `pytest-cov` extension
+derived_from:
+- doi: 10.1101/2022.10.31.514564
+  title: 'Cooltools: enabling high-resolution Hi-C analysis in Python'
+source_repos:
+- open2c/cooltools
+schema_version: 0.2.0

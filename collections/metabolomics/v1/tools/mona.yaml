@@ -1,0 +1,12 @@
+name: MoNA
+slug: mona
+evidence_spans:
+- The MassBank of North America (MoNA) has an EI library available
+- The MoNA MS2 libraries can be downloaded from https://mona.fiehnlab.ucdavis.edu/downloads
+- compile either EI or tandem mass spectral libraries from various sources, such as NIST (if you have it installed), MoNA, and GPNS
+derived_from:
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+source_repos:
+- QizhiSu/mspcompiler
+schema_version: 0.2.0

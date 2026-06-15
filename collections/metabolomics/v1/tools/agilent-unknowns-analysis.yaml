@@ -1,0 +1,10 @@
+name: Agilent Unknowns Analysis
+slug: agilent-unknowns-analysis
+evidence_spans:
+- The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis
+derived_from:
+- doi: 10.1371/journal.pone.0306202
+  title: uafr
+source_repos:
+- castratton/uafR
+schema_version: 0.2.0

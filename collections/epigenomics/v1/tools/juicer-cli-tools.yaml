@@ -1,0 +1,10 @@
+name: juicer_cli_tools
+slug: juicer-cli-tools
+evidence_spans:
+- command line tools for feature annotation on the Hi-C maps
+derived_from:
+- doi: 10.1016/j.cels.2016.07.002
+  title: juicer
+source_repos:
+- aidenlab/juicer
+schema_version: 0.2.0

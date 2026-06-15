@@ -1,0 +1,11 @@
+name: pysam (>=0.15.4)
+slug: pysam-0-15-4
+version_used: 0.15.4
+evidence_spans:
+- pysam (>=0.15.4) - https://github.com/pysam-developers/pysam
+derived_from:
+- doi: 10.1186/s13059-015-0831-x
+  title: 'HiC-Pro: an optimized and flexible pipeline for Hi-C data processing'
+source_repos:
+- nservant/HiC-Pro
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: TOBIAS
+slug: tobias
+evidence_spans:
+- '**TOBIAS** is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data'
+derived_from:
+- doi: 10.1038/s41467-020-18035-1
+  title: ATAC-seq footprinting unravels kinetics of transcription factor binding during zygotic genome activation
+source_repos:
+- loosolab/TOBIAS
+schema_version: 0.2.0

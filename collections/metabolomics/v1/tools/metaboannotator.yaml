@@ -1,0 +1,10 @@
+name: MetaboAnnotatoR
+slug: metaboannotator
+evidence_spans:
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+derived_from:
+- doi: 10.1021/acs.analchem.1c03032
+  title: Automated Annotation of Untargeted All-Ion Fragmentation LC–MS Metabolomics Data with MetaboAnnotatoR
+source_repos:
+- gggraca/MetaboAnnotatoR
+schema_version: 0.2.0

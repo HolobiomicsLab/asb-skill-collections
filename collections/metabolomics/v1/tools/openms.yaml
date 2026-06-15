@@ -1,0 +1,17 @@
+name: OpenMS
+slug: openms
+evidence_spans:
+- pyOpenMS (Python interface to the C++ OpenMS library)
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+derived_from:
+- doi: 10.1021/acs.jproteome.5c00435
+  title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
+- doi: 10.1007/s00216-023-05070-2
+  title: PFΔScreen — an open-source tool for automated PFAS feature prioritization in non-target HRMS data
+- doi: 10.1021/acs.analchem.0c03895
+  title: Rapid Development of Improved Data-Dependent Acquisition Strategies
+source_repos:
+- JonZwe/PFAScreen
+- glasgowcompbio/vimms
+- mobiusklein/mzpeak_prototyping
+schema_version: 0.2.0

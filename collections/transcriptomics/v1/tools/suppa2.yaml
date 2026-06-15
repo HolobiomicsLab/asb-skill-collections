@@ -1,0 +1,10 @@
+name: SUPPA2
+slug: suppa2
+evidence_spans:
+- 'SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions'
+derived_from:
+- doi: 10.1186/s13059-018-1417-1
+  title: suppa2
+source_repos:
+- comprna/SUPPA
+schema_version: 0.2.0
