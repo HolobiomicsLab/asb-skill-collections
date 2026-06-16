@@ -1,0 +1,22 @@
+# Template supplement manifest — copy this directory to supplements/<doi-slug>/
+# and edit. It is intentionally valid so `validate_supplements.py` stays green.
+# `_example` is skipped by ingest (it is not a real DOI slug).
+schema: asb-supplements/1.0
+doi: 10.0000/asb.example.0001
+title: Example deposition (template — not a real paper)
+entries:
+  # (1) A DEPOSITED FILE — redistributed in this repo, so it MUST be OA.
+  - kind: si-table
+    file: example_supplementary_table.csv
+    label: Supplementary Table 1 — example feature parameters
+    license: cc-by
+    depositor_orcid: 0000-0001-6711-6719
+    provenance: "hand-authored example, 2026-06-16"
+  # (2) A DOWNLOAD LINK — a pointer, not redistribution, so any license is fine.
+  #     A non-OA url is fetched into the private (Tier-2) KB only.
+  - kind: si-pdf
+    url: https://example.org/supplementary/methods.pdf
+    label: Supplementary Methods (example link)
+    license: publisher-si
+    depositor_orcid: 0000-0001-6711-6719
+    provenance: "example publisher SI link (not fetched in CI)"

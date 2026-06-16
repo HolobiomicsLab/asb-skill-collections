@@ -1,0 +1,5 @@
+parameter,value,unit,note
+mass_tolerance,5,ppm,MS1 feature detection
+rt_tolerance,0.1,min,alignment window
+min_peak_height,1e5,counts,noise floor
+adduct,[M+H]+,,positive mode primary adduct

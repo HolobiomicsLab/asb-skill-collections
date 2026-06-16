@@ -1,0 +1,48 @@
+# verify-supplements.yml — validate community-deposited supplementary info.
+#
+# Fails a PR when a supplements/<doi-slug>/manifest.yaml is malformed, or when a
+# DEPOSITED file: entry carries a non-OA license (redistribution would breach
+# CONTENT_POLICY.md §3/§4). url: download links are pointers, not redistribution,
+# so any license is allowed; dead-link probing is informational here.
+#
+# Spec ref: supplements/SPEC.md ; supplements/CONTRIBUTING.md
+
+name: Verify Supplements
+
+on:
+  pull_request:
+    paths:
+      - 'supplements/**'
+  push:
+    branches: [main]
+    paths:
+      - 'supplements/**'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-supplements:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pyyaml
+
+      # Schema + license gate + file-presence/sha256 (offline; the hard gate).
+      - name: Validate supplement manifests
+        run: python scripts/validate_supplements.py
+
+      # Dead-link probe is advisory — network flakiness must not block a merge.
+      - name: Probe download links (advisory)
+        continue-on-error: true
+        run: python scripts/validate_supplements.py --check-links
